@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bench/item.json",
+  "title": "评测题目",
+  "description": "④ 出题的输出，⑥ 评测的输入。\n\n一条题分三块，**模型只能看到 prompt**：\n\n  prompt      发出去的全部内容。键是封闭白名单 —— 没验证过的字段进不来\n  truth       答案，以及任何能反推答案的东西\n  provenance  溯源与题目参数，既不是答案也不发送\n\n分界线是「能不能反推答案」，不是「看起来像不像答案」。逐字段核对时发现，\n有五个字段名字完全不像答案但实测能反推（见 docs/vqa/field_ownership.md 第 1 节）：\nstep_order 的 source_order 排序后就是答案序列；time / image_in_video 的\ninput.start/end 恰等于 answer_seconds；understanding / planning 的 start\n单独就能把答案猜到 0.34–1.00；left_right 的 target_side 唯一决定正确选项的视角。\n\n**所以 prompt 用封闭白名单而不是黑名单** —— 黑名单要求每个新字段都有人去验，\n白名单让「没验过的进不来」成为默认。",
+
+  "type": "object",
+  "required": ["id", "family", "task", "group", "prompt", "truth", "provenance"],
+  "additionalProperties": false,
+
+  "properties": {
+    "id": {"type": "string", "minLength": 1},
+    "family": {"type": "string", "pattern": "^[a-z0-9_]+$"},
+    "task": {
+      "enum": ["understanding", "planning", "planning_2", "time",
+               "left_right", "image_in_video", "step_order"]
+    },
+    "group": {
+      "type": "string",
+      "description": "同组共享媒体、一次请求答完。time 是「一个视频一组」，组大小 3–13 不等；其余任务 group = id。\n组大小写进数据而不是运行时推 —— 已知缺陷「一行解析失败整组清零」的爆炸半径取决于它。"
+    },
+
+    "prompt": {
+      "description": "**模型能看到的全部内容。** 封闭白名单：出现其他键即视为违规。",
+      "type": "object",
+      "required": ["stem", "options", "media"],
+      "additionalProperties": false,
+      "properties": {
+        "stem": {
+          "type": "string", "minLength": 1,
+          "description": "题干，不含选项。渲染时由 stem + options 拼出完整问题 ——\n实测这样能逐字节还原原有格式（understanding / planning / planning_2 / step_order 全部成功）。\n单一事实来源：选项文字只存在于 options 里，不在 stem 里重复一遍。"
+        },
+        "options": {
+          "type": "array",
+          "description": "六选一，含一个「都不对」。图选项任务（left_right / image_in_video）的 text 为 null，选项由 media 里 role=option:X 的图承载。\ntime 是唯一的非选择题，options 为空数组。",
+          "items": {
+            "type": "object",
+            "required": ["id"],
+            "additionalProperties": false,
+            "properties": {
+              "id": {"type": "string", "pattern": "^[A-F]$"},
+              "text": {"type": ["string", "null"]}
+            }
+          }
+        },
+        "media": {
+          "type": "array",
+          "description": "有序 = 发送顺序。role 说明它在题里干什么，view 说明是哪个相机。\n每个任务的 role 组合是**声明式**的，构建时逐题核对数量与组合，不符报错。",
+          "items": {
+            "type": "object",
+            "required": ["role", "kind", "path"],
+            "additionalProperties": false,
+            "properties": {
+              "role": {
+                "type": "string",
+                "pattern": "^(clip|frame|context|initial|montage|option:[A-F])$",
+                "description": "option:A…E 是显式绑定 —— 不再依赖列表迭代序决定哪张图对应哪个选项。"
+              },
+              "view": {"type": ["string", "null"]},
+              "kind": {"enum": ["video", "image"]},
+              "path": {"type": "string", "minLength": 1}
+            }
+          }
+        }
+      }
+    },
+
+    "truth": {
+      "description": "**模型永远看不到。** 答案，以及任何能反推答案的东西。",
+      "type": "object",
+      "required": ["answer"],
+      "properties": {
+        "answer": {"type": "string", "minLength": 1},
+        "answer_text": {
+          "type": ["string", "null"],
+          "description": "对答案的文字描述。**不等于 correct option 的 text** ——\n图选项任务里选项 text 为 null，而 answer_text 是 'left gripper camera view' 这类描述。\n全量比对发现 5,553 题两者不同，合并会丢真信息。"
+        },
+        "option_text": {"type": ["string", "null"]},
+        "extra": {
+          "type": "object",
+          "description": "各任务特有的富真值，以及所有能反推答案的字段：\ntime/image_in_video 的 seconds（== input.start/end）、step_order 的 order 与 states、\nleft_right 的 target_side、planning 的 next_*、以及切片的 start/end/frames。"
+        }
+      }
+    },
+
+    "provenance": {
+      "description": "溯源与题目参数。不是答案，也不发送。",
+      "type": "object",
+      "required": ["episode", "recipe"],
+      "additionalProperties": true,
+      "properties": {
+        "episode": {"type": "string"},
+        "segment_id": {"type": ["string", "null"]},
+        "subtask": {"type": ["string", "null"]},
+        "recipe": {
+          "type": "object",
+          "description": "这道题是按什么配方出的。**没有它就无法回答「为什么这题长这样」** ——\n上一轮的窗口参数正是因为没记录，才被误当成人工真值。",
+          "required": ["version"],
+          "additionalProperties": true,
+          "properties": {
+            "version": {"type": "string"},
+            "clip": {"type": "object", "description": "切片参数：起止帧、视角、裁剪、缩放"},
+            "distractors": {
+              "type": "object",
+              "description": "干扰项来源分布，如 {\"llm\": 2, \"rule\": 0, \"nearby\": 2}。\n**必须逐条记来源** —— LLM 生成与规则兜底曾共用同一个标记，导致\n「缓存查空、静默退回规则」在六个族里藏了很久。",
+              "additionalProperties": {"type": "integer", "minimum": 0}
+            },
+            "synthetic": {
+              "type": "boolean",
+              "description": "该题的某些素材是合成的（如从 pick/place 之间合成 move 段）。\n合成不是问题，**伪装成人工标注才是**。"
+            }
+          }
+        },
+        "source_video": {"type": ["object", "string", "null"]}
+      }
+    }
+  }
+}

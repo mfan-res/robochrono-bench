@@ -1,0 +1,644 @@
+{
+  "vocab_version": "1",
+  "families": {
+    "airpods": {
+      "family": "airpods",
+      "subtasks": [
+        {
+          "id": "pick_airpods_case",
+          "text": "Pick the airpods case.",
+          "key": "pick airpods case",
+          "verb": "pick",
+          "object": "airpods case",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "open_airpods_case",
+          "text": "Open the airpods case.",
+          "key": "open airpods case",
+          "verb": "open",
+          "object": "airpods case",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "pick_left_earphone",
+          "text": "Pick the left earphone.",
+          "key": "pick left earphone",
+          "verb": "pick",
+          "object": "left earphone",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "pick_right_earphone",
+          "text": "Pick the right earphone.",
+          "key": "pick right earphone",
+          "verb": "pick",
+          "object": "right earphone",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "close_airpods_case",
+          "text": "Close the airpods case.",
+          "key": "close airpods case",
+          "verb": "close",
+          "object": "airpods case",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        }
+      ],
+      "key_collisions": [],
+      "prefix_hazards": [],
+      "same_verb": {
+        "pick": [
+          "pick_airpods_case",
+          "pick_left_earphone",
+          "pick_right_earphone"
+        ]
+      },
+      "same_object": {
+        "airpods case": [
+          "pick_airpods_case",
+          "open_airpods_case",
+          "close_airpods_case"
+        ]
+      }
+    },
+    "gift_inhand": {
+      "family": "gift_inhand",
+      "subtasks": [
+        {
+          "id": "pick_gift",
+          "text": "Pick the gift.",
+          "key": "pick gift",
+          "verb": "pick",
+          "object": "gift",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "move_gift",
+          "text": "Move the gift.",
+          "key": "move gift",
+          "verb": "move",
+          "object": "gift",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "place_gift",
+          "text": "Place the gift.",
+          "key": "place gift",
+          "verb": "place",
+          "object": "gift",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        }
+      ],
+      "key_collisions": [],
+      "prefix_hazards": [],
+      "same_verb": {},
+      "same_object": {
+        "gift": [
+          "pick_gift",
+          "move_gift",
+          "place_gift"
+        ]
+      }
+    },
+    "pen_inbox": {
+      "family": "pen_inbox",
+      "subtasks": [
+        {
+          "id": "pick_pen",
+          "text": "Pick the pen.",
+          "key": "pick pen",
+          "verb": "pick",
+          "object": "pen",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "pick_box",
+          "text": "Pick the box.",
+          "key": "pick box",
+          "verb": "pick",
+          "object": "box",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "place_pen",
+          "text": "Place the pen.",
+          "key": "place pen",
+          "verb": "place",
+          "object": "pen",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        }
+      ],
+      "key_collisions": [],
+      "prefix_hazards": [],
+      "same_verb": {
+        "pick": [
+          "pick_pen",
+          "pick_box"
+        ]
+      },
+      "same_object": {
+        "pen": [
+          "pick_pen",
+          "place_pen"
+        ]
+      }
+    },
+    "stack_cubes": {
+      "family": "stack_cubes",
+      "subtasks": [
+        {
+          "id": "pick_red_cube",
+          "text": "Pick the red cube.",
+          "key": "pick red cube",
+          "verb": "pick",
+          "object": "red cube",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "place_red_cube",
+          "text": "Place the red cube.",
+          "key": "place red cube",
+          "verb": "place",
+          "object": "red cube",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "pick_yellow_cube",
+          "text": "Pick the yellow cube.",
+          "key": "pick yellow cube",
+          "verb": "pick",
+          "object": "yellow cube",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "place_yellow_cube",
+          "text": "Place the yellow cube.",
+          "key": "place yellow cube",
+          "verb": "place",
+          "object": "yellow cube",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        }
+      ],
+      "key_collisions": [],
+      "prefix_hazards": [],
+      "same_verb": {
+        "pick": [
+          "pick_red_cube",
+          "pick_yellow_cube"
+        ],
+        "place": [
+          "place_red_cube",
+          "place_yellow_cube"
+        ]
+      },
+      "same_object": {
+        "red cube": [
+          "pick_red_cube",
+          "place_red_cube"
+        ],
+        "yellow cube": [
+          "pick_yellow_cube",
+          "place_yellow_cube"
+        ]
+      }
+    },
+    "tea": {
+      "family": "tea",
+      "subtasks": [
+        {
+          "id": "open_teapot_lid",
+          "text": "Open the teapot lid.",
+          "key": "open teapot lid",
+          "verb": "open",
+          "object": "teapot lid",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "put_tea_leaves",
+          "text": "Put the tea leaves.",
+          "key": "put tea leaves",
+          "verb": "put",
+          "object": "tea leaves",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "move_stirrer",
+          "text": "Move the stirrer.",
+          "key": "move stirrer",
+          "verb": "move",
+          "object": "stirrer",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "close_teapot_lid",
+          "text": "Close the teapot lid.",
+          "key": "close teapot lid",
+          "verb": "close",
+          "object": "teapot lid",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "take_teacup",
+          "text": "Take the teacup.",
+          "key": "take teacup",
+          "verb": "take",
+          "object": "teacup",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "pour_tea",
+          "text": "Pour the tea.",
+          "key": "pour tea",
+          "verb": "pour",
+          "object": "tea",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        }
+      ],
+      "key_collisions": [],
+      "prefix_hazards": [],
+      "same_verb": {},
+      "same_object": {
+        "teapot lid": [
+          "open_teapot_lid",
+          "close_teapot_lid"
+        ]
+      }
+    },
+    "tea2": {
+      "family": "tea2",
+      "subtasks": [
+        {
+          "id": "pick_up_teapot_lid",
+          "text": "Pick up the teapot lid.",
+          "key": "pick up teapot lid",
+          "verb": "pick up",
+          "object": "teapot lid",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "pick_up_tea_bag",
+          "text": "Pick up the tea bag.",
+          "key": "pick up tea bag",
+          "verb": "pick up",
+          "object": "tea bag",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "place_tea_bag_in_teapot",
+          "text": "Place the tea bag in teapot.",
+          "key": "place tea bag in teapot",
+          "verb": "place",
+          "object": "tea bag",
+          "modifier": "in teapot",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "pick_up_kettle",
+          "text": "Pick up the kettle.",
+          "key": "pick up kettle",
+          "verb": "pick up",
+          "object": "kettle",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "pour_water",
+          "text": "Pour the water.",
+          "key": "pour water",
+          "verb": "pour",
+          "object": "water",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "put_lid_on_teapot",
+          "text": "Put the lid on the teapot.",
+          "key": "put lid on teapot",
+          "verb": "put",
+          "object": "lid",
+          "modifier": "on teapot",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "pick_up_teapot",
+          "text": "Pick up the teapot.",
+          "key": "pick up teapot",
+          "verb": "pick up",
+          "object": "teapot",
+          "modifier": "",
+          "cache_hit": {
+            "planning": false,
+            "time_understanding": false
+          }
+        },
+        {
+          "id": "pour_tea",
+          "text": "Pour the tea.",
+          "key": "pour tea",
+          "verb": "pour",
+          "object": "tea",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        }
+      ],
+      "key_collisions": [],
+      "prefix_hazards": [
+        [
+          "pick_up_teapot",
+          "pick_up_teapot_lid"
+        ]
+      ],
+      "same_verb": {
+        "pick up": [
+          "pick_up_teapot_lid",
+          "pick_up_tea_bag",
+          "pick_up_kettle",
+          "pick_up_teapot"
+        ],
+        "pour": [
+          "pour_water",
+          "pour_tea"
+        ]
+      },
+      "same_object": {
+        "tea bag": [
+          "pick_up_tea_bag",
+          "place_tea_bag_in_teapot"
+        ]
+      }
+    },
+    "wash": {
+      "family": "wash",
+      "subtasks": [
+        {
+          "id": "pick_brush",
+          "text": "Pick the brush.",
+          "key": "pick brush",
+          "verb": "pick",
+          "object": "brush",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "pick_bowl",
+          "text": "Pick the bowl.",
+          "key": "pick bowl",
+          "verb": "pick",
+          "object": "bowl",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "wipe_bowl_with_brush",
+          "text": "Wipe the bowl with brush.",
+          "key": "wipe bowl with brush",
+          "verb": "wipe",
+          "object": "bowl",
+          "modifier": "with brush",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "put_brush",
+          "text": "Put the brush.",
+          "key": "put brush",
+          "verb": "put",
+          "object": "brush",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "put_bowl",
+          "text": "Put the bowl.",
+          "key": "put bowl",
+          "verb": "put",
+          "object": "bowl",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "pick_plate",
+          "text": "Pick the plate.",
+          "key": "pick plate",
+          "verb": "pick",
+          "object": "plate",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "pick_rag",
+          "text": "Pick the rag.",
+          "key": "pick rag",
+          "verb": "pick",
+          "object": "rag",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "wipe_plate_with_rag",
+          "text": "Wipe the plate with rag.",
+          "key": "wipe plate with rag",
+          "verb": "wipe",
+          "object": "plate",
+          "modifier": "with rag",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "put_plate",
+          "text": "Put the plate.",
+          "key": "put plate",
+          "verb": "put",
+          "object": "plate",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        },
+        {
+          "id": "put_rag",
+          "text": "Put the rag.",
+          "key": "put rag",
+          "verb": "put",
+          "object": "rag",
+          "modifier": "",
+          "cache_hit": {
+            "planning": true,
+            "time_understanding": true
+          }
+        }
+      ],
+      "key_collisions": [],
+      "prefix_hazards": [],
+      "same_verb": {
+        "pick": [
+          "pick_brush",
+          "pick_bowl",
+          "pick_plate",
+          "pick_rag"
+        ],
+        "wipe": [
+          "wipe_bowl_with_brush",
+          "wipe_plate_with_rag"
+        ],
+        "put": [
+          "put_brush",
+          "put_bowl",
+          "put_plate",
+          "put_rag"
+        ]
+      },
+      "same_object": {
+        "brush": [
+          "pick_brush",
+          "put_brush"
+        ],
+        "bowl": [
+          "pick_bowl",
+          "wipe_bowl_with_brush",
+          "put_bowl"
+        ],
+        "plate": [
+          "pick_plate",
+          "wipe_plate_with_rag",
+          "put_plate"
+        ],
+        "rag": [
+          "pick_rag",
+          "put_rag"
+        ]
+      }
+    }
+  }
+}
