@@ -95,8 +95,8 @@
         "properties": {
           "id": {
             "type": "string",
-            "pattern": "^.+@f\\d{6}$",
-            "description": "由起始帧派生：<episode>@f<6位帧号>。**不用序号** —— 序号会在中间插段时让后面所有 id 平移，破坏下游引用。"
+            "pattern": "^.+@f\\d{6}(-\\d+)?$",
+            "description": "由起始帧派生：<episode>@f<6位帧号>。**不用序号** —— 序号会在中间插段时让后面所有 id 平移，破坏下游引用。\n起始帧撞车时加 -N 后缀（同一集内两段从同一帧开始，如 pen_inbox/file-037 的零长度段）。"
           },
           "start_frame": {
             "type": "integer",
