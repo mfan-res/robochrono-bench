@@ -1,0 +1,43 @@
+{
+  "task_category_distractors": {
+    "grasp the small toy": [
+      "drop the small toy into the bin",
+      "grasp the large box",
+      "point at the small toy",
+      "poke the small toy",
+      "push the small toy across the table",
+      "release the small toy"
+    ],
+    "open the delivery bag": [
+      "close the delivery bag",
+      "fold the top of the delivery bag",
+      "inspect the inside of the delivery bag",
+      "lift the delivery bag off the table",
+      "push the delivery bag away",
+      "seal the delivery bag with tape"
+    ],
+    "put the small toy in deliver bag": [
+      "close the small toy in deliver bag",
+      "grasp the small toy in deliver bag",
+      "move the small toy in deliver bag",
+      "open the small toy in deliver bag",
+      "pick the small toy in deliver bag",
+      "place the small toy in deliver bag",
+      "remove the small toy in deliver bag",
+      "set the small toy in deliver bag"
+    ],
+    "set the packed items aside": [
+      "drop the packed items into the trash",
+      "lift the packed items off the table",
+      "push the packed items to the center of the table",
+      "stack the packed items on top of each other",
+      "unpack the items from the box",
+      "wrap the packed items in plastic"
+    ]
+  },
+  "_reconstructed": true,
+  "_reconstructed_from": "QA 选项中 distractor_type=generated_wrong_label（400 次引用）",
+  "_caveat": "只含被实际用过的干扰项；原始缓存每标签 6 条候选，这里少于 6 条。够复现现有题目，不够重新抽样。",
+  "_key_format_unverified": "键格式未经验证：生成器的缓存以【categories.txt 里的标签】为键（load_category_labels → clean_text），而本文件以【answer_text】为键。wash 等族两者恰好相同看不出差别，但 airpods 不同：categories 是 'pick airpods case'，answer_text 是 'pick the airpods case'。生成器查表用 llm_distractor_pool.get(clean_text(correct_text))，correct_text 具体取哪个尚未确认。直接拿本文件重跑生成器可能查不中。",
+  "_status": "仅作留档，未验证可用于重新生成"
+}

@@ -1,0 +1,212 @@
+{
+  "segments": [
+    {
+      "id": "file-023-1",
+      "start": 3.32,
+      "end": 7.64,
+      "start_time": "00:00:03.320",
+      "end_time": "00:00:07.640",
+      "start_frame": 83,
+      "end_frame": 190,
+      "objects": [
+        "bowl"
+      ],
+      "main_verbs": [
+        "pick"
+      ],
+      "narration": " Pick the bowl."
+    },
+    {
+      "id": "file-023-2",
+      "start": 7.64,
+      "end": 12.04,
+      "start_time": "00:00:07.640",
+      "end_time": "00:00:12.040",
+      "start_frame": 191,
+      "end_frame": 300,
+      "objects": [
+        "brush"
+      ],
+      "main_verbs": [
+        "pick"
+      ],
+      "narration": " Pick the brush."
+    },
+    {
+      "id": "file-023-3",
+      "start": 12.0,
+      "end": 18.76,
+      "start_time": "00:00:12.000",
+      "end_time": "00:00:18.760",
+      "start_frame": 300,
+      "end_frame": 468,
+      "objects": [
+        "bowl with brush"
+      ],
+      "main_verbs": [
+        "wipe"
+      ],
+      "narration": " Wipe the bowl with brush."
+    },
+    {
+      "id": "file-023-4",
+      "start": 18.76,
+      "end": 21.76,
+      "start_time": "00:00:18.760",
+      "end_time": "00:00:21.760",
+      "start_frame": 469,
+      "end_frame": 543,
+      "objects": [
+        "brush"
+      ],
+      "main_verbs": [
+        "put"
+      ],
+      "narration": " Put the brush."
+    },
+    {
+      "id": "file-023-5",
+      "start": 21.72,
+      "end": 26.52,
+      "start_time": "00:00:21.720",
+      "end_time": "00:00:26.520",
+      "start_frame": 543,
+      "end_frame": 662,
+      "objects": [
+        "bowl"
+      ],
+      "main_verbs": [
+        "put"
+      ],
+      "narration": " Put the bowl."
+    },
+    {
+      "id": "file-023-6",
+      "start": 28.8,
+      "end": 33.8,
+      "start_time": "00:00:28.800",
+      "end_time": "00:00:33.800",
+      "start_frame": 720,
+      "end_frame": 844,
+      "objects": [
+        "plate"
+      ],
+      "main_verbs": [
+        "pick"
+      ],
+      "narration": " Pick the plate."
+    },
+    {
+      "id": "file-023-7",
+      "start": 33.76,
+      "end": 36.28,
+      "start_time": "00:00:33.760",
+      "end_time": "00:00:36.280",
+      "start_frame": 844,
+      "end_frame": 906,
+      "objects": [
+        "rag"
+      ],
+      "main_verbs": [
+        "pick"
+      ],
+      "narration": " Pick the rag."
+    },
+    {
+      "id": "file-023-8",
+      "start": 36.24,
+      "end": 41.32,
+      "start_time": "00:00:36.240",
+      "end_time": "00:00:41.320",
+      "start_frame": 906,
+      "end_frame": 1032,
+      "objects": [
+        "plate with rag"
+      ],
+      "main_verbs": [
+        "wipe"
+      ],
+      "narration": " Wipe the plate with rag."
+    },
+    {
+      "id": "file-023-9",
+      "start": 41.28,
+      "end": 46.08,
+      "start_time": "00:00:41.280",
+      "end_time": "00:00:46.080",
+      "start_frame": 1032,
+      "end_frame": 1151,
+      "objects": [
+        "plate"
+      ],
+      "main_verbs": [
+        "put"
+      ],
+      "narration": " Put the plate."
+    },
+    {
+      "id": "file-023-10",
+      "start": 46.04,
+      "end": 50.0,
+      "start_time": "00:00:46.040",
+      "end_time": "00:00:50.000",
+      "start_frame": 1151,
+      "end_frame": 1249,
+      "objects": [
+        "plate"
+      ],
+      "main_verbs": [
+        "pick"
+      ],
+      "narration": " Pick the plate."
+    },
+    {
+      "id": "file-023-11",
+      "start": 49.96,
+      "end": 55.48,
+      "start_time": "00:00:49.960",
+      "end_time": "00:00:55.480",
+      "start_frame": 1249,
+      "end_frame": 1386,
+      "objects": [
+        "plate with rag"
+      ],
+      "main_verbs": [
+        "wipe"
+      ],
+      "narration": " Wipe the plate with rag."
+    },
+    {
+      "id": "file-023-12",
+      "start": 55.44,
+      "end": 57.4,
+      "start_time": "00:00:55.440",
+      "end_time": "00:00:57.400",
+      "start_frame": 1386,
+      "end_frame": 1434,
+      "objects": [
+        "rag"
+      ],
+      "main_verbs": [
+        "put"
+      ],
+      "narration": " Put the rag."
+    },
+    {
+      "id": "file-023-13",
+      "start": 57.36,
+      "end": 61.16,
+      "start_time": "00:00:57.360",
+      "end_time": "00:01:01.160",
+      "start_frame": 1434,
+      "end_frame": 1528,
+      "objects": [
+        "plate"
+      ],
+      "main_verbs": [
+        "put"
+      ],
+      "narration": " Put the plate."
+    }
+  ]
+}

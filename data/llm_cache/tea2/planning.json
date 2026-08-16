@@ -1,0 +1,87 @@
+{
+  "task_category_distractors": {
+    "pick the teapot": [
+      "close the teapot",
+      "move the teapot",
+      "open the teapot",
+      "pick the lid on the teapot",
+      "place the teapot",
+      "pour the teapot",
+      "put the teapot",
+      "remove the teapot"
+    ],
+    "pick the up kettle": [
+      "close the up kettle",
+      "move the up kettle",
+      "open the up kettle",
+      "pick the lid on the teapot",
+      "place the up kettle",
+      "pour the up kettle",
+      "put the up kettle",
+      "remove the up kettle"
+    ],
+    "pick the up tea bag": [
+      "close the up tea bag",
+      "move the up tea bag",
+      "open the up tea bag",
+      "pick the lid on the teapot",
+      "place the up tea bag",
+      "pour the up tea bag",
+      "put the up tea bag",
+      "remove the up tea bag"
+    ],
+    "pick the up teapot lid": [
+      "close the up teapot lid",
+      "move the up teapot lid",
+      "open the up teapot lid",
+      "pick the lid on the teapot",
+      "place the up teapot lid",
+      "pour the up teapot lid",
+      "put the up teapot lid",
+      "remove the up teapot lid"
+    ],
+    "place the tea bag in teapot": [
+      "close the tea bag in teapot",
+      "move the tea bag in teapot",
+      "open the tea bag in teapot",
+      "pick the tea bag in teapot",
+      "place the lid on the teapot",
+      "pour the tea bag in teapot",
+      "put the tea bag in teapot",
+      "remove the tea bag in teapot"
+    ],
+    "pour the tea": [
+      "close the tea",
+      "move the tea",
+      "open the tea",
+      "pick the tea",
+      "place the tea",
+      "pour the lid on the teapot",
+      "put the tea",
+      "remove the tea"
+    ],
+    "pour the water": [
+      "close the water",
+      "move the water",
+      "open the water",
+      "pick the water",
+      "place the water",
+      "pour the lid on the teapot",
+      "put the water",
+      "remove the water"
+    ],
+    "put the lid on the teapot": [
+      "align lid with teapot",
+      "drop spoon in teapot",
+      "drop the lid on the table",
+      "press down on teapot lid",
+      "put the lid on the kettle",
+      "take the lid off the teapot"
+    ]
+  },
+  "_reconstructed": true,
+  "_reconstructed_from": "QA 选项中 distractor_type=generated_wrong_label（600 次引用）",
+  "_caveat": "只含被实际用过的干扰项；原始缓存每标签 6 条候选，这里少于 6 条。够复现现有题目，不够重新抽样。",
+  "_key_format_unverified": "键格式未经验证：生成器的缓存以【categories.txt 里的标签】为键（load_category_labels → clean_text），而本文件以【answer_text】为键。wash 等族两者恰好相同看不出差别，但 airpods 不同：categories 是 'pick airpods case'，answer_text 是 'pick the airpods case'。生成器查表用 llm_distractor_pool.get(clean_text(correct_text))，correct_text 具体取哪个尚未确认。直接拿本文件重跑生成器可能查不中。",
+  "_status": "仅作留档，未验证可用于重新生成"
+}

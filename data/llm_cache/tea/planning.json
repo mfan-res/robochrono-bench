@@ -1,0 +1,52 @@
+{
+  "task_category_distractors": {
+    "open teapot lid": [
+      "remove sugar bowl lid",
+      "lift kettle handle",
+      "open jar of honey",
+      "touch teapot spout",
+      "uncover tray",
+      "press teapot button"
+    ],
+    "put tea leaves": [
+      "scoop sugar cubes",
+      "add lemon slice",
+      "drop tea bag",
+      "place coaster on table",
+      "wipe tea leaves off table",
+      "hold spice spoon"
+    ],
+    "move stirrer": [
+      "wipe spoon with napkin",
+      "adjust teacup position",
+      "shake sugar dispenser",
+      "pick up stirrer",
+      "rotate teapot handle",
+      "place stirrer on saucer"
+    ],
+    "close teapot lid": [
+      "place lid on saucer",
+      "press thermos cap",
+      "cover sugar bowl",
+      "seal storage jar",
+      "tighten kettle lid",
+      "align lid handle"
+    ],
+    "take teacup": [
+      "lift teapot handle",
+      "grasp water kettle",
+      "slide mug across saucer",
+      "hold glass tumbler",
+      "place teacup on tray",
+      "reposition saucer"
+    ],
+    "pour tea": [
+      "pour hot water into kettle",
+      "squeeze milk bottle",
+      "drizzle liquid honey",
+      "drain water from cup",
+      "tilt sugar shaker",
+      "pour liquid into drain"
+    ]
+  }
+}

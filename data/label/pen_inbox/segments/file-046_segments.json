@@ -1,0 +1,52 @@
+{
+  "segments": [
+    {
+      "id": "file-046-1",
+      "start": 1.45,
+      "end": 7.5,
+      "start_time": "00:00:01.450",
+      "end_time": "00:00:07.500",
+      "start_frame": 29,
+      "end_frame": 149,
+      "objects": [
+        "pen"
+      ],
+      "main_verbs": [
+        "pick"
+      ],
+      "narration": " Pick the pen."
+    },
+    {
+      "id": "file-046-2",
+      "start": 7.45,
+      "end": 15.55,
+      "start_time": "00:00:07.450",
+      "end_time": "00:00:15.550",
+      "start_frame": 149,
+      "end_frame": 310,
+      "objects": [
+        "box"
+      ],
+      "main_verbs": [
+        "pick"
+      ],
+      "narration": " Pick the box."
+    },
+    {
+      "id": "file-046-3",
+      "start": 15.5,
+      "end": 24.1,
+      "start_time": "00:00:15.500",
+      "end_time": "00:00:24.100",
+      "start_frame": 310,
+      "end_frame": 481,
+      "objects": [
+        "pen"
+      ],
+      "main_verbs": [
+        "place"
+      ],
+      "narration": " Place the pen."
+    }
+  ]
+}

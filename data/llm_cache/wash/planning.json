@@ -1,0 +1,84 @@
+{
+  "task_category_distractors": {
+    "pick the bowl": [
+      "push the bowl",
+      "lift the cup",
+      "wipe the bowl with rag",
+      "stack the bowl",
+      "hold the brush",
+      "move the plate"
+    ],
+    "pick the plate": [
+      "lift the plate",
+      "push the plate",
+      "wipe the plate with brush",
+      "stack the plate",
+      "flip the plate",
+      "hold the bowl"
+    ],
+    "pick the brush": [
+      "grab the sponge",
+      "lift the brush",
+      "shake the brush",
+      "wipe the brush",
+      "drop the brush",
+      "pick the spoon"
+    ],
+    "pick the rag": [
+      "fold the rag",
+      "lift the rag",
+      "grab the towel",
+      "squeeze the rag",
+      "drop the rag",
+      "soak the rag"
+    ],
+    "wipe the bowl with brush": [
+      "wipe the bowl with rag",
+      "wipe the plate with brush",
+      "scrub the bowl with sponge",
+      "clean the bowl with water",
+      "rinse the bowl with brush",
+      "dry the bowl with rag"
+    ],
+    "wipe the plate with rag": [
+      "wipe the plate with brush",
+      "wipe the bowl with rag",
+      "dry the plate with towel",
+      "scrub the plate with rag",
+      "clean the plate with brush",
+      "rinse the plate with water"
+    ],
+    "put the bowl": [
+      "drop the bowl",
+      "place the cup",
+      "stack the bowl",
+      "slide the bowl",
+      "cover the bowl",
+      "lower the bowl"
+    ],
+    "put the plate": [
+      "drop the plate",
+      "place the tray",
+      "stack the plate",
+      "slide the plate",
+      "align the plate",
+      "lower the plate"
+    ],
+    "put the brush": [
+      "drop the brush",
+      "place the sponge",
+      "set down the brush",
+      "store the brush",
+      "hang the brush",
+      "lower the brush"
+    ],
+    "put the rag": [
+      "drop the rag",
+      "hang the rag",
+      "fold the rag",
+      "set down the rag",
+      "place the towel",
+      "spread the rag"
+    ]
+  }
+}

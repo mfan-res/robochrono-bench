@@ -1,0 +1,6 @@
+open teapot lid
+put tea leaves
+move stirrer
+close teapot lid
+take teacup
+pour tea

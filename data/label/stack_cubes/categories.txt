@@ -1,0 +1,6 @@
+pick the red cube
+move the red cube
+place the red cube
+pick the yellow cube
+move the yellow cube
+place the yellow cube

@@ -1,0 +1,28 @@
+{
+  "task_category_distractors": {
+    "pick gift": [
+      "reach for gift",
+      "grasp box",
+      "lift package",
+      "pick ribbon",
+      "inspect gift",
+      "touch gift"
+    ],
+    "move gift": [
+      "slide gift",
+      "carry box",
+      "rotate gift",
+      "push package",
+      "transfer gift",
+      "steer gift"
+    ],
+    "place gift": [
+      "drop gift",
+      "stack box",
+      "release package",
+      "insert gift",
+      "position box",
+      "lower gift"
+    ]
+  }
+}

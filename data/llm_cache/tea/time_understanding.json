@@ -1,0 +1,52 @@
+{
+  "task_category_distractors": {
+    "open teapot lid": [
+      "lift teapot handle",
+      "wipe teapot lid",
+      "place teapot on coaster",
+      "tighten teapot lid",
+      "slide teapot",
+      "adjust teapot position"
+    ],
+    "put tea leaves": [
+      "pour hot water",
+      "scoop sugar",
+      "drop tea bag",
+      "stir tea leaves",
+      "shake tea canister",
+      "clean tea spoon"
+    ],
+    "move stirrer": [
+      "pick up stirrer",
+      "place stirrer on tray",
+      "shake stirrer",
+      "tap stirrer on rim",
+      "wipe stirrer",
+      "insert stirrer into cup"
+    ],
+    "close teapot lid": [
+      "align teapot lid",
+      "place lid on table",
+      "wipe teapot lid",
+      "hold teapot lid",
+      "rotate teapot lid",
+      "tap teapot lid"
+    ],
+    "take teacup": [
+      "slide teacup",
+      "place teacup on saucer",
+      "rotate teacup",
+      "wipe teacup",
+      "hold teacup handle",
+      "stack teacup"
+    ],
+    "pour tea": [
+      "lift teapot",
+      "pour milk",
+      "swirl tea in cup",
+      "place teapot down",
+      "wipe spilled tea",
+      "drip tea from spoon"
+    ]
+  }
+}
