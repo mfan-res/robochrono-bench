@@ -11,6 +11,10 @@ data/vqa/
 !data/llm_cache/
 !data/families.json
 
+# 标注器保存前的本地备份。git 已经是版本控制，这些只是「还没提交时手滑」的兜底，
+# 不该进仓库 —— 否则每保存一次就多一份带时间戳的副本，历史会被噪音淹没。
+data/label/**/.bak/
+
 # ── 模型权重与评测产物 ──────────────────────────────
 models/*
 !models/README.md

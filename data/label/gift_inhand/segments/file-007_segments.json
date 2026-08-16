@@ -14,7 +14,7 @@
   },
   "segments": [
     {
-      "id": "file-007-1",
+      "id": "file-007@f000000",
       "start": 0.0,
       "end": 9.75,
       "start_time": "00:00:00.000",
@@ -24,7 +24,7 @@
       "subtask": "pick_gift"
     },
     {
-      "id": "file-007-2",
+      "id": "file-007@f000194",
       "start": 9.7,
       "end": 19.05,
       "start_time": "00:00:09.700",
@@ -34,7 +34,7 @@
       "subtask": "move_gift"
     },
     {
-      "id": "file-007-3",
+      "id": "file-007@f000380",
       "start": 19.0,
       "end": 24.75,
       "start_time": "00:00:19.000",

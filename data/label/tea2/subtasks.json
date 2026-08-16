@@ -35,5 +35,15 @@
       "id": "pour_tea",
       "text": "Pour the tea."
     }
+  ],
+  "_added_late": [
+    {
+      "id": "wipe_table",
+      "after_episodes_labeled": 21
+    },
+    {
+      "id": "aaa",
+      "after_episodes_labeled": 21
+    }
   ]
 }

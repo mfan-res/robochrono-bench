@@ -9,7 +9,7 @@
   },
   "segments": [
     {
-      "id": "file-022-1",
+      "id": "file-022@f000138",
       "start": 4.6,
       "end": 9.633,
       "start_time": "00:00:04.600",
@@ -19,7 +19,7 @@
       "subtask": "open_delivery_bag"
     },
     {
-      "id": "file-022-2",
+      "id": "file-022@f000314",
       "start": 10.467,
       "end": 13.3,
       "start_time": "00:00:10.467",
@@ -29,7 +29,7 @@
       "subtask": "grasp_small_toy"
     },
     {
-      "id": "file-022-3",
+      "id": "file-022@f000398",
       "start": 13.267,
       "end": 20.433,
       "start_time": "00:00:13.267",
@@ -39,7 +39,7 @@
       "subtask": "put_small_toy_in_deliver_bag"
     },
     {
-      "id": "file-022-4",
+      "id": "file-022@f000676",
       "start": 22.533,
       "end": 26.5,
       "start_time": "00:00:22.533",

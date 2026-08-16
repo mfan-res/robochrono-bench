@@ -95,7 +95,8 @@
         "properties": {
           "id": {
             "type": "string",
-            "minLength": 1
+            "pattern": "^.+@f\\d{6}$",
+            "description": "由起始帧派生：<episode>@f<6位帧号>。**不用序号** —— 序号会在中间插段时让后面所有 id 平移，破坏下游引用。"
           },
           "start_frame": {
             "type": "integer",

@@ -53,7 +53,8 @@ RAW = ROOT / "data" / "raw"
 ALLOWED_SEGMENT_KEYS = {"id", "subtask", "start_frame", "end_frame",
                         "start", "end", "start_time", "end_time", "episode_index"}
 
-SEVERITY = {"污染": "✗", "覆盖": "⚠", "歧义": "⚠", "重叠": "✗", "派生": "✗", "引用": "✗"}
+SEVERITY = {"污染": "✗", "覆盖": "⚠", "歧义": "⚠", "重叠": "✗",
+            "派生": "✗", "引用": "✗", "可疑": "⚠"}
 
 
 @dataclass
@@ -147,6 +148,20 @@ def check_family(family: str, report: Report) -> None:
                            f"{a['id']} 帧 {a['start_frame']}–{a['end_frame']} 与 "
                            f"{b['id']} 帧 {b['start_frame']}–{b['end_frame']} 重叠")
 
+        # ④b 可疑段：零长度、同起点。不判错 —— 由人看画面决定是不是误标
+        for seg in segments:
+            if seg["end_frame"] <= seg["start_frame"]:
+                counts["zero_length"] += 1
+                report.add("可疑", family, episode,
+                           f"{seg['id']} 长度为 {seg['end_frame'] - seg['start_frame'] + 1} 帧"
+                           f"（{seg['subtask']}）—— 疑似误按")
+        starts = Counter(s["start_frame"] for s in segments)
+        for frame, n in starts.items():
+            if n > 1:
+                counts["same_start"] += 1
+                report.add("可疑", family, episode,
+                           f"{n} 段从同一帧 {frame} 开始 —— id 需加后缀区分")
+
         # ⑤ 覆盖 —— 多 episode 的视频里，有没有整集没被标注
         eps = bounds.get(episode)
         if eps and len(eps) > 1:
@@ -187,14 +202,15 @@ def main() -> int:
         check_family(family, report)
 
     print(f"{'族':<13}{'段数':>6}{'污染文件':>9}{'帧重叠':>8}{'派生不符':>9}"
-          f"{'打包视频':>9}{'漏标集':>8}{'歧义文件':>9}")
+          f"{'打包视频':>9}{'漏标集':>8}{'歧义':>6}{'可疑':>6}")
     print("-" * 74)
     for family in families:
         s = report.stats[family]
         print(f"{family:<13}{s.get('segments',0):>6}{s.get('polluted_files',0):>9}"
               f"{s.get('frame_overlap',0):>8}{s.get('derived_mismatch',0):>9}"
               f"{s.get('packed_files',0):>9}{s.get('episodes_unlabeled',0):>8}"
-              f"{s.get('ambiguous_files',0):>9}")
+              f"{s.get('ambiguous_files',0):>6}"
+              f"{s.get('zero_length',0)+s.get('same_start',0):>6}")
     print("-" * 74)
 
     by_kind = Counter(f.kind for f in report.findings)
@@ -202,7 +218,7 @@ def main() -> int:
         print("六条检查全部通过")
         return 0
     print(f"\n共 {len(report.findings)} 条发现：{dict(by_kind)}\n")
-    for kind in ("污染", "引用", "派生", "重叠", "覆盖", "歧义"):
+    for kind in ("污染", "引用", "派生", "重叠", "覆盖", "歧义", "可疑"):
         items = [f for f in report.findings if f.kind == kind]
         if not items:
             continue

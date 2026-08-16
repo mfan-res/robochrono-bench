@@ -14,7 +14,7 @@
   },
   "segments": [
     {
-      "id": "file-017-1",
+      "id": "file-017@f000043",
       "start": 2.15,
       "end": 7.9,
       "start_time": "00:00:02.150",
@@ -24,7 +24,7 @@
       "subtask": "pick_pen"
     },
     {
-      "id": "file-017-2",
+      "id": "file-017@f000157",
       "start": 7.85,
       "end": 14.15,
       "start_time": "00:00:07.850",
@@ -34,7 +34,7 @@
       "subtask": "pick_box"
     },
     {
-      "id": "file-017-3",
+      "id": "file-017@f000282",
       "start": 14.1,
       "end": 23.0,
       "start_time": "00:00:14.100",

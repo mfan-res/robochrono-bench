@@ -1,0 +1,288 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>标注器</title>
+<style>
+  :root{--bg:#14161a;--panel:#1c1f26;--line:#2b3038;--fg:#e6e8ec;--dim:#8b93a1;
+        --accent:#5b9cf8;--warn:#e0a33e;--bad:#e05c5c;--ok:#4caf7d}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+       font:13px/1.5 ui-sans-serif,system-ui,"PingFang SC","Microsoft YaHei",sans-serif}
+  header{display:flex;gap:12px;align-items:center;padding:8px 14px;
+         background:var(--panel);border-bottom:1px solid var(--line)}
+  select,button{background:#242833;color:var(--fg);border:1px solid var(--line);
+                border-radius:5px;padding:4px 9px;font:inherit;cursor:pointer}
+  button:hover{border-color:var(--accent)}
+  button:disabled{opacity:.4;cursor:default}
+  main{display:grid;grid-template-columns:1fr 300px;gap:12px;padding:12px;align-items:start}
+  video{width:100%;background:#000;border-radius:6px;display:block}
+  .bar{display:flex;gap:14px;align-items:center;padding:7px 0;color:var(--dim)}
+  .bar b{color:var(--fg);font-variant-numeric:tabular-nums;font-weight:600}
+  #track{position:relative;height:46px;background:#0f1115;border:1px solid var(--line);
+         border-radius:5px;overflow:hidden;cursor:pointer;margin-top:4px}
+  .seg{position:absolute;top:4px;height:24px;background:#2f6db5;border-radius:3px;
+       font-size:10px;line-height:24px;padding:0 4px;overflow:hidden;white-space:nowrap;
+       color:#dbe6f5;border:1px solid #4581cc}
+  .seg.dup{background:#7a5a1e;border-color:var(--warn)}
+  .ep{position:absolute;bottom:0;height:15px;border-left:2px solid var(--accent);
+      font-size:9px;color:var(--accent);padding-left:3px}
+  #cursor{position:absolute;top:0;bottom:0;width:2px;background:#fff;pointer-events:none}
+  #pending{position:absolute;top:4px;height:24px;background:rgba(224,163,62,.35);
+           border:1px dashed var(--warn);border-radius:3px}
+  aside{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px}
+  .task{display:flex;gap:7px;align-items:baseline;padding:4px 6px;border-radius:4px;cursor:pointer}
+  .task:hover{background:#242833}
+  .task kbd{background:#2b3038;border:1px solid #3a4150;border-radius:3px;padding:0 5px;
+            font:11px ui-monospace,monospace;color:var(--accent)}
+  .task span{color:var(--dim)}
+  h4{margin:12px 0 5px;font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em}
+  #list{max-height:190px;overflow:auto;font:11px ui-monospace,monospace}
+  #list div{display:flex;justify-content:space-between;padding:2px 4px;border-radius:3px}
+  #list div:hover{background:#242833}
+  #list button{padding:0 5px;font-size:10px;border-color:transparent}
+  #status{padding:8px 14px;border-top:1px solid var(--line);background:var(--panel);
+          display:flex;gap:16px;flex-wrap:wrap}
+  .pill{padding:1px 8px;border-radius:9px;font-size:11px;background:#242833}
+  .pill.ok{color:var(--ok)} .pill.warn{color:var(--warn)} .pill.bad{color:var(--bad)}
+  #msg{padding:0 14px 12px;color:var(--dim);white-space:pre-wrap;font-size:12px}
+  .hint{color:var(--dim);font-size:11px;margin-top:8px;line-height:1.7}
+</style>
+
+<header>
+  <select id="family"></select>
+  <select id="episode"></select>
+  <button id="prev">◀ 上一集</button>
+  <button id="next">下一集 ▶</button>
+  <span style="flex:1"></span>
+  <span id="dirty" style="color:var(--warn)"></span>
+  <span id="progress" style="color:var(--dim)"></span>
+  <button id="manage">管理 subtask</button>
+  <button id="save">保存 (S)</button>
+</header>
+
+<main>
+  <div>
+    <video id="v" preload="auto"></video>
+    <div class="bar">
+      帧 <b id="frame">0</b> / <b id="total">0</b>
+      <b id="time">00:00.000</b>
+      <button id="playpause">播放 (空格)</button>
+      <span style="color:var(--dim)">← → 单帧　⇧← ⇧→ 十帧　K 打点　Z 撤销</span>
+    </div>
+    <div id="track"><div id="cursor"></div></div>
+  </div>
+
+  <aside>
+    <h4>subtask（按键选，或点击）</h4>
+    <div id="tasks"></div>
+    <div id="panel" style="display:none;border-top:1px solid var(--line);margin-top:8px;padding-top:8px">
+      <input id="newtext" placeholder="新 subtask 的文字，如 Pick up the lid."
+             style="width:100%;background:#242833;color:var(--fg);border:1px solid var(--line);
+                    border-radius:5px;padding:5px 8px;font:inherit">
+      <button id="add" style="margin-top:6px;width:100%">新增</button>
+      <div id="manlist" style="margin-top:8px;font:11px ui-monospace,monospace"></div>
+      <div class="hint">ID 由文字自动派生且<b>永不改变</b>；改文字不影响已有引用；
+        被引用的 subtask 删不掉。</div>
+    </div>
+    <h4>已标 <span id="count">0</span> 段</h4>
+    <div id="list"></div>
+    <div class="hint">
+      流程：移到起点按 <b>K</b> → 移到终点按 <b>K</b> → 选 subtask。<br>
+      帧号是权威，秒由后端按 fps 换算。
+    </div>
+  </aside>
+</main>
+
+<div id="status"></div>
+<div id="msg"></div>
+
+<script>
+const $ = s => document.querySelector(s);
+const KEYS = "1234567890qwertyuiop";
+let S = { fps: 25, total: 0, subtasks: [], segments: [], bounds: null, pending: null,
+          usage: {}, dirty: false, version: null };
+const mark_dirty = v => { S.dirty = v; $("#dirty").textContent = v ? "● 未保存" : ""; };
+
+const frameOf = t => Math.min(S.total - 1, Math.max(0, Math.round(t * S.fps)));
+const seek = f => { $("#v").currentTime = Math.min(S.total - 1, Math.max(0, f)) / S.fps; };
+const fmt = f => { const t = f / S.fps, m = Math.floor(t / 60);
+  return `${String(m).padStart(2,"0")}:${(t-m*60).toFixed(3).padStart(6,"0")}`; };
+
+async function loadFamilies() {
+  const { families } = await (await fetch("/api/families")).json();
+  $("#family").innerHTML = families.map(f => `<option>${f}</option>`).join("");
+  await loadEpisodes();
+}
+async function loadEpisodes() {
+  const fam = $("#family").value;
+  const { episodes } = await (await fetch(`/api/episodes?family=${fam}`)).json();
+  $("#episode").innerHTML = episodes.map(e =>
+    `<option value="${e.episode}">${e.episode}${e.labeled ? ` · ${e.labeled} 段` : ""}</option>`).join("");
+  $("#progress").textContent =
+    `${episodes.filter(e => e.labeled).length}/${episodes.length} 集已标`;
+  await loadEpisode();
+}
+async function loadEpisode() {
+  const fam = $("#family").value, ep = $("#episode").value;
+  const d = await (await fetch(`/api/episode?family=${fam}&episode=${ep}`)).json();
+  Object.assign(S, { fps: d.fps, total: d.total_frames, subtasks: d.subtasks,
+                     segments: d.segments, bounds: d.episode_bounds, pending: null,
+                     version: d.version });
+  mark_dirty(false);
+  S.usage = (await (await fetch(`/api/usage?family=${fam}`)).json()).usage || {};
+  $("#v").src = `/media/${fam}/${ep}/main.mp4`;
+  $("#total").textContent = d.total_frames;
+  $("#tasks").innerHTML = d.subtasks.map((s, i) =>
+    `<div class="task" data-i="${i}"><kbd>${KEYS[i] ?? "·"}</kbd><span>${s.text}</span></div>`).join("");
+  $("#msg").textContent = "";
+  render();
+}
+
+function render() {
+  const w = $("#track").clientWidth || 1;
+  const x = f => (f / Math.max(1, S.total)) * w;
+  const dup = {};
+  S.segments.forEach(s => dup[s.subtask] = (dup[s.subtask] || 0) + 1);
+  const parts = S.segments.map((s, i) =>
+    `<div class="seg${dup[s.subtask] > 1 ? " dup" : ""}" data-i="${i}"
+      style="left:${x(s.start_frame)}px;width:${Math.max(3, x(s.end_frame - s.start_frame))}px"
+      title="${s.subtask}">${s.subtask}</div>`);
+  if (S.pending !== null)
+    parts.push(`<div id="pending" style="left:${x(S.pending)}px;
+      width:${Math.max(3, x(frameOf($("#v").currentTime) - S.pending))}px"></div>`);
+  (S.bounds || []).forEach((b, i) => parts.push(
+    `<div class="ep" style="left:${x(b[0] * S.fps)}px">ep${i}</div>`));
+  $("#track").innerHTML = `<div id="cursor"></div>` + parts.join("");
+
+  $("#count").textContent = S.segments.length;
+  $("#list").innerHTML = [...S.segments].sort((a, b) => a.start_frame - b.start_frame)
+    .map(s => `<div><span>${s.start_frame}–${s.end_frame} ${s.subtask}</span>
+      <button data-del="${S.segments.indexOf(s)}">✕</button></div>`).join("");
+
+  const covered = S.segments.reduce((n, s) => n + (s.end_frame - s.start_frame + 1), 0);
+  const overlap = [...S.segments].sort((a, b) => a.start_frame - b.start_frame)
+    .filter((s, i, a) => i && s.start_frame < a[i-1].end_frame).length;
+  const dups = Object.entries(dup).filter(([, n]) => n > 1);
+  const pills = [
+    `<span class="pill ${covered/Math.max(1,S.total) > .8 ? "ok" : "warn"}">覆盖 ${
+      (100*covered/Math.max(1,S.total)).toFixed(0)}%</span>`,
+    `<span class="pill ${overlap ? "bad" : "ok"}">重叠 ${overlap}</span>`,
+    S.bounds ? `<span class="pill">${S.bounds.length} 个 episode</span>` : "",
+    dups.length ? `<span class="pill warn">重复动作 ${dups.map(([k,n])=>`${k}×${n}`).join(" ")}</span>` : "",
+  ];
+  $("#status").innerHTML = pills.join("");
+}
+
+function mark() {
+  const f = frameOf($("#v").currentTime);
+  if (S.pending === null) { S.pending = f; render(); return; }
+  const [a, b] = [S.pending, f].sort((p, q) => p - q);
+  S.pending = null;
+  if (b <= a) { $("#msg").textContent = "起止相同，已忽略"; render(); return; }
+  window._range = [a, b];
+  $("#msg").textContent = `帧 ${a}–${b}（${((b-a+1)/S.fps).toFixed(2)}s）→ 按数字/字母键选 subtask`;
+  render();
+}
+function choose(i) {
+  if (!window._range) { $("#msg").textContent = "先按 K 打起点和终点"; return; }
+  const st = S.subtasks[i]; if (!st) return;
+  const [a, b] = window._range; window._range = null;
+  S.segments.push({ start_frame: a, end_frame: b, subtask: st.id });
+  $("#msg").textContent = `已加：${st.text}`;
+  mark_dirty(true); render();
+}
+async function save(force = false) {
+  const r = await (await fetch("/api/save", { method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ family: $("#family").value, episode: $("#episode").value,
+                           segments: S.segments, version: S.version, force }) })).json();
+  const lines = (r.problems || []).map(p => `${p.level === "block" ? "✗" : "⚠"} ${p.text}`);
+  $("#msg").textContent = (r.ok ? `✓ 已保存 ${r.path}${r.forced ? "（强制）" : ""}`
+                                : "✗ 未保存（校验不通过）") +
+    (lines.length ? "\n" + lines.join("\n") : "");
+  if (r.ok) { S.version = r.version; mark_dirty(false); loadEpisodes(); return; }
+  // ③ 有 block 级问题时给一个明确的出口，而不是只能改到没问题为止
+  if ((r.problems || []).some(p => p.level === "block") &&
+      confirm("校验未通过：\n\n" + lines.join("\n") + "\n\n仍然保存？")) save(true);
+}
+
+// ⑤ subtask 管理
+async function editSubtask(body) {
+  const r = await (await fetch("/api/subtasks", { method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ family: $("#family").value, ...body }) })).json();
+  if (!r.ok) { $("#msg").textContent = "✗ " + r.error; return; }
+  S.subtasks = r.subtasks; S.usage = r.usage || {};
+  $("#msg").textContent = (r.notes || []).join("\n") || "已更新";
+  await loadEpisode();
+  $("#panel").style.display = "block"; renderPanel();
+}
+function renderPanel() {
+  $("#manlist").innerHTML = S.subtasks.map(s => {
+    const n = S.usage[s.id] || 0;
+    return `<div style="display:flex;gap:6px;align-items:center;padding:2px 0">
+      <span style="flex:1">${s.text}<br><span style="color:var(--dim)">${s.id} · ${n} 集在用</span></span>
+      <button data-ren="${s.id}">改字</button>
+      <button data-del2="${s.id}" ${n ? "disabled title='被引用，不能删'" : ""}>删</button></div>`;
+  }).join("");
+}
+
+addEventListener("keydown", e => {
+  if (e.target.tagName === "SELECT") return;
+  const v = $("#v"), step = e.shiftKey ? 10 : 1;
+  const map = { ArrowLeft: () => seek(frameOf(v.currentTime) - step),
+                ArrowRight: () => seek(frameOf(v.currentTime) + step),
+                " ": () => v.paused ? v.play() : v.pause(),
+                k: mark, K: mark, z: () => { S.segments.pop(); mark_dirty(true); render(); },
+                s: save, S: save };
+  if (map[e.key]) { e.preventDefault(); map[e.key](); return; }
+  const i = KEYS.indexOf(e.key.toLowerCase());
+  if (i >= 0) { e.preventDefault(); choose(i); }
+});
+$("#v").addEventListener("timeupdate", () => {
+  const f = frameOf($("#v").currentTime);
+  $("#frame").textContent = f; $("#time").textContent = fmt(f);
+  $("#cursor").style.left = `${(f / Math.max(1, S.total)) * ($("#track").clientWidth || 1)}px`;
+});
+$("#track").addEventListener("click", e => {
+  if (e.target.dataset.i !== undefined) return;
+  seek(Math.round((e.offsetX / $("#track").clientWidth) * S.total));
+});
+$("#list").addEventListener("click", e => {
+  const i = e.target.dataset.del;
+  if (i !== undefined) { S.segments.splice(+i, 1); mark_dirty(true); render(); }
+});
+$("#tasks").addEventListener("click", e => {
+  const t = e.target.closest(".task"); if (t) choose(+t.dataset.i);
+});
+const guard = fn => (...a) => {
+  if (S.dirty && !confirm("有未保存的标注，确定切换？")) { return; }
+  return fn(...a);
+};
+$("#family").onchange = guard(loadEpisodes);
+$("#episode").onchange = guard(loadEpisode);
+$("#playpause").onclick = () => { const v = $("#v"); v.paused ? v.play() : v.pause(); };
+$("#save").onclick = () => save();
+$("#manage").onclick = () => {
+  const p = $("#panel"); p.style.display = p.style.display === "none" ? "block" : "none";
+  if (p.style.display === "block") renderPanel();
+};
+$("#add").onclick = () => {
+  const t = $("#newtext").value.trim();
+  if (t) { editSubtask({ action: "add", text: t }); $("#newtext").value = ""; }
+};
+$("#manlist").addEventListener("click", e => {
+  const ren = e.target.dataset.ren, del = e.target.dataset.del2;
+  if (ren) { const cur = S.subtasks.find(s => s.id === ren);
+    const t = prompt(`改文字（ID ${ren} 不变，所有引用自动跟随）`, cur.text);
+    if (t && t !== cur.text) editSubtask({ action: "rename", id: ren, text: t }); }
+  if (del && confirm(`删除 ${del}？`)) editSubtask({ action: "delete", id: del });
+});
+// ④ 未保存提示
+addEventListener("beforeunload", e => { if (S.dirty) { e.preventDefault(); e.returnValue = ""; } });
+$("#prev").onclick = guard(() => { const s = $("#episode");
+  if (s.selectedIndex > 0) { s.selectedIndex--; loadEpisode(); } });
+$("#next").onclick = guard(() => { const s = $("#episode");
+  if (s.selectedIndex < s.length - 1) { s.selectedIndex++; loadEpisode(); } });
+addEventListener("resize", render);
+loadFamilies();
+</script>

@@ -9,7 +9,7 @@
   },
   "segments": [
     {
-      "id": "file-026-1",
+      "id": "file-026@f000046",
       "start": 1.84,
       "end": 9.44,
       "start_time": "00:00:01.840",
@@ -19,7 +19,7 @@
       "subtask": "open_teapot_lid"
     },
     {
-      "id": "file-026-2",
+      "id": "file-026@f000291",
       "start": 11.64,
       "end": 25.2,
       "start_time": "00:00:11.640",
@@ -29,7 +29,7 @@
       "subtask": "put_tea_leaves"
     },
     {
-      "id": "file-026-3",
+      "id": "file-026@f000665",
       "start": 26.6,
       "end": 45.28,
       "start_time": "00:00:26.600",
@@ -39,7 +39,7 @@
       "subtask": "move_stirrer"
     },
     {
-      "id": "file-026-4",
+      "id": "file-026@f001173",
       "start": 46.92,
       "end": 56.88,
       "start_time": "00:00:46.920",
@@ -49,7 +49,7 @@
       "subtask": "close_teapot_lid"
     },
     {
-      "id": "file-026-5",
+      "id": "file-026@f001422",
       "start": 56.88,
       "end": 67.8,
       "start_time": "00:00:56.880",
@@ -59,7 +59,7 @@
       "subtask": "take_teacup"
     },
     {
-      "id": "file-026-6",
+      "id": "file-026@f001731",
       "start": 69.24,
       "end": 92.08,
       "start_time": "00:01:09.240",

@@ -18,7 +18,7 @@
   },
   "segments": [
     {
-      "id": "file-004-1",
+      "id": "file-004@f000175",
       "start": 5.833,
       "end": 15.167,
       "start_time": "00:00:05.833",
@@ -28,7 +28,7 @@
       "subtask": "pick_up_teapot_lid"
     },
     {
-      "id": "file-004-2",
+      "id": "file-004@f000701",
       "start": 23.367,
       "end": 26.6,
       "start_time": "00:00:23.367",
@@ -38,7 +38,7 @@
       "subtask": "pick_up_tea_bag"
     },
     {
-      "id": "file-004-3",
+      "id": "file-004@f000821",
       "start": 27.367,
       "end": 36.667,
       "start_time": "00:00:27.367",
@@ -48,7 +48,7 @@
       "subtask": "place_tea_bag_in_teapot"
     },
     {
-      "id": "file-004-4",
+      "id": "file-004@f001410",
       "start": 47.0,
       "end": 53.133,
       "start_time": "00:00:47.000",
@@ -58,7 +58,7 @@
       "subtask": "pick_up_kettle"
     },
     {
-      "id": "file-004-5",
+      "id": "file-004@f001809",
       "start": 60.3,
       "end": 70.133,
       "start_time": "00:01:00.300",
@@ -68,7 +68,7 @@
       "subtask": "pour_water"
     },
     {
-      "id": "file-004-6",
+      "id": "file-004@f002900",
       "start": 96.667,
       "end": 105.467,
       "start_time": "00:01:36.667",
@@ -78,7 +78,7 @@
       "subtask": "put_lid_on_teapot"
     },
     {
-      "id": "file-004-7",
+      "id": "file-004@f003434",
       "start": 114.467,
       "end": 121.667,
       "start_time": "00:01:54.467",
@@ -88,7 +88,7 @@
       "subtask": "pick_up_teapot"
     },
     {
-      "id": "file-004-8",
+      "id": "file-004@f003697",
       "start": 123.233,
       "end": 143.167,
       "start_time": "00:02:03.233",
