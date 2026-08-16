@@ -14,7 +14,7 @@
   },
   "segments": [
     {
-      "id": "file-016-1",
+      "id": "file-016@f000120",
       "start": 4.0,
       "end": 6.7,
       "start_time": "00:00:04.000",
@@ -24,7 +24,7 @@
       "subtask": "pick_airpods_case"
     },
     {
-      "id": "file-016-2",
+      "id": "file-016@f000270",
       "start": 9.0,
       "end": 11.733,
       "start_time": "00:00:09.000",
@@ -34,7 +34,7 @@
       "subtask": "open_airpods_case"
     },
     {
-      "id": "file-016-3",
+      "id": "file-016@f000461",
       "start": 15.367,
       "end": 17.067,
       "start_time": "00:00:15.367",
@@ -44,7 +44,7 @@
       "subtask": "pick_left_earphone"
     },
     {
-      "id": "file-016-4",
+      "id": "file-016@f001101",
       "start": 36.7,
       "end": 38.8,
       "start_time": "00:00:36.700",
@@ -54,7 +54,7 @@
       "subtask": "pick_right_earphone"
     },
     {
-      "id": "file-016-5",
+      "id": "file-016@f001443",
       "start": 48.1,
       "end": 48.867,
       "start_time": "00:00:48.100",

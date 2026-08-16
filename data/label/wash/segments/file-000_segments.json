@@ -9,7 +9,7 @@
   },
   "segments": [
     {
-      "id": "file-000-1",
+      "id": "file-000@f000163",
       "start": 6.52,
       "end": 10.6,
       "start_time": "00:00:06.520",
@@ -19,7 +19,7 @@
       "subtask": "pick_brush"
     },
     {
-      "id": "file-000-2",
+      "id": "file-000@f000264",
       "start": 10.56,
       "end": 18.32,
       "start_time": "00:00:10.560",
@@ -29,7 +29,7 @@
       "subtask": "pick_bowl"
     },
     {
-      "id": "file-000-3",
+      "id": "file-000@f000457",
       "start": 18.28,
       "end": 25.72,
       "start_time": "00:00:18.280",
@@ -39,7 +39,7 @@
       "subtask": "wipe_bowl_with_brush"
     },
     {
-      "id": "file-000-4",
+      "id": "file-000@f000642",
       "start": 25.68,
       "end": 30.28,
       "start_time": "00:00:25.680",
@@ -49,7 +49,7 @@
       "subtask": "put_brush"
     },
     {
-      "id": "file-000-5",
+      "id": "file-000@f000756",
       "start": 30.24,
       "end": 41.4,
       "start_time": "00:00:30.240",
@@ -59,7 +59,7 @@
       "subtask": "put_bowl"
     },
     {
-      "id": "file-000-6",
+      "id": "file-000@f001088",
       "start": 43.52,
       "end": 53.0,
       "start_time": "00:00:43.520",
@@ -69,7 +69,7 @@
       "subtask": "pick_plate"
     },
     {
-      "id": "file-000-7",
+      "id": "file-000@f001324",
       "start": 52.96,
       "end": 57.12,
       "start_time": "00:00:52.960",
@@ -79,7 +79,7 @@
       "subtask": "pick_rag"
     },
     {
-      "id": "file-000-8",
+      "id": "file-000@f001427",
       "start": 57.08,
       "end": 63.56,
       "start_time": "00:00:57.080",
@@ -89,7 +89,7 @@
       "subtask": "wipe_plate_with_rag"
     },
     {
-      "id": "file-000-9",
+      "id": "file-000@f001588",
       "start": 63.52,
       "end": 69.36,
       "start_time": "00:01:03.520",
@@ -99,7 +99,7 @@
       "subtask": "put_plate"
     },
     {
-      "id": "file-000-10",
+      "id": "file-000@f001733",
       "start": 69.32,
       "end": 76.56,
       "start_time": "00:01:09.320",
@@ -109,7 +109,7 @@
       "subtask": "pick_plate"
     },
     {
-      "id": "file-000-11",
+      "id": "file-000@f001914",
       "start": 76.56,
       "end": 83.2,
       "start_time": "00:01:16.560",
@@ -119,7 +119,7 @@
       "subtask": "wipe_plate_with_rag"
     },
     {
-      "id": "file-000-12",
+      "id": "file-000@f002080",
       "start": 83.2,
       "end": 87.84,
       "start_time": "00:01:23.200",
@@ -129,7 +129,7 @@
       "subtask": "put_plate"
     },
     {
-      "id": "file-000-13",
+      "id": "file-000@f002196",
       "start": 87.84,
       "end": 94.12,
       "start_time": "00:01:27.840",

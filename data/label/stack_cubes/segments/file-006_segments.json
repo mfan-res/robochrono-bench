@@ -10,7 +10,7 @@
   },
   "segments": [
     {
-      "id": "file-006-1",
+      "id": "file-006@f000000",
       "subtask": "pick_yellow_cube",
       "start_frame": 0,
       "end_frame": 410,
@@ -18,7 +18,7 @@
       "end": 20.55
     },
     {
-      "id": "file-006-2",
+      "id": "file-006@f000411",
       "subtask": "place_yellow_cube",
       "start_frame": 411,
       "end_frame": 501,
@@ -26,7 +26,7 @@
       "end": 25.1
     },
     {
-      "id": "file-006-3",
+      "id": "file-006@f000502",
       "subtask": "pick_red_cube",
       "start_frame": 502,
       "end_frame": 815,
@@ -34,7 +34,7 @@
       "end": 40.8
     },
     {
-      "id": "file-006-4",
+      "id": "file-006@f000816",
       "subtask": "place_red_cube",
       "start_frame": 816,
       "end_frame": 936,

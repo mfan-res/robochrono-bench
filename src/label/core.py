@@ -164,8 +164,13 @@ class Segment:
     episode_index: int | None = None
 
     def as_record(self, index: int, video_stem: str, fps: float) -> dict[str, Any]:
+        # id 由**起始帧**派生，不用序号。
+        # 序号版（file-000-1、-2…）在中间插一段时会让后面所有 id 平移，
+        # 下游若引用过段 id（题目的 provenance.source_id）引用就断了。
+        # 这和 subtask ID 稳定性是同一个道理 —— 那边做对了，这边一开始没做。
+        # 起始帧在同一集内唯一（校验器禁止真重叠），且插段不影响他人。
         record: dict[str, Any] = {
-            "id": f"{re.sub(r'_h264$', '', video_stem)}-{index}",
+            "id": f"{re.sub(r'_h264$', '', video_stem)}@f{self.start_frame:06d}",
             "subtask": self.subtask,
             "start_frame": self.start_frame,
             "end_frame": self.end_frame,
@@ -252,5 +257,23 @@ def build_document(video_stem: str, segments: list[Segment], *, fps: float,
                 .encode("utf-8")).hexdigest()[:16],
             "episode_bounds": episode_bounds,
         },
-        "segments": [s.as_record(i + 1, video_stem, fps) for i, s in enumerate(ordered)],
+        "segments": _dedupe_ids([s.as_record(i + 1, video_stem, fps)
+                                 for i, s in enumerate(ordered)]),
     }
+
+
+def _dedupe_ids(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """起始帧撞了就加后缀。
+
+    id 按起始帧派生的前提是「同一集内起始帧唯一」，而这个前提**不总成立** ——
+    共享边界是允许的，而 pen_inbox/file-037 更极端：一个零长度段
+    （帧 272–272，0.05s，疑似误标）与下一段从同一帧开始。
+    实测 1,759 段里只此一例，但既然可能就得处理。
+    """
+    seen: dict[str, int] = {}
+    for record in records:
+        base = record["id"]
+        seen[base] = seen.get(base, 0) + 1
+        if seen[base] > 1:
+            record["id"] = f"{base}-{seen[base]}"
+    return records
