@@ -1,4 +1,12 @@
 {
+  "source": {
+    "video": "wash/file-002/main.mp4",
+    "fps": 25,
+    "total_frames": 1986,
+    "tool_version": "upstream-video_labeler_timestamp/unknown",
+    "subtasks_sha256": "653e4e847ee5e52d",
+    "episode_bounds": null
+  },
   "segments": [
     {
       "id": "file-002-1",
@@ -8,13 +16,7 @@
       "end_time": "00:00:08.040",
       "start_frame": 72,
       "end_frame": 200,
-      "objects": [
-        "bowl"
-      ],
-      "main_verbs": [
-        "pick"
-      ],
-      "narration": " Pick the bowl."
+      "subtask": "pick_bowl"
     },
     {
       "id": "file-002-2",
@@ -24,13 +26,7 @@
       "end_time": "00:00:12.960",
       "start_frame": 200,
       "end_frame": 323,
-      "objects": [
-        "brush"
-      ],
-      "main_verbs": [
-        "pick"
-      ],
-      "narration": " Pick the brush."
+      "subtask": "pick_brush"
     },
     {
       "id": "file-002-3",
@@ -40,13 +36,7 @@
       "end_time": "00:00:22.880",
       "start_frame": 323,
       "end_frame": 571,
-      "objects": [
-        "brush"
-      ],
-      "main_verbs": [
-        "put"
-      ],
-      "narration": " Put the brush."
+      "subtask": "put_brush"
     },
     {
       "id": "file-002-4",
@@ -56,13 +46,7 @@
       "end_time": "00:00:27.840",
       "start_frame": 587,
       "end_frame": 695,
-      "objects": [
-        "bowl"
-      ],
-      "main_verbs": [
-        "put"
-      ],
-      "narration": " Put the bowl."
+      "subtask": "put_bowl"
     },
     {
       "id": "file-002-5",
@@ -72,13 +56,7 @@
       "end_time": "00:00:34.440",
       "start_frame": 730,
       "end_frame": 860,
-      "objects": [
-        "plate"
-      ],
-      "main_verbs": [
-        "pick"
-      ],
-      "narration": " Pick the plate."
+      "subtask": "pick_plate"
     },
     {
       "id": "file-002-6",
@@ -88,13 +66,7 @@
       "end_time": "00:00:38.200",
       "start_frame": 872,
       "end_frame": 954,
-      "objects": [
-        "rag"
-      ],
-      "main_verbs": [
-        "pick"
-      ],
-      "narration": " Pick the rag."
+      "subtask": "pick_rag"
     },
     {
       "id": "file-002-7",
@@ -104,13 +76,7 @@
       "end_time": "00:00:46.800",
       "start_frame": 954,
       "end_frame": 1169,
-      "objects": [
-        "plate with rag"
-      ],
-      "main_verbs": [
-        "wipe"
-      ],
-      "narration": " Wipe the plate with rag."
+      "subtask": "wipe_plate_with_rag"
     },
     {
       "id": "file-002-8",
@@ -120,13 +86,7 @@
       "end_time": "00:00:52.920",
       "start_frame": 1169,
       "end_frame": 1322,
-      "objects": [
-        "plate"
-      ],
-      "main_verbs": [
-        "put"
-      ],
-      "narration": " Put the plate."
+      "subtask": "put_plate"
     },
     {
       "id": "file-002-9",
@@ -136,13 +96,7 @@
       "end_time": "00:00:57.920",
       "start_frame": 1322,
       "end_frame": 1447,
-      "objects": [
-        "plate"
-      ],
-      "main_verbs": [
-        "pick"
-      ],
-      "narration": " Pick the plate."
+      "subtask": "pick_plate"
     },
     {
       "id": "file-002-10",
@@ -152,13 +106,7 @@
       "end_time": "00:01:05.200",
       "start_frame": 1448,
       "end_frame": 1629,
-      "objects": [
-        "plate with rag"
-      ],
-      "main_verbs": [
-        "wipe"
-      ],
-      "narration": " Wipe the plate with rag."
+      "subtask": "wipe_plate_with_rag"
     },
     {
       "id": "file-002-11",
@@ -168,13 +116,7 @@
       "end_time": "00:01:09.440",
       "start_frame": 1629,
       "end_frame": 1735,
-      "objects": [
-        "plate"
-      ],
-      "main_verbs": [
-        "put"
-      ],
-      "narration": " Put the plate."
+      "subtask": "put_plate"
     },
     {
       "id": "file-002-12",
@@ -184,13 +126,7 @@
       "end_time": "00:01:13.240",
       "start_frame": 1735,
       "end_frame": 1830,
-      "objects": [
-        "rag"
-      ],
-      "main_verbs": [
-        "put"
-      ],
-      "narration": " Put the rag."
+      "subtask": "put_rag"
     }
   ]
 }

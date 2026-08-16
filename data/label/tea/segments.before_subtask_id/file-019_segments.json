@@ -1,0 +1,100 @@
+{
+  "segments": [
+    {
+      "id": "file-019-1",
+      "start": 2.2,
+      "end": 9.72,
+      "start_time": "00:00:02.200",
+      "end_time": "00:00:09.720",
+      "start_frame": 55,
+      "end_frame": 242,
+      "objects": [
+        "teapot lid"
+      ],
+      "main_verbs": [
+        "open"
+      ],
+      "narration": " Open the teapot lid."
+    },
+    {
+      "id": "file-019-2",
+      "start": 13.92,
+      "end": 26.76,
+      "start_time": "00:00:13.920",
+      "end_time": "00:00:26.760",
+      "start_frame": 348,
+      "end_frame": 668,
+      "objects": [
+        "tea leaves"
+      ],
+      "main_verbs": [
+        "put"
+      ],
+      "narration": " Put the tea leaves."
+    },
+    {
+      "id": "file-019-3",
+      "start": 28.52,
+      "end": 49.84,
+      "start_time": "00:00:28.520",
+      "end_time": "00:00:49.840",
+      "start_frame": 713,
+      "end_frame": 1245,
+      "objects": [
+        "stirrer"
+      ],
+      "main_verbs": [
+        "move"
+      ],
+      "narration": " Move the stirrer."
+    },
+    {
+      "id": "file-019-4",
+      "start": 51.72,
+      "end": 60.16,
+      "start_time": "00:00:51.720",
+      "end_time": "00:01:00.160",
+      "start_frame": 1293,
+      "end_frame": 1503,
+      "objects": [
+        "teapot lid"
+      ],
+      "main_verbs": [
+        "close"
+      ],
+      "narration": " Close the teapot lid."
+    },
+    {
+      "id": "file-019-5",
+      "start": 60.12,
+      "end": 68.12,
+      "start_time": "00:01:00.120",
+      "end_time": "00:01:08.120",
+      "start_frame": 1503,
+      "end_frame": 1702,
+      "objects": [
+        "teacup"
+      ],
+      "main_verbs": [
+        "take"
+      ],
+      "narration": " Take the teacup."
+    },
+    {
+      "id": "file-019-6",
+      "start": 69.84,
+      "end": 92.32,
+      "start_time": "00:01:09.840",
+      "end_time": "00:01:32.320",
+      "start_frame": 1746,
+      "end_frame": 2307,
+      "objects": [
+        "tea"
+      ],
+      "main_verbs": [
+        "pour"
+      ],
+      "narration": " Pour the tea."
+    }
+  ]
+}

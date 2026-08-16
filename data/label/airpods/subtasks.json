@@ -1,0 +1,27 @@
+{
+  "family": "airpods",
+  "version": 1,
+  "_note": "subtask 定义。ID 永不改变；修措辞只改 text，所有引用自动跟随。标注段用 subtask 字段引用这里的 id，不再存渲染后的字符串。",
+  "subtasks": [
+    {
+      "id": "pick_airpods_case",
+      "text": "Pick the airpods case."
+    },
+    {
+      "id": "open_airpods_case",
+      "text": "Open the airpods case."
+    },
+    {
+      "id": "pick_left_earphone",
+      "text": "Pick the left earphone."
+    },
+    {
+      "id": "pick_right_earphone",
+      "text": "Pick the right earphone."
+    },
+    {
+      "id": "close_airpods_case",
+      "text": "Close the airpods case."
+    }
+  ]
+}

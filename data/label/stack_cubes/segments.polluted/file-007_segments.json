@@ -1,0 +1,110 @@
+{
+  "segments": [
+    {
+      "id": "file-007-1",
+      "start": 10.0,
+      "end": 21.1,
+      "start_time": "00:00:10.000",
+      "end_time": "00:00:21.100",
+      "start_frame": 200,
+      "end_frame": 421,
+      "metadata": {
+        "window_type": "pick_start_offset",
+        "original_start": 0.0,
+        "original_end": 19.1,
+        "original_start_time": "00:00:00.000",
+        "original_end_time": "00:00:19.100"
+      },
+      "subtask": "pick_yellow_cube"
+    },
+    {
+      "id": "file-007-1_file-007-2_move",
+      "start": 20.1,
+      "end": 23.05,
+      "start_time": "00:00:20.100",
+      "end_time": "00:00:23.050",
+      "start_frame": 402,
+      "end_frame": 460,
+      "metadata": {
+        "window_type": "move_pick_end_minus2_to_place_start_plus2",
+        "pick_segment_id": "file-007-1",
+        "place_segment_id": "file-007-2",
+        "pick_original_start": 0.0,
+        "pick_original_end": 19.1,
+        "place_original_start": 19.1,
+        "place_original_end": 24.05
+      },
+      "subtask": "move_yellow_cube"
+    },
+    {
+      "id": "file-007-2",
+      "start": 22.05,
+      "end": 26.05,
+      "start_time": "00:00:22.050",
+      "end_time": "00:00:26.050",
+      "start_frame": 441,
+      "end_frame": 520,
+      "metadata": {
+        "window_type": "place_transition",
+        "original_start": 19.1,
+        "original_end": 24.05,
+        "original_start_time": "00:00:19.100",
+        "original_end_time": "00:00:24.050"
+      },
+      "subtask": "place_yellow_cube"
+    },
+    {
+      "id": "file-007-3",
+      "start": 34.05,
+      "end": 44.6,
+      "start_time": "00:00:34.050",
+      "end_time": "00:00:44.600",
+      "start_frame": 681,
+      "end_frame": 891,
+      "metadata": {
+        "window_type": "pick_start_offset",
+        "original_start": 24.05,
+        "original_end": 42.6,
+        "original_start_time": "00:00:24.050",
+        "original_end_time": "00:00:42.600"
+      },
+      "subtask": "pick_red_cube"
+    },
+    {
+      "id": "file-007-3_file-007-4_move",
+      "start": 43.6,
+      "end": 45.8,
+      "start_time": "00:00:43.600",
+      "end_time": "00:00:45.800",
+      "start_frame": 872,
+      "end_frame": 915,
+      "metadata": {
+        "window_type": "move_pick_end_minus2_to_place_start_plus2",
+        "pick_segment_id": "file-007-3",
+        "place_segment_id": "file-007-4",
+        "pick_original_start": 24.05,
+        "pick_original_end": 42.6,
+        "place_original_start": 42.6,
+        "place_original_end": 46.8
+      },
+      "subtask": "move_red_cube"
+    },
+    {
+      "id": "file-007-4",
+      "start": 44.8,
+      "end": 48.8,
+      "start_time": "00:00:44.800",
+      "end_time": "00:00:48.800",
+      "start_frame": 896,
+      "end_frame": 975,
+      "metadata": {
+        "window_type": "place_transition",
+        "original_start": 42.6,
+        "original_end": 46.8,
+        "original_start_time": "00:00:42.600",
+        "original_end_time": "00:00:46.800"
+      },
+      "subtask": "place_red_cube"
+    }
+  ]
+}

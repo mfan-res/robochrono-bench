@@ -1,0 +1,31 @@
+{
+  "family": "tea",
+  "version": 1,
+  "_note": "subtask 定义。ID 永不改变；修措辞只改 text，所有引用自动跟随。标注段用 subtask 字段引用这里的 id，不再存渲染后的字符串。",
+  "subtasks": [
+    {
+      "id": "open_teapot_lid",
+      "text": "Open the teapot lid."
+    },
+    {
+      "id": "put_tea_leaves",
+      "text": "Put the tea leaves."
+    },
+    {
+      "id": "move_stirrer",
+      "text": "Move the stirrer."
+    },
+    {
+      "id": "close_teapot_lid",
+      "text": "Close the teapot lid."
+    },
+    {
+      "id": "take_teacup",
+      "text": "Take the teacup."
+    },
+    {
+      "id": "pour_tea",
+      "text": "Pour the tea."
+    }
+  ]
+}

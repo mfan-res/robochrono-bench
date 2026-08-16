@@ -1,0 +1,64 @@
+{
+  "segments": [
+    {
+      "id": "file-029-1",
+      "start": 5.367,
+      "end": 10.633,
+      "start_time": "00:00:05.367",
+      "end_time": "00:00:10.633",
+      "start_frame": 161,
+      "end_frame": 318,
+      "objects": [
+        "delivery bag"
+      ],
+      "main_verbs": [
+        "open"
+      ],
+      "narration": " Open the delivery bag."
+    },
+    {
+      "id": "file-029-2",
+      "start": 11.7,
+      "end": 14.533,
+      "start_time": "00:00:11.700",
+      "end_time": "00:00:14.533",
+      "start_frame": 351,
+      "end_frame": 435,
+      "objects": [
+        "small toy"
+      ],
+      "main_verbs": [
+        "grasp"
+      ],
+      "narration": " Grasp the small toy."
+    },
+    {
+      "id": "file-029-3",
+      "start": 14.5,
+      "end": 20.333,
+      "start_time": "00:00:14.500",
+      "end_time": "00:00:20.333",
+      "start_frame": 435,
+      "end_frame": 609,
+      "objects": [
+        "small toy in deliver bag"
+      ],
+      "main_verbs": [
+        "put"
+      ],
+      "narration": " Put the small toy in deliver bag."
+    },
+    {
+      "id": "file-029-4",
+      "start": 21.467,
+      "end": 25.667,
+      "start_time": "00:00:21.467",
+      "end_time": "00:00:25.667",
+      "start_frame": 644,
+      "end_frame": 769,
+      "objects": [],
+      "main_verbs": [],
+      "narration": " Set the packed items aside."
+    }
+  ]
+}

@@ -1,4 +1,17 @@
 {
+  "source": {
+    "video": "pen_inbox/file-039/main.mp4",
+    "fps": 20,
+    "total_frames": 560,
+    "tool_version": "upstream-video_labeler_timestamp/unknown",
+    "subtasks_sha256": "31ea37df45445770",
+    "episode_bounds": [
+      [
+        0.0,
+        28.0
+      ]
+    ]
+  },
   "segments": [
     {
       "id": "file-039-1",
@@ -8,13 +21,7 @@
       "end_time": "00:00:08.900",
       "start_frame": 30,
       "end_frame": 177,
-      "objects": [
-        "pen"
-      ],
-      "main_verbs": [
-        "pick"
-      ],
-      "narration": " Pick the pen."
+      "subtask": "pick_pen"
     },
     {
       "id": "file-039-2",
@@ -24,13 +31,7 @@
       "end_time": "00:00:15.800",
       "start_frame": 177,
       "end_frame": 315,
-      "objects": [
-        "box"
-      ],
-      "main_verbs": [
-        "pick"
-      ],
-      "narration": " Pick the box."
+      "subtask": "pick_box"
     },
     {
       "id": "file-039-3",
@@ -40,13 +41,7 @@
       "end_time": "00:00:25.700",
       "start_frame": 315,
       "end_frame": 513,
-      "objects": [
-        "pen"
-      ],
-      "main_verbs": [
-        "place"
-      ],
-      "narration": " Place the pen."
+      "subtask": "place_pen"
     }
   ]
 }

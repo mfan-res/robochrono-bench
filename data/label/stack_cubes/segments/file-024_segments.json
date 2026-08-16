@@ -1,146 +1,45 @@
 {
+  "source": {
+    "video": "stack_cubes/file-024/main.mp4",
+    "fps": 20,
+    "total_frames": 1057,
+    "tool_version": "restored-from-metadata/1",
+    "subtasks_sha256": "8977fc8d1d652719",
+    "episode_bounds": null,
+    "_restored": "由 metadata.original_start/original_end 还原；出题器合成的 move 段已丢弃（将在 ④ 显式重建）"
+  },
   "segments": [
     {
       "id": "file-024-1",
-      "start": 10.0,
-      "end": 19.85,
-      "start_time": "00:00:10.000",
-      "end_time": "00:00:19.850",
-      "start_frame": 200,
-      "end_frame": 396,
-      "objects": [
-        "yellow cube"
-      ],
-      "main_verbs": [
-        "pick"
-      ],
-      "narration": " Pick the yellow cube.",
-      "metadata": {
-        "window_type": "pick_start_offset",
-        "original_start": 0.0,
-        "original_end": 17.85,
-        "original_start_time": "00:00:00.000",
-        "original_end_time": "00:00:17.850"
-      }
-    },
-    {
-      "id": "file-024-1_file-024-2_move",
-      "start": 18.85,
-      "end": 20.5,
-      "start_time": "00:00:18.850",
-      "end_time": "00:00:20.500",
-      "start_frame": 377,
-      "end_frame": 409,
-      "objects": [
-        "yellow cube"
-      ],
-      "main_verbs": [
-        "move"
-      ],
-      "narration": " Move the yellow cube.",
-      "metadata": {
-        "window_type": "move_pick_end_minus2_to_place_start_plus2",
-        "pick_segment_id": "file-024-1",
-        "place_segment_id": "file-024-2",
-        "pick_original_start": 0.0,
-        "pick_original_end": 17.85,
-        "place_original_start": 17.85,
-        "place_original_end": 21.5
-      }
+      "subtask": "pick_yellow_cube",
+      "start_frame": 0,
+      "end_frame": 356,
+      "start": 0.0,
+      "end": 17.85
     },
     {
       "id": "file-024-2",
-      "start": 19.5,
-      "end": 23.5,
-      "start_time": "00:00:19.500",
-      "end_time": "00:00:23.500",
-      "start_frame": 390,
-      "end_frame": 469,
-      "objects": [
-        "yellow cube"
-      ],
-      "main_verbs": [
-        "place"
-      ],
-      "narration": " Place the yellow cube.",
-      "metadata": {
-        "window_type": "place_transition",
-        "original_start": 17.85,
-        "original_end": 21.5,
-        "original_start_time": "00:00:17.850",
-        "original_end_time": "00:00:21.500"
-      }
+      "subtask": "place_yellow_cube",
+      "start_frame": 357,
+      "end_frame": 429,
+      "start": 17.85,
+      "end": 21.5
     },
     {
       "id": "file-024-3",
-      "start": 31.5,
-      "end": 43.05,
-      "start_time": "00:00:31.500",
-      "end_time": "00:00:43.050",
-      "start_frame": 630,
-      "end_frame": 860,
-      "objects": [
-        "red cube"
-      ],
-      "main_verbs": [
-        "pick"
-      ],
-      "narration": " Pick the red cube.",
-      "metadata": {
-        "window_type": "pick_start_offset",
-        "original_start": 21.5,
-        "original_end": 41.05,
-        "original_start_time": "00:00:21.500",
-        "original_end_time": "00:00:41.050"
-      }
-    },
-    {
-      "id": "file-024-3_file-024-4_move",
-      "start": 42.05,
-      "end": 44.2,
-      "start_time": "00:00:42.050",
-      "end_time": "00:00:44.200",
-      "start_frame": 841,
-      "end_frame": 883,
-      "objects": [
-        "red cube"
-      ],
-      "main_verbs": [
-        "move"
-      ],
-      "narration": " Move the red cube.",
-      "metadata": {
-        "window_type": "move_pick_end_minus2_to_place_start_plus2",
-        "pick_segment_id": "file-024-3",
-        "place_segment_id": "file-024-4",
-        "pick_original_start": 21.5,
-        "pick_original_end": 41.05,
-        "place_original_start": 41.05,
-        "place_original_end": 45.2
-      }
+      "subtask": "pick_red_cube",
+      "start_frame": 430,
+      "end_frame": 820,
+      "start": 21.5,
+      "end": 41.05
     },
     {
       "id": "file-024-4",
-      "start": 43.2,
-      "end": 47.2,
-      "start_time": "00:00:43.200",
-      "end_time": "00:00:47.200",
-      "start_frame": 864,
-      "end_frame": 943,
-      "objects": [
-        "red cube"
-      ],
-      "main_verbs": [
-        "place"
-      ],
-      "narration": " Place the red cube.",
-      "metadata": {
-        "window_type": "place_transition",
-        "original_start": 41.05,
-        "original_end": 45.2,
-        "original_start_time": "00:00:41.050",
-        "original_end_time": "00:00:45.200"
-      }
+      "subtask": "place_red_cube",
+      "start_frame": 821,
+      "end_frame": 903,
+      "start": 41.05,
+      "end": 45.2
     }
   ]
 }

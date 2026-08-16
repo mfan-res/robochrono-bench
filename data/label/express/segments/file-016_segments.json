@@ -1,4 +1,12 @@
 {
+  "source": {
+    "video": "express/file-016/main.mp4",
+    "fps": 30,
+    "total_frames": 1,
+    "tool_version": "upstream-video_labeler_timestamp/unknown",
+    "subtasks_sha256": "3262eff7aaa3e1f1",
+    "episode_bounds": null
+  },
   "segments": [
     {
       "id": "file-016-1",
@@ -8,13 +16,7 @@
       "end_time": "00:00:11.400",
       "start_frame": 176,
       "end_frame": 341,
-      "objects": [
-        "delivery bag"
-      ],
-      "main_verbs": [
-        "open"
-      ],
-      "narration": " Open the delivery bag."
+      "subtask": "open_delivery_bag"
     },
     {
       "id": "file-016-2",
@@ -24,13 +26,7 @@
       "end_time": "00:00:14.700",
       "start_frame": 359,
       "end_frame": 440,
-      "objects": [
-        "small toy"
-      ],
-      "main_verbs": [
-        "grasp"
-      ],
-      "narration": " Grasp the small toy."
+      "subtask": "grasp_small_toy"
     },
     {
       "id": "file-016-3",
@@ -40,13 +36,7 @@
       "end_time": "00:00:24.600",
       "start_frame": 448,
       "end_frame": 737,
-      "objects": [
-        "small toy in deliver bag"
-      ],
-      "main_verbs": [
-        "put"
-      ],
-      "narration": " Put the small toy in deliver bag."
+      "subtask": "put_small_toy_in_deliver_bag"
     },
     {
       "id": "file-016-4",
@@ -56,9 +46,7 @@
       "end_time": "00:00:30.533",
       "start_frame": 800,
       "end_frame": 915,
-      "objects": [],
-      "main_verbs": [],
-      "narration": " Set the packed items aside."
+      "subtask": "set_packed_items_aside"
     }
   ]
 }
