@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "bench/segments.json",
+  "title": "人工标注（动作分段）",
+  "description": "③ 标注这一段的输出契约，也是 ④ 出题的唯一真值来源。\n\n**段只存 subtask 引用，不存渲染后的字符串**（D-25）。同一个动作曾在系统里被存了 11 份，五个已知事故全是其中两份漂移。现在文字只存在于 subtasks.json 的一处，标注段引用它的 id —— 漂移在结构上不可能发生。\n\n权威与派生：start_frame / end_frame 是人工输入，是唯一权威；start / end / *_time 全部由 fps 换算而来。校验器**重算比对**而不是相信文件里写的值。\n\n拒绝出题产物回写（P-03）：metadata / window_type / original_* 一律不允许出现。",
+  "type": "object",
+  "required": [
+    "source",
+    "segments"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "source": {
+      "description": "溯源。缺了它就无法回答「这份标注是用哪个版本的工具、哪份词表、对哪段视频做的」—— 上游正是因为没有这块，我们才在 wash 上发现了无从查证的版本漂移（数据里有 main_verbs=['wipe']，而手上这版工具的 ACTION_VERBS 里根本没有 wipe）。",
+      "type": "object",
+      "required": [
+        "video",
+        "fps",
+        "total_frames",
+        "tool_version"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "video": {
+          "type": "string",
+          "description": "相对 data/source 的路径"
+        },
+        "video_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{16,64}$"
+        },
+        "fps": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "total_frames": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "tool_version": {
+          "type": "string"
+        },
+        "episode_bounds": {
+          "description": "该视频里各 episode 的时间区间，来自 LeRobot 的 meta/episodes。\nnull 表示元表未覆盖该视频（tea/wash 的元表只记了 10 集），**不等于「只有一个 episode」** —— 这个区别必须保留，否则又会掉进 P-01。",
+          "oneOf": [
+            {
+              "type": "null"
+            },
+            {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2,
+                "items": {
+                  "type": "number",
+                  "minimum": 0
+                }
+              }
+            }
+          ]
+        },
+        "labeled_by": {
+          "type": "string"
+        },
+        "labeled_at": {
+          "type": "string"
+        },
+        "subtasks_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{16,64}$",
+          "description": "subtasks.json 的哈希。ID 稳定但 text 可改，哈希让「这份标注按哪版措辞产出」可追溯。"
+        },
+        "_restored": {
+          "type": "string",
+          "description": "还原说明。仅由 restore_* 脚本写入（如 stack_cubes 从 metadata 反解）。"
+        }
+      }
+    },
+    "segments": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "subtask",
+          "start_frame",
+          "end_frame",
+          "start",
+          "end"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "start_frame": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "权威。人工按键得到。"
+          },
+          "end_frame": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "权威。闭区间，即该帧本身属于这一段。"
+          },
+          "start": {
+            "type": "number",
+            "minimum": 0,
+            "description": "派生 = start_frame / fps。校验器重算比对。"
+          },
+          "end": {
+            "type": "number",
+            "minimum": 0,
+            "description": "派生 = (end_frame + 1) / fps —— 闭区间转半开。\n⚠ 这会让相邻段的**秒区间**重叠一帧（P-04，全量 631 处）：按秒判断「落在恰好一个段内」会误判，判据必须走帧号。"
+          },
+          "start_time": {
+            "type": "string",
+            "pattern": "^\\d{2}:\\d{2}:\\d{2}\\.\\d{3}$"
+          },
+          "end_time": {
+            "type": "string",
+            "pattern": "^\\d{2}:\\d{2}:\\d{2}\\.\\d{3}$"
+          },
+          "episode_index": {
+            "description": "该段属于视频里的第几个 episode。多集打包的视频（tea2）必须填，否则无法判断是否漏标了后续 episode。",
+            "oneOf": [
+              {
+                "type": "null"
+              },
+              {
+                "type": "integer",
+                "minimum": 0
+              }
+            ]
+          },
+          "subtask": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z0-9]+(_[a-z0-9]+)*$",
+            "description": "引用同族 subtasks.json 里的 id。**ID 永不改变** —— 修措辞只改 text，所有引用自动跟随。\n⚠ 不要用子串/startswith 匹配：`pick_up_teapot` 是 `pick_up_teapot_lid` 的前缀，必须精确相等。"
+          }
+        },
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "metadata"
+              ]
+            },
+            {
+              "required": [
+                "window_type"
+              ]
+            },
+            {
+              "required": [
+                "original_start"
+              ]
+            },
+            {
+              "required": [
+                "original_end"
+              ]
+            }
+          ]
+        },
+        "$comment": "上面的 not/anyOf 是 P-03 的直接对策：stack_cubes 的 label 里带着 metadata.window_type / original_start，那是**出题器**（time_unders_workflow 的 window_for_segment）写的，不是标注工具写的。出题产物一旦回写进 label 层，下一轮出题就会把上一轮的 pick_before_window=10.0 当成人工真值，错误被固化第二次。"
+      }
+    },
+    "_note": {
+      "type": "string"
+    }
+  }
+}

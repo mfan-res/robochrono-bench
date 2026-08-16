@@ -1,0 +1,24 @@
+{
+  "family": "stack_cubes",
+  "version": 1,
+  "_note": "subtask 定义。ID 永不改变；修措辞只改 text，所有引用自动跟随。标注段用 subtask 字段引用这里的 id，不再存渲染后的字符串。",
+  "subtasks": [
+    {
+      "id": "pick_red_cube",
+      "text": "Pick the red cube."
+    },
+    {
+      "id": "place_red_cube",
+      "text": "Place the red cube."
+    },
+    {
+      "id": "pick_yellow_cube",
+      "text": "Pick the yellow cube."
+    },
+    {
+      "id": "place_yellow_cube",
+      "text": "Place the yellow cube."
+    }
+  ],
+  "_restored_note": "move_red_cube / move_yellow_cube 已移除 —— 它们是出题器 window_for_segment 合成的，不是人工标注（P-03）。团队决定保留 move 这个动作，但应在 ④ 出题阶段显式合成：窗口规则写进 recipe、产物标 synthetic:true、不回写 label。"
+}

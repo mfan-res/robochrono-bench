@@ -1,0 +1,52 @@
+{
+  "segments": [
+    {
+      "id": "file-006-1",
+      "start": 0.0,
+      "end": 8.5,
+      "start_time": "00:00:00.000",
+      "end_time": "00:00:08.500",
+      "start_frame": 0,
+      "end_frame": 169,
+      "objects": [
+        "gift"
+      ],
+      "main_verbs": [
+        "pick"
+      ],
+      "narration": " Pick the gift."
+    },
+    {
+      "id": "file-006-2",
+      "start": 8.45,
+      "end": 19.9,
+      "start_time": "00:00:08.450",
+      "end_time": "00:00:19.900",
+      "start_frame": 169,
+      "end_frame": 397,
+      "objects": [
+        "gift"
+      ],
+      "main_verbs": [
+        "move"
+      ],
+      "narration": " Move the gift."
+    },
+    {
+      "id": "file-006-3",
+      "start": 19.85,
+      "end": 25.2,
+      "start_time": "00:00:19.850",
+      "end_time": "00:00:25.200",
+      "start_frame": 397,
+      "end_frame": 503,
+      "objects": [
+        "gift"
+      ],
+      "main_verbs": [
+        "place"
+      ],
+      "narration": " Place the gift."
+    }
+  ]
+}

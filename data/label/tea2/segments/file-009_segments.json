@@ -1,4 +1,25 @@
 {
+  "source": {
+    "video": "tea2/file-009/main.mp4",
+    "fps": 30,
+    "total_frames": 10951,
+    "tool_version": "upstream-video_labeler_timestamp/unknown",
+    "subtasks_sha256": "63b53973da900758",
+    "episode_bounds": [
+      [
+        0.0,
+        127.23333333333333
+      ],
+      [
+        127.23333333333333,
+        244.76666666666665
+      ],
+      [
+        244.76666666666665,
+        365.0333333333333
+      ]
+    ]
+  },
   "segments": [
     {
       "id": "file-009-1",
@@ -8,13 +29,7 @@
       "end_time": "00:00:10.900",
       "start_frame": 115,
       "end_frame": 326,
-      "objects": [
-        "up teapot lid"
-      ],
-      "main_verbs": [
-        "pick"
-      ],
-      "narration": " Pick up the teapot lid."
+      "subtask": "pick_up_teapot_lid"
     },
     {
       "id": "file-009-2",
@@ -24,13 +39,7 @@
       "end_time": "00:00:22.067",
       "start_frame": 555,
       "end_frame": 661,
-      "objects": [
-        "up tea bag"
-      ],
-      "main_verbs": [
-        "pick"
-      ],
-      "narration": " Pick up the tea bag."
+      "subtask": "pick_up_tea_bag"
     },
     {
       "id": "file-009-3",
@@ -40,13 +49,7 @@
       "end_time": "00:00:27.633",
       "start_frame": 661,
       "end_frame": 828,
-      "objects": [
-        "tea bag in teapot"
-      ],
-      "main_verbs": [
-        "place"
-      ],
-      "narration": " Place the tea bag in teapot."
+      "subtask": "place_tea_bag_in_teapot"
     },
     {
       "id": "file-009-4",
@@ -56,13 +59,7 @@
       "end_time": "00:00:39.367",
       "start_frame": 1040,
       "end_frame": 1180,
-      "objects": [
-        "up kettle"
-      ],
-      "main_verbs": [
-        "pick"
-      ],
-      "narration": " Pick up the kettle."
+      "subtask": "pick_up_kettle"
     },
     {
       "id": "file-009-5",
@@ -72,13 +69,7 @@
       "end_time": "00:01:04.333",
       "start_frame": 1357,
       "end_frame": 1929,
-      "objects": [
-        "water"
-      ],
-      "main_verbs": [
-        "pour"
-      ],
-      "narration": " Pour the water."
+      "subtask": "pour_water"
     },
     {
       "id": "file-009-6",
@@ -88,13 +79,7 @@
       "end_time": "00:01:21.367",
       "start_frame": 2229,
       "end_frame": 2440,
-      "objects": [
-        "lid on the teapot"
-      ],
-      "main_verbs": [
-        "put"
-      ],
-      "narration": " Put the lid on the teapot."
+      "subtask": "put_lid_on_teapot"
     },
     {
       "id": "file-009-7",
@@ -104,13 +89,7 @@
       "end_time": "00:01:36.933",
       "start_frame": 2731,
       "end_frame": 2907,
-      "objects": [
-        "teapot"
-      ],
-      "main_verbs": [
-        "pick"
-      ],
-      "narration": " Pick up the teapot."
+      "subtask": "pick_up_teapot"
     },
     {
       "id": "file-009-8",
@@ -120,13 +99,7 @@
       "end_time": "00:01:58.067",
       "start_frame": 2951,
       "end_frame": 3541,
-      "objects": [
-        "tea"
-      ],
-      "main_verbs": [
-        "pour"
-      ],
-      "narration": " Pour the tea."
+      "subtask": "pour_tea"
     }
   ]
 }

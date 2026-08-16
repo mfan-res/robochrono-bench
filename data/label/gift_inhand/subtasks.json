@@ -1,0 +1,19 @@
+{
+  "family": "gift_inhand",
+  "version": 1,
+  "_note": "subtask 定义。ID 永不改变；修措辞只改 text，所有引用自动跟随。标注段用 subtask 字段引用这里的 id，不再存渲染后的字符串。",
+  "subtasks": [
+    {
+      "id": "pick_gift",
+      "text": "Pick the gift."
+    },
+    {
+      "id": "move_gift",
+      "text": "Move the gift."
+    },
+    {
+      "id": "place_gift",
+      "text": "Place the gift."
+    }
+  ]
+}

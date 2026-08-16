@@ -1,4 +1,12 @@
 {
+  "source": {
+    "video": "tea/file-032/main.mp4",
+    "fps": 25,
+    "total_frames": 2389,
+    "tool_version": "upstream-video_labeler_timestamp/unknown",
+    "subtasks_sha256": "1240c53e0b7d3a9c",
+    "episode_bounds": null
+  },
   "segments": [
     {
       "id": "file-032-1",
@@ -8,13 +16,7 @@
       "end_time": "00:00:11.640",
       "start_frame": 52,
       "end_frame": 290,
-      "objects": [
-        "teapot lid"
-      ],
-      "main_verbs": [
-        "open"
-      ],
-      "narration": " Open the teapot lid."
+      "subtask": "open_teapot_lid"
     },
     {
       "id": "file-032-2",
@@ -24,13 +26,7 @@
       "end_time": "00:00:28.680",
       "start_frame": 366,
       "end_frame": 716,
-      "objects": [
-        "tea leaves"
-      ],
-      "main_verbs": [
-        "put"
-      ],
-      "narration": " Put the tea leaves."
+      "subtask": "put_tea_leaves"
     },
     {
       "id": "file-032-3",
@@ -40,13 +36,7 @@
       "end_time": "00:00:48.440",
       "start_frame": 745,
       "end_frame": 1210,
-      "objects": [
-        "stirrer"
-      ],
-      "main_verbs": [
-        "move"
-      ],
-      "narration": " Move the stirrer."
+      "subtask": "move_stirrer"
     },
     {
       "id": "file-032-4",
@@ -56,13 +46,7 @@
       "end_time": "00:00:57.000",
       "start_frame": 1247,
       "end_frame": 1424,
-      "objects": [
-        "teapot lid"
-      ],
-      "main_verbs": [
-        "close"
-      ],
-      "narration": " Close the teapot lid."
+      "subtask": "close_teapot_lid"
     },
     {
       "id": "file-032-5",
@@ -72,13 +56,7 @@
       "end_time": "00:01:07.000",
       "start_frame": 1424,
       "end_frame": 1674,
-      "objects": [
-        "teacup"
-      ],
-      "main_verbs": [
-        "take"
-      ],
-      "narration": " Take the teacup."
+      "subtask": "take_teacup"
     },
     {
       "id": "file-032-6",
@@ -88,13 +66,7 @@
       "end_time": "00:01:28.800",
       "start_frame": 1713,
       "end_frame": 2219,
-      "objects": [
-        "tea"
-      ],
-      "main_verbs": [
-        "pour"
-      ],
-      "narration": " Pour the tea."
+      "subtask": "pour_tea"
     }
   ]
 }

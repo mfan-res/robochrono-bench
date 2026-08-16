@@ -1,0 +1,84 @@
+{
+  "segments": [
+    {
+      "id": "file-012-1",
+      "start": 4.667,
+      "end": 6.367,
+      "start_time": "00:00:04.667",
+      "end_time": "00:00:06.367",
+      "start_frame": 140,
+      "end_frame": 190,
+      "objects": [
+        "airpods case"
+      ],
+      "main_verbs": [
+        "pick"
+      ],
+      "narration": " Pick the airpods case."
+    },
+    {
+      "id": "file-012-2",
+      "start": 8.0,
+      "end": 9.767,
+      "start_time": "00:00:08.000",
+      "end_time": "00:00:09.767",
+      "start_frame": 240,
+      "end_frame": 292,
+      "objects": [
+        "airpods case"
+      ],
+      "main_verbs": [
+        "open"
+      ],
+      "narration": " Open the airpods case."
+    },
+    {
+      "id": "file-012-3",
+      "start": 13.067,
+      "end": 14.767,
+      "start_time": "00:00:13.067",
+      "end_time": "00:00:14.767",
+      "start_frame": 392,
+      "end_frame": 442,
+      "objects": [
+        "left earphone"
+      ],
+      "main_verbs": [
+        "pick"
+      ],
+      "narration": " Pick the left earphone."
+    },
+    {
+      "id": "file-012-4",
+      "start": 28.733,
+      "end": 30.433,
+      "start_time": "00:00:28.733",
+      "end_time": "00:00:30.433",
+      "start_frame": 862,
+      "end_frame": 912,
+      "objects": [
+        "right earphone"
+      ],
+      "main_verbs": [
+        "pick"
+      ],
+      "narration": " Pick the right earphone."
+    },
+    {
+      "id": "file-012-5",
+      "start": 43.067,
+      "end": 43.967,
+      "start_time": "00:00:43.067",
+      "end_time": "00:00:43.967",
+      "start_frame": 1292,
+      "end_frame": 1318,
+      "objects": [
+        "airpods case"
+      ],
+      "main_verbs": [
+        "close"
+      ],
+      "narration": " Close the airpods case."
+    }
+  ]
+}

@@ -1,4 +1,17 @@
 {
+  "source": {
+    "video": "gift_inhand/file-015/main.mp4",
+    "fps": 20,
+    "total_frames": 787,
+    "tool_version": "upstream-video_labeler_timestamp/unknown",
+    "subtasks_sha256": "bf3bcb2be6335348",
+    "episode_bounds": [
+      [
+        0.0,
+        39.35
+      ]
+    ]
+  },
   "segments": [
     {
       "id": "file-015-1",
@@ -8,13 +21,7 @@
       "end_time": "00:00:13.100",
       "start_frame": 0,
       "end_frame": 261,
-      "objects": [
-        "gift"
-      ],
-      "main_verbs": [
-        "pick"
-      ],
-      "narration": " Pick the gift."
+      "subtask": "pick_gift"
     },
     {
       "id": "file-015-2",
@@ -24,13 +31,7 @@
       "end_time": "00:00:23.250",
       "start_frame": 261,
       "end_frame": 464,
-      "objects": [
-        "gift"
-      ],
-      "main_verbs": [
-        "move"
-      ],
-      "narration": " Move the gift."
+      "subtask": "move_gift"
     },
     {
       "id": "file-015-3",
@@ -40,13 +41,7 @@
       "end_time": "00:00:35.150",
       "start_frame": 464,
       "end_frame": 702,
-      "objects": [
-        "gift"
-      ],
-      "main_verbs": [
-        "place"
-      ],
-      "narration": " Place the gift."
+      "subtask": "place_gift"
     }
   ]
 }

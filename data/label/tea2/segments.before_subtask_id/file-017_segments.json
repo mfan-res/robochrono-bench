@@ -1,0 +1,132 @@
+{
+  "segments": [
+    {
+      "id": "file-017-1",
+      "start": 8.667,
+      "end": 16.033,
+      "start_time": "00:00:08.667",
+      "end_time": "00:00:16.033",
+      "start_frame": 260,
+      "end_frame": 480,
+      "objects": [
+        "up teapot lid"
+      ],
+      "main_verbs": [
+        "pick"
+      ],
+      "narration": " Pick up the teapot lid."
+    },
+    {
+      "id": "file-017-2",
+      "start": 27.333,
+      "end": 29.7,
+      "start_time": "00:00:27.333",
+      "end_time": "00:00:29.700",
+      "start_frame": 820,
+      "end_frame": 890,
+      "objects": [
+        "up tea bag"
+      ],
+      "main_verbs": [
+        "pick"
+      ],
+      "narration": " Pick up the tea bag."
+    },
+    {
+      "id": "file-017-3",
+      "start": 32.0,
+      "end": 36.367,
+      "start_time": "00:00:32.000",
+      "end_time": "00:00:36.367",
+      "start_frame": 960,
+      "end_frame": 1090,
+      "objects": [
+        "tea bag in teapot"
+      ],
+      "main_verbs": [
+        "place"
+      ],
+      "narration": " Place the tea bag in teapot."
+    },
+    {
+      "id": "file-017-4",
+      "start": 43.0,
+      "end": 47.7,
+      "start_time": "00:00:43.000",
+      "end_time": "00:00:47.700",
+      "start_frame": 1290,
+      "end_frame": 1430,
+      "objects": [
+        "up kettle"
+      ],
+      "main_verbs": [
+        "pick"
+      ],
+      "narration": " Pick up the kettle."
+    },
+    {
+      "id": "file-017-5",
+      "start": 53.333,
+      "end": 60.7,
+      "start_time": "00:00:53.333",
+      "end_time": "00:01:00.700",
+      "start_frame": 1600,
+      "end_frame": 1820,
+      "objects": [
+        "water"
+      ],
+      "main_verbs": [
+        "pour"
+      ],
+      "narration": " Pour the water."
+    },
+    {
+      "id": "file-017-6",
+      "start": 76.0,
+      "end": 79.7,
+      "start_time": "00:01:16.000",
+      "end_time": "00:01:19.700",
+      "start_frame": 2280,
+      "end_frame": 2390,
+      "objects": [
+        "lid on the teapot"
+      ],
+      "main_verbs": [
+        "put"
+      ],
+      "narration": " Put the lid on the teapot."
+    },
+    {
+      "id": "file-017-7",
+      "start": 85.333,
+      "end": 90.367,
+      "start_time": "00:01:25.333",
+      "end_time": "00:01:30.367",
+      "start_frame": 2560,
+      "end_frame": 2710,
+      "objects": [
+        "teapot"
+      ],
+      "main_verbs": [
+        "pick"
+      ],
+      "narration": " Pick up the teapot."
+    },
+    {
+      "id": "file-017-8",
+      "start": 91.667,
+      "end": 103.7,
+      "start_time": "00:01:31.667",
+      "end_time": "00:01:43.700",
+      "start_frame": 2750,
+      "end_frame": 3110,
+      "objects": [
+        "tea"
+      ],
+      "main_verbs": [
+        "pour"
+      ],
+      "narration": " Pour the tea."
+    }
+  ]
+}

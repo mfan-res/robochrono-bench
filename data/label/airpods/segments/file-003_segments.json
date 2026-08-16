@@ -1,4 +1,17 @@
 {
+  "source": {
+    "video": "airpods/file-003/main.mp4",
+    "fps": 30,
+    "total_frames": 1873,
+    "tool_version": "upstream-video_labeler_timestamp/unknown",
+    "subtasks_sha256": "2aff14ea98346475",
+    "episode_bounds": [
+      [
+        0.0,
+        62.43333333333333
+      ]
+    ]
+  },
   "segments": [
     {
       "id": "file-003-1",
@@ -8,13 +21,7 @@
       "end_time": "00:00:06.367",
       "start_frame": 150,
       "end_frame": 190,
-      "objects": [
-        "airpods case"
-      ],
-      "main_verbs": [
-        "pick"
-      ],
-      "narration": " Pick the airpods case."
+      "subtask": "pick_airpods_case"
     },
     {
       "id": "file-003-2",
@@ -24,13 +31,7 @@
       "end_time": "00:00:10.367",
       "start_frame": 260,
       "end_frame": 310,
-      "objects": [
-        "airpods case"
-      ],
-      "main_verbs": [
-        "open"
-      ],
-      "narration": " Open the airpods case."
+      "subtask": "open_airpods_case"
     },
     {
       "id": "file-003-3",
@@ -40,13 +41,7 @@
       "end_time": "00:00:16.033",
       "start_frame": 420,
       "end_frame": 480,
-      "objects": [
-        "left earphone"
-      ],
-      "main_verbs": [
-        "pick"
-      ],
-      "narration": " Pick the left earphone."
+      "subtask": "pick_left_earphone"
     },
     {
       "id": "file-003-4",
@@ -56,13 +51,7 @@
       "end_time": "00:00:38.033",
       "start_frame": 1060,
       "end_frame": 1140,
-      "objects": [
-        "right earphone"
-      ],
-      "main_verbs": [
-        "pick"
-      ],
-      "narration": " Pick the right earphone."
+      "subtask": "pick_right_earphone"
     },
     {
       "id": "file-003-5",
@@ -72,13 +61,7 @@
       "end_time": "00:00:53.700",
       "start_frame": 1490,
       "end_frame": 1610,
-      "objects": [
-        "airpods case"
-      ],
-      "main_verbs": [
-        "close"
-      ],
-      "narration": " Close the airpods case."
+      "subtask": "close_airpods_case"
     }
   ]
 }

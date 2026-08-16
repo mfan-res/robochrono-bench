@@ -1,0 +1,19 @@
+{
+  "family": "pen_inbox",
+  "version": 1,
+  "_note": "subtask 定义。ID 永不改变；修措辞只改 text，所有引用自动跟随。标注段用 subtask 字段引用这里的 id，不再存渲染后的字符串。",
+  "subtasks": [
+    {
+      "id": "pick_pen",
+      "text": "Pick the pen."
+    },
+    {
+      "id": "pick_box",
+      "text": "Pick the box."
+    },
+    {
+      "id": "place_pen",
+      "text": "Place the pen."
+    }
+  ]
+}
