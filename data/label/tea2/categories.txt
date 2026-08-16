@@ -1,0 +1,8 @@
+pick up teapot lid
+pick up tea bag
+place tea bag in teapot
+pick up kettle
+pour water
+put the lid on the teapot
+pick teapot
+pour tea

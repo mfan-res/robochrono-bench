@@ -1,0 +1,5 @@
+pick airpods case
+open airpods case
+pick left earphone
+pick right earphone
+close airpods case

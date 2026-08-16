@@ -1,0 +1,84 @@
+{
+  "task_category_distractors": {
+    "pick the bowl": [
+      "grasp the cup",
+      "lift the plate",
+      "slide the bowl",
+      "pick the sponge",
+      "stack the bowl",
+      "move the bowl to the sink"
+    ],
+    "pick the plate": [
+      "grasp the bowl",
+      "lift the tray",
+      "slide the plate",
+      "pick the fork",
+      "stack the plate",
+      "move the plate to the rack"
+    ],
+    "pick the brush": [
+      "grasp the sponge",
+      "lift the rag",
+      "pick the soap",
+      "slide the brush",
+      "hold the brush upright",
+      "reach for the brush"
+    ],
+    "pick the rag": [
+      "grasp the brush",
+      "lift the towel",
+      "pick the sponge",
+      "fold the rag",
+      "slide the rag",
+      "reach for the rag"
+    ],
+    "wipe the bowl with brush": [
+      "scrub the bowl with sponge",
+      "wipe the plate with brush",
+      "rinse the bowl with water",
+      "dry the bowl with rag",
+      "clean the bowl with sponge",
+      "wipe the cup with brush"
+    ],
+    "wipe the plate with rag": [
+      "scrub the plate with brush",
+      "wipe the bowl with rag",
+      "rinse the plate with water",
+      "dry the plate with towel",
+      "clean the plate with sponge",
+      "wipe the tray with rag"
+    ],
+    "put the bowl": [
+      "place the bowl in the sink",
+      "stack the bowl on the plate",
+      "put the cup",
+      "drop the bowl",
+      "slide the bowl away",
+      "align the bowl"
+    ],
+    "put the plate": [
+      "place the plate on the rack",
+      "stack the plate on the bowl",
+      "put the tray",
+      "drop the plate",
+      "slide the plate away",
+      "align the plate"
+    ],
+    "put the brush": [
+      "place the brush in the holder",
+      "drop the brush",
+      "put the sponge",
+      "hang the brush",
+      "slide the brush away",
+      "set down the brush"
+    ],
+    "put the rag": [
+      "place the rag on the counter",
+      "drop the rag",
+      "put the towel",
+      "fold the rag on the table",
+      "hang the rag to dry",
+      "set down the rag"
+    ]
+  }
+}

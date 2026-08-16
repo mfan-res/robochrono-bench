@@ -1,0 +1,28 @@
+{
+  "task_category_distractors": {
+    "pick gift": [
+      "unwrap gift",
+      "push gift",
+      "pick box",
+      "inspect gift",
+      "stack gift",
+      "orient gift"
+    ],
+    "move gift": [
+      "rotate gift",
+      "slide gift",
+      "move box",
+      "carry gift",
+      "shake gift",
+      "adjust gift"
+    ],
+    "place gift": [
+      "drop gift",
+      "align gift",
+      "place box",
+      "lower gift",
+      "pack gift",
+      "release gift"
+    ]
+  }
+}

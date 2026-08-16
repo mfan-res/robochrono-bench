@@ -1,0 +1,68 @@
+{
+  "_note": "族名规范表。三处来源的族名各不相同，所有脚本只认 canonical（本表的键）。",
+  "_sources": {
+    "qa": "旧 datasets/QA/<group>/<name>",
+    "label_dir": "旧 datasets/json/<name>",
+    "raw": "yyyyywv/egocentric 里的 <platform>/<name>"
+  },
+  "families": {
+    "airpods": {
+      "qa": "airpods",
+      "label_dir": "pack_airpods",
+      "raw": "gripper/pack_airpods",
+      "status": "active"
+    },
+    "express": {
+      "qa": "express",
+      "label_dir": "express_json",
+      "raw": "gripper/express",
+      "raw_incomplete": "上游仅 3–5 集，需 50 集",
+      "status": "excluded",
+      "excluded_reason": "上游原片仅 4 集且视角不全，全视角齐的只有 2 集（需 50 集）。标注 50 份仍保留在 data/label/express/，等数据补齐后可直接启用。",
+      "excluded_at": "2026-08-17"
+    },
+    "gift_inhand": {
+      "qa": "gift_inhand",
+      "label_dir": "gift_inhand",
+      "raw": "hand/gift_inhand",
+      "status": "active"
+    },
+    "pen_inbox": {
+      "qa": "pen_inbox",
+      "label_dir": "pen_inbox",
+      "raw": "hand/pen_inbox_lerobot",
+      "status": "active"
+    },
+    "stack_cubes": {
+      "qa": "stack_cubes",
+      "label_dir": "stack_cubes",
+      "raw": "gripper/stack_cubes",
+      "raw_note": "上游 800 集，本 benchmark 只用 file-000..049",
+      "status": "active"
+    },
+    "tea": {
+      "qa": "tea",
+      "label_dir": "tea",
+      "raw": "gripper/tea",
+      "status": "active"
+    },
+    "tea2": {
+      "qa": "tea2",
+      "label_dir": "tea2_json",
+      "raw": "gripper/tea2",
+      "status": "active",
+      "episode_cap": 20,
+      "episode_cap_reason": "file-020 缺 wrist_right 视角，多视角任务出不了题。数据方生成 QA 时也跳过了这一集（num_missing_media_skipped），两边独立指向同一集。对齐到 20 集。",
+      "excluded_episodes": [
+        "file-020"
+      ]
+    },
+    "wash": {
+      "qa": "wash",
+      "label_dir": "wash",
+      "raw": "gripper/wash",
+      "status": "active"
+    }
+  },
+  "_status_note": "status=excluded 的族不参与出题与评测，但其标注与已下载数据保留；episode_cap 表示该族只用前 N 集（原因见 episode_cap_reason）。"
+}

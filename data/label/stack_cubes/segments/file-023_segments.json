@@ -1,0 +1,146 @@
+{
+  "segments": [
+    {
+      "id": "file-023-1",
+      "start": 10.0,
+      "end": 20.6,
+      "start_time": "00:00:10.000",
+      "end_time": "00:00:20.600",
+      "start_frame": 200,
+      "end_frame": 411,
+      "objects": [
+        "red cube"
+      ],
+      "main_verbs": [
+        "pick"
+      ],
+      "narration": " Pick the red cube.",
+      "metadata": {
+        "window_type": "pick_start_offset",
+        "original_start": 0.0,
+        "original_end": 18.6,
+        "original_start_time": "00:00:00.000",
+        "original_end_time": "00:00:18.600"
+      }
+    },
+    {
+      "id": "file-023-1_file-023-2_move",
+      "start": 19.6,
+      "end": 21.6,
+      "start_time": "00:00:19.600",
+      "end_time": "00:00:21.600",
+      "start_frame": 392,
+      "end_frame": 431,
+      "objects": [
+        "red cube"
+      ],
+      "main_verbs": [
+        "move"
+      ],
+      "narration": " Move the red cube.",
+      "metadata": {
+        "window_type": "move_pick_end_minus2_to_place_start_plus2",
+        "pick_segment_id": "file-023-1",
+        "place_segment_id": "file-023-2",
+        "pick_original_start": 0.0,
+        "pick_original_end": 18.6,
+        "place_original_start": 18.6,
+        "place_original_end": 22.6
+      }
+    },
+    {
+      "id": "file-023-2",
+      "start": 20.6,
+      "end": 24.6,
+      "start_time": "00:00:20.600",
+      "end_time": "00:00:24.600",
+      "start_frame": 412,
+      "end_frame": 491,
+      "objects": [
+        "red cube"
+      ],
+      "main_verbs": [
+        "place"
+      ],
+      "narration": " Place the red cube.",
+      "metadata": {
+        "window_type": "place_transition",
+        "original_start": 18.6,
+        "original_end": 22.6,
+        "original_start_time": "00:00:18.600",
+        "original_end_time": "00:00:22.600"
+      }
+    },
+    {
+      "id": "file-023-3",
+      "start": 32.6,
+      "end": 42.25,
+      "start_time": "00:00:32.600",
+      "end_time": "00:00:42.250",
+      "start_frame": 652,
+      "end_frame": 844,
+      "objects": [
+        "yellow cube"
+      ],
+      "main_verbs": [
+        "pick"
+      ],
+      "narration": " Pick the yellow cube.",
+      "metadata": {
+        "window_type": "pick_start_offset",
+        "original_start": 22.6,
+        "original_end": 40.25,
+        "original_start_time": "00:00:22.600",
+        "original_end_time": "00:00:40.250"
+      }
+    },
+    {
+      "id": "file-023-3_file-023-4_move",
+      "start": 41.25,
+      "end": 43.75,
+      "start_time": "00:00:41.250",
+      "end_time": "00:00:43.750",
+      "start_frame": 825,
+      "end_frame": 874,
+      "objects": [
+        "yellow cube"
+      ],
+      "main_verbs": [
+        "move"
+      ],
+      "narration": " Move the yellow cube.",
+      "metadata": {
+        "window_type": "move_pick_end_minus2_to_place_start_plus2",
+        "pick_segment_id": "file-023-3",
+        "place_segment_id": "file-023-4",
+        "pick_original_start": 22.6,
+        "pick_original_end": 40.25,
+        "place_original_start": 40.25,
+        "place_original_end": 44.75
+      }
+    },
+    {
+      "id": "file-023-4",
+      "start": 42.75,
+      "end": 46.75,
+      "start_time": "00:00:42.750",
+      "end_time": "00:00:46.750",
+      "start_frame": 855,
+      "end_frame": 934,
+      "objects": [
+        "yellow cube"
+      ],
+      "main_verbs": [
+        "place"
+      ],
+      "narration": " Place the yellow cube.",
+      "metadata": {
+        "window_type": "place_transition",
+        "original_start": 40.25,
+        "original_end": 44.75,
+        "original_start_time": "00:00:40.250",
+        "original_end_time": "00:00:44.750"
+      }
+    }
+  ]
+}

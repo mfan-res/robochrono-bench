@@ -1,0 +1,10 @@
+pick the bowl
+pick the plate
+pick the brush
+pick the rag
+wipe the bowl with brush
+wipe the plate with rag
+put the bowl
+put the plate
+put the brush
+put the rag

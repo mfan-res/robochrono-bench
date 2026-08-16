@@ -1,0 +1,30 @@
+# ── 数据层：48 GB，不进 git ─────────────────────────────
+# raw / source 可从 HuggingFace 重下或由 raw 重建；
+# label / llm_cache 虽然小且不可再生，但同样属于数据，
+# 应当另行备份而不是塞进代码仓库。
+data/raw/
+data/source/
+data/vqa/
+
+# label 与 llm_cache 体积小（<1 MB）且**不可再生**，进 git 以防丢失
+!data/label/
+!data/llm_cache/
+!data/families.json
+
+# ── 模型权重与评测产物 ──────────────────────────────
+models/*
+!models/README.md
+runs/*
+!runs/README.md
+
+# ── 大体积媒体：图是决策依据，值得留；但视频/GIF 以后别再加 ──
+docs/figures/**/*.mp4
+docs/figures/**/*.webm
+
+# ── 常规 ────────────────────────────────────────────
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+*.part
+*.part.mp4

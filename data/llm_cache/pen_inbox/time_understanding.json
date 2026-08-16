@@ -1,0 +1,28 @@
+{
+  "task_category_distractors": {
+    "pick pen": [
+      "push pen",
+      "pick pencil",
+      "lift pen",
+      "reach pen",
+      "pick marker",
+      "slide pen"
+    ],
+    "pick box": [
+      "place box",
+      "push box",
+      "open box",
+      "pick block",
+      "slide box",
+      "lift box"
+    ],
+    "place pen": [
+      "drop pen",
+      "place pencil",
+      "place marker",
+      "insert pen",
+      "place box",
+      "orient pen"
+    ]
+  }
+}
