@@ -60,8 +60,12 @@ def digest(text: str, n: int) -> int:
     return int(hashlib.md5(text.encode()).hexdigest(), 16) % max(1, n)
 
 
-def options_now(item: dict[str, Any], _actions: list[str]) -> list[str]:
-    """现状：答案 + 2 近邻 + 2 LLM。"""
+def options_as_built(item: dict[str, Any], _actions: list[str]) -> list[str]:
+    """题库里实际存的那一套 —— 测的就是真正会发给模型的题。
+
+    选项构造的实现在 `plan.py:build_options`，这里只读它的产物；
+    需要模拟别的策略时也从那里导入，**两边不可能分叉**。
+    """
     return [item["answer_text"], *item["distractors"]]
 
 
@@ -96,7 +100,61 @@ def options_all_real(item: dict[str, Any], actions: list[str]) -> list[str]:
     return [item["answer_text"], *(pool[k:] + pool[:k])[:4]]
 
 
-POLICIES = {"now": options_now, "allreal": options_all_real, "pool": options_pool}
+def options_three(item: dict[str, Any], actions: list[str]) -> list[str]:
+    """策略⑤：全部用本族真实动作，**所有族一律 3 选项**。
+
+    基线 33%，七个族一致，跨族可比。代价是每道题的区分力下降 ——
+    但题量有 5,266 道，统计功效不是瓶颈。
+    """
+    pool = sorted(a for a in actions if a != item["answer_text"])
+    k = digest(item["id"], max(1, len(pool)))
+    return [item["answer_text"], *(pool[k:] + pool[:k])[:2]]
+
+
+def options_four(item: dict[str, Any], actions: list[str],
+                 others: list[tuple[str, str]], objects: set[str]) -> list[str]:
+    """统一 4 选项：只有两个 3 动作的族需要借，各借 1 条 —— 借得最少的可行方案。"""
+    return options_cross(item, actions, others, objects)[:4]
+
+
+def options_cross(item: dict[str, Any], actions: list[str],
+                  others: list[tuple[str, str]], objects: set[str]) -> list[str]:
+    """策略⑥：本族真实动作优先，不够就**借别族的真实动作**，一律 5 选项。
+
+    借来的动作在别的族里确实当过答案，所以「这是不是真标签」不再有区分度 ——
+    这是唯一能同时满足「统一 5 选项」与「全部选项都是真实标签」的做法。
+
+    **借的动作必须提到本场景没有的物体**，否则可能碰巧也是真的
+    （tea 与 tea2 都有 `Pour the tea.`）。
+    """
+    answer = item["answer_text"]
+    n = len(normalize(answer).split())
+    inside = [a for a in actions if a != answer]
+    k = digest(item["id"], max(1, len(inside)))
+    inside = inside[k:] + inside[:k]
+    # 借：物体不在本场景里，且文字不与本族任何动作重复
+    outside = [t for obj, t in others if obj not in objects and t not in actions]
+    j = digest(item["id"] + "|x", max(1, len(outside)))
+    outside = outside[j:] + outside[:j]
+    outside.sort(key=lambda t: abs(len(normalize(t).split()) - n))
+    return [answer, *(inside + outside)[:4]]
+
+
+POLICIES = {"as_built": options_as_built, "allreal": options_all_real,
+            "pool": options_pool, "three": options_three, "cross": options_cross, "four": options_four}
+
+# 让模型回答**选项原文**而不是字母。
+# 实测这个模型有极强的位置偏好（四选一时 69% 选 D，几乎从不选 A）——
+# 按字母作答时它大部分时候在挑位置而不是读内容，会**低估**泄漏。
+TEXT_PROMPT = """You are answering a multiple-choice question taken from a
+robot-manipulation video benchmark. **The video is not available to you.**
+Answer anyway with your single best guess — do not explain, do not refuse.
+
+{stem}
+
+{options}
+
+Reply with the exact text of the option you choose, and nothing else."""
 
 PROMPT = """You are answering a multiple-choice question taken from a robot-manipulation
 video benchmark. **The video is not available to you.** Answer anyway with your
@@ -109,13 +167,27 @@ single best guess — do not explain, do not refuse.
 Reply with one letter only."""
 
 
-def ask(job: dict[str, Any], key: str) -> dict[str, Any]:
-    body = "\n".join(f"{LETTERS[i]}. {t}" for i, t in enumerate(job["shuffled"]))
+def ask(job: dict[str, Any], key: str, by_text: bool = False) -> dict[str, Any]:
+    body = "\n".join((f"- {t}" if by_text else f"{LETTERS[i]}. {t}")
+                      for i, t in enumerate(job["shuffled"]))
+    tmpl = TEXT_PROMPT if by_text else PROMPT
     try:
-        raw = call_api(PROMPT.format(stem=job["stem"], options=body), key,
+        raw = call_api(tmpl.format(stem=job["stem"], options=body), key,
                        timeout=90, json_mode=False, temperature=0.0)
-    except RuntimeError as exc:
-        return {**job, "picked": None, "error": str(exc)[:80]}
+    except Exception as exc:                                   # noqa: BLE001
+        # **一次调用失败只能毁掉一个数据点。** 曾经因为漏接 `IncompleteRead`，
+        # 一个偶发的响应截断穿透线程池，把已跑完的几百次结果全带走。
+        # 失败计入报告（「N 次没解析出字母」），不静默丢弃。
+        return {**job, "picked": None, "error": f"{type(exc).__name__}: {exc}"[:100]}
+    if by_text:
+        norm = raw.strip().strip('"\'.').lower()
+        hit = next((i for i, t in enumerate(job["shuffled"])
+                    if t.strip(".").lower() == norm.strip(".")), None)
+        if hit is None:      # 宽松兜底：包含关系
+            hit = next((i for i, t in enumerate(job["shuffled"])
+                        if t.strip(".").lower() in norm), None)
+        return {**job, "picked": LETTERS[hit] if hit is not None else None,
+                "raw": raw.strip()[:60]}
     got = re.search(r"\b([A-F])\b", raw.strip().upper())
     return {**job, "picked": got.group(1) if got else None, "raw": raw.strip()[:40]}
 
@@ -128,6 +200,7 @@ def main() -> int:
     which = arg("--policy", "both")
     # 限定题型：加测某一个题型时不必把别的也重跑一遍
     only = set(arg("--tasks", ",".join(TASKS)).split(","))
+    by_text = "--by-text" in sys.argv
     policies = list(POLICIES) if which == "both" else [which]
 
     plan = json.loads((BUILD / "plan.json").read_text(encoding="utf-8"))
@@ -135,6 +208,9 @@ def main() -> int:
     actions = {f: [s["text"] for s in v["subtasks"]] for f, v in vocab.items()}
     pools = {f: json.loads((ROOT / "data" / "llm_cache" / "v3" / f"{f}.json")
                            .read_text(encoding="utf-8"))["pool"] for f in vocab}
+    objects = {f: {s["object"] for s in v["subtasks"] if s["object"]}
+               for f, v in vocab.items()}
+    every = [(s["object"], s["text"]) for v in vocab.values() for s in v["subtasks"]]
 
     key = next((line.split("=", 1)[1].strip().strip("\"'")
                 for line in KEYS.read_text(encoding="utf-8").splitlines()
@@ -157,8 +233,12 @@ def main() -> int:
     for item in sample:
         for policy in policies:
             fam = item["family"]
-            opts = (options_pool(item, actions[fam], pools[fam]) if policy == "pool"
-                    else POLICIES[policy](item, actions[fam]))
+            if policy == "pool":
+                opts = options_pool(item, actions[fam], pools[fam])
+            elif policy in ("cross", "four"):
+                opts = POLICIES[policy](item, actions[fam], every, objects[fam])
+            else:
+                opts = POLICIES[policy](item, actions[fam])
             order = sorted(opts, key=lambda t: hashlib.md5(
                 f"{item['id']}|{policy}|{t}".encode()).hexdigest())
             jobs.append({
@@ -168,7 +248,7 @@ def main() -> int:
                 "answer_letter": LETTERS[order.index(item["answer_text"])],
             })
 
-    probe = ask(jobs[0], key)
+    probe = ask(jobs[0], key, by_text)
     if not probe["picked"]:
         print(f"❌ 自检失败，先修这个再跑全量：{probe.get('error') or probe.get('raw')}")
         return 1
@@ -178,7 +258,7 @@ def main() -> int:
           f"，模型 {MODEL}，一题一请求\n")
     done: list[dict] = []
     with cf.ThreadPoolExecutor(max_workers=8) as pool_:
-        for n, result in enumerate(pool_.map(lambda j: ask(j, key), jobs), 1):
+        for n, result in enumerate(pool_.map(lambda j: ask(j, key, by_text), jobs), 1):
             done.append(result)
             if n % 100 == 0:
                 print(f"  {n}/{len(jobs)}")
@@ -201,9 +281,12 @@ def report(done: list[dict], policies: list[str]) -> None:
 
     for policy in policies:
         rows = [r for r in done if r["policy"] == policy]
-        label = {"now": "现状（2 近邻 + 2 LLM）",
+        label = {"as_built": "题库现状（plan.json 实际存的）",
                  "allreal": "策略③（全真实动作，小族减选项）",
-                 "pool": "策略④（统一 5 选项，只用场景内词汇）"}[policy]
+                 "pool": "策略④（统一 5 选项，只用场景内词汇）",
+                 "three": "策略⑤（全真实动作，一律 3 选项）",
+                 "cross": "策略⑥（全真实动作，不够借别族，一律 5 选项）",
+                 "four": "统一 4 选项（借得最少）"}[policy]
         print(f"\n【{label}】")
         print(f"  {'族':<13}" + "".join(f"{t:>16}" for t in TASKS))
         for family in sorted({r["family"] for r in rows}):

@@ -69,11 +69,15 @@ A7 ·「都不对」这个选项在旧题里从来不是答案
 
 from __future__ import annotations
 
+import hashlib
 import json
 import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from vocab import normalize  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "data"
@@ -108,8 +112,13 @@ TASK_NAMES = {
     "wash": "washing dishes",
 }
 
-DISTRACTORS_PER_QUESTION = 4
-NEARBY_PER_QUESTION = 2          # 其余用 LLM 的补满，见 pick_distractors
+# 三条干扰项 = 四选一。**不是任选的数字**，是盲测出来的：
+#   三选一  零借用    合计干净，但分族散（wash +2.6σ / gift_inhand −3.1σ）
+#   四选一  借最少    合计 −0.2σ，借的族 −0.3σ，没借的族 −0.1σ  ← 唯一三处全贴基线
+#   五选一  借 1–2    借的族 +2.9σ
+#   六选一  借 1–3    借的族 +6.3σ
+# 选项数每多一个，小族就得多借一条别族动作，而借来的动作看过视频就能排除。
+DISTRACTORS_PER_QUESTION = 3
 NONE_TEXT = "All other options are wrong."   # v1 的原文，保持一致便于对照
 
 
@@ -131,53 +140,63 @@ def clip_for(segment: dict[str, Any], mode: str, fps: float) -> tuple[int, int]:
     raise ValueError(f"未知的 window 模式：{mode}")
 
 
-def pick_distractors(subtask: str, pool: dict[str, list[str]], nearby: list[str],
-                     exclude: set[str]) -> tuple[list[str], dict[str, int]]:
-    """取 4 条干扰项：**先 2 条近邻，再用 LLM 的补满**。返回 (文字, 来源计数)。
+def build_options(item_id: str, answer: str, actions: list[str],
+                  borrowable: list[str]) -> tuple[list[str], dict[str, int]]:
+    """选出 3 条干扰项，凑成统一的四选一。**这是选项构造的唯一实现** ——
+    `blind.py` 直接导入它，两边不可能分叉。
 
-    近邻 = 本族其它真实动作（对这一段是错的，但确实存在）。
-    **这两条不是可选的，是必需的** ——
+    取用顺序：本族其它真实动作 → 别族的真实动作。两者都按 `md5(题目id)` 轮转，
+    并优先取词数与答案接近的（防「最长的那个是对的」）。
 
-    只用 LLM 干扰项时实测：**4,115 道题 100% 能靠「哪个选项是真实存在的动作」答对。**
-    因为 [3] 的 `not_correct` 判据保证了 LLM 干扰项不等于任何真实动作，
-    于是「真动作」与「编的」两类文字完全不相交，跨题一学就会，不用看视频。
+    为什么干扰项**必须是在别处当过答案的真实标签**
+    ------------------------------------------
+    盲测（不给视频、只发题干和选项给纯文本模型）把三种造法都测了一遍：
 
     ```
-    真实动作   Pick the pen. / Pick the box. / Place the pen.
-    只用 LLM   Pick the pen. / Place the box. / Pick the cup. / Pick the tray. / Pick the cloth.
-                    ↑ 唯一一个真出现过的
+    LLM 自由生成                    +11.9%（6.1σ）  40% 的干扰项引入了场景外物体
+    本族物体 × 语料动词 重组          + 6.6%（5.7σ）  «Wipe the stirrer.» 这种一眼假
+    全部用真实标签                    + 1.2%（p=.29） 与随机不可分
     ```
 
-    这个捷径是判据本身造出来的：判据没错（干扰项确实不该等于真动作），
-    错在**只有一个来源**。混两个来源就没有可分的边界了。
+    按「选项里有没有编出来的」二分，2,394 次作答：
 
-    **顺序取而非随机取** —— 出题要确定，随机只在选项打乱那一步。
+    ```
+    全是真实标签    n=598   20.9%   p=0.58   ← 干净
+    含 ≥1 个编的   n=1796  26.4%   p<1e-4   ← 泄 6–8 点，和编了几个无关
+    ```
+
+    **一个可识别的假选项就把四选一变成三选一。** 限定词汇表、过语义闸门、
+    过合理性闸门都不够 —— 只有「在别处当过答案的文字」才不带破绽。
+
+    小族怎么凑满
+    ------------
+    gift_inhand 与 pen_inbox 只有 3 个动作，填不满 3 条干扰项，**各借 1 条**。
+    其余五族都够，一条不借。
+    借来的仍是真实标签（在那个族里当过答案），所以「是不是真标签」不再有区分度。
+
+    **借的动作必须提到本场景没有的物体** —— 否则可能碰巧也是真的
+    （tea 与 tea2 都有 `Pour the tea.`）。代价是这类选项看过视频就能排除，
+    于是小族的**等效**选项数仍等于它的动作数。那是标注词表的属性，
+    改选项设计改不掉；组间难度不要求一致（见 D-38），所以不处理，只记录。
     """
-    out: list[str] = []
-    source: dict[str, int] = {"nearby": 0, "llm": 0}
+    def rotate(seq: list[str], salt: str) -> list[str]:
+        if not seq:
+            return seq
+        k = int(hashlib.md5(f"{item_id}|{salt}".encode()).hexdigest(), 16) % len(seq)
+        return seq[k:] + seq[:k]
 
-    for text in nearby:
-        if len(out) >= NEARBY_PER_QUESTION:
-            break
-        if text.lower() not in exclude:
-            out.append(text)
-            exclude.add(text.lower())
-            source["nearby"] += 1
+    n = len(normalize(answer).split())
+    inside = rotate([a for a in actions if a != answer], "in")
+    outside = sorted(rotate([a for a in borrowable if a != answer], "out"),
+                     key=lambda t: abs(len(normalize(t).split()) - n))
 
-    for text in pool.get(subtask, []):
-        if len(out) >= DISTRACTORS_PER_QUESTION:
-            break
-        if text.lower() not in exclude:
-            out.append(text)
-            exclude.add(text.lower())
-            source["llm"] += 1
-
-    # 小族（3 个动作）近邻凑不满 2 条时会多拿 LLM 的。**如实记，不补齐** ——
-    # D-03：兜底发生时要留下痕迹，静默兜底正是问题 h 藏那么久的原因。
-    return out, source
+    chosen = (inside + outside)[:DISTRACTORS_PER_QUESTION]
+    within = set(actions)
+    return chosen, {"in_family": sum(c in within for c in chosen),
+                    "borrowed": sum(c not in within for c in chosen)}
 
 
-def build(index: dict[str, Any], vocab: dict[str, Any], pools: dict[str, Any],
+def build(index: dict[str, Any], vocab: dict[str, Any],
           window: str, time_repeats: str, cap: int | None,
           none_option: str) -> dict[str, Any]:
     items: list[dict[str, Any]] = []
@@ -201,15 +220,19 @@ def build(index: dict[str, Any], vocab: dict[str, Any], pools: dict[str, Any],
         entry = index[family]
         fps = entry["fps"]
         texts = {s["id"]: s["text"] for s in vocab[family]["subtasks"]}
-        pool = pools[family]["distractors"]
+        actions = list(texts.values())
+        # 可借的：别族的真实动作，且其宾语不在本场景里（否则可能碰巧也是真的）
+        here = {s["object"] for s in vocab[family]["subtasks"] if s["object"]}
+        borrowable = sorted({s["text"] for f, v in vocab.items() if f != family
+                             for s in v["subtasks"]
+                             if s["object"] and s["object"] not in here}
+                            - set(actions))
 
         for episode in entry["episodes"]:
             segments = episode["segments"]
             per_episode = 0
             # 近邻候选按「同集内出现过」优先 —— 同集的动作在画面上更接近，
             # 比族里另一个八竿子打不着的动作更难排除
-            in_episode = list(dict.fromkeys(s["subtask"] for s in segments))
-            order = in_episode + [i for i in texts if i not in in_episode]
 
             for i, segment in enumerate(segments):
                 if cap is not None and per_episode >= cap:
@@ -230,12 +253,8 @@ def build(index: dict[str, Any], vocab: dict[str, Any], pools: dict[str, Any],
                     answer_id = segment["subtask"] if task == "understanding" else nxt["subtask"]
                     answer_text = texts[answer_id]
 
-                    exclude = {answer_text.lower()}
-                    if task != "understanding":
-                        # planning 的干扰项不能是「当前正在做的动作」—— 那不是预测
-                        exclude.add(texts[segment["subtask"]].lower())
-                    nearby = [texts[i] for i in order if i != answer_id]
-                    options, source = pick_distractors(answer_id, pool, nearby, exclude)
+                    options, source = build_options(
+                        f"{base}@{task}", answer_text, actions, borrowable)
                     if len(options) < DISTRACTORS_PER_QUESTION:
                         skipped[f"{task}:干扰项不足"] += 1
                         continue
@@ -363,10 +382,9 @@ def main() -> int:
 
     index = json.loads((BUILD / "index.json").read_text(encoding="utf-8"))["families"]
     vocab = json.loads((BUILD / "vocab.json").read_text(encoding="utf-8"))["families"]
-    pools = {p.stem: json.loads(p.read_text(encoding="utf-8"))
-             for p in (DATA / "llm_cache" / "v2").glob("*.json")}
-
-    plan = build(index, vocab, pools, window, time_repeats, cap, none_option)
+    # `data/llm_cache/` 三代（v1-vendor / v2 / v3）全部退场，只作留档 ——
+    # 干扰项改为一律取自真实标签，不再需要任何生成物（D-37 / D-38）。
+    plan = build(index, vocab, window, time_repeats, cap, none_option)
     opt = plan["options"]
     print(f"配方 {RECIPE_VERSION}   window={window}  time-repeats={time_repeats}  "
           f"cap={cap}  none-option={none_option}")
