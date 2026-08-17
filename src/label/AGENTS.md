@@ -121,6 +121,10 @@ PY
 - **`meta/episodes/*.parquet` 有多个 `*_file_index` 列** ——
   必须取 `videos/` 开头的那个（`serve.py:episode_bounds`、`validate.py:episode_bounds`
   都注明了）。取错会得出「一个视频装 40 轮」这种荒谬结论。
+- **全局 `keydown` 必须给可输入元素让路。** `KEYS` 占了数字整排与 `q…p`，
+  加上 `k/z/s/空格/方向键`，输入框里能打的字母只剩一半。
+  症状是「能粘贴、打不出来」（粘贴不经过 keydown）。
+  放行 `INPUT` / `TEXTAREA` / `contenteditable`，别只放行 `SELECT`。
 - **`ffprobe -count_frames` 会解码整段视频**，320 个视频跑不完。
   用 `-show_entries stream=nb_frames`（读容器元数据，瞬时）。
 
