@@ -1,0 +1,121 @@
+{
+  "family": "stack_cubes",
+  "distractors": {
+    "pick_red_cube": [
+      "Pick the blue cube.",
+      "Place the blue cube.",
+      "Place the red block.",
+      "Pick the yellow block."
+    ],
+    "place_red_cube": [
+      "Place the blue cube.",
+      "Pick the blue cube.",
+      "Pick the red block.",
+      "Place the yellow block."
+    ],
+    "pick_yellow_cube": [
+      "Pick the blue cube.",
+      "Place the blue cube.",
+      "Place the yellow block.",
+      "Pick the red block."
+    ],
+    "place_yellow_cube": [
+      "Place the blue cube.",
+      "Pick the blue cube.",
+      "Pick the yellow block.",
+      "Place the red block."
+    ]
+  },
+  "provenance": {
+    "model": "deepseek-chat",
+    "temperature": 0.4,
+    "prompt_sha256": "1b2da91465500c4a",
+    "generated_at": "2026-08-17T00:11:04+00:00",
+    "per_subtask_target": 8,
+    "needed_per_question": 4,
+    "rounds": [
+      {
+        "round": 1,
+        "asked": 32,
+        "passed_surface": 20,
+        "accepted": 16
+      },
+      {
+        "round": 2,
+        "asked": 16,
+        "passed_surface": 0,
+        "accepted": 0
+      },
+      {
+        "round": 3,
+        "asked": 16,
+        "passed_surface": 0,
+        "accepted": 0
+      }
+    ],
+    "rejected_by_check": {
+      "not_correct": 30,
+      "synonym": 4,
+      "unique": 14
+    },
+    "rejected_texts": {
+      "pick_red_cube": [
+        "Pick the yellow cube.",
+        "Place the red cube.",
+        "Place the yellow cube.",
+        "Pick the red block.",
+        "Pick the blue cube.",
+        "Place the red cube.",
+        "Place the yellow cube.",
+        "Pick the yellow cube.",
+        "Place the yellow cube.",
+        "Pick the blue cube.",
+        "Place the blue cube.",
+        "Pick the yellow block."
+      ],
+      "place_red_cube": [
+        "Pick the red cube.",
+        "Place the yellow cube.",
+        "Pick the yellow cube.",
+        "Place the red block.",
+        "Pick the red cube.",
+        "Place the yellow cube.",
+        "Pick the yellow cube.",
+        "Place the blue cube.",
+        "Pick the yellow cube.",
+        "Place the blue cube.",
+        "Pick the blue cube.",
+        "Place the yellow block."
+      ],
+      "pick_yellow_cube": [
+        "Pick the red cube.",
+        "Place the red cube.",
+        "Place the yellow cube.",
+        "Pick the yellow block.",
+        "Pick the red cube.",
+        "Place the red cube.",
+        "Place the yellow cube.",
+        "Pick the blue cube.",
+        "Pick the red cube.",
+        "Place the red cube.",
+        "Pick the blue cube.",
+        "Place the blue cube."
+      ],
+      "place_yellow_cube": [
+        "Pick the red cube.",
+        "Place the red cube.",
+        "Pick the yellow cube.",
+        "Place the yellow block.",
+        "Pick the red cube.",
+        "Place the red cube.",
+        "Pick the yellow cube.",
+        "Place the blue cube.",
+        "Pick the red cube.",
+        "Place the red cube.",
+        "Pick the blue cube.",
+        "Place the blue cube."
+      ]
+    },
+    "short_of_needed": {}
+  }
+}

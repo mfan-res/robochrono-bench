@@ -1,0 +1,94 @@
+{
+  "family": "gift_inhand",
+  "distractors": {
+    "pick_gift": [
+      "Drop the gift.",
+      "Toss the gift.",
+      "Push the gift.",
+      "Hide the gift.",
+      "Find the gift.",
+      "Open the gift.",
+      "Wrap the gift.",
+      "Hold the box."
+    ],
+    "move_gift": [
+      "Drop the gift.",
+      "Toss the gift.",
+      "Push the gift.",
+      "Hide the gift.",
+      "Find the gift.",
+      "Open the gift.",
+      "Wrap the gift."
+    ],
+    "place_gift": [
+      "Drop the gift.",
+      "Lift the gift.",
+      "Toss the gift.",
+      "Push the gift.",
+      "Hide the gift.",
+      "Find the gift.",
+      "Open the gift."
+    ]
+  },
+  "provenance": {
+    "model": "deepseek-chat",
+    "temperature": 0.4,
+    "prompt_sha256": "422176c9da27ae8e",
+    "generated_at": "2026-08-17T00:10:44+00:00",
+    "per_subtask_target": 8,
+    "needed_per_question": 4,
+    "rounds": [
+      {
+        "round": 1,
+        "asked": 24,
+        "passed_surface": 20,
+        "accepted": 10
+      },
+      {
+        "round": 2,
+        "asked": 14,
+        "passed_surface": 11,
+        "accepted": 11
+      },
+      {
+        "round": 3,
+        "asked": 3,
+        "passed_surface": 3,
+        "accepted": 1
+      }
+    ],
+    "rejected_by_check": {
+      "not_correct": 4,
+      "synonym": 12,
+      "unique": 3
+    },
+    "rejected_texts": {
+      "pick_gift": [
+        "Hold the gift.",
+        "Touch the gift.",
+        "Lift the gift.",
+        "Grab the gift.",
+        "Carry the gift.",
+        "Drop the gift."
+      ],
+      "move_gift": [
+        "Pick the gift.",
+        "Place the gift.",
+        "Hold the gift.",
+        "Lift the gift.",
+        "Carry the gift.",
+        "Drop the gift.",
+        "Shift the box."
+      ],
+      "place_gift": [
+        "Pick the gift.",
+        "Move the gift.",
+        "Hold the gift.",
+        "Carry the gift.",
+        "Drop the gift.",
+        "Set the box."
+      ]
+    },
+    "short_of_needed": {}
+  }
+}

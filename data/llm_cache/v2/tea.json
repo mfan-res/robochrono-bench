@@ -1,0 +1,140 @@
+{
+  "family": "tea",
+  "distractors": {
+    "open_teapot_lid": [
+      "Pour the tea leaves.",
+      "Put the teacup down.",
+      "Stir the tea leaves.",
+      "Open the teacup lid.",
+      "Remove the tea leaves.",
+      "Take the teapot lid."
+    ],
+    "put_tea_leaves": [
+      "Close the tea leaves.",
+      "Open the tea leaves.",
+      "Stir the tea leaves.",
+      "Put the teacup down.",
+      "Put the teapot lid.",
+      "Take the tea leaves."
+    ],
+    "move_stirrer": [
+      "Open the stirrer.",
+      "Close the stirrer.",
+      "Pour the stirrer.",
+      "Stir the tea.",
+      "Move the teacup.",
+      "Move the teapot.",
+      "Take the stirrer.",
+      "Put the stirrer."
+    ],
+    "close_teapot_lid": [
+      "Pour the tea leaves.",
+      "Stir the tea leaves.",
+      "Close the teacup lid.",
+      "Close the teapot.",
+      "Take the teapot lid.",
+      "Put the teapot lid."
+    ],
+    "take_teacup": [
+      "Put the teacup.",
+      "Open the teacup.",
+      "Close the teacup.",
+      "Pour the teacup.",
+      "Stir the teacup.",
+      "Take the teapot.",
+      "Take the stirrer."
+    ],
+    "pour_tea": [
+      "Stir the tea.",
+      "Open the tea.",
+      "Close the tea.",
+      "Pour the water.",
+      "Pour the milk.",
+      "Take the tea.",
+      "Put the tea."
+    ]
+  },
+  "provenance": {
+    "model": "deepseek-chat",
+    "temperature": 0.4,
+    "prompt_sha256": "3c6dedd23c58c877",
+    "generated_at": "2026-08-17T00:11:17+00:00",
+    "per_subtask_target": 8,
+    "needed_per_question": 4,
+    "rounds": [
+      {
+        "round": 1,
+        "asked": 48,
+        "passed_surface": 46,
+        "accepted": 32
+      },
+      {
+        "round": 2,
+        "asked": 16,
+        "passed_surface": 14,
+        "accepted": 5
+      },
+      {
+        "round": 3,
+        "asked": 11,
+        "passed_surface": 8,
+        "accepted": 3
+      }
+    ],
+    "rejected_by_check": {
+      "not_correct": 6,
+      "synonym": 28,
+      "unique": 1
+    },
+    "rejected_texts": {
+      "open_teapot_lid": [
+        "Close the teapot lid.",
+        "Move the teapot lid.",
+        "Take the teapot lid.",
+        "Close the teapot lid.",
+        "Move the teapot lid.",
+        "Take the teapot lid.",
+        "Close the teapot lid.",
+        "Move the teapot lid."
+      ],
+      "put_tea_leaves": [
+        "Take the tea leaves.",
+        "Move the tea leaves.",
+        "Pour the tea leaves.",
+        "Move the tea leaves.",
+        "Pour the tea leaves.",
+        "Take the tea leaves.",
+        "Move the tea leaves."
+      ],
+      "move_stirrer": [
+        "Take the stirrer.",
+        "Put the stirrer."
+      ],
+      "close_teapot_lid": [
+        "Open the teapot lid.",
+        "Move the teapot lid.",
+        "Take the teapot lid.",
+        "Put the teapot lid.",
+        "Open the teapot lid.",
+        "Move the teapot lid.",
+        "Take the teapot lid.",
+        "Put the teapot lid.",
+        "Open the teapot lid.",
+        "Move the teapot lid."
+      ],
+      "take_teacup": [
+        "Move the teacup.",
+        "Move the teacup.",
+        "Move the teacup."
+      ],
+      "pour_tea": [
+        "Move the tea.",
+        "Take the tea.",
+        "Put the tea.",
+        "Move the tea.",
+        "Move the tea."
+      ]
+    },
+    "short_of_needed": {}
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "family": "wash",
+  "distractors": {
+    "pick_brush": [
+      "Wipe the bowl.",
+      "Pick the cup.",
+      "Pick the spoon.",
+      "Pick the fork.",
+      "Pick the knife.",
+      "Pick the tray.",
+      "Pick the sponge.",
+      "Pick the towel."
+    ],
+    "pick_bowl": [
+      "Wipe the bowl.",
+      "Pick the cup.",
+      "Pick the spoon.",
+      "Pick the fork.",
+      "Pick the knife.",
+      "Pick the tray.",
+      "Pick the sponge.",
+      "Pick the towel."
+    ],
+    "wipe_bowl_with_brush": [
+      "Wipe the bowl with rag.",
+      "Wipe the plate with brush.",
+      "Wipe the rag with brush.",
+      "Wipe the cup with brush.",
+      "Wipe the spoon with brush.",
+      "Wipe the tray with brush.",
+      "Wipe the towel with brush."
+    ],
+    "put_brush": [
+      "Wipe the bowl.",
+      "Put the cup.",
+      "Put the spoon.",
+      "Put the fork.",
+      "Put the knife.",
+      "Put the tray.",
+      "Put the sponge.",
+      "Put the towel."
+    ],
+    "put_bowl": [
+      "Wipe the bowl.",
+      "Put the cup.",
+      "Put the spoon.",
+      "Put the fork.",
+      "Put the knife.",
+      "Put the tray.",
+      "Put the sponge.",
+      "Put the towel."
+    ],
+    "pick_plate": [
+      "Wipe the plate.",
+      "Pick the cup.",
+      "Pick the spoon.",
+      "Pick the fork.",
+      "Pick the knife.",
+      "Pick the tray.",
+      "Pick the sponge.",
+      "Pick the towel."
+    ],
+    "pick_rag": [
+      "Wipe the plate.",
+      "Pick the cup.",
+      "Pick the spoon.",
+      "Pick the fork.",
+      "Pick the knife.",
+      "Pick the tray.",
+      "Pick the sponge.",
+      "Pick the towel."
+    ],
+    "wipe_plate_with_rag": [
+      "Wipe the plate with brush.",
+      "Wipe the bowl with rag.",
+      "Wipe the rag with brush.",
+      "Wipe the cup with rag.",
+      "Wipe the spoon with rag.",
+      "Wipe the tray with rag.",
+      "Wipe the towel with rag."
+    ],
+    "put_plate": [
+      "Wipe the plate.",
+      "Put the cup.",
+      "Put the spoon.",
+      "Put the fork.",
+      "Put the knife.",
+      "Put the tray.",
+      "Put the sponge.",
+      "Put the towel."
+    ],
+    "put_rag": [
+      "Wipe the plate.",
+      "Put the cup.",
+      "Put the spoon.",
+      "Put the fork.",
+      "Put the knife.",
+      "Put the tray.",
+      "Put the sponge.",
+      "Put the towel."
+    ]
+  },
+  "provenance": {
+    "model": "deepseek-chat",
+    "temperature": 0.4,
+    "prompt_sha256": "bcd790646da76f13",
+    "generated_at": "2026-08-17T00:13:03+00:00",
+    "per_subtask_target": 8,
+    "needed_per_question": 4,
+    "rounds": [
+      {
+        "round": 1,
+        "asked": 80,
+        "passed_surface": 14,
+        "accepted": 14
+      },
+      {
+        "round": 2,
+        "asked": 66,
+        "passed_surface": 64,
+        "accepted": 64
+      },
+      {
+        "round": 3,
+        "asked": 2,
+        "passed_surface": 0,
+        "accepted": 0
+      }
+    ],
+    "rejected_by_check": {
+      "not_correct": 68,
+      "unique": 2
+    },
+    "rejected_texts": {
+      "pick_brush": [
+        "Pick the bowl.",
+        "Pick the plate.",
+        "Pick the rag.",
+        "Put the brush.",
+        "Put the bowl.",
+        "Put the plate.",
+        "Put the rag."
+      ],
+      "pick_bowl": [
+        "Pick the brush.",
+        "Pick the plate.",
+        "Pick the rag.",
+        "Put the brush.",
+        "Put the bowl.",
+        "Put the plate.",
+        "Put the rag."
+      ],
+      "wipe_bowl_with_brush": [
+        "Pick the bowl.",
+        "Pick the brush.",
+        "Put the bowl.",
+        "Put the brush.",
+        "Wipe the plate with rag.",
+        "Wipe the plate with brush.",
+        "Wipe the plate with rag."
+      ],
+      "put_brush": [
+        "Pick the brush.",
+        "Pick the bowl.",
+        "Pick the plate.",
+        "Pick the rag.",
+        "Put the bowl.",
+        "Put the plate.",
+        "Put the rag."
+      ],
+      "put_bowl": [
+        "Pick the brush.",
+        "Pick the bowl.",
+        "Pick the plate.",
+        "Pick the rag.",
+        "Put the brush.",
+        "Put the plate.",
+        "Put the rag."
+      ],
+      "pick_plate": [
+        "Pick the brush.",
+        "Pick the bowl.",
+        "Pick the rag.",
+        "Put the brush.",
+        "Put the bowl.",
+        "Put the plate.",
+        "Put the rag."
+      ],
+      "pick_rag": [
+        "Pick the brush.",
+        "Pick the bowl.",
+        "Pick the plate.",
+        "Put the brush.",
+        "Put the bowl.",
+        "Put the plate.",
+        "Put the rag."
+      ],
+      "wipe_plate_with_rag": [
+        "Pick the plate.",
+        "Pick the rag.",
+        "Put the plate.",
+        "Put the rag.",
+        "Wipe the bowl with brush.",
+        "Wipe the bowl with rag.",
+        "Wipe the bowl with brush."
+      ],
+      "put_plate": [
+        "Pick the brush.",
+        "Pick the bowl.",
+        "Pick the plate.",
+        "Pick the rag.",
+        "Put the brush.",
+        "Put the bowl.",
+        "Put the rag."
+      ],
+      "put_rag": [
+        "Pick the brush.",
+        "Pick the bowl.",
+        "Pick the plate.",
+        "Pick the rag.",
+        "Put the brush.",
+        "Put the bowl.",
+        "Put the plate."
+      ]
+    },
+    "short_of_needed": {}
+  }
+}
