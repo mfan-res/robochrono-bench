@@ -227,7 +227,12 @@ function renderPanel() {
 }
 
 addEventListener("keydown", e => {
-  if (e.target.tagName === "SELECT") return;
+  // 光标在可输入元素里时，快捷键必须让路。KEYS 占掉了数字整排与 q…p，
+  // 再加 map 里的 k/z/s/空格/方向键 —— 输入框里能打的字母只剩一半。
+  // 粘贴不经过 keydown，所以症状是「粘得进去、打不出来」。
+  const t = e.target;
+  if (t.tagName === "SELECT" || t.tagName === "INPUT" || t.tagName === "TEXTAREA"
+      || t.isContentEditable) return;
   const v = $("#v"), step = e.shiftKey ? 10 : 1;
   const map = { ArrowLeft: () => seek(frameOf(v.currentTime) - step),
                 ArrowRight: () => seek(frameOf(v.currentTime) + step),
@@ -270,6 +275,11 @@ $("#add").onclick = () => {
   const t = $("#newtext").value.trim();
   if (t) { editSubtask({ action: "add", text: t }); $("#newtext").value = ""; }
 };
+// 回车提交、Esc 退出输入框回到快捷键
+$("#newtext").addEventListener("keydown", e => {
+  if (e.key === "Enter") { e.preventDefault(); $("#add").click(); }
+  if (e.key === "Escape") $("#newtext").blur();
+});
 $("#manlist").addEventListener("click", e => {
   const ren = e.target.dataset.ren, del = e.target.dataset.del2;
   if (ren) { const cur = S.subtasks.find(s => s.id === ren);
