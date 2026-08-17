@@ -1,0 +1,526 @@
+{
+  "family": "tea2",
+  "pool": [
+    {
+      "text": "Place the lid in teapot.",
+      "key": "place lid in teapot",
+      "tier": "obj",
+      "from": "place_tea_bag_in_teapot",
+      "words": 4,
+      "verb": "place",
+      "object": "lid",
+      "modifier": "in teapot",
+      "same_as": []
+    },
+    {
+      "text": "Place the teapot lid in teapot.",
+      "key": "place teapot lid in teapot",
+      "tier": "obj",
+      "from": "place_tea_bag_in_teapot",
+      "words": 5,
+      "verb": "place",
+      "object": "teapot lid",
+      "modifier": "in teapot",
+      "same_as": []
+    },
+    {
+      "text": "Pour the teapot.",
+      "key": "pour teapot",
+      "tier": "obj",
+      "from": "pour_water",
+      "words": 2,
+      "verb": "pour",
+      "object": "teapot",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Put the kettle on the teapot.",
+      "key": "put kettle on teapot",
+      "tier": "obj",
+      "from": "put_lid_on_teapot",
+      "words": 4,
+      "verb": "put",
+      "object": "kettle",
+      "modifier": "on teapot",
+      "same_as": []
+    },
+    {
+      "text": "Put the tea on the teapot.",
+      "key": "put tea on teapot",
+      "tier": "obj",
+      "from": "put_lid_on_teapot",
+      "words": 4,
+      "verb": "put",
+      "object": "tea",
+      "modifier": "on teapot",
+      "same_as": []
+    },
+    {
+      "text": "Put the kettle.",
+      "key": "put kettle",
+      "tier": "verb",
+      "from": "pick_up_kettle",
+      "words": 2,
+      "verb": "put",
+      "object": "kettle",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Put the tea.",
+      "key": "put tea",
+      "tier": "verb",
+      "from": "pour_tea",
+      "words": 2,
+      "verb": "put",
+      "object": "tea",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Put the tea bag.",
+      "key": "put tea bag",
+      "tier": "verb",
+      "from": "pick_up_tea_bag",
+      "words": 3,
+      "verb": "put",
+      "object": "tea bag",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Put the tea bag in teapot.",
+      "key": "put tea bag in teapot",
+      "tier": "verb",
+      "from": "place_tea_bag_in_teapot",
+      "words": 5,
+      "verb": "put",
+      "object": "tea bag",
+      "modifier": "in teapot",
+      "same_as": []
+    },
+    {
+      "text": "Put the teapot.",
+      "key": "put teapot",
+      "tier": "verb",
+      "from": "pick_up_teapot",
+      "words": 2,
+      "verb": "put",
+      "object": "teapot",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Put the teapot lid.",
+      "key": "put teapot lid",
+      "tier": "verb",
+      "from": "pick_up_teapot_lid",
+      "words": 3,
+      "verb": "put",
+      "object": "teapot lid",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Close the kettle.",
+      "key": "close kettle",
+      "tier": "verb-global",
+      "from": "pick_up_kettle",
+      "words": 2,
+      "verb": "close",
+      "object": "kettle",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Open the tea.",
+      "key": "open tea",
+      "tier": "verb-global",
+      "from": "pour_tea",
+      "words": 2,
+      "verb": "open",
+      "object": "tea",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Pick the tea.",
+      "key": "pick tea",
+      "tier": "verb-global",
+      "from": "pour_tea",
+      "words": 2,
+      "verb": "pick",
+      "object": "tea",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Take the tea.",
+      "key": "take tea",
+      "tier": "verb-global",
+      "from": "pour_tea",
+      "words": 2,
+      "verb": "take",
+      "object": "tea",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Wipe the kettle.",
+      "key": "wipe kettle",
+      "tier": "verb-global",
+      "from": "pick_up_kettle",
+      "words": 2,
+      "verb": "wipe",
+      "object": "kettle",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Wipe the lid on the teapot.",
+      "key": "wipe lid on teapot",
+      "tier": "verb-global",
+      "from": "put_lid_on_teapot",
+      "words": 4,
+      "verb": "wipe",
+      "object": "lid",
+      "modifier": "on teapot",
+      "same_as": []
+    },
+    {
+      "text": "Wipe the tea.",
+      "key": "wipe tea",
+      "tier": "verb-global",
+      "from": "pour_tea",
+      "words": 2,
+      "verb": "wipe",
+      "object": "tea",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Wipe the tea bag.",
+      "key": "wipe tea bag",
+      "tier": "verb-global",
+      "from": "pick_up_tea_bag",
+      "words": 3,
+      "verb": "wipe",
+      "object": "tea bag",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Wipe the teapot.",
+      "key": "wipe teapot",
+      "tier": "verb-global",
+      "from": "pick_up_teapot",
+      "words": 2,
+      "verb": "wipe",
+      "object": "teapot",
+      "modifier": "",
+      "same_as": []
+    }
+  ],
+  "provenance": {
+    "pool_version": "1",
+    "model": "deepseek-chat",
+    "generated_at": "2026-08-17T13:47:31+00:00",
+    "scene_objects": [
+      "kettle",
+      "lid",
+      "tea",
+      "tea bag",
+      "teapot",
+      "teapot lid",
+      "water"
+    ],
+    "rejected_as_synonym": [
+      {
+        "text": "Pick up the lid.",
+        "same_as": [
+          "Pick up the teapot lid."
+        ]
+      },
+      {
+        "text": "Place the tea in teapot.",
+        "same_as": [
+          "Place the tea bag in teapot."
+        ]
+      },
+      {
+        "text": "Put the tea bag on the teapot.",
+        "same_as": [
+          "Pick up the tea bag."
+        ]
+      },
+      {
+        "text": "Put the teapot lid on the teapot.",
+        "same_as": [
+          "Pick up the teapot lid.",
+          "Put the lid on the teapot."
+        ]
+      },
+      {
+        "text": "Pick up the lid on the teapot.",
+        "same_as": [
+          "Pick up the teapot lid."
+        ]
+      },
+      {
+        "text": "Pick up the tea bag in teapot.",
+        "same_as": [
+          "Pick up the tea bag."
+        ]
+      },
+      {
+        "text": "Place the kettle.",
+        "same_as": [
+          "Pick up the kettle."
+        ]
+      },
+      {
+        "text": "Place the lid on the teapot.",
+        "same_as": [
+          "Pick up the teapot lid.",
+          "Put the lid on the teapot."
+        ]
+      },
+      {
+        "text": "Place the tea.",
+        "same_as": [
+          "Place the tea bag in teapot.",
+          "Pour the tea."
+        ]
+      },
+      {
+        "text": "Place the tea bag.",
+        "same_as": [
+          "Pick up the tea bag.",
+          "Place the tea bag in teapot."
+        ]
+      },
+      {
+        "text": "Place the teapot.",
+        "same_as": [
+          "Pick up the teapot."
+        ]
+      },
+      {
+        "text": "Place the teapot lid.",
+        "same_as": [
+          "Pick up the teapot lid.",
+          "Put the lid on the teapot."
+        ]
+      },
+      {
+        "text": "Place the water.",
+        "same_as": [
+          "Pour the water."
+        ]
+      },
+      {
+        "text": "Pour the kettle.",
+        "same_as": [
+          "Pick up the kettle."
+        ]
+      },
+      {
+        "text": "Put the water.",
+        "same_as": [
+          "Pour the water."
+        ]
+      },
+      {
+        "text": "Close the lid on the teapot.",
+        "same_as": [
+          "Pick up the teapot lid.",
+          "Put the lid on the teapot."
+        ]
+      },
+      {
+        "text": "Close the teapot.",
+        "same_as": [
+          "Pick up the teapot lid."
+        ]
+      },
+      {
+        "text": "Close the teapot lid.",
+        "same_as": [
+          "Pick up the teapot lid.",
+          "Put the lid on the teapot."
+        ]
+      },
+      {
+        "text": "Move the kettle.",
+        "same_as": [
+          "Pick up the kettle."
+        ]
+      },
+      {
+        "text": "Move the lid on the teapot.",
+        "same_as": [
+          "Pick up the teapot lid.",
+          "Put the lid on the teapot."
+        ]
+      },
+      {
+        "text": "Move the tea.",
+        "same_as": [
+          "Pour the tea."
+        ]
+      },
+      {
+        "text": "Move the tea bag.",
+        "same_as": [
+          "Pick up the tea bag.",
+          "Place the tea bag in teapot."
+        ]
+      },
+      {
+        "text": "Move the tea bag in teapot.",
+        "same_as": [
+          "Place the tea bag in teapot."
+        ]
+      },
+      {
+        "text": "Move the teapot.",
+        "same_as": [
+          "Pick up the teapot."
+        ]
+      },
+      {
+        "text": "Move the teapot lid.",
+        "same_as": [
+          "Pick up the teapot lid.",
+          "Put the lid on the teapot."
+        ]
+      },
+      {
+        "text": "Open the kettle.",
+        "same_as": [
+          "Pick up the kettle."
+        ]
+      },
+      {
+        "text": "Open the lid on the teapot.",
+        "same_as": [
+          "Pick up the teapot lid.",
+          "Put the lid on the teapot."
+        ]
+      },
+      {
+        "text": "Open the tea bag.",
+        "same_as": [
+          "Pick up the tea bag."
+        ]
+      },
+      {
+        "text": "Open the teapot.",
+        "same_as": [
+          "Pick up the teapot lid.",
+          "Pick up the teapot."
+        ]
+      },
+      {
+        "text": "Open the teapot lid.",
+        "same_as": [
+          "Pick up the teapot lid.",
+          "Put the lid on the teapot."
+        ]
+      },
+      {
+        "text": "Pick the kettle.",
+        "same_as": [
+          "Pick up the kettle.",
+          "Pick up the teapot."
+        ]
+      },
+      {
+        "text": "Pick the lid on the teapot.",
+        "same_as": [
+          "Pick up the teapot lid."
+        ]
+      },
+      {
+        "text": "Pick the tea bag.",
+        "same_as": [
+          "Pick up the tea bag."
+        ]
+      },
+      {
+        "text": "Pick the teapot.",
+        "same_as": [
+          "Pick up the teapot."
+        ]
+      },
+      {
+        "text": "Pick the teapot lid.",
+        "same_as": [
+          "Pick up the teapot lid."
+        ]
+      },
+      {
+        "text": "Take the kettle.",
+        "same_as": [
+          "Pick up the kettle."
+        ]
+      },
+      {
+        "text": "Take the lid on the teapot.",
+        "same_as": [
+          "Pick up the teapot lid."
+        ]
+      },
+      {
+        "text": "Take the tea bag.",
+        "same_as": [
+          "Pick up the tea bag."
+        ]
+      },
+      {
+        "text": "Take the teapot.",
+        "same_as": [
+          "Pick up the teapot."
+        ]
+      },
+      {
+        "text": "Take the teapot lid.",
+        "same_as": [
+          "Pick up the teapot lid."
+        ]
+      },
+      {
+        "text": "Wipe the teapot lid.",
+        "same_as": [
+          "Pick up the teapot lid."
+        ]
+      }
+    ],
+    "rejected_as_nonsense": [
+      "Pick up the tea.",
+      "Pick up the water.",
+      "Place the kettle in teapot.",
+      "Place the water in teapot.",
+      "Pour the lid.",
+      "Put the water on the teapot.",
+      "Pour the lid on the teapot.",
+      "Pour the tea bag.",
+      "Pour the tea bag in teapot.",
+      "Pour the teapot lid.",
+      "Close the tea.",
+      "Close the tea bag.",
+      "Close the tea bag in teapot.",
+      "Close the water.",
+      "Move the water.",
+      "Open the tea bag in teapot.",
+      "Open the water.",
+      "Pick the tea bag in teapot.",
+      "Pick the water.",
+      "Take the tea bag in teapot.",
+      "Take the water.",
+      "Wipe the tea bag in teapot.",
+      "Wipe the water."
+    ]
+  }
+}

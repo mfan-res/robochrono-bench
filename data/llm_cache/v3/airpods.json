@@ -1,0 +1,179 @@
+{
+  "family": "airpods",
+  "pool": [
+    {
+      "text": "Place the airpods case.",
+      "key": "place airpods case",
+      "tier": "verb-global",
+      "from": "pick_airpods_case",
+      "words": 3,
+      "verb": "place",
+      "object": "airpods case",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Place the left earphone.",
+      "key": "place left earphone",
+      "tier": "verb-global",
+      "from": "pick_left_earphone",
+      "words": 3,
+      "verb": "place",
+      "object": "left earphone",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Place the right earphone.",
+      "key": "place right earphone",
+      "tier": "verb-global",
+      "from": "pick_right_earphone",
+      "words": 3,
+      "verb": "place",
+      "object": "right earphone",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Put the airpods case.",
+      "key": "put airpods case",
+      "tier": "verb-global",
+      "from": "pick_airpods_case",
+      "words": 3,
+      "verb": "put",
+      "object": "airpods case",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Put the left earphone.",
+      "key": "put left earphone",
+      "tier": "verb-global",
+      "from": "pick_left_earphone",
+      "words": 3,
+      "verb": "put",
+      "object": "left earphone",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Put the right earphone.",
+      "key": "put right earphone",
+      "tier": "verb-global",
+      "from": "pick_right_earphone",
+      "words": 3,
+      "verb": "put",
+      "object": "right earphone",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Wipe the airpods case.",
+      "key": "wipe airpods case",
+      "tier": "verb-global",
+      "from": "pick_airpods_case",
+      "words": 3,
+      "verb": "wipe",
+      "object": "airpods case",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Wipe the left earphone.",
+      "key": "wipe left earphone",
+      "tier": "verb-global",
+      "from": "pick_left_earphone",
+      "words": 3,
+      "verb": "wipe",
+      "object": "left earphone",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Wipe the right earphone.",
+      "key": "wipe right earphone",
+      "tier": "verb-global",
+      "from": "pick_right_earphone",
+      "words": 3,
+      "verb": "wipe",
+      "object": "right earphone",
+      "modifier": "",
+      "same_as": []
+    }
+  ],
+  "provenance": {
+    "pool_version": "1",
+    "model": "deepseek-chat",
+    "generated_at": "2026-08-17T13:46:25+00:00",
+    "scene_objects": [
+      "airpods case",
+      "left earphone",
+      "right earphone"
+    ],
+    "rejected_as_synonym": [
+      {
+        "text": "Move the airpods case.",
+        "same_as": [
+          "Pick the airpods case."
+        ]
+      },
+      {
+        "text": "Move the left earphone.",
+        "same_as": [
+          "Pick the left earphone."
+        ]
+      },
+      {
+        "text": "Move the right earphone.",
+        "same_as": [
+          "Pick the right earphone."
+        ]
+      },
+      {
+        "text": "Pick up the airpods case.",
+        "same_as": [
+          "Pick the airpods case."
+        ]
+      },
+      {
+        "text": "Pick up the left earphone.",
+        "same_as": [
+          "Pick the left earphone."
+        ]
+      },
+      {
+        "text": "Pick up the right earphone.",
+        "same_as": [
+          "Pick the right earphone."
+        ]
+      },
+      {
+        "text": "Take the airpods case.",
+        "same_as": [
+          "Pick the airpods case."
+        ]
+      },
+      {
+        "text": "Take the left earphone.",
+        "same_as": [
+          "Pick the left earphone."
+        ]
+      },
+      {
+        "text": "Take the right earphone.",
+        "same_as": [
+          "Pick the right earphone."
+        ]
+      }
+    ],
+    "rejected_as_nonsense": [
+      "Open the left earphone.",
+      "Open the right earphone.",
+      "Close the left earphone.",
+      "Close the right earphone.",
+      "Pour the airpods case.",
+      "Pour the left earphone.",
+      "Pour the right earphone."
+    ]
+  }
+}
