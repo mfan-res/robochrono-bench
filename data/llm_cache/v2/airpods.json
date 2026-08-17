@@ -1,0 +1,138 @@
+{
+  "family": "airpods",
+  "distractors": {
+    "pick_airpods_case": [
+      "Open the left earphone.",
+      "Close the right earphone.",
+      "Pick the charging cable.",
+      "Move the left earphone.",
+      "Lift the right earphone.",
+      "Hold the left earphone.",
+      "Touch the right earphone."
+    ],
+    "open_airpods_case": [
+      "Lift the airpods case.",
+      "Move the airpods case.",
+      "Grasp the airpods case.",
+      "Hold the airpods case.",
+      "Close the left earphone.",
+      "Pick the charging cable.",
+      "Move the right earphone."
+    ],
+    "pick_left_earphone": [
+      "Open the right earphone.",
+      "Pick the charging cable.",
+      "Move the right earphone.",
+      "Lift the airpods case.",
+      "Grasp the charging case.",
+      "Hold the right earphone.",
+      "Touch the airpods case.",
+      "Grasp the right earphone."
+    ],
+    "pick_right_earphone": [
+      "Open the left earphone.",
+      "Pick the charging cable.",
+      "Move the left earphone.",
+      "Lift the airpods case.",
+      "Grasp the charging case.",
+      "Hold the left earphone.",
+      "Touch the airpods case."
+    ],
+    "close_airpods_case": [
+      "Lift the airpods case.",
+      "Move the airpods case.",
+      "Grasp the airpods case.",
+      "Hold the airpods case.",
+      "Open the left earphone.",
+      "Pick the charging cable.",
+      "Move the right earphone."
+    ]
+  },
+  "provenance": {
+    "model": "deepseek-chat",
+    "temperature": 0.4,
+    "prompt_sha256": "f3b1c291de5b5db3",
+    "generated_at": "2026-08-17T00:10:32+00:00",
+    "per_subtask_target": 8,
+    "needed_per_question": 4,
+    "rounds": [
+      {
+        "round": 1,
+        "asked": 40,
+        "passed_surface": 20,
+        "accepted": 8
+      },
+      {
+        "round": 2,
+        "asked": 32,
+        "passed_surface": 30,
+        "accepted": 27
+      },
+      {
+        "round": 3,
+        "asked": 5,
+        "passed_surface": 4,
+        "accepted": 1
+      }
+    ],
+    "rejected_by_check": {
+      "not_correct": 22,
+      "synonym": 18,
+      "unique": 1
+    },
+    "rejected_texts": {
+      "pick_airpods_case": [
+        "Open the airpods case.",
+        "Close the airpods case.",
+        "Pick the left earphone.",
+        "Pick the right earphone.",
+        "Move the airpods case.",
+        "Lift the airpods case.",
+        "Grasp the airpods case.",
+        "Hold the airpods case.",
+        "Grasp the charging case.",
+        "Move the charging case."
+      ],
+      "open_airpods_case": [
+        "Pick the airpods case.",
+        "Close the airpods case.",
+        "Pick the left earphone.",
+        "Pick the right earphone.",
+        "Lift the charging case.",
+        "Lift the airpods lid."
+      ],
+      "pick_left_earphone": [
+        "Pick the airpods case.",
+        "Open the airpods case.",
+        "Close the airpods case.",
+        "Pick the right earphone.",
+        "Lift the left earphone.",
+        "Move the left earphone.",
+        "Grasp the left earphone.",
+        "Hold the left earphone.",
+        "Close the airpods case."
+      ],
+      "pick_right_earphone": [
+        "Pick the airpods case.",
+        "Open the airpods case.",
+        "Close the airpods case.",
+        "Pick the left earphone.",
+        "Lift the right earphone.",
+        "Move the right earphone.",
+        "Grasp the right earphone.",
+        "Hold the right earphone.",
+        "Close the airpods case.",
+        "Hold the left earphone."
+      ],
+      "close_airpods_case": [
+        "Pick the airpods case.",
+        "Open the airpods case.",
+        "Pick the left earphone.",
+        "Pick the right earphone.",
+        "Lift the charging case.",
+        "Shut the airpods lid."
+      ]
+    },
+    "short_of_needed": {}
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "family": "tea2",
+  "distractors": {
+    "pick_up_teapot_lid": [
+      "Place the teapot on tray.",
+      "Put the lid on kettle.",
+      "Pour the water in cup.",
+      "Place the tea in cup.",
+      "Put the teapot down.",
+      "Pour the tea out."
+    ],
+    "pick_up_tea_bag": [
+      "Place the tea bag in cup.",
+      "Put the tea bag down.",
+      "Pour the water in pot.",
+      "Place the teapot on tray.",
+      "Pour the tea in cup.",
+      "Put the tea bag on tray."
+    ],
+    "place_tea_bag_in_teapot": [
+      "Place the tea bag on tray.",
+      "Put the tea bag in cup.",
+      "Pour the water in teapot.",
+      "Place the teapot on tray.",
+      "Pour the tea in cup.",
+      "Place the tea bag in cup.",
+      "Put the tea bag on tray."
+    ],
+    "pick_up_kettle": [
+      "Place the kettle on tray.",
+      "Put the kettle down.",
+      "Pour the water in cup.",
+      "Place the teapot lid on.",
+      "Put the lid on kettle.",
+      "Pour the tea out."
+    ],
+    "pour_water": [
+      "Put the water down.",
+      "Pour the milk.",
+      "Stir the water.",
+      "Drink the water.",
+      "Spill the water."
+    ],
+    "put_lid_on_teapot": [
+      "Place the lid on tray.",
+      "Pour the water in teapot.",
+      "Put the teapot on tray.",
+      "Pour the tea in cup.",
+      "Put the lid on cup."
+    ],
+    "pick_up_teapot": [
+      "Place the teapot on tray.",
+      "Put the teapot down.",
+      "Pour the tea in cup.",
+      "Pour the water in pot."
+    ],
+    "pour_tea": [
+      "Put the tea down.",
+      "Pour the milk.",
+      "Stir the tea.",
+      "Drink the tea.",
+      "Spill the tea."
+    ]
+  },
+  "provenance": {
+    "model": "deepseek-chat",
+    "temperature": 0.4,
+    "prompt_sha256": "50b15a5a7ab2c8a1",
+    "generated_at": "2026-08-17T00:11:33+00:00",
+    "per_subtask_target": 8,
+    "needed_per_question": 4,
+    "rounds": [
+      {
+        "round": 1,
+        "asked": 64,
+        "passed_surface": 42,
+        "accepted": 40
+      },
+      {
+        "round": 2,
+        "asked": 24,
+        "passed_surface": 1,
+        "accepted": 0
+      },
+      {
+        "round": 3,
+        "asked": 24,
+        "passed_surface": 5,
+        "accepted": 4
+      }
+    ],
+    "rejected_by_check": {
+      "not_correct": 55,
+      "length": 6,
+      "synonym": 4,
+      "unique": 3
+    },
+    "rejected_texts": {
+      "pick_up_teapot_lid": [
+        "Pick up the tea bag.",
+        "Pick up the kettle lid.",
+        "Pick up the teapot.",
+        "Pick up the kettle.",
+        "Put the lid on kettle.",
+        "Pick up the tea bag."
+      ],
+      "pick_up_tea_bag": [
+        "Pick up the teapot lid.",
+        "Pick up the kettle.",
+        "Put the lid on teapot.",
+        "Pick up the teapot.",
+        "Pick up the kettle.",
+        "Put the lid on teapot.",
+        "Place the tea bag in cup.",
+        "Pick up the teapot."
+      ],
+      "place_tea_bag_in_teapot": [
+        "Pick up the tea bag.",
+        "Pick up the teapot lid.",
+        "Put the lid on teapot.",
+        "Pick up the tea bag.",
+        "Pick up the teapot lid.",
+        "Put the lid on teapot.",
+        "Pick up the teapot."
+      ],
+      "pick_up_kettle": [
+        "Pick up the teapot.",
+        "Pick up the tea bag.",
+        "Pick up the teapot.",
+        "Pick up the tea bag.",
+        "Pour the water.",
+        "Pick up the teapot."
+      ],
+      "pour_water": [
+        "Pour the tea.",
+        "Pick up the kettle.",
+        "Place the water in cup.",
+        "Pour the tea.",
+        "Pick up the kettle.",
+        "Place the water in cup.",
+        "Pour the tea.",
+        "Pick up the kettle.",
+        "Stir the water."
+      ],
+      "put_lid_on_teapot": [
+        "Pick up the teapot lid.",
+        "Pick up the teapot.",
+        "Place the tea bag in teapot.",
+        "Put the lid on kettle.",
+        "Pick up the teapot lid.",
+        "Pick up the teapot.",
+        "Place the tea bag in teapot.",
+        "Put the lid on kettle.",
+        "Pick up the teapot lid.",
+        "Pick up the teapot.",
+        "Place the lid on kettle."
+      ],
+      "pick_up_teapot": [
+        "Pick up the kettle.",
+        "Pick up the teapot lid.",
+        "Place the tea bag in teapot.",
+        "Put the lid on teapot.",
+        "Pick up the kettle.",
+        "Pick up the teapot lid.",
+        "Place the tea bag in teapot.",
+        "Put the lid on teapot.",
+        "Pick up the kettle.",
+        "Pick up the teapot lid.",
+        "Place the tea bag in cup.",
+        "Put the lid on teapot."
+      ],
+      "pour_tea": [
+        "Pour the water.",
+        "Pick up the teapot.",
+        "Place the tea in cup.",
+        "Pour the water.",
+        "Pick up the teapot.",
+        "Place the tea in cup.",
+        "Pour the water.",
+        "Pick up the teapot.",
+        "Place the tea in cup."
+      ]
+    },
+    "short_of_needed": {}
+  }
+}

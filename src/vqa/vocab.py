@@ -88,9 +88,13 @@ def parse(text: str) -> dict[str, Any]:
 
 
 def cache_keys(family: str) -> dict[str, set[str]]:
-    """各缓存文件里有哪些键（已归一化）。"""
+    """v1-vendor 各缓存文件里有哪些键（已归一化）。
+
+    **只反映 v1 的历史状况**，用来记录那次漂移有多严重。v2 用 subtask ID 当键，
+    不会有查不到的情况（由 `distract.py` 保证每个 ID 都有条目）。
+    """
     out: dict[str, set[str]] = {}
-    for path in sorted((DATA / "llm_cache" / family).glob("*.json")):
+    for path in sorted((DATA / "llm_cache" / "v1-vendor" / family).glob("*.json")):
         blob = json.loads(path.read_text(encoding="utf-8"))
         out[path.stem] = {normalize(k) for k in blob.get("task_category_distractors", {})}
     return out
@@ -109,7 +113,7 @@ def build_family(family: str) -> dict[str, Any]:
             "text": sub["text"],                    # 展示给模型的（唯一真源）
             "key": key,                             # 查 llm_cache 用的
             **parse(sub["text"]),
-            "cache_hit": {name: key in keys for name, keys in caches.items()},
+            "cache_hit_v1": {name: key in keys for name, keys in caches.items()},
         })
 
     # 归一化后撞车 = 两个不同动作查同一条缓存。必须为空。
@@ -157,12 +161,12 @@ def main() -> int:
         entry = build_family(family)
         vocab["families"][family] = entry
         print(f"\n【{family}】")
-        print(f"  {'id':<28}{'动词':<10}{'宾语':<18}{'修饰':<14}缓存")
+        print(f"  {'id':<28}{'动词':<10}{'宾语':<18}{'修饰':<14}v1缓存")
         for e in entry["subtasks"]:
-            hit = "".join("✓" if v else "✗" for v in e["cache_hit"].values()) or "—"
+            hit = "".join("✓" if v else "✗" for v in e["cache_hit_v1"].values()) or "—"
             print(f"  {e['id']:<28}{e['verb']:<10}{e['object']:<18}{e['modifier']:<14}{hit}")
             misses += [(family, e["id"], name)
-                       for name, ok in e["cache_hit"].items() if not ok]
+                       for name, ok in e["cache_hit_v1"].items() if not ok]
         collisions += [(family, c) for c in entry["key_collisions"]]
         hazards += [(family, h) for h in entry["prefix_hazards"]]
 
@@ -182,11 +186,9 @@ def main() -> int:
             print(f"   {fam}: 「{a}」是「{b}」的前缀/子串")
 
     if misses:
-        print(f"\n⚠ 缓存查不到 {len(misses)} 处（[3] distract 必须显式处理，不能静默退回）：")
+        print(f"\n⚠ v1 缓存查不到 {len(misses)} 处 —— 历史记录，v2 已用 subtask ID 当键：")
         for fam, sid, name in misses:
             print(f"   {fam}/{name}: {sid}")
-    else:
-        print("✅ 所有 subtask 在所有缓存文件里都有键")
 
     if write:
         BUILD.mkdir(exist_ok=True)

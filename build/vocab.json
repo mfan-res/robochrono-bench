@@ -11,7 +11,7 @@
           "verb": "pick",
           "object": "airpods case",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -23,7 +23,7 @@
           "verb": "open",
           "object": "airpods case",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -35,7 +35,7 @@
           "verb": "pick",
           "object": "left earphone",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -47,7 +47,7 @@
           "verb": "pick",
           "object": "right earphone",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -59,7 +59,7 @@
           "verb": "close",
           "object": "airpods case",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -92,7 +92,7 @@
           "verb": "pick",
           "object": "gift",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -104,7 +104,7 @@
           "verb": "move",
           "object": "gift",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -116,7 +116,7 @@
           "verb": "place",
           "object": "gift",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -143,7 +143,7 @@
           "verb": "pick",
           "object": "pen",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -155,7 +155,7 @@
           "verb": "pick",
           "object": "box",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -167,7 +167,7 @@
           "verb": "place",
           "object": "pen",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -198,7 +198,7 @@
           "verb": "pick",
           "object": "red cube",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -210,7 +210,7 @@
           "verb": "place",
           "object": "red cube",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -222,7 +222,7 @@
           "verb": "pick",
           "object": "yellow cube",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -234,7 +234,7 @@
           "verb": "place",
           "object": "yellow cube",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -273,7 +273,7 @@
           "verb": "open",
           "object": "teapot lid",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -285,7 +285,7 @@
           "verb": "put",
           "object": "tea leaves",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -297,7 +297,7 @@
           "verb": "move",
           "object": "stirrer",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -309,7 +309,7 @@
           "verb": "close",
           "object": "teapot lid",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -321,7 +321,7 @@
           "verb": "take",
           "object": "teacup",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -333,7 +333,7 @@
           "verb": "pour",
           "object": "tea",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -359,7 +359,7 @@
           "verb": "pick up",
           "object": "teapot lid",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -371,7 +371,7 @@
           "verb": "pick up",
           "object": "tea bag",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -383,7 +383,7 @@
           "verb": "place",
           "object": "tea bag",
           "modifier": "in teapot",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -395,7 +395,7 @@
           "verb": "pick up",
           "object": "kettle",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -407,7 +407,7 @@
           "verb": "pour",
           "object": "water",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -419,7 +419,7 @@
           "verb": "put",
           "object": "lid",
           "modifier": "on teapot",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -431,7 +431,7 @@
           "verb": "pick up",
           "object": "teapot",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": false,
             "time_understanding": false
           }
@@ -443,7 +443,7 @@
           "verb": "pour",
           "object": "tea",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -485,7 +485,7 @@
           "verb": "pick",
           "object": "brush",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -497,7 +497,7 @@
           "verb": "pick",
           "object": "bowl",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -509,7 +509,7 @@
           "verb": "wipe",
           "object": "bowl",
           "modifier": "with brush",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -521,7 +521,7 @@
           "verb": "put",
           "object": "brush",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -533,7 +533,7 @@
           "verb": "put",
           "object": "bowl",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -545,7 +545,7 @@
           "verb": "pick",
           "object": "plate",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -557,7 +557,7 @@
           "verb": "pick",
           "object": "rag",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -569,7 +569,7 @@
           "verb": "wipe",
           "object": "plate",
           "modifier": "with rag",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -581,7 +581,7 @@
           "verb": "put",
           "object": "plate",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }
@@ -593,7 +593,7 @@
           "verb": "put",
           "object": "rag",
           "modifier": "",
-          "cache_hit": {
+          "cache_hit_v1": {
             "planning": true,
             "time_understanding": true
           }

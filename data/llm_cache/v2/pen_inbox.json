@@ -1,0 +1,87 @@
+{
+  "family": "pen_inbox",
+  "distractors": {
+    "pick_pen": [
+      "Place the box.",
+      "Pick the cup.",
+      "Pick the tray.",
+      "Pick the cloth.",
+      "Place the cup.",
+      "Pick the spoon.",
+      "Move the box.",
+      "Touch the box."
+    ],
+    "pick_box": [
+      "Pick the cup.",
+      "Place the tray.",
+      "Pick the cloth.",
+      "Place the spoon.",
+      "Place the cup.",
+      "Pick the tray.",
+      "Move the pen.",
+      "Touch the pen."
+    ],
+    "place_pen": [
+      "Place the cup.",
+      "Pick the tray.",
+      "Place the cloth.",
+      "Pick the spoon.",
+      "Place the box.",
+      "Pick the cup.",
+      "Place the tray."
+    ]
+  },
+  "provenance": {
+    "model": "deepseek-chat",
+    "temperature": 0.4,
+    "prompt_sha256": "01b708930e3b56c4",
+    "generated_at": "2026-08-17T00:10:55+00:00",
+    "per_subtask_target": 8,
+    "needed_per_question": 4,
+    "rounds": [
+      {
+        "round": 1,
+        "asked": 24,
+        "passed_surface": 19,
+        "accepted": 19
+      },
+      {
+        "round": 2,
+        "asked": 5,
+        "passed_surface": 3,
+        "accepted": 0
+      },
+      {
+        "round": 3,
+        "asked": 5,
+        "passed_surface": 5,
+        "accepted": 4
+      }
+    ],
+    "rejected_by_check": {
+      "not_correct": 5,
+      "unique": 2,
+      "synonym": 4
+    },
+    "rejected_texts": {
+      "pick_pen": [
+        "Place the pen.",
+        "Place the box.",
+        "Place the box.",
+        "Move the pen."
+      ],
+      "pick_box": [
+        "Place the pen.",
+        "Pick the pen.",
+        "Place the pen.",
+        "Move the box."
+      ],
+      "place_pen": [
+        "Pick the box.",
+        "Move the pen.",
+        "Move the pen."
+      ]
+    },
+    "short_of_needed": {}
+  }
+}
