@@ -38,6 +38,7 @@ v1 里真的发生了：正确答案是通顺的 `Pick up the kettle.`，
 from __future__ import annotations
 
 import hashlib
+import http.client
 import json
 import os
 import re
@@ -250,7 +251,11 @@ def call_api(prompt: str, key: str, timeout: int = 180,
                 detail = exc.read().decode("utf-8", "replace")[:200]
                 raise RuntimeError(f"DeepSeek {exc.code}（不重试）：{detail}") from exc
             time.sleep(2 ** attempt)
-        except (urllib.error.URLError, TimeoutError) as exc:
+        except (urllib.error.URLError, TimeoutError,
+                http.client.HTTPException, ConnectionError) as exc:
+            # ⚠ `IncompleteRead` 属于 http.client.HTTPException，**不是** URLError。
+            # 漏掉它的后果是：偶发的响应截断会穿透整个线程池，
+            # 把已经跑完的几百次调用一起带走。
             last = exc
             time.sleep(2 ** attempt)
     raise RuntimeError(f"DeepSeek 调用失败：{last}")
