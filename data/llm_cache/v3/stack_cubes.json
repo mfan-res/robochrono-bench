@@ -1,0 +1,98 @@
+{
+  "family": "stack_cubes",
+  "pool": [
+    {
+      "text": "Wipe the red cube.",
+      "key": "wipe red cube",
+      "tier": "verb-global",
+      "from": "pick_red_cube",
+      "words": 3,
+      "verb": "wipe",
+      "object": "red cube",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Wipe the yellow cube.",
+      "key": "wipe yellow cube",
+      "tier": "verb-global",
+      "from": "pick_yellow_cube",
+      "words": 3,
+      "verb": "wipe",
+      "object": "yellow cube",
+      "modifier": "",
+      "same_as": []
+    }
+  ],
+  "provenance": {
+    "pool_version": "1",
+    "model": "deepseek-chat",
+    "generated_at": "2026-08-17T13:46:42+00:00",
+    "scene_objects": [
+      "red cube",
+      "yellow cube"
+    ],
+    "rejected_as_synonym": [
+      {
+        "text": "Move the red cube.",
+        "same_as": [
+          "Pick the red cube.",
+          "Place the red cube."
+        ]
+      },
+      {
+        "text": "Move the yellow cube.",
+        "same_as": [
+          "Pick the yellow cube.",
+          "Place the yellow cube."
+        ]
+      },
+      {
+        "text": "Pick up the red cube.",
+        "same_as": [
+          "Pick the red cube."
+        ]
+      },
+      {
+        "text": "Pick up the yellow cube.",
+        "same_as": [
+          "Pick the yellow cube."
+        ]
+      },
+      {
+        "text": "Put the red cube.",
+        "same_as": [
+          "Pick the red cube.",
+          "Place the red cube."
+        ]
+      },
+      {
+        "text": "Put the yellow cube.",
+        "same_as": [
+          "Pick the yellow cube.",
+          "Place the yellow cube."
+        ]
+      },
+      {
+        "text": "Take the red cube.",
+        "same_as": [
+          "Pick the red cube."
+        ]
+      },
+      {
+        "text": "Take the yellow cube.",
+        "same_as": [
+          "Pick the yellow cube."
+        ]
+      }
+    ],
+    "rejected_as_nonsense": [
+      "Close the red cube.",
+      "Close the yellow cube.",
+      "Open the red cube.",
+      "Open the yellow cube.",
+      "Pour the red cube.",
+      "Pour the yellow cube."
+    ]
+  }
+}

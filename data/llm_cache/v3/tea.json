@@ -1,0 +1,236 @@
+{
+  "family": "tea",
+  "pool": [
+    {
+      "text": "Open the tea leaves.",
+      "key": "open tea leaves",
+      "tier": "obj",
+      "from": "open_teapot_lid",
+      "words": 3,
+      "verb": "open",
+      "object": "tea leaves",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Open the teacup.",
+      "key": "open teacup",
+      "tier": "obj",
+      "from": "open_teapot_lid",
+      "words": 2,
+      "verb": "open",
+      "object": "teacup",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Put the teacup.",
+      "key": "put teacup",
+      "tier": "obj",
+      "from": "put_tea_leaves",
+      "words": 2,
+      "verb": "put",
+      "object": "teacup",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Wipe the stirrer.",
+      "key": "wipe stirrer",
+      "tier": "verb-global",
+      "from": "move_stirrer",
+      "words": 2,
+      "verb": "wipe",
+      "object": "stirrer",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Wipe the tea leaves.",
+      "key": "wipe tea leaves",
+      "tier": "verb-global",
+      "from": "put_tea_leaves",
+      "words": 3,
+      "verb": "wipe",
+      "object": "tea leaves",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Wipe the teacup.",
+      "key": "wipe teacup",
+      "tier": "verb-global",
+      "from": "take_teacup",
+      "words": 2,
+      "verb": "wipe",
+      "object": "teacup",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Wipe the teapot lid.",
+      "key": "wipe teapot lid",
+      "tier": "verb-global",
+      "from": "open_teapot_lid",
+      "words": 3,
+      "verb": "wipe",
+      "object": "teapot lid",
+      "modifier": "",
+      "same_as": []
+    }
+  ],
+  "provenance": {
+    "pool_version": "1",
+    "model": "deepseek-chat",
+    "generated_at": "2026-08-17T13:46:56+00:00",
+    "scene_objects": [
+      "stirrer",
+      "tea",
+      "tea leaves",
+      "teacup",
+      "teapot lid"
+    ],
+    "rejected_as_synonym": [
+      {
+        "text": "Move the tea.",
+        "same_as": [
+          "Put the tea leaves.",
+          "Pour the tea."
+        ]
+      },
+      {
+        "text": "Move the teacup.",
+        "same_as": [
+          "Take the teacup."
+        ]
+      },
+      {
+        "text": "Move the tea leaves.",
+        "same_as": [
+          "Put the tea leaves."
+        ]
+      },
+      {
+        "text": "Move the teapot lid.",
+        "same_as": [
+          "Open the teapot lid.",
+          "Close the teapot lid."
+        ]
+      },
+      {
+        "text": "Put the teapot lid.",
+        "same_as": [
+          "Close the teapot lid."
+        ]
+      },
+      {
+        "text": "Take the stirrer.",
+        "same_as": [
+          "Move the stirrer."
+        ]
+      },
+      {
+        "text": "Take the tea leaves.",
+        "same_as": [
+          "Put the tea leaves."
+        ]
+      },
+      {
+        "text": "Take the teapot lid.",
+        "same_as": [
+          "Open the teapot lid.",
+          "Close the teapot lid."
+        ]
+      },
+      {
+        "text": "Pick the tea leaves.",
+        "same_as": [
+          "Put the tea leaves."
+        ]
+      },
+      {
+        "text": "Pick the teacup.",
+        "same_as": [
+          "Take the teacup."
+        ]
+      },
+      {
+        "text": "Pick the teapot lid.",
+        "same_as": [
+          "Open the teapot lid.",
+          "Close the teapot lid."
+        ]
+      },
+      {
+        "text": "Pick up the stirrer.",
+        "same_as": [
+          "Move the stirrer."
+        ]
+      },
+      {
+        "text": "Pick up the tea leaves.",
+        "same_as": [
+          "Put the tea leaves."
+        ]
+      },
+      {
+        "text": "Pick up the teacup.",
+        "same_as": [
+          "Take the teacup."
+        ]
+      },
+      {
+        "text": "Pick up the teapot lid.",
+        "same_as": [
+          "Open the teapot lid.",
+          "Close the teapot lid."
+        ]
+      },
+      {
+        "text": "Place the stirrer.",
+        "same_as": [
+          "Move the stirrer."
+        ]
+      },
+      {
+        "text": "Place the tea leaves.",
+        "same_as": [
+          "Put the tea leaves."
+        ]
+      },
+      {
+        "text": "Place the teacup.",
+        "same_as": [
+          "Take the teacup."
+        ]
+      },
+      {
+        "text": "Place the teapot lid.",
+        "same_as": [
+          "Open the teapot lid.",
+          "Close the teapot lid."
+        ]
+      }
+    ],
+    "rejected_as_nonsense": [
+      "Close the tea.",
+      "Close the teacup.",
+      "Open the stirrer.",
+      "Open the tea.",
+      "Put the stirrer.",
+      "Put the tea.",
+      "Take the tea.",
+      "Close the stirrer.",
+      "Close the tea leaves.",
+      "Pour the stirrer.",
+      "Pour the tea leaves.",
+      "Pour the teacup.",
+      "Pour the teapot lid.",
+      "Pick the stirrer.",
+      "Pick the tea.",
+      "Pick up the tea.",
+      "Place the tea.",
+      "Wipe the tea."
+    ]
+  }
+}

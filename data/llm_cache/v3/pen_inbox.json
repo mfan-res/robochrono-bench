@@ -1,0 +1,134 @@
+{
+  "family": "pen_inbox",
+  "pool": [
+    {
+      "text": "Place the box.",
+      "key": "place box",
+      "tier": "verb",
+      "from": "pick_box",
+      "words": 2,
+      "verb": "place",
+      "object": "box",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Close the box.",
+      "key": "close box",
+      "tier": "verb-global",
+      "from": "pick_box",
+      "words": 2,
+      "verb": "close",
+      "object": "box",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Open the box.",
+      "key": "open box",
+      "tier": "verb-global",
+      "from": "pick_box",
+      "words": 2,
+      "verb": "open",
+      "object": "box",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Put the box.",
+      "key": "put box",
+      "tier": "verb-global",
+      "from": "pick_box",
+      "words": 2,
+      "verb": "put",
+      "object": "box",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Wipe the box.",
+      "key": "wipe box",
+      "tier": "verb-global",
+      "from": "pick_box",
+      "words": 2,
+      "verb": "wipe",
+      "object": "box",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Wipe the pen.",
+      "key": "wipe pen",
+      "tier": "verb-global",
+      "from": "pick_pen",
+      "words": 2,
+      "verb": "wipe",
+      "object": "pen",
+      "modifier": "",
+      "same_as": []
+    }
+  ],
+  "provenance": {
+    "pool_version": "1",
+    "model": "deepseek-chat",
+    "generated_at": "2026-08-17T13:46:36+00:00",
+    "scene_objects": [
+      "box",
+      "pen"
+    ],
+    "rejected_as_synonym": [
+      {
+        "text": "Move the box.",
+        "same_as": [
+          "Pick the box."
+        ]
+      },
+      {
+        "text": "Move the pen.",
+        "same_as": [
+          "Pick the pen.",
+          "Place the pen."
+        ]
+      },
+      {
+        "text": "Pick up the box.",
+        "same_as": [
+          "Pick the box."
+        ]
+      },
+      {
+        "text": "Pick up the pen.",
+        "same_as": [
+          "Pick the pen.",
+          "Place the pen."
+        ]
+      },
+      {
+        "text": "Put the pen.",
+        "same_as": [
+          "Pick the pen.",
+          "Place the pen."
+        ]
+      },
+      {
+        "text": "Take the box.",
+        "same_as": [
+          "Pick the box."
+        ]
+      },
+      {
+        "text": "Take the pen.",
+        "same_as": [
+          "Pick the pen.",
+          "Place the pen."
+        ]
+      }
+    ],
+    "rejected_as_nonsense": [
+      "Close the pen.",
+      "Open the pen.",
+      "Pour the box.",
+      "Pour the pen."
+    ]
+  }
+}

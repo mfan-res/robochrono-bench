@@ -1,0 +1,70 @@
+{
+  "family": "gift_inhand",
+  "pool": [
+    {
+      "text": "Close the gift.",
+      "key": "close gift",
+      "tier": "verb-global",
+      "from": "pick_gift",
+      "words": 2,
+      "verb": "close",
+      "object": "gift",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Open the gift.",
+      "key": "open gift",
+      "tier": "verb-global",
+      "from": "pick_gift",
+      "words": 2,
+      "verb": "open",
+      "object": "gift",
+      "modifier": "",
+      "same_as": []
+    },
+    {
+      "text": "Wipe the gift.",
+      "key": "wipe gift",
+      "tier": "verb-global",
+      "from": "pick_gift",
+      "words": 2,
+      "verb": "wipe",
+      "object": "gift",
+      "modifier": "",
+      "same_as": []
+    }
+  ],
+  "provenance": {
+    "pool_version": "1",
+    "model": "deepseek-chat",
+    "generated_at": "2026-08-17T13:46:31+00:00",
+    "scene_objects": [
+      "gift"
+    ],
+    "rejected_as_synonym": [
+      {
+        "text": "Pick up the gift.",
+        "same_as": [
+          "Pick the gift."
+        ]
+      },
+      {
+        "text": "Put the gift.",
+        "same_as": [
+          "Move the gift.",
+          "Place the gift."
+        ]
+      },
+      {
+        "text": "Take the gift.",
+        "same_as": [
+          "Pick the gift."
+        ]
+      }
+    ],
+    "rejected_as_nonsense": [
+      "Pour the gift."
+    ]
+  }
+}

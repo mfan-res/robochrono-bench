@@ -218,22 +218,39 @@ Return JSON only: {{"1": "same", "2": "different", ...}}
 """
 
 
-def call_api(prompt: str, key: str, timeout: int = 180) -> str:
-    body = json.dumps({
+def call_api(prompt: str, key: str, timeout: int = 180,
+             json_mode: bool = True, temperature: float | None = None) -> str:
+    """调 DeepSeek。
+
+    ⚠ ``json_mode=True`` 时提示词里**必须出现 "json" 字样**，否则服务端返回 400。
+    盲测那种「只回一个字母」的调用要显式传 ``json_mode=False`` ——
+    直接复用默认值会 840 次全部 400。
+
+    ⚠ **只重试可恢复的错误。** 400 是请求本身不合法，重试三次只是把一次失败
+    变成三次失败加两次退避睡眠（实测让一轮盲测从几分钟拖到十分钟以上）。
+    """
+    payload: dict[str, Any] = {
         "model": MODEL,
         "messages": [{"role": "user", "content": prompt}],
-        "temperature": TEMPERATURE,
-        "response_format": {"type": "json_object"},
-    }).encode()
+        "temperature": TEMPERATURE if temperature is None else temperature,
+    }
+    if json_mode:
+        payload["response_format"] = {"type": "json_object"}
     request = urllib.request.Request(
-        API_URL, data=body,
+        API_URL, data=json.dumps(payload).encode(),
         headers={"Authorization": f"Bearer {key}", "Content-Type": "application/json"})
     last: Exception | None = None
     for attempt in range(3):
         try:
             with urllib.request.urlopen(request, timeout=timeout) as response:
                 return json.loads(response.read())["choices"][0]["message"]["content"]
-        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError) as exc:
+        except urllib.error.HTTPError as exc:
+            last = exc
+            if exc.code not in (408, 409, 429, 500, 502, 503, 504):
+                detail = exc.read().decode("utf-8", "replace")[:200]
+                raise RuntimeError(f"DeepSeek {exc.code}（不重试）：{detail}") from exc
+            time.sleep(2 ** attempt)
+        except (urllib.error.URLError, TimeoutError) as exc:
             last = exc
             time.sleep(2 ** attempt)
     raise RuntimeError(f"DeepSeek 调用失败：{last}")

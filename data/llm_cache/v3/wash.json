@@ -1,0 +1,301 @@
+{
+  "family": "wash",
+  "pool": [
+    {
+      "text": "Wipe the bowl with rag.",
+      "key": "wipe bowl with rag",
+      "tier": "obj",
+      "from": "wipe_plate_with_rag",
+      "words": 4,
+      "verb": "wipe",
+      "object": "bowl",
+      "modifier": "with rag",
+      "same_as": []
+    },
+    {
+      "text": "Wipe the brush with rag.",
+      "key": "wipe brush with rag",
+      "tier": "obj",
+      "from": "wipe_plate_with_rag",
+      "words": 4,
+      "verb": "wipe",
+      "object": "brush",
+      "modifier": "with rag",
+      "same_as": []
+    },
+    {
+      "text": "Wipe the plate with brush.",
+      "key": "wipe plate with brush",
+      "tier": "obj",
+      "from": "wipe_bowl_with_brush",
+      "words": 4,
+      "verb": "wipe",
+      "object": "plate",
+      "modifier": "with brush",
+      "same_as": []
+    },
+    {
+      "text": "Wipe the rag with brush.",
+      "key": "wipe rag with brush",
+      "tier": "obj",
+      "from": "wipe_bowl_with_brush",
+      "words": 4,
+      "verb": "wipe",
+      "object": "rag",
+      "modifier": "with brush",
+      "same_as": []
+    },
+    {
+      "text": "Pick the bowl with brush.",
+      "key": "pick bowl with brush",
+      "tier": "verb",
+      "from": "wipe_bowl_with_brush",
+      "words": 4,
+      "verb": "pick",
+      "object": "bowl",
+      "modifier": "with brush",
+      "same_as": []
+    },
+    {
+      "text": "Move the bowl with brush.",
+      "key": "move bowl with brush",
+      "tier": "verb-global",
+      "from": "wipe_bowl_with_brush",
+      "words": 4,
+      "verb": "move",
+      "object": "bowl",
+      "modifier": "with brush",
+      "same_as": []
+    },
+    {
+      "text": "Pick up the bowl with brush.",
+      "key": "pick up bowl with brush",
+      "tier": "verb-global",
+      "from": "wipe_bowl_with_brush",
+      "words": 5,
+      "verb": "pick up",
+      "object": "bowl",
+      "modifier": "with brush",
+      "same_as": []
+    },
+    {
+      "text": "Place the bowl with brush.",
+      "key": "place bowl with brush",
+      "tier": "verb-global",
+      "from": "wipe_bowl_with_brush",
+      "words": 4,
+      "verb": "place",
+      "object": "bowl",
+      "modifier": "with brush",
+      "same_as": []
+    },
+    {
+      "text": "Place the plate with rag.",
+      "key": "place plate with rag",
+      "tier": "verb-global",
+      "from": "wipe_plate_with_rag",
+      "words": 4,
+      "verb": "place",
+      "object": "plate",
+      "modifier": "with rag",
+      "same_as": []
+    },
+    {
+      "text": "Take the bowl with brush.",
+      "key": "take bowl with brush",
+      "tier": "verb-global",
+      "from": "wipe_bowl_with_brush",
+      "words": 4,
+      "verb": "take",
+      "object": "bowl",
+      "modifier": "with brush",
+      "same_as": []
+    }
+  ],
+  "provenance": {
+    "pool_version": "1",
+    "model": "deepseek-chat",
+    "generated_at": "2026-08-17T13:47:59+00:00",
+    "scene_objects": [
+      "bowl",
+      "brush",
+      "plate",
+      "rag"
+    ],
+    "rejected_as_synonym": [
+      {
+        "text": "Pick the plate with rag.",
+        "same_as": [
+          "Pick the plate.",
+          "Pick the rag.",
+          "Wipe the plate with rag."
+        ]
+      },
+      {
+        "text": "Wipe the bowl.",
+        "same_as": [
+          "Pick the bowl.",
+          "Wipe the bowl with brush."
+        ]
+      },
+      {
+        "text": "Wipe the brush.",
+        "same_as": [
+          "Wipe the bowl with brush."
+        ]
+      },
+      {
+        "text": "Wipe the plate.",
+        "same_as": [
+          "Pick the plate.",
+          "Wipe the plate with rag."
+        ]
+      },
+      {
+        "text": "Wipe the rag.",
+        "same_as": [
+          "Pick the rag.",
+          "Wipe the plate with rag."
+        ]
+      },
+      {
+        "text": "Move the bowl.",
+        "same_as": [
+          "Pick the bowl.",
+          "Put the bowl."
+        ]
+      },
+      {
+        "text": "Move the brush.",
+        "same_as": [
+          "Pick the brush.",
+          "Put the brush."
+        ]
+      },
+      {
+        "text": "Move the plate.",
+        "same_as": [
+          "Pick the plate.",
+          "Put the plate."
+        ]
+      },
+      {
+        "text": "Move the plate with rag.",
+        "same_as": [
+          "Wipe the plate with rag."
+        ]
+      },
+      {
+        "text": "Move the rag.",
+        "same_as": [
+          "Pick the rag.",
+          "Put the rag."
+        ]
+      },
+      {
+        "text": "Pick up the bowl.",
+        "same_as": [
+          "Pick the bowl."
+        ]
+      },
+      {
+        "text": "Pick up the brush.",
+        "same_as": [
+          "Pick the brush."
+        ]
+      },
+      {
+        "text": "Pick up the plate.",
+        "same_as": [
+          "Pick the plate."
+        ]
+      },
+      {
+        "text": "Pick up the plate with rag.",
+        "same_as": [
+          "Pick the plate."
+        ]
+      },
+      {
+        "text": "Pick up the rag.",
+        "same_as": [
+          "Pick the rag."
+        ]
+      },
+      {
+        "text": "Place the bowl.",
+        "same_as": [
+          "Pick the bowl.",
+          "Put the bowl."
+        ]
+      },
+      {
+        "text": "Place the brush.",
+        "same_as": [
+          "Put the brush."
+        ]
+      },
+      {
+        "text": "Place the plate.",
+        "same_as": [
+          "Put the plate."
+        ]
+      },
+      {
+        "text": "Place the rag.",
+        "same_as": [
+          "Pick the rag.",
+          "Put the rag."
+        ]
+      },
+      {
+        "text": "Take the bowl.",
+        "same_as": [
+          "Pick the bowl.",
+          "Put the bowl."
+        ]
+      },
+      {
+        "text": "Take the brush.",
+        "same_as": [
+          "Pick the brush."
+        ]
+      },
+      {
+        "text": "Take the plate.",
+        "same_as": [
+          "Pick the plate."
+        ]
+      },
+      {
+        "text": "Take the rag.",
+        "same_as": [
+          "Pick the rag."
+        ]
+      }
+    ],
+    "rejected_as_nonsense": [
+      "Put the bowl with brush.",
+      "Put the plate with rag.",
+      "Close the bowl.",
+      "Close the bowl with brush.",
+      "Close the brush.",
+      "Close the plate.",
+      "Close the plate with rag.",
+      "Close the rag.",
+      "Open the bowl.",
+      "Open the bowl with brush.",
+      "Open the brush.",
+      "Open the plate.",
+      "Open the plate with rag.",
+      "Open the rag.",
+      "Pour the bowl.",
+      "Pour the bowl with brush.",
+      "Pour the brush.",
+      "Pour the plate.",
+      "Pour the plate with rag.",
+      "Pour the rag.",
+      "Take the plate with rag."
+    ]
+  }
+}
