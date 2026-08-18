@@ -104,10 +104,11 @@ data/
 | `schemas/segments.json` | ✅ 320/320 通过 |
 | 上游 OpenCV 工具 | 📦 原样存在 `upstream/`，**已不使用**，仅供比对 |
 
-`validate.py` 当前报 **40 条**，全部来自同一件事：
+`validate.py` 当前报 **44 条**：
 
 ```
-wash   40 条  每集重复动作 —— 洗两个盘子，同一动作做两遍（P-05，处理中）
+⚠ 歧义 40 条  wash 每集重复动作 —— 洗两个盘子（P-05，处理中）
+✗ 序列  4 条  动作序列讲不通 —— file-009 标错物体、file-030 漏标一段（待修）
 ```
 
 > 64 → 42：tea2 与 express 移出（D-42）。42 → 40：删掉 pen_inbox 的零长度段（D-44）。
@@ -151,7 +152,7 @@ wash   40 条  每集重复动作 —— 洗两个盘子，同一动作做两遍
 
 ```bash
 python3 src/label/tests/test_core_replay.py   # 语义没走样
-python3 src/label/validate.py                 # 应当仍是 40 条，不多不少
+python3 src/label/validate.py                 # 应当仍是 44 条，不多不少
 ```
 
 **回归的判据不是「输出相同」，是「每一处差异都被声明过」。** 冒出未声明的差异，

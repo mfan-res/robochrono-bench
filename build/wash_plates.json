@@ -1,0 +1,746 @@
+[
+  {
+    "episode": "file-000",
+    "verdict": "判不了",
+    "why": "t1 没找到两团盘子",
+    "t1": 42.52
+  },
+  {
+    "episode": "file-001",
+    "verdict": "判不了",
+    "why": "t1 没找到两团盘子",
+    "t1": 36.76
+  },
+  {
+    "episode": "file-002",
+    "verdict": "left",
+    "margin": 0.996,
+    "kept_left": 0.0,
+    "kept_right": 0.996,
+    "left_x": [
+      238,
+      410
+    ],
+    "right_x": [
+      420,
+      596
+    ],
+    "t1": 28.2,
+    "window": [
+      52.92,
+      52.88
+    ]
+  },
+  {
+    "episode": "file-003",
+    "verdict": "left",
+    "margin": 0.993,
+    "kept_left": 0.0,
+    "kept_right": 0.993,
+    "left_x": [
+      246,
+      424
+    ],
+    "right_x": [
+      431,
+      608
+    ],
+    "t1": 32.12,
+    "window": [
+      57.24,
+      57.2
+    ]
+  },
+  {
+    "episode": "file-004",
+    "verdict": "left",
+    "margin": 0.974,
+    "kept_left": 0.0,
+    "kept_right": 0.974,
+    "left_x": [
+      252,
+      426
+    ],
+    "right_x": [
+      450,
+      628
+    ],
+    "t1": 34.8,
+    "window": [
+      59.84,
+      59.8
+    ]
+  },
+  {
+    "episode": "file-005",
+    "verdict": "判不了",
+    "why": "t1 没找到两团盘子",
+    "t1": 37.64
+  },
+  {
+    "episode": "file-006",
+    "verdict": "left",
+    "margin": 0.97,
+    "kept_left": 0.0,
+    "kept_right": 0.97,
+    "left_x": [
+      268,
+      440
+    ],
+    "right_x": [
+      455,
+      630
+    ],
+    "t1": 35.92,
+    "window": [
+      61.8,
+      61.76
+    ]
+  },
+  {
+    "episode": "file-007",
+    "verdict": "left",
+    "margin": 0.991,
+    "kept_left": 0.0,
+    "kept_right": 0.991,
+    "left_x": [
+      264,
+      436
+    ],
+    "right_x": [
+      456,
+      632
+    ],
+    "t1": 37.12,
+    "window": [
+      58.92,
+      58.88
+    ]
+  },
+  {
+    "episode": "file-008",
+    "verdict": "left",
+    "margin": 0.967,
+    "kept_left": 0.0,
+    "kept_right": 0.967,
+    "left_x": [
+      260,
+      432
+    ],
+    "right_x": [
+      448,
+      624
+    ],
+    "t1": 34.28,
+    "window": [
+      55.64,
+      56.44
+    ]
+  },
+  {
+    "episode": "file-009",
+    "verdict": "right",
+    "margin": 0.0,
+    "kept_left": 0.0,
+    "kept_right": 0.0,
+    "left_x": [
+      242,
+      426
+    ],
+    "right_x": [
+      438,
+      616
+    ],
+    "t1": 35.04,
+    "window": [
+      75.6,
+      58.36
+    ]
+  },
+  {
+    "episode": "file-010",
+    "verdict": "left",
+    "margin": 0.999,
+    "kept_left": 0.0,
+    "kept_right": 0.999,
+    "left_x": [
+      244,
+      422
+    ],
+    "right_x": [
+      447,
+      628
+    ],
+    "t1": 34.2,
+    "window": [
+      56.52,
+      57.72
+    ]
+  },
+  {
+    "episode": "file-011",
+    "verdict": "left",
+    "margin": 0.986,
+    "kept_left": 0.0,
+    "kept_right": 0.986,
+    "left_x": [
+      246,
+      420
+    ],
+    "right_x": [
+      444,
+      624
+    ],
+    "t1": 35.44,
+    "window": [
+      57.2,
+      57.16
+    ]
+  },
+  {
+    "episode": "file-012",
+    "verdict": "left",
+    "margin": 0.985,
+    "kept_left": 0.0,
+    "kept_right": 0.985,
+    "left_x": [
+      256,
+      436
+    ],
+    "right_x": [
+      450,
+      634
+    ],
+    "t1": 34.84,
+    "window": [
+      56.0,
+      55.96
+    ]
+  },
+  {
+    "episode": "file-013",
+    "verdict": "left",
+    "margin": 0.963,
+    "kept_left": 0.0,
+    "kept_right": 0.963,
+    "left_x": [
+      250,
+      432
+    ],
+    "right_x": [
+      450,
+      636
+    ],
+    "t1": 31.96,
+    "window": [
+      53.48,
+      54.48
+    ]
+  },
+  {
+    "episode": "file-014",
+    "verdict": "left",
+    "margin": 1.006,
+    "kept_left": 0.0,
+    "kept_right": 1.006,
+    "left_x": [
+      242,
+      424
+    ],
+    "right_x": [
+      446,
+      630
+    ],
+    "t1": 33.96,
+    "window": [
+      56.44,
+      58.24
+    ]
+  },
+  {
+    "episode": "file-015",
+    "verdict": "判不了",
+    "why": "t1 没找到两团盘子",
+    "t1": 37.76
+  },
+  {
+    "episode": "file-016",
+    "verdict": "left",
+    "margin": 0.854,
+    "kept_left": 0.0,
+    "kept_right": 0.854,
+    "left_x": [
+      234,
+      416
+    ],
+    "right_x": [
+      442,
+      624
+    ],
+    "t1": 31.56,
+    "window": [
+      54.0,
+      53.96
+    ]
+  },
+  {
+    "episode": "file-017",
+    "verdict": "left",
+    "margin": 0.797,
+    "kept_left": 0.0,
+    "kept_right": 0.797,
+    "left_x": [
+      220,
+      400
+    ],
+    "right_x": [
+      430,
+      614
+    ],
+    "t1": 31.0,
+    "window": [
+      51.32,
+      52.96
+    ]
+  },
+  {
+    "episode": "file-018",
+    "verdict": "left",
+    "margin": 0.916,
+    "kept_left": 0.0,
+    "kept_right": 0.916,
+    "left_x": [
+      226,
+      406
+    ],
+    "right_x": [
+      431,
+      616
+    ],
+    "t1": 30.68,
+    "window": [
+      51.52,
+      52.52
+    ]
+  },
+  {
+    "episode": "file-019",
+    "verdict": "left",
+    "margin": 0.849,
+    "kept_left": 0.0,
+    "kept_right": 0.85,
+    "left_x": [
+      226,
+      408
+    ],
+    "right_x": [
+      438,
+      624
+    ],
+    "t1": 31.36,
+    "window": [
+      48.88,
+      49.8
+    ]
+  },
+  {
+    "episode": "file-020",
+    "verdict": "left",
+    "margin": 0.875,
+    "kept_left": 0.0,
+    "kept_right": 0.875,
+    "left_x": [
+      246,
+      422
+    ],
+    "right_x": [
+      446,
+      624
+    ],
+    "t1": 34.36,
+    "window": [
+      54.0,
+      53.96
+    ]
+  },
+  {
+    "episode": "file-021",
+    "verdict": "left",
+    "margin": 0.889,
+    "kept_left": 0.0,
+    "kept_right": 0.889,
+    "left_x": [
+      246,
+      424
+    ],
+    "right_x": [
+      446,
+      628
+    ],
+    "t1": 27.48,
+    "window": [
+      47.36,
+      47.32
+    ]
+  },
+  {
+    "episode": "file-022",
+    "verdict": "left",
+    "margin": 0.997,
+    "kept_left": 0.0,
+    "kept_right": 0.997,
+    "left_x": [
+      246,
+      426
+    ],
+    "right_x": [
+      450,
+      630
+    ],
+    "t1": 27.32,
+    "window": [
+      46.32,
+      47.44
+    ]
+  },
+  {
+    "episode": "file-023",
+    "verdict": "left",
+    "margin": 0.989,
+    "kept_left": 0.0,
+    "kept_right": 0.989,
+    "left_x": [
+      244,
+      424
+    ],
+    "right_x": [
+      453,
+      632
+    ],
+    "t1": 27.8,
+    "window": [
+      46.08,
+      46.04
+    ]
+  },
+  {
+    "episode": "file-024",
+    "verdict": "left",
+    "margin": 1.005,
+    "kept_left": 0.0,
+    "kept_right": 1.005,
+    "left_x": [
+      246,
+      424
+    ],
+    "right_x": [
+      454,
+      632
+    ],
+    "t1": 30.48,
+    "window": [
+      48.6,
+      49.44
+    ]
+  },
+  {
+    "episode": "file-025",
+    "verdict": "left",
+    "margin": 1.017,
+    "kept_left": 0.0,
+    "kept_right": 1.017,
+    "left_x": [
+      246,
+      426
+    ],
+    "right_x": [
+      454,
+      638
+    ],
+    "t1": 29.0,
+    "window": [
+      47.48,
+      47.44
+    ]
+  },
+  {
+    "episode": "file-026",
+    "verdict": "left",
+    "margin": 0.968,
+    "kept_left": 0.0,
+    "kept_right": 0.968,
+    "left_x": [
+      232,
+      410
+    ],
+    "right_x": [
+      432,
+      614
+    ],
+    "t1": 25.44,
+    "window": [
+      45.12,
+      45.88
+    ]
+  },
+  {
+    "episode": "file-027",
+    "verdict": "left",
+    "margin": 0.999,
+    "kept_left": 0.0,
+    "kept_right": 0.999,
+    "left_x": [
+      220,
+      406
+    ],
+    "right_x": [
+      424,
+      608
+    ],
+    "t1": 28.24,
+    "window": [
+      47.32,
+      47.8
+    ]
+  },
+  {
+    "episode": "file-028",
+    "verdict": "left",
+    "margin": 0.93,
+    "kept_left": 0.0,
+    "kept_right": 0.93,
+    "left_x": [
+      222,
+      408
+    ],
+    "right_x": [
+      426,
+      608
+    ],
+    "t1": 26.88,
+    "window": [
+      45.04,
+      45.0
+    ]
+  },
+  {
+    "episode": "file-029",
+    "verdict": "left",
+    "margin": 0.935,
+    "kept_left": 0.0,
+    "kept_right": 0.935,
+    "left_x": [
+      220,
+      402
+    ],
+    "right_x": [
+      430,
+      614
+    ],
+    "t1": 30.04,
+    "window": [
+      49.36,
+      49.76
+    ]
+  },
+  {
+    "episode": "file-030",
+    "verdict": "right",
+    "margin": 0.0,
+    "kept_left": 0.0,
+    "kept_right": 0.0,
+    "left_x": [
+      228,
+      408
+    ],
+    "right_x": [
+      434,
+      614
+    ],
+    "t1": 30.44,
+    "window": [
+      65.36,
+      49.32
+    ]
+  },
+  {
+    "episode": "file-031",
+    "verdict": "left",
+    "margin": 0.886,
+    "kept_left": 0.0,
+    "kept_right": 0.886,
+    "left_x": [
+      234,
+      416
+    ],
+    "right_x": [
+      432,
+      616
+    ],
+    "t1": 31.24,
+    "window": [
+      50.92,
+      50.88
+    ]
+  },
+  {
+    "episode": "file-032",
+    "verdict": "left",
+    "margin": 0.986,
+    "kept_left": 0.0,
+    "kept_right": 0.986,
+    "left_x": [
+      218,
+      400
+    ],
+    "right_x": [
+      421,
+      602
+    ],
+    "t1": 26.52,
+    "window": [
+      46.28,
+      46.24
+    ]
+  },
+  {
+    "episode": "file-033",
+    "verdict": "left",
+    "margin": 0.998,
+    "kept_left": 0.0,
+    "kept_right": 0.998,
+    "left_x": [
+      220,
+      398
+    ],
+    "right_x": [
+      412,
+      592
+    ],
+    "t1": 32.44,
+    "window": [
+      51.84,
+      51.8
+    ]
+  },
+  {
+    "episode": "file-034",
+    "verdict": "left",
+    "margin": 0.991,
+    "kept_left": 0.0,
+    "kept_right": 0.991,
+    "left_x": [
+      222,
+      400
+    ],
+    "right_x": [
+      425,
+      604
+    ],
+    "t1": 27.88,
+    "window": [
+      47.72,
+      47.68
+    ]
+  },
+  {
+    "episode": "file-035",
+    "verdict": "left",
+    "margin": 0.998,
+    "kept_left": 0.0,
+    "kept_right": 0.998,
+    "left_x": [
+      208,
+      386
+    ],
+    "right_x": [
+      424,
+      602
+    ],
+    "t1": 27.4,
+    "window": [
+      50.04,
+      50.0
+    ]
+  },
+  {
+    "episode": "file-036",
+    "verdict": "left",
+    "margin": 0.963,
+    "kept_left": 0.0,
+    "kept_right": 0.963,
+    "left_x": [
+      222,
+      404
+    ],
+    "right_x": [
+      426,
+      608
+    ],
+    "t1": 25.2,
+    "window": [
+      45.08,
+      45.04
+    ]
+  },
+  {
+    "episode": "file-037",
+    "verdict": "left",
+    "margin": 0.966,
+    "kept_left": 0.0,
+    "kept_right": 0.966,
+    "left_x": [
+      226,
+      408
+    ],
+    "right_x": [
+      432,
+      614
+    ],
+    "t1": 27.8,
+    "window": [
+      47.4,
+      47.36
+    ]
+  },
+  {
+    "episode": "file-038",
+    "verdict": "left",
+    "margin": 0.987,
+    "kept_left": 0.0,
+    "kept_right": 0.987,
+    "left_x": [
+      218,
+      398
+    ],
+    "right_x": [
+      439,
+      622
+    ],
+    "t1": 26.0,
+    "window": [
+      44.88,
+      44.84
+    ]
+  },
+  {
+    "episode": "file-039",
+    "verdict": "left",
+    "margin": 0.893,
+    "kept_left": 0.0,
+    "kept_right": 0.893,
+    "left_x": [
+      230,
+      410
+    ],
+    "right_x": [
+      424,
+      608
+    ],
+    "t1": 27.48,
+    "window": [
+      44.96,
+      44.92
+    ]
+  }
+]

@@ -53,8 +53,10 @@ RAW = ROOT / "data" / "raw"
 ALLOWED_SEGMENT_KEYS = {"id", "subtask", "start_frame", "end_frame",
                         "start", "end", "start_time", "end_time", "episode_index"}
 
+# ✗ = 必须修；⚠ = 待人判断。「序列」是 ✗ —— 动作讲不通只有两种可能：
+# 标错了物体，或者漏标了一段，两种都要改数据。
 SEVERITY = {"污染": "✗", "覆盖": "⚠", "歧义": "⚠", "重叠": "✗",
-            "派生": "✗", "引用": "✗", "可疑": "⚠"}
+            "派生": "✗", "引用": "✗", "序列": "✗", "可疑": "⚠"}
 
 
 @dataclass
@@ -80,6 +82,12 @@ class Report:
 # 正是「同一个东西存两份，不一致时不报错」的现场（D-42）。
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "vqa"))
 from index import episode_bounds  # noqa: E402
+from vocab import parse  # noqa: E402
+
+# 动词分类，用于「序列」检查
+TAKE = {"pick", "pick up", "take", "grasp"}
+DROP = {"put", "place", "put down"}
+PREPS = {"with", "in", "on", "into", "onto", "to", "from", "at"}
 
 
 def check_family(family: str, report: Report) -> None:
@@ -89,8 +97,9 @@ def check_family(family: str, report: Report) -> None:
     if not (base / "subtasks.json").exists():
         report.add("引用", family, "-", "缺 subtasks.json，跳过该目录")
         return
-    subtasks = {s["id"] for s in
-                json.loads((base / "subtasks.json").read_text(encoding="utf-8"))["subtasks"]}
+    defined = json.loads((base / "subtasks.json").read_text(encoding="utf-8"))["subtasks"]
+    subtasks = {s["id"] for s in defined}
+    texts = {s["id"]: s["text"] for s in defined}
     bounds = episode_bounds(family)
     fps_by_family = json.loads((RAW / family / "meta.json").read_text(encoding="utf-8")).get("fps")
 
@@ -157,6 +166,41 @@ def check_family(family: str, report: Report) -> None:
                 report.add("覆盖", family, episode,
                            f"视频含 {len(eps)} 个 episode，第 {missed} 个完全没有标注")
 
+        # ⑤b 序列 —— 手里没拿着的东西不能放/用，拿着的东西不能再拿一次。
+        #
+        # **这条抓的是前六项都抓不到的一类错**：不重叠、不越界、不污染、
+        # 词表内、覆盖完整，但动作序列讲不通。实测抓出两处真错误：
+        #   wash/file-009  「pick_plate → pick_rag → wipe_bowl_with_brush」
+        #                  抽帧看：机械臂拿着盘子用抹布擦。两段标错了物体
+        #   wash/file-030  两次 pick_plate 之间没有 put_plate，中间 5.4 秒空隙
+        #                  抽帧看：正在把盘子放进沥水架 —— 漏标了一段
+        #
+        # ⚠ **只对本族词表里「有 pick 动作」的物体配对。** tea 的 tea leaves
+        # 只有 put 没有 pick，不加这个守卫会 39/39 集全报，
+        # 而那只是词表没定义拿的动作 —— 第一版就是这么误报了 39 条。
+        takeable = {parse(texts[i])["object"] for i in texts
+                    if parse(texts[i])["verb"] in TAKE}
+        held: set[str] = set()
+        for seg in sorted(segments, key=lambda s: s["start_frame"]):
+            got = parse(texts.get(seg["subtask"], ""))
+            verb, obj = got["verb"], got["object"]
+            if verb in TAKE:
+                if obj in held:
+                    report.add("序列", family, episode,
+                               f"{seg['start']:.2f}s 又拿了一次「{obj}」，上一个还没放下")
+                held.add(obj)
+            elif verb in DROP:
+                if obj in takeable and obj not in held:
+                    report.add("序列", family, episode,
+                               f"{seg['start']:.2f}s 放下「{obj}」，但没拿起过")
+                held.discard(obj)
+            else:
+                need = [obj, *(w for w in got["modifier"].split() if w not in PREPS)]
+                miss = [o for o in need if o in takeable and o not in held]
+                if miss:
+                    report.add("序列", family, episode,
+                               f"{seg['start']:.2f}s「{verb} {obj}」但手里没有 {miss}")
+
         # ⑥ 歧义 —— 同一 episode 内同一 subtask 出现多次，时间类任务真值不唯一
         per_episode: dict[int, Counter] = defaultdict(Counter)
         for seg in segments:
@@ -201,7 +245,7 @@ def main() -> int:
         print("六条检查全部通过")
         return 0
     print(f"\n共 {len(report.findings)} 条发现：{dict(by_kind)}\n")
-    for kind in ("污染", "引用", "派生", "重叠", "覆盖", "歧义", "可疑"):
+    for kind in ("污染", "引用", "派生", "重叠", "覆盖", "序列", "歧义", "可疑"):
         items = [f for f in report.findings if f.kind == kind]
         if not items:
             continue
