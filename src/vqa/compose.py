@@ -196,44 +196,56 @@ def main() -> int:
     print(f"  ⑤ 答案位置   {dict(sorted(pos.items()))}  极差 {spread:.1%}"
           + ("  ⚠ 偏斜" if spread > 0.03 else "  ✓"))
 
-    # ⑥ 图选项：每道题的正确项与每一条干扰项都必须够不像（D-56）。
-    # **这条是出厂检查而不是只在 plan 里判** —— plan 里的判据将来若被绕开
-    # （换挑选策略、加新题型），这里会立刻报出来。
+    # ⑥ 图选项：选项之间是否够不像（D-56 / D-57）。
+    # **验的是 plan 实际承诺的门槛**（`plan.json` 的 `option_floor`），
+    # 不是这里另算一遍 —— 检查与规则分叉会在合规的题上报警，踩过一次。
+    #
+    # 两个题型验的边不同，因为它们的构造不同：
+    #   image_in_video  四个选项【两两】六条边 —— 规则对称，答案才不会成离群点
+    #   left_right      正确项与每条干扰项 —— 2×2 的对称性由构造本身保证
     frames_path = BUILD / "frames.json"
-    if frames_path.exists():
+    plan_path = BUILD / "plan.json"
+    if frames_path.exists() and plan_path.exists():
+        import itertools
+
+        import numpy
         payload = json.loads(frames_path.read_text(encoding="utf-8"))
-        desc, floors = payload["descriptors"], payload["floors"]
+        promised = json.loads(plan_path.read_text(encoding="utf-8")).get("option_floor", {})
+        scale = promised.get("scale", {})
+        floors = payload["floors"]
+        at = {k: i for i, k in enumerate(payload["order"])}
+        vecs = numpy.load(BUILD / "frames_desc.npy").astype("float32")
 
         def key_of(path: str) -> str | None:
             return path.split("assets/", 1)[1].rsplit(".", 1)[0] if "assets/" in path else None
 
-        def dist(a: list[int], b: list[int]) -> float:
-            return (sum((x - y) ** 2 for x, y in zip(a, b)) / len(a)) ** 0.5
+        def dist(a: str, b: str) -> float:
+            d = vecs[at[a]] - vecs[at[b]]
+            return float((d @ d / d.size) ** 0.5)
 
-        near = []
-        checked = 0
+        near, checked = [], 0
         for item in items:
             opts = [m for m in item["prompt"]["media"] if m["role"].startswith("option:")]
             if not opts:
                 continue
-            ans = f"option:{item['truth']['answer']}"
-            akey = next((key_of(m["path"]) for m in opts if m["role"] == ans), None)
-            if akey is None or akey not in desc:
+            keys = {m["role"]: key_of(m["path"]) for m in opts}
+            if any(k is None or k not in at for k in keys.values()):
                 continue
-            views = {key_of(m["path"]).split("/")[2] for m in opts if key_of(m["path"])}
-            floor = min((floors[f"{item['family']}/{v}"] for v in views
-                         if f"{item['family']}/{v}" in floors), default=0.0)
+            views = {k.split("/")[2] for k in keys.values()}
+            base = min((floors[f"{item['family']}/{v}"] for v in views
+                        if f"{item['family']}/{v}" in floors), default=0.0)
+            floor = base * scale.get(item["task"], 1.0)
+            ans = f"option:{item['truth']['answer']}"
+            pairs = (itertools.combinations(sorted(keys), 2) if item["task"] == "image_in_video"
+                     else [(ans, r) for r in sorted(keys) if r != ans])
             checked += 1
-            for m in opts:
-                k = key_of(m["path"])
-                if m["role"] == ans or k not in desc:
-                    continue
-                if dist(desc[akey], desc[k]) < floor - 1e-6:
-                    near.append(f"{item['id']} 的 {m['role']}")
+            for ra, rb in pairs:
+                if dist(keys[ra], keys[rb]) < floor - 1e-6:
+                    near.append(f"{item['id']} 的 {ra}/{rb}")
                     break
         print(f"  ⑥ 图选项够不像 {'✓' if not near else f'✗ {len(near)}'}"
-              f"　（查了 {checked} 道）")
-        bad += [f"干扰项与正确项画面差不足: {x}" for x in near[:5]]
+              f"　（查了 {checked} 道，按 plan 承诺的门槛）")
+        bad += [f"选项之间画面差不足: {x}" for x in near[:5]]
 
     by_task = Counter(i["task"] for i in items)
     print(f"\n  题型 {dict(by_task)}")

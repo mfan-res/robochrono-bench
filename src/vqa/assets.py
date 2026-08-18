@@ -182,6 +182,14 @@ def main() -> int:
     # 清单里没有了但盘上还在的 —— 上一版计划的残留。**删掉并报告**，
     # 留着会让「assets 目录里有什么」与「题目引用什么」悄悄分叉。
     want = {f"{m['key']}.{'jpg' if m['kind'] == 'frame' else 'mp4'}" for m in plan["media"]}
+    # **候选帧池不是孤儿。** `frames.py` 抽的两万张里，plan 只会选中一小部分，
+    # 但整个池子是【下一次出题的输入】—— 删掉的话每改一次配方就要重抽 7 分钟。
+    # 池子与成品共用同一套命名（有意的，这样 assets 跑到时全是「已存在」），
+    # 所以清理时必须显式豁免。
+    frames_path = BUILD / "frames.json"
+    if frames_path.exists():
+        want |= {f"{k}.jpg" for k in
+                 json.loads(frames_path.read_text(encoding="utf-8"))["order"]}
     orphan = [p for p in OUT.rglob("*") if p.is_file()
               and str(p.relative_to(OUT)) not in want]
     for p in orphan:

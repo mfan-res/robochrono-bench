@@ -1,43 +1,47 @@
 #!/usr/bin/env python3
 # coding: utf-8
-"""④ 出题第四步（新增）：抽出候选帧池，并量出每个族「有多少视觉余量」。
+"""④ 出题第四步：抽出候选帧池，并量出「什么叫画面上分得开」。
 
-    python3 src/vqa/frames.py             # 只统计，不写
-    python3 src/vqa/frames.py --write     # 抽帧 + 写 build/frames.json
+    python3 src/vqa/frames.py             # 只统计，不抽
+    python3 src/vqa/frames.py --write     # 抽帧 + 写 build/frames.{json,npy}
 
-为什么要单独一步，而且必须排在 plan 之前
-----------------------------------------
+这一步存在的理由
+----------------
 `left_right` / `image_in_video` 的干扰项是**图**。图的干扰项好不好，
-不能靠「来自别的集」「隔了两段」这类**结构判据**来保证 ——
-人工复核（T1-A / T2-A 的第二轮）24 道里判了 7 道「无解」，
-而那 7 道在结构上全都合规。
+不能靠「来自别的集」「隔了两段」这类**结构判据**保证 ——
+人工复核 24 道判了 7 道「无解」，而那 7 道**在结构上全部合规**。
 
-结构判据预设了「不同集看起来不一样」。这个前提在两个族上不成立：
+根因是采集方式，不是挑选的运气：同一套脚本、固定机位，
+**同一个动作在任何一集里都是同一张图**。实测 18 个（族×视角）里 15 个，
+「同动作·别集」的画面距离显著小于「不同动作」：
 
 ```
-gift_inhand   30 集是同一套脚本、固定机位 —— 别集的帧和同集的一样难分
-airpods       腕部相机全是特写，两两画面差中位 40.7（wash 是 54.1）
+airpods/main       同动作·别集 26.6   不同动作 52.4   0.51  ← 近一倍
+pen_inbox/main     27.5              47.3            0.58
+wash/main          41.3              55.4            0.75
+stack_cubes/main   38.8              41.6            0.93  ← 唯一接近的
 ```
 
-所以要**直接量画面差**，而量画面差就得先有帧。plan 决定用哪些帧、
-assets 才去抽 —— 那个顺序下 plan 拿不到像素。于是把「抽候选池」提前：
+于是干扰项改成三条约束一起（人定）：
+  **只从同一集取** —— 跨集的差异是假的，同集之内不同动作块的差异才是真的
+  **动作必须不同** —— 语义判据，来自标注，可解释
+  **画面还要够远** —— 兜底，语义判据漏掉的个例（wash 有一对只差 3.4）
 
-    index → vocab → distract → **frames** → plan → assets → compose → pack
+为什么每段抽五个相位而不是只抽中点
+----------------------------------
+只抽中点等于**专门取每个动作最典型的那一帧**，撞车是系统性的。
+段内不同相位的画面是真的不一样，这让相邻动作块也能贡献够远的干扰项 ——
+实测 stack_cubes 的产量从 26/200 回到 173/200，就是靠这个。
 
-候选池 = 每段中点 × 每个视角，正好就是 assets 后来要抽的那批
-（1,390 段 × 3 视角 = 4,170），所以**这一步不增加任何抽帧量**，
-只是把它提前。文件名与 `assets.py` 完全一致，assets 跑到时全是「已存在」。
+下限为什么只在「不同动作对」上标定
+----------------------------------
+第一版在**全部帧对**上取 p25，而那个分布里混了大量同动作近似对 ——
+基准是脏的：一边被压低（漏掉该拦的），一边又误伤（`left_right` 的
+「对侧手腕同一时刻」被错误地丢了 98 道，而实测它比典型的不同动作对
+更可分，比值 1.13–1.78）。现在只在不同动作对上算，基准干净。
 
-下限为什么按族取分位数，而不是取一个绝对值
-------------------------------------------
-airpods 的 40 和 wash 的 40 不是一回事。用全局阈值等于按族施加不同难度，
-而人已经定过：**族间不需要可比，但同一族内要讲得通**。
-取该族该视角自身分布的 p25，含义是「别挑这个族里最像的那四分之一」——
-它不声称能复现人工判定（实测复现不了 L3），只保证**近似重复不会被选中**。
-
-代价实测（重挑干扰项，而不是丢题）：left_right 96%、image_in_video 100%
-仍可出题。丢的那 4% 全是 `left_right` 的「对侧手腕同一时刻」——
-那条是题型核心，不可替换，过不了下限就只能不出这道题。
+下限按族按视角取，不取绝对值 —— airpods 的 40 和 wash 的 40 不是一回事。
+人已定过：族间不需要可比，同一族内讲得通即可。
 """
 
 from __future__ import annotations
@@ -47,6 +51,7 @@ import json
 import os
 import subprocess
 import sys
+from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Any
@@ -57,20 +62,24 @@ ROOT = Path(__file__).resolve().parents[2]
 BUILD = ROOT / "build"
 OUT = ROOT / "data" / "vqa" / "assets"
 
-FRAMES_VERSION = "1"
+FRAMES_VERSION = "2"
 
-# 描述子边长。32×32 灰度足以判「是不是近似重复」，
-# 又小到可以把 4,170×4,170 的距离矩阵直接算出来。
-# **不是用来判语义相似的** —— 它只回答「这两张图看起来是不是几乎一样」。
+# 段内相位。**不含 0 和 1** —— 段边界是分段的交接点，
+# 那里的画面往往还是上一个（或下一个）动作的余波（P-06）。
+PHASES = (0.1, 0.3, 0.5, 0.7, 0.9)
+
+# 0.5 这个相位是「本时刻」的标准帧：正确项、left_right 的题面都用它。
+ANCHOR = 0.5
+
+# 描述子边长。32×32 灰度只回答「这两张图看起来是不是几乎一样」，
+# **不是用来判语义相似的**。
 DESC = 32
 
 # 选项帧的 JPEG 质量。必须与 assets.py 的 JPEG_Q 一致 ——
 # 正确图与干扰图若用不同参数抽，图像统计本身就成了线索。
 JPEG_Q = 3
 
-# 下限取该族该视角自身距离分布的这个分位数。
 FLOOR_PERCENTILE = 25
-
 WORKERS = 8
 
 
@@ -79,49 +88,77 @@ def frame_key(family: str, episode: str, view: str, frame: int) -> str:
     return f"{family}/{episode}/{view}/frame/{frame:06d}-{frame:06d}"
 
 
-def extract(job: tuple[str, Path, float, int]) -> tuple[str, str]:
+def phase_frames(start: int, end: int) -> dict[float, int]:
+    """段内各相位的帧号。段太短时不同相位会落到同一帧，去重后返回 ——
+    17 帧的段（族里最短）在 0.1/0.3 上就会重合。"""
+    out: dict[float, int] = {}
+    seen: set[int] = set()
+    for p in PHASES:
+        f = start + int(round((end - start) * p))
+        if f in seen and p != ANCHOR:
+            continue
+        seen.add(f)
+        out[p] = f
+    out[ANCHOR] = start + int(round((end - start) * ANCHOR))   # 锚点必须在
+    return out
+
+
+def produce(job: tuple[str, Path, float, int]) -> tuple[str, str, list[int]]:
+    """抽一帧并顺手算描述子 —— 分两趟要多跑两万次 ffmpeg。"""
     key, src, fps, frame = job
     dst = OUT / f"{key}.jpg"
-    if dst.exists() and dst.stat().st_size > 0 and dst.open("rb").read(2) == b"\xff\xd8":
-        return key, "已存在"
-    dst.parent.mkdir(parents=True, exist_ok=True)
-    tmp = dst.with_name(f"{dst.stem}.{os.getpid()}.part.jpg")
-    try:
-        subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{frame / fps:.6f}",
-                        "-i", str(src), "-frames:v", "1", "-q:v", str(JPEG_Q), str(tmp)],
-                       check=True)
-        # 校验魔数再落盘。D-54：`-c copy` 曾把单帧 MP4 写成 `.jpg`，
-        # 产出全程不报错，直到评测端读图才炸。
-        if tmp.stat().st_size == 0 or tmp.open("rb").read(2) != b"\xff\xd8":
+    state = "已存在"
+    if not (dst.exists() and dst.stat().st_size > 0
+            and dst.open("rb").read(2) == b"\xff\xd8"):
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        tmp = dst.with_name(f"{dst.stem}.{os.getpid()}.part.jpg")
+        try:
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", f"{frame / fps:.6f}",
+                            "-i", str(src), "-frames:v", "1", "-q:v", str(JPEG_Q),
+                            str(tmp)], check=True)
+            # 校验魔数再落盘。D-54：`-c copy` 曾把单帧 MP4 写成 `.jpg`，
+            # 产出全程不报错，直到评测端读图才炸。
+            if tmp.stat().st_size == 0 or tmp.open("rb").read(2) != b"\xff\xd8":
+                tmp.unlink(missing_ok=True)
+                return key, "抽出来不是 JPEG", []
+            os.replace(tmp, dst)
+            state = "新建"
+        except subprocess.CalledProcessError:
             tmp.unlink(missing_ok=True)
-            return key, "抽出来不是 JPEG"
-        os.replace(tmp, dst)
-        return key, "新建"
-    except subprocess.CalledProcessError:
-        tmp.unlink(missing_ok=True)
-        return key, "ffmpeg 失败"
-
-
-def describe(key: str) -> tuple[str, list[int]]:
-    r = subprocess.run(["ffmpeg", "-v", "error", "-i", str(OUT / f"{key}.jpg"), "-vf",
+            return key, "ffmpeg 失败", []
+    r = subprocess.run(["ffmpeg", "-v", "error", "-i", str(dst), "-vf",
                         f"scale={DESC}:{DESC},format=gray", "-frames:v", "1",
                         "-f", "rawvideo", "-"], capture_output=True)
-    return key, list(r.stdout[: DESC * DESC])
+    return key, state, list(r.stdout[: DESC * DESC])
 
 
-def floors(desc: dict[str, list[int]], keys_by_group: dict[str, list[str]]) -> dict[str, float]:
-    """每个 (族, 视角) 的距离分位数。**全对算，不抽样** —— 抽样要引入随机数，
-    而这份产物要进 plan，出题必须确定。最大的一组 517 帧 = 13 万对，秒级。"""
-    out = {}
-    for group, keys in sorted(keys_by_group.items()):
+def floors(desc: numpy.ndarray, order: list[str],
+           meta: dict[str, dict[str, Any]]) -> dict[str, float]:
+    """每个 (族, 视角) 的下限：**只在「不同动作」的帧对上**取 p25。
+
+    全对精确算，不抽样 —— 抽样要引入随机数，而这份产物要进 plan，
+    出题必须确定。
+    """
+    index = {k: i for i, k in enumerate(order)}
+    by_group: dict[str, list[str]] = defaultdict(list)
+    for key, m in meta.items():
+        by_group[f"{m['family']}/{m['view']}"].append(key)
+
+    out: dict[str, float] = {}
+    for group, keys in sorted(by_group.items()):
+        keys = sorted(keys)
         if len(keys) < 2:
             continue
-        m = numpy.array([desc[k] for k in sorted(keys)], dtype=numpy.float32)
-        # RMS 距离矩阵的上三角
+        m = desc[[index[k] for k in keys]].astype(numpy.float32)
         sq = (m * m).sum(1)
-        d2 = numpy.maximum(sq[:, None] + sq[None, :] - 2 * m @ m.T, 0) / m.shape[1]
+        d = numpy.sqrt(numpy.maximum(sq[:, None] + sq[None, :] - 2 * m @ m.T, 0)
+                       / m.shape[1])
+        subs = numpy.array([meta[k]["subtask"] for k in keys])
         iu = numpy.triu_indices(len(keys), k=1)
-        out[group] = float(numpy.percentile(numpy.sqrt(d2[iu]), FLOOR_PERCENTILE))
+        differ = (subs[:, None] != subs[None, :])[iu]
+        if differ.sum() < 10:
+            continue
+        out[group] = float(numpy.percentile(d[iu][differ], FLOOR_PERCENTILE))
     return out
 
 
@@ -139,63 +176,60 @@ def main() -> int:
         fps = entry["fps"]
         for episode in entry["episodes"]:
             for i, segment in enumerate(episode["segments"]):
-                frame = (segment["start_frame"] + segment["end_frame"]) // 2
+                phases = phase_frames(segment["start_frame"], segment["end_frame"])
                 for view in entry["views"]:
                     src = ROOT / f"data/source/{family}/{episode['episode']}/{view}.mp4"
                     if not src.exists():
                         continue
-                    key = frame_key(family, episode["episode"], view, frame)
-                    if key in meta:
-                        continue
-                    jobs.append((key, src, fps, frame))
-                    meta[key] = {"family": family, "episode": episode["episode"],
-                                 "view": view, "frame": frame, "seg_index": i,
-                                 "segment_id": segment["id"]}
-    print(f"候选帧池 {len(jobs)} 张（{len({(m['family'], m['episode'], m['frame']) for m in meta.values()})} 段 "
-          f"× 各自的视角数）")
+                    for phase, frame in sorted(phases.items()):
+                        key = frame_key(family, episode["episode"], view, frame)
+                        if key in meta:
+                            continue
+                        jobs.append((key, src, fps, frame))
+                        meta[key] = {"family": family, "episode": episode["episode"],
+                                     "view": view, "frame": frame, "phase": phase,
+                                     "seg_index": i, "segment_id": segment["id"],
+                                     "subtask": segment["subtask"]}
+
+    segs = len({(m["family"], m["episode"], m["segment_id"]) for m in meta.values()})
+    print(f"候选帧池 {len(jobs)} 张 = {segs} 段 × 视角 × {len(PHASES)} 相位（短段相位重合后去重）")
     if not args.write:
-        print("（未写。加 --write 抽帧并写 build/frames.json）")
+        print("（未写。加 --write 抽帧并写 build/frames.json + frames_desc.npy）")
         return 0
 
     with ThreadPoolExecutor(WORKERS) as pool:
-        states = dict(pool.map(extract, jobs))
-    from collections import Counter
-    tally = Counter(states.values())
+        results = list(pool.map(produce, jobs))
+    tally = Counter(state for _k, state, _d in results)
     print(f"抽帧 {dict(tally)}")
-    bad = [k for k, v in states.items() if v not in ("已存在", "新建")]
-    if bad:
-        print(f"❌ {len(bad)} 张没抽出来，前三：{bad[:3]}")
+    broken = [k for k, state, _d in results if state not in ("已存在", "新建")]
+    short = [k for k, _s, d in results if len(d) != DESC * DESC]
+    if broken or short:
+        print(f"❌ 抽失败 {len(broken)}，描述子长度不对 {len(short)}，"
+              f"前三：{(broken + short)[:3]}")
         return 1
 
-    with ThreadPoolExecutor(WORKERS) as pool:
-        desc = dict(pool.map(describe, sorted(meta)))
-    short = [k for k, v in desc.items() if len(v) != DESC * DESC]
-    if short:
-        print(f"❌ {len(short)} 个描述子长度不对，前三：{short[:3]}")
-        return 1
+    order = sorted(meta)
+    lookup = {k: d for k, _s, d in results}
+    desc = numpy.array([lookup[k] for k in order], dtype=numpy.uint8)
+    fl = floors(desc, order, meta)
 
-    by_group: dict[str, list[str]] = {}
-    for key, m in meta.items():
-        by_group.setdefault(f"{m['family']}/{m['view']}", []).append(key)
-    fl = floors(desc, by_group)
-
-    print(f"\n每个族每个视角的画面差 p{FLOOR_PERCENTILE}（下限）")
-    print(f"{'族/视角':<28}{'帧数':>6}{'下限':>8}")
+    print(f"\n下限 = 该族该视角【不同动作帧对】距离的 p{FLOOR_PERCENTILE}")
+    print(f"{'族/视角':<28}{'帧数':>7}{'下限':>8}")
+    counts = Counter(f"{m['family']}/{m['view']}" for m in meta.values())
     for group in sorted(fl):
-        print(f"{group:<28}{len(by_group[group]):>6}{fl[group]:8.1f}")
+        print(f"{group:<28}{counts[group]:>7}{fl[group]:8.1f}")
 
-    head = {"version": FRAMES_VERSION, "desc_size": DESC,
-            "floor_percentile": FLOOR_PERCENTILE, "jpeg_q": JPEG_Q, "floors": fl,
-            "counts": {g: len(k) for g, k in sorted(by_group.items())}}
-    payload = {**head, "frames": meta,
-               "descriptors": {k: v for k, v in sorted(desc.items())}}
-    (BUILD / "frames.json").write_text(json.dumps(payload), encoding="utf-8")
-    # **判据进 git，像素不进。** 下限是要被 review 的决定（每族一个数字）；
-    # 描述子有 19 MB 且完全可再生，进仓库只会淹没历史。
-    (BUILD / "frames_floors.json").write_text(json.dumps(head, indent=1,
-                                                         ensure_ascii=False),
-                                              encoding="utf-8")
-    print(f"\n写入 build/frames.json（{(BUILD / 'frames.json').stat().st_size / 1e6:.1f} MB，不进 git）")
+    head = {"version": FRAMES_VERSION, "desc_size": DESC, "phases": list(PHASES),
+            "anchor": ANCHOR, "floor_percentile": FLOOR_PERCENTILE, "jpeg_q": JPEG_Q,
+            "floors": fl, "counts": dict(sorted(counts.items()))}
+    (BUILD / "frames.json").write_text(
+        json.dumps({**head, "order": order, "frames": meta}), encoding="utf-8")
+    numpy.save(BUILD / "frames_desc.npy", desc)
+    # **判据进 git，像素不进。** 下限是要被 review 的决定（每族一个数字）。
+    (BUILD / "frames_floors.json").write_text(
+        json.dumps(head, indent=1, ensure_ascii=False), encoding="utf-8")
+    print(f"\n写入 build/frames.json + frames_desc.npy"
+          f"（{desc.nbytes / 1e6:.0f} MB 描述子，不进 git）")
     print(f"     build/frames_floors.json（判据，进 git）")
     return 0
 

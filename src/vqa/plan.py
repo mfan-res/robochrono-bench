@@ -130,11 +130,32 @@ DISTRACTORS_PER_QUESTION = 3
 # v1 用六选一，其中一个是永不为答案的「都不对」（A7 已定不放）。
 IMAGE_DISTRACTORS = 3
 
-# image_in_video 的「同集别动作」干扰项至少隔这么多段。
+# 「别的动作块」优先隔这么多段；隔 1 段的必须额外过画面差下限（人定）。
 # 人工复核（T2-A）看到 tea 的相邻段画面几乎一样 —— 固定机位、小物体操作，
 # 帧间差别只有机械臂位置。隔开之后才是「难」而不是「无解」。
 IV_MIN_SEGMENT_GAP = 2
 NONE_TEXT = "All other options are wrong."   # v1 的原文，保持一致便于对照
+
+# 段内相位。与 `frames.py` 的 PHASES / ANCHOR 必须一致 ——
+# 两处分叉的话 plan 会去要一张池子里没有的帧。
+PHASES = (0.1, 0.3, 0.5, 0.7, 0.9)
+ANCHOR = 0.5
+
+# 四个选项【两两】都要过同一条下限 —— 六条边一视同仁。
+#
+# 曾经把「干扰项彼此」放宽到一半，理由是「那只为了不出现双胞胎，门槛该低些」。
+# **那个理由是错的，而且错得可测**：规则一旦不对称，答案就成了离群点 ——
+# 实测答案在「离其它三个最远」上排第一的比例是 **53%**（应为 25%，
+# gift_inhand 79% / pen_inbox 75%），「挑最不像的那个」白送 28 个百分点。
+# 盲测先抓到的是它的反面：2B 模型偏爱居中的那张，于是【低于】随机 8.3 点（−3.6σ）。
+#
+# 六条边同一条门槛，答案在构造上就不再特殊。
+#
+# 系数 0.85 不是随手取的：p25 是给【三条边】标定的，六条边都要过时
+# 同一个数字严格得多 —— 实测只剩 813 道，airpods/gift_inhand/pen_inbox
+# 分别只有 31/5/6，三个族等于没有。0.85 下六族齐全、1,264 道，
+# 而离群检查仍然均匀：**对称性来自约束的形状，不来自它的高低。**
+MUTUAL_RATIO = 0.85
 
 # 片段题的最短时长。**不是任选的阈值** —— `pen_inbox/file-037@f000272`
 # 是个 1 帧（0.05 秒）的段（标注时连按了两次 K），照样出了三道题、
@@ -188,89 +209,85 @@ class Looks:
     """帧的「看起来像不像」。由 `frames.py` 预先算好，这里只查表。
 
     **为什么图选项需要这个** —— 结构判据（来自别集 / 隔了两段）预设了
-    「不同集看起来不一样」，而 gift_inhand 是同一套脚本固定机位、
-    airpods 的腕部相机全是特写，这个前提不成立。人工复核 24 道判了 7 道
-    「无解」，那 7 道**在结构上全部合规**（D-56）。
+    「不同集看起来不一样」。这批数据里前提不成立：同一套脚本、固定机位，
+    **同一个动作在任何一集里都是同一张图**（18 组里 15 组，同动作·别集的
+    画面距离显著小于不同动作）。人工复核判「无解」的 7 道，
+    **结构上全部合规**（D-56 / D-57）。
+
+    下限只在【不同动作帧对】上标定 —— 混进同动作近似对的话基准是脏的，
+    一边漏拦一边误伤（第一版据此错丢了 98 道 `left_right`）。
     """
 
-    def __init__(self, payload: dict[str, Any] | None) -> None:
-        self.desc = payload["descriptors"] if payload else {}
-        self.floors = payload["floors"] if payload else {}
+    def __init__(self, payload: dict[str, Any] | None, desc: Any = None) -> None:
         self.on = bool(payload)
-
-    def far_enough(self, answer_key: str, other_key: str, groups: list[str]) -> bool:
-        """两张图是否够不像。`groups` 是涉及的 `族/视角`，取其中最松的下限 ——
-        left_right 的选项跨左右两个腕视角，按最严的那个会过度丢题。"""
         if not self.on:
-            return True
-        a, b = self.desc.get(answer_key), self.desc.get(other_key)
-        if a is None or b is None:
-            return True                      # 池子里没有就不拦，交给别的判据
-        floor = min((self.floors[g] for g in groups if g in self.floors), default=0.0)
-        d = (sum((x - y) ** 2 for x, y in zip(a, b)) / len(a)) ** 0.5
-        return d >= floor
+            self.floors, self.index, self.desc = {}, {}, None
+            return
+        self.floors = payload["floors"]
+        self.index = {k: i for i, k in enumerate(payload["order"])}
+        self.desc = desc.astype("float32")
+        self.meta = payload["frames"]
+
+    def has(self, key: str) -> bool:
+        return not self.on or key in self.index
+
+    def distance(self, a_key: str, b_key: str) -> float:
+        ia, ib = self.index.get(a_key), self.index.get(b_key)
+        if ia is None or ib is None:
+            return float("inf")            # 池子里没有就不拦，交给别的判据
+        d = self.desc[ia] - self.desc[ib]
+        return float((d @ d / d.size) ** 0.5)
+
+    def floor(self, family: str, views: list[str]) -> float:
+        """取涉及视角里**最松**的下限 —— left_right 的选项跨左右两个腕视角，
+        按最严的那个会过度丢题。"""
+        if not self.on:
+            return 0.0
+        return min((self.floors[f"{family}/{v}"] for v in views
+                    if f"{family}/{v}" in self.floors), default=0.0)
+
+    def far_enough(self, a_key: str, b_key: str, family: str, views: list[str]) -> bool:
+        return self.distance(a_key, b_key) >= self.floor(family, views)
 
 
 def frame_key(family: str, episode: str, view: str, frame: int) -> str:
     return f"{family}/{episode}/{view}/frame/{frame:06d}-{frame:06d}"
 
 
-def pick_frames(item_id: str, pool: list[dict[str, Any]], episode: str, segment_id: str,
-                count: int, same_ep_index: int | None = None,
-                min_gap: int = 0, from_same_ep: int = 0,
-                accept: Any = None) -> list[tuple[dict[str, Any], str]]:
-    """从帧池里挑干扰帧，返回 [(帧记录, 左右侧)]。
+def phase_frame(segment: dict[str, Any], phase: float) -> int:
+    """与 `frames.py.phase_frames` 同一个算式，不可分叉。"""
+    return segment["start_frame"] + int(round(
+        (segment["end_frame"] - segment["start_frame"]) * phase))
 
-    **所有干扰帧都来自同一个池子** —— 与正确帧走同一条抽帧路径、同一套参数。
-    若两者用不同参数抽，图像统计本身就成了线索（这是图选项题型里
-    对应「编出来的文字选项零样本可辨」的那个坑）。
 
-    `min_gap` > 0 时，同一集内的帧必须与本段隔开这么多段 ——
-    相邻段在固定机位下画面几乎一样，那样的干扰项是无解不是难（T2-A）。
+def other_blocks(item_id: str, segments: list[dict[str, Any]], i: int,
+                 ) -> list[tuple[dict[str, Any], float, int]]:
+    """同集里【别的动作块】的候选帧，按取用优先级排好。
 
-    `accept(row, side)` 是**画面差下限**（D-56）。段号隔开只是结构上的隔开，
-    不保证画面上分得开；这个判据直接看像素。挑不满时**宁可丢题**，
-    因为无解的题什么也测不出来。
+    人定的三条约束在这里落地：
+      **只从同集取** —— 参数就是本集的 segments，跨集根本进不来
+      **动作必须不同** —— `subtask != 本段 subtask`
+      **相位可变** —— 每个块贡献 5 个相位，让相邻块也能给出够远的帧
 
-    左右侧按哈希混着给：若干扰帧全取同侧，那唯一的对侧图会变成「异类」
-    而被白排除，等于少一个选项。
+    优先级：先隔 ≥2 段的块（画面天然更远），再隔 1 段的；
+    同一个块内先给锚点相位，再给两端相位（离得最远的先来）。
+    块之间按 `md5(题目id)` 轮转，避免永远取同一个块。
     """
-    def usable(r: dict[str, Any]) -> bool:
-        if r["segment_id"] == segment_id:
-            return False
-        if r["episode"] == episode and same_ep_index is not None:
-            return abs(r["seg_index"] - same_ep_index) >= min_gap
-        return True
-
+    here = segments[i]
+    far = [(j, t) for j, t in enumerate(segments)
+           if t["subtask"] != here["subtask"] and abs(j - i) >= IV_MIN_SEGMENT_GAP]
+    near = [(j, t) for j, t in enumerate(segments)
+            if t["subtask"] != here["subtask"] and abs(j - i) == 1]
     k = int(hashlib.md5(item_id.encode()).hexdigest(), 16)
-    picked, seen = [], set()
-
-    def take(cands: list[dict[str, Any]], n: int) -> None:
-        if not cands:
-            return
-        for step in range(len(cands)):
-            r = cands[(k + step * 7919) % len(cands)]   # 7919 与池长多互质，散得开
-            if r["segment_id"] in seen:
-                continue
-            # 左右侧【先定后验】，不因为过不了下限就换一侧 ——
-            # 换侧会打破「2 左 2 右」，那唯一的对侧图就成了异类，等于少一个选项。
-            side = "left" if (k + len(picked)) % 2 == 0 else "right"
-            if accept is not None and not accept(r, side):
-                continue
-            seen.add(r["segment_id"])
-            picked.append((r, side))
-            if len([1 for _ in picked]) >= n:
-                break
-
-    # **同集的干扰项要【定额分配】，不能靠碰巧。**
-    # 一个族的池子有两百来条，同集合格的只有三四条 —— 均匀抽的话
-    # 实测 4,170 个干扰项里只有 54 个来自本集，而那正是最难的一类（T2-A）。
-    if from_same_ep:
-        same = [r for r in pool if r["episode"] == episode and usable(r)]
-        take(same, from_same_ep)
-    take([r for r in pool if usable(r) and r["episode"] != episode or
-          (not from_same_ep and usable(r))], count)
-    return picked[:count]
+    out: list[tuple[dict[str, Any], float, int]] = []
+    for tier in (far, near):
+        if not tier:
+            continue
+        for step in range(len(tier)):
+            _j, block = tier[(k + step * 7919) % len(tier)]
+            for phase in (ANCHOR, PHASES[0], PHASES[-1], PHASES[1], PHASES[-2]):
+                out.append((block, phase, phase_frame(block, phase)))
+    return out
 
 
 def build_options(item_id: str, answer: str, actions: list[str],
@@ -447,44 +464,61 @@ def build(index: dict[str, Any], vocab: dict[str, Any],
                     })
                     per_episode += 1
 
-            # ---- left_right：主视角一帧当题面，手腕视角当选项 ----
+            # ---- left_right：2×2，四个选项全部同集 ----
+            # 选项 = {本时刻, 别的动作块} × {左腕, 右腕}
+            # 每个视角各出现两次、每个时刻各出现两次 —— **任何单一线索都不指向答案**，
+            # 必须同时定「哪个相机」和「哪个时刻」。认出侧别只能到 50%（已披露）。
             for i, segment in enumerate(segments):
-                mid = (segment["start_frame"] + segment["end_frame"]) // 2
-                for side in ("left", "right"):
-                    tid = f"{family}/{episode['episode']}/{segment['id']}@left_right_{side}"
-                    correct = need("frame", family, episode["episode"], mid, mid,
-                                   view=f"wrist_{side}")
-                    # 最难的干扰项：**对侧手腕的同一时刻**。答对必须真做左右判断。
-                    flip = "right" if side == "left" else "left"
-                    other = need("frame", family, episode["episode"], mid, mid,
-                                 view=f"wrist_{flip}")
-                    groups = [f"{family}/wrist_left", f"{family}/wrist_right"]
-                    a_key = frame_key(family, episode["episode"], f"wrist_{side}", mid)
-                    # 对侧手腕同一时刻是题型的核心，**不可替换** ——
-                    # 它自己就和正确项分不开时（airpods 的腕部特写），
-                    # 这道题无解，只能不出。
-                    if not looks.far_enough(
-                            a_key, frame_key(family, episode["episode"],
-                                             f"wrist_{flip}", mid), groups):
+                mid = phase_frame(segment, ANCHOR)
+                tid_base = f"{family}/{episode['episode']}/{segment['id']}"
+                views = ["wrist_left", "wrist_right"]
+                anchors = {v: frame_key(family, episode["episode"], v, mid)
+                           for v in views}
+                if not all(looks.has(k) for k in anchors.values()):
+                    skipped["left_right:缺手腕视角"] += 2
+                    continue
+
+                # 别的动作块：一个块同时供左右两张干扰图，
+                # 两张都要与【两个正确项】都够远（左右两道题共用这个块）。
+                chosen = None
+                for block, phase, frame in other_blocks(f"{tid_base}@left_right",
+                                                        segments, i):
+                    keys = {v: frame_key(family, episode["episode"], v, frame)
+                            for v in views}
+                    if not all(looks.has(k) for k in keys.values()):
+                        continue
+                    if all(looks.far_enough(a, b, family, views)
+                           for a in anchors.values() for b in keys.values()):
+                        chosen = (block, phase, frame, keys)
+                        break
+                if chosen is None:
+                    skipped["left_right:同集找不到够远的别的动作块"] += 2
+                    continue
+                block, phase, frame, other_keys = chosen
+
+                for side in views:
+                    flip = "wrist_right" if side == "wrist_left" else "wrist_left"
+                    tid = f"{tid_base}@left_right_{side.split('_')[1]}"
+                    # 对侧手腕同一时刻。实测它比典型的不同动作对更可分
+                    # （比值 1.13–1.78），所以【不再】因为它被丢题 ——
+                    # 第一版按脏基准算的下限错丢了 98 道 wash。
+                    if not looks.far_enough(anchors[side], anchors[flip], family, views):
                         skipped["left_right:对侧同刻与正确项画面差不足"] += 1
                         continue
-                    picks = pick_frames(
-                        tid, pool[family], episode["episode"], segment["id"],
-                        IMAGE_DISTRACTORS - 1,
-                        accept=lambda r, sd: looks.far_enough(
-                            a_key, frame_key(family, r["episode"], f"wrist_{sd}",
-                                             r["frame"]), groups))
-                    opts = [correct, other] + [
-                        need("frame", family, r["episode"], r["frame"], r["frame"],
-                             view=f"wrist_{sd}") for r, sd in picks]
-                    if len(opts) < IMAGE_DISTRACTORS + 1:
-                        skipped["left_right:干扰帧不足"] += 1
-                        continue
+                    correct = need("frame", family, episode["episode"], mid, mid,
+                                   view=side)
+                    opts = [correct,
+                            need("frame", family, episode["episode"], mid, mid,
+                                 view=flip),
+                            need("frame", family, episode["episode"], frame, frame,
+                                 view="wrist_left"),
+                            need("frame", family, episode["episode"], frame, frame,
+                                 view="wrist_right")]
                     items.append({
                         "id": tid, "family": family, "task": "left_right", "group": tid,
-                        "stem": STEMS["left_right"].format(side=side),
+                        "stem": STEMS["left_right"].format(side=side.split("_")[1]),
                         "answer_subtask": segment["subtask"],
-                        "answer_text": f"{side} gripper camera view",
+                        "answer_text": f"{side.split('_')[1]} gripper camera view",
                         "distractors": [], "image_options": opts,
                         "correct_option": correct,
                         "media": [need("frame", family, episode["episode"], mid, mid,
@@ -496,35 +530,88 @@ def build(index: dict[str, Any], vocab: dict[str, Any],
                                        "clip": {"mode": "frame", "view": "main",
                                                 "start_frame": mid, "end_frame": mid,
                                                 "seconds": 0.0},
-                                       "side": side,
-                                       "distractors": {"symmetric": 1,
-                                                       "other_frames": len(picks)},
+                                       "side": side.split("_")[1],
+                                       # `distractors` 按契约只放【来源计数】——
+                                       # 元数据放同级键，别挤进计数表（schema 会拦）
+                                       "distractors": {"opposite_wrist_same_moment": 1,
+                                                       "other_block_frames": 2},
+                                       "layout": "2x2",
+                                       "same_episode": True,
+                                       "other_block": block["id"],
+                                       "other_subtask": block["subtask"],
+                                       "other_phase": phase,
                                        "synthetic": False}},
                     })
 
-            # ---- image_in_video：片段（复用 understanding 那一批）+ 图选项 ----
+            # ---- image_in_video：片段 + 四个【同相机、不同动作块】的帧 ----
+            # 四个选项同为 main 视角，分别来自四个不同的动作块（全部同集）。
+            # 没有视角线索、没有时刻线索 —— **盲测天花板就是 25%**，
+            # 唯一解法是认出片段里发生的是哪个动作块。
             for i, segment in enumerate(segments):
                 clip = clip_for(segment, window, fps)
                 if (clip[1] - clip[0] + 1) / fps < MIN_CLIP_SECONDS:
                     skipped["image_in_video:段过短"] += 1
                     continue
-                mid = (segment["start_frame"] + segment["end_frame"]) // 2
-                tid = f"{family}/{episode['episode']}/{segment['id']}@image_in_video"
-                correct = need("frame", family, episode["episode"], mid, mid, view="main")
-                # 1 条来自本集（隔 ≥2 段，最难的那类）+ 2 条来自别集
-                a_key = frame_key(family, episode["episode"], "main", mid)
-                picks = pick_frames(
-                    tid, pool[family], episode["episode"], segment["id"],
-                    IMAGE_DISTRACTORS, same_ep_index=i,
-                    min_gap=IV_MIN_SEGMENT_GAP, from_same_ep=1,
-                    accept=lambda r, _sd: looks.far_enough(
-                        a_key, frame_key(family, r["episode"], "main", r["frame"]),
-                        [f"{family}/main"]))
-                opts = [correct] + [need("frame", family, r["episode"], r["frame"],
-                                         r["frame"], view="main") for r, _ in picks]
-                if len(opts) < IMAGE_DISTRACTORS + 1:
-                    skipped["image_in_video:干扰帧不足"] += 1
+                mid = phase_frame(segment, ANCHOR)
+                if not clip[0] <= mid <= clip[1]:
+                    # 正确项必须真的在片段里，否则这道题没有正确答案
+                    skipped["image_in_video:锚点不在片段内"] += 1
                     continue
+                tid = f"{family}/{episode['episode']}/{segment['id']}@image_in_video"
+                a_key = frame_key(family, episode["episode"], "main", mid)
+                if not looks.has(a_key):
+                    skipped["image_in_video:缺锚点帧"] += 1
+                    continue
+
+                # **挑最接近等边的那一组四点**，不是「按顺序取第一个够远的」。
+                # 顺序贪心会挑出扁的集合：干扰项都离答案远、彼此却挤在一起，
+                # 于是**答案成了离群点**（实测排第一占 53%，白送 28 个百分点）。
+                # 这里每次加入到已选各点最小距离最大的那个候选 ——
+                # 四个点互相撑开，答案在构造上不再特殊。
+                cands: list[tuple[dict[str, Any], float, int, str]] = []
+                seen_keys: set[str] = set()
+                for block, phase, frame in other_blocks(tid, segments, i):
+                    key = frame_key(family, episode["episode"], "main", frame)
+                    if key in seen_keys or not looks.has(key):
+                        continue
+                    seen_keys.add(key)
+                    cands.append((block, phase, frame, key))
+
+                floor = looks.floor(family, ["main"]) * MUTUAL_RATIO
+                picked: list[tuple[dict[str, Any], float, int]] = []
+                picked_keys: list[str] = [a_key]
+                used_blocks: set[str] = set()
+                for _slot in range(IMAGE_DISTRACTORS):
+                    best = None
+                    for block, phase, frame, key in cands:
+                        if key in picked_keys:
+                            continue
+                        gap = min(looks.distance(key, k) for k in picked_keys)
+                        if gap < floor:
+                            continue
+                        # 平手时按 key 定序 —— 出题必须确定
+                        if best is None or (gap, key) > (best[0], best[3][3]):
+                            best = (gap, block, phase, (block, phase, frame, key))
+                    if best is None:
+                        break
+                    _gap, block, phase, entry = best
+                    picked.append((entry[0], entry[1], entry[2]))
+                    picked_keys.append(entry[3])
+                    used_blocks.add(block["id"])
+
+                if len(picked) < IMAGE_DISTRACTORS:
+                    skipped["image_in_video:同集凑不齐够远的别的动作块"] += 1
+                    continue
+                # **三条干扰项不能全来自同一个动作块。** 那样它们会聚成一簇，
+                # 正确项就是唯一的异类 —— 不看视频也能挑出来。
+                # 两个块不存在这个问题：簇是 {X,X}、{Y}、{Z}，答案与 Y 一样是单点。
+                if len(used_blocks) < 2:
+                    skipped["image_in_video:三条干扰项同属一个动作块（答案会成异类）"] += 1
+                    continue
+
+                correct = need("frame", family, episode["episode"], mid, mid, view="main")
+                opts = [correct] + [need("frame", family, episode["episode"],
+                                         f, f, view="main") for _b, _p, f in picked]
                 items.append({
                     "id": tid, "family": family, "task": "image_in_video", "group": tid,
                     "stem": STEMS["image_in_video"],
@@ -540,7 +627,13 @@ def build(index: dict[str, Any], vocab: dict[str, Any],
                                             "start_frame": clip[0], "end_frame": clip[1],
                                             "seconds": round((clip[1] - clip[0] + 1) / fps, 3)},
                                    "min_segment_gap": IV_MIN_SEGMENT_GAP,
-                                   "distractors": {"other_frames": len(picks)},
+                                   "distractors": {
+                                       "other_block_frames": len(picked)},
+                                   "layout": "same_camera_other_blocks",
+                                   "same_episode": True,
+                                   "blocks": [b["subtask"] for b, _p, _f in picked],
+                                   "phases": [p for _b, p, _f in picked],
+                                   "distinct_blocks": len(used_blocks),
                                    "synthetic": False}},
                 })
 
@@ -657,10 +750,12 @@ def main() -> int:
               "   先跑 python3 src/vqa/frames.py --write")
         return 1
     looks_payload = json.loads(frames_path.read_text(encoding="utf-8"))
+    import numpy
+    looks_desc = numpy.load(BUILD / "frames_desc.npy")
     vocab = json.loads((BUILD / "vocab.json").read_text(encoding="utf-8"))["families"]
     # `data/llm_cache/` 三代（v1-vendor / v2 / v3）全部退场，只作留档 ——
     # 干扰项改为一律取自真实标签，不再需要任何生成物（D-37 / D-38）。
-    looks = Looks(looks_payload)
+    looks = Looks(looks_payload, looks_desc)
     plan = build(index, vocab, window, time_repeats, cap, none_option, looks)
 
     # 确定性自检：同样输入必须得到同样一批题。
@@ -675,6 +770,14 @@ def main() -> int:
         print(f"❌ 构建不确定：两次指纹 {fp[0]} ≠ {fp[1]}")
         print("   同样输入得到了不同的题。常见原因：遍历 set / dict、掺进时间或随机数。")
         return 1
+    # 把【实际用的门槛】写进产物 —— 出厂检查照着这个验，
+    # 而不是自己另算一遍。检查与规则分叉会在合规的题上报警（踩过）。
+    plan["option_floor"] = {
+        "percentile_source": "build/frames_floors.json",
+        "scale": {"image_in_video": MUTUAL_RATIO, "left_right": 1.0},
+        "applies_to": {"image_in_video": "四个选项两两（六条边）",
+                       "left_right": "正确项与每条干扰项"},
+    }
     plan["fingerprint"] = fp[0]
     opt = plan["options"]
     print(f"指纹 {plan['fingerprint']}（两次构建一致）")
