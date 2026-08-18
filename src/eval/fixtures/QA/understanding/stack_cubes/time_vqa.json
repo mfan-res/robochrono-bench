@@ -1,0 +1,4639 @@
+{
+  "source": "/home/tianhao/NAS/yyywv/json_pickplace",
+  "video_dir": "/home/kewei/YWC/egodata/pickplace/video",
+  "multi_view_video_root": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos",
+  "views": {
+    "left_eye": "observation.images.left_eye",
+    "left_wrist": "observation.images.left_wrist",
+    "right_wrist": "observation.images.right_wrist"
+  },
+  "time_crop_top_applied": true,
+  "time_crop_top_fraction": 0.1,
+  "time_cropped_video_dir": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top",
+  "window_mode": "raw",
+  "num_source_segments": 300,
+  "task": "time_eqa",
+  "question": "When did the action \"{action}\" happen?",
+  "items": [
+    {
+      "id": "file-000-1",
+      "source_id": "file-000-1",
+      "video_id": "file-000",
+      "type": "time",
+      "Q": "When did the action \"pick the red cube\" happen?",
+      "A": "00:00:10.000-00:00:27.700",
+      "question": "When did the action \"pick the red cube\" happen?",
+      "answer": "00:00:10.000-00:00:27.700",
+      "answer_text": "00:00:10.000-00:00:27.700",
+      "answer_seconds": {
+        "start": 10.0,
+        "end": 27.7
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 10.0,
+        "end": 27.7,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-000.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-000.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-000.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-000-1",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-000_segments.json",
+          "start": 10.0,
+          "end": 27.7,
+          "start_time": "00:00:10.000",
+          "end_time": "00:00:27.700",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 10.0,
+        "original_end": 27.7,
+        "original_start_time": "00:00:10.000",
+        "original_end_time": "00:00:27.700",
+        "window_start": 10.0,
+        "window_end": 27.7,
+        "window_type": "raw_segment",
+        "start_frame": 200,
+        "end_frame": 553
+      }
+    },
+    {
+      "id": "file-000-1_file-000-2_move",
+      "source_id": "file-000-1_file-000-2_move",
+      "video_id": "file-000",
+      "type": "time",
+      "Q": "When did the action \"move the red cube\" happen?",
+      "A": "00:00:26.700-00:00:32.050",
+      "question": "When did the action \"move the red cube\" happen?",
+      "answer": "00:00:26.700-00:00:32.050",
+      "answer_text": "00:00:26.700-00:00:32.050",
+      "answer_seconds": {
+        "start": 26.7,
+        "end": 32.05
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 26.7,
+        "end": 32.05,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-000.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-000.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-000.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-000-1_file-000-2_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-000_segments.json",
+          "start": 26.7,
+          "end": 32.05,
+          "start_time": "00:00:26.700",
+          "end_time": "00:00:32.050",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 26.7,
+        "original_end": 32.05,
+        "original_start_time": "00:00:26.700",
+        "original_end_time": "00:00:32.050",
+        "window_start": 26.7,
+        "window_end": 32.05,
+        "window_type": "raw_segment",
+        "start_frame": 534,
+        "end_frame": 640
+      }
+    },
+    {
+      "id": "file-000-2",
+      "source_id": "file-000-2",
+      "video_id": "file-000",
+      "type": "time",
+      "Q": "When did the action \"place the red cube\" happen?",
+      "A": "00:00:31.050-00:00:35.050",
+      "question": "When did the action \"place the red cube\" happen?",
+      "answer": "00:00:31.050-00:00:35.050",
+      "answer_text": "00:00:31.050-00:00:35.050",
+      "answer_seconds": {
+        "start": 31.05,
+        "end": 35.05
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 31.05,
+        "end": 35.05,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-000.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-000.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-000.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-000-2",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-000_segments.json",
+          "start": 31.05,
+          "end": 35.05,
+          "start_time": "00:00:31.050",
+          "end_time": "00:00:35.050",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 31.05,
+        "original_end": 35.05,
+        "original_start_time": "00:00:31.050",
+        "original_end_time": "00:00:35.050",
+        "window_start": 31.05,
+        "window_end": 35.05,
+        "window_type": "raw_segment",
+        "start_frame": 621,
+        "end_frame": 700
+      }
+    },
+    {
+      "id": "file-000-3",
+      "source_id": "file-000-3",
+      "video_id": "file-000",
+      "type": "time",
+      "Q": "When did the action \"pick the yellow cube\" happen?",
+      "A": "00:00:43.050-00:00:59.000",
+      "question": "When did the action \"pick the yellow cube\" happen?",
+      "answer": "00:00:43.050-00:00:59.000",
+      "answer_text": "00:00:43.050-00:00:59.000",
+      "answer_seconds": {
+        "start": 43.05,
+        "end": 59.0
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 43.05,
+        "end": 59.0,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-000.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-000.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-000.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-000-3",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-000_segments.json",
+          "start": 43.05,
+          "end": 59.0,
+          "start_time": "00:00:43.050",
+          "end_time": "00:00:59.000",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 43.05,
+        "original_end": 59.0,
+        "original_start_time": "00:00:43.050",
+        "original_end_time": "00:00:59.000",
+        "window_start": 43.05,
+        "window_end": 59.0,
+        "window_type": "raw_segment",
+        "start_frame": 861,
+        "end_frame": 1179
+      }
+    },
+    {
+      "id": "file-000-3_file-000-4_move",
+      "source_id": "file-000-3_file-000-4_move",
+      "video_id": "file-000",
+      "type": "time",
+      "Q": "When did the action \"move the yellow cube\" happen?",
+      "A": "00:00:58.000-00:01:03.950",
+      "question": "When did the action \"move the yellow cube\" happen?",
+      "answer": "00:00:58.000-00:01:03.950",
+      "answer_text": "00:00:58.000-00:01:03.950",
+      "answer_seconds": {
+        "start": 58.0,
+        "end": 63.95
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 58.0,
+        "end": 63.95,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-000.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-000.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-000.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-000-3_file-000-4_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-000_segments.json",
+          "start": 58.0,
+          "end": 63.95,
+          "start_time": "00:00:58.000",
+          "end_time": "00:01:03.950",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 58.0,
+        "original_end": 63.95,
+        "original_start_time": "00:00:58.000",
+        "original_end_time": "00:01:03.950",
+        "window_start": 58.0,
+        "window_end": 63.95,
+        "window_type": "raw_segment",
+        "start_frame": 1160,
+        "end_frame": 1278
+      }
+    },
+    {
+      "id": "file-000-4",
+      "source_id": "file-000-4",
+      "video_id": "file-000",
+      "type": "time",
+      "Q": "When did the action \"place the yellow cube\" happen?",
+      "A": "00:01:02.950-00:01:06.950",
+      "question": "When did the action \"place the yellow cube\" happen?",
+      "answer": "00:01:02.950-00:01:06.950",
+      "answer_text": "00:01:02.950-00:01:06.950",
+      "answer_seconds": {
+        "start": 62.95,
+        "end": 66.95
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 62.95,
+        "end": 66.95,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-000.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-000.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-000.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-000-4",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-000_segments.json",
+          "start": 62.95,
+          "end": 66.95,
+          "start_time": "00:01:02.950",
+          "end_time": "00:01:06.950",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 62.95,
+        "original_end": 66.95,
+        "original_start_time": "00:01:02.950",
+        "original_end_time": "00:01:06.950",
+        "window_start": 62.95,
+        "window_end": 66.95,
+        "window_type": "raw_segment",
+        "start_frame": 1259,
+        "end_frame": 1338
+      }
+    },
+    {
+      "id": "file-001-1",
+      "source_id": "file-001-1",
+      "video_id": "file-001",
+      "type": "time",
+      "Q": "When did the action \"pick the yellow cube\" happen?",
+      "A": "00:00:10.000-00:00:26.550",
+      "question": "When did the action \"pick the yellow cube\" happen?",
+      "answer": "00:00:10.000-00:00:26.550",
+      "answer_text": "00:00:10.000-00:00:26.550",
+      "answer_seconds": {
+        "start": 10.0,
+        "end": 26.55
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 10.0,
+        "end": 26.55,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-001.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-001.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-001.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-001-1",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-001_segments.json",
+          "start": 10.0,
+          "end": 26.55,
+          "start_time": "00:00:10.000",
+          "end_time": "00:00:26.550",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 10.0,
+        "original_end": 26.55,
+        "original_start_time": "00:00:10.000",
+        "original_end_time": "00:00:26.550",
+        "window_start": 10.0,
+        "window_end": 26.55,
+        "window_type": "raw_segment",
+        "start_frame": 200,
+        "end_frame": 530
+      }
+    },
+    {
+      "id": "file-001-1_file-001-2_move",
+      "source_id": "file-001-1_file-001-2_move",
+      "video_id": "file-001",
+      "type": "time",
+      "Q": "When did the action \"move the yellow cube\" happen?",
+      "A": "00:00:25.550-00:00:29.550",
+      "question": "When did the action \"move the yellow cube\" happen?",
+      "answer": "00:00:25.550-00:00:29.550",
+      "answer_text": "00:00:25.550-00:00:29.550",
+      "answer_seconds": {
+        "start": 25.55,
+        "end": 29.55
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 25.55,
+        "end": 29.55,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-001.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-001.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-001.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-001-1_file-001-2_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-001_segments.json",
+          "start": 25.55,
+          "end": 29.55,
+          "start_time": "00:00:25.550",
+          "end_time": "00:00:29.550",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 25.55,
+        "original_end": 29.55,
+        "original_start_time": "00:00:25.550",
+        "original_end_time": "00:00:29.550",
+        "window_start": 25.55,
+        "window_end": 29.55,
+        "window_type": "raw_segment",
+        "start_frame": 511,
+        "end_frame": 590
+      }
+    },
+    {
+      "id": "file-001-2",
+      "source_id": "file-001-2",
+      "video_id": "file-001",
+      "type": "time",
+      "Q": "When did the action \"place the yellow cube\" happen?",
+      "A": "00:00:28.550-00:00:32.550",
+      "question": "When did the action \"place the yellow cube\" happen?",
+      "answer": "00:00:28.550-00:00:32.550",
+      "answer_text": "00:00:28.550-00:00:32.550",
+      "answer_seconds": {
+        "start": 28.55,
+        "end": 32.55
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 28.55,
+        "end": 32.55,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-001.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-001.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-001.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-001-2",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-001_segments.json",
+          "start": 28.55,
+          "end": 32.55,
+          "start_time": "00:00:28.550",
+          "end_time": "00:00:32.550",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 28.55,
+        "original_end": 32.55,
+        "original_start_time": "00:00:28.550",
+        "original_end_time": "00:00:32.550",
+        "window_start": 28.55,
+        "window_end": 32.55,
+        "window_type": "raw_segment",
+        "start_frame": 571,
+        "end_frame": 650
+      }
+    },
+    {
+      "id": "file-001-3",
+      "source_id": "file-001-3",
+      "video_id": "file-001",
+      "type": "time",
+      "Q": "When did the action \"pick the red cube\" happen?",
+      "A": "00:00:40.550-00:01:02.800",
+      "question": "When did the action \"pick the red cube\" happen?",
+      "answer": "00:00:40.550-00:01:02.800",
+      "answer_text": "00:00:40.550-00:01:02.800",
+      "answer_seconds": {
+        "start": 40.55,
+        "end": 62.8
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 40.55,
+        "end": 62.8,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-001.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-001.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-001.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-001-3",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-001_segments.json",
+          "start": 40.55,
+          "end": 62.8,
+          "start_time": "00:00:40.550",
+          "end_time": "00:01:02.800",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 40.55,
+        "original_end": 62.8,
+        "original_start_time": "00:00:40.550",
+        "original_end_time": "00:01:02.800",
+        "window_start": 40.55,
+        "window_end": 62.8,
+        "window_type": "raw_segment",
+        "start_frame": 811,
+        "end_frame": 1255
+      }
+    },
+    {
+      "id": "file-001-3_file-001-4_move",
+      "source_id": "file-001-3_file-001-4_move",
+      "video_id": "file-001",
+      "type": "time",
+      "Q": "When did the action \"move the red cube\" happen?",
+      "A": "00:01:01.800-00:01:05.700",
+      "question": "When did the action \"move the red cube\" happen?",
+      "answer": "00:01:01.800-00:01:05.700",
+      "answer_text": "00:01:01.800-00:01:05.700",
+      "answer_seconds": {
+        "start": 61.8,
+        "end": 65.7
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 61.8,
+        "end": 65.7,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-001.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-001.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-001.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-001-3_file-001-4_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-001_segments.json",
+          "start": 61.8,
+          "end": 65.7,
+          "start_time": "00:01:01.800",
+          "end_time": "00:01:05.700",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 61.8,
+        "original_end": 65.7,
+        "original_start_time": "00:01:01.800",
+        "original_end_time": "00:01:05.700",
+        "window_start": 61.8,
+        "window_end": 65.7,
+        "window_type": "raw_segment",
+        "start_frame": 1236,
+        "end_frame": 1313
+      }
+    },
+    {
+      "id": "file-001-4",
+      "source_id": "file-001-4",
+      "video_id": "file-001",
+      "type": "time",
+      "Q": "When did the action \"place the red cube\" happen?",
+      "A": "00:01:04.700-00:01:08.700",
+      "question": "When did the action \"place the red cube\" happen?",
+      "answer": "00:01:04.700-00:01:08.700",
+      "answer_text": "00:01:04.700-00:01:08.700",
+      "answer_seconds": {
+        "start": 64.7,
+        "end": 68.7
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 64.7,
+        "end": 68.7,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-001.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-001.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-001.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-001-4",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-001_segments.json",
+          "start": 64.7,
+          "end": 68.7,
+          "start_time": "00:01:04.700",
+          "end_time": "00:01:08.700",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 64.7,
+        "original_end": 68.7,
+        "original_start_time": "00:01:04.700",
+        "original_end_time": "00:01:08.700",
+        "window_start": 64.7,
+        "window_end": 68.7,
+        "window_type": "raw_segment",
+        "start_frame": 1294,
+        "end_frame": 1373
+      }
+    },
+    {
+      "id": "file-002-1",
+      "source_id": "file-002-1",
+      "video_id": "file-002",
+      "type": "time",
+      "Q": "When did the action \"pick the red cube\" happen?",
+      "A": "00:00:10.000-00:00:29.150",
+      "question": "When did the action \"pick the red cube\" happen?",
+      "answer": "00:00:10.000-00:00:29.150",
+      "answer_text": "00:00:10.000-00:00:29.150",
+      "answer_seconds": {
+        "start": 10.0,
+        "end": 29.15
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 10.0,
+        "end": 29.15,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-002.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-002.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-002.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-002-1",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-002_segments.json",
+          "start": 10.0,
+          "end": 29.15,
+          "start_time": "00:00:10.000",
+          "end_time": "00:00:29.150",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 10.0,
+        "original_end": 29.15,
+        "original_start_time": "00:00:10.000",
+        "original_end_time": "00:00:29.150",
+        "window_start": 10.0,
+        "window_end": 29.15,
+        "window_type": "raw_segment",
+        "start_frame": 200,
+        "end_frame": 582
+      }
+    },
+    {
+      "id": "file-002-1_file-002-2_move",
+      "source_id": "file-002-1_file-002-2_move",
+      "video_id": "file-002",
+      "type": "time",
+      "Q": "When did the action \"move the red cube\" happen?",
+      "A": "00:00:28.150-00:00:31.250",
+      "question": "When did the action \"move the red cube\" happen?",
+      "answer": "00:00:28.150-00:00:31.250",
+      "answer_text": "00:00:28.150-00:00:31.250",
+      "answer_seconds": {
+        "start": 28.15,
+        "end": 31.25
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 28.15,
+        "end": 31.25,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-002.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-002.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-002.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-002-1_file-002-2_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-002_segments.json",
+          "start": 28.15,
+          "end": 31.25,
+          "start_time": "00:00:28.150",
+          "end_time": "00:00:31.250",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 28.15,
+        "original_end": 31.25,
+        "original_start_time": "00:00:28.150",
+        "original_end_time": "00:00:31.250",
+        "window_start": 28.15,
+        "window_end": 31.25,
+        "window_type": "raw_segment",
+        "start_frame": 563,
+        "end_frame": 624
+      }
+    },
+    {
+      "id": "file-002-2",
+      "source_id": "file-002-2",
+      "video_id": "file-002",
+      "type": "time",
+      "Q": "When did the action \"place the red cube\" happen?",
+      "A": "00:00:30.250-00:00:34.250",
+      "question": "When did the action \"place the red cube\" happen?",
+      "answer": "00:00:30.250-00:00:34.250",
+      "answer_text": "00:00:30.250-00:00:34.250",
+      "answer_seconds": {
+        "start": 30.25,
+        "end": 34.25
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 30.25,
+        "end": 34.25,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-002.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-002.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-002.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-002-2",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-002_segments.json",
+          "start": 30.25,
+          "end": 34.25,
+          "start_time": "00:00:30.250",
+          "end_time": "00:00:34.250",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 30.25,
+        "original_end": 34.25,
+        "original_start_time": "00:00:30.250",
+        "original_end_time": "00:00:34.250",
+        "window_start": 30.25,
+        "window_end": 34.25,
+        "window_type": "raw_segment",
+        "start_frame": 605,
+        "end_frame": 684
+      }
+    },
+    {
+      "id": "file-002-3",
+      "source_id": "file-002-3",
+      "video_id": "file-002",
+      "type": "time",
+      "Q": "When did the action \"pick the yellow cube\" happen?",
+      "A": "00:00:42.250-00:00:57.900",
+      "question": "When did the action \"pick the yellow cube\" happen?",
+      "answer": "00:00:42.250-00:00:57.900",
+      "answer_text": "00:00:42.250-00:00:57.900",
+      "answer_seconds": {
+        "start": 42.25,
+        "end": 57.9
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 42.25,
+        "end": 57.9,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-002.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-002.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-002.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-002-3",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-002_segments.json",
+          "start": 42.25,
+          "end": 57.9,
+          "start_time": "00:00:42.250",
+          "end_time": "00:00:57.900",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 42.25,
+        "original_end": 57.9,
+        "original_start_time": "00:00:42.250",
+        "original_end_time": "00:00:57.900",
+        "window_start": 42.25,
+        "window_end": 57.9,
+        "window_type": "raw_segment",
+        "start_frame": 845,
+        "end_frame": 1157
+      }
+    },
+    {
+      "id": "file-002-3_file-002-4_move",
+      "source_id": "file-002-3_file-002-4_move",
+      "video_id": "file-002",
+      "type": "time",
+      "Q": "When did the action \"move the yellow cube\" happen?",
+      "A": "00:00:56.900-00:01:00.500",
+      "question": "When did the action \"move the yellow cube\" happen?",
+      "answer": "00:00:56.900-00:01:00.500",
+      "answer_text": "00:00:56.900-00:01:00.500",
+      "answer_seconds": {
+        "start": 56.9,
+        "end": 60.5
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 56.9,
+        "end": 60.5,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-002.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-002.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-002.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-002-3_file-002-4_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-002_segments.json",
+          "start": 56.9,
+          "end": 60.5,
+          "start_time": "00:00:56.900",
+          "end_time": "00:01:00.500",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 56.9,
+        "original_end": 60.5,
+        "original_start_time": "00:00:56.900",
+        "original_end_time": "00:01:00.500",
+        "window_start": 56.9,
+        "window_end": 60.5,
+        "window_type": "raw_segment",
+        "start_frame": 1138,
+        "end_frame": 1209
+      }
+    },
+    {
+      "id": "file-002-4",
+      "source_id": "file-002-4",
+      "video_id": "file-002",
+      "type": "time",
+      "Q": "When did the action \"place the yellow cube\" happen?",
+      "A": "00:00:59.500-00:01:03.500",
+      "question": "When did the action \"place the yellow cube\" happen?",
+      "answer": "00:00:59.500-00:01:03.500",
+      "answer_text": "00:00:59.500-00:01:03.500",
+      "answer_seconds": {
+        "start": 59.5,
+        "end": 63.5
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 59.5,
+        "end": 63.5,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-002.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-002.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-002.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-002-4",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-002_segments.json",
+          "start": 59.5,
+          "end": 63.5,
+          "start_time": "00:00:59.500",
+          "end_time": "00:01:03.500",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 59.5,
+        "original_end": 63.5,
+        "original_start_time": "00:00:59.500",
+        "original_end_time": "00:01:03.500",
+        "window_start": 59.5,
+        "window_end": 63.5,
+        "window_type": "raw_segment",
+        "start_frame": 1190,
+        "end_frame": 1269
+      }
+    },
+    {
+      "id": "file-003-1",
+      "source_id": "file-003-1",
+      "video_id": "file-003",
+      "type": "time",
+      "Q": "When did the action \"pick the red cube\" happen?",
+      "A": "00:00:10.000-00:00:24.850",
+      "question": "When did the action \"pick the red cube\" happen?",
+      "answer": "00:00:10.000-00:00:24.850",
+      "answer_text": "00:00:10.000-00:00:24.850",
+      "answer_seconds": {
+        "start": 10.0,
+        "end": 24.85
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 10.0,
+        "end": 24.85,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-003.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-003.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-003.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-003-1",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-003_segments.json",
+          "start": 10.0,
+          "end": 24.85,
+          "start_time": "00:00:10.000",
+          "end_time": "00:00:24.850",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 10.0,
+        "original_end": 24.85,
+        "original_start_time": "00:00:10.000",
+        "original_end_time": "00:00:24.850",
+        "window_start": 10.0,
+        "window_end": 24.85,
+        "window_type": "raw_segment",
+        "start_frame": 200,
+        "end_frame": 496
+      }
+    },
+    {
+      "id": "file-003-1_file-003-2_move",
+      "source_id": "file-003-1_file-003-2_move",
+      "video_id": "file-003",
+      "type": "time",
+      "Q": "When did the action \"move the red cube\" happen?",
+      "A": "00:00:23.850-00:00:26.000",
+      "question": "When did the action \"move the red cube\" happen?",
+      "answer": "00:00:23.850-00:00:26.000",
+      "answer_text": "00:00:23.850-00:00:26.000",
+      "answer_seconds": {
+        "start": 23.85,
+        "end": 26.0
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 23.85,
+        "end": 26.0,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-003.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-003.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-003.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-003-1_file-003-2_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-003_segments.json",
+          "start": 23.85,
+          "end": 26.0,
+          "start_time": "00:00:23.850",
+          "end_time": "00:00:26.000",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 23.85,
+        "original_end": 26.0,
+        "original_start_time": "00:00:23.850",
+        "original_end_time": "00:00:26.000",
+        "window_start": 23.85,
+        "window_end": 26.0,
+        "window_type": "raw_segment",
+        "start_frame": 477,
+        "end_frame": 519
+      }
+    },
+    {
+      "id": "file-003-2",
+      "source_id": "file-003-2",
+      "video_id": "file-003",
+      "type": "time",
+      "Q": "When did the action \"place the red cube\" happen?",
+      "A": "00:00:25.000-00:00:29.000",
+      "question": "When did the action \"place the red cube\" happen?",
+      "answer": "00:00:25.000-00:00:29.000",
+      "answer_text": "00:00:25.000-00:00:29.000",
+      "answer_seconds": {
+        "start": 25.0,
+        "end": 29.0
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 25.0,
+        "end": 29.0,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-003.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-003.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-003.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-003-2",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-003_segments.json",
+          "start": 25.0,
+          "end": 29.0,
+          "start_time": "00:00:25.000",
+          "end_time": "00:00:29.000",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 25.0,
+        "original_end": 29.0,
+        "original_start_time": "00:00:25.000",
+        "original_end_time": "00:00:29.000",
+        "window_start": 25.0,
+        "window_end": 29.0,
+        "window_type": "raw_segment",
+        "start_frame": 500,
+        "end_frame": 579
+      }
+    },
+    {
+      "id": "file-003-3",
+      "source_id": "file-003-3",
+      "video_id": "file-003",
+      "type": "time",
+      "Q": "When did the action \"pick the yellow cube\" happen?",
+      "A": "00:00:37.000-00:00:56.550",
+      "question": "When did the action \"pick the yellow cube\" happen?",
+      "answer": "00:00:37.000-00:00:56.550",
+      "answer_text": "00:00:37.000-00:00:56.550",
+      "answer_seconds": {
+        "start": 37.0,
+        "end": 56.55
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 37.0,
+        "end": 56.55,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-003.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-003.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-003.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-003-3",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-003_segments.json",
+          "start": 37.0,
+          "end": 56.55,
+          "start_time": "00:00:37.000",
+          "end_time": "00:00:56.550",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 37.0,
+        "original_end": 56.55,
+        "original_start_time": "00:00:37.000",
+        "original_end_time": "00:00:56.550",
+        "window_start": 37.0,
+        "window_end": 56.55,
+        "window_type": "raw_segment",
+        "start_frame": 740,
+        "end_frame": 1130
+      }
+    },
+    {
+      "id": "file-003-3_file-003-4_move",
+      "source_id": "file-003-3_file-003-4_move",
+      "video_id": "file-003",
+      "type": "time",
+      "Q": "When did the action \"move the yellow cube\" happen?",
+      "A": "00:00:55.550-00:00:58.200",
+      "question": "When did the action \"move the yellow cube\" happen?",
+      "answer": "00:00:55.550-00:00:58.200",
+      "answer_text": "00:00:55.550-00:00:58.200",
+      "answer_seconds": {
+        "start": 55.55,
+        "end": 58.2
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 55.55,
+        "end": 58.2,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-003.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-003.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-003.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-003-3_file-003-4_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-003_segments.json",
+          "start": 55.55,
+          "end": 58.2,
+          "start_time": "00:00:55.550",
+          "end_time": "00:00:58.200",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 55.55,
+        "original_end": 58.2,
+        "original_start_time": "00:00:55.550",
+        "original_end_time": "00:00:58.200",
+        "window_start": 55.55,
+        "window_end": 58.2,
+        "window_type": "raw_segment",
+        "start_frame": 1111,
+        "end_frame": 1163
+      }
+    },
+    {
+      "id": "file-003-4",
+      "source_id": "file-003-4",
+      "video_id": "file-003",
+      "type": "time",
+      "Q": "When did the action \"place the yellow cube\" happen?",
+      "A": "00:00:57.200-00:01:01.200",
+      "question": "When did the action \"place the yellow cube\" happen?",
+      "answer": "00:00:57.200-00:01:01.200",
+      "answer_text": "00:00:57.200-00:01:01.200",
+      "answer_seconds": {
+        "start": 57.2,
+        "end": 61.2
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 57.2,
+        "end": 61.2,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-003.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-003.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-003.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-003-4",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-003_segments.json",
+          "start": 57.2,
+          "end": 61.2,
+          "start_time": "00:00:57.200",
+          "end_time": "00:01:01.200",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 57.2,
+        "original_end": 61.2,
+        "original_start_time": "00:00:57.200",
+        "original_end_time": "00:01:01.200",
+        "window_start": 57.2,
+        "window_end": 61.2,
+        "window_type": "raw_segment",
+        "start_frame": 1144,
+        "end_frame": 1223
+      }
+    },
+    {
+      "id": "file-004-1",
+      "source_id": "file-004-1",
+      "video_id": "file-004",
+      "type": "time",
+      "Q": "When did the action \"pick the yellow cube\" happen?",
+      "A": "00:00:10.000-00:00:25.200",
+      "question": "When did the action \"pick the yellow cube\" happen?",
+      "answer": "00:00:10.000-00:00:25.200",
+      "answer_text": "00:00:10.000-00:00:25.200",
+      "answer_seconds": {
+        "start": 10.0,
+        "end": 25.2
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 10.0,
+        "end": 25.2,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-004.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-004.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-004.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-004-1",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-004_segments.json",
+          "start": 10.0,
+          "end": 25.2,
+          "start_time": "00:00:10.000",
+          "end_time": "00:00:25.200",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 10.0,
+        "original_end": 25.2,
+        "original_start_time": "00:00:10.000",
+        "original_end_time": "00:00:25.200",
+        "window_start": 10.0,
+        "window_end": 25.2,
+        "window_type": "raw_segment",
+        "start_frame": 200,
+        "end_frame": 503
+      }
+    },
+    {
+      "id": "file-004-1_file-004-2_move",
+      "source_id": "file-004-1_file-004-2_move",
+      "video_id": "file-004",
+      "type": "time",
+      "Q": "When did the action \"move the yellow cube\" happen?",
+      "A": "00:00:24.200-00:00:26.050",
+      "question": "When did the action \"move the yellow cube\" happen?",
+      "answer": "00:00:24.200-00:00:26.050",
+      "answer_text": "00:00:24.200-00:00:26.050",
+      "answer_seconds": {
+        "start": 24.2,
+        "end": 26.05
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 24.2,
+        "end": 26.05,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-004.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-004.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-004.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-004-1_file-004-2_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-004_segments.json",
+          "start": 24.2,
+          "end": 26.05,
+          "start_time": "00:00:24.200",
+          "end_time": "00:00:26.050",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 24.2,
+        "original_end": 26.05,
+        "original_start_time": "00:00:24.200",
+        "original_end_time": "00:00:26.050",
+        "window_start": 24.2,
+        "window_end": 26.05,
+        "window_type": "raw_segment",
+        "start_frame": 484,
+        "end_frame": 520
+      }
+    },
+    {
+      "id": "file-004-2",
+      "source_id": "file-004-2",
+      "video_id": "file-004",
+      "type": "time",
+      "Q": "When did the action \"place the yellow cube\" happen?",
+      "A": "00:00:25.050-00:00:29.050",
+      "question": "When did the action \"place the yellow cube\" happen?",
+      "answer": "00:00:25.050-00:00:29.050",
+      "answer_text": "00:00:25.050-00:00:29.050",
+      "answer_seconds": {
+        "start": 25.05,
+        "end": 29.05
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 25.05,
+        "end": 29.05,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-004.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-004.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-004.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-004-2",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-004_segments.json",
+          "start": 25.05,
+          "end": 29.05,
+          "start_time": "00:00:25.050",
+          "end_time": "00:00:29.050",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 25.05,
+        "original_end": 29.05,
+        "original_start_time": "00:00:25.050",
+        "original_end_time": "00:00:29.050",
+        "window_start": 25.05,
+        "window_end": 29.05,
+        "window_type": "raw_segment",
+        "start_frame": 501,
+        "end_frame": 580
+      }
+    },
+    {
+      "id": "file-004-3",
+      "source_id": "file-004-3",
+      "video_id": "file-004",
+      "type": "time",
+      "Q": "When did the action \"pick the red cube\" happen?",
+      "A": "00:00:37.050-00:00:46.400",
+      "question": "When did the action \"pick the red cube\" happen?",
+      "answer": "00:00:37.050-00:00:46.400",
+      "answer_text": "00:00:37.050-00:00:46.400",
+      "answer_seconds": {
+        "start": 37.05,
+        "end": 46.4
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 37.05,
+        "end": 46.4,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-004.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-004.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-004.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-004-3",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-004_segments.json",
+          "start": 37.05,
+          "end": 46.4,
+          "start_time": "00:00:37.050",
+          "end_time": "00:00:46.400",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 37.05,
+        "original_end": 46.4,
+        "original_start_time": "00:00:37.050",
+        "original_end_time": "00:00:46.400",
+        "window_start": 37.05,
+        "window_end": 46.4,
+        "window_type": "raw_segment",
+        "start_frame": 741,
+        "end_frame": 927
+      }
+    },
+    {
+      "id": "file-004-3_file-004-4_move",
+      "source_id": "file-004-3_file-004-4_move",
+      "video_id": "file-004",
+      "type": "time",
+      "Q": "When did the action \"move the red cube\" happen?",
+      "A": "00:00:45.400-00:00:48.250",
+      "question": "When did the action \"move the red cube\" happen?",
+      "answer": "00:00:45.400-00:00:48.250",
+      "answer_text": "00:00:45.400-00:00:48.250",
+      "answer_seconds": {
+        "start": 45.4,
+        "end": 48.25
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 45.4,
+        "end": 48.25,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-004.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-004.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-004.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-004-3_file-004-4_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-004_segments.json",
+          "start": 45.4,
+          "end": 48.25,
+          "start_time": "00:00:45.400",
+          "end_time": "00:00:48.250",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 45.4,
+        "original_end": 48.25,
+        "original_start_time": "00:00:45.400",
+        "original_end_time": "00:00:48.250",
+        "window_start": 45.4,
+        "window_end": 48.25,
+        "window_type": "raw_segment",
+        "start_frame": 908,
+        "end_frame": 964
+      }
+    },
+    {
+      "id": "file-004-4",
+      "source_id": "file-004-4",
+      "video_id": "file-004",
+      "type": "time",
+      "Q": "When did the action \"place the red cube\" happen?",
+      "A": "00:00:47.250-00:00:51.250",
+      "question": "When did the action \"place the red cube\" happen?",
+      "answer": "00:00:47.250-00:00:51.250",
+      "answer_text": "00:00:47.250-00:00:51.250",
+      "answer_seconds": {
+        "start": 47.25,
+        "end": 51.25
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 47.25,
+        "end": 51.25,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-004.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-004.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-004.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-004-4",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-004_segments.json",
+          "start": 47.25,
+          "end": 51.25,
+          "start_time": "00:00:47.250",
+          "end_time": "00:00:51.250",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 47.25,
+        "original_end": 51.25,
+        "original_start_time": "00:00:47.250",
+        "original_end_time": "00:00:51.250",
+        "window_start": 47.25,
+        "window_end": 51.25,
+        "window_type": "raw_segment",
+        "start_frame": 945,
+        "end_frame": 1024
+      }
+    },
+    {
+      "id": "file-005-1",
+      "source_id": "file-005-1",
+      "video_id": "file-005",
+      "type": "time",
+      "Q": "When did the action \"pick the yellow cube\" happen?",
+      "A": "00:00:10.000-00:00:22.550",
+      "question": "When did the action \"pick the yellow cube\" happen?",
+      "answer": "00:00:10.000-00:00:22.550",
+      "answer_text": "00:00:10.000-00:00:22.550",
+      "answer_seconds": {
+        "start": 10.0,
+        "end": 22.55
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 10.0,
+        "end": 22.55,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-005.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-005.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-005.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-005-1",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-005_segments.json",
+          "start": 10.0,
+          "end": 22.55,
+          "start_time": "00:00:10.000",
+          "end_time": "00:00:22.550",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 10.0,
+        "original_end": 22.55,
+        "original_start_time": "00:00:10.000",
+        "original_end_time": "00:00:22.550",
+        "window_start": 10.0,
+        "window_end": 22.55,
+        "window_type": "raw_segment",
+        "start_frame": 200,
+        "end_frame": 450
+      }
+    },
+    {
+      "id": "file-005-1_file-005-2_move",
+      "source_id": "file-005-1_file-005-2_move",
+      "video_id": "file-005",
+      "type": "time",
+      "Q": "When did the action \"move the yellow cube\" happen?",
+      "A": "00:00:21.550-00:00:24.100",
+      "question": "When did the action \"move the yellow cube\" happen?",
+      "answer": "00:00:21.550-00:00:24.100",
+      "answer_text": "00:00:21.550-00:00:24.100",
+      "answer_seconds": {
+        "start": 21.55,
+        "end": 24.1
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 21.55,
+        "end": 24.1,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-005.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-005.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-005.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-005-1_file-005-2_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-005_segments.json",
+          "start": 21.55,
+          "end": 24.1,
+          "start_time": "00:00:21.550",
+          "end_time": "00:00:24.100",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 21.55,
+        "original_end": 24.1,
+        "original_start_time": "00:00:21.550",
+        "original_end_time": "00:00:24.100",
+        "window_start": 21.55,
+        "window_end": 24.1,
+        "window_type": "raw_segment",
+        "start_frame": 431,
+        "end_frame": 481
+      }
+    },
+    {
+      "id": "file-005-2",
+      "source_id": "file-005-2",
+      "video_id": "file-005",
+      "type": "time",
+      "Q": "When did the action \"place the yellow cube\" happen?",
+      "A": "00:00:23.100-00:00:27.100",
+      "question": "When did the action \"place the yellow cube\" happen?",
+      "answer": "00:00:23.100-00:00:27.100",
+      "answer_text": "00:00:23.100-00:00:27.100",
+      "answer_seconds": {
+        "start": 23.1,
+        "end": 27.1
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 23.1,
+        "end": 27.1,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-005.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-005.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-005.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-005-2",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-005_segments.json",
+          "start": 23.1,
+          "end": 27.1,
+          "start_time": "00:00:23.100",
+          "end_time": "00:00:27.100",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 23.1,
+        "original_end": 27.1,
+        "original_start_time": "00:00:23.100",
+        "original_end_time": "00:00:27.100",
+        "window_start": 23.1,
+        "window_end": 27.1,
+        "window_type": "raw_segment",
+        "start_frame": 462,
+        "end_frame": 541
+      }
+    },
+    {
+      "id": "file-005-3",
+      "source_id": "file-005-3",
+      "video_id": "file-005",
+      "type": "time",
+      "Q": "When did the action \"pick the red cube\" happen?",
+      "A": "00:00:35.100-00:00:47.850",
+      "question": "When did the action \"pick the red cube\" happen?",
+      "answer": "00:00:35.100-00:00:47.850",
+      "answer_text": "00:00:35.100-00:00:47.850",
+      "answer_seconds": {
+        "start": 35.1,
+        "end": 47.85
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 35.1,
+        "end": 47.85,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-005.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-005.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-005.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-005-3",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-005_segments.json",
+          "start": 35.1,
+          "end": 47.85,
+          "start_time": "00:00:35.100",
+          "end_time": "00:00:47.850",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 35.1,
+        "original_end": 47.85,
+        "original_start_time": "00:00:35.100",
+        "original_end_time": "00:00:47.850",
+        "window_start": 35.1,
+        "window_end": 47.85,
+        "window_type": "raw_segment",
+        "start_frame": 702,
+        "end_frame": 956
+      }
+    },
+    {
+      "id": "file-005-3_file-005-4_move",
+      "source_id": "file-005-3_file-005-4_move",
+      "video_id": "file-005",
+      "type": "time",
+      "Q": "When did the action \"move the red cube\" happen?",
+      "A": "00:00:46.850-00:00:49.950",
+      "question": "When did the action \"move the red cube\" happen?",
+      "answer": "00:00:46.850-00:00:49.950",
+      "answer_text": "00:00:46.850-00:00:49.950",
+      "answer_seconds": {
+        "start": 46.85,
+        "end": 49.95
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 46.85,
+        "end": 49.95,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-005.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-005.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-005.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-005-3_file-005-4_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-005_segments.json",
+          "start": 46.85,
+          "end": 49.95,
+          "start_time": "00:00:46.850",
+          "end_time": "00:00:49.950",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 46.85,
+        "original_end": 49.95,
+        "original_start_time": "00:00:46.850",
+        "original_end_time": "00:00:49.950",
+        "window_start": 46.85,
+        "window_end": 49.95,
+        "window_type": "raw_segment",
+        "start_frame": 937,
+        "end_frame": 998
+      }
+    },
+    {
+      "id": "file-005-4",
+      "source_id": "file-005-4",
+      "video_id": "file-005",
+      "type": "time",
+      "Q": "When did the action \"place the red cube\" happen?",
+      "A": "00:00:48.950-00:00:52.950",
+      "question": "When did the action \"place the red cube\" happen?",
+      "answer": "00:00:48.950-00:00:52.950",
+      "answer_text": "00:00:48.950-00:00:52.950",
+      "answer_seconds": {
+        "start": 48.95,
+        "end": 52.95
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 48.95,
+        "end": 52.95,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-005.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-005.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-005.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-005-4",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-005_segments.json",
+          "start": 48.95,
+          "end": 52.95,
+          "start_time": "00:00:48.950",
+          "end_time": "00:00:52.950",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 48.95,
+        "original_end": 52.95,
+        "original_start_time": "00:00:48.950",
+        "original_end_time": "00:00:52.950",
+        "window_start": 48.95,
+        "window_end": 52.95,
+        "window_type": "raw_segment",
+        "start_frame": 979,
+        "end_frame": 1058
+      }
+    },
+    {
+      "id": "file-006-1",
+      "source_id": "file-006-1",
+      "video_id": "file-006",
+      "type": "time",
+      "Q": "When did the action \"pick the yellow cube\" happen?",
+      "A": "00:00:10.000-00:00:22.550",
+      "question": "When did the action \"pick the yellow cube\" happen?",
+      "answer": "00:00:10.000-00:00:22.550",
+      "answer_text": "00:00:10.000-00:00:22.550",
+      "answer_seconds": {
+        "start": 10.0,
+        "end": 22.55
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 10.0,
+        "end": 22.55,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-006.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-006.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-006.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-006-1",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-006_segments.json",
+          "start": 10.0,
+          "end": 22.55,
+          "start_time": "00:00:10.000",
+          "end_time": "00:00:22.550",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 10.0,
+        "original_end": 22.55,
+        "original_start_time": "00:00:10.000",
+        "original_end_time": "00:00:22.550",
+        "window_start": 10.0,
+        "window_end": 22.55,
+        "window_type": "raw_segment",
+        "start_frame": 200,
+        "end_frame": 450
+      }
+    },
+    {
+      "id": "file-006-1_file-006-2_move",
+      "source_id": "file-006-1_file-006-2_move",
+      "video_id": "file-006",
+      "type": "time",
+      "Q": "When did the action \"move the yellow cube\" happen?",
+      "A": "00:00:21.550-00:00:24.100",
+      "question": "When did the action \"move the yellow cube\" happen?",
+      "answer": "00:00:21.550-00:00:24.100",
+      "answer_text": "00:00:21.550-00:00:24.100",
+      "answer_seconds": {
+        "start": 21.55,
+        "end": 24.1
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 21.55,
+        "end": 24.1,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-006.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-006.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-006.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-006-1_file-006-2_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-006_segments.json",
+          "start": 21.55,
+          "end": 24.1,
+          "start_time": "00:00:21.550",
+          "end_time": "00:00:24.100",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 21.55,
+        "original_end": 24.1,
+        "original_start_time": "00:00:21.550",
+        "original_end_time": "00:00:24.100",
+        "window_start": 21.55,
+        "window_end": 24.1,
+        "window_type": "raw_segment",
+        "start_frame": 431,
+        "end_frame": 481
+      }
+    },
+    {
+      "id": "file-006-2",
+      "source_id": "file-006-2",
+      "video_id": "file-006",
+      "type": "time",
+      "Q": "When did the action \"place the yellow cube\" happen?",
+      "A": "00:00:23.100-00:00:27.100",
+      "question": "When did the action \"place the yellow cube\" happen?",
+      "answer": "00:00:23.100-00:00:27.100",
+      "answer_text": "00:00:23.100-00:00:27.100",
+      "answer_seconds": {
+        "start": 23.1,
+        "end": 27.1
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 23.1,
+        "end": 27.1,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-006.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-006.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-006.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-006-2",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-006_segments.json",
+          "start": 23.1,
+          "end": 27.1,
+          "start_time": "00:00:23.100",
+          "end_time": "00:00:27.100",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 23.1,
+        "original_end": 27.1,
+        "original_start_time": "00:00:23.100",
+        "original_end_time": "00:00:27.100",
+        "window_start": 23.1,
+        "window_end": 27.1,
+        "window_type": "raw_segment",
+        "start_frame": 462,
+        "end_frame": 541
+      }
+    },
+    {
+      "id": "file-006-3",
+      "source_id": "file-006-3",
+      "video_id": "file-006",
+      "type": "time",
+      "Q": "When did the action \"pick the red cube\" happen?",
+      "A": "00:00:35.100-00:00:42.800",
+      "question": "When did the action \"pick the red cube\" happen?",
+      "answer": "00:00:35.100-00:00:42.800",
+      "answer_text": "00:00:35.100-00:00:42.800",
+      "answer_seconds": {
+        "start": 35.1,
+        "end": 42.8
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 35.1,
+        "end": 42.8,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-006.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-006.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-006.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-006-3",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-006_segments.json",
+          "start": 35.1,
+          "end": 42.8,
+          "start_time": "00:00:35.100",
+          "end_time": "00:00:42.800",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 35.1,
+        "original_end": 42.8,
+        "original_start_time": "00:00:35.100",
+        "original_end_time": "00:00:42.800",
+        "window_start": 35.1,
+        "window_end": 42.8,
+        "window_type": "raw_segment",
+        "start_frame": 702,
+        "end_frame": 855
+      }
+    },
+    {
+      "id": "file-006-3_file-006-4_move",
+      "source_id": "file-006-3_file-006-4_move",
+      "video_id": "file-006",
+      "type": "time",
+      "Q": "When did the action \"move the red cube\" happen?",
+      "A": "00:00:41.800-00:00:45.850",
+      "question": "When did the action \"move the red cube\" happen?",
+      "answer": "00:00:41.800-00:00:45.850",
+      "answer_text": "00:00:41.800-00:00:45.850",
+      "answer_seconds": {
+        "start": 41.8,
+        "end": 45.85
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 41.8,
+        "end": 45.85,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-006.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-006.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-006.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-006-3_file-006-4_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-006_segments.json",
+          "start": 41.8,
+          "end": 45.85,
+          "start_time": "00:00:41.800",
+          "end_time": "00:00:45.850",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 41.8,
+        "original_end": 45.85,
+        "original_start_time": "00:00:41.800",
+        "original_end_time": "00:00:45.850",
+        "window_start": 41.8,
+        "window_end": 45.85,
+        "window_type": "raw_segment",
+        "start_frame": 836,
+        "end_frame": 916
+      }
+    },
+    {
+      "id": "file-006-4",
+      "source_id": "file-006-4",
+      "video_id": "file-006",
+      "type": "time",
+      "Q": "When did the action \"place the red cube\" happen?",
+      "A": "00:00:44.850-00:00:48.850",
+      "question": "When did the action \"place the red cube\" happen?",
+      "answer": "00:00:44.850-00:00:48.850",
+      "answer_text": "00:00:44.850-00:00:48.850",
+      "answer_seconds": {
+        "start": 44.85,
+        "end": 48.85
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 44.85,
+        "end": 48.85,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-006.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-006.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-006.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-006-4",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-006_segments.json",
+          "start": 44.85,
+          "end": 48.85,
+          "start_time": "00:00:44.850",
+          "end_time": "00:00:48.850",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 44.85,
+        "original_end": 48.85,
+        "original_start_time": "00:00:44.850",
+        "original_end_time": "00:00:48.850",
+        "window_start": 44.85,
+        "window_end": 48.85,
+        "window_type": "raw_segment",
+        "start_frame": 897,
+        "end_frame": 976
+      }
+    },
+    {
+      "id": "file-007-1",
+      "source_id": "file-007-1",
+      "video_id": "file-007",
+      "type": "time",
+      "Q": "When did the action \"pick the yellow cube\" happen?",
+      "A": "00:00:10.000-00:00:21.100",
+      "question": "When did the action \"pick the yellow cube\" happen?",
+      "answer": "00:00:10.000-00:00:21.100",
+      "answer_text": "00:00:10.000-00:00:21.100",
+      "answer_seconds": {
+        "start": 10.0,
+        "end": 21.1
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 10.0,
+        "end": 21.1,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-007.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-007.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-007.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-007-1",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-007_segments.json",
+          "start": 10.0,
+          "end": 21.1,
+          "start_time": "00:00:10.000",
+          "end_time": "00:00:21.100",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 10.0,
+        "original_end": 21.1,
+        "original_start_time": "00:00:10.000",
+        "original_end_time": "00:00:21.100",
+        "window_start": 10.0,
+        "window_end": 21.1,
+        "window_type": "raw_segment",
+        "start_frame": 200,
+        "end_frame": 421
+      }
+    },
+    {
+      "id": "file-007-1_file-007-2_move",
+      "source_id": "file-007-1_file-007-2_move",
+      "video_id": "file-007",
+      "type": "time",
+      "Q": "When did the action \"move the yellow cube\" happen?",
+      "A": "00:00:20.100-00:00:23.050",
+      "question": "When did the action \"move the yellow cube\" happen?",
+      "answer": "00:00:20.100-00:00:23.050",
+      "answer_text": "00:00:20.100-00:00:23.050",
+      "answer_seconds": {
+        "start": 20.1,
+        "end": 23.05
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 20.1,
+        "end": 23.05,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-007.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-007.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-007.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-007-1_file-007-2_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-007_segments.json",
+          "start": 20.1,
+          "end": 23.05,
+          "start_time": "00:00:20.100",
+          "end_time": "00:00:23.050",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 20.1,
+        "original_end": 23.05,
+        "original_start_time": "00:00:20.100",
+        "original_end_time": "00:00:23.050",
+        "window_start": 20.1,
+        "window_end": 23.05,
+        "window_type": "raw_segment",
+        "start_frame": 402,
+        "end_frame": 460
+      }
+    },
+    {
+      "id": "file-007-2",
+      "source_id": "file-007-2",
+      "video_id": "file-007",
+      "type": "time",
+      "Q": "When did the action \"place the yellow cube\" happen?",
+      "A": "00:00:22.050-00:00:26.050",
+      "question": "When did the action \"place the yellow cube\" happen?",
+      "answer": "00:00:22.050-00:00:26.050",
+      "answer_text": "00:00:22.050-00:00:26.050",
+      "answer_seconds": {
+        "start": 22.05,
+        "end": 26.05
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 22.05,
+        "end": 26.05,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-007.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-007.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-007.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-007-2",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-007_segments.json",
+          "start": 22.05,
+          "end": 26.05,
+          "start_time": "00:00:22.050",
+          "end_time": "00:00:26.050",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 22.05,
+        "original_end": 26.05,
+        "original_start_time": "00:00:22.050",
+        "original_end_time": "00:00:26.050",
+        "window_start": 22.05,
+        "window_end": 26.05,
+        "window_type": "raw_segment",
+        "start_frame": 441,
+        "end_frame": 520
+      }
+    },
+    {
+      "id": "file-007-3",
+      "source_id": "file-007-3",
+      "video_id": "file-007",
+      "type": "time",
+      "Q": "When did the action \"pick the red cube\" happen?",
+      "A": "00:00:34.050-00:00:44.600",
+      "question": "When did the action \"pick the red cube\" happen?",
+      "answer": "00:00:34.050-00:00:44.600",
+      "answer_text": "00:00:34.050-00:00:44.600",
+      "answer_seconds": {
+        "start": 34.05,
+        "end": 44.6
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 34.05,
+        "end": 44.6,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-007.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-007.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-007.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-007-3",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-007_segments.json",
+          "start": 34.05,
+          "end": 44.6,
+          "start_time": "00:00:34.050",
+          "end_time": "00:00:44.600",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 34.05,
+        "original_end": 44.6,
+        "original_start_time": "00:00:34.050",
+        "original_end_time": "00:00:44.600",
+        "window_start": 34.05,
+        "window_end": 44.6,
+        "window_type": "raw_segment",
+        "start_frame": 681,
+        "end_frame": 891
+      }
+    },
+    {
+      "id": "file-007-3_file-007-4_move",
+      "source_id": "file-007-3_file-007-4_move",
+      "video_id": "file-007",
+      "type": "time",
+      "Q": "When did the action \"move the red cube\" happen?",
+      "A": "00:00:43.600-00:00:45.800",
+      "question": "When did the action \"move the red cube\" happen?",
+      "answer": "00:00:43.600-00:00:45.800",
+      "answer_text": "00:00:43.600-00:00:45.800",
+      "answer_seconds": {
+        "start": 43.6,
+        "end": 45.8
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 43.6,
+        "end": 45.8,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-007.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-007.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-007.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-007-3_file-007-4_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-007_segments.json",
+          "start": 43.6,
+          "end": 45.8,
+          "start_time": "00:00:43.600",
+          "end_time": "00:00:45.800",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 43.6,
+        "original_end": 45.8,
+        "original_start_time": "00:00:43.600",
+        "original_end_time": "00:00:45.800",
+        "window_start": 43.6,
+        "window_end": 45.8,
+        "window_type": "raw_segment",
+        "start_frame": 872,
+        "end_frame": 915
+      }
+    },
+    {
+      "id": "file-007-4",
+      "source_id": "file-007-4",
+      "video_id": "file-007",
+      "type": "time",
+      "Q": "When did the action \"place the red cube\" happen?",
+      "A": "00:00:44.800-00:00:48.800",
+      "question": "When did the action \"place the red cube\" happen?",
+      "answer": "00:00:44.800-00:00:48.800",
+      "answer_text": "00:00:44.800-00:00:48.800",
+      "answer_seconds": {
+        "start": 44.8,
+        "end": 48.8
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 44.8,
+        "end": 48.8,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-007.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-007.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-007.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-007-4",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-007_segments.json",
+          "start": 44.8,
+          "end": 48.8,
+          "start_time": "00:00:44.800",
+          "end_time": "00:00:48.800",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 44.8,
+        "original_end": 48.8,
+        "original_start_time": "00:00:44.800",
+        "original_end_time": "00:00:48.800",
+        "window_start": 44.8,
+        "window_end": 48.8,
+        "window_type": "raw_segment",
+        "start_frame": 896,
+        "end_frame": 975
+      }
+    },
+    {
+      "id": "file-008-1",
+      "source_id": "file-008-1",
+      "video_id": "file-008",
+      "type": "time",
+      "Q": "When did the action \"pick the red cube\" happen?",
+      "A": "00:00:10.000-00:00:21.700",
+      "question": "When did the action \"pick the red cube\" happen?",
+      "answer": "00:00:10.000-00:00:21.700",
+      "answer_text": "00:00:10.000-00:00:21.700",
+      "answer_seconds": {
+        "start": 10.0,
+        "end": 21.7
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 10.0,
+        "end": 21.7,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-008.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-008.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-008.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-008-1",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-008_segments.json",
+          "start": 10.0,
+          "end": 21.7,
+          "start_time": "00:00:10.000",
+          "end_time": "00:00:21.700",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 10.0,
+        "original_end": 21.7,
+        "original_start_time": "00:00:10.000",
+        "original_end_time": "00:00:21.700",
+        "window_start": 10.0,
+        "window_end": 21.7,
+        "window_type": "raw_segment",
+        "start_frame": 200,
+        "end_frame": 433
+      }
+    },
+    {
+      "id": "file-008-1_file-008-2_move",
+      "source_id": "file-008-1_file-008-2_move",
+      "video_id": "file-008",
+      "type": "time",
+      "Q": "When did the action \"move the red cube\" happen?",
+      "A": "00:00:20.700-00:00:22.650",
+      "question": "When did the action \"move the red cube\" happen?",
+      "answer": "00:00:20.700-00:00:22.650",
+      "answer_text": "00:00:20.700-00:00:22.650",
+      "answer_seconds": {
+        "start": 20.7,
+        "end": 22.65
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 20.7,
+        "end": 22.65,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-008.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-008.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-008.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-008-1_file-008-2_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-008_segments.json",
+          "start": 20.7,
+          "end": 22.65,
+          "start_time": "00:00:20.700",
+          "end_time": "00:00:22.650",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 20.7,
+        "original_end": 22.65,
+        "original_start_time": "00:00:20.700",
+        "original_end_time": "00:00:22.650",
+        "window_start": 20.7,
+        "window_end": 22.65,
+        "window_type": "raw_segment",
+        "start_frame": 414,
+        "end_frame": 452
+      }
+    },
+    {
+      "id": "file-008-2",
+      "source_id": "file-008-2",
+      "video_id": "file-008",
+      "type": "time",
+      "Q": "When did the action \"place the red cube\" happen?",
+      "A": "00:00:21.650-00:00:25.650",
+      "question": "When did the action \"place the red cube\" happen?",
+      "answer": "00:00:21.650-00:00:25.650",
+      "answer_text": "00:00:21.650-00:00:25.650",
+      "answer_seconds": {
+        "start": 21.65,
+        "end": 25.65
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 21.65,
+        "end": 25.65,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-008.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-008.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-008.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-008-2",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-008_segments.json",
+          "start": 21.65,
+          "end": 25.65,
+          "start_time": "00:00:21.650",
+          "end_time": "00:00:25.650",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 21.65,
+        "original_end": 25.65,
+        "original_start_time": "00:00:21.650",
+        "original_end_time": "00:00:25.650",
+        "window_start": 21.65,
+        "window_end": 25.65,
+        "window_type": "raw_segment",
+        "start_frame": 433,
+        "end_frame": 512
+      }
+    },
+    {
+      "id": "file-008-3",
+      "source_id": "file-008-3",
+      "video_id": "file-008",
+      "type": "time",
+      "Q": "When did the action \"pick the yellow cube\" happen?",
+      "A": "00:00:33.650-00:00:43.100",
+      "question": "When did the action \"pick the yellow cube\" happen?",
+      "answer": "00:00:33.650-00:00:43.100",
+      "answer_text": "00:00:33.650-00:00:43.100",
+      "answer_seconds": {
+        "start": 33.65,
+        "end": 43.1
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 33.65,
+        "end": 43.1,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-008.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-008.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-008.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-008-3",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-008_segments.json",
+          "start": 33.65,
+          "end": 43.1,
+          "start_time": "00:00:33.650",
+          "end_time": "00:00:43.100",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 33.65,
+        "original_end": 43.1,
+        "original_start_time": "00:00:33.650",
+        "original_end_time": "00:00:43.100",
+        "window_start": 33.65,
+        "window_end": 43.1,
+        "window_type": "raw_segment",
+        "start_frame": 673,
+        "end_frame": 861
+      }
+    },
+    {
+      "id": "file-008-3_file-008-4_move",
+      "source_id": "file-008-3_file-008-4_move",
+      "video_id": "file-008",
+      "type": "time",
+      "Q": "When did the action \"move the yellow cube\" happen?",
+      "A": "00:00:42.100-00:00:44.600",
+      "question": "When did the action \"move the yellow cube\" happen?",
+      "answer": "00:00:42.100-00:00:44.600",
+      "answer_text": "00:00:42.100-00:00:44.600",
+      "answer_seconds": {
+        "start": 42.1,
+        "end": 44.6
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 42.1,
+        "end": 44.6,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-008.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-008.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-008.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-008-3_file-008-4_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-008_segments.json",
+          "start": 42.1,
+          "end": 44.6,
+          "start_time": "00:00:42.100",
+          "end_time": "00:00:44.600",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 42.1,
+        "original_end": 44.6,
+        "original_start_time": "00:00:42.100",
+        "original_end_time": "00:00:44.600",
+        "window_start": 42.1,
+        "window_end": 44.6,
+        "window_type": "raw_segment",
+        "start_frame": 842,
+        "end_frame": 891
+      }
+    },
+    {
+      "id": "file-008-4",
+      "source_id": "file-008-4",
+      "video_id": "file-008",
+      "type": "time",
+      "Q": "When did the action \"place the yellow cube\" happen?",
+      "A": "00:00:43.600-00:00:47.600",
+      "question": "When did the action \"place the yellow cube\" happen?",
+      "answer": "00:00:43.600-00:00:47.600",
+      "answer_text": "00:00:43.600-00:00:47.600",
+      "answer_seconds": {
+        "start": 43.6,
+        "end": 47.6
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 43.6,
+        "end": 47.6,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-008.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-008.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-008.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-008-4",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-008_segments.json",
+          "start": 43.6,
+          "end": 47.6,
+          "start_time": "00:00:43.600",
+          "end_time": "00:00:47.600",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 43.6,
+        "original_end": 47.6,
+        "original_start_time": "00:00:43.600",
+        "original_end_time": "00:00:47.600",
+        "window_start": 43.6,
+        "window_end": 47.6,
+        "window_type": "raw_segment",
+        "start_frame": 872,
+        "end_frame": 951
+      }
+    },
+    {
+      "id": "file-009-1",
+      "source_id": "file-009-1",
+      "video_id": "file-009",
+      "type": "time",
+      "Q": "When did the action \"pick the yellow cube\" happen?",
+      "A": "00:00:10.000-00:00:23.950",
+      "question": "When did the action \"pick the yellow cube\" happen?",
+      "answer": "00:00:10.000-00:00:23.950",
+      "answer_text": "00:00:10.000-00:00:23.950",
+      "answer_seconds": {
+        "start": 10.0,
+        "end": 23.95
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 10.0,
+        "end": 23.95,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-009.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-009.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-009.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-009-1",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-009_segments.json",
+          "start": 10.0,
+          "end": 23.95,
+          "start_time": "00:00:10.000",
+          "end_time": "00:00:23.950",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 10.0,
+        "original_end": 23.95,
+        "original_start_time": "00:00:10.000",
+        "original_end_time": "00:00:23.950",
+        "window_start": 10.0,
+        "window_end": 23.95,
+        "window_type": "raw_segment",
+        "start_frame": 200,
+        "end_frame": 478
+      }
+    },
+    {
+      "id": "file-009-1_file-009-2_move",
+      "source_id": "file-009-1_file-009-2_move",
+      "video_id": "file-009",
+      "type": "time",
+      "Q": "When did the action \"move the yellow cube\" happen?",
+      "A": "00:00:22.950-00:00:25.300",
+      "question": "When did the action \"move the yellow cube\" happen?",
+      "answer": "00:00:22.950-00:00:25.300",
+      "answer_text": "00:00:22.950-00:00:25.300",
+      "answer_seconds": {
+        "start": 22.95,
+        "end": 25.3
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 22.95,
+        "end": 25.3,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-009.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-009.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-009.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-009-1_file-009-2_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-009_segments.json",
+          "start": 22.95,
+          "end": 25.3,
+          "start_time": "00:00:22.950",
+          "end_time": "00:00:25.300",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 22.95,
+        "original_end": 25.3,
+        "original_start_time": "00:00:22.950",
+        "original_end_time": "00:00:25.300",
+        "window_start": 22.95,
+        "window_end": 25.3,
+        "window_type": "raw_segment",
+        "start_frame": 459,
+        "end_frame": 505
+      }
+    },
+    {
+      "id": "file-009-2",
+      "source_id": "file-009-2",
+      "video_id": "file-009",
+      "type": "time",
+      "Q": "When did the action \"place the yellow cube\" happen?",
+      "A": "00:00:24.300-00:00:28.300",
+      "question": "When did the action \"place the yellow cube\" happen?",
+      "answer": "00:00:24.300-00:00:28.300",
+      "answer_text": "00:00:24.300-00:00:28.300",
+      "answer_seconds": {
+        "start": 24.3,
+        "end": 28.3
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "input": {
+        "start": 24.3,
+        "end": 28.3,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-009.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-009.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-009.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-009-2",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-009_segments.json",
+          "start": 24.3,
+          "end": 28.3,
+          "start_time": "00:00:24.300",
+          "end_time": "00:00:28.300",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the yellow cube.",
+        "objects": [
+          "yellow cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 24.3,
+        "original_end": 28.3,
+        "original_start_time": "00:00:24.300",
+        "original_end_time": "00:00:28.300",
+        "window_start": 24.3,
+        "window_end": 28.3,
+        "window_type": "raw_segment",
+        "start_frame": 486,
+        "end_frame": 565
+      }
+    },
+    {
+      "id": "file-009-3",
+      "source_id": "file-009-3",
+      "video_id": "file-009",
+      "type": "time",
+      "Q": "When did the action \"pick the red cube\" happen?",
+      "A": "00:00:36.300-00:00:48.850",
+      "question": "When did the action \"pick the red cube\" happen?",
+      "answer": "00:00:36.300-00:00:48.850",
+      "answer_text": "00:00:36.300-00:00:48.850",
+      "answer_seconds": {
+        "start": 36.3,
+        "end": 48.85
+      },
+      "answer_action": "pick",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 36.3,
+        "end": 48.85,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-009.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-009.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-009.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-009-3",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-009_segments.json",
+          "start": 36.3,
+          "end": 48.85,
+          "start_time": "00:00:36.300",
+          "end_time": "00:00:48.850",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Pick the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "pick"
+        ],
+        "original_start": 36.3,
+        "original_end": 48.85,
+        "original_start_time": "00:00:36.300",
+        "original_end_time": "00:00:48.850",
+        "window_start": 36.3,
+        "window_end": 48.85,
+        "window_type": "raw_segment",
+        "start_frame": 726,
+        "end_frame": 976
+      }
+    },
+    {
+      "id": "file-009-3_file-009-4_move",
+      "source_id": "file-009-3_file-009-4_move",
+      "video_id": "file-009",
+      "type": "time",
+      "Q": "When did the action \"move the red cube\" happen?",
+      "A": "00:00:47.850-00:00:50.450",
+      "question": "When did the action \"move the red cube\" happen?",
+      "answer": "00:00:47.850-00:00:50.450",
+      "answer_text": "00:00:47.850-00:00:50.450",
+      "answer_seconds": {
+        "start": 47.85,
+        "end": 50.45
+      },
+      "answer_action": "move",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 47.85,
+        "end": 50.45,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-009.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-009.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-009.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-009-3_file-009-4_move",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-009_segments.json",
+          "start": 47.85,
+          "end": 50.45,
+          "start_time": "00:00:47.850",
+          "end_time": "00:00:50.450",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Move the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "move"
+        ],
+        "original_start": 47.85,
+        "original_end": 50.45,
+        "original_start_time": "00:00:47.850",
+        "original_end_time": "00:00:50.450",
+        "window_start": 47.85,
+        "window_end": 50.45,
+        "window_type": "raw_segment",
+        "start_frame": 957,
+        "end_frame": 1008
+      }
+    },
+    {
+      "id": "file-009-4",
+      "source_id": "file-009-4",
+      "video_id": "file-009",
+      "type": "time",
+      "Q": "When did the action \"place the red cube\" happen?",
+      "A": "00:00:49.450-00:00:53.450",
+      "question": "When did the action \"place the red cube\" happen?",
+      "answer": "00:00:49.450-00:00:53.450",
+      "answer_text": "00:00:49.450-00:00:53.450",
+      "answer_seconds": {
+        "start": 49.45,
+        "end": 53.45
+      },
+      "answer_action": "place",
+      "answer_objects": [
+        "red cube"
+      ],
+      "input": {
+        "start": 49.45,
+        "end": 53.45,
+        "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-009.mp4",
+        "video_paths": [
+          "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-009.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4"
+        },
+        "view_order": [
+          "left_eye"
+        ],
+        "time_view": "left_eye",
+        "videos": {
+          "left_eye": {
+            "view": "left_eye",
+            "video_path": "/home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/time_video_crop_top/left_eye/file-009.mp4",
+            "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4",
+            "crop_top_applied": true,
+            "crop_top_fraction": 0.1
+          }
+        },
+        "original_video_paths": [
+          "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4"
+        ],
+        "crop_top_applied": true,
+        "crop_top_fraction": 0.1
+      },
+      "evidence": [
+        {
+          "segment_id": "file-009-4",
+          "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-009_segments.json",
+          "start": 49.45,
+          "end": 53.45,
+          "start_time": "00:00:49.450",
+          "end_time": "00:00:53.450",
+          "window_type": "raw_segment"
+        }
+      ],
+      "metadata": {
+        "narration": " Place the red cube.",
+        "objects": [
+          "red cube"
+        ],
+        "main_verbs": [
+          "place"
+        ],
+        "original_start": 49.45,
+        "original_end": 53.45,
+        "original_start_time": "00:00:49.450",
+        "original_end_time": "00:00:53.450",
+        "window_start": 49.45,
+        "window_end": 53.45,
+        "window_type": "raw_segment",
+        "start_frame": 989,
+        "end_frame": 1068
+      }
+    }
+  ]
+}

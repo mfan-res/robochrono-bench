@@ -1,0 +1,52 @@
+Input items: 10
+Existing results: 0
+Pending: 10
+Provider: local_sensenova_si_1_1_internvl3_2b
+Model: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/models/SenseNova-SI-1_1-InternVL3-2B
+API URL: 
+[1/10] file-000-1_trajectory_3d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] pick the red cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key **3D** trajectory points (in meters) needed to complete this task from the main viewpoint (left_eye) onward.
+Loading local InternVL model: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/models/SenseNova-SI-1_1-InternVL3-2B
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+FlashAttention2 is not installed.
+  H=0.701061 F=0.701061 C=1.168312 score=0.130419 mean_H=0.701061
+[2/10] file-000-1_file-000-2_move_trajectory_3d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] move the red cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key **3D** trajectory points (in meters) needed to complete this task from the main viewpoint (left_eye) onward.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  H=0.251336 F=0.251336 C=0.34129 score=0.533565 mean_H=0.476199
+[3/10] file-000-2_trajectory_3d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] place the red cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key **3D** trajectory points (in meters) needed to complete this task from the main viewpoint (left_eye) onward.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  H=0.640686 F=0.640686 C=1.179825 score=0.137497 mean_H=0.531028
+[4/10] file-000-3_trajectory_3d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] pick the yellow cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key **3D** trajectory points (in meters) needed to complete this task from the main viewpoint (left_eye) onward.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  H=0.710788 F=0.710788 C=1.316084 score=0.101728 mean_H=0.575968
+[5/10] file-000-3_file-000-4_move_trajectory_3d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] move the yellow cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key **3D** trajectory points (in meters) needed to complete this task from the main viewpoint (left_eye) onward.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  H=0.717046 F=0.717046 C=1.107366 score=0.156944 mean_H=0.604183
+[6/10] file-000-4_trajectory_3d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] place the yellow cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key **3D** trajectory points (in meters) needed to complete this task from the main viewpoint (left_eye) onward.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  H=0.582182 F=0.582182 C=1.09348 score=0.146633 mean_H=0.600517
+[7/10] file-001-1_trajectory_3d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] pick the yellow cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key **3D** trajectory points (in meters) needed to complete this task from the main viewpoint (left_eye) onward.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  H=0.697791 F=0.697791 C=1.147737 score=0.170554 mean_H=0.614413
+[8/10] file-001-1_file-001-2_move_trajectory_3d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] move the yellow cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key **3D** trajectory points (in meters) needed to complete this task from the main viewpoint (left_eye) onward.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  H=0.562028 F=0.562028 C=0.95244 score=0.099006 mean_H=0.607865
+[9/10] file-001-2_trajectory_3d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] place the yellow cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key **3D** trajectory points (in meters) needed to complete this task from the main viewpoint (left_eye) onward.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  H=0.675619 F=0.675619 C=1.214652 score=0.088052 mean_H=0.615393
+[10/10] file-001-3_trajectory_3d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] pick the red cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key **3D** trajectory points (in meters) needed to complete this task from the main viewpoint (left_eye) onward.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  H=0.721798 F=0.721798 C=1.126329 score=0.232676 mean_H=0.626033
+{
+  "total": 10,
+  "answered": 10,
+  "errors": 0,
+  "mean_hausdorff": 0.626033,
+  "mean_discrete_frechet": 0.626033,
+  "mean_chamfer": 1.064752,
+  "mean_hausdorff_score": 0.224124,
+  "mean_discrete_frechet_score": 0.224124,
+  "mean_chamfer_score": 0.090875,
+  "mean_score": 0.179707,
+  "elapsed_seconds": 62.793
+}
+Output: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/results/baseline/trajectory_3D.json

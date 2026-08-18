@@ -1,0 +1,33 @@
+# Group A —— transformers 4.57.6
+#
+# 实测覆盖 8 个本地模型：InternVL ×3、Qwen3-VL ×3、RynnBrain-2B、Cosmos-Reason2。
+# 版本是实测出来的，不是抄的：
+#   4.51.3  ❌ 冻结代码用 dtype= 参数，4.56 才支持
+#   4.56.2  ✅ 但 rope 会告警（已验证无害，theta 取值正确）
+#   4.57.6  ✅ 当前选定
+#   5.x     ❌ InternVL 报 all_tied_weights_keys
+#
+# python 3.11。torch 2.6.0 在 PyPI 上的 linux 轮子默认是 cu124。
+
+torch==2.6.0
+torchvision==0.21.0
+transformers==4.57.6
+tokenizers==0.22.2
+accelerate==1.6.0
+safetensors==0.8.0
+huggingface_hub==0.36.2
+
+# 视觉/视频预处理
+qwen-vl-utils==0.0.14
+decord==0.6.0
+av==18.1.0
+opencv-python-headless==4.11.0.86
+pillow==11.1.0
+timm==1.0.15
+einops==0.8.1
+sentencepiece==0.2.0
+
+# numpy 锁在 1.x —— decord 0.6.0 与 numpy 2.x 不兼容
+numpy==1.26.4
+
+requests==2.32.3

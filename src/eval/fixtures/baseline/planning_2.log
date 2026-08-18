@@ -1,0 +1,148 @@
+Input items: 10
+Existing results: 0
+Pending: 10
+Provider: local_sensenova_si_1_1_internvl3_2b
+Model: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/models/SenseNova-SI-1_1-InternVL3-2B
+API URL: 
+[1/10] file-000-1_plan2_start images=1 The overall task is stack all cubes. Based on the current visual state, what should happen next?
+Options:
+A. move the red cube
+B. place the red cube
+C. open the red cube
+D. pick the red cube
+E. remove the red cube
+F. All other options are wrong.
+Loading local InternVL model: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/models/SenseNova-SI-1_1-InternVL3-2B
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+FlashAttention2 is not installed.
+  correct=True choice=D expected=D acc=1.0000
+[2/10] file-000-1_file-000-2_move_plan2_start images=1 The overall task is stack all cubes. Based on the current visual state, what should happen next?
+Options:
+A. place the red cube
+B. pick the red cube
+C. close the red cube
+D. All other options are wrong.
+E. remove the red cube
+F. move the red cube
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=B expected=F acc=0.5000
+[3/10] file-000-2_plan2_start images=1 The overall task is stack all cubes. Based on the current visual state, what should happen next?
+Options:
+A. move the red cube
+B. All other options are wrong.
+C. close the red cube
+D. place the yellow cube
+E. pick the yellow cube
+F. place the red cube
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=A expected=F acc=0.3333
+[4/10] file-000-3_plan2_start images=1 The overall task is stack all cubes. Based on the current visual state, what should happen next?
+Options:
+A. open the yellow cube
+B. All other options are wrong.
+C. move the yellow cube
+D. put the yellow cube
+E. place the red cube
+F. pick the yellow cube
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=A expected=F acc=0.2500
+[5/10] file-000-3_file-000-4_move_plan2_start images=1 The overall task is stack all cubes. Based on the current visual state, what should happen next?
+Options:
+A. move the object
+B. move the yellow cube
+C. place the yellow cube
+D. put the yellow cube
+E. All other options are wrong.
+F. pick the yellow cube
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=C expected=B acc=0.2000
+[6/10] file-000-4_plan2_start images=1 The overall task is stack all cubes. Based on the current visual state, what should happen next?
+Options:
+A. place the red cube
+B. put the yellow cube
+C. place the yellow cube
+D. All other options are wrong.
+E. pick the yellow cube
+F. move the yellow cube
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=A expected=C acc=0.1667
+[7/10] file-001-1_plan2_start images=1 The overall task is stack all cubes. Based on the current visual state, what should happen next?
+Options:
+A. close the yellow cube
+B. All other options are wrong.
+C. pick the object
+D. move the yellow cube
+E. place the yellow cube
+F. pick the yellow cube
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=A expected=F acc=0.1429
+[8/10] file-001-1_file-001-2_move_plan2_start images=1 The overall task is stack all cubes. Based on the current visual state, what should happen next?
+Options:
+A. remove the yellow cube
+B. place the yellow cube
+C. put the yellow cube
+D. All other options are wrong.
+E. pick the yellow cube
+F. move the yellow cube
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=B expected=F acc=0.1250
+[9/10] file-001-2_plan2_start images=1 The overall task is stack all cubes. Based on the current visual state, what should happen next?
+Options:
+A. move the yellow cube
+B. pick the red cube
+C. place the yellow cube
+D. pick the yellow cube
+E. All other options are wrong.
+F. place the red cube
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=B expected=C acc=0.1111
+[10/10] file-001-3_plan2_start images=1 The overall task is stack all cubes. Based on the current visual state, what should happen next?
+Options:
+A. place the red cube
+B. move the red cube
+C. pick the red cube
+D. place the yellow cube
+E. put the red cube
+F. All other options are wrong.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=D expected=C acc=0.1000
+{
+  "total": 10,
+  "answered": 10,
+  "errors": 0,
+  "accuracy": 0.1,
+  "elapsed_seconds": 34.345,
+  "by_action": {
+    "move": {
+      "total": 3,
+      "accuracy": 0.0
+    },
+    "pick": {
+      "total": 4,
+      "accuracy": 0.25
+    },
+    "place": {
+      "total": 3,
+      "accuracy": 0.0
+    }
+  },
+  "by_choice": {
+    "B": {
+      "total": 1,
+      "accuracy": 0.0
+    },
+    "C": {
+      "total": 3,
+      "accuracy": 0.0
+    },
+    "D": {
+      "total": 1,
+      "accuracy": 1.0
+    },
+    "F": {
+      "total": 5,
+      "accuracy": 0.0
+    }
+  }
+}
+Output: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/results/baseline/planning_2.json

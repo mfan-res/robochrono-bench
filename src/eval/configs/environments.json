@@ -1,0 +1,38 @@
+{
+  "_note": [
+    "模型 → python 环境的映射。",
+    "",
+    "为什么需要这个：15 个模型没有一个 transformers 版本能全覆盖。实测：",
+    "  InternVL 系   4.57.6 ✅   5.15.0 ❌ 'InternVLChatModel' object has no attribute 'all_tied_weights_keys'",
+    "  Cosmos3-Edge  4.57.6 ❌ 架构 cosmos3_edge 未注册   5.15.0 ✅ 构造成功 2.44B 参数",
+    "这两条互斥，所以至少两套环境。不是偏好问题。",
+    "",
+    "分派粒度是「模型」而不是「进程内」：矩阵本来就是 model-major 调度，",
+    "一个模型跑完再换下一个，所以直接用对应解释器起一个子进程最简单，",
+    "也顺带把崩溃隔离开。不用 multiprocessing.set_executable —— 跨 python 版本",
+    "spawn 很脆。",
+    "",
+    "python 字段留空表示用当前解释器。tools/setup_envs.sh 会把它们填成 uv 建的 venv。"
+  ],
+  "envs": {
+    "groupA": {
+      "python": ".venvs/groupA/bin/python",
+      "requirements": "envs/groupA.txt",
+      "note": "transformers 4.57.6。实测覆盖 8 个本地模型。"
+    },
+    "groupB": {
+      "python": ".venvs/groupB/bin/python",
+      "requirements": "envs/groupB.txt",
+      "note": "transformers 5.15.0。给 4.57.6 加载不了的新架构用。"
+    }
+  },
+  "default_env": "groupA",
+  "models": {
+    "SenseNova-SI-1.1-InternVL3-2B": "groupA",
+    "RynnBrain-2B": "groupA",
+    "Qwen3-VL-8B-Instruct": "groupA",
+    "Cosmos3-Edge-2B": "groupB",
+    "RynnBrain1.1-2B": "groupB",
+    "qwen3.8-max": "groupA"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "_note": [
+    "评测用 provider 配置。相对 test/config_test.json 的改动：",
+    "  BC-07  SenseNova 更名为 SenseNova-SI-1.1-InternVL3-2B。",
+    "         原名 `...InternVL32B` 少了个连字符，读起来像 32B，",
+    "         实际是 InternVL3 架构的 2B（HF: sensenova/SenseNova-SI-1.1-InternVL3-2B，",
+    "         权重 4.18 GB）。照原名会找不到权重，或按 32B 白占 64 GB 显存。",
+    "  BC-09  抽帧改用互斥的 `frames` 声明，不再是 video_sample_fps 与",
+    "         num_segments 并存、后者被静默架空。",
+    "  BC-01  unify_generation 打开后统一 temperature=0 / thinking=disabled /",
+    "         max_new_tokens=1024。默认关闭 —— 关闭时与冻结脚本逐字节一致。",
+    "",
+    "注意：frames 的取值尚未定案，见 eval/docs/frame_sampling_investigation.md。",
+    "下面 mode: uniform / value: 8 只是为了让链路能跑，不是评测配置。",
+    "",
+    "  BC-11  max_request_bytes：远程端点的请求体上限。实测该 MaaS 端点",
+    "         base64 10.32 MB 通过、10.99 MB 返回 413，故取 10,000,000 保守值。",
+    "         超预算的视频会被降分辨率重编码，变换记录写进结果行。",
+    "         设为 0 或删掉该字段即完全不处理媒体。",
+    "",
+    "  attn_implementation: sdpa —— InternVL 代码把 LLM 注意力写死为",
+    "         flash_attention_2 或 eager，而 eager 会把 num_heads×seq² 的注意力",
+    "         矩阵物化成 fp32，是 Time EQA OOM 的根因。sdpa 同样不物化该矩阵，",
+    "         且 PyTorch 自带无需编译。实测 32 帧 12.55G→6.31G，160 帧可跑，",
+    "         12 道真实题目输出与 eager 逐字节相同。"
+  ],
+  "unify_generation": false,
+  "strict_frames": false,
+  "defaults": {
+    "temperature": 0.0,
+    "thinking": "disabled",
+    "timeout": 300,
+    "max_retries": 3
+  },
+  "providers": {
+    "local_sensenova_si_1_1_internvl3_2b": {
+      "type": "local_internvl",
+      "model": "models/SenseNova-SI-1_1-InternVL3-2B",
+      "model_env": "SENSENOVA_SI_1_1_INTERNVL3_2B_MODEL_PATH",
+      "temperature": 0.0,
+      "max_new_tokens": 1024,
+      "frames": {
+        "mode": "uniform",
+        "value": 8
+      },
+      "max_image_tiles": 4,
+      "max_video_tiles": 1,
+      "use_flash_attn": false,
+      "device_map": {
+        "": 0
+      },
+      "system_prompt": "You are a strict JSON API. Return only one JSON object. Do not include markdown or analysis outside JSON.",
+      "attn_implementation": "sdpa"
+    },
+    "qwen": {
+      "type": "openai_compatible",
+      "api_url": "https://ws-fukhj6yqastdqupw.cn-beijing.maas.aliyuncs.com/compatible-mode/v1/chat/completions",
+      "api_key_env": "DASHSCOPE_API_KEY",
+      "model": "qwen3.8-max",
+      "media_url_format": "data_url",
+      "api_url_env": "DASHSCOPE_API_URL",
+      "max_request_bytes": 10000000,
+      "media_cache_dir": "results/.media_cache",
+      "concurrency": 8,
+      "rate_limit": 0.0,
+      "min_video_seconds": 2.0
+    },
+    "replay": {
+      "type": "replay",
+      "model": "replay",
+      "require_api_key": false
+    },
+    "local_rynnbrain_2b": {
+      "type": "local_transformers_vlm",
+      "model": "models/RynnBrain-2B",
+      "model_env": "RYNNBRAIN_2B_MODEL_PATH",
+      "temperature": 0.0,
+      "max_new_tokens": 1024,
+      "device_map": {
+        "": 0
+      },
+      "system_prompt": "You are a strict JSON API. Return only one JSON object. Do not include markdown or analysis outside JSON."
+    },
+    "local_cosmos3_edge_2b": {
+      "type": "local_cosmos_transformers",
+      "model": "models/Cosmos3-Edge",
+      "model_env": "COSMOS3_EDGE_MODEL_PATH",
+      "timeout": 1800,
+      "temperature": 0.0,
+      "max_new_tokens": 1024,
+      "device_map": {
+        "": 0
+      },
+      "system_prompt": "You are a strict JSON API. Return only one JSON object. Do not include markdown or analysis outside JSON."
+    },
+    "local_qwen": {
+      "type": "local_qwen",
+      "model": "models/Qwen3-VL-8B-Instruct",
+      "model_env": "QWEN3_VL_MODEL_PATH",
+      "temperature": 0.0,
+      "max_new_tokens": 1024,
+      "device_map": {
+        "": 0
+      },
+      "system_prompt": "You are a strict JSON API. Return only one JSON object. Do not include markdown or analysis outside JSON."
+    }
+  }
+}

@@ -1,0 +1,2439 @@
+{
+  "input": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa.json",
+  "provider": "local_sensenova_si_1_1_internvl3_2b",
+  "model": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/models/SenseNova-SI-1_1-InternVL3-2B",
+  "api_url": "",
+  "prompt_note": "Each result item contains the exact prompt sent to the model in the `prompt` field.",
+  "results": [
+    {
+      "id": "file-000-1_left_gripper_view",
+      "source_id": "file-000-1",
+      "video_id": "file-000",
+      "type": "left_right_gripper_view",
+      "target_side": "left",
+      "timestamp": 18.85,
+      "timestamp_key": "mid",
+      "input": {
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-1_18.850s_left_eye_question_head.jpg",
+        "head_image": {
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-1_18.850s_left_eye_question_head.jpg",
+          "view": "left_eye",
+          "role": "question_head",
+          "source_item_id": "file-000-1",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+          "timestamp": 18.85,
+          "actual_timestamp": 18.85,
+          "frame_index": 377
+        }
+      },
+      "Q": "Given the image captured by the head camera, which option shows the left gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-1_18.850s_right_wrist_symmetric_distractor.jpg>\nB. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-025/file-025_file-025-3_38.400s_left_wrist_scene_distractor_1.jpg>\nC. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-021/file-021_file-021-1_16.000s_right_wrist_scene_distractor_2.jpg>\nD. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-1_18.850s_left_wrist_correct.jpg>\nE. All other options are wrong.\nF. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-4_64.950s_left_wrist_temporal_distractor_1.jpg>",
+      "A": "D",
+      "question": "Given the image captured by the head camera, which option shows the left gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-1_18.850s_right_wrist_symmetric_distractor.jpg>\nB. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-025/file-025_file-025-3_38.400s_left_wrist_scene_distractor_1.jpg>\nC. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-021/file-021_file-021-1_16.000s_right_wrist_scene_distractor_2.jpg>\nD. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-1_18.850s_left_wrist_correct.jpg>\nE. All other options are wrong.\nF. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-4_64.950s_left_wrist_temporal_distractor_1.jpg>",
+      "answer": "D",
+      "answer_text": "left gripper camera view",
+      "options": [
+        {
+          "id": "A",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-1_18.850s_right_wrist_symmetric_distractor.jpg",
+          "view": "right_wrist",
+          "role": "symmetric_distractor",
+          "source_item_id": "file-000-1",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+          "timestamp": 18.85,
+          "actual_timestamp": 18.85,
+          "frame_index": 377,
+          "is_correct": false,
+          "distractor_type": "symmetric",
+          "target_opposite_side": "right"
+        },
+        {
+          "id": "B",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-025/file-025_file-025-3_38.400s_left_wrist_scene_distractor_1.jpg",
+          "view": "left_wrist",
+          "role": "scene_distractor_1",
+          "source_item_id": "file-025-3",
+          "source_video_id": "file-025",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-025.mp4",
+          "timestamp": 38.4,
+          "actual_timestamp": 38.4,
+          "frame_index": 768,
+          "is_correct": false,
+          "distractor_type": "scene"
+        },
+        {
+          "id": "C",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-021/file-021_file-021-1_16.000s_right_wrist_scene_distractor_2.jpg",
+          "view": "right_wrist",
+          "role": "scene_distractor_2",
+          "source_item_id": "file-021-1",
+          "source_video_id": "file-021",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-021.mp4",
+          "timestamp": 16.0,
+          "actual_timestamp": 16.0,
+          "frame_index": 320,
+          "is_correct": false,
+          "distractor_type": "scene"
+        },
+        {
+          "id": "D",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-1_18.850s_left_wrist_correct.jpg",
+          "view": "left_wrist",
+          "role": "correct",
+          "source_item_id": "file-000-1",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "timestamp": 18.85,
+          "actual_timestamp": 18.85,
+          "frame_index": 377,
+          "is_correct": true,
+          "distractor_type": null
+        },
+        {
+          "id": "E",
+          "is_none_option": true,
+          "type": "none",
+          "text": "All other options are wrong.",
+          "image_path": null,
+          "view": null,
+          "role": "none_option",
+          "source_item_id": null,
+          "source_video_id": null,
+          "is_correct": false,
+          "distractor_type": "none"
+        },
+        {
+          "id": "F",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-4_64.950s_left_wrist_temporal_distractor_1.jpg",
+          "view": "left_wrist",
+          "role": "temporal_distractor_1",
+          "source_item_id": "file-000-4",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "timestamp": 64.95,
+          "actual_timestamp": 64.95,
+          "frame_index": 1299,
+          "is_correct": false,
+          "distractor_type": "temporal"
+        }
+      ],
+      "correct_option": {
+        "id": "D",
+        "is_none_option": false,
+        "type": "image",
+        "text": null,
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-1_18.850s_left_wrist_correct.jpg",
+        "view": "left_wrist",
+        "role": "correct",
+        "source_item_id": "file-000-1",
+        "source_video_id": "file-000",
+        "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+        "timestamp": 18.85,
+        "actual_timestamp": 18.85,
+        "frame_index": 377,
+        "is_correct": true,
+        "distractor_type": null
+      },
+      "source_time_eqa": {
+        "id": "file-000-1",
+        "source_id": "file-000-1",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"pick the red cube\" happen?",
+        "A": "00:00:10.000-00:00:27.700",
+        "question": "When did the action \"pick the red cube\" happen?",
+        "answer": "00:00:10.000-00:00:27.700",
+        "answer_text": "00:00:10.000-00:00:27.700",
+        "answer_seconds": {
+          "start": 10.0,
+          "end": 27.7
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 10.0,
+          "end": 27.7,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-1",
+            "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-000_segments.json",
+            "start": 10.0,
+            "end": 27.7,
+            "start_time": "00:00:10.000",
+            "end_time": "00:00:27.700",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 10.0,
+          "original_end": 27.7,
+          "original_start_time": "00:00:10.000",
+          "original_end_time": "00:00:27.700",
+          "window_start": 10.0,
+          "window_end": 27.7,
+          "window_type": "raw_segment",
+          "start_frame": 200,
+          "end_frame": 553
+        }
+      },
+      "prompt": "You are answering a visual matching question for a robot manipulation episode.\n\nThe first image is from the head camera. The following labeled option images are candidate gripper-camera views at the same moment or distractors.\nChoose the single option letter that shows the requested gripper camera's view for the head-camera moment.\nIf none of the listed images match, choose the option labeled \"All other options are wrong.\"\n\nQuestion:\nGiven the image captured by the head camera, which option shows the left gripper camera's view at this moment?\n\nValid option letters: A, B, C, D, E, F\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"B\",\n  \"reason\": \"The candidate image shows the left gripper's view, with the red cube centered and the table's red markers visible, matching the head camera's perspective.\"\n}",
+      "model_prediction": {
+        "choice": "B",
+        "reason": "The candidate image shows the left gripper's view, with the red cube centered and the table's red markers visible, matching the head camera's perspective."
+      },
+      "expected_choice": "D",
+      "expected_answer_text": "left gripper camera view",
+      "expected_target_side": "left",
+      "pred_choice": "B",
+      "correct": false,
+      "timing": {
+        "seconds": 22.738
+      }
+    },
+    {
+      "id": "file-000-1_right_gripper_view",
+      "source_id": "file-000-1",
+      "video_id": "file-000",
+      "type": "left_right_gripper_view",
+      "target_side": "right",
+      "timestamp": 18.85,
+      "timestamp_key": "mid",
+      "input": {
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-1_18.850s_left_eye_question_head.jpg",
+        "head_image": {
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-1_18.850s_left_eye_question_head.jpg",
+          "view": "left_eye",
+          "role": "question_head",
+          "source_item_id": "file-000-1",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+          "timestamp": 18.85,
+          "actual_timestamp": 18.85,
+          "frame_index": 377
+        }
+      },
+      "Q": "Given the image captured by the head camera, which option shows the right gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-025/file-025_file-025-3_38.400s_left_wrist_scene_distractor_1.jpg>\nB. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-1_18.850s_left_wrist_symmetric_distractor.jpg>\nC. All other options are wrong.\nD. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-4_64.950s_right_wrist_temporal_distractor_1.jpg>\nE. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-021/file-021_file-021-1_16.000s_right_wrist_scene_distractor_2.jpg>\nF. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-1_18.850s_right_wrist_correct.jpg>",
+      "A": "F",
+      "question": "Given the image captured by the head camera, which option shows the right gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-025/file-025_file-025-3_38.400s_left_wrist_scene_distractor_1.jpg>\nB. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-1_18.850s_left_wrist_symmetric_distractor.jpg>\nC. All other options are wrong.\nD. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-4_64.950s_right_wrist_temporal_distractor_1.jpg>\nE. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-021/file-021_file-021-1_16.000s_right_wrist_scene_distractor_2.jpg>\nF. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-1_18.850s_right_wrist_correct.jpg>",
+      "answer": "F",
+      "answer_text": "right gripper camera view",
+      "options": [
+        {
+          "id": "A",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-025/file-025_file-025-3_38.400s_left_wrist_scene_distractor_1.jpg",
+          "view": "left_wrist",
+          "role": "scene_distractor_1",
+          "source_item_id": "file-025-3",
+          "source_video_id": "file-025",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-025.mp4",
+          "timestamp": 38.4,
+          "actual_timestamp": 38.4,
+          "frame_index": 768,
+          "is_correct": false,
+          "distractor_type": "scene"
+        },
+        {
+          "id": "B",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-1_18.850s_left_wrist_symmetric_distractor.jpg",
+          "view": "left_wrist",
+          "role": "symmetric_distractor",
+          "source_item_id": "file-000-1",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "timestamp": 18.85,
+          "actual_timestamp": 18.85,
+          "frame_index": 377,
+          "is_correct": false,
+          "distractor_type": "symmetric",
+          "target_opposite_side": "left"
+        },
+        {
+          "id": "C",
+          "is_none_option": true,
+          "type": "none",
+          "text": "All other options are wrong.",
+          "image_path": null,
+          "view": null,
+          "role": "none_option",
+          "source_item_id": null,
+          "source_video_id": null,
+          "is_correct": false,
+          "distractor_type": "none"
+        },
+        {
+          "id": "D",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-4_64.950s_right_wrist_temporal_distractor_1.jpg",
+          "view": "right_wrist",
+          "role": "temporal_distractor_1",
+          "source_item_id": "file-000-4",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+          "timestamp": 64.95,
+          "actual_timestamp": 64.95,
+          "frame_index": 1299,
+          "is_correct": false,
+          "distractor_type": "temporal"
+        },
+        {
+          "id": "E",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-021/file-021_file-021-1_16.000s_right_wrist_scene_distractor_2.jpg",
+          "view": "right_wrist",
+          "role": "scene_distractor_2",
+          "source_item_id": "file-021-1",
+          "source_video_id": "file-021",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-021.mp4",
+          "timestamp": 16.0,
+          "actual_timestamp": 16.0,
+          "frame_index": 320,
+          "is_correct": false,
+          "distractor_type": "scene"
+        },
+        {
+          "id": "F",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-1_18.850s_right_wrist_correct.jpg",
+          "view": "right_wrist",
+          "role": "correct",
+          "source_item_id": "file-000-1",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+          "timestamp": 18.85,
+          "actual_timestamp": 18.85,
+          "frame_index": 377,
+          "is_correct": true,
+          "distractor_type": null
+        }
+      ],
+      "correct_option": {
+        "id": "F",
+        "is_none_option": false,
+        "type": "image",
+        "text": null,
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-1_18.850s_right_wrist_correct.jpg",
+        "view": "right_wrist",
+        "role": "correct",
+        "source_item_id": "file-000-1",
+        "source_video_id": "file-000",
+        "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+        "timestamp": 18.85,
+        "actual_timestamp": 18.85,
+        "frame_index": 377,
+        "is_correct": true,
+        "distractor_type": null
+      },
+      "source_time_eqa": {
+        "id": "file-000-1",
+        "source_id": "file-000-1",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"pick the red cube\" happen?",
+        "A": "00:00:10.000-00:00:27.700",
+        "question": "When did the action \"pick the red cube\" happen?",
+        "answer": "00:00:10.000-00:00:27.700",
+        "answer_text": "00:00:10.000-00:00:27.700",
+        "answer_seconds": {
+          "start": 10.0,
+          "end": 27.7
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 10.0,
+          "end": 27.7,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-1",
+            "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-000_segments.json",
+            "start": 10.0,
+            "end": 27.7,
+            "start_time": "00:00:10.000",
+            "end_time": "00:00:27.700",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 10.0,
+          "original_end": 27.7,
+          "original_start_time": "00:00:10.000",
+          "original_end_time": "00:00:27.700",
+          "window_start": 10.0,
+          "window_end": 27.7,
+          "window_type": "raw_segment",
+          "start_frame": 200,
+          "end_frame": 553
+        }
+      },
+      "prompt": "You are answering a visual matching question for a robot manipulation episode.\n\nThe first image is from the head camera. The following labeled option images are candidate gripper-camera views at the same moment or distractors.\nChoose the single option letter that shows the requested gripper camera's view for the head-camera moment.\nIf none of the listed images match, choose the option labeled \"All other options are wrong.\"\n\nQuestion:\nGiven the image captured by the head camera, which option shows the right gripper camera's view at this moment?\n\nValid option letters: A, B, C, D, E, F\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"D\",\n  \"reason\": \"The candidate image (D) matches the head camera's viewpoint, showing the red cube centered and the table's red markers visible, consistent with the head camera's perspective.\"\n}",
+      "model_prediction": {
+        "choice": "D",
+        "reason": "The candidate image (D) matches the head camera's viewpoint, showing the red cube centered and the table's red markers visible, consistent with the head camera's perspective."
+      },
+      "expected_choice": "F",
+      "expected_answer_text": "right gripper camera view",
+      "expected_target_side": "right",
+      "pred_choice": "D",
+      "correct": false,
+      "timing": {
+        "seconds": 2.454
+      }
+    },
+    {
+      "id": "file-000-1_file-000-2_move_left_gripper_view",
+      "source_id": "file-000-1_file-000-2_move",
+      "video_id": "file-000",
+      "type": "left_right_gripper_view",
+      "target_side": "left",
+      "timestamp": 29.375,
+      "timestamp_key": "mid",
+      "input": {
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-1_file-000-2_move_29.375s_left_eye_question_head.jpg",
+        "head_image": {
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-1_file-000-2_move_29.375s_left_eye_question_head.jpg",
+          "view": "left_eye",
+          "role": "question_head",
+          "source_item_id": "file-000-1_file-000-2_move",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+          "timestamp": 29.375,
+          "actual_timestamp": 29.4,
+          "frame_index": 588
+        }
+      },
+      "Q": "Given the image captured by the head camera, which option shows the left gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-1_file-000-2_move_29.375s_right_wrist_symmetric_distractor.jpg>\nB. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-4_64.950s_left_wrist_temporal_distractor_1.jpg>\nC. All other options are wrong.\nD. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-036/file-036_file-036-4_51.550s_right_wrist_scene_distractor_2.jpg>\nE. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-1_file-000-2_move_29.375s_left_wrist_correct.jpg>\nF. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-020/file-020_file-020-3_36.975s_left_wrist_scene_distractor_1.jpg>",
+      "A": "E",
+      "question": "Given the image captured by the head camera, which option shows the left gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-1_file-000-2_move_29.375s_right_wrist_symmetric_distractor.jpg>\nB. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-4_64.950s_left_wrist_temporal_distractor_1.jpg>\nC. All other options are wrong.\nD. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-036/file-036_file-036-4_51.550s_right_wrist_scene_distractor_2.jpg>\nE. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-1_file-000-2_move_29.375s_left_wrist_correct.jpg>\nF. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-020/file-020_file-020-3_36.975s_left_wrist_scene_distractor_1.jpg>",
+      "answer": "E",
+      "answer_text": "left gripper camera view",
+      "options": [
+        {
+          "id": "A",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-1_file-000-2_move_29.375s_right_wrist_symmetric_distractor.jpg",
+          "view": "right_wrist",
+          "role": "symmetric_distractor",
+          "source_item_id": "file-000-1_file-000-2_move",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+          "timestamp": 29.375,
+          "actual_timestamp": 29.4,
+          "frame_index": 588,
+          "is_correct": false,
+          "distractor_type": "symmetric",
+          "target_opposite_side": "right"
+        },
+        {
+          "id": "B",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-4_64.950s_left_wrist_temporal_distractor_1.jpg",
+          "view": "left_wrist",
+          "role": "temporal_distractor_1",
+          "source_item_id": "file-000-4",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "timestamp": 64.95,
+          "actual_timestamp": 64.95,
+          "frame_index": 1299,
+          "is_correct": false,
+          "distractor_type": "temporal"
+        },
+        {
+          "id": "C",
+          "is_none_option": true,
+          "type": "none",
+          "text": "All other options are wrong.",
+          "image_path": null,
+          "view": null,
+          "role": "none_option",
+          "source_item_id": null,
+          "source_video_id": null,
+          "is_correct": false,
+          "distractor_type": "none"
+        },
+        {
+          "id": "D",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-036/file-036_file-036-4_51.550s_right_wrist_scene_distractor_2.jpg",
+          "view": "right_wrist",
+          "role": "scene_distractor_2",
+          "source_item_id": "file-036-4",
+          "source_video_id": "file-036",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-036.mp4",
+          "timestamp": 51.55,
+          "actual_timestamp": 51.55,
+          "frame_index": 1031,
+          "is_correct": false,
+          "distractor_type": "scene"
+        },
+        {
+          "id": "E",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-1_file-000-2_move_29.375s_left_wrist_correct.jpg",
+          "view": "left_wrist",
+          "role": "correct",
+          "source_item_id": "file-000-1_file-000-2_move",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "timestamp": 29.375,
+          "actual_timestamp": 29.4,
+          "frame_index": 588,
+          "is_correct": true,
+          "distractor_type": null
+        },
+        {
+          "id": "F",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-020/file-020_file-020-3_36.975s_left_wrist_scene_distractor_1.jpg",
+          "view": "left_wrist",
+          "role": "scene_distractor_1",
+          "source_item_id": "file-020-3",
+          "source_video_id": "file-020",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-020.mp4",
+          "timestamp": 36.974999999999994,
+          "actual_timestamp": 36.95,
+          "frame_index": 739,
+          "is_correct": false,
+          "distractor_type": "scene"
+        }
+      ],
+      "correct_option": {
+        "id": "E",
+        "is_none_option": false,
+        "type": "image",
+        "text": null,
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-1_file-000-2_move_29.375s_left_wrist_correct.jpg",
+        "view": "left_wrist",
+        "role": "correct",
+        "source_item_id": "file-000-1_file-000-2_move",
+        "source_video_id": "file-000",
+        "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+        "timestamp": 29.375,
+        "actual_timestamp": 29.4,
+        "frame_index": 588,
+        "is_correct": true,
+        "distractor_type": null
+      },
+      "source_time_eqa": {
+        "id": "file-000-1_file-000-2_move",
+        "source_id": "file-000-1_file-000-2_move",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"move the red cube\" happen?",
+        "A": "00:00:26.700-00:00:32.050",
+        "question": "When did the action \"move the red cube\" happen?",
+        "answer": "00:00:26.700-00:00:32.050",
+        "answer_text": "00:00:26.700-00:00:32.050",
+        "answer_seconds": {
+          "start": 26.7,
+          "end": 32.05
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 26.7,
+          "end": 32.05,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-1_file-000-2_move",
+            "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-000_segments.json",
+            "start": 26.7,
+            "end": 32.05,
+            "start_time": "00:00:26.700",
+            "end_time": "00:00:32.050",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 26.7,
+          "original_end": 32.05,
+          "original_start_time": "00:00:26.700",
+          "original_end_time": "00:00:32.050",
+          "window_start": 26.7,
+          "window_end": 32.05,
+          "window_type": "raw_segment",
+          "start_frame": 534,
+          "end_frame": 640
+        }
+      },
+      "prompt": "You are answering a visual matching question for a robot manipulation episode.\n\nThe first image is from the head camera. The following labeled option images are candidate gripper-camera views at the same moment or distractors.\nChoose the single option letter that shows the requested gripper camera's view for the head-camera moment.\nIf none of the listed images match, choose the option labeled \"All other options are wrong.\"\n\nQuestion:\nGiven the image captured by the head camera, which option shows the left gripper camera's view at this moment?\n\nValid option letters: A, B, C, D, E, F\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"A\",\n  \"reason\": \"The head camera shows the left gripper with the red cube in the foreground and the table surface with scattered markers and the robot's arm visible. This matches the perspective of the left gripper camera.\"\n}",
+      "model_prediction": {
+        "choice": "A",
+        "reason": "The head camera shows the left gripper with the red cube in the foreground and the table surface with scattered markers and the robot's arm visible. This matches the perspective of the left gripper camera."
+      },
+      "expected_choice": "E",
+      "expected_answer_text": "left gripper camera view",
+      "expected_target_side": "left",
+      "pred_choice": "A",
+      "correct": false,
+      "timing": {
+        "seconds": 2.701
+      }
+    },
+    {
+      "id": "file-000-1_file-000-2_move_right_gripper_view",
+      "source_id": "file-000-1_file-000-2_move",
+      "video_id": "file-000",
+      "type": "left_right_gripper_view",
+      "target_side": "right",
+      "timestamp": 29.375,
+      "timestamp_key": "mid",
+      "input": {
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-1_file-000-2_move_29.375s_left_eye_question_head.jpg",
+        "head_image": {
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-1_file-000-2_move_29.375s_left_eye_question_head.jpg",
+          "view": "left_eye",
+          "role": "question_head",
+          "source_item_id": "file-000-1_file-000-2_move",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+          "timestamp": 29.375,
+          "actual_timestamp": 29.4,
+          "frame_index": 588
+        }
+      },
+      "Q": "Given the image captured by the head camera, which option shows the right gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-4_64.950s_right_wrist_temporal_distractor_1.jpg>\nB. All other options are wrong.\nC. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-1_file-000-2_move_29.375s_left_wrist_symmetric_distractor.jpg>\nD. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-020/file-020_file-020-3_36.975s_left_wrist_scene_distractor_1.jpg>\nE. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-1_file-000-2_move_29.375s_right_wrist_correct.jpg>\nF. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-036/file-036_file-036-4_51.550s_right_wrist_scene_distractor_2.jpg>",
+      "A": "E",
+      "question": "Given the image captured by the head camera, which option shows the right gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-4_64.950s_right_wrist_temporal_distractor_1.jpg>\nB. All other options are wrong.\nC. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-1_file-000-2_move_29.375s_left_wrist_symmetric_distractor.jpg>\nD. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-020/file-020_file-020-3_36.975s_left_wrist_scene_distractor_1.jpg>\nE. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-1_file-000-2_move_29.375s_right_wrist_correct.jpg>\nF. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-036/file-036_file-036-4_51.550s_right_wrist_scene_distractor_2.jpg>",
+      "answer": "E",
+      "answer_text": "right gripper camera view",
+      "options": [
+        {
+          "id": "A",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-4_64.950s_right_wrist_temporal_distractor_1.jpg",
+          "view": "right_wrist",
+          "role": "temporal_distractor_1",
+          "source_item_id": "file-000-4",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+          "timestamp": 64.95,
+          "actual_timestamp": 64.95,
+          "frame_index": 1299,
+          "is_correct": false,
+          "distractor_type": "temporal"
+        },
+        {
+          "id": "B",
+          "is_none_option": true,
+          "type": "none",
+          "text": "All other options are wrong.",
+          "image_path": null,
+          "view": null,
+          "role": "none_option",
+          "source_item_id": null,
+          "source_video_id": null,
+          "is_correct": false,
+          "distractor_type": "none"
+        },
+        {
+          "id": "C",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-1_file-000-2_move_29.375s_left_wrist_symmetric_distractor.jpg",
+          "view": "left_wrist",
+          "role": "symmetric_distractor",
+          "source_item_id": "file-000-1_file-000-2_move",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "timestamp": 29.375,
+          "actual_timestamp": 29.4,
+          "frame_index": 588,
+          "is_correct": false,
+          "distractor_type": "symmetric",
+          "target_opposite_side": "left"
+        },
+        {
+          "id": "D",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-020/file-020_file-020-3_36.975s_left_wrist_scene_distractor_1.jpg",
+          "view": "left_wrist",
+          "role": "scene_distractor_1",
+          "source_item_id": "file-020-3",
+          "source_video_id": "file-020",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-020.mp4",
+          "timestamp": 36.974999999999994,
+          "actual_timestamp": 36.95,
+          "frame_index": 739,
+          "is_correct": false,
+          "distractor_type": "scene"
+        },
+        {
+          "id": "E",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-1_file-000-2_move_29.375s_right_wrist_correct.jpg",
+          "view": "right_wrist",
+          "role": "correct",
+          "source_item_id": "file-000-1_file-000-2_move",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+          "timestamp": 29.375,
+          "actual_timestamp": 29.4,
+          "frame_index": 588,
+          "is_correct": true,
+          "distractor_type": null
+        },
+        {
+          "id": "F",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-036/file-036_file-036-4_51.550s_right_wrist_scene_distractor_2.jpg",
+          "view": "right_wrist",
+          "role": "scene_distractor_2",
+          "source_item_id": "file-036-4",
+          "source_video_id": "file-036",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-036.mp4",
+          "timestamp": 51.55,
+          "actual_timestamp": 51.55,
+          "frame_index": 1031,
+          "is_correct": false,
+          "distractor_type": "scene"
+        }
+      ],
+      "correct_option": {
+        "id": "E",
+        "is_none_option": false,
+        "type": "image",
+        "text": null,
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-1_file-000-2_move_29.375s_right_wrist_correct.jpg",
+        "view": "right_wrist",
+        "role": "correct",
+        "source_item_id": "file-000-1_file-000-2_move",
+        "source_video_id": "file-000",
+        "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+        "timestamp": 29.375,
+        "actual_timestamp": 29.4,
+        "frame_index": 588,
+        "is_correct": true,
+        "distractor_type": null
+      },
+      "source_time_eqa": {
+        "id": "file-000-1_file-000-2_move",
+        "source_id": "file-000-1_file-000-2_move",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"move the red cube\" happen?",
+        "A": "00:00:26.700-00:00:32.050",
+        "question": "When did the action \"move the red cube\" happen?",
+        "answer": "00:00:26.700-00:00:32.050",
+        "answer_text": "00:00:26.700-00:00:32.050",
+        "answer_seconds": {
+          "start": 26.7,
+          "end": 32.05
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 26.7,
+          "end": 32.05,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-1_file-000-2_move",
+            "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-000_segments.json",
+            "start": 26.7,
+            "end": 32.05,
+            "start_time": "00:00:26.700",
+            "end_time": "00:00:32.050",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 26.7,
+          "original_end": 32.05,
+          "original_start_time": "00:00:26.700",
+          "original_end_time": "00:00:32.050",
+          "window_start": 26.7,
+          "window_end": 32.05,
+          "window_type": "raw_segment",
+          "start_frame": 534,
+          "end_frame": 640
+        }
+      },
+      "prompt": "You are answering a visual matching question for a robot manipulation episode.\n\nThe first image is from the head camera. The following labeled option images are candidate gripper-camera views at the same moment or distractors.\nChoose the single option letter that shows the requested gripper camera's view for the head-camera moment.\nIf none of the listed images match, choose the option labeled \"All other options are wrong.\"\n\nQuestion:\nGiven the image captured by the head camera, which option shows the right gripper camera's view at this moment?\n\nValid option letters: A, B, C, D, E, F\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"D\",\n  \"reason\": \"The head camera shows the robot's gripper at the same position as in image 6, with the red cube in front and the table surface and background consistent.\"\n}",
+      "model_prediction": {
+        "choice": "D",
+        "reason": "The head camera shows the robot's gripper at the same position as in image 6, with the red cube in front and the table surface and background consistent."
+      },
+      "expected_choice": "E",
+      "expected_answer_text": "right gripper camera view",
+      "expected_target_side": "right",
+      "pred_choice": "D",
+      "correct": false,
+      "timing": {
+        "seconds": 2.338
+      }
+    },
+    {
+      "id": "file-000-2_left_gripper_view",
+      "source_id": "file-000-2",
+      "video_id": "file-000",
+      "type": "left_right_gripper_view",
+      "target_side": "left",
+      "timestamp": 33.05,
+      "timestamp_key": "mid",
+      "input": {
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-2_33.050s_left_eye_question_head.jpg",
+        "head_image": {
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-2_33.050s_left_eye_question_head.jpg",
+          "view": "left_eye",
+          "role": "question_head",
+          "source_item_id": "file-000-2",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+          "timestamp": 33.05,
+          "actual_timestamp": 33.05,
+          "frame_index": 661
+        }
+      },
+      "Q": "Given the image captured by the head camera, which option shows the left gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-042/file-042_file-042-3_38.425s_left_wrist_scene_distractor_1.jpg>\nB. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-015/file-015_file-015-4_40.250s_right_wrist_scene_distractor_2.jpg>\nC. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-2_33.050s_right_wrist_symmetric_distractor.jpg>\nD. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-2_33.050s_left_wrist_correct.jpg>\nE. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-4_64.950s_left_wrist_temporal_distractor_1.jpg>\nF. All other options are wrong.",
+      "A": "D",
+      "question": "Given the image captured by the head camera, which option shows the left gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-042/file-042_file-042-3_38.425s_left_wrist_scene_distractor_1.jpg>\nB. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-015/file-015_file-015-4_40.250s_right_wrist_scene_distractor_2.jpg>\nC. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-2_33.050s_right_wrist_symmetric_distractor.jpg>\nD. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-2_33.050s_left_wrist_correct.jpg>\nE. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-4_64.950s_left_wrist_temporal_distractor_1.jpg>\nF. All other options are wrong.",
+      "answer": "D",
+      "answer_text": "left gripper camera view",
+      "options": [
+        {
+          "id": "A",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-042/file-042_file-042-3_38.425s_left_wrist_scene_distractor_1.jpg",
+          "view": "left_wrist",
+          "role": "scene_distractor_1",
+          "source_item_id": "file-042-3",
+          "source_video_id": "file-042",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-042.mp4",
+          "timestamp": 38.425,
+          "actual_timestamp": 38.4,
+          "frame_index": 768,
+          "is_correct": false,
+          "distractor_type": "scene"
+        },
+        {
+          "id": "B",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-015/file-015_file-015-4_40.250s_right_wrist_scene_distractor_2.jpg",
+          "view": "right_wrist",
+          "role": "scene_distractor_2",
+          "source_item_id": "file-015-4",
+          "source_video_id": "file-015",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-015.mp4",
+          "timestamp": 40.25,
+          "actual_timestamp": 40.25,
+          "frame_index": 805,
+          "is_correct": false,
+          "distractor_type": "scene"
+        },
+        {
+          "id": "C",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-2_33.050s_right_wrist_symmetric_distractor.jpg",
+          "view": "right_wrist",
+          "role": "symmetric_distractor",
+          "source_item_id": "file-000-2",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+          "timestamp": 33.05,
+          "actual_timestamp": 33.05,
+          "frame_index": 661,
+          "is_correct": false,
+          "distractor_type": "symmetric",
+          "target_opposite_side": "right"
+        },
+        {
+          "id": "D",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-2_33.050s_left_wrist_correct.jpg",
+          "view": "left_wrist",
+          "role": "correct",
+          "source_item_id": "file-000-2",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "timestamp": 33.05,
+          "actual_timestamp": 33.05,
+          "frame_index": 661,
+          "is_correct": true,
+          "distractor_type": null
+        },
+        {
+          "id": "E",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-4_64.950s_left_wrist_temporal_distractor_1.jpg",
+          "view": "left_wrist",
+          "role": "temporal_distractor_1",
+          "source_item_id": "file-000-4",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "timestamp": 64.95,
+          "actual_timestamp": 64.95,
+          "frame_index": 1299,
+          "is_correct": false,
+          "distractor_type": "temporal"
+        },
+        {
+          "id": "F",
+          "is_none_option": true,
+          "type": "none",
+          "text": "All other options are wrong.",
+          "image_path": null,
+          "view": null,
+          "role": "none_option",
+          "source_item_id": null,
+          "source_video_id": null,
+          "is_correct": false,
+          "distractor_type": "none"
+        }
+      ],
+      "correct_option": {
+        "id": "D",
+        "is_none_option": false,
+        "type": "image",
+        "text": null,
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-2_33.050s_left_wrist_correct.jpg",
+        "view": "left_wrist",
+        "role": "correct",
+        "source_item_id": "file-000-2",
+        "source_video_id": "file-000",
+        "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+        "timestamp": 33.05,
+        "actual_timestamp": 33.05,
+        "frame_index": 661,
+        "is_correct": true,
+        "distractor_type": null
+      },
+      "source_time_eqa": {
+        "id": "file-000-2",
+        "source_id": "file-000-2",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"place the red cube\" happen?",
+        "A": "00:00:31.050-00:00:35.050",
+        "question": "When did the action \"place the red cube\" happen?",
+        "answer": "00:00:31.050-00:00:35.050",
+        "answer_text": "00:00:31.050-00:00:35.050",
+        "answer_seconds": {
+          "start": 31.05,
+          "end": 35.05
+        },
+        "answer_action": "place",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 31.05,
+          "end": 35.05,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-2",
+            "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-000_segments.json",
+            "start": 31.05,
+            "end": 35.05,
+            "start_time": "00:00:31.050",
+            "end_time": "00:00:35.050",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Place the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "place"
+          ],
+          "original_start": 31.05,
+          "original_end": 35.05,
+          "original_start_time": "00:00:31.050",
+          "original_end_time": "00:00:35.050",
+          "window_start": 31.05,
+          "window_end": 35.05,
+          "window_type": "raw_segment",
+          "start_frame": 621,
+          "end_frame": 700
+        }
+      },
+      "prompt": "You are answering a visual matching question for a robot manipulation episode.\n\nThe first image is from the head camera. The following labeled option images are candidate gripper-camera views at the same moment or distractors.\nChoose the single option letter that shows the requested gripper camera's view for the head-camera moment.\nIf none of the listed images match, choose the option labeled \"All other options are wrong.\"\n\nQuestion:\nGiven the image captured by the head camera, which option shows the left gripper camera's view at this moment?\n\nValid option letters: A, B, C, D, E, F\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"A\",\n  \"reason\": \"The head camera shows the robot's left gripper in the foreground, with the table extending to the right and the yellow cube in front. The background includes the white table and the person in the office chair, consistent with the head camera's perspective.\"\n}",
+      "model_prediction": {
+        "choice": "A",
+        "reason": "The head camera shows the robot's left gripper in the foreground, with the table extending to the right and the yellow cube in front. The background includes the white table and the person in the office chair, consistent with the head camera's perspective."
+      },
+      "expected_choice": "D",
+      "expected_answer_text": "left gripper camera view",
+      "expected_target_side": "left",
+      "pred_choice": "A",
+      "correct": false,
+      "timing": {
+        "seconds": 3.388
+      }
+    },
+    {
+      "id": "file-000-2_right_gripper_view",
+      "source_id": "file-000-2",
+      "video_id": "file-000",
+      "type": "left_right_gripper_view",
+      "target_side": "right",
+      "timestamp": 33.05,
+      "timestamp_key": "mid",
+      "input": {
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-2_33.050s_left_eye_question_head.jpg",
+        "head_image": {
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-2_33.050s_left_eye_question_head.jpg",
+          "view": "left_eye",
+          "role": "question_head",
+          "source_item_id": "file-000-2",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+          "timestamp": 33.05,
+          "actual_timestamp": 33.05,
+          "frame_index": 661
+        }
+      },
+      "Q": "Given the image captured by the head camera, which option shows the right gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-042/file-042_file-042-3_38.425s_left_wrist_scene_distractor_1.jpg>\nB. All other options are wrong.\nC. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-4_64.950s_right_wrist_temporal_distractor_1.jpg>\nD. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-2_33.050s_left_wrist_symmetric_distractor.jpg>\nE. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-2_33.050s_right_wrist_correct.jpg>\nF. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-015/file-015_file-015-4_40.250s_right_wrist_scene_distractor_2.jpg>",
+      "A": "E",
+      "question": "Given the image captured by the head camera, which option shows the right gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-042/file-042_file-042-3_38.425s_left_wrist_scene_distractor_1.jpg>\nB. All other options are wrong.\nC. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-4_64.950s_right_wrist_temporal_distractor_1.jpg>\nD. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-2_33.050s_left_wrist_symmetric_distractor.jpg>\nE. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-2_33.050s_right_wrist_correct.jpg>\nF. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-015/file-015_file-015-4_40.250s_right_wrist_scene_distractor_2.jpg>",
+      "answer": "E",
+      "answer_text": "right gripper camera view",
+      "options": [
+        {
+          "id": "A",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-042/file-042_file-042-3_38.425s_left_wrist_scene_distractor_1.jpg",
+          "view": "left_wrist",
+          "role": "scene_distractor_1",
+          "source_item_id": "file-042-3",
+          "source_video_id": "file-042",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-042.mp4",
+          "timestamp": 38.425,
+          "actual_timestamp": 38.4,
+          "frame_index": 768,
+          "is_correct": false,
+          "distractor_type": "scene"
+        },
+        {
+          "id": "B",
+          "is_none_option": true,
+          "type": "none",
+          "text": "All other options are wrong.",
+          "image_path": null,
+          "view": null,
+          "role": "none_option",
+          "source_item_id": null,
+          "source_video_id": null,
+          "is_correct": false,
+          "distractor_type": "none"
+        },
+        {
+          "id": "C",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-4_64.950s_right_wrist_temporal_distractor_1.jpg",
+          "view": "right_wrist",
+          "role": "temporal_distractor_1",
+          "source_item_id": "file-000-4",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+          "timestamp": 64.95,
+          "actual_timestamp": 64.95,
+          "frame_index": 1299,
+          "is_correct": false,
+          "distractor_type": "temporal"
+        },
+        {
+          "id": "D",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-2_33.050s_left_wrist_symmetric_distractor.jpg",
+          "view": "left_wrist",
+          "role": "symmetric_distractor",
+          "source_item_id": "file-000-2",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "timestamp": 33.05,
+          "actual_timestamp": 33.05,
+          "frame_index": 661,
+          "is_correct": false,
+          "distractor_type": "symmetric",
+          "target_opposite_side": "left"
+        },
+        {
+          "id": "E",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-2_33.050s_right_wrist_correct.jpg",
+          "view": "right_wrist",
+          "role": "correct",
+          "source_item_id": "file-000-2",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+          "timestamp": 33.05,
+          "actual_timestamp": 33.05,
+          "frame_index": 661,
+          "is_correct": true,
+          "distractor_type": null
+        },
+        {
+          "id": "F",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-015/file-015_file-015-4_40.250s_right_wrist_scene_distractor_2.jpg",
+          "view": "right_wrist",
+          "role": "scene_distractor_2",
+          "source_item_id": "file-015-4",
+          "source_video_id": "file-015",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-015.mp4",
+          "timestamp": 40.25,
+          "actual_timestamp": 40.25,
+          "frame_index": 805,
+          "is_correct": false,
+          "distractor_type": "scene"
+        }
+      ],
+      "correct_option": {
+        "id": "E",
+        "is_none_option": false,
+        "type": "image",
+        "text": null,
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-2_33.050s_right_wrist_correct.jpg",
+        "view": "right_wrist",
+        "role": "correct",
+        "source_item_id": "file-000-2",
+        "source_video_id": "file-000",
+        "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+        "timestamp": 33.05,
+        "actual_timestamp": 33.05,
+        "frame_index": 661,
+        "is_correct": true,
+        "distractor_type": null
+      },
+      "source_time_eqa": {
+        "id": "file-000-2",
+        "source_id": "file-000-2",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"place the red cube\" happen?",
+        "A": "00:00:31.050-00:00:35.050",
+        "question": "When did the action \"place the red cube\" happen?",
+        "answer": "00:00:31.050-00:00:35.050",
+        "answer_text": "00:00:31.050-00:00:35.050",
+        "answer_seconds": {
+          "start": 31.05,
+          "end": 35.05
+        },
+        "answer_action": "place",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 31.05,
+          "end": 35.05,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-2",
+            "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-000_segments.json",
+            "start": 31.05,
+            "end": 35.05,
+            "start_time": "00:00:31.050",
+            "end_time": "00:00:35.050",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Place the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "place"
+          ],
+          "original_start": 31.05,
+          "original_end": 35.05,
+          "original_start_time": "00:00:31.050",
+          "original_end_time": "00:00:35.050",
+          "window_start": 31.05,
+          "window_end": 35.05,
+          "window_type": "raw_segment",
+          "start_frame": 621,
+          "end_frame": 700
+        }
+      },
+      "prompt": "You are answering a visual matching question for a robot manipulation episode.\n\nThe first image is from the head camera. The following labeled option images are candidate gripper-camera views at the same moment or distractors.\nChoose the single option letter that shows the requested gripper camera's view for the head-camera moment.\nIf none of the listed images match, choose the option labeled \"All other options are wrong.\"\n\nQuestion:\nGiven the image captured by the head camera, which option shows the right gripper camera's view at this moment?\n\nValid option letters: A, B, C, D, E, F\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"D\",\n  \"reason\": \"The candidate image shows the robot's gripper at the same table position as the head camera, with the yellow cube in front of the camera and the red and blue blocks nearby, matching the scene seen in the head camera image.\"\n}",
+      "model_prediction": {
+        "choice": "D",
+        "reason": "The candidate image shows the robot's gripper at the same table position as the head camera, with the yellow cube in front of the camera and the red and blue blocks nearby, matching the scene seen in the head camera image."
+      },
+      "expected_choice": "E",
+      "expected_answer_text": "right gripper camera view",
+      "expected_target_side": "right",
+      "pred_choice": "D",
+      "correct": false,
+      "timing": {
+        "seconds": 2.877
+      }
+    },
+    {
+      "id": "file-000-3_left_gripper_view",
+      "source_id": "file-000-3",
+      "video_id": "file-000",
+      "type": "left_right_gripper_view",
+      "target_side": "left",
+      "timestamp": 51.025,
+      "timestamp_key": "mid",
+      "input": {
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-3_51.025s_left_eye_question_head.jpg",
+        "head_image": {
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-3_51.025s_left_eye_question_head.jpg",
+          "view": "left_eye",
+          "role": "question_head",
+          "source_item_id": "file-000-3",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+          "timestamp": 51.025,
+          "actual_timestamp": 51.0,
+          "frame_index": 1020
+        }
+      },
+      "Q": "Given the image captured by the head camera, which option shows the left gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_left_wrist_temporal_distractor_1.jpg>\nB. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_51.025s_right_wrist_symmetric_distractor.jpg>\nC. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-032/file-032_file-032-1_file-032-2_move_17.125s_left_wrist_scene_distractor_1.jpg>\nD. All other options are wrong.\nE. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_51.025s_left_wrist_correct.jpg>\nF. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-045/file-045_file-045-4_42.800s_right_wrist_scene_distractor_2.jpg>",
+      "A": "E",
+      "question": "Given the image captured by the head camera, which option shows the left gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_left_wrist_temporal_distractor_1.jpg>\nB. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_51.025s_right_wrist_symmetric_distractor.jpg>\nC. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-032/file-032_file-032-1_file-032-2_move_17.125s_left_wrist_scene_distractor_1.jpg>\nD. All other options are wrong.\nE. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_51.025s_left_wrist_correct.jpg>\nF. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-045/file-045_file-045-4_42.800s_right_wrist_scene_distractor_2.jpg>",
+      "answer": "E",
+      "answer_text": "left gripper camera view",
+      "options": [
+        {
+          "id": "A",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_left_wrist_temporal_distractor_1.jpg",
+          "view": "left_wrist",
+          "role": "temporal_distractor_1",
+          "source_item_id": "file-000-3_file-000-4_move",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "timestamp": 60.975,
+          "actual_timestamp": 61.0,
+          "frame_index": 1220,
+          "is_correct": false,
+          "distractor_type": "temporal"
+        },
+        {
+          "id": "B",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_51.025s_right_wrist_symmetric_distractor.jpg",
+          "view": "right_wrist",
+          "role": "symmetric_distractor",
+          "source_item_id": "file-000-3",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+          "timestamp": 51.025,
+          "actual_timestamp": 51.0,
+          "frame_index": 1020,
+          "is_correct": false,
+          "distractor_type": "symmetric",
+          "target_opposite_side": "right"
+        },
+        {
+          "id": "C",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-032/file-032_file-032-1_file-032-2_move_17.125s_left_wrist_scene_distractor_1.jpg",
+          "view": "left_wrist",
+          "role": "scene_distractor_1",
+          "source_item_id": "file-032-1_file-032-2_move",
+          "source_video_id": "file-032",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-032.mp4",
+          "timestamp": 17.125,
+          "actual_timestamp": 17.1,
+          "frame_index": 342,
+          "is_correct": false,
+          "distractor_type": "scene"
+        },
+        {
+          "id": "D",
+          "is_none_option": true,
+          "type": "none",
+          "text": "All other options are wrong.",
+          "image_path": null,
+          "view": null,
+          "role": "none_option",
+          "source_item_id": null,
+          "source_video_id": null,
+          "is_correct": false,
+          "distractor_type": "none"
+        },
+        {
+          "id": "E",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_51.025s_left_wrist_correct.jpg",
+          "view": "left_wrist",
+          "role": "correct",
+          "source_item_id": "file-000-3",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "timestamp": 51.025,
+          "actual_timestamp": 51.0,
+          "frame_index": 1020,
+          "is_correct": true,
+          "distractor_type": null
+        },
+        {
+          "id": "F",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-045/file-045_file-045-4_42.800s_right_wrist_scene_distractor_2.jpg",
+          "view": "right_wrist",
+          "role": "scene_distractor_2",
+          "source_item_id": "file-045-4",
+          "source_video_id": "file-045",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-045.mp4",
+          "timestamp": 42.8,
+          "actual_timestamp": 42.8,
+          "frame_index": 856,
+          "is_correct": false,
+          "distractor_type": "scene"
+        }
+      ],
+      "correct_option": {
+        "id": "E",
+        "is_none_option": false,
+        "type": "image",
+        "text": null,
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_51.025s_left_wrist_correct.jpg",
+        "view": "left_wrist",
+        "role": "correct",
+        "source_item_id": "file-000-3",
+        "source_video_id": "file-000",
+        "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+        "timestamp": 51.025,
+        "actual_timestamp": 51.0,
+        "frame_index": 1020,
+        "is_correct": true,
+        "distractor_type": null
+      },
+      "source_time_eqa": {
+        "id": "file-000-3",
+        "source_id": "file-000-3",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"pick the yellow cube\" happen?",
+        "A": "00:00:43.050-00:00:59.000",
+        "question": "When did the action \"pick the yellow cube\" happen?",
+        "answer": "00:00:43.050-00:00:59.000",
+        "answer_text": "00:00:43.050-00:00:59.000",
+        "answer_seconds": {
+          "start": 43.05,
+          "end": 59.0
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 43.05,
+          "end": 59.0,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-3",
+            "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-000_segments.json",
+            "start": 43.05,
+            "end": 59.0,
+            "start_time": "00:00:43.050",
+            "end_time": "00:00:59.000",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 43.05,
+          "original_end": 59.0,
+          "original_start_time": "00:00:43.050",
+          "original_end_time": "00:00:59.000",
+          "window_start": 43.05,
+          "window_end": 59.0,
+          "window_type": "raw_segment",
+          "start_frame": 861,
+          "end_frame": 1179
+        }
+      },
+      "prompt": "You are answering a visual matching question for a robot manipulation episode.\n\nThe first image is from the head camera. The following labeled option images are candidate gripper-camera views at the same moment or distractors.\nChoose the single option letter that shows the requested gripper camera's view for the head-camera moment.\nIf none of the listed images match, choose the option labeled \"All other options are wrong.\"\n\nQuestion:\nGiven the image captured by the head camera, which option shows the left gripper camera's view at this moment?\n\nValid option letters: A, B, C, D, E, F\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"B\",\n  \"reason\": \"The candidate image shows the left gripper's view with the yellow cube in the foreground and the red and blue cube slightly to the right, matching the scene layout in the head camera image. The background shows the same room with the white table and the robotic arm, consistent with the head camera's perspective.\"\n}",
+      "model_prediction": {
+        "choice": "B",
+        "reason": "The candidate image shows the left gripper's view with the yellow cube in the foreground and the red and blue cube slightly to the right, matching the scene layout in the head camera image. The background shows the same room with the white table and the robotic arm, consistent with the head camera's perspective."
+      },
+      "expected_choice": "E",
+      "expected_answer_text": "left gripper camera view",
+      "expected_target_side": "left",
+      "pred_choice": "B",
+      "correct": false,
+      "timing": {
+        "seconds": 3.354
+      }
+    },
+    {
+      "id": "file-000-3_right_gripper_view",
+      "source_id": "file-000-3",
+      "video_id": "file-000",
+      "type": "left_right_gripper_view",
+      "target_side": "right",
+      "timestamp": 51.025,
+      "timestamp_key": "mid",
+      "input": {
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-3_51.025s_left_eye_question_head.jpg",
+        "head_image": {
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-3_51.025s_left_eye_question_head.jpg",
+          "view": "left_eye",
+          "role": "question_head",
+          "source_item_id": "file-000-3",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+          "timestamp": 51.025,
+          "actual_timestamp": 51.0,
+          "frame_index": 1020
+        }
+      },
+      "Q": "Given the image captured by the head camera, which option shows the right gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_51.025s_right_wrist_correct.jpg>\nB. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-032/file-032_file-032-1_file-032-2_move_17.125s_left_wrist_scene_distractor_1.jpg>\nC. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_51.025s_left_wrist_symmetric_distractor.jpg>\nD. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-045/file-045_file-045-4_42.800s_right_wrist_scene_distractor_2.jpg>\nE. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_right_wrist_temporal_distractor_1.jpg>\nF. All other options are wrong.",
+      "A": "A",
+      "question": "Given the image captured by the head camera, which option shows the right gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_51.025s_right_wrist_correct.jpg>\nB. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-032/file-032_file-032-1_file-032-2_move_17.125s_left_wrist_scene_distractor_1.jpg>\nC. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_51.025s_left_wrist_symmetric_distractor.jpg>\nD. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-045/file-045_file-045-4_42.800s_right_wrist_scene_distractor_2.jpg>\nE. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_right_wrist_temporal_distractor_1.jpg>\nF. All other options are wrong.",
+      "answer": "A",
+      "answer_text": "right gripper camera view",
+      "options": [
+        {
+          "id": "A",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_51.025s_right_wrist_correct.jpg",
+          "view": "right_wrist",
+          "role": "correct",
+          "source_item_id": "file-000-3",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+          "timestamp": 51.025,
+          "actual_timestamp": 51.0,
+          "frame_index": 1020,
+          "is_correct": true,
+          "distractor_type": null
+        },
+        {
+          "id": "B",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-032/file-032_file-032-1_file-032-2_move_17.125s_left_wrist_scene_distractor_1.jpg",
+          "view": "left_wrist",
+          "role": "scene_distractor_1",
+          "source_item_id": "file-032-1_file-032-2_move",
+          "source_video_id": "file-032",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-032.mp4",
+          "timestamp": 17.125,
+          "actual_timestamp": 17.1,
+          "frame_index": 342,
+          "is_correct": false,
+          "distractor_type": "scene"
+        },
+        {
+          "id": "C",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_51.025s_left_wrist_symmetric_distractor.jpg",
+          "view": "left_wrist",
+          "role": "symmetric_distractor",
+          "source_item_id": "file-000-3",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "timestamp": 51.025,
+          "actual_timestamp": 51.0,
+          "frame_index": 1020,
+          "is_correct": false,
+          "distractor_type": "symmetric",
+          "target_opposite_side": "left"
+        },
+        {
+          "id": "D",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-045/file-045_file-045-4_42.800s_right_wrist_scene_distractor_2.jpg",
+          "view": "right_wrist",
+          "role": "scene_distractor_2",
+          "source_item_id": "file-045-4",
+          "source_video_id": "file-045",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-045.mp4",
+          "timestamp": 42.8,
+          "actual_timestamp": 42.8,
+          "frame_index": 856,
+          "is_correct": false,
+          "distractor_type": "scene"
+        },
+        {
+          "id": "E",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_right_wrist_temporal_distractor_1.jpg",
+          "view": "right_wrist",
+          "role": "temporal_distractor_1",
+          "source_item_id": "file-000-3_file-000-4_move",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+          "timestamp": 60.975,
+          "actual_timestamp": 61.0,
+          "frame_index": 1220,
+          "is_correct": false,
+          "distractor_type": "temporal"
+        },
+        {
+          "id": "F",
+          "is_none_option": true,
+          "type": "none",
+          "text": "All other options are wrong.",
+          "image_path": null,
+          "view": null,
+          "role": "none_option",
+          "source_item_id": null,
+          "source_video_id": null,
+          "is_correct": false,
+          "distractor_type": "none"
+        }
+      ],
+      "correct_option": {
+        "id": "A",
+        "is_none_option": false,
+        "type": "image",
+        "text": null,
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_51.025s_right_wrist_correct.jpg",
+        "view": "right_wrist",
+        "role": "correct",
+        "source_item_id": "file-000-3",
+        "source_video_id": "file-000",
+        "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+        "timestamp": 51.025,
+        "actual_timestamp": 51.0,
+        "frame_index": 1020,
+        "is_correct": true,
+        "distractor_type": null
+      },
+      "source_time_eqa": {
+        "id": "file-000-3",
+        "source_id": "file-000-3",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"pick the yellow cube\" happen?",
+        "A": "00:00:43.050-00:00:59.000",
+        "question": "When did the action \"pick the yellow cube\" happen?",
+        "answer": "00:00:43.050-00:00:59.000",
+        "answer_text": "00:00:43.050-00:00:59.000",
+        "answer_seconds": {
+          "start": 43.05,
+          "end": 59.0
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 43.05,
+          "end": 59.0,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-3",
+            "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-000_segments.json",
+            "start": 43.05,
+            "end": 59.0,
+            "start_time": "00:00:43.050",
+            "end_time": "00:00:59.000",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 43.05,
+          "original_end": 59.0,
+          "original_start_time": "00:00:43.050",
+          "original_end_time": "00:00:59.000",
+          "window_start": 43.05,
+          "window_end": 59.0,
+          "window_type": "raw_segment",
+          "start_frame": 861,
+          "end_frame": 1179
+        }
+      },
+      "prompt": "You are answering a visual matching question for a robot manipulation episode.\n\nThe first image is from the head camera. The following labeled option images are candidate gripper-camera views at the same moment or distractors.\nChoose the single option letter that shows the requested gripper camera's view for the head-camera moment.\nIf none of the listed images match, choose the option labeled \"All other options are wrong.\"\n\nQuestion:\nGiven the image captured by the head camera, which option shows the right gripper camera's view at this moment?\n\nValid option letters: A, B, C, D, E, F\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"B\",\n  \"reason\": \"The head camera shows the same scene as Image1, with the red and blue cube in front of the camera and the yellow cube to the left. The table markings and the robotic arm's position are consistent with the head camera's perspective.\"\n}",
+      "model_prediction": {
+        "choice": "B",
+        "reason": "The head camera shows the same scene as Image1, with the red and blue cube in front of the camera and the yellow cube to the left. The table markings and the robotic arm's position are consistent with the head camera's perspective."
+      },
+      "expected_choice": "A",
+      "expected_answer_text": "right gripper camera view",
+      "expected_target_side": "right",
+      "pred_choice": "B",
+      "correct": false,
+      "timing": {
+        "seconds": 3.273
+      }
+    },
+    {
+      "id": "file-000-3_file-000-4_move_left_gripper_view",
+      "source_id": "file-000-3_file-000-4_move",
+      "video_id": "file-000",
+      "type": "left_right_gripper_view",
+      "target_side": "left",
+      "timestamp": 60.975,
+      "timestamp_key": "mid",
+      "input": {
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-3_file-000-4_move_60.975s_left_eye_question_head.jpg",
+        "head_image": {
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-3_file-000-4_move_60.975s_left_eye_question_head.jpg",
+          "view": "left_eye",
+          "role": "question_head",
+          "source_item_id": "file-000-3_file-000-4_move",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+          "timestamp": 60.975,
+          "actual_timestamp": 61.0,
+          "frame_index": 1220
+        }
+      },
+      "Q": "Given the image captured by the head camera, which option shows the left gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-028/file-028_file-028-3_file-028-4_move_42.825s_left_wrist_scene_distractor_1.jpg>\nB. All other options are wrong.\nC. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_right_wrist_symmetric_distractor.jpg>\nD. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_left_wrist_correct.jpg>\nE. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_51.025s_left_wrist_temporal_distractor_1.jpg>\nF. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-011/file-011_file-011-1_file-011-2_move_25.600s_right_wrist_scene_distractor_2.jpg>",
+      "A": "D",
+      "question": "Given the image captured by the head camera, which option shows the left gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-028/file-028_file-028-3_file-028-4_move_42.825s_left_wrist_scene_distractor_1.jpg>\nB. All other options are wrong.\nC. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_right_wrist_symmetric_distractor.jpg>\nD. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_left_wrist_correct.jpg>\nE. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_51.025s_left_wrist_temporal_distractor_1.jpg>\nF. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-011/file-011_file-011-1_file-011-2_move_25.600s_right_wrist_scene_distractor_2.jpg>",
+      "answer": "D",
+      "answer_text": "left gripper camera view",
+      "options": [
+        {
+          "id": "A",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-028/file-028_file-028-3_file-028-4_move_42.825s_left_wrist_scene_distractor_1.jpg",
+          "view": "left_wrist",
+          "role": "scene_distractor_1",
+          "source_item_id": "file-028-3_file-028-4_move",
+          "source_video_id": "file-028",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-028.mp4",
+          "timestamp": 42.825,
+          "actual_timestamp": 42.8,
+          "frame_index": 856,
+          "is_correct": false,
+          "distractor_type": "scene"
+        },
+        {
+          "id": "B",
+          "is_none_option": true,
+          "type": "none",
+          "text": "All other options are wrong.",
+          "image_path": null,
+          "view": null,
+          "role": "none_option",
+          "source_item_id": null,
+          "source_video_id": null,
+          "is_correct": false,
+          "distractor_type": "none"
+        },
+        {
+          "id": "C",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_right_wrist_symmetric_distractor.jpg",
+          "view": "right_wrist",
+          "role": "symmetric_distractor",
+          "source_item_id": "file-000-3_file-000-4_move",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+          "timestamp": 60.975,
+          "actual_timestamp": 61.0,
+          "frame_index": 1220,
+          "is_correct": false,
+          "distractor_type": "symmetric",
+          "target_opposite_side": "right"
+        },
+        {
+          "id": "D",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_left_wrist_correct.jpg",
+          "view": "left_wrist",
+          "role": "correct",
+          "source_item_id": "file-000-3_file-000-4_move",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "timestamp": 60.975,
+          "actual_timestamp": 61.0,
+          "frame_index": 1220,
+          "is_correct": true,
+          "distractor_type": null
+        },
+        {
+          "id": "E",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_51.025s_left_wrist_temporal_distractor_1.jpg",
+          "view": "left_wrist",
+          "role": "temporal_distractor_1",
+          "source_item_id": "file-000-3",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "timestamp": 51.025,
+          "actual_timestamp": 51.0,
+          "frame_index": 1020,
+          "is_correct": false,
+          "distractor_type": "temporal"
+        },
+        {
+          "id": "F",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-011/file-011_file-011-1_file-011-2_move_25.600s_right_wrist_scene_distractor_2.jpg",
+          "view": "right_wrist",
+          "role": "scene_distractor_2",
+          "source_item_id": "file-011-1_file-011-2_move",
+          "source_video_id": "file-011",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-011.mp4",
+          "timestamp": 25.6,
+          "actual_timestamp": 25.6,
+          "frame_index": 512,
+          "is_correct": false,
+          "distractor_type": "scene"
+        }
+      ],
+      "correct_option": {
+        "id": "D",
+        "is_none_option": false,
+        "type": "image",
+        "text": null,
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_left_wrist_correct.jpg",
+        "view": "left_wrist",
+        "role": "correct",
+        "source_item_id": "file-000-3_file-000-4_move",
+        "source_video_id": "file-000",
+        "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+        "timestamp": 60.975,
+        "actual_timestamp": 61.0,
+        "frame_index": 1220,
+        "is_correct": true,
+        "distractor_type": null
+      },
+      "source_time_eqa": {
+        "id": "file-000-3_file-000-4_move",
+        "source_id": "file-000-3_file-000-4_move",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"move the yellow cube\" happen?",
+        "A": "00:00:58.000-00:01:03.950",
+        "question": "When did the action \"move the yellow cube\" happen?",
+        "answer": "00:00:58.000-00:01:03.950",
+        "answer_text": "00:00:58.000-00:01:03.950",
+        "answer_seconds": {
+          "start": 58.0,
+          "end": 63.95
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 58.0,
+          "end": 63.95,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-3_file-000-4_move",
+            "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-000_segments.json",
+            "start": 58.0,
+            "end": 63.95,
+            "start_time": "00:00:58.000",
+            "end_time": "00:01:03.950",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 58.0,
+          "original_end": 63.95,
+          "original_start_time": "00:00:58.000",
+          "original_end_time": "00:01:03.950",
+          "window_start": 58.0,
+          "window_end": 63.95,
+          "window_type": "raw_segment",
+          "start_frame": 1160,
+          "end_frame": 1278
+        }
+      },
+      "prompt": "You are answering a visual matching question for a robot manipulation episode.\n\nThe first image is from the head camera. The following labeled option images are candidate gripper-camera views at the same moment or distractors.\nChoose the single option letter that shows the requested gripper camera's view for the head-camera moment.\nIf none of the listed images match, choose the option labeled \"All other options are wrong.\"\n\nQuestion:\nGiven the image captured by the head camera, which option shows the left gripper camera's view at this moment?\n\nValid option letters: A, B, C, D, E, F\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"A\",\n  \"reason\": \"The head camera shows the left gripper's view, with the yellow cube in front and the right gripper on the right edge of the table. The background shows the same room with the person and the table, matching the head camera's perspective.\"\n}",
+      "model_prediction": {
+        "choice": "A",
+        "reason": "The head camera shows the left gripper's view, with the yellow cube in front and the right gripper on the right edge of the table. The background shows the same room with the person and the table, matching the head camera's perspective."
+      },
+      "expected_choice": "D",
+      "expected_answer_text": "left gripper camera view",
+      "expected_target_side": "left",
+      "pred_choice": "A",
+      "correct": false,
+      "timing": {
+        "seconds": 2.932
+      }
+    },
+    {
+      "id": "file-000-3_file-000-4_move_right_gripper_view",
+      "source_id": "file-000-3_file-000-4_move",
+      "video_id": "file-000",
+      "type": "left_right_gripper_view",
+      "target_side": "right",
+      "timestamp": 60.975,
+      "timestamp_key": "mid",
+      "input": {
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-3_file-000-4_move_60.975s_left_eye_question_head.jpg",
+        "head_image": {
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_eye/file-000/file-000_file-000-3_file-000-4_move_60.975s_left_eye_question_head.jpg",
+          "view": "left_eye",
+          "role": "question_head",
+          "source_item_id": "file-000-3_file-000-4_move",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+          "timestamp": 60.975,
+          "actual_timestamp": 61.0,
+          "frame_index": 1220
+        }
+      },
+      "Q": "Given the image captured by the head camera, which option shows the right gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-011/file-011_file-011-1_file-011-2_move_25.600s_right_wrist_scene_distractor_2.jpg>\nB. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_left_wrist_symmetric_distractor.jpg>\nC. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_51.025s_right_wrist_temporal_distractor_1.jpg>\nD. All other options are wrong.\nE. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-028/file-028_file-028-3_file-028-4_move_42.825s_left_wrist_scene_distractor_1.jpg>\nF. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_right_wrist_correct.jpg>",
+      "A": "F",
+      "question": "Given the image captured by the head camera, which option shows the right gripper camera's view at this moment?\nOptions:\nA. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-011/file-011_file-011-1_file-011-2_move_25.600s_right_wrist_scene_distractor_2.jpg>\nB. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_left_wrist_symmetric_distractor.jpg>\nC. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_51.025s_right_wrist_temporal_distractor_1.jpg>\nD. All other options are wrong.\nE. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/left_wrist/file-028/file-028_file-028-3_file-028-4_move_42.825s_left_wrist_scene_distractor_1.jpg>\nF. <image: /home/llm/yyywv/test_vlm/workflow_outputs/time_understanding/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_right_wrist_correct.jpg>",
+      "answer": "F",
+      "answer_text": "right gripper camera view",
+      "options": [
+        {
+          "id": "A",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-011/file-011_file-011-1_file-011-2_move_25.600s_right_wrist_scene_distractor_2.jpg",
+          "view": "right_wrist",
+          "role": "scene_distractor_2",
+          "source_item_id": "file-011-1_file-011-2_move",
+          "source_video_id": "file-011",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-011.mp4",
+          "timestamp": 25.6,
+          "actual_timestamp": 25.6,
+          "frame_index": 512,
+          "is_correct": false,
+          "distractor_type": "scene"
+        },
+        {
+          "id": "B",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_left_wrist_symmetric_distractor.jpg",
+          "view": "left_wrist",
+          "role": "symmetric_distractor",
+          "source_item_id": "file-000-3_file-000-4_move",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "timestamp": 60.975,
+          "actual_timestamp": 61.0,
+          "frame_index": 1220,
+          "is_correct": false,
+          "distractor_type": "symmetric",
+          "target_opposite_side": "left"
+        },
+        {
+          "id": "C",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_51.025s_right_wrist_temporal_distractor_1.jpg",
+          "view": "right_wrist",
+          "role": "temporal_distractor_1",
+          "source_item_id": "file-000-3",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+          "timestamp": 51.025,
+          "actual_timestamp": 51.0,
+          "frame_index": 1020,
+          "is_correct": false,
+          "distractor_type": "temporal"
+        },
+        {
+          "id": "D",
+          "is_none_option": true,
+          "type": "none",
+          "text": "All other options are wrong.",
+          "image_path": null,
+          "view": null,
+          "role": "none_option",
+          "source_item_id": null,
+          "source_video_id": null,
+          "is_correct": false,
+          "distractor_type": "none"
+        },
+        {
+          "id": "E",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/left_wrist/file-028/file-028_file-028-3_file-028-4_move_42.825s_left_wrist_scene_distractor_1.jpg",
+          "view": "left_wrist",
+          "role": "scene_distractor_1",
+          "source_item_id": "file-028-3_file-028-4_move",
+          "source_video_id": "file-028",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-028.mp4",
+          "timestamp": 42.825,
+          "actual_timestamp": 42.8,
+          "frame_index": 856,
+          "is_correct": false,
+          "distractor_type": "scene"
+        },
+        {
+          "id": "F",
+          "is_none_option": false,
+          "type": "image",
+          "text": null,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_right_wrist_correct.jpg",
+          "view": "right_wrist",
+          "role": "correct",
+          "source_item_id": "file-000-3_file-000-4_move",
+          "source_video_id": "file-000",
+          "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+          "timestamp": 60.975,
+          "actual_timestamp": 61.0,
+          "frame_index": 1220,
+          "is_correct": true,
+          "distractor_type": null
+        }
+      ],
+      "correct_option": {
+        "id": "F",
+        "is_none_option": false,
+        "type": "image",
+        "text": null,
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/left_right_vqa/option_images/right_wrist/file-000/file-000_file-000-3_file-000-4_move_60.975s_right_wrist_correct.jpg",
+        "view": "right_wrist",
+        "role": "correct",
+        "source_item_id": "file-000-3_file-000-4_move",
+        "source_video_id": "file-000",
+        "video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4",
+        "timestamp": 60.975,
+        "actual_timestamp": 61.0,
+        "frame_index": 1220,
+        "is_correct": true,
+        "distractor_type": null
+      },
+      "source_time_eqa": {
+        "id": "file-000-3_file-000-4_move",
+        "source_id": "file-000-3_file-000-4_move",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"move the yellow cube\" happen?",
+        "A": "00:00:58.000-00:01:03.950",
+        "question": "When did the action \"move the yellow cube\" happen?",
+        "answer": "00:00:58.000-00:01:03.950",
+        "answer_text": "00:00:58.000-00:01:03.950",
+        "answer_seconds": {
+          "start": 58.0,
+          "end": 63.95
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 58.0,
+          "end": 63.95,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-3_file-000-4_move",
+            "source_path": "/home/tianhao/NAS/yyywv/json_pickplace/file-000_segments.json",
+            "start": 58.0,
+            "end": 63.95,
+            "start_time": "00:00:58.000",
+            "end_time": "00:01:03.950",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 58.0,
+          "original_end": 63.95,
+          "original_start_time": "00:00:58.000",
+          "original_end_time": "00:01:03.950",
+          "window_start": 58.0,
+          "window_end": 63.95,
+          "window_type": "raw_segment",
+          "start_frame": 1160,
+          "end_frame": 1278
+        }
+      },
+      "prompt": "You are answering a visual matching question for a robot manipulation episode.\n\nThe first image is from the head camera. The following labeled option images are candidate gripper-camera views at the same moment or distractors.\nChoose the single option letter that shows the requested gripper camera's view for the head-camera moment.\nIf none of the listed images match, choose the option labeled \"All other options are wrong.\"\n\nQuestion:\nGiven the image captured by the head camera, which option shows the right gripper camera's view at this moment?\n\nValid option letters: A, B, C, D, E, F\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"B\",\n  \"reason\": \"The head camera shows the robot's gripper positioned to the right of the red cube, matching the expected view from the head camera. The background shows the same room with the white table and the robotic arm, consistent with the head camera's perspective.\"\n}",
+      "model_prediction": {
+        "choice": "B",
+        "reason": "The head camera shows the robot's gripper positioned to the right of the red cube, matching the expected view from the head camera. The background shows the same room with the white table and the robotic arm, consistent with the head camera's perspective."
+      },
+      "expected_choice": "F",
+      "expected_answer_text": "right gripper camera view",
+      "expected_target_side": "right",
+      "pred_choice": "B",
+      "correct": false,
+      "timing": {
+        "seconds": 3.642
+      }
+    }
+  ],
+  "summary": {
+    "total": 10,
+    "answered": 10,
+    "errors": 0,
+    "accuracy": 0.0,
+    "elapsed_seconds": 49.762,
+    "chosen_option_type_counts": {
+      "scene": 5,
+      "temporal": 1,
+      "symmetric": 4
+    },
+    "by_side": {
+      "left": {
+        "total": 5,
+        "accuracy": 0.0
+      },
+      "right": {
+        "total": 5,
+        "accuracy": 0.0
+      }
+    },
+    "by_choice": {
+      "A": {
+        "total": 1,
+        "accuracy": 0.0
+      },
+      "D": {
+        "total": 3,
+        "accuracy": 0.0
+      },
+      "E": {
+        "total": 4,
+        "accuracy": 0.0
+      },
+      "F": {
+        "total": 2,
+        "accuracy": 0.0
+      }
+    }
+  }
+}
