@@ -121,6 +121,13 @@ TASK_NAMES = {
 DISTRACTORS_PER_QUESTION = 3
 NONE_TEXT = "All other options are wrong."   # v1 的原文，保持一致便于对照
 
+# 片段题的最短时长。**不是任选的阈值** —— `pen_inbox/file-037@f000272`
+# 是个 1 帧（0.05 秒）的段（标注时连按了两次 K），照样出了三道题、
+# 切出了一个 13 KB 的单帧「视频」。次短的段是 17 帧（0.57 秒），
+# 所以 0.4 秒这条线只拦掉那一个孤例，不误伤。
+# **写成通用闸门而不是针对那一条打补丁** —— 重标之后还会有下一个。
+MIN_CLIP_SECONDS = 0.4
+
 
 def assert_no_leak(clip: tuple[int, int], segment: dict[str, Any], task: str) -> None:
     """片段不得越过本段段尾。**断言而非配置项** —— 见模块 docstring。"""
@@ -245,6 +252,10 @@ def build(index: dict[str, Any], vocab: dict[str, Any],
 
                 base = f"{family}/{episode['episode']}/{segment['id']}"
                 clip = clip_for(segment, window, fps)
+
+                if (clip[1] - clip[0] + 1) / fps < MIN_CLIP_SECONDS:
+                    skipped[f"片段题:段短于 {MIN_CLIP_SECONDS}s（疑似标注误按）"] += 3
+                    continue
 
                 for task in ("understanding", "planning", "planning_2"):
                     if task != "understanding" and nxt is None:
