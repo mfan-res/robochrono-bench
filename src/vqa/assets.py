@@ -9,8 +9,12 @@
 **这是 ④ 里唯一真正写盘的一步。** 前四步只读和算，改个参数重跑几十秒；
 这一步动 ffmpeg，所以所有判断都在 [4] 做完了，这里只执行。
 
-两类素材，两种做法
+三类素材，三种做法
 ------------------
+``frame``  单帧 JPEG（图选项题型用）。**所有帧走同一条命令、同一套参数** ——
+           正确图与干扰图若用不同参数抽，图像统计本身就成了线索
+           （这是图选项题型里对应「编出来的文字选项零样本可辨」的那个坑）。
+
 ``clip``   段的片段（understanding / planning / planning_2 共用）
            `-c copy` 无损切。**不重编码** —— `data/source` 是全帧内的（`-g 1`，D-18），
            每一帧都是关键帧，按任意帧切都精确。实测逐帧解码 md5 与原片对应区间一致。
@@ -49,6 +53,11 @@ ROOT = Path(__file__).resolve().parents[2]
 BUILD = ROOT / "build"
 OUT = ROOT / "data" / "vqa" / "assets"
 WORKERS = 8
+# 选项图的 JPEG 质量。**所有帧共用这一个值** ——
+# 正确图与干扰图若用不同参数抽，图像统计本身就成了线索。
+JPEG_Q = 3
+# 选项图的 JPEG 质量。**所有帧共用这一个值** —— 见 docstring 第一段。
+JPEG_Q = 3
 
 
 def frames_of(path: Path) -> int:
@@ -60,12 +69,37 @@ def frames_of(path: Path) -> int:
 
 
 def dest_of(item: dict[str, Any]) -> Path:
-    return OUT / f"{item['key']}.mp4"
+    ext = "jpg" if item["kind"] == "frame" else "mp4"
+    return OUT / f"{item['key']}.{ext}"
 
 
 def produce(item: dict[str, Any], fps: float) -> dict[str, Any]:
     src = ROOT / item["source"]
     dst = dest_of(item)
+
+    if item["kind"] == "frame":
+        # ⚠ **必须走独立分支。** 落进下面的切片路径时 `-c copy -frames:v 1`
+        # 会写出一个【扩展名是 .jpg 的单帧 MP4】—— 产出时不报错，
+        # 到评测端读图才炸。已经踩过一次，4,170 张全是这样。
+        if dst.exists() and dst.stat().st_size > 0 and dst.read_bytes()[:2] == b"\xff\xd8":
+            return {**item, "state": "已存在", "how": "frame", "frames": 1,
+                    "bytes": dst.lstat().st_size}
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        tmp = dst.with_name(f"{dst.stem}.{os.getpid()}.part.jpg")
+        try:
+            subprocess.run(["ffmpeg", "-v", "error", "-y",
+                            "-ss", f"{item['start_frame'] / fps:.6f}", "-i", str(src),
+                            "-frames:v", "1", "-q:v", str(JPEG_Q), str(tmp)], check=True)
+            if tmp.stat().st_size == 0 or tmp.read_bytes()[:2] != b"\xff\xd8":
+                tmp.unlink(missing_ok=True)
+                return {**item, "state": "抽帧不是 JPEG"}
+            os.replace(tmp, dst)
+            return {**item, "state": "新建", "how": "frame", "frames": 1,
+                    "bytes": dst.lstat().st_size}
+        except subprocess.CalledProcessError as exc:
+            tmp.unlink(missing_ok=True)
+            return {**item, "state": "ffmpeg 失败", "error": str(exc)[:120]}
+
     want = (item["end_frame"] - item["start_frame"] + 1
             if item["start_frame"] is not None else frames_of(src))
 
@@ -120,8 +154,7 @@ def main() -> int:
     if limit:
         media = media[:limit]
 
-    clips = sum(1 for m in media if m["kind"] == "clip")
-    print(f"素材 {len(media)} 项：{clips} 段切片 + {len(media) - clips} 个全长视频")
+    print(f"素材 {len(media)} 项：{dict(Counter(m['kind'] for m in media))}")
     if "--dry-run" in sys.argv:
         for m in media[:5]:
             print(f"  {m['key']}  ←  {m['source']}"
@@ -148,8 +181,9 @@ def main() -> int:
 
     # 清单里没有了但盘上还在的 —— 上一版计划的残留。**删掉并报告**，
     # 留着会让「assets 目录里有什么」与「题目引用什么」悄悄分叉。
-    want = {f"{m['key']}.mp4" for m in plan["media"]}
-    orphan = [p for p in OUT.rglob("*.mp4") if str(p.relative_to(OUT)) not in want]
+    want = {f"{m['key']}.{'jpg' if m['kind'] == 'frame' else 'mp4'}" for m in plan["media"]}
+    orphan = [p for p in OUT.rglob("*") if p.is_file()
+              and str(p.relative_to(OUT)) not in want]
     for p in orphan:
         p.unlink()
     if orphan:

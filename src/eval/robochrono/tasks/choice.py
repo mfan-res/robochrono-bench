@@ -215,11 +215,12 @@ def media_head_and_options(item: dict[str, Any], prompt: str) -> list[dict[str, 
     """left_right：head 图 + 逐个带标注的选项图。"""
     data = item.get("input", {})
     head = data.get("image_path") or (data.get("head_image") or {}).get("image_path")
-    parts: list[dict[str, Any]] = [
-        text_part("Head camera image:"),
-        image_part(head),
-        text_part("Candidate options:"),
-    ]
+    # 没有主视角就【不放】主视角，而不是拿 None 去做图片。
+    # ⑤ 的盲基线正是靠这条走完全相同的代码路径 —— 不必为验题另写一套 harness。
+    parts: list[dict[str, Any]] = []
+    if head:
+        parts += [text_part("Head camera image:"), image_part(head)]
+    parts.append(text_part("Candidate options:"))
     parts.extend(_option_image_parts(item))
     parts.append(text_part(prompt))
     return parts
@@ -229,13 +230,10 @@ def media_clip_and_options(item: dict[str, Any], prompt: str) -> list[dict[str, 
     """image_in_video：clip 视频 + 逐个带标注的选项图。"""
     data = item.get("input", {})
     clip = data.get("clip_path") or data.get("video_path")
-    if not clip:
-        raise ValueError(f"item {item.get('id')} has no input.clip_path")
-    parts: list[dict[str, Any]] = [
-        text_part("Left-eye video clip:"),
-        video_part(clip),
-        text_part("Candidate option images:"),
-    ]
+    parts: list[dict[str, Any]] = []
+    if clip:
+        parts += [text_part("Left-eye video clip:"), video_part(clip)]
+    parts.append(text_part("Candidate option images:"))
     parts.extend(_option_image_parts(item))
     parts.append(text_part(prompt))
     return parts

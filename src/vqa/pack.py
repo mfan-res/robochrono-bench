@@ -75,6 +75,28 @@ def project(item: dict[str, Any], out_dir: Path) -> dict[str, Any]:
     prov = item["provenance"]
     media = item["prompt"]["media"]
     rel = [os.path.relpath(ROOT / m["path"], out_dir) for m in media]
+
+    # 图选项题型：题面媒体与选项图分开挂。评测端读的是
+    #   left_right      input.image_path（主视角图）+ options[].image_path
+    #   image_in_video  input.clip_path（片段）      + options[].image_path
+    opts = [m for m in media if m["role"].startswith("option:")]
+    if opts:
+        head = next(m for m in media if not m["role"].startswith("option:"))
+        head_key = "clip_path" if head["kind"] == "video" else "image_path"
+        row: dict[str, Any] = {
+            "id": item["id"],
+            "video_id": f"{item['family']}/{prov['episode']}",
+            "type": item["task"],
+            "question": item["prompt"]["stem"],      # 图选项不往题干里拼文字选项
+            "answer": item["truth"]["answer"],
+            "answer_text": item["truth"]["answer_text"],   # 图选项没有 option text，
+            "input": {head_key: os.path.relpath(ROOT / head["path"], out_dir)},
+            "options": [{"id": m["role"].split(":")[1],
+                         "image_path": os.path.relpath(ROOT / m["path"], out_dir)}
+                        for m in opts],
+        }
+        return row
+
     key = "video_path" if item["task"] == "time" else "clip_path"
 
     # **只发评测端真读的字段。** 逐个核对过源码：

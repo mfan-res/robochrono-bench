@@ -1,0 +1,2434 @@
+{
+ "items": [
+  {
+   "id": "gift_inhand/file-000/file-000@f000000@image_in_video",
+   "video_id": "gift_inhand/file-000",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-025/main/frame/000405-000405.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-000/main/frame/000067-000067.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-000/main/frame/000422-000422.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-026/main/frame/000152-000152.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-000/file-000@f000135@image_in_video",
+   "video_id": "gift_inhand/file-000",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-005/main/frame/000459-000459.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-000/main/frame/000257-000257.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-004/main/frame/000363-000363.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-005/main/frame/000119-000119.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-000/file-000@f000379@image_in_video",
+   "video_id": "gift_inhand/file-000",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-025/main/frame/000405-000405.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-024/main/frame/000561-000561.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-000/main/frame/000422-000422.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-000/main/frame/000067-000067.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-001/file-001@f000000@image_in_video",
+   "video_id": "gift_inhand/file-001",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-024/main/frame/000134-000134.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-001/main/frame/000395-000395.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-001/main/frame/000071-000071.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-023/main/frame/000345-000345.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-001/file-001@f000142@image_in_video",
+   "video_id": "gift_inhand/file-001",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-005/main/frame/000321-000321.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-001/main/frame/000238-000238.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-004/main/frame/000520-000520.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-006/main/frame/000084-000084.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-001/file-001@f000334@image_in_video",
+   "video_id": "gift_inhand/file-001",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-029/main/frame/000341-000341.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-001/main/frame/000071-000071.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-001/main/frame/000395-000395.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-000/main/frame/000067-000067.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-002/file-002@f000000@image_in_video",
+   "video_id": "gift_inhand/file-002",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-016/main/frame/000124-000124.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-002/main/frame/000075-000075.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-002/main/frame/000426-000426.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-015/main/frame/000362-000362.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-002/file-002@f000150@image_in_video",
+   "video_id": "gift_inhand/file-002",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-010/main/frame/000382-000382.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-009/main/frame/000178-000178.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-009/main/frame/000604-000604.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-002/main/frame/000263-000263.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-002/file-002@f000376@image_in_video",
+   "video_id": "gift_inhand/file-002",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-015/main/frame/000362-000362.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-002/main/frame/000075-000075.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-014/main/frame/000559-000559.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-002/main/frame/000426-000426.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-003/file-003@f000000@image_in_video",
+   "video_id": "gift_inhand/file-003",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-003/main/frame/000095-000095.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-011/main/frame/000450-000450.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-003/main/frame/000441-000441.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-012/main/frame/000347-000347.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-003/file-003@f000190@image_in_video",
+   "video_id": "gift_inhand/file-003",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-019/main/frame/000297-000297.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-018/main/frame/000444-000444.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-003/main/frame/000285-000285.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-018/main/frame/000096-000096.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-003/file-003@f000381@image_in_video",
+   "video_id": "gift_inhand/file-003",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-003/main/frame/000441-000441.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-028/main/frame/000429-000429.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-027/main/frame/000520-000520.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-003/main/frame/000095-000095.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-004/file-004@f000000@image_in_video",
+   "video_id": "gift_inhand/file-004",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-006/main/frame/000283-000283.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-004/main/frame/000136-000136.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-004/main/frame/000520-000520.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-005/main/frame/000459-000459.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-004/file-004@f000273@image_in_video",
+   "video_id": "gift_inhand/file-004",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-009/main/frame/000454-000454.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-008/main/frame/000142-000142.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-004/main/frame/000363-000363.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-008/main/frame/000548-000548.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-004/file-004@f000453@image_in_video",
+   "video_id": "gift_inhand/file-004",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-018/main/frame/000096-000096.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-004/main/frame/000520-000520.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-004/main/frame/000136-000136.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-017/main/frame/000575-000575.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-005/file-005@f000000@image_in_video",
+   "video_id": "gift_inhand/file-005",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-005/main/frame/000119-000119.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-004/main/frame/000136-000136.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-004/main/frame/000520-000520.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-005/main/frame/000459-000459.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-005/file-005@f000239@image_in_video",
+   "video_id": "gift_inhand/file-005",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-015/main/frame/000583-000583.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-017/main/frame/000205-000205.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-005/main/frame/000321-000321.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-016/main/frame/000355-000355.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-005/file-005@f000404@image_in_video",
+   "video_id": "gift_inhand/file-005",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-025/main/frame/000405-000405.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-005/main/frame/000459-000459.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-026/main/frame/000152-000152.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-005/main/frame/000119-000119.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-006/file-006@f000000@image_in_video",
+   "video_id": "gift_inhand/file-006",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-016/main/frame/000355-000355.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-015/main/frame/000583-000583.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-006/main/frame/000450-000450.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-006/main/frame/000084-000084.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-006/file-006@f000169@image_in_video",
+   "video_id": "gift_inhand/file-006",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-008/main/frame/000380-000380.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-007/main/frame/000097-000097.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-007/main/frame/000437-000437.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-006/main/frame/000283-000283.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-006/file-006@f000397@image_in_video",
+   "video_id": "gift_inhand/file-006",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-013/main/frame/000436-000436.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-013/main/frame/000071-000071.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-006/main/frame/000084-000084.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-006/main/frame/000450-000450.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-007/file-007@f000000@image_in_video",
+   "video_id": "gift_inhand/file-007",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-007/main/frame/000097-000097.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-027/main/frame/000520-000520.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-027/main/frame/000124-000124.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-007/main/frame/000437-000437.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-007/file-007@f000194@image_in_video",
+   "video_id": "gift_inhand/file-007",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-001/main/frame/000238-000238.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-000/main/frame/000067-000067.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-007/main/frame/000287-000287.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-000/main/frame/000422-000422.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-007/file-007@f000380@image_in_video",
+   "video_id": "gift_inhand/file-007",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-008/main/frame/000548-000548.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-008/main/frame/000142-000142.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-007/main/frame/000437-000437.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-007/main/frame/000097-000097.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-008/file-008@f000000@image_in_video",
+   "video_id": "gift_inhand/file-008",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-007/main/frame/000437-000437.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-008/main/frame/000142-000142.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-007/main/frame/000097-000097.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-008/main/frame/000548-000548.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-008/file-008@f000284@image_in_video",
+   "video_id": "gift_inhand/file-008",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-005/main/frame/000119-000119.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-008/main/frame/000380-000380.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-004/main/frame/000363-000363.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-003/main/frame/000441-000441.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-008/file-008@f000476@image_in_video",
+   "video_id": "gift_inhand/file-008",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-008/main/frame/000142-000142.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-026/main/frame/000612-000612.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-008/main/frame/000548-000548.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-027/main/frame/000336-000336.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-009/file-009@f000000@image_in_video",
+   "video_id": "gift_inhand/file-009",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-002/main/frame/000263-000263.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-001/main/frame/000395-000395.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-009/main/frame/000178-000178.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-009/main/frame/000604-000604.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-009/file-009@f000356@image_in_video",
+   "video_id": "gift_inhand/file-009",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-018/main/frame/000096-000096.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-009/main/frame/000454-000454.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-016/main/frame/000530-000530.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-017/main/frame/000575-000575.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-009/file-009@f000552@image_in_video",
+   "video_id": "gift_inhand/file-009",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-009/main/frame/000604-000604.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-005/main/frame/000321-000321.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-004/main/frame/000520-000520.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-009/main/frame/000178-000178.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-010/file-010@f000000@image_in_video",
+   "video_id": "gift_inhand/file-010",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-017/main/frame/000575-000575.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-016/main/frame/000530-000530.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-010/main/frame/000091-000091.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-010/main/frame/000639-000639.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-010/file-010@f000182@image_in_video",
+   "video_id": "gift_inhand/file-010",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-011/main/frame/000075-000075.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-008/main/frame/000548-000548.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-009/main/frame/000454-000454.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-010/main/frame/000382-000382.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-010/file-010@f000583@image_in_video",
+   "video_id": "gift_inhand/file-010",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-007/main/frame/000097-000097.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-007/main/frame/000437-000437.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-010/main/frame/000639-000639.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-010/main/frame/000091-000091.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-011/file-011@f000000@image_in_video",
+   "video_id": "gift_inhand/file-011",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-004/main/frame/000363-000363.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-011/main/frame/000450-000450.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-011/main/frame/000075-000075.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-005/main/frame/000119-000119.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-011/file-011@f000150@image_in_video",
+   "video_id": "gift_inhand/file-011",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-011/main/frame/000255-000255.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-013/main/frame/000259-000259.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-014/main/frame/000559-000559.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-014/main/frame/000108-000108.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-011/file-011@f000361@image_in_video",
+   "video_id": "gift_inhand/file-011",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-024/main/frame/000561-000561.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-011/main/frame/000075-000075.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-011/main/frame/000450-000450.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-025/main/frame/000405-000405.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-012/file-012@f000000@image_in_video",
+   "video_id": "gift_inhand/file-012",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-012/main/frame/000092-000092.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-013/main/frame/000259-000259.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-012/main/frame/000573-000573.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-011/main/frame/000450-000450.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-012/file-012@f000185@image_in_video",
+   "video_id": "gift_inhand/file-012",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-012/main/frame/000347-000347.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-015/main/frame/000130-000130.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-016/main/frame/000355-000355.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-015/main/frame/000583-000583.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-012/file-012@f000510@image_in_video",
+   "video_id": "gift_inhand/file-012",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-012/main/frame/000092-000092.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-012/main/frame/000573-000573.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-028/main/frame/000165-000165.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-028/main/frame/000621-000621.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-013/file-013@f000000@image_in_video",
+   "video_id": "gift_inhand/file-013",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-013/main/frame/000436-000436.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-026/main/frame/000152-000152.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-026/main/frame/000612-000612.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-013/main/frame/000071-000071.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-013/file-013@f000142@image_in_video",
+   "video_id": "gift_inhand/file-013",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-021/main/frame/000449-000449.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-013/main/frame/000259-000259.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-023/main/frame/000123-000123.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-022/main/frame/000309-000309.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-013/file-013@f000376@image_in_video",
+   "video_id": "gift_inhand/file-013",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-003/main/frame/000441-000441.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-013/main/frame/000071-000071.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-013/main/frame/000436-000436.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-003/main/frame/000095-000095.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-014/file-014@f000000@image_in_video",
+   "video_id": "gift_inhand/file-014",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-014/main/frame/000108-000108.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-014/main/frame/000559-000559.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-029/main/frame/000139-000139.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-029/main/frame/000508-000508.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-014/file-014@f000216@image_in_video",
+   "video_id": "gift_inhand/file-014",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-028/main/frame/000165-000165.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-014/main/frame/000344-000344.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-029/main/frame/000341-000341.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-028/main/frame/000621-000621.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-014/file-014@f000473@image_in_video",
+   "video_id": "gift_inhand/file-014",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-010/main/frame/000639-000639.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-014/main/frame/000559-000559.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-014/main/frame/000108-000108.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-010/main/frame/000091-000091.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-015/file-015@f000000@image_in_video",
+   "video_id": "gift_inhand/file-015",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-020/main/frame/000439-000439.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-015/main/frame/000130-000130.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-020/main/frame/000116-000116.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-015/main/frame/000583-000583.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-015/file-015@f000261@image_in_video",
+   "video_id": "gift_inhand/file-015",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-004/main/frame/000520-000520.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-003/main/frame/000285-000285.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-004/main/frame/000136-000136.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-015/main/frame/000362-000362.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-015/file-015@f000464@image_in_video",
+   "video_id": "gift_inhand/file-015",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-015/main/frame/000130-000130.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-003/main/frame/000285-000285.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-015/main/frame/000583-000583.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-002/main/frame/000426-000426.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-016/file-016@f000000@image_in_video",
+   "video_id": "gift_inhand/file-016",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-004/main/frame/000520-000520.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-004/main/frame/000136-000136.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-016/main/frame/000124-000124.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-016/main/frame/000530-000530.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-016/file-016@f000249@image_in_video",
+   "video_id": "gift_inhand/file-016",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-016/main/frame/000355-000355.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-006/main/frame/000283-000283.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-007/main/frame/000437-000437.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-007/main/frame/000097-000097.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-016/file-016@f000461@image_in_video",
+   "video_id": "gift_inhand/file-016",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-016/main/frame/000124-000124.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-016/main/frame/000530-000530.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-019/main/frame/000439-000439.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-020/main/frame/000301-000301.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-017/file-017@f000000@image_in_video",
+   "video_id": "gift_inhand/file-017",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-010/main/frame/000091-000091.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-017/main/frame/000205-000205.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-009/main/frame/000454-000454.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-017/main/frame/000802-000802.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-017/file-017@f000410@image_in_video",
+   "video_id": "gift_inhand/file-017",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-004/main/frame/000136-000136.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-002/main/frame/000426-000426.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-017/main/frame/000575-000575.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-003/main/frame/000285-000285.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-017/file-017@f000740@image_in_video",
+   "video_id": "gift_inhand/file-017",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-024/main/frame/000364-000364.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-025/main/frame/000151-000151.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-017/main/frame/000205-000205.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-017/main/frame/000802-000802.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-018/file-018@f000000@image_in_video",
+   "video_id": "gift_inhand/file-018",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-017/main/frame/000205-000205.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-016/main/frame/000355-000355.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-018/main/frame/000444-000444.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-018/main/frame/000096-000096.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-018/file-018@f000192@image_in_video",
+   "video_id": "gift_inhand/file-018",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-020/main/frame/000301-000301.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-021/main/frame/000110-000110.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-021/main/frame/000449-000449.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-018/main/frame/000289-000289.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-018/file-018@f000387@image_in_video",
+   "video_id": "gift_inhand/file-018",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-018/main/frame/000096-000096.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-018/main/frame/000444-000444.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-000/main/frame/000257-000257.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-001/main/frame/000071-000071.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-019/file-019@f000000@image_in_video",
+   "video_id": "gift_inhand/file-019",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-019/main/frame/000439-000439.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-007/main/frame/000437-000437.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-008/main/frame/000380-000380.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-019/main/frame/000110-000110.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-019/file-019@f000220@image_in_video",
+   "video_id": "gift_inhand/file-019",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-019/main/frame/000297-000297.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-003/main/frame/000095-000095.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-001/main/frame/000395-000395.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-002/main/frame/000263-000263.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-019/file-019@f000375@image_in_video",
+   "video_id": "gift_inhand/file-019",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-019/main/frame/000110-000110.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-022/main/frame/000309-000309.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-023/main/frame/000123-000123.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-019/main/frame/000439-000439.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-020/file-020@f000000@image_in_video",
+   "video_id": "gift_inhand/file-020",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-002/main/frame/000426-000426.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-002/main/frame/000075-000075.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-020/main/frame/000116-000116.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-020/main/frame/000439-000439.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-020/file-020@f000232@image_in_video",
+   "video_id": "gift_inhand/file-020",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-019/main/frame/000110-000110.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-021/main/frame/000295-000295.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-019/main/frame/000439-000439.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-020/main/frame/000301-000301.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-020/file-020@f000371@image_in_video",
+   "video_id": "gift_inhand/file-020",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-020/main/frame/000116-000116.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-019/main/frame/000110-000110.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-020/main/frame/000439-000439.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-019/main/frame/000439-000439.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-021/file-021@f000000@image_in_video",
+   "video_id": "gift_inhand/file-021",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-022/main/frame/000431-000431.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-021/main/frame/000110-000110.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-022/main/frame/000124-000124.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-021/main/frame/000449-000449.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-021/file-021@f000221@image_in_video",
+   "video_id": "gift_inhand/file-021",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-001/main/frame/000395-000395.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-002/main/frame/000263-000263.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-003/main/frame/000095-000095.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-021/main/frame/000295-000295.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-021/file-021@f000370@image_in_video",
+   "video_id": "gift_inhand/file-021",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-021/main/frame/000110-000110.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-028/main/frame/000429-000429.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-021/main/frame/000449-000449.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-027/main/frame/000520-000520.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-022/file-022@f000000@image_in_video",
+   "video_id": "gift_inhand/file-022",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-022/main/frame/000431-000431.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-003/main/frame/000095-000095.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-022/main/frame/000124-000124.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-003/main/frame/000441-000441.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-022/file-022@f000249@image_in_video",
+   "video_id": "gift_inhand/file-022",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-020/main/frame/000301-000301.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-021/main/frame/000110-000110.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-021/main/frame/000449-000449.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-022/main/frame/000309-000309.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-022/file-022@f000370@image_in_video",
+   "video_id": "gift_inhand/file-022",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-022/main/frame/000124-000124.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-022/main/frame/000431-000431.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-024/main/frame/000134-000134.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-023/main/frame/000345-000345.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-023/file-023@f000000@image_in_video",
+   "video_id": "gift_inhand/file-023",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-003/main/frame/000095-000095.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-023/main/frame/000513-000513.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-023/main/frame/000123-000123.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-002/main/frame/000263-000263.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-023/file-023@f000247@image_in_video",
+   "video_id": "gift_inhand/file-023",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-017/main/frame/000802-000802.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-023/main/frame/000345-000345.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-016/main/frame/000355-000355.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-017/main/frame/000205-000205.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-023/file-023@f000443@image_in_video",
+   "video_id": "gift_inhand/file-023",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-023/main/frame/000513-000513.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-007/main/frame/000097-000097.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-007/main/frame/000437-000437.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-023/main/frame/000123-000123.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-024/file-024@f000000@image_in_video",
+   "video_id": "gift_inhand/file-024",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-024/main/frame/000134-000134.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-007/main/frame/000437-000437.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-007/main/frame/000097-000097.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-024/main/frame/000561-000561.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-024/file-024@f000269@image_in_video",
+   "video_id": "gift_inhand/file-024",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-026/main/frame/000612-000612.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-024/main/frame/000364-000364.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-028/main/frame/000165-000165.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-027/main/frame/000336-000336.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-024/file-024@f000460@image_in_video",
+   "video_id": "gift_inhand/file-024",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-029/main/frame/000341-000341.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-028/main/frame/000621-000621.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-024/main/frame/000561-000561.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-024/main/frame/000134-000134.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-025/file-025@f000000@image_in_video",
+   "video_id": "gift_inhand/file-025",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-017/main/frame/000802-000802.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-018/main/frame/000289-000289.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-025/main/frame/000622-000622.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-025/main/frame/000151-000151.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-025/file-025@f000303@image_in_video",
+   "video_id": "gift_inhand/file-025",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-020/main/frame/000116-000116.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-019/main/frame/000297-000297.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-018/main/frame/000444-000444.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-025/main/frame/000405-000405.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-025/file-025@f000507@image_in_video",
+   "video_id": "gift_inhand/file-025",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-006/main/frame/000084-000084.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-025/main/frame/000622-000622.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-025/main/frame/000151-000151.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-006/main/frame/000450-000450.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-026/file-026@f000000@image_in_video",
+   "video_id": "gift_inhand/file-026",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-016/main/frame/000530-000530.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-026/main/frame/000152-000152.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-026/main/frame/000612-000612.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-016/main/frame/000124-000124.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-026/file-026@f000304@image_in_video",
+   "video_id": "gift_inhand/file-026",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-016/main/frame/000355-000355.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-015/main/frame/000130-000130.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-015/main/frame/000583-000583.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-026/main/frame/000407-000407.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-026/file-026@f000510@image_in_video",
+   "video_id": "gift_inhand/file-026",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-003/main/frame/000441-000441.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-026/main/frame/000152-000152.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-003/main/frame/000095-000095.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-026/main/frame/000612-000612.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-027/file-027@f000000@image_in_video",
+   "video_id": "gift_inhand/file-027",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-015/main/frame/000362-000362.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-016/main/frame/000124-000124.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-027/main/frame/000520-000520.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-027/main/frame/000124-000124.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-027/file-027@f000248@image_in_video",
+   "video_id": "gift_inhand/file-027",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-028/main/frame/000429-000429.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-026/main/frame/000152-000152.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-026/main/frame/000612-000612.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-027/main/frame/000336-000336.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-027/file-027@f000424@image_in_video",
+   "video_id": "gift_inhand/file-027",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-020/main/frame/000116-000116.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-019/main/frame/000297-000297.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-027/main/frame/000520-000520.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-027/main/frame/000124-000124.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-028/file-028@f000000@image_in_video",
+   "video_id": "gift_inhand/file-028",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-028/main/frame/000165-000165.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-028/main/frame/000621-000621.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-020/main/frame/000301-000301.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-019/main/frame/000439-000439.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-028/file-028@f000330@image_in_video",
+   "video_id": "gift_inhand/file-028",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-028/main/frame/000429-000429.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-021/main/frame/000449-000449.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-020/main/frame/000301-000301.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-021/main/frame/000110-000110.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-028/file-028@f000529@image_in_video",
+   "video_id": "gift_inhand/file-028",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-013/main/frame/000071-000071.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-028/main/frame/000165-000165.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-012/main/frame/000347-000347.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-028/main/frame/000621-000621.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-029/file-029@f000000@image_in_video",
+   "video_id": "gift_inhand/file-029",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-029/main/frame/000139-000139.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-009/main/frame/000604-000604.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-029/main/frame/000508-000508.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-009/main/frame/000178-000178.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-029/file-029@f000279@image_in_video",
+   "video_id": "gift_inhand/file-029",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-029/main/frame/000341-000341.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-023/main/frame/000123-000123.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-022/main/frame/000309-000309.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-021/main/frame/000449-000449.jpg"
+    }
+   ]
+  },
+  {
+   "id": "gift_inhand/file-029/file-029@f000403@image_in_video",
+   "video_id": "gift_inhand/file-029",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/gift_inhand/file-002/main/frame/000075-000075.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/gift_inhand/file-001/main/frame/000238-000238.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/gift_inhand/file-029/main/frame/000139-000139.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/gift_inhand/file-029/main/frame/000508-000508.jpg"
+    }
+   ]
+  }
+ ]
+}
