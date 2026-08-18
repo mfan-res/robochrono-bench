@@ -37,3 +37,8 @@ __pycache__/
 .DS_Store
 *.part
 *.part.mp4
+
+# 评测用的 python 环境（两套，各 5.6 GB）——
+# 15 个模型没有一个 transformers 版本能全覆盖，所以必须多套。
+# 用 src/eval/tools/setup_envs.sh 重建，不进 git。
+src/eval/.venvs/
