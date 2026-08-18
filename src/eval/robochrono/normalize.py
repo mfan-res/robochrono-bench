@@ -380,7 +380,7 @@ def normalize_family(
 
         items = load_items(qa_path)
         stats = ResolveStats()
-        resolve_items(items, index_for_qa(qa_path), stats)
+        resolve_items(items, index_for_qa(qa_path), stats, base=qa_path.parent)
 
         run_report = RunReport(items=len(items), media=stats.total,
                                unresolved=len(stats.unresolved),

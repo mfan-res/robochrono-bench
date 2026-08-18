@@ -167,6 +167,7 @@ def resolve_items(
     items: list[dict[str, Any]],
     index: MediaIndex,
     stats: ResolveStats | None = None,
+    base: Path | None = None,
 ) -> list[dict[str, Any]]:
     """就地解析 items 里的媒体路径（返回同一批对象）。"""
     stats = stats if stats is not None else ResolveStats()
@@ -181,6 +182,17 @@ def resolve_items(
             stats.already_ok += 1
             cache[value] = value
             return value
+        # ── 相对 QA 文件所在目录 ────────────────────────────────
+        # 放在文件名索引【之前】。文件名索引是 v1 的做法（媒体就散在 QA 目录里），
+        # 对新数据既找不到、又危险 —— 新切片叫 `000163-000264.mp4` 这种纯帧号，
+        # **跨族必然重名**，索引搜到了也可能给出别的族那一份。
+        # 相对 QA 文件解析既准确又可移植，换机器不用重新生成 QA。
+        if base is not None:
+            near = (base / value).resolve()
+            if near.exists():
+                stats.resolved += 1
+                cache[value] = str(near)
+                return str(near)
         name = Path(value.replace("\\", "/")).name
         found, count = index.lookup(value, index.prefer_group)
         if found is not None:

@@ -152,7 +152,8 @@ def load_run_items(datasets_root: Any, family: str, run: str,
 
         path = qa_path(root, family, run)
         items = load_items(path)
-        resolve_items(items, index_for_qa(path))
+        # base=QA 文件所在目录 —— 让媒体可以写成相对它的路径（见 mediaindex）
+        resolve_items(items, index_for_qa(path), base=path.parent)
         return items
 
     if source != "normalized":
@@ -193,6 +194,16 @@ def qa_path(datasets_root: Any, family: str, run: str) -> Any:
     而报错至少能被发现。
     """
     from pathlib import Path
+
+    from pathlib import Path as _Path
+
+    # ── 新布局优先：<root>/<族>/<题型>.json ──────────────────────────
+    # v1 那层「组」（understanding / planning）是历史约定，不是结构 ——
+    # time 归 understanding、step_order 归 planning，纯粹因为当初谁先做。
+    # 新数据用扁平布局，一眼看得出谁是谁；v1 的数据继续走下面的兜底。
+    flat = _Path(datasets_root) / family / f"{run}.json"
+    if flat.exists():
+        return flat
 
     filename = QA_FILENAME[run]
     family_root = Path(datasets_root) / "QA" / QA_GROUP[run] / family

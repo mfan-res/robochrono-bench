@@ -20,25 +20,26 @@ v1 的 time 题在 `input` 里带着 `start` / `end`，而那**恰好等于答�
 本步不发这两个字段。已确认评测端不读它们 ——
 `time_eqa.py` 里对 `start`/`end` 的读取全部是在解析**模型输出**，不是读题目。
 
-媒体路径写**绝对路径**
-----------------------
-评测端解析媒体的顺序是：先按 CWD 试这个路径，不行就**按文件名**在
-`QA/<组>/<族>/` 下建索引找。我们的素材在 QA 树之外，两条都不通；
-而文件名索引对我们尤其危险 —— `000163-000264.mp4` 这种名字**跨族会重名**，
-索引只会报「多处同名」然后放弃，或者更糟，选错一个。
+媒体路径：相对 QA 文件所在目录
+------------------------------
+v1 的解析顺序是「先按 CWD 试，不行就**按文件名**在 QA 目录下索引」——
+因为 v1 的媒体就散在 QA 目录里。对新数据这条既找不到（素材在 `data/vqa/assets/`）
+又危险：新切片叫 `000163-000264.mp4` 这种纯帧号，**跨族必然重名**，
+索引搜到了也可能给出别的族那一份。
 
-> BC-08 的教训是「不要把绝对路径**就地写进只读的源 QA 文件**」——
-> 那会掩盖差别且不可逆。本步的产物是**投影**，一条命令重生成，
-> 写绝对路径不涉及那个问题。换机器重跑 `pack.py --write` 即可。
+评测端已在文件名索引**之前**加了一步「相对 QA 文件解析」。
+所以这里写相对路径 —— **可移植，换机器不用重生成**。
+（一度改成写绝对路径能跑通，但那是绕过问题不是解决问题。）
 
-输出布局由**评测端的函数决定**，不由我猜
-------------------------------------
-`data/vqa/eval/QA/<组>/<族>/<文件名>`，其中「组」与「文件名」直接从
-`robochrono.tasks` 的 `QA_GROUP` / `QA_FILENAME` 取。
+输出布局：扁平的 `<族>/<题型>.json`
+--------------------------------
+v1 的布局是 `QA/<组>/<族>/<题型>_vqa.json`，其中那层「组」
+（understanding / planning）是历史约定不是结构 —— `time` 归 understanding、
+`step_order` 归 planning，纯粹因为当初谁先做。而且 v1 里**一半的族还多嵌了
+一层子目录、层名还不统一**，`qa_path()` 为此专门带了一段递归兜底。
 
-**第一版我按「看起来同构」自己拼了 `<族>/<题型>.json`，结果 preflight 报
-408 个组合全部「QA 文件缺失」。** 消费者怎么找文件是消费者的事 ——
-导入它的映射表，不要照着样例反推。
+新数据不继承这些。评测端的 `qa_path()` 已改成**扁平布局优先、v1 布局兜底**，
+所以两边都能读，v1 的夹具与六套回归一行未改。
 """
 
 from __future__ import annotations
@@ -54,9 +55,7 @@ ROOT = Path(__file__).resolve().parents[2]
 ITEMS = ROOT / "data" / "vqa" / "items.jsonl"
 OUT = ROOT / "data" / "vqa" / "eval"
 
-# 布局映射从评测端导入，不在这里另写一份
-sys.path.insert(0, str(ROOT / "src" / "eval"))
-from robochrono.tasks import QA_FILENAME, QA_GROUP  # noqa: E402
+
 
 
 def render(stem: str, options: list[dict[str, Any]]) -> str:
@@ -75,7 +74,7 @@ def render(stem: str, options: list[dict[str, Any]]) -> str:
 def project(item: dict[str, Any], out_dir: Path) -> dict[str, Any]:
     prov = item["provenance"]
     media = item["prompt"]["media"]
-    rel = [str((ROOT / m["path"]).resolve()) for m in media]
+    rel = [os.path.relpath(ROOT / m["path"], out_dir) for m in media]
     key = "video_path" if item["task"] == "time" else "clip_path"
 
     row: dict[str, Any] = {
@@ -118,7 +117,7 @@ def main() -> int:
     problems: list[str] = []
 
     for (family, task), rows in sorted(groups.items()):
-        out_dir = OUT / "QA" / QA_GROUP[task] / family
+        out_dir = OUT / family
         packed = [project(i, out_dir) for i in rows]
 
         # ── 出厂检查 ──
@@ -127,7 +126,7 @@ def main() -> int:
                 if k in p["input"]:
                     problems.append(f"{p['id']}: input 里出现了 {k}（可反推答案）")
             for r in [v for v in p["input"].values() if isinstance(v, str)]:
-                if not Path(r).exists():
+                if not (out_dir / r).resolve().exists():
                     problems.append(f"{p['id']}: 媒体解析不到 {r}")
             if p["question"].count("Options:") > 1:
                 problems.append(f"{p['id']}: 题干里重复出现 Options:")
@@ -136,10 +135,10 @@ def main() -> int:
                 if p["answer"] not in {o["id"] for o in p["options"]}:
                     problems.append(f"{p['id']}: answer 不在 options 里")
 
-        written.append((family, task, len(packed), out_dir / QA_FILENAME[task]))
+        written.append((family, task, len(packed), out_dir / f"{task}.json"))
         if "--write" in sys.argv:
             out_dir.mkdir(parents=True, exist_ok=True)
-            (out_dir / QA_FILENAME[task]).write_text(
+            (out_dir / f"{task}.json").write_text(
                 json.dumps({"items": packed}, ensure_ascii=False, indent=1) + "\n",
                 encoding="utf-8")
 
