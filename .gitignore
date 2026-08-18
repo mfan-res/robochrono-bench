@@ -42,3 +42,12 @@ __pycache__/
 # 15 个模型没有一个 transformers 版本能全覆盖，所以必须多套。
 # 用 src/eval/tools/setup_envs.sh 重建，不进 git。
 src/eval/.venvs/
+
+# ── 出题的可再生中间件 ──────────────────────────────
+# frames.json 是 19 MB 的像素描述子，完全可由 data/source + index.json 重算。
+# **判据另存 build/frames_floors.json 并进 git** —— 要被 review 的是那几个数字。
+build/frames.json
+# 盲测件 = data/vqa/eval 挖掉 input，由 src/vqa/blind_image.py 生成
+build/blind_v2/
+# 指向 data/vqa/assets 的软链（那边已 ignore）
+build/assets

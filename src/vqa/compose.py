@@ -196,6 +196,45 @@ def main() -> int:
     print(f"  ⑤ 答案位置   {dict(sorted(pos.items()))}  极差 {spread:.1%}"
           + ("  ⚠ 偏斜" if spread > 0.03 else "  ✓"))
 
+    # ⑥ 图选项：每道题的正确项与每一条干扰项都必须够不像（D-56）。
+    # **这条是出厂检查而不是只在 plan 里判** —— plan 里的判据将来若被绕开
+    # （换挑选策略、加新题型），这里会立刻报出来。
+    frames_path = BUILD / "frames.json"
+    if frames_path.exists():
+        payload = json.loads(frames_path.read_text(encoding="utf-8"))
+        desc, floors = payload["descriptors"], payload["floors"]
+
+        def key_of(path: str) -> str | None:
+            return path.split("assets/", 1)[1].rsplit(".", 1)[0] if "assets/" in path else None
+
+        def dist(a: list[int], b: list[int]) -> float:
+            return (sum((x - y) ** 2 for x, y in zip(a, b)) / len(a)) ** 0.5
+
+        near = []
+        checked = 0
+        for item in items:
+            opts = [m for m in item["prompt"]["media"] if m["role"].startswith("option:")]
+            if not opts:
+                continue
+            ans = f"option:{item['truth']['answer']}"
+            akey = next((key_of(m["path"]) for m in opts if m["role"] == ans), None)
+            if akey is None or akey not in desc:
+                continue
+            views = {key_of(m["path"]).split("/")[2] for m in opts if key_of(m["path"])}
+            floor = min((floors[f"{item['family']}/{v}"] for v in views
+                         if f"{item['family']}/{v}" in floors), default=0.0)
+            checked += 1
+            for m in opts:
+                k = key_of(m["path"])
+                if m["role"] == ans or k not in desc:
+                    continue
+                if dist(desc[akey], desc[k]) < floor - 1e-6:
+                    near.append(f"{item['id']} 的 {m['role']}")
+                    break
+        print(f"  ⑥ 图选项够不像 {'✓' if not near else f'✗ {len(near)}'}"
+              f"　（查了 {checked} 道）")
+        bad += [f"干扰项与正确项画面差不足: {x}" for x in near[:5]]
+
     by_task = Counter(i["task"] for i in items)
     print(f"\n  题型 {dict(by_task)}")
     print(f"  组数 {len({i['group'] for i in items})}"
