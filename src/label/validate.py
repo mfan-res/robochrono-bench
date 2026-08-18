@@ -74,38 +74,21 @@ class Report:
         self.findings.append(Finding(kind, family, episode, detail))
 
 
-def episode_bounds(family: str) -> dict[str, list[tuple[float, float]]]:
-    """从 LeRobot 的 meta/episodes 读各视频里 episode 的时间区间。
-
-    ⚠ parquet 里有多个 ``*_file_index`` 列（``data/…`` 与 ``videos/<view>/…``）。
-    **必须显式取 ``videos/`` 开头的那一列** —— 取错会把「状态打包成一个 parquet」
-    误读成「一个视频装 40 轮」（D-19 记过这个坑）。
-
-    ⚠ 元表本身不完整：tea/wash 只记了 10 集而实际有 39/40。
-    所以查不到的视频返回**空**，调用方必须把「查不到」与「只有一集」区别对待。
-    """
-    tables = list((RAW / family / "meta" / "episodes").rglob("*.parquet"))
-    if not tables:
-        return {}
-    try:
-        import pyarrow.parquet as pq
-    except ImportError:
-        return {}
-    frame = pq.read_table(tables[0]).to_pandas()
-    cols = {suffix: next((c for c in frame.columns
-                          if c.startswith("videos/") and c.endswith(suffix)), None)
-            for suffix in ("file_index", "from_timestamp", "to_timestamp")}
-    if not all(cols.values()):
-        return {}
-    out: dict[str, list[tuple[float, float]]] = defaultdict(list)
-    for _, row in frame.iterrows():
-        key = f"file-{int(row[cols['file_index']]):03d}"
-        out[key].append((float(row[cols["from_timestamp"]]), float(row[cols["to_timestamp"]])))
-    return {k: sorted(v) for k, v in out.items()}
+# `episode_bounds` 只有一份实现，在 `src/vqa/index.py`。
+# **这里曾经自己抄了一份**，于是那份里的两个 bug（只读第一个 parquet、
+# 靠列顺序猜主视角）在 index.py 修好之后仍然留在这里 ——
+# 正是「同一个东西存两份，不一致时不报错」的现场（D-42）。
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "vqa"))
+from index import episode_bounds  # noqa: E402
 
 
 def check_family(family: str, report: Report) -> None:
     base = LABEL / family
+    # 缺 subtasks.json 说明这个目录不是一个成形的族（例如刚删了一半）。
+    # **报告，不崩溃** —— 崩溃会让其余六族的检查结果一起拿不到。
+    if not (base / "subtasks.json").exists():
+        report.add("引用", family, "-", "缺 subtasks.json，跳过该目录")
+        return
     subtasks = {s["id"] for s in
                 json.loads((base / "subtasks.json").read_text(encoding="utf-8"))["subtasks"]}
     bounds = episode_bounds(family)

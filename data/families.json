@@ -17,9 +17,11 @@
       "label_dir": "express_json",
       "raw": "gripper/express",
       "raw_incomplete": "上游仅 3–5 集，需 50 集",
-      "status": "excluded",
+      "status": "removed",
       "excluded_reason": "上游原片仅 4 集且视角不全，全视角齐的只有 2 集（需 50 集）。标注 50 份仍保留在 data/label/express/，等数据补齐后可直接启用。",
-      "excluded_at": "2026-08-17"
+      "excluded_at": "2026-08-17",
+      "removed_at_commit": "7068202",
+      "removed_note": "上游原片仅 3–5 集（需 50 集），无法重建，已从工作区删除。标注原件在 git 里：git show 7068202:data/label/express/<文件>"
     },
     "gift_inhand": {
       "qa": "gift_inhand",
@@ -50,13 +52,14 @@
       "qa": "tea2",
       "label_dir": "tea2_json",
       "raw": "gripper/tea2",
-      "status": "parked",
+      "status": "removed",
       "episode_cap": 20,
       "episode_cap_reason": "file-020 缺 wrist_right 视角，多视角任务出不了题。数据方生成 QA 时也跳过了这一集（num_missing_media_skipped），两边独立指向同一集。对齐到 20 集。",
       "excluded_episodes": [
         "file-020"
       ],
-      "parked_reason": "LeRobot 按【视角各自】算字节预算打包，手腕视角压缩率不同、装下的集数也不同 —— 从第 2 集起 wrist_left 就与 main 错开一个文件，因此 data/source/tea2/file-XXX/ 同一目录下的三个视角不是同一时刻的画面。加上一个文件装 2–3 集而只标了第一集（P-01），本族暂时移出出题范围。同事正在重切并重标，届时替换。见 D-42。"
+      "removed_at_commit": "7068202b6bba",
+      "removed_note": "data/source/tea2 与 data/label/tea2 已从工作区删除，等同事重切重标后替换。标注原件在 git 里，取回：git show <removed_at_commit>:data/label/tea2/<文件>"
     },
     "wash": {
       "qa": "wash",

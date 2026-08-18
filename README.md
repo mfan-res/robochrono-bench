@@ -137,20 +137,22 @@ schema 因此**显式拒绝**出题产物字段出现在标注里。
 ```bash
 pip install numpy pyarrow jsonschema        # 另需 ffmpeg / ffprobe
 
-python3 src/label/validate.py               # 标注六项核验（应报 64 条，见下）
+python3 src/label/validate.py               # 标注六项核验（应报 42 条，见下）
 python3 src/label/tests/test_core_replay.py # 语义回归（不需要视频）
 python3 src/label/serve.py --port 8000      # 网页标注器
 ```
 
-`validate.py` 报的 **64 条不是 bug，是待决策项** ——
+`validate.py` 报的 **42 条不是 bug，是待决策项** ——
 全部是数据固有、不可用工程手段消除的：
 
 ```
-tea2    20 条   视频是多集打包的，只标了第一个 episode
-express  2 条   同上（该族已退出）
-wash    40 条   每集重复动作 —— 洗两个盘子，同一动作做两遍
+wash    40 条   每集重复动作 —— 洗两个盘子，同一动作做两遍（P-05，待决）
 可疑     2 条   一个零长度标注段，疑似连按了两次
 ```
+
+> 此前是 64 条，多出的 22 条属于 tea2（20）与 express（2）。
+> 这两族已从 `data/` 移出（D-42 / 原片缺失），基线随之下降。
+> **移出前后 wash 与 pen_inbox 的条数一字未变** —— 这是「只少了该少的」的证据。
 
 **这个数字是基线。变多说明改坏了；变少多半是把检查弄失效了。**
 
