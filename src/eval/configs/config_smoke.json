@@ -17,7 +17,7 @@
   "providers": {
     "local_sensenova_si_1_1_internvl3_2b": {
       "type": "local_internvl",
-      "model": "eval/models/SenseNova-SI-1_1-InternVL3-2B",
+      "model": "../../models/SenseNova-SI-1_1-InternVL3-2B",
       "model_env": "SENSENOVA_SI_1_1_INTERNVL3_2B_MODEL_PATH",
       "temperature": 0.0,
       "max_new_tokens": 1024,

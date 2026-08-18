@@ -35,7 +35,7 @@
   "providers": {
     "local_sensenova_si_1_1_internvl3_2b": {
       "type": "local_internvl",
-      "model": "models/SenseNova-SI-1_1-InternVL3-2B",
+      "model": "../../models/SenseNova-SI-1_1-InternVL3-2B",
       "model_env": "SENSENOVA_SI_1_1_INTERNVL3_2B_MODEL_PATH",
       "temperature": 0.0,
       "max_new_tokens": 1024,
@@ -72,7 +72,7 @@
     },
     "local_rynnbrain_2b": {
       "type": "local_transformers_vlm",
-      "model": "models/RynnBrain-2B",
+      "model": "../../models/RynnBrain-2B",
       "model_env": "RYNNBRAIN_2B_MODEL_PATH",
       "temperature": 0.0,
       "max_new_tokens": 1024,
@@ -83,7 +83,7 @@
     },
     "local_cosmos3_edge_2b": {
       "type": "local_cosmos_transformers",
-      "model": "models/Cosmos3-Edge",
+      "model": "../../models/Cosmos3-Edge",
       "model_env": "COSMOS3_EDGE_MODEL_PATH",
       "timeout": 1800,
       "temperature": 0.0,
@@ -95,7 +95,7 @@
     },
     "local_qwen": {
       "type": "local_qwen",
-      "model": "models/Qwen3-VL-8B-Instruct",
+      "model": "../../models/Qwen3-VL-8B-Instruct",
       "model_env": "QWEN3_VL_MODEL_PATH",
       "temperature": 0.0,
       "max_new_tokens": 1024,
