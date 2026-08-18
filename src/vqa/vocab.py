@@ -150,7 +150,7 @@ def main() -> int:
     write = "--write" in sys.argv
     registry = json.loads((DATA / "families.json").read_text(encoding="utf-8"))["families"]
     active = sorted(f for f, v in registry.items()
-                    if v.get("status") != "excluded" and (DATA / "source" / f).is_dir())
+                    if v.get("status") not in ("excluded", "parked") and (DATA / "source" / f).is_dir())
 
     vocab = {"vocab_version": VOCAB_VERSION, "families": {}}
     misses: list[tuple[str, str, str]] = []

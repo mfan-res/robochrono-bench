@@ -58,6 +58,12 @@ BUILD = ROOT / "build"
 
 INDEX_VERSION = "1"
 
+# 物理视角名 → 逻辑名的映射**只有一份**，在 `migrate/fetch_raw.py`。
+# 这里导入而不是另写一份 —— 三个采集平台三套命名（top / left_eye / cam_color
+# 都是 main），各写一份迟早对不上，而对不上时不报错，只是元表「查不到」。
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "migrate"))
+from fetch_raw import VIEW_MAP  # noqa: E402
+
 
 def probe(path: Path) -> tuple[int, float]:
     """(帧数, 时长)。用容器元数据，不解码 —— `-count_frames` 会跑几十分钟。"""
@@ -75,10 +81,19 @@ def probe(path: Path) -> tuple[int, float]:
 def episode_bounds(family: str) -> dict[str, list[list[float]]]:
     """各视频里 episode 的时间区间。
 
-    ⚠ parquet 有多个 ``*_file_index`` 列，**必须取 ``videos/`` 开头那个** ——
-    取到 ``data/…`` 会把「状态打包成一个 parquet」误读成「一个视频装 40 轮」。
-    ⚠ 元表不完整（tea/wash 只记 10 集而实际 39/40）。查不到返回空，
-    调用方必须把「查不到」与「只有一集」区别对待。
+    ⚠ **`meta/episodes/` 下可能有多个 parquet，必须全读。**
+    stack_cubes 有 24 个、tea/wash 各 4 个。此前只读 `tables[0]`，
+    于是 tea/wash 只拿到 10 集、stack_cubes 只拿到 10 集 ——
+    **曾被记成「上游元表不完整」，其实是这里的 bug**（D-42）。
+    全读之后六个族都是每文件恰好一集，tea2 是唯一 1–3 集的。
+
+    ⚠ parquet 里 ``*_file_index`` 列有好几组：``data/…`` 一组，
+    **每个视角各一组**。取 ``data/…`` 会把「状态打包成一个 parquet」
+    误读成「一个视频装 40 轮」；而各视角那几组**取值互不相同**
+    （tea2 的 wrist_left 从第 2 集起就与 top 错开一个文件），
+    所以按 `MAIN_STREAM` 显式指定，不能「取第一个 videos/ 开头的」。
+
+    查不到仍返回空 —— 调用方必须把「查不到」与「只有一集」区别对待。
     """
     tables = list((DATA / "raw" / family / "meta" / "episodes").rglob("*.parquet"))
     if not tables:
@@ -87,9 +102,17 @@ def episode_bounds(family: str) -> dict[str, list[list[float]]]:
         import pyarrow.parquet as pq
     except ImportError:
         return {}
-    frame = pq.read_table(tables[0]).to_pandas()
+    import pandas
+    frame = pandas.concat([pq.read_table(t).to_pandas() for t in sorted(tables)],
+                          ignore_index=True)
+    prefix = next((f"videos/observation.images.{n}/" for n, logical in VIEW_MAP.items()
+                   if logical == "main"
+                   and any(c.startswith(f"videos/observation.images.{n}/")
+                           for c in frame.columns)), None)
+    if prefix is None:
+        return {}
     cols = {k: next((c for c in frame.columns
-                     if c.startswith("videos/") and c.endswith(k)), None)
+                     if c.startswith(prefix) and c.endswith(k)), None)
             for k in ("file_index", "from_timestamp", "to_timestamp")}
     if not all(cols.values()):
         return {}
@@ -196,7 +219,7 @@ def main() -> int:
     write = "--write" in sys.argv
     registry = json.loads((DATA / "families.json").read_text(encoding="utf-8"))["families"]
     active = {f: v for f, v in registry.items()
-              if v.get("status") != "excluded" and (DATA / "source" / f).is_dir()}
+              if v.get("status") not in ("excluded", "parked") and (DATA / "source" / f).is_dir()}
 
     index = {"index_version": INDEX_VERSION, "families": {}}
     print(f"{'族':<13}{'集':>4}{'段':>6}{'可用段':>7}{'跨度覆盖':>9}{'标注占比':>9}"

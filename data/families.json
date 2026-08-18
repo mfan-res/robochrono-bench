@@ -50,12 +50,13 @@
       "qa": "tea2",
       "label_dir": "tea2_json",
       "raw": "gripper/tea2",
-      "status": "active",
+      "status": "parked",
       "episode_cap": 20,
       "episode_cap_reason": "file-020 缺 wrist_right 视角，多视角任务出不了题。数据方生成 QA 时也跳过了这一集（num_missing_media_skipped），两边独立指向同一集。对齐到 20 集。",
       "excluded_episodes": [
         "file-020"
-      ]
+      ],
+      "parked_reason": "LeRobot 按【视角各自】算字节预算打包，手腕视角压缩率不同、装下的集数也不同 —— 从第 2 集起 wrist_left 就与 main 错开一个文件，因此 data/source/tea2/file-XXX/ 同一目录下的三个视角不是同一时刻的画面。加上一个文件装 2–3 集而只标了第一集（P-01），本族暂时移出出题范围。同事正在重切并重标，届时替换。见 D-42。"
     },
     "wash": {
       "qa": "wash",
