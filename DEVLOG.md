@@ -64,6 +64,51 @@
 
 ### 2026-08-17
 
+**D-43 · tea2 与 express 从 `data/` 移出；顺带查出 validate.py 抄了一份 episode_bounds**
+
+```
+data/source/tea2   11 GB   已删（可再生层，需要时重跑 normalize_source.py）
+data/label/tea2   240 KB   已删，**66 个文件在 git 里**
+data/label/express         已删，原片仅 3–5 集无法重建
+```
+
+**恢复命令**（标注是不可再生层，删了要能找回）：
+
+```bash
+git show 7068202:data/label/tea2/segments/file-000_segments.json
+git checkout 7068202 -- data/label/tea2 data/label/express
+```
+
+> 一句提醒已给出：删掉 tea2 标注后，同事重标时没有原件可参照。
+> 人已确认按此执行。
+
+### 校验器基线 64 → 42
+
+```
+歧义 40   wash 每集重复动作（P-05，待决）
+可疑  2   pen_inbox/file-037 零长度段
+污染 / 引用 / 派生 / 重叠 / 覆盖   全 0
+```
+
+**移出前后 wash 与 pen_inbox 的条数一字未变** —— 这是「只少了该少的」的证据，
+而不是「检查被弄失效了」。README / AGENTS.md 里写死的 64 已同步改成 42。
+
+> **族数变了就要连基线一起改。** 不改的话这个数字会变成「反正对不上」而被忽略，
+> 那就等于没有基线。
+
+### 又一次「同一个东西存两份」
+
+`validate.py` **自己抄了一份 `episode_bounds`**。于是 D-42 在 `index.py` 里
+修好的两个 bug（只读第一个 parquet、靠列顺序猜主视角）**在这一份里原封不动**。
+
+改为从 `vqa/index.py` 导入，只留一份实现。
+
+> 这已经是同一类问题的第三次：词表两套（D-04）、校验判据两套（③ 的教训）、
+> 现在是元表读取两套。**共同点是「两份都能跑通，不一致时不报错」。**
+
+顺带把 `check_family` 的崩溃改成报告 —— 目录缺 `subtasks.json` 时原本抛异常，
+**会让其余六族的检查结果一起拿不到**。
+
 **D-42 · tea2 移出出题范围；元表「不完整」其实是我们只读了第一个 parquet**
 
 按 D-41 动手切 tea2 时，**先在一个文件上测**（而不是直接跑全量），脚本失败并回滚。
