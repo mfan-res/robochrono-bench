@@ -1,0 +1,43 @@
+{
+  "corrections": [
+    {
+      "at": "2026-08-18T08:16:01+00:00",
+      "decided_by": "人（复核页 S1-A / S2-A / S3-A）",
+      "backup": "data/label/wash/segments.before_seqfix/",
+      "items": [
+        {
+          "episode": "file-009",
+          "kind": "改标签",
+          "changes": [
+            {
+              "id": "file-009@f001134",
+              "from": "wipe_bowl_with_brush",
+              "to": "wipe_plate_with_rag"
+            },
+            {
+              "id": "file-009@f001303",
+              "from": "put_bowl",
+              "to": "put_plate"
+            }
+          ],
+          "why": "抽帧确认机械臂拿着蓝盘子用粉抹布擦、并把盘子放进沥水架，两段标错了物体。由 validate.py 第七条「序列」检查发现（wipe bowl 但手里没有 bowl/brush；放下 bowl 但没拿起过）。",
+          "boundaries": "时间边界一字未动"
+        },
+        {
+          "episode": "file-030",
+          "kind": "补一段",
+          "added": {
+            "id": "file-030@f001097",
+            "subtask": "put_plate",
+            "start_frame": 1097,
+            "end_frame": 1232,
+            "start": 43.88,
+            "end": 49.32
+          },
+          "why": "两次 pick_plate 之间有 5.44 秒完全没有标注，抽帧确认机械臂正在把盘子放进沥水架。",
+          "boundaries": "⚠ 边界是【按空隙推断】的，不是人看着打的点 —— 取前一段 wipe_plate_with_rag 的末帧 +1 到后一段 pick_plate 的首帧 −1。如需精确边界应由标注员重打。"
+        }
+      ]
+    }
+  ]
+}

@@ -94,6 +94,16 @@
       "subtask": "wipe_plate_with_rag"
     },
     {
+      "id": "file-030@f001097",
+      "subtask": "put_plate",
+      "start_frame": 1097,
+      "end_frame": 1232,
+      "start": 43.88,
+      "end": 49.32,
+      "start_time": "00:00:43.880",
+      "end_time": "00:00:49.320"
+    },
+    {
       "id": "file-030@f001233",
       "start": 49.32,
       "end": 54.36,

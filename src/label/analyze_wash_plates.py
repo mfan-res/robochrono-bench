@@ -87,7 +87,23 @@ def two_blobs(mask: np.ndarray) -> list[tuple[int, int]] | None:
     if start is not None and cols[start:].sum() >= MIN_BLUE:
         spans.append((start, len(on)))
     spans.sort(key=lambda s: -cols[s[0]:s[1]].sum())
-    return sorted(spans[:2]) if len(spans) >= 2 else None
+    if len(spans) >= 2:
+        return sorted(spans[:2])
+    if not spans:
+        return None
+    # 只找到一团 —— 两个盘子挨在一起，中间没有空列（file-005 / 015 就是这样）。
+    # 在这一团内部找**蓝色最少的那一列**当谷底切开。只在两侧都够大时才接受，
+    # 否则说明它真的只是一个盘子。
+    a, b = spans[0]
+    inner = cols[a:b]
+    if b - a < 40:
+        return None
+    lo, hi = a + int((b - a) * 0.3), a + int((b - a) * 0.7)   # 谷底只可能在中段
+    cut = a + int(np.argmin(cols[lo:hi])) + (lo - a)
+    left, right = (a, cut), (cut, b)
+    if min(cols[left[0]:left[1]].sum(), cols[right[0]:right[1]].sum()) < MIN_BLUE:
+        return None
+    return [left, right]
 
 
 def decide(episode: str, size: tuple[int, int]) -> dict:
