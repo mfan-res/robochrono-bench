@@ -413,15 +413,51 @@
           }
         },
         {
-          "id": "pick_plate",
-          "text": "Pick the plate.",
-          "key": "pick plate",
+          "id": "pick_left_plate",
+          "text": "Pick the left plate.",
+          "key": "pick left plate",
           "verb": "pick",
-          "object": "plate",
+          "object": "left plate",
           "modifier": "",
           "cache_hit_v1": {
-            "planning": true,
-            "time_understanding": true
+            "planning": false,
+            "time_understanding": false
+          }
+        },
+        {
+          "id": "pick_right_plate",
+          "text": "Pick the right plate.",
+          "key": "pick right plate",
+          "verb": "pick",
+          "object": "right plate",
+          "modifier": "",
+          "cache_hit_v1": {
+            "planning": false,
+            "time_understanding": false
+          }
+        },
+        {
+          "id": "pick_far_plate",
+          "text": "Pick the far plate.",
+          "key": "pick far plate",
+          "verb": "pick",
+          "object": "far plate",
+          "modifier": "",
+          "cache_hit_v1": {
+            "planning": false,
+            "time_understanding": false
+          }
+        },
+        {
+          "id": "pick_near_plate",
+          "text": "Pick the near plate.",
+          "key": "pick near plate",
+          "verb": "pick",
+          "object": "near plate",
+          "modifier": "",
+          "cache_hit_v1": {
+            "planning": false,
+            "time_understanding": false
           }
         },
         {
@@ -437,27 +473,99 @@
           }
         },
         {
-          "id": "wipe_plate_with_rag",
-          "text": "Wipe the plate with rag.",
-          "key": "wipe plate with rag",
+          "id": "wipe_left_plate_with_rag",
+          "text": "Wipe the left plate with rag.",
+          "key": "wipe left plate with rag",
           "verb": "wipe",
-          "object": "plate",
+          "object": "left plate",
           "modifier": "with rag",
           "cache_hit_v1": {
-            "planning": true,
-            "time_understanding": true
+            "planning": false,
+            "time_understanding": false
           }
         },
         {
-          "id": "put_plate",
-          "text": "Put the plate.",
-          "key": "put plate",
+          "id": "wipe_right_plate_with_rag",
+          "text": "Wipe the right plate with rag.",
+          "key": "wipe right plate with rag",
+          "verb": "wipe",
+          "object": "right plate",
+          "modifier": "with rag",
+          "cache_hit_v1": {
+            "planning": false,
+            "time_understanding": false
+          }
+        },
+        {
+          "id": "wipe_far_plate_with_rag",
+          "text": "Wipe the far plate with rag.",
+          "key": "wipe far plate with rag",
+          "verb": "wipe",
+          "object": "far plate",
+          "modifier": "with rag",
+          "cache_hit_v1": {
+            "planning": false,
+            "time_understanding": false
+          }
+        },
+        {
+          "id": "wipe_near_plate_with_rag",
+          "text": "Wipe the near plate with rag.",
+          "key": "wipe near plate with rag",
+          "verb": "wipe",
+          "object": "near plate",
+          "modifier": "with rag",
+          "cache_hit_v1": {
+            "planning": false,
+            "time_understanding": false
+          }
+        },
+        {
+          "id": "put_left_plate",
+          "text": "Put the left plate.",
+          "key": "put left plate",
           "verb": "put",
-          "object": "plate",
+          "object": "left plate",
           "modifier": "",
           "cache_hit_v1": {
-            "planning": true,
-            "time_understanding": true
+            "planning": false,
+            "time_understanding": false
+          }
+        },
+        {
+          "id": "put_right_plate",
+          "text": "Put the right plate.",
+          "key": "put right plate",
+          "verb": "put",
+          "object": "right plate",
+          "modifier": "",
+          "cache_hit_v1": {
+            "planning": false,
+            "time_understanding": false
+          }
+        },
+        {
+          "id": "put_far_plate",
+          "text": "Put the far plate.",
+          "key": "put far plate",
+          "verb": "put",
+          "object": "far plate",
+          "modifier": "",
+          "cache_hit_v1": {
+            "planning": false,
+            "time_understanding": false
+          }
+        },
+        {
+          "id": "put_near_plate",
+          "text": "Put the near plate.",
+          "key": "put near plate",
+          "verb": "put",
+          "object": "near plate",
+          "modifier": "",
+          "cache_hit_v1": {
+            "planning": false,
+            "time_understanding": false
           }
         },
         {
@@ -479,17 +587,26 @@
         "pick": [
           "pick_brush",
           "pick_bowl",
-          "pick_plate",
+          "pick_left_plate",
+          "pick_right_plate",
+          "pick_far_plate",
+          "pick_near_plate",
           "pick_rag"
         ],
         "wipe": [
           "wipe_bowl_with_brush",
-          "wipe_plate_with_rag"
+          "wipe_left_plate_with_rag",
+          "wipe_right_plate_with_rag",
+          "wipe_far_plate_with_rag",
+          "wipe_near_plate_with_rag"
         ],
         "put": [
           "put_brush",
           "put_bowl",
-          "put_plate",
+          "put_left_plate",
+          "put_right_plate",
+          "put_far_plate",
+          "put_near_plate",
           "put_rag"
         ]
       },
@@ -503,10 +620,25 @@
           "wipe_bowl_with_brush",
           "put_bowl"
         ],
-        "plate": [
-          "pick_plate",
-          "wipe_plate_with_rag",
-          "put_plate"
+        "left plate": [
+          "pick_left_plate",
+          "wipe_left_plate_with_rag",
+          "put_left_plate"
+        ],
+        "right plate": [
+          "pick_right_plate",
+          "wipe_right_plate_with_rag",
+          "put_right_plate"
+        ],
+        "far plate": [
+          "pick_far_plate",
+          "wipe_far_plate_with_rag",
+          "put_far_plate"
+        ],
+        "near plate": [
+          "pick_near_plate",
+          "wipe_near_plate_with_rag",
+          "put_near_plate"
         ],
         "rag": [
           "pick_rag",

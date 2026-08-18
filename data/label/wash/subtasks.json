@@ -24,24 +24,61 @@
       "text": "Put the bowl."
     },
     {
-      "id": "pick_plate",
-      "text": "Pick the plate."
+      "id": "pick_left_plate",
+      "text": "Pick the left plate."
+    },
+    {
+      "id": "pick_right_plate",
+      "text": "Pick the right plate."
+    },
+    {
+      "id": "pick_far_plate",
+      "text": "Pick the far plate."
+    },
+    {
+      "id": "pick_near_plate",
+      "text": "Pick the near plate."
     },
     {
       "id": "pick_rag",
       "text": "Pick the rag."
     },
     {
-      "id": "wipe_plate_with_rag",
-      "text": "Wipe the plate with rag."
+      "id": "wipe_left_plate_with_rag",
+      "text": "Wipe the left plate with rag."
     },
     {
-      "id": "put_plate",
-      "text": "Put the plate."
+      "id": "wipe_right_plate_with_rag",
+      "text": "Wipe the right plate with rag."
+    },
+    {
+      "id": "wipe_far_plate_with_rag",
+      "text": "Wipe the far plate with rag."
+    },
+    {
+      "id": "wipe_near_plate_with_rag",
+      "text": "Wipe the near plate with rag."
+    },
+    {
+      "id": "put_left_plate",
+      "text": "Put the left plate."
+    },
+    {
+      "id": "put_right_plate",
+      "text": "Put the right plate."
+    },
+    {
+      "id": "put_far_plate",
+      "text": "Put the far plate."
+    },
+    {
+      "id": "put_near_plate",
+      "text": "Put the near plate."
     },
     {
       "id": "put_rag",
       "text": "Put the rag."
     }
-  ]
+  ],
+  "_plate_sides_note": "pick/wipe/put_plate 各拆成 left/right/far/near 四个 —— wash 每集洗两个盘子，不区分则时间类题真值不唯一（P-05）。38 集机位一致、盘子左右并排，用 left/right；file-000 与 file-001 机位不同、盘子前后排，用 far/near。哪个先拿由抽帧确认，见 corrections.json。"
 }

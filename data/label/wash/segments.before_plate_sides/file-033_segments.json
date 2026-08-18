@@ -1,0 +1,147 @@
+{
+  "source": {
+    "video": "wash/file-033/main.mp4",
+    "fps": 25,
+    "total_frames": 1917,
+    "tool_version": "upstream-video_labeler_timestamp/unknown",
+    "subtasks_sha256": "653e4e847ee5e52d",
+    "episode_bounds": [
+      [
+        0.0,
+        76.68
+      ]
+    ]
+  },
+  "segments": [
+    {
+      "id": "file-033@f000081",
+      "start": 3.24,
+      "end": 8.08,
+      "start_time": "00:00:03.240",
+      "end_time": "00:00:08.080",
+      "start_frame": 81,
+      "end_frame": 201,
+      "subtask": "pick_bowl"
+    },
+    {
+      "id": "file-033@f000201",
+      "start": 8.04,
+      "end": 16.36,
+      "start_time": "00:00:08.040",
+      "end_time": "00:00:16.360",
+      "start_frame": 201,
+      "end_frame": 408,
+      "subtask": "pick_brush"
+    },
+    {
+      "id": "file-033@f000408",
+      "start": 16.32,
+      "end": 24.44,
+      "start_time": "00:00:16.320",
+      "end_time": "00:00:24.440",
+      "start_frame": 408,
+      "end_frame": 610,
+      "subtask": "wipe_bowl_with_brush"
+    },
+    {
+      "id": "file-033@f000610",
+      "start": 24.4,
+      "end": 27.48,
+      "start_time": "00:00:24.400",
+      "end_time": "00:00:27.480",
+      "start_frame": 610,
+      "end_frame": 686,
+      "subtask": "put_brush"
+    },
+    {
+      "id": "file-033@f000686",
+      "start": 27.44,
+      "end": 32.64,
+      "start_time": "00:00:27.440",
+      "end_time": "00:00:32.640",
+      "start_frame": 686,
+      "end_frame": 815,
+      "subtask": "put_bowl"
+    },
+    {
+      "id": "file-033@f000836",
+      "start": 33.44,
+      "end": 37.72,
+      "start_time": "00:00:33.440",
+      "end_time": "00:00:37.720",
+      "start_frame": 836,
+      "end_frame": 942,
+      "subtask": "pick_plate"
+    },
+    {
+      "id": "file-033@f000942",
+      "start": 37.68,
+      "end": 40.76,
+      "start_time": "00:00:37.680",
+      "end_time": "00:00:40.760",
+      "start_frame": 942,
+      "end_frame": 1018,
+      "subtask": "pick_rag"
+    },
+    {
+      "id": "file-033@f001018",
+      "start": 40.72,
+      "end": 46.72,
+      "start_time": "00:00:40.720",
+      "end_time": "00:00:46.720",
+      "start_frame": 1018,
+      "end_frame": 1167,
+      "subtask": "wipe_plate_with_rag"
+    },
+    {
+      "id": "file-033@f001167",
+      "start": 46.68,
+      "end": 51.84,
+      "start_time": "00:00:46.680",
+      "end_time": "00:00:51.840",
+      "start_frame": 1167,
+      "end_frame": 1295,
+      "subtask": "put_plate"
+    },
+    {
+      "id": "file-033@f001295",
+      "start": 51.8,
+      "end": 55.56,
+      "start_time": "00:00:51.800",
+      "end_time": "00:00:55.560",
+      "start_frame": 1295,
+      "end_frame": 1388,
+      "subtask": "pick_plate"
+    },
+    {
+      "id": "file-033@f001388",
+      "start": 55.52,
+      "end": 62.48,
+      "start_time": "00:00:55.520",
+      "end_time": "00:01:02.480",
+      "start_frame": 1388,
+      "end_frame": 1561,
+      "subtask": "wipe_plate_with_rag"
+    },
+    {
+      "id": "file-033@f001561",
+      "start": 62.44,
+      "end": 65.28,
+      "start_time": "00:01:02.440",
+      "end_time": "00:01:05.280",
+      "start_frame": 1561,
+      "end_frame": 1631,
+      "subtask": "put_rag"
+    },
+    {
+      "id": "file-033@f001631",
+      "start": 65.24,
+      "end": 68.52,
+      "start_time": "00:01:05.240",
+      "end_time": "00:01:08.520",
+      "start_frame": 1631,
+      "end_frame": 1712,
+      "subtask": "put_plate"
+    }
+  ]
+}

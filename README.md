@@ -137,19 +137,25 @@ schema 因此**显式拒绝**出题产物字段出现在标注里。
 ```bash
 pip install numpy pyarrow jsonschema        # 另需 ffmpeg / ffprobe
 
-python3 src/label/validate.py               # 标注六项核验（应报 40 条，见下）
+python3 src/label/validate.py               # 标注六项核验（应为零条，见下）
 python3 src/label/tests/test_core_replay.py # 语义回归（不需要视频）
 python3 src/label/serve.py --port 8000      # 网页标注器
 ```
 
-`validate.py` 报 **40 条**，全部是 ⚠（待人判断），一集一条：
+`validate.py` **七条检查全部通过，零条发现。**
+
+一路降下来的过程：
 
 ```
-⚠ 歧义 40 条   wash 每集重复动作 —— 洗两个盘子，同一动作做两遍（P-05，处理中）
+64  →  42   tea2 与 express 移出 data/
+42  →  40   删掉 pen_inbox 的零长度段（标注连按两次 K）
+40  →  44   新增第七条「序列」检查，抓出 wash 两处真错误
+44  →  40   那两处已修（标错物体 / 漏标一段）
+40  →   0   P-05 解决：两个盘子加相对位置，最后一条合并了被切开的擦碗
 ```
 
-> 曾经的 4 条 ✗「序列」已修：file-009 两段标错物体、file-030 漏标一段。
-> **✗ 是必须修，⚠ 是待人判断** —— 现在没有 ✗ 了。
+**每一步都经人看图确认**，改动走「备份 → `corrections.json` → 回归」，
+时间轴一帧未动。**零是基线，出现任何一条都说明改坏了。**
 
 > 此前是 64 条，多出的 22 条属于 tea2（20）与 express（2）。
 > 这两族已从 `data/` 移出（D-42 / 原片缺失），基线随之下降。

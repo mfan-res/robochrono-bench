@@ -10130,18 +10130,11 @@
       "state": "已存在"
     },
     {
-      "key": "wash/file-026/main/clip/000303-000450",
+      "key": "wash/file-026/main/clip/000303-000523",
       "kind": "clip",
-      "frames": 148,
-      "bytes": 3055188,
-      "state": "已存在"
-    },
-    {
-      "key": "wash/file-026/main/clip/000450-000523",
-      "kind": "clip",
-      "frames": 74,
-      "bytes": 1499099,
-      "state": "已存在"
+      "frames": 221,
+      "bytes": 4533357,
+      "state": "新建"
     },
     {
       "key": "wash/file-026/main/clip/000523-000632",
@@ -10561,6 +10554,13 @@
       "kind": "clip",
       "frames": 137,
       "bytes": 2514662,
+      "state": "已存在"
+    },
+    {
+      "key": "wash/file-030/main/clip/001097-001232",
+      "kind": "clip",
+      "frames": 136,
+      "bytes": 2548739,
       "state": "已存在"
     },
     {

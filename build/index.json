@@ -18161,20 +18161,56 @@
           "text": "Put the bowl."
         },
         {
-          "id": "pick_plate",
-          "text": "Pick the plate."
+          "id": "pick_left_plate",
+          "text": "Pick the left plate."
+        },
+        {
+          "id": "pick_right_plate",
+          "text": "Pick the right plate."
+        },
+        {
+          "id": "pick_far_plate",
+          "text": "Pick the far plate."
+        },
+        {
+          "id": "pick_near_plate",
+          "text": "Pick the near plate."
         },
         {
           "id": "pick_rag",
           "text": "Pick the rag."
         },
         {
-          "id": "wipe_plate_with_rag",
-          "text": "Wipe the plate with rag."
+          "id": "wipe_left_plate_with_rag",
+          "text": "Wipe the left plate with rag."
         },
         {
-          "id": "put_plate",
-          "text": "Put the plate."
+          "id": "wipe_right_plate_with_rag",
+          "text": "Wipe the right plate with rag."
+        },
+        {
+          "id": "wipe_far_plate_with_rag",
+          "text": "Wipe the far plate with rag."
+        },
+        {
+          "id": "wipe_near_plate_with_rag",
+          "text": "Wipe the near plate with rag."
+        },
+        {
+          "id": "put_left_plate",
+          "text": "Put the left plate."
+        },
+        {
+          "id": "put_right_plate",
+          "text": "Put the right plate."
+        },
+        {
+          "id": "put_far_plate",
+          "text": "Put the far plate."
+        },
+        {
+          "id": "put_near_plate",
+          "text": "Put the near plate."
         },
         {
           "id": "put_rag",
@@ -18277,17 +18313,15 @@
             },
             {
               "id": "file-000@f001088",
-              "subtask": "pick_plate",
+              "subtask": "pick_far_plate",
               "episode_index": 0,
               "start_frame": 1088,
               "end_frame": 1324,
               "start": 43.52,
               "end": 53.0,
               "duration": 9.48,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-000@f001324",
@@ -18303,73 +18337,63 @@
             },
             {
               "id": "file-000@f001427",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_far_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1427,
               "end_frame": 1588,
               "start": 57.08,
               "end": 63.56,
               "duration": 6.48,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-000@f001588",
-              "subtask": "put_plate",
+              "subtask": "put_far_plate",
               "episode_index": 0,
               "start_frame": 1588,
               "end_frame": 1733,
               "start": 63.52,
               "end": 69.36,
               "duration": 5.84,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-000@f001733",
-              "subtask": "pick_plate",
+              "subtask": "pick_near_plate",
               "episode_index": 0,
               "start_frame": 1733,
               "end_frame": 1913,
               "start": 69.32,
               "end": 76.56,
               "duration": 7.24,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-000@f001914",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_near_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1914,
               "end_frame": 2079,
               "start": 76.56,
               "end": 83.2,
               "duration": 6.64,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-000@f002080",
-              "subtask": "put_plate",
+              "subtask": "put_near_plate",
               "episode_index": 0,
               "start_frame": 2080,
               "end_frame": 2195,
               "start": 83.2,
               "end": 87.84,
               "duration": 4.64,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-000@f002196",
@@ -18480,17 +18504,15 @@
             },
             {
               "id": "file-001@f000944",
-              "subtask": "pick_plate",
+              "subtask": "pick_far_plate",
               "episode_index": 0,
               "start_frame": 944,
               "end_frame": 1183,
               "start": 37.76,
               "end": 47.36,
               "duration": 9.6,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-001@f001183",
@@ -18506,59 +18528,51 @@
             },
             {
               "id": "file-001@f001289",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_far_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1289,
               "end_frame": 1467,
               "start": 51.56,
               "end": 58.72,
               "duration": 7.16,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-001@f001467",
-              "subtask": "put_plate",
+              "subtask": "put_far_plate",
               "episode_index": 0,
               "start_frame": 1467,
               "end_frame": 1568,
               "start": 58.68,
               "end": 62.76,
               "duration": 4.08,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-001@f001568",
-              "subtask": "pick_plate",
+              "subtask": "pick_near_plate",
               "episode_index": 0,
               "start_frame": 1568,
               "end_frame": 1756,
               "start": 62.72,
               "end": 70.28,
               "duration": 7.56,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-001@f001756",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_near_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1756,
               "end_frame": 1911,
               "start": 70.24,
               "end": 76.48,
               "duration": 6.24,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-001@f001911",
@@ -18574,17 +18588,15 @@
             },
             {
               "id": "file-001@f002017",
-              "subtask": "put_plate",
+              "subtask": "put_near_plate",
               "episode_index": 0,
               "start_frame": 2017,
               "end_frame": 2122,
               "start": 80.68,
               "end": 84.92,
               "duration": 4.24,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -18679,17 +18691,15 @@
             },
             {
               "id": "file-002@f000730",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 730,
               "end_frame": 860,
               "start": 29.2,
               "end": 34.44,
               "duration": 5.24,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-002@f000872",
@@ -18705,73 +18715,63 @@
             },
             {
               "id": "file-002@f000954",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 954,
               "end_frame": 1169,
               "start": 38.16,
               "end": 46.8,
               "duration": 8.64,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-002@f001169",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1169,
               "end_frame": 1322,
               "start": 46.76,
               "end": 52.92,
               "duration": 6.16,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-002@f001322",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1322,
               "end_frame": 1447,
               "start": 52.88,
               "end": 57.92,
               "duration": 5.04,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-002@f001448",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1448,
               "end_frame": 1629,
               "start": 57.92,
               "end": 65.2,
               "duration": 7.28,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-002@f001629",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1629,
               "end_frame": 1735,
               "start": 65.16,
               "end": 69.44,
               "duration": 4.28,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-002@f001735",
@@ -18878,17 +18878,15 @@
             },
             {
               "id": "file-003@f000828",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 828,
               "end_frame": 965,
               "start": 33.12,
               "end": 38.64,
               "duration": 5.52,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-003@f000965",
@@ -18904,73 +18902,63 @@
             },
             {
               "id": "file-003@f001060",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1060,
               "end_frame": 1210,
               "start": 42.4,
               "end": 48.44,
               "duration": 6.04,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-003@f001210",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1210,
               "end_frame": 1430,
               "start": 48.4,
               "end": 57.24,
               "duration": 8.84,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-003@f001430",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1430,
               "end_frame": 1560,
               "start": 57.2,
               "end": 62.44,
               "duration": 5.24,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-003@f001560",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1560,
               "end_frame": 1734,
               "start": 62.4,
               "end": 69.4,
               "duration": 7.0,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-003@f001734",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1734,
               "end_frame": 1904,
               "start": 69.36,
               "end": 76.2,
               "duration": 6.84,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-003@f001904",
@@ -19085,17 +19073,15 @@
             },
             {
               "id": "file-004@f000895",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 895,
               "end_frame": 1041,
               "start": 35.8,
               "end": 41.68,
               "duration": 5.88,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-004@f001041",
@@ -19111,73 +19097,63 @@
             },
             {
               "id": "file-004@f001144",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1144,
               "end_frame": 1344,
               "start": 45.76,
               "end": 53.8,
               "duration": 8.04,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-004@f001344",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1344,
               "end_frame": 1495,
               "start": 53.76,
               "end": 59.84,
               "duration": 6.08,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-004@f001495",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1495,
               "end_frame": 1634,
               "start": 59.8,
               "end": 65.4,
               "duration": 5.6,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-004@f001634",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1634,
               "end_frame": 1837,
               "start": 65.36,
               "end": 73.52,
               "duration": 8.16,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-004@f001837",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1837,
               "end_frame": 1944,
               "start": 73.48,
               "end": 77.8,
               "duration": 4.32,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-004@f001944",
@@ -19292,17 +19268,15 @@
             },
             {
               "id": "file-005@f000966",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 966,
               "end_frame": 1118,
               "start": 38.64,
               "end": 44.76,
               "duration": 6.12,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-005@f001118",
@@ -19318,73 +19292,63 @@
             },
             {
               "id": "file-005@f001214",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1214,
               "end_frame": 1432,
               "start": 48.56,
               "end": 57.32,
               "duration": 8.76,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-005@f001432",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1432,
               "end_frame": 1548,
               "start": 57.28,
               "end": 61.96,
               "duration": 4.68,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-005@f001551",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1551,
               "end_frame": 1672,
               "start": 62.04,
               "end": 66.92,
               "duration": 4.88,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-005@f001672",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1672,
               "end_frame": 1900,
               "start": 66.88,
               "end": 76.04,
               "duration": 9.16,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-005@f001900",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1900,
               "end_frame": 2011,
               "start": 76.0,
               "end": 80.48,
               "duration": 4.48,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-005@f002011",
@@ -19495,17 +19459,15 @@
             },
             {
               "id": "file-006@f000923",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 923,
               "end_frame": 1066,
               "start": 36.92,
               "end": 42.68,
               "duration": 5.76,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-006@f001066",
@@ -19521,73 +19483,63 @@
             },
             {
               "id": "file-006@f001162",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1162,
               "end_frame": 1343,
               "start": 46.48,
               "end": 53.76,
               "duration": 7.28,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-006@f001343",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1343,
               "end_frame": 1544,
               "start": 53.72,
               "end": 61.8,
               "duration": 8.08,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-006@f001544",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1544,
               "end_frame": 1687,
               "start": 61.76,
               "end": 67.52,
               "duration": 5.76,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-006@f001687",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1687,
               "end_frame": 1894,
               "start": 67.48,
               "end": 75.8,
               "duration": 8.32,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-006@f001894",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1894,
               "end_frame": 2033,
               "start": 75.76,
               "end": 81.36,
               "duration": 5.6,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-006@f002033",
@@ -19702,17 +19654,15 @@
             },
             {
               "id": "file-007@f000953",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 953,
               "end_frame": 1090,
               "start": 38.12,
               "end": 43.64,
               "duration": 5.52,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-007@f001091",
@@ -19728,73 +19678,63 @@
             },
             {
               "id": "file-007@f001177",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1177,
               "end_frame": 1364,
               "start": 47.08,
               "end": 54.6,
               "duration": 7.52,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-007@f001364",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1364,
               "end_frame": 1472,
               "start": 54.56,
               "end": 58.92,
               "duration": 4.36,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-007@f001472",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1472,
               "end_frame": 1578,
               "start": 58.88,
               "end": 63.16,
               "duration": 4.28,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-007@f001578",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1578,
               "end_frame": 1739,
               "start": 63.12,
               "end": 69.6,
               "duration": 6.48,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-007@f001739",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1739,
               "end_frame": 1840,
               "start": 69.56,
               "end": 73.64,
               "duration": 4.08,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-007@f001840",
@@ -19917,17 +19857,15 @@
             },
             {
               "id": "file-008@f000882",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 882,
               "end_frame": 989,
               "start": 35.28,
               "end": 39.6,
               "duration": 4.32,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-008@f000989",
@@ -19943,73 +19881,63 @@
             },
             {
               "id": "file-008@f001088",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1088,
               "end_frame": 1231,
               "start": 43.52,
               "end": 49.28,
               "duration": 5.76,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-008@f001265",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1265,
               "end_frame": 1390,
               "start": 50.6,
               "end": 55.64,
               "duration": 5.04,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-008@f001411",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1411,
               "end_frame": 1525,
               "start": 56.44,
               "end": 61.04,
               "duration": 4.6,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-008@f001525",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1525,
               "end_frame": 1726,
               "start": 61.0,
               "end": 69.08,
               "duration": 8.08,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-008@f001727",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1727,
               "end_frame": 1855,
               "start": 69.08,
               "end": 74.24,
               "duration": 5.16,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-008@f001855",
@@ -20120,17 +20048,15 @@
             },
             {
               "id": "file-009@f000901",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 901,
               "end_frame": 1036,
               "start": 36.04,
               "end": 41.48,
               "duration": 5.44,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-009@f001036",
@@ -20146,73 +20072,63 @@
             },
             {
               "id": "file-009@f001134",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1134,
               "end_frame": 1303,
               "start": 45.36,
               "end": 52.16,
               "duration": 6.8,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-009@f001303",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1303,
               "end_frame": 1459,
               "start": 52.12,
               "end": 58.4,
               "duration": 6.28,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-009@f001459",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1459,
               "end_frame": 1604,
               "start": 58.36,
               "end": 64.2,
               "duration": 5.84,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-009@f001604",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1604,
               "end_frame": 1771,
               "start": 64.16,
               "end": 70.88,
               "duration": 6.72,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-009@f001771",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1771,
               "end_frame": 1889,
               "start": 70.84,
               "end": 75.6,
               "duration": 4.76,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-009@f001889",
@@ -20327,17 +20243,15 @@
             },
             {
               "id": "file-010@f000880",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 880,
               "end_frame": 1019,
               "start": 35.2,
               "end": 40.8,
               "duration": 5.6,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-010@f001019",
@@ -20353,73 +20267,63 @@
             },
             {
               "id": "file-010@f001083",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1083,
               "end_frame": 1275,
               "start": 43.32,
               "end": 51.04,
               "duration": 7.72,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-010@f001275",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1275,
               "end_frame": 1412,
               "start": 51.0,
               "end": 56.52,
               "duration": 5.52,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-010@f001443",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1443,
               "end_frame": 1533,
               "start": 57.72,
               "end": 61.36,
               "duration": 3.64,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-010@f001533",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1533,
               "end_frame": 1689,
               "start": 61.32,
               "end": 67.6,
               "duration": 6.28,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-010@f001689",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1689,
               "end_frame": 1791,
               "start": 67.56,
               "end": 71.68,
               "duration": 4.12,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-010@f001791",
@@ -20526,17 +20430,15 @@
             },
             {
               "id": "file-011@f000911",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 911,
               "end_frame": 1043,
               "start": 36.44,
               "end": 41.76,
               "duration": 5.32,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-011@f001043",
@@ -20552,73 +20454,63 @@
             },
             {
               "id": "file-011@f001131",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1131,
               "end_frame": 1282,
               "start": 45.24,
               "end": 51.32,
               "duration": 6.08,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-011@f001282",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1282,
               "end_frame": 1429,
               "start": 51.28,
               "end": 57.2,
               "duration": 5.92,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-011@f001429",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1429,
               "end_frame": 1567,
               "start": 57.16,
               "end": 62.72,
               "duration": 5.56,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-011@f001567",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1567,
               "end_frame": 1755,
               "start": 62.68,
               "end": 70.24,
               "duration": 7.56,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-011@f001755",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1755,
               "end_frame": 1869,
               "start": 70.2,
               "end": 74.8,
               "duration": 4.6,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-011@f001869",
@@ -20729,17 +20621,15 @@
             },
             {
               "id": "file-012@f000896",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 896,
               "end_frame": 1015,
               "start": 35.84,
               "end": 40.64,
               "duration": 4.8,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-012@f001015",
@@ -20755,73 +20645,63 @@
             },
             {
               "id": "file-012@f001097",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1097,
               "end_frame": 1254,
               "start": 43.88,
               "end": 50.2,
               "duration": 6.32,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-012@f001254",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1254,
               "end_frame": 1399,
               "start": 50.16,
               "end": 56.0,
               "duration": 5.84,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-012@f001399",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1399,
               "end_frame": 1536,
               "start": 55.96,
               "end": 61.48,
               "duration": 5.52,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-012@f001536",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1536,
               "end_frame": 1748,
               "start": 61.44,
               "end": 69.96,
               "duration": 8.52,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-012@f001748",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1748,
               "end_frame": 1843,
               "start": 69.92,
               "end": 73.76,
               "duration": 3.84,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-012@f001843",
@@ -20936,17 +20816,15 @@
             },
             {
               "id": "file-013@f000824",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 824,
               "end_frame": 948,
               "start": 32.96,
               "end": 37.96,
               "duration": 5.0,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-013@f000948",
@@ -20962,73 +20840,63 @@
             },
             {
               "id": "file-013@f001031",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1031,
               "end_frame": 1188,
               "start": 41.24,
               "end": 47.56,
               "duration": 6.32,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-013@f001188",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1188,
               "end_frame": 1336,
               "start": 47.52,
               "end": 53.48,
               "duration": 5.96,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-013@f001362",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1362,
               "end_frame": 1479,
               "start": 54.48,
               "end": 59.2,
               "duration": 4.72,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-013@f001479",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1479,
               "end_frame": 1657,
               "start": 59.16,
               "end": 66.32,
               "duration": 7.16,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-013@f001657",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1657,
               "end_frame": 1750,
               "start": 66.28,
               "end": 70.04,
               "duration": 3.76,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-013@f001750",
@@ -21143,17 +21011,15 @@
             },
             {
               "id": "file-014@f000874",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 874,
               "end_frame": 1024,
               "start": 34.96,
               "end": 41.0,
               "duration": 6.04,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-014@f001024",
@@ -21169,59 +21035,51 @@
             },
             {
               "id": "file-014@f001104",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1104,
               "end_frame": 1291,
               "start": 44.16,
               "end": 51.68,
               "duration": 7.52,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-014@f001291",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1291,
               "end_frame": 1410,
               "start": 51.64,
               "end": 56.44,
               "duration": 4.8,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-014@f001456",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1456,
               "end_frame": 1556,
               "start": 58.24,
               "end": 62.28,
               "duration": 4.04,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-014@f001556",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1556,
               "end_frame": 1725,
               "start": 62.24,
               "end": 69.04,
               "duration": 6.8,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-014@f001725",
@@ -21237,17 +21095,15 @@
             },
             {
               "id": "file-014@f001789",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1789,
               "end_frame": 1876,
               "start": 71.56,
               "end": 75.08,
               "duration": 3.52,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -21346,17 +21202,15 @@
             },
             {
               "id": "file-015@f000969",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 969,
               "end_frame": 1120,
               "start": 38.76,
               "end": 44.84,
               "duration": 6.08,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-015@f001120",
@@ -21372,59 +21226,51 @@
             },
             {
               "id": "file-015@f001168",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1168,
               "end_frame": 1336,
               "start": 46.72,
               "end": 53.48,
               "duration": 6.76,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-015@f001336",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1336,
               "end_frame": 1453,
               "start": 53.44,
               "end": 58.16,
               "duration": 4.72,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-015@f001453",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1453,
               "end_frame": 1582,
               "start": 58.12,
               "end": 63.32,
               "duration": 5.2,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-015@f001582",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1582,
               "end_frame": 1758,
               "start": 63.28,
               "end": 70.36,
               "duration": 7.08,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-015@f001758",
@@ -21440,17 +21286,15 @@
             },
             {
               "id": "file-015@f001830",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1830,
               "end_frame": 1959,
               "start": 73.2,
               "end": 78.4,
               "duration": 5.2,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -21549,17 +21393,15 @@
             },
             {
               "id": "file-016@f000814",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 814,
               "end_frame": 930,
               "start": 32.56,
               "end": 37.24,
               "duration": 4.68,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-016@f000930",
@@ -21575,59 +21417,51 @@
             },
             {
               "id": "file-016@f001017",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1017,
               "end_frame": 1182,
               "start": 40.68,
               "end": 47.32,
               "duration": 6.64,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-016@f001182",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1182,
               "end_frame": 1349,
               "start": 47.28,
               "end": 54.0,
               "duration": 6.72,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-016@f001349",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1349,
               "end_frame": 1454,
               "start": 53.96,
               "end": 58.2,
               "duration": 4.24,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-016@f001454",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1454,
               "end_frame": 1603,
               "start": 58.16,
               "end": 64.16,
               "duration": 6.0,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-016@f001603",
@@ -21643,17 +21477,15 @@
             },
             {
               "id": "file-016@f001663",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1663,
               "end_frame": 1755,
               "start": 66.52,
               "end": 70.24,
               "duration": 3.72,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -21760,17 +21592,15 @@
             },
             {
               "id": "file-017@f000800",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 800,
               "end_frame": 929,
               "start": 32.0,
               "end": 37.2,
               "duration": 5.2,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-017@f000946",
@@ -21786,59 +21616,51 @@
             },
             {
               "id": "file-017@f001014",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1014,
               "end_frame": 1162,
               "start": 40.56,
               "end": 46.52,
               "duration": 5.96,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-017@f001162",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1162,
               "end_frame": 1282,
               "start": 46.48,
               "end": 51.32,
               "duration": 4.84,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-017@f001324",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1324,
               "end_frame": 1437,
               "start": 52.96,
               "end": 57.52,
               "duration": 4.56,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-017@f001437",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1437,
               "end_frame": 1587,
               "start": 57.48,
               "end": 63.52,
               "duration": 6.04,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-017@f001587",
@@ -21854,17 +21676,15 @@
             },
             {
               "id": "file-017@f001633",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1633,
               "end_frame": 1734,
               "start": 65.32,
               "end": 69.4,
               "duration": 4.08,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -21971,17 +21791,15 @@
             },
             {
               "id": "file-018@f000792",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 792,
               "end_frame": 918,
               "start": 31.68,
               "end": 36.76,
               "duration": 5.08,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-018@f000918",
@@ -21997,59 +21815,51 @@
             },
             {
               "id": "file-018@f000990",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 990,
               "end_frame": 1149,
               "start": 39.6,
               "end": 46.0,
               "duration": 6.4,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-018@f001149",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1149,
               "end_frame": 1287,
               "start": 45.96,
               "end": 51.52,
               "duration": 5.56,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-018@f001313",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1313,
               "end_frame": 1432,
               "start": 52.52,
               "end": 57.32,
               "duration": 4.8,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-018@f001432",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1432,
               "end_frame": 1572,
               "start": 57.28,
               "end": 62.92,
               "duration": 5.64,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-018@f001572",
@@ -22065,17 +21875,15 @@
             },
             {
               "id": "file-018@f001632",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1632,
               "end_frame": 1720,
               "start": 65.28,
               "end": 68.84,
               "duration": 3.56,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -22186,17 +21994,15 @@
             },
             {
               "id": "file-019@f000809",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 809,
               "end_frame": 924,
               "start": 32.36,
               "end": 37.0,
               "duration": 4.64,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-019@f000924",
@@ -22212,59 +22018,51 @@
             },
             {
               "id": "file-019@f000991",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 991,
               "end_frame": 1105,
               "start": 39.64,
               "end": 44.24,
               "duration": 4.6,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-019@f001139",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1139,
               "end_frame": 1221,
               "start": 45.56,
               "end": 48.88,
               "duration": 3.32,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-019@f001245",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1245,
               "end_frame": 1345,
               "start": 49.8,
               "end": 53.84,
               "duration": 4.04,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-019@f001367",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1367,
               "end_frame": 1530,
               "start": 54.68,
               "end": 61.24,
               "duration": 6.56,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-019@f001530",
@@ -22280,17 +22078,15 @@
             },
             {
               "id": "file-019@f001578",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1578,
               "end_frame": 1674,
               "start": 63.12,
               "end": 67.0,
               "duration": 3.88,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -22397,17 +22193,15 @@
             },
             {
               "id": "file-020@f000884",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 884,
               "end_frame": 1013,
               "start": 35.36,
               "end": 40.56,
               "duration": 5.2,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-020@f001013",
@@ -22423,59 +22217,51 @@
             },
             {
               "id": "file-020@f001093",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1093,
               "end_frame": 1221,
               "start": 43.72,
               "end": 48.88,
               "duration": 5.16,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-020@f001221",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1221,
               "end_frame": 1349,
               "start": 48.84,
               "end": 54.0,
               "duration": 5.16,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-020@f001349",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1349,
               "end_frame": 1471,
               "start": 53.96,
               "end": 58.88,
               "duration": 4.92,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-020@f001471",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1471,
               "end_frame": 1611,
               "start": 58.84,
               "end": 64.48,
               "duration": 5.64,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-020@f001611",
@@ -22491,17 +22277,15 @@
             },
             {
               "id": "file-020@f001656",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1656,
               "end_frame": 1757,
               "start": 66.24,
               "end": 70.32,
               "duration": 4.08,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -22596,17 +22380,15 @@
             },
             {
               "id": "file-021@f000712",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 712,
               "end_frame": 851,
               "start": 28.48,
               "end": 34.08,
               "duration": 5.6,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-021@f000851",
@@ -22622,59 +22404,51 @@
             },
             {
               "id": "file-021@f000913",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 913,
               "end_frame": 1069,
               "start": 36.52,
               "end": 42.8,
               "duration": 6.28,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-021@f001069",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1069,
               "end_frame": 1183,
               "start": 42.76,
               "end": 47.36,
               "duration": 4.6,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-021@f001183",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1183,
               "end_frame": 1320,
               "start": 47.32,
               "end": 52.84,
               "duration": 5.52,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-021@f001320",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1320,
               "end_frame": 1479,
               "start": 52.8,
               "end": 59.2,
               "duration": 6.4,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-021@f001479",
@@ -22690,17 +22464,15 @@
             },
             {
               "id": "file-021@f001525",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1525,
               "end_frame": 1615,
               "start": 61.0,
               "end": 64.64,
               "duration": 3.64,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -22811,17 +22583,15 @@
             },
             {
               "id": "file-022@f000708",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 708,
               "end_frame": 832,
               "start": 28.32,
               "end": 33.32,
               "duration": 5.0,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-022@f000836",
@@ -22837,59 +22607,51 @@
             },
             {
               "id": "file-022@f000900",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 900,
               "end_frame": 1036,
               "start": 36.0,
               "end": 41.48,
               "duration": 5.48,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-022@f001036",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1036,
               "end_frame": 1157,
               "start": 41.44,
               "end": 46.32,
               "duration": 4.88,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-022@f001186",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1186,
               "end_frame": 1268,
               "start": 47.44,
               "end": 50.76,
               "duration": 3.32,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-022@f001268",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1268,
               "end_frame": 1390,
               "start": 50.72,
               "end": 55.64,
               "duration": 4.92,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-022@f001390",
@@ -22905,17 +22667,15 @@
             },
             {
               "id": "file-022@f001434",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1434,
               "end_frame": 1541,
               "start": 57.36,
               "end": 61.68,
               "duration": 4.32,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -23014,17 +22774,15 @@
             },
             {
               "id": "file-023@f000720",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 720,
               "end_frame": 844,
               "start": 28.8,
               "end": 33.8,
               "duration": 5.0,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-023@f000844",
@@ -23040,59 +22798,51 @@
             },
             {
               "id": "file-023@f000906",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 906,
               "end_frame": 1032,
               "start": 36.24,
               "end": 41.32,
               "duration": 5.08,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-023@f001032",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1032,
               "end_frame": 1151,
               "start": 41.28,
               "end": 46.08,
               "duration": 4.8,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-023@f001151",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1151,
               "end_frame": 1249,
               "start": 46.04,
               "end": 50.0,
               "duration": 3.96,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-023@f001249",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1249,
               "end_frame": 1386,
               "start": 49.96,
               "end": 55.48,
               "duration": 5.52,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-023@f001386",
@@ -23108,17 +22858,15 @@
             },
             {
               "id": "file-023@f001434",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1434,
               "end_frame": 1528,
               "start": 57.36,
               "end": 61.16,
               "duration": 3.8,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -23221,17 +22969,15 @@
             },
             {
               "id": "file-024@f000787",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 787,
               "end_frame": 878,
               "start": 31.48,
               "end": 35.16,
               "duration": 3.68,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-024@f000878",
@@ -23247,59 +22993,51 @@
             },
             {
               "id": "file-024@f000935",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 935,
               "end_frame": 1086,
               "start": 37.4,
               "end": 43.48,
               "duration": 6.08,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-024@f001086",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1086,
               "end_frame": 1214,
               "start": 43.44,
               "end": 48.6,
               "duration": 5.16,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-024@f001236",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1236,
               "end_frame": 1328,
               "start": 49.44,
               "end": 53.16,
               "duration": 3.72,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-024@f001328",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1328,
               "end_frame": 1470,
               "start": 53.12,
               "end": 58.84,
               "duration": 5.72,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-024@f001470",
@@ -23315,17 +23053,15 @@
             },
             {
               "id": "file-024@f001521",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1521,
               "end_frame": 1621,
               "start": 60.84,
               "end": 64.88,
               "duration": 4.04,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -23424,17 +23160,15 @@
             },
             {
               "id": "file-025@f000750",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 750,
               "end_frame": 855,
               "start": 30.0,
               "end": 34.24,
               "duration": 4.24,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-025@f000855",
@@ -23450,59 +23184,51 @@
             },
             {
               "id": "file-025@f000921",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 921,
               "end_frame": 1071,
               "start": 36.84,
               "end": 42.88,
               "duration": 6.04,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-025@f001071",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1071,
               "end_frame": 1186,
               "start": 42.84,
               "end": 47.48,
               "duration": 4.64,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-025@f001186",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1186,
               "end_frame": 1282,
               "start": 47.44,
               "end": 51.32,
               "duration": 3.88,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-025@f001282",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1282,
               "end_frame": 1464,
               "start": 51.28,
               "end": 58.6,
               "duration": 7.32,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-025@f001464",
@@ -23518,17 +23244,15 @@
             },
             {
               "id": "file-025@f001516",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1516,
               "end_frame": 1611,
               "start": 60.64,
               "end": 64.48,
               "duration": 3.84,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -23565,7 +23289,7 @@
             ]
           ],
           "span_coverage": 0.85,
-          "labeled_fraction": 0.829,
+          "labeled_fraction": 0.828,
           "full_video_usable": true,
           "full_video_reason": null,
           "segments": [
@@ -23598,28 +23322,12 @@
               "subtask": "wipe_bowl_with_brush",
               "episode_index": 0,
               "start_frame": 303,
-              "end_frame": 450,
-              "start": 12.12,
-              "end": 18.04,
-              "duration": 5.92,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
-            },
-            {
-              "id": "file-026@f000450",
-              "subtask": "wipe_bowl_with_brush",
-              "episode_index": 0,
-              "start_frame": 450,
               "end_frame": 523,
-              "start": 18.0,
+              "start": 12.12,
               "end": 20.96,
-              "duration": 2.96,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "duration": 8.84,
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-026@f000523",
@@ -23635,17 +23343,15 @@
             },
             {
               "id": "file-026@f000661",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 661,
               "end_frame": 747,
               "start": 26.44,
               "end": 29.92,
               "duration": 3.48,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-026@f000747",
@@ -23661,59 +23367,51 @@
             },
             {
               "id": "file-026@f000852",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 852,
               "end_frame": 993,
               "start": 34.08,
               "end": 39.76,
               "duration": 5.68,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-026@f000993",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 993,
               "end_frame": 1127,
               "start": 39.72,
               "end": 45.12,
               "duration": 5.4,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-026@f001147",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1147,
               "end_frame": 1251,
               "start": 45.88,
               "end": 50.08,
               "duration": 4.2,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-026@f001251",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1251,
               "end_frame": 1393,
               "start": 50.04,
               "end": 55.76,
               "duration": 5.72,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-026@f001393",
@@ -23729,17 +23427,15 @@
             },
             {
               "id": "file-026@f001448",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1448,
               "end_frame": 1553,
               "start": 57.92,
               "end": 62.16,
               "duration": 4.24,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -23846,17 +23542,15 @@
             },
             {
               "id": "file-027@f000731",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 731,
               "end_frame": 862,
               "start": 29.24,
               "end": 34.52,
               "duration": 5.28,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-027@f000862",
@@ -23872,59 +23566,51 @@
             },
             {
               "id": "file-027@f000920",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 920,
               "end_frame": 1064,
               "start": 36.8,
               "end": 42.6,
               "duration": 5.8,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-027@f001064",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1064,
               "end_frame": 1182,
               "start": 42.56,
               "end": 47.32,
               "duration": 4.76,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-027@f001195",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1195,
               "end_frame": 1291,
               "start": 47.8,
               "end": 51.68,
               "duration": 3.88,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-027@f001291",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1291,
               "end_frame": 1434,
               "start": 51.64,
               "end": 57.4,
               "duration": 5.76,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-027@f001434",
@@ -23940,17 +23626,15 @@
             },
             {
               "id": "file-027@f001485",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1485,
               "end_frame": 1567,
               "start": 59.4,
               "end": 62.72,
               "duration": 3.32,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -24049,17 +23733,15 @@
             },
             {
               "id": "file-028@f000697",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 697,
               "end_frame": 796,
               "start": 27.88,
               "end": 31.88,
               "duration": 4.0,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-028@f000796",
@@ -24075,59 +23757,51 @@
             },
             {
               "id": "file-028@f000870",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 870,
               "end_frame": 1008,
               "start": 34.8,
               "end": 40.36,
               "duration": 5.56,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-028@f001008",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1008,
               "end_frame": 1125,
               "start": 40.32,
               "end": 45.04,
               "duration": 4.72,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-028@f001125",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1125,
               "end_frame": 1219,
               "start": 45.0,
               "end": 48.8,
               "duration": 3.8,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-028@f001219",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1219,
               "end_frame": 1343,
               "start": 48.76,
               "end": 53.76,
               "duration": 5.0,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-028@f001343",
@@ -24143,17 +23817,15 @@
             },
             {
               "id": "file-028@f001394",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1394,
               "end_frame": 1472,
               "start": 55.76,
               "end": 58.92,
               "duration": 3.16,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -24260,17 +23932,15 @@
             },
             {
               "id": "file-029@f000776",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 776,
               "end_frame": 891,
               "start": 31.04,
               "end": 35.68,
               "duration": 4.64,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-029@f000891",
@@ -24286,59 +23956,51 @@
             },
             {
               "id": "file-029@f000962",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 962,
               "end_frame": 1101,
               "start": 38.48,
               "end": 44.08,
               "duration": 5.6,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-029@f001101",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1101,
               "end_frame": 1233,
               "start": 44.04,
               "end": 49.36,
               "duration": 5.32,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-029@f001244",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1244,
               "end_frame": 1346,
               "start": 49.76,
               "end": 53.88,
               "duration": 4.12,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-029@f001346",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1346,
               "end_frame": 1534,
               "start": 53.84,
               "end": 61.4,
               "duration": 7.56,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-029@f001534",
@@ -24354,17 +24016,15 @@
             },
             {
               "id": "file-029@f001587",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1587,
               "end_frame": 1684,
               "start": 63.48,
               "end": 67.4,
               "duration": 3.92,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -24475,17 +24135,15 @@
             },
             {
               "id": "file-030@f000786",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 786,
               "end_frame": 892,
               "start": 31.44,
               "end": 35.72,
               "duration": 4.28,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-030@f000905",
@@ -24501,59 +24159,51 @@
             },
             {
               "id": "file-030@f000960",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 960,
               "end_frame": 1096,
               "start": 38.4,
               "end": 43.88,
               "duration": 5.48,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-030@f001097",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1097,
               "end_frame": 1232,
               "start": 43.88,
               "end": 49.32,
               "duration": 5.44,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-030@f001233",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1233,
               "end_frame": 1358,
               "start": 49.32,
               "end": 54.36,
               "duration": 5.04,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-030@f001358",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1358,
               "end_frame": 1503,
               "start": 54.32,
               "end": 60.16,
               "duration": 5.84,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-030@f001503",
@@ -24569,17 +24219,15 @@
             },
             {
               "id": "file-030@f001548",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1548,
               "end_frame": 1633,
               "start": 61.92,
               "end": 65.36,
               "duration": 3.44,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -24690,17 +24338,15 @@
             },
             {
               "id": "file-031@f000806",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 806,
               "end_frame": 938,
               "start": 32.24,
               "end": 37.56,
               "duration": 5.32,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-031@f000938",
@@ -24716,59 +24362,51 @@
             },
             {
               "id": "file-031@f001009",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1009,
               "end_frame": 1154,
               "start": 40.36,
               "end": 46.2,
               "duration": 5.84,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-031@f001154",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1154,
               "end_frame": 1272,
               "start": 46.16,
               "end": 50.92,
               "duration": 4.76,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-031@f001272",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1272,
               "end_frame": 1367,
               "start": 50.88,
               "end": 54.72,
               "duration": 3.84,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-031@f001367",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1367,
               "end_frame": 1526,
               "start": 54.68,
               "end": 61.08,
               "duration": 6.4,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-031@f001526",
@@ -24784,17 +24422,15 @@
             },
             {
               "id": "file-031@f001586",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1586,
               "end_frame": 1674,
               "start": 63.44,
               "end": 67.0,
               "duration": 3.56,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -24889,17 +24525,15 @@
             },
             {
               "id": "file-032@f000688",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 688,
               "end_frame": 844,
               "start": 27.52,
               "end": 33.8,
               "duration": 6.28,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-032@f000844",
@@ -24915,59 +24549,51 @@
             },
             {
               "id": "file-032@f000924",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 924,
               "end_frame": 1071,
               "start": 36.96,
               "end": 42.88,
               "duration": 5.92,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-032@f001071",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1071,
               "end_frame": 1156,
               "start": 42.84,
               "end": 46.28,
               "duration": 3.44,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-032@f001156",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1156,
               "end_frame": 1248,
               "start": 46.24,
               "end": 49.96,
               "duration": 3.72,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-032@f001248",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1248,
               "end_frame": 1375,
               "start": 49.92,
               "end": 55.04,
               "duration": 5.12,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-032@f001375",
@@ -24983,17 +24609,15 @@
             },
             {
               "id": "file-032@f001434",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1434,
               "end_frame": 1523,
               "start": 57.36,
               "end": 60.96,
               "duration": 3.6,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -25092,17 +24716,15 @@
             },
             {
               "id": "file-033@f000836",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 836,
               "end_frame": 942,
               "start": 33.44,
               "end": 37.72,
               "duration": 4.28,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-033@f000942",
@@ -25118,59 +24740,51 @@
             },
             {
               "id": "file-033@f001018",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1018,
               "end_frame": 1167,
               "start": 40.72,
               "end": 46.72,
               "duration": 6.0,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-033@f001167",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1167,
               "end_frame": 1295,
               "start": 46.68,
               "end": 51.84,
               "duration": 5.16,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-033@f001295",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1295,
               "end_frame": 1388,
               "start": 51.8,
               "end": 55.56,
               "duration": 3.76,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-033@f001388",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1388,
               "end_frame": 1561,
               "start": 55.52,
               "end": 62.48,
               "duration": 6.96,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-033@f001561",
@@ -25186,17 +24800,15 @@
             },
             {
               "id": "file-033@f001631",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1631,
               "end_frame": 1712,
               "start": 65.24,
               "end": 68.52,
               "duration": 3.28,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -25279,17 +24891,15 @@
             },
             {
               "id": "file-034@f000722",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 722,
               "end_frame": 861,
               "start": 28.88,
               "end": 34.48,
               "duration": 5.6,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-034@f000861",
@@ -25305,59 +24915,51 @@
             },
             {
               "id": "file-034@f000924",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 924,
               "end_frame": 1067,
               "start": 36.96,
               "end": 42.72,
               "duration": 5.76,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-034@f001067",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1067,
               "end_frame": 1192,
               "start": 42.68,
               "end": 47.72,
               "duration": 5.04,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-034@f001192",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1192,
               "end_frame": 1305,
               "start": 47.68,
               "end": 52.24,
               "duration": 4.56,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-034@f001305",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1305,
               "end_frame": 1459,
               "start": 52.2,
               "end": 58.4,
               "duration": 6.2,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-034@f001459",
@@ -25373,17 +24975,15 @@
             },
             {
               "id": "file-034@f001527",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1527,
               "end_frame": 1603,
               "start": 61.08,
               "end": 64.16,
               "duration": 3.08,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -25478,17 +25078,15 @@
             },
             {
               "id": "file-035@f000710",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 710,
               "end_frame": 897,
               "start": 28.4,
               "end": 35.92,
               "duration": 7.52,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-035@f000897",
@@ -25504,59 +25102,51 @@
             },
             {
               "id": "file-035@f000965",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 965,
               "end_frame": 1127,
               "start": 38.6,
               "end": 45.12,
               "duration": 6.52,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-035@f001127",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1127,
               "end_frame": 1250,
               "start": 45.08,
               "end": 50.04,
               "duration": 4.96,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-035@f001250",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1250,
               "end_frame": 1342,
               "start": 50.0,
               "end": 53.72,
               "duration": 3.72,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-035@f001342",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1342,
               "end_frame": 1501,
               "start": 53.68,
               "end": 60.08,
               "duration": 6.4,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-035@f001501",
@@ -25572,17 +25162,15 @@
             },
             {
               "id": "file-035@f001551",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1551,
               "end_frame": 1647,
               "start": 62.04,
               "end": 65.92,
               "duration": 3.88,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -25677,17 +25265,15 @@
             },
             {
               "id": "file-036@f000655",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 655,
               "end_frame": 804,
               "start": 26.2,
               "end": 32.2,
               "duration": 6.0,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-036@f000804",
@@ -25703,59 +25289,51 @@
             },
             {
               "id": "file-036@f000879",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 879,
               "end_frame": 1021,
               "start": 35.16,
               "end": 40.88,
               "duration": 5.72,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-036@f001021",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1021,
               "end_frame": 1126,
               "start": 40.84,
               "end": 45.08,
               "duration": 4.24,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-036@f001126",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1126,
               "end_frame": 1230,
               "start": 45.04,
               "end": 49.24,
               "duration": 4.2,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-036@f001230",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1230,
               "end_frame": 1384,
               "start": 49.2,
               "end": 55.4,
               "duration": 6.2,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-036@f001384",
@@ -25771,17 +25349,15 @@
             },
             {
               "id": "file-036@f001437",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1437,
               "end_frame": 1521,
               "start": 57.48,
               "end": 60.88,
               "duration": 3.4,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -25876,17 +25452,15 @@
             },
             {
               "id": "file-037@f000720",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 720,
               "end_frame": 866,
               "start": 28.8,
               "end": 34.68,
               "duration": 5.88,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-037@f000866",
@@ -25902,59 +25476,51 @@
             },
             {
               "id": "file-037@f000920",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 920,
               "end_frame": 1074,
               "start": 36.8,
               "end": 43.0,
               "duration": 6.2,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-037@f001074",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1074,
               "end_frame": 1184,
               "start": 42.96,
               "end": 47.4,
               "duration": 4.44,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-037@f001184",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1184,
               "end_frame": 1285,
               "start": 47.36,
               "end": 51.44,
               "duration": 4.08,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-037@f001285",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1285,
               "end_frame": 1429,
               "start": 51.4,
               "end": 57.2,
               "duration": 5.8,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-037@f001429",
@@ -25970,17 +25536,15 @@
             },
             {
               "id": "file-037@f001493",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1493,
               "end_frame": 1584,
               "start": 59.72,
               "end": 63.4,
               "duration": 3.68,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -26075,17 +25639,15 @@
             },
             {
               "id": "file-038@f000675",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 675,
               "end_frame": 786,
               "start": 27.0,
               "end": 31.48,
               "duration": 4.48,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-038@f000786",
@@ -26101,59 +25663,51 @@
             },
             {
               "id": "file-038@f000864",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 864,
               "end_frame": 1003,
               "start": 34.56,
               "end": 40.16,
               "duration": 5.6,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-038@f001003",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1003,
               "end_frame": 1121,
               "start": 40.12,
               "end": 44.88,
               "duration": 4.76,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-038@f001121",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1121,
               "end_frame": 1217,
               "start": 44.84,
               "end": 48.72,
               "duration": 3.88,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-038@f001217",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1217,
               "end_frame": 1349,
               "start": 48.68,
               "end": 54.0,
               "duration": 5.32,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-038@f001349",
@@ -26169,17 +25723,15 @@
             },
             {
               "id": "file-038@f001395",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1395,
               "end_frame": 1485,
               "start": 55.8,
               "end": 59.44,
               "duration": 3.64,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         },
@@ -26274,17 +25826,15 @@
             },
             {
               "id": "file-039@f000712",
-              "subtask": "pick_plate",
+              "subtask": "pick_left_plate",
               "episode_index": 0,
               "start_frame": 712,
               "end_frame": 835,
               "start": 28.48,
               "end": 33.44,
               "duration": 4.96,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-039@f000835",
@@ -26300,59 +25850,51 @@
             },
             {
               "id": "file-039@f000889",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_left_plate_with_rag",
               "episode_index": 0,
               "start_frame": 889,
               "end_frame": 1026,
               "start": 35.56,
               "end": 41.08,
               "duration": 5.52,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-039@f001026",
-              "subtask": "put_plate",
+              "subtask": "put_left_plate",
               "episode_index": 0,
               "start_frame": 1026,
               "end_frame": 1123,
               "start": 41.04,
               "end": 44.96,
               "duration": 3.92,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-039@f001123",
-              "subtask": "pick_plate",
+              "subtask": "pick_right_plate",
               "episode_index": 0,
               "start_frame": 1123,
               "end_frame": 1207,
               "start": 44.92,
               "end": 48.32,
               "duration": 3.4,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-039@f001207",
-              "subtask": "wipe_plate_with_rag",
+              "subtask": "wipe_right_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1207,
               "end_frame": 1348,
               "start": 48.28,
               "end": 53.96,
               "duration": 5.68,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-039@f001348",
@@ -26368,17 +25910,15 @@
             },
             {
               "id": "file-039@f001401",
-              "subtask": "put_plate",
+              "subtask": "put_right_plate",
               "episode_index": 0,
               "start_frame": 1401,
               "end_frame": 1496,
               "start": 56.04,
               "end": 59.88,
               "duration": 3.84,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             }
           ]
         }
