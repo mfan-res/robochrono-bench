@@ -54,23 +54,18 @@
     }
   ],
   "families": [
-    "stack_cubes",
     "airpods",
-    "express",
-    "tea2",
     "gift_inhand",
     "pen_inbox",
+    "stack_cubes",
     "tea",
     "wash"
   ],
   "runs": [
-    "time",
     "understanding",
-    "left_right",
-    "image_in_video",
     "planning",
     "planning_2",
-    "step_order"
+    "time"
   ],
   "family_attrs": {
     "stack_cubes": {
@@ -87,5 +82,12 @@
   "frame_variants": [
     1.0,
     2.0
+  ],
+  "_v2_note": [
+    "族与任务只列【我们真有的】。此前照搬 v1 列了 8 族 7 任务，",
+    "于是 preflight 报 211 个组合「QA 文件缺失」—— 那不是故障，是配置在描述一个不存在的世界。",
+    "移出的族：express（上游原片仅 3–5 集）、tea2（视角错位，同事重切中）。",
+    "未建的任务：left_right / image_in_video / step_order（选项是图片，需另一条素材路径）。",
+    "trajectory 已搁置（指标判定无效）。要跑 v1 时用 configs/plan_v1.json。"
   ]
 }
