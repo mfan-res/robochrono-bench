@@ -288,7 +288,11 @@ def build(index: dict[str, Any], vocab: dict[str, Any],
                     answer_text = texts[answer_id]
 
                     # 只从「与答案共现过」的动作里挑 —— 见 cooccurrence()
-                    usable = [texts[i] for i in compat.get(answer_id, set())]
+                    # ⚠ **必须 sorted**：这是一个 set，而 Python 的字符串哈希
+                    # 每个进程都不同，直接遍历会让选项**每次运行都不一样**。
+                    # 实测三次构建三个不同的指纹 —— 而「同样输入必得同样一批题」
+                    # 是这条流水线写在文档里的承诺。已加构建自检（见 main）。
+                    usable = [texts[i] for i in sorted(compat.get(answer_id, set()))]
                     options, source = build_options(
                         f"{base}@{task}", answer_text, usable, borrowable)
                     if len(options) < DISTRACTORS_PER_QUESTION:
@@ -421,7 +425,22 @@ def main() -> int:
     # `data/llm_cache/` 三代（v1-vendor / v2 / v3）全部退场，只作留档 ——
     # 干扰项改为一律取自真实标签，不再需要任何生成物（D-37 / D-38）。
     plan = build(index, vocab, window, time_repeats, cap, none_option)
+
+    # 确定性自检：同样输入必须得到同样一批题。
+    # **构建两遍比对**，因为这类 bug（遍历 set、用 dict 顺序、掺进时间戳）
+    # 不会报错，只会让每次出的题悄悄不同 —— 而下游的盲测结论就此失效。
+    again = build(index, vocab, window, time_repeats, cap, none_option)
+    fp = [hashlib.md5(json.dumps([[i["id"], i["answer_text"], *i["distractors"]]
+                                  for i in p["items"]], ensure_ascii=False,
+                                 sort_keys=True).encode()).hexdigest()[:12]
+          for p in (plan, again)]
+    if fp[0] != fp[1]:
+        print(f"❌ 构建不确定：两次指纹 {fp[0]} ≠ {fp[1]}")
+        print("   同样输入得到了不同的题。常见原因：遍历 set / dict、掺进时间或随机数。")
+        return 1
+    plan["fingerprint"] = fp[0]
     opt = plan["options"]
+    print(f"指纹 {plan['fingerprint']}（两次构建一致）")
     print(f"配方 {RECIPE_VERSION}   window={window}  time-repeats={time_repeats}  "
           f"cap={cap}  none-option={none_option}")
     print(f"选择题 {opt['choices_per_question']} 选一，随机基线 "
