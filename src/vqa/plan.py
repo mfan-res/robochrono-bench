@@ -147,6 +147,28 @@ def clip_for(segment: dict[str, Any], mode: str, fps: float) -> tuple[int, int]:
     raise ValueError(f"未知的 window 模式：{mode}")
 
 
+def cooccurrence(episodes: list[dict[str, Any]]) -> dict[str, set[str]]:
+    """哪些动作曾在同一集里同时出现过。
+
+    **干扰项只能从「与答案共现过」的动作里挑。** 词表里可能有互斥的两组：
+    wash 的 38 集用 left/right 盘子，file-000 / 001 机位不同用 far/near，
+    两组永不同时出现。不加这条限制时实测：720 道含相对位置的题里
+    **487 道（68%）混进了本集根本不存在的那条轴**，
+    有效选项从 4 个掉到平均 3.0，等效基线 25% → 34%，最差的 264 道只剩 2 个选项。
+
+    「本集不存在的动作」看过视频就能排除，所以它不是干扰项，是白送的一次排除。
+
+    判据做成共现关系而不是写死 left/right ↔ far/near ——
+    **以后任何一次词表拆分都会造出同样的问题**，写死只能挡住这一次。
+    """
+    graph: dict[str, set[str]] = {}
+    for ep in episodes:
+        here = {s["subtask"] for s in ep["segments"]}
+        for a in here:
+            graph.setdefault(a, set()).update(here)
+    return graph
+
+
 def build_options(item_id: str, answer: str, actions: list[str],
                   borrowable: list[str]) -> tuple[list[str], dict[str, int]]:
     """选出 3 条干扰项，凑成统一的四选一。**这是选项构造的唯一实现** ——
@@ -228,6 +250,7 @@ def build(index: dict[str, Any], vocab: dict[str, Any],
         fps = entry["fps"]
         texts = {s["id"]: s["text"] for s in vocab[family]["subtasks"]}
         actions = list(texts.values())
+        compat = cooccurrence(entry["episodes"])
         # 可借的：别族的真实动作，且其宾语不在本场景里（否则可能碰巧也是真的）
         here = {s["object"] for s in vocab[family]["subtasks"] if s["object"]}
         borrowable = sorted({s["text"] for f, v in vocab.items() if f != family
@@ -264,8 +287,10 @@ def build(index: dict[str, Any], vocab: dict[str, Any],
                     answer_id = segment["subtask"] if task == "understanding" else nxt["subtask"]
                     answer_text = texts[answer_id]
 
+                    # 只从「与答案共现过」的动作里挑 —— 见 cooccurrence()
+                    usable = [texts[i] for i in compat.get(answer_id, set())]
                     options, source = build_options(
-                        f"{base}@{task}", answer_text, actions, borrowable)
+                        f"{base}@{task}", answer_text, usable, borrowable)
                     if len(options) < DISTRACTORS_PER_QUESTION:
                         skipped[f"{task}:干扰项不足"] += 1
                         continue

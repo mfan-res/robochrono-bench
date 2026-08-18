@@ -186,9 +186,13 @@ def main() -> int:
             print(f"   {fam}: 「{a}」是「{b}」的前缀/子串")
 
     if misses:
-        print(f"\n⚠ v1 缓存查不到 {len(misses)} 处 —— 历史记录，v2 已用 subtask ID 当键：")
-        for fam, sid, name in misses:
-            print(f"   {fam}/{name}: {sid}")
+        by_fam: dict[str, int] = {}
+        for fam, _, _ in misses:
+            by_fam[fam] = by_fam.get(fam, 0) + 1
+        print(f"\nv1 缓存命中情况（**纯历史记录，出题已不读缓存**）：查不到 {len(misses)} 处 "
+              + "、".join(f"{f} {n}" for f, n in sorted(by_fam.items())))
+        print("   干扰项自 D-38 起改为从真实标签里挑，`llm_cache` 三代全部退场。"
+              "词表变动后这个数只会越来越大，属正常。")
 
     if write:
         BUILD.mkdir(exist_ok=True)
