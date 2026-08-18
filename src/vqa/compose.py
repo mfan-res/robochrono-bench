@@ -68,6 +68,14 @@ def as_clock(seconds: float) -> str:
     return f"{int(h):02d}:{int(m):02d}:{s:06.3f}"
 
 
+ROLE = {"clip": "clip", "video": "context", "frame": "frame"}
+
+
+def path_of(m: dict[str, Any]) -> str:
+    ext = "jpg" if m["kind"] == "frame" else "mp4"
+    return f"data/vqa/assets/{m['key']}.{ext}"
+
+
 def compose(plan_item: dict[str, Any], media: dict[str, dict[str, Any]]) -> dict[str, Any]:
     task, item_id = plan_item["task"], plan_item["id"]
     prov = plan_item["provenance"]
@@ -75,9 +83,37 @@ def compose(plan_item: dict[str, Any], media: dict[str, dict[str, Any]]) -> dict
     blocks: list[dict[str, Any]] = []
     for key in plan_item["media"]:
         m = media[key]
-        blocks.append({"role": "clip" if m["kind"] == "clip" else "context",
-                       "view": m["view"], "kind": "video",
-                       "path": f"data/vqa/assets/{key}.mp4"})
+        blocks.append({"role": ROLE[m["kind"]], "view": m["view"],
+                       "kind": "image" if m["kind"] == "frame" else "video",
+                       "path": path_of(m)})
+
+    # ── 图选项题型：选项本身是图，按 role=option:A…D 挂进 media ──
+    # **顺序打乱与文字题共用同一个函数** —— 打乱规则只存在一处，
+    # 否则两种题型的「确定性」会各自漂移。
+    if plan_item.get("image_options"):
+        order = shuffled(item_id, plan_item["image_options"])
+        letter = LETTERS[order.index(plan_item["correct_option"])]
+        for i, key in enumerate(order):
+            m = media[key]
+            blocks.append({"role": f"option:{LETTERS[i]}", "view": m["view"],
+                           "kind": "image", "path": path_of(m)})
+        return {
+            "id": item_id, "family": plan_item["family"], "task": task,
+            "group": plan_item["group"],
+            "prompt": {"stem": plan_item["stem"],
+                       # 图选项的 text 为 null —— 选项内容在 media 里
+                       "options": [{"id": LETTERS[i], "text": None}
+                                   for i in range(len(order))],
+                       "media": blocks},
+            "truth": {"answer": letter,
+                      # ⚠ answer_text 与 option_text 不是一回事：图选项没有 text，
+                      # 而 answer_text 是「left gripper camera view」这类描述。
+                      # 全量比对过 5,553 题两者不同，合并会丢真信息。
+                      "answer_text": plan_item["answer_text"], "option_text": None,
+                      "extra": {"subtask": plan_item["answer_subtask"],
+                                "correct_asset": plan_item["correct_option"]}},
+            "provenance": prov,
+        }
 
     if task == "time":
         lo, hi = plan_item["answer_seconds"]
@@ -140,8 +176,17 @@ def main() -> int:
     print(f"  ③ 媒体存在   {'✓' if not missing else f'✗ 缺 {len(missing)}'}")
     bad += [f"媒体缺失: {p}" for p in list(missing)[:5]]
 
-    dup = [i["id"] for i in items
-           if len({o["text"] for o in i["prompt"]["options"]}) != len(i["prompt"]["options"])]
+    # 图选项的 text 全是 null，比 text 会全部误报 —— 改比【实际内容】：
+    # 文字题比 text，图选项比媒体路径。
+    def distinct(i: dict[str, Any]) -> int:
+        opts = i["prompt"]["options"]
+        if opts and opts[0]["text"] is None:
+            return len({m["path"] for m in i["prompt"]["media"]
+                        if m["role"].startswith("option:")})
+        return len({o["text"] for o in opts})
+
+    dup = [i["id"] for i in items if i["prompt"]["options"]
+           and distinct(i) != len(i["prompt"]["options"])]
     print(f"  ④ 选项不重复 {'✓' if not dup else f'✗ {len(dup)}'}")
     bad += [f"选项重复: {x}" for x in dup[:5]]
 

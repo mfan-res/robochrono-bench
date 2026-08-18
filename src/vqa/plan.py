@@ -90,9 +90,14 @@ RECIPE_VERSION = "v2.0"
 # 其余视角靠时间对齐，段边界在它们上面未经核验。
 VIEW = "main"
 
-TASKS = ("understanding", "planning", "planning_2", "time")
+TASKS = ("understanding", "planning", "planning_2", "time",
+         "left_right", "image_in_video")
 
 STEMS = {
+    "left_right": "Given the image captured by the head camera, which option shows the "
+                  "{side} gripper camera's view at this moment?",
+    "image_in_video": "Given this video clip of an action segment, "
+                      "which option image appeared in the clip?",
     "understanding": "Based on the egocentric video up to now, choose the ONE option "
                      "that best matches what is happening RIGHT NOW?",
     "planning": "Based on the current visual state, what should happen next?",
@@ -119,6 +124,16 @@ TASK_NAMES = {
 #   六选一  借 1–3    借的族 +6.3σ
 # 选项数每多一个，小族就得多借一条别族动作，而借来的动作看过视频就能排除。
 DISTRACTORS_PER_QUESTION = 3
+
+# 图选项题型也用三条干扰项 = 四选一，与文字题型一致 ——
+# 于是【全部选择题】的随机基线都是 25%，报告里不用按题型换算。
+# v1 用六选一，其中一个是永不为答案的「都不对」（A7 已定不放）。
+IMAGE_DISTRACTORS = 3
+
+# image_in_video 的「同集别动作」干扰项至少隔这么多段。
+# 人工复核（T2-A）看到 tea 的相邻段画面几乎一样 —— 固定机位、小物体操作，
+# 帧间差别只有机械臂位置。隔开之后才是「难」而不是「无解」。
+IV_MIN_SEGMENT_GAP = 2
 NONE_TEXT = "All other options are wrong."   # v1 的原文，保持一致便于对照
 
 # 片段题的最短时长。**不是任选的阈值** —— `pen_inbox/file-037@f000272`
@@ -167,6 +182,54 @@ def cooccurrence(episodes: list[dict[str, Any]]) -> dict[str, set[str]]:
         for a in here:
             graph.setdefault(a, set()).update(here)
     return graph
+
+
+def pick_frames(item_id: str, pool: list[dict[str, Any]], episode: str, segment_id: str,
+                count: int, same_ep_index: int | None = None,
+                min_gap: int = 0, from_same_ep: int = 0) -> list[tuple[dict[str, Any], str]]:
+    """从帧池里挑干扰帧，返回 [(帧记录, 左右侧)]。
+
+    **所有干扰帧都来自同一个池子** —— 与正确帧走同一条抽帧路径、同一套参数。
+    若两者用不同参数抽，图像统计本身就成了线索（这是图选项题型里
+    对应「编出来的文字选项零样本可辨」的那个坑）。
+
+    `min_gap` > 0 时，同一集内的帧必须与本段隔开这么多段 ——
+    相邻段在固定机位下画面几乎一样，那样的干扰项是无解不是难（T2-A）。
+
+    左右侧按哈希混着给：若干扰帧全取同侧，那唯一的对侧图会变成「异类」
+    而被白排除，等于少一个选项。
+    """
+    def usable(r: dict[str, Any]) -> bool:
+        if r["segment_id"] == segment_id:
+            return False
+        if r["episode"] == episode and same_ep_index is not None:
+            return abs(r["seg_index"] - same_ep_index) >= min_gap
+        return True
+
+    k = int(hashlib.md5(item_id.encode()).hexdigest(), 16)
+    picked, seen = [], set()
+
+    def take(cands: list[dict[str, Any]], n: int) -> None:
+        if not cands:
+            return
+        for step in range(len(cands)):
+            r = cands[(k + step * 7919) % len(cands)]   # 7919 与池长多互质，散得开
+            if r["segment_id"] in seen:
+                continue
+            seen.add(r["segment_id"])
+            picked.append((r, "left" if (k + len(picked)) % 2 == 0 else "right"))
+            if len([1 for _ in picked]) >= n:
+                break
+
+    # **同集的干扰项要【定额分配】，不能靠碰巧。**
+    # 一个族的池子有两百来条，同集合格的只有三四条 —— 均匀抽的话
+    # 实测 4,170 个干扰项里只有 54 个来自本集，而那正是最难的一类（T2-A）。
+    if from_same_ep:
+        same = [r for r in pool if r["episode"] == episode and usable(r)]
+        take(same, from_same_ep)
+    take([r for r in pool if usable(r) and r["episode"] != episode or
+          (not from_same_ep and usable(r))], count)
+    return picked[:count]
 
 
 def build_options(item_id: str, answer: str, actions: list[str],
@@ -233,17 +296,33 @@ def build(index: dict[str, Any], vocab: dict[str, Any],
     skipped: Counter = Counter()
 
     def need(kind: str, family: str, episode: str,
-             start: int | None = None, end: int | None = None) -> str:
-        """登记一条素材需求，返回它的 key。同样的需求只登记一次。"""
-        key = (f"{family}/{episode}/{VIEW}/{kind}" +
+             start: int | None = None, end: int | None = None,
+             view: str = VIEW) -> str:
+        """登记一条素材需求，返回它的 key。同样的需求只登记一次。
+
+        `kind` 为 ``frame`` 时抽单帧（图选项题型用），``clip`` 切片，``video`` 整段。
+        `view` 默认 main —— 只有 `left_right` 会用到手腕视角。
+        """
+        key = (f"{family}/{episode}/{view}/{kind}" +
                (f"/{start:06d}-{end:06d}" if start is not None else ""))
         media.setdefault(key, {
             "key": key, "kind": kind, "family": family, "episode": episode,
-            "view": VIEW, "start_frame": start, "end_frame": end,
-            "source": f"data/source/{family}/{episode}/{VIEW}.mp4",
+            "view": view, "start_frame": start, "end_frame": end,
+            "source": f"data/source/{family}/{episode}/{view}.mp4",
             "used_by": [],
         })
         return key
+
+    # 图选项题型的帧池：每段一条记录（三个视角同一时刻）
+    pool: dict[str, list[dict[str, Any]]] = {}
+    for fam in sorted(index):
+        rows = []
+        for ep in index[fam]["episodes"]:
+            for i, seg in enumerate(ep["segments"]):
+                rows.append({"family": fam, "episode": ep["episode"], "seg_index": i,
+                             "segment_id": seg["id"], "subtask": seg["subtask"],
+                             "frame": (seg["start_frame"] + seg["end_frame"]) // 2})
+        pool[fam] = rows
 
     for family in sorted(index):
         entry = index[family]
@@ -327,6 +406,84 @@ def build(index: dict[str, Any], vocab: dict[str, Any],
                     })
                     per_episode += 1
 
+            # ---- left_right：主视角一帧当题面，手腕视角当选项 ----
+            for i, segment in enumerate(segments):
+                mid = (segment["start_frame"] + segment["end_frame"]) // 2
+                for side in ("left", "right"):
+                    tid = f"{family}/{episode['episode']}/{segment['id']}@left_right_{side}"
+                    correct = need("frame", family, episode["episode"], mid, mid,
+                                   view=f"wrist_{side}")
+                    # 最难的干扰项：**对侧手腕的同一时刻**。答对必须真做左右判断。
+                    flip = "right" if side == "left" else "left"
+                    other = need("frame", family, episode["episode"], mid, mid,
+                                 view=f"wrist_{flip}")
+                    picks = pick_frames(tid, pool[family], episode["episode"],
+                                        segment["id"], IMAGE_DISTRACTORS - 1)
+                    opts = [correct, other] + [
+                        need("frame", family, r["episode"], r["frame"], r["frame"],
+                             view=f"wrist_{sd}") for r, sd in picks]
+                    if len(opts) < IMAGE_DISTRACTORS + 1:
+                        skipped["left_right:干扰帧不足"] += 1
+                        continue
+                    items.append({
+                        "id": tid, "family": family, "task": "left_right", "group": tid,
+                        "stem": STEMS["left_right"].format(side=side),
+                        "answer_subtask": segment["subtask"],
+                        "answer_text": f"{side} gripper camera view",
+                        "distractors": [], "image_options": opts,
+                        "correct_option": correct,
+                        "media": [need("frame", family, episode["episode"], mid, mid,
+                                       view="main")],
+                        "provenance": {
+                            "episode": episode["episode"], "segment_id": segment["id"],
+                            "subtask": segment["subtask"], "next_subtask": None,
+                            "recipe": {"version": RECIPE_VERSION,
+                                       "clip": {"mode": "frame", "view": "main",
+                                                "start_frame": mid, "end_frame": mid,
+                                                "seconds": 0.0},
+                                       "side": side,
+                                       "distractors": {"symmetric": 1,
+                                                       "other_frames": len(picks)},
+                                       "synthetic": False}},
+                    })
+
+            # ---- image_in_video：片段（复用 understanding 那一批）+ 图选项 ----
+            for i, segment in enumerate(segments):
+                clip = clip_for(segment, window, fps)
+                if (clip[1] - clip[0] + 1) / fps < MIN_CLIP_SECONDS:
+                    skipped["image_in_video:段过短"] += 1
+                    continue
+                mid = (segment["start_frame"] + segment["end_frame"]) // 2
+                tid = f"{family}/{episode['episode']}/{segment['id']}@image_in_video"
+                correct = need("frame", family, episode["episode"], mid, mid, view="main")
+                # 1 条来自本集（隔 ≥2 段，最难的那类）+ 2 条来自别集
+                picks = pick_frames(tid, pool[family], episode["episode"], segment["id"],
+                                    IMAGE_DISTRACTORS, same_ep_index=i,
+                                    min_gap=IV_MIN_SEGMENT_GAP, from_same_ep=1)
+                opts = [correct] + [need("frame", family, r["episode"], r["frame"],
+                                         r["frame"], view="main") for r, _ in picks]
+                if len(opts) < IMAGE_DISTRACTORS + 1:
+                    skipped["image_in_video:干扰帧不足"] += 1
+                    continue
+                items.append({
+                    "id": tid, "family": family, "task": "image_in_video", "group": tid,
+                    "stem": STEMS["image_in_video"],
+                    "answer_subtask": segment["subtask"],
+                    "answer_text": "the option image that appeared in the clip",
+                    "distractors": [], "image_options": opts, "correct_option": correct,
+                    "media": [need("clip", family, episode["episode"], *clip)],
+                    "provenance": {
+                        "episode": episode["episode"], "segment_id": segment["id"],
+                        "subtask": segment["subtask"], "next_subtask": None,
+                        "recipe": {"version": RECIPE_VERSION,
+                                   "clip": {"mode": window, "view": VIEW,
+                                            "start_frame": clip[0], "end_frame": clip[1],
+                                            "seconds": round((clip[1] - clip[0] + 1) / fps, 3)},
+                                   "min_segment_gap": IV_MIN_SEGMENT_GAP,
+                                   "distractors": {"other_frames": len(picks)},
+                                   "synthetic": False}},
+                })
+
             # ---- time：一集一组，用全长视频 ----
             if not episode["full_video_usable"]:
                 skipped["time:该集有未标注的 episode"] += 1
@@ -362,7 +519,11 @@ def build(index: dict[str, Any], vocab: dict[str, Any],
                 skipped["time:整组无可用动作"] += 1
 
     for item in items:
-        for key in item["media"]:
+        # **`image_options` 也要计入引用。** 图选项题型把选项图放在
+        # `image_options` 而不是 `media` 里（compose 需要区分「题面」与「选项」），
+        # 漏统计的后果不只是账算错 —— 若哪天按「没被引用」清理素材，
+        # 4,170 张里有 1,390 张会被误删。
+        for key in list(item["media"]) + list(item.get("image_options", [])):
             media[key]["used_by"].append(item["id"])
 
     choices = DISTRACTORS_PER_QUESTION + 1 + (none_option != "off")
@@ -397,12 +558,21 @@ def report(plan: dict[str, Any], index: dict[str, Any]) -> None:
     print(f"{'合计':<13}" + "".join(f"{total[t]:>13}" for t in TASKS)
           + f"{sum(total.values()):>8}")
 
+    from collections import Counter as _C
+    kinds = _C(m["kind"] for m in plan["media"])
     clips = [m for m in plan["media"] if m["kind"] == "clip"]
-    videos = [m for m in plan["media"] if m["kind"] == "video"]
+    frames = [m for m in plan["media"] if m["kind"] == "frame"]
     reuse = sum(len(m["used_by"]) for m in clips)
-    print(f"\n素材需求：{len(clips)} 段切片 + {len(videos)} 个全长视频")
+    freuse = sum(len(m["used_by"]) for m in frames)
+    print(f"\n素材需求：{dict(kinds)}")
     print(f"  切片被 {reuse} 道题引用 —— 去重省下 {reuse - len(clips)} 次编码"
-          f"（理解题与规划题共用同一片段）")
+          f"（understanding / planning / planning_2 / image_in_video 共用同一片段）")
+    if frames:
+        byview = _C(m["view"] for m in frames)
+        print(f"  帧被 {freuse} 次引用，去重后 {len(frames)} 张 —— 省下 {freuse - len(frames)} 次抽帧")
+        print(f"    按视角 {dict(byview)}")
+        print(f"    **所有选项图同一条抽帧路径、同一套参数** —— 正确图与干扰图之间"
+              f"没有图像统计上的差别可辨")
 
     if plan["skipped"]:
         print("\n没出成的：")

@@ -1,0 +1,5404 @@
+{
+ "items": [
+  {
+   "id": "stack_cubes/file-000/file-000@f000000@image_in_video",
+   "video_id": "stack_cubes/file-000",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-000/main/frame/001219-001219.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-022/main/frame/000867-000867.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-000/main/frame/000256-000256.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-042/main/frame/000648-000648.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-000/file-000@f000514@image_in_video",
+   "video_id": "stack_cubes/file-000",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-014/main/frame/000620-000620.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-000/main/frame/001219-001219.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-000/main/frame/000587-000587.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-034/main/frame/000395-000395.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-000/file-000@f000661@image_in_video",
+   "video_id": "stack_cubes/file-000",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-000/main/frame/000900-000900.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-042/main/frame/000934-000934.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-000/main/frame/000256-000256.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-013/main/frame/000658-000658.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-000/file-000@f001140@image_in_video",
+   "video_id": "stack_cubes/file-000",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-002/main/frame/000271-000271.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-000/main/frame/000587-000587.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-000/main/frame/001219-001219.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-031/main/frame/000345-000345.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-001/file-001@f000000@image_in_video",
+   "video_id": "stack_cubes/file-001",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-000/main/frame/000900-000900.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-001/main/frame/000245-000245.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000698-000698.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-001/main/frame/001274-001274.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-001/file-001@f000491@image_in_video",
+   "video_id": "stack_cubes/file-001",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-001/main/frame/001274-001274.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-001/main/frame/000550-000550.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000155-000155.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000433-000433.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-001/file-001@f000611@image_in_video",
+   "video_id": "stack_cubes/file-001",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-001/main/frame/000913-000913.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-001/main/frame/000245-000245.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-031/main/frame/000542-000542.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-011/main/frame/001051-001051.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-001/file-001@f001216@image_in_video",
+   "video_id": "stack_cubes/file-001",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-001/main/frame/000245-000245.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-048/main/frame/000736-000736.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-029/main/frame/000126-000126.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-001/main/frame/001274-001274.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-002/file-002@f000000@image_in_video",
+   "video_id": "stack_cubes/file-002",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-002/main/frame/001173-001173.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-002/main/frame/000271-000271.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-013/main/frame/000658-000658.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-042/main/frame/000934-000934.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-002/file-002@f000543@image_in_video",
+   "video_id": "stack_cubes/file-002",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-002/main/frame/000593-000593.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-033/main/frame/000684-000684.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-004/main/frame/000714-000714.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-002/main/frame/001173-001173.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-002/file-002@f000645@image_in_video",
+   "video_id": "stack_cubes/file-002",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-002/main/frame/000271-000271.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-002/main/frame/000881-000881.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-000/main/frame/000587-000587.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000495-000495.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-002/file-002@f001118@image_in_video",
+   "video_id": "stack_cubes/file-002",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-002/main/frame/000271-000271.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-009/main/frame/000219-000219.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000856-000856.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-002/main/frame/001173-001173.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-003/file-003@f000000@image_in_video",
+   "video_id": "stack_cubes/file-003",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-003/main/frame/000815-000815.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-037/main/frame/000653-000653.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-003/main/frame/000228-000228.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000433-000433.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-003/file-003@f000457@image_in_video",
+   "video_id": "stack_cubes/file-003",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-003/main/frame/000498-000498.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-003/main/frame/001137-001137.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000698-000698.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-011/main/frame/000214-000214.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-003/file-003@f000540@image_in_video",
+   "video_id": "stack_cubes/file-003",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-015/main/frame/000766-000766.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-003/main/frame/000228-000228.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-035/main/frame/000669-000669.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-003/main/frame/000815-000815.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-003/file-003@f001091@image_in_video",
+   "video_id": "stack_cubes/file-003",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-018/main/frame/000693-000693.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-038/main/frame/000381-000381.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-003/main/frame/001137-001137.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-003/main/frame/000228-000228.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-004/file-004@f000000@image_in_video",
+   "video_id": "stack_cubes/file-004",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-004/main/frame/000231-000231.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000495-000495.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-004/main/frame/000936-000936.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-010/main/frame/000822-000822.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-004/file-004@f000464@image_in_video",
+   "video_id": "stack_cubes/file-004",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-016/main/frame/000384-000384.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-004/main/frame/000502-000502.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-004/main/frame/000936-000936.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-045/main/frame/000578-000578.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-004/file-004@f000541@image_in_video",
+   "video_id": "stack_cubes/file-004",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-045/main/frame/000801-000801.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-004/main/frame/000714-000714.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000157-000157.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-004/main/frame/000231-000231.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-004/file-004@f000888@image_in_video",
+   "video_id": "stack_cubes/file-004",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000129-000129.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-004/main/frame/000936-000936.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-049/main/frame/000806-000806.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-004/main/frame/000231-000231.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-005/file-005@f000000@image_in_video",
+   "video_id": "stack_cubes/file-005",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-006/main/frame/000205-000205.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-005/main/frame/000709-000709.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-025/main/frame/000890-000890.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-005/main/frame/000205-000205.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-005/file-005@f000411@image_in_video",
+   "video_id": "stack_cubes/file-005",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-005/main/frame/000967-000967.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-036/main/frame/000167-000167.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-005/main/frame/000456-000456.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-016/main/frame/000384-000384.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-005/file-005@f000502@image_in_video",
+   "video_id": "stack_cubes/file-005",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-005/main/frame/000709-000709.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-005/main/frame/000205-000205.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-049/main/frame/000158-000158.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-019/main/frame/000876-000876.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-005/file-005@f000917@image_in_video",
+   "video_id": "stack_cubes/file-005",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-005/main/frame/000456-000456.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-005/main/frame/000967-000967.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-018/main/frame/000470-000470.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-038/main/frame/000158-000158.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-006/file-006@f000000@image_in_video",
+   "video_id": "stack_cubes/file-006",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-006/main/frame/000658-000658.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-031/main/frame/000738-000738.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-012/main/frame/000196-000196.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-006/main/frame/000205-000205.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-006/file-006@f000411@image_in_video",
+   "video_id": "stack_cubes/file-006",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-033/main/frame/000482-000482.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-006/main/frame/000876-000876.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-006/main/frame/000456-000456.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-013/main/frame/000885-000885.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-006/file-006@f000502@image_in_video",
+   "video_id": "stack_cubes/file-006",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-021/main/frame/000960-000960.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-006/main/frame/000205-000205.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-001/main/frame/000245-000245.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-006/main/frame/000658-000658.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-006/file-006@f000816@image_in_video",
+   "video_id": "stack_cubes/file-006",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-027/main/frame/000350-000350.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-006/main/frame/000456-000456.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-006/main/frame/000876-000876.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-047/main/frame/000149-000149.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-007/file-007@f000000@image_in_video",
+   "video_id": "stack_cubes/file-007",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000190-000190.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000666-000666.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-036/main/frame/000167-000167.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-005/main/frame/000967-000967.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-007/file-007@f000382@image_in_video",
+   "video_id": "stack_cubes/file-007",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000893-000893.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-015/main/frame/000149-000149.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000431-000431.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-044/main/frame/000401-000401.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-007/file-007@f000481@image_in_video",
+   "video_id": "stack_cubes/file-007",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-041/main/frame/000163-000163.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-021/main/frame/000446-000446.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000666-000666.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000190-000190.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-007/file-007@f000852@image_in_video",
+   "video_id": "stack_cubes/file-007",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-034/main/frame/000170-000170.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-003/main/frame/001137-001137.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000893-000893.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000190-000190.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-008/file-008@f000000@image_in_video",
+   "video_id": "stack_cubes/file-008",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-017/main/frame/000827-000827.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000647-000647.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-047/main/frame/000149-000149.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000196-000196.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-008/file-008@f000394@image_in_video",
+   "video_id": "stack_cubes/file-008",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-020/main/frame/000619-000619.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-049/main/frame/000806-000806.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000433-000433.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000866-000866.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-008/file-008@f000473@image_in_video",
+   "video_id": "stack_cubes/file-008",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-039/main/frame/000144-000144.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000196-000196.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000647-000647.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-009/main/frame/000982-000982.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-008/file-008@f000822@image_in_video",
+   "video_id": "stack_cubes/file-008",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000433-000433.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000356-000356.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000866-000866.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-046/main/frame/000144-000144.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-009/file-009@f000000@image_in_video",
+   "video_id": "stack_cubes/file-009",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-009/main/frame/000219-000219.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-045/main/frame/000354-000354.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-025/main/frame/000647-000647.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-009/main/frame/000731-000731.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-009/file-009@f000439@image_in_video",
+   "video_id": "stack_cubes/file-009",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-045/main/frame/000801-000801.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-009/main/frame/000482-000482.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-009/main/frame/000982-000982.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-016/main/frame/000643-000643.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-009/file-009@f000526@image_in_video",
+   "video_id": "stack_cubes/file-009",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-009/main/frame/000731-000731.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-009/main/frame/000219-000219.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-049/main/frame/000158-000158.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-029/main/frame/000301-000301.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-009/file-009@f000937@image_in_video",
+   "video_id": "stack_cubes/file-009",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-009/main/frame/000982-000982.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-009/main/frame/000482-000482.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-023/main/frame/000628-000628.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-002/main/frame/001173-001173.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-010/file-010@f000000@image_in_video",
+   "video_id": "stack_cubes/file-010",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-010/main/frame/000170-000170.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-010/main/frame/000822-000822.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-000/main/frame/000587-000587.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-021/main/frame/000199-000199.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-010/file-010@f000341@image_in_video",
+   "video_id": "stack_cubes/file-010",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-000/main/frame/001219-001219.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-010/main/frame/000382-000382.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-031/main/frame/000147-000147.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-010/main/frame/000822-000822.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-010/file-010@f000425@image_in_video",
+   "video_id": "stack_cubes/file-010",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-010/main/frame/000170-000170.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-010/main/frame/000599-000599.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000352-000352.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-048/main/frame/000145-000145.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-010/file-010@f000774@image_in_video",
+   "video_id": "stack_cubes/file-010",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-019/main/frame/000378-000378.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-010/main/frame/000822-000822.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-039/main/frame/000144-000144.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-010/main/frame/000382-000382.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-011/file-011@f000000@image_in_video",
+   "video_id": "stack_cubes/file-011",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-011/main/frame/000214-000214.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-038/main/frame/000876-000876.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000647-000647.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-011/main/frame/001051-001051.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-011/file-011@f000429@image_in_video",
+   "video_id": "stack_cubes/file-011",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-011/main/frame/001051-001051.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000698-000698.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-010/main/frame/000170-000170.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-011/main/frame/000511-000511.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-011/file-011@f000595@image_in_video",
+   "video_id": "stack_cubes/file-011",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-037/main/frame/000385-000385.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-011/main/frame/000214-000214.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-011/main/frame/000803-000803.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000190-000190.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-011/file-011@f001012@image_in_video",
+   "video_id": "stack_cubes/file-011",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-027/main/frame/000724-000724.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000190-000190.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-011/main/frame/001051-001051.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-011/main/frame/000214-000214.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-012/file-012@f000000@image_in_video",
+   "video_id": "stack_cubes/file-012",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-012/main/frame/000196-000196.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-012/main/frame/000637-000637.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-040/main/frame/000150-000150.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-009/main/frame/000982-000982.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-012/file-012@f000394@image_in_video",
+   "video_id": "stack_cubes/file-012",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-010/main/frame/000822-000822.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-012/main/frame/000853-000853.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-031/main/frame/000542-000542.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-012/main/frame/000427-000427.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-012/file-012@f000462@image_in_video",
+   "video_id": "stack_cubes/file-012",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-012/main/frame/000196-000196.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-012/main/frame/000637-000637.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-017/main/frame/000186-000186.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-046/main/frame/000344-000344.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-012/file-012@f000813@image_in_video",
+   "video_id": "stack_cubes/file-012",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-012/main/frame/000853-000853.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-041/main/frame/000578-000578.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-011/main/frame/000511-000511.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-012/main/frame/000196-000196.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-013/file-013@f000000@image_in_video",
+   "video_id": "stack_cubes/file-013",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-038/main/frame/000602-000602.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-013/main/frame/000885-000885.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-018/main/frame/000922-000922.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-013/main/frame/000193-000193.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-013/file-013@f000387@image_in_video",
+   "video_id": "stack_cubes/file-013",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-017/main/frame/000186-000186.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-013/main/frame/000429-000429.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-013/main/frame/000885-000885.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-046/main/frame/000344-000344.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-013/file-013@f000472@image_in_video",
+   "video_id": "stack_cubes/file-013",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000157-000157.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-005/main/frame/000456-000456.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-013/main/frame/000658-000658.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-013/main/frame/000193-000193.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-013/file-013@f000846@image_in_video",
+   "video_id": "stack_cubes/file-013",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-013/main/frame/000885-000885.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000778-000778.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-013/main/frame/000429-000429.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-046/main/frame/000573-000573.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-014/file-014@f000000@image_in_video",
+   "video_id": "stack_cubes/file-014",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-014/main/frame/000620-000620.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-047/main/frame/000149-000149.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-014/main/frame/000182-000182.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-017/main/frame/000827-000827.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-014/file-014@f000365@image_in_video",
+   "video_id": "stack_cubes/file-014",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000856-000856.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-014/main/frame/000408-000408.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-014/main/frame/000844-000844.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000196-000196.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-014/file-014@f000452@image_in_video",
+   "video_id": "stack_cubes/file-014",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-017/main/frame/000186-000186.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-014/main/frame/000182-000182.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-014/main/frame/000620-000620.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-036/main/frame/000935-000935.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-014/file-014@f000789@image_in_video",
+   "video_id": "stack_cubes/file-014",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000190-000190.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-014/main/frame/000844-000844.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-027/main/frame/000724-000724.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-014/main/frame/000182-000182.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-015/file-015@f000000@image_in_video",
+   "video_id": "stack_cubes/file-015",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-016/main/frame/000384-000384.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-036/main/frame/000167-000167.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-015/main/frame/000149-000149.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-015/main/frame/000766-000766.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-015/file-015@f000300@image_in_video",
+   "video_id": "stack_cubes/file-015",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-048/main/frame/000145-000145.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-015/main/frame/000766-000766.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000352-000352.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-015/main/frame/000332-000332.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-015/file-015@f000366@image_in_video",
+   "video_id": "stack_cubes/file-015",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-024/main/frame/000862-000862.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-015/main/frame/000547-000547.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-044/main/frame/000632-000632.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-015/main/frame/000149-000149.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-015/file-015@f000729@image_in_video",
+   "video_id": "stack_cubes/file-015",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-029/main/frame/000126-000126.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-015/main/frame/000332-000332.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000433-000433.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-015/main/frame/000766-000766.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-016/file-016@f000000@image_in_video",
+   "video_id": "stack_cubes/file-016",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-016/main/frame/000171-000171.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-021/main/frame/000446-000446.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-000/main/frame/000900-000900.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-016/main/frame/000643-000643.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-016/file-016@f000343@image_in_video",
+   "video_id": "stack_cubes/file-016",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-016/main/frame/000384-000384.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-022/main/frame/000867-000867.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-016/main/frame/000903-000903.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-002/main/frame/000271-000271.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-016/file-016@f000426@image_in_video",
+   "video_id": "stack_cubes/file-016",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-016/main/frame/000643-000643.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-015/main/frame/000149-000149.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-045/main/frame/000354-000354.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-016/main/frame/000171-000171.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-016/file-016@f000861@image_in_video",
+   "video_id": "stack_cubes/file-016",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-016/main/frame/000171-000171.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-016/main/frame/000903-000903.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-021/main/frame/000199-000199.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-040/main/frame/000715-000715.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-017/file-017@f000000@image_in_video",
+   "video_id": "stack_cubes/file-017",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-017/main/frame/000186-000186.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-012/main/frame/000427-000427.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-042/main/frame/000648-000648.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-017/main/frame/000616-000616.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-017/file-017@f000373@image_in_video",
+   "video_id": "stack_cubes/file-017",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-041/main/frame/000163-000163.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-017/main/frame/000409-000409.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-021/main/frame/000446-000446.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-017/main/frame/000827-000827.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-017/file-017@f000446@image_in_video",
+   "video_id": "stack_cubes/file-017",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-015/main/frame/000149-000149.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-017/main/frame/000186-000186.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-035/main/frame/000940-000940.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-017/main/frame/000616-000616.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-017/file-017@f000788@image_in_video",
+   "video_id": "stack_cubes/file-017",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-017/main/frame/000186-000186.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-046/main/frame/000144-000144.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-015/main/frame/000766-000766.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-017/main/frame/000827-000827.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-018/file-018@f000000@image_in_video",
+   "video_id": "stack_cubes/file-018",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-044/main/frame/000866-000866.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-018/main/frame/000693-000693.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-025/main/frame/000186-000186.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-018/main/frame/000217-000217.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-018/file-018@f000435@image_in_video",
+   "video_id": "stack_cubes/file-018",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-005/main/frame/000967-000967.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-018/main/frame/000470-000470.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-036/main/frame/000167-000167.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-018/main/frame/000922-000922.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-018/file-018@f000507@image_in_video",
+   "video_id": "stack_cubes/file-018",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-018/main/frame/000693-000693.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000856-000856.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-018/main/frame/000217-000217.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000196-000196.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-018/file-018@f000881@image_in_video",
+   "video_id": "stack_cubes/file-018",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000157-000157.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-045/main/frame/000801-000801.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-018/main/frame/000922-000922.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-018/main/frame/000217-000217.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-019/file-019@f000000@image_in_video",
+   "video_id": "stack_cubes/file-019",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-019/main/frame/000876-000876.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-019/main/frame/000165-000165.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-031/main/frame/000345-000345.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-001/main/frame/000245-000245.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-019/file-019@f000331@image_in_video",
+   "video_id": "stack_cubes/file-019",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-019/main/frame/000876-000876.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-016/main/frame/000643-000643.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-037/main/frame/000385-000385.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-019/main/frame/000378-000378.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-019/file-019@f000427@image_in_video",
+   "video_id": "stack_cubes/file-019",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-003/main/frame/000228-000228.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-033/main/frame/000304-000304.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-019/main/frame/000627-000627.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-019/main/frame/000165-000165.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-019/file-019@f000829@image_in_video",
+   "video_id": "stack_cubes/file-019",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-034/main/frame/000395-000395.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-019/main/frame/000876-000876.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-004/main/frame/000231-000231.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-019/main/frame/000378-000378.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-020/file-020@f000000@image_in_video",
+   "video_id": "stack_cubes/file-020",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-020/main/frame/000182-000182.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-040/main/frame/000715-000715.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-021/main/frame/000199-000199.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-020/main/frame/000619-000619.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-020/file-020@f000366@image_in_video",
+   "video_id": "stack_cubes/file-020",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-016/main/frame/000384-000384.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-020/main/frame/000410-000410.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-037/main/frame/000136-000136.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-020/main/frame/000832-000832.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-020/file-020@f000456@image_in_video",
+   "video_id": "stack_cubes/file-020",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-014/main/frame/000408-000408.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-044/main/frame/000632-000632.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-020/main/frame/000619-000619.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-020/main/frame/000182-000182.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-020/file-020@f000783@image_in_video",
+   "video_id": "stack_cubes/file-020",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-020/main/frame/000832-000832.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-011/main/frame/000214-000214.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-041/main/frame/000370-000370.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-020/main/frame/000410-000410.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-021/file-021@f000000@image_in_video",
+   "video_id": "stack_cubes/file-021",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-021/main/frame/000199-000199.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-045/main/frame/000801-000801.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-021/main/frame/000960-000960.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-015/main/frame/000547-000547.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-021/file-021@f000400@image_in_video",
+   "video_id": "stack_cubes/file-021",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-021/main/frame/000960-000960.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-001/main/frame/000550-000550.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-021/main/frame/000446-000446.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-022/main/frame/000173-000173.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-021/file-021@f000494@image_in_video",
+   "video_id": "stack_cubes/file-021",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-032/main/frame/000795-000795.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-012/main/frame/000196-000196.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-021/main/frame/000199-000199.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-021/main/frame/000701-000701.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-021/file-021@f000910@image_in_video",
+   "video_id": "stack_cubes/file-021",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-021/main/frame/000960-000960.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-036/main/frame/000674-000674.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-021/main/frame/000199-000199.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-006/main/frame/000456-000456.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-022/file-022@f000000@image_in_video",
+   "video_id": "stack_cubes/file-022",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-022/main/frame/000173-000173.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-031/main/frame/000147-000147.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-022/main/frame/000867-000867.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-010/main/frame/000382-000382.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-022/file-022@f000347@image_in_video",
+   "video_id": "stack_cubes/file-022",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-046/main/frame/000812-000812.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-027/main/frame/000157-000157.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-022/main/frame/000867-000867.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-022/main/frame/000389-000389.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-022/file-022@f000432@image_in_video",
+   "video_id": "stack_cubes/file-022",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-043/main/frame/000862-000862.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-022/main/frame/000622-000622.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-022/main/frame/000173-000173.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-024/main/frame/000178-000178.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-022/file-022@f000813@image_in_video",
+   "video_id": "stack_cubes/file-022",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000431-000431.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-022/main/frame/000867-000867.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000155-000155.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-022/main/frame/000389-000389.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-023/file-023@f000000@image_in_video",
+   "video_id": "stack_cubes/file-023",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-023/main/frame/000185-000185.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-047/main/frame/000547-000547.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-017/main/frame/000409-000409.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-023/main/frame/000628-000628.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-023/file-023@f000372@image_in_video",
+   "video_id": "stack_cubes/file-023",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-041/main/frame/000798-000798.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-023/main/frame/000849-000849.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-011/main/frame/000803-000803.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-023/main/frame/000411-000411.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-023/file-023@f000452@image_in_video",
+   "video_id": "stack_cubes/file-023",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-023/main/frame/000628-000628.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-036/main/frame/000422-000422.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-006/main/frame/000205-000205.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-023/main/frame/000185-000185.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-023/file-023@f000805@image_in_video",
+   "video_id": "stack_cubes/file-023",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-023/main/frame/000185-000185.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-013/main/frame/000658-000658.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-023/main/frame/000849-000849.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-034/main/frame/000395-000395.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-024/file-024@f000000@image_in_video",
+   "video_id": "stack_cubes/file-024",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-044/main/frame/000173-000173.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-024/main/frame/000178-000178.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-013/main/frame/000885-000885.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-024/main/frame/000625-000625.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-024/file-024@f000357@image_in_video",
+   "video_id": "stack_cubes/file-024",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-038/main/frame/000602-000602.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000433-000433.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-024/main/frame/000393-000393.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-024/main/frame/000862-000862.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-024/file-024@f000430@image_in_video",
+   "video_id": "stack_cubes/file-024",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-048/main/frame/000532-000532.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-024/main/frame/000625-000625.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-024/main/frame/000178-000178.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000856-000856.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-024/file-024@f000821@image_in_video",
+   "video_id": "stack_cubes/file-024",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-024/main/frame/000393-000393.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-024/main/frame/000862-000862.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-025/main/frame/000186-000186.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-004/main/frame/000502-000502.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-025/file-025@f000000@image_in_video",
+   "video_id": "stack_cubes/file-025",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000190-000190.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-025/main/frame/000186-000186.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-027/main/frame/000724-000724.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-025/main/frame/000647-000647.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-025/file-025@f000373@image_in_video",
+   "video_id": "stack_cubes/file-025",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-005/main/frame/000967-000967.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-025/main/frame/000890-000890.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-025/main/frame/000414-000414.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-036/main/frame/000167-000167.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-025/file-025@f000456@image_in_video",
+   "video_id": "stack_cubes/file-025",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-025/main/frame/000186-000186.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-025/main/frame/000647-000647.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000352-000352.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-048/main/frame/000145-000145.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-025/file-025@f000840@image_in_video",
+   "video_id": "stack_cubes/file-025",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000866-000866.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-025/main/frame/000186-000186.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-039/main/frame/000144-000144.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-025/main/frame/000890-000890.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-026/file-026@f000000@image_in_video",
+   "video_id": "stack_cubes/file-026",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-020/main/frame/000410-000410.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000157-000157.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-041/main/frame/000163-000163.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000778-000778.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-026/file-026@f000316@image_in_video",
+   "video_id": "stack_cubes/file-026",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000356-000356.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000778-000778.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-016/main/frame/000643-000643.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-037/main/frame/000385-000385.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-026/file-026@f000398@image_in_video",
+   "video_id": "stack_cubes/file-026",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-027/main/frame/000157-000157.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-046/main/frame/000812-000812.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000157-000157.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000564-000564.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-026/file-026@f000731@image_in_video",
+   "video_id": "stack_cubes/file-026",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-037/main/frame/000385-000385.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-016/main/frame/000643-000643.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000778-000778.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000157-000157.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-027/file-027@f000000@image_in_video",
+   "video_id": "stack_cubes/file-027",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-027/main/frame/000533-000533.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-027/main/frame/000157-000157.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-043/main/frame/000382-000382.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-022/main/frame/000622-000622.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-027/file-027@f000316@image_in_video",
+   "video_id": "stack_cubes/file-027",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-009/main/frame/000982-000982.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-027/main/frame/000724-000724.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-027/main/frame/000350-000350.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-040/main/frame/000150-000150.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-027/file-027@f000386@image_in_video",
+   "video_id": "stack_cubes/file-027",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-042/main/frame/000648-000648.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-027/main/frame/000533-000533.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-021/main/frame/000960-000960.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-027/main/frame/000157-000157.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-027/file-027@f000682@image_in_video",
+   "video_id": "stack_cubes/file-027",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-027/main/frame/000157-000157.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-000/main/frame/000900-000900.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-020/main/frame/000410-000410.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-027/main/frame/000724-000724.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-028/file-028@f000000@image_in_video",
+   "video_id": "stack_cubes/file-028",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000155-000155.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000583-000583.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-009/main/frame/000482-000482.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-039/main/frame/000584-000584.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-028/file-028@f000311@image_in_video",
+   "video_id": "stack_cubes/file-028",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000778-000778.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000856-000856.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000190-000190.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000352-000352.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-028/file-028@f000394@image_in_video",
+   "video_id": "stack_cubes/file-028",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000155-000155.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-045/main/frame/000149-000149.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-024/main/frame/000393-000393.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000583-000583.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-028/file-028@f000774@image_in_video",
+   "video_id": "stack_cubes/file-028",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-049/main/frame/000158-000158.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000856-000856.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-029/main/frame/000301-000301.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000352-000352.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-029/file-029@f000000@image_in_video",
+   "video_id": "stack_cubes/file-029",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-006/main/frame/000205-000205.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-025/main/frame/000890-000890.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-029/main/frame/000535-000535.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-029/main/frame/000126-000126.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-029/file-029@f000253@image_in_video",
+   "video_id": "stack_cubes/file-029",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000129-000129.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-029/main/frame/000779-000779.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-029/main/frame/000301-000301.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-049/main/frame/000806-000806.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-029/file-029@f000350@image_in_video",
+   "video_id": "stack_cubes/file-029",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-001/main/frame/001274-001274.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-029/main/frame/000535-000535.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-032/main/frame/000130-000130.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-029/main/frame/000126-000126.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-029/file-029@f000721@image_in_video",
+   "video_id": "stack_cubes/file-029",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-013/main/frame/000193-000193.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-029/main/frame/000301-000301.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-043/main/frame/000382-000382.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-029/main/frame/000779-000779.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-030/file-030@f000000@image_in_video",
+   "video_id": "stack_cubes/file-030",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000495-000495.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000129-000129.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-005/main/frame/000456-000456.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-035/main/frame/000669-000669.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-030/file-030@f000260@image_in_video",
+   "video_id": "stack_cubes/file-030",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000302-000302.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-013/main/frame/000193-000193.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-033/main/frame/000684-000684.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000698-000698.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-030/file-030@f000345@image_in_video",
+   "video_id": "stack_cubes/file-030",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000564-000564.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-047/main/frame/000350-000350.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000129-000129.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000495-000495.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-030/file-030@f000647@image_in_video",
+   "video_id": "stack_cubes/file-030",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000778-000778.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000129-000129.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000698-000698.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000190-000190.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-031/file-031@f000000@image_in_video",
+   "video_id": "stack_cubes/file-031",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-031/main/frame/000542-000542.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-001/main/frame/000913-000913.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-021/main/frame/000446-000446.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-031/main/frame/000147-000147.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-031/file-031@f000295@image_in_video",
+   "video_id": "stack_cubes/file-031",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-014/main/frame/000182-000182.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-031/main/frame/000738-000738.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-034/main/frame/000804-000804.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-031/main/frame/000345-000345.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-031/file-031@f000396@image_in_video",
+   "video_id": "stack_cubes/file-031",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-003/main/frame/001137-001137.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-023/main/frame/000628-000628.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-031/main/frame/000542-000542.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-031/main/frame/000147-000147.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-031/file-031@f000689@image_in_video",
+   "video_id": "stack_cubes/file-031",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-031/main/frame/000738-000738.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-010/main/frame/000822-000822.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-031/main/frame/000345-000345.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000495-000495.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-032/file-032@f000000@image_in_video",
+   "video_id": "stack_cubes/file-032",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-032/main/frame/000130-000130.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000583-000583.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000866-000866.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-032/main/frame/000795-000795.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-032/file-032@f000261@image_in_video",
+   "video_id": "stack_cubes/file-032",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-032/main/frame/000795-000795.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-006/main/frame/000456-000456.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000157-000157.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-032/main/frame/000342-000342.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-032/file-032@f000424@image_in_video",
+   "video_id": "stack_cubes/file-032",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-012/main/frame/000427-000427.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-032/main/frame/000130-000130.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-042/main/frame/000648-000648.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-032/main/frame/000574-000574.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-032/file-032@f000725@image_in_video",
+   "video_id": "stack_cubes/file-032",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-005/main/frame/000709-000709.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-035/main/frame/000940-000940.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-032/main/frame/000795-000795.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-032/main/frame/000342-000342.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-033/file-033@f000000@image_in_video",
+   "video_id": "stack_cubes/file-033",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-043/main/frame/000164-000164.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-012/main/frame/000853-000853.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-033/main/frame/000482-000482.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-033/main/frame/000127-000127.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-033/file-033@f000256@image_in_video",
+   "video_id": "stack_cubes/file-033",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-033/main/frame/000684-000684.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-047/main/frame/000350-000350.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-017/main/frame/000186-000186.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-033/main/frame/000304-000304.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-033/file-033@f000353@image_in_video",
+   "video_id": "stack_cubes/file-033",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-033/main/frame/000127-000127.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-033/main/frame/000482-000482.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-044/main/frame/000632-000632.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-014/main/frame/000408-000408.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-033/file-033@f000612@image_in_video",
+   "video_id": "stack_cubes/file-033",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-033/main/frame/000127-000127.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000155-000155.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-033/main/frame/000684-000684.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-048/main/frame/000736-000736.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-034/file-034@f000000@image_in_video",
+   "video_id": "stack_cubes/file-034",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-040/main/frame/000715-000715.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-010/main/frame/000599-000599.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-034/main/frame/000804-000804.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-034/main/frame/000170-000170.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-034/file-034@f000341@image_in_video",
+   "video_id": "stack_cubes/file-034",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-034/main/frame/000395-000395.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-004/main/frame/000714-000714.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-024/main/frame/000393-000393.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-034/main/frame/000804-000804.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-034/file-034@f000450@image_in_video",
+   "video_id": "stack_cubes/file-034",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-011/main/frame/000511-000511.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-034/main/frame/000592-000592.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-041/main/frame/000578-000578.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-034/main/frame/000170-000170.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-034/file-034@f000736@image_in_video",
+   "video_id": "stack_cubes/file-034",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-033/main/frame/000482-000482.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-034/main/frame/000804-000804.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-034/main/frame/000395-000395.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-013/main/frame/000885-000885.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-035/file-035@f000000@image_in_video",
+   "video_id": "stack_cubes/file-035",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-035/main/frame/000669-000669.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-047/main/frame/000761-000761.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-027/main/frame/000157-000157.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-035/main/frame/000172-000172.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-035/file-035@f000345@image_in_video",
+   "video_id": "stack_cubes/file-035",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-035/main/frame/000402-000402.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-035/main/frame/000940-000940.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-020/main/frame/000619-000619.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-000/main/frame/001219-001219.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-035/file-035@f000460@image_in_video",
+   "video_id": "stack_cubes/file-035",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-042/main/frame/000378-000378.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-012/main/frame/000196-000196.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-035/main/frame/000172-000172.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-035/main/frame/000669-000669.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-035/file-035@f000879@image_in_video",
+   "video_id": "stack_cubes/file-035",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-041/main/frame/000578-000578.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-035/main/frame/000402-000402.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-020/main/frame/000832-000832.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-035/main/frame/000940-000940.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-036/file-036@f000000@image_in_video",
+   "video_id": "stack_cubes/file-036",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-017/main/frame/000186-000186.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-036/main/frame/000167-000167.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-036/main/frame/000935-000935.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-047/main/frame/000350-000350.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-036/file-036@f000335@image_in_video",
+   "video_id": "stack_cubes/file-036",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-019/main/frame/000378-000378.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-036/main/frame/000935-000935.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-040/main/frame/000150-000150.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-036/main/frame/000422-000422.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-036/file-036@f000510@image_in_video",
+   "video_id": "stack_cubes/file-036",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-036/main/frame/000167-000167.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-010/main/frame/000822-000822.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000495-000495.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-036/main/frame/000674-000674.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-036/file-036@f000840@image_in_video",
+   "video_id": "stack_cubes/file-036",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-036/main/frame/000422-000422.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-036/main/frame/000935-000935.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000866-000866.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-028/main/frame/000583-000583.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-037/file-037@f000000@image_in_video",
+   "video_id": "stack_cubes/file-037",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-037/main/frame/000878-000878.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-001/main/frame/000913-000913.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000698-000698.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-037/main/frame/000136-000136.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-037/file-037@f000274@image_in_video",
+   "video_id": "stack_cubes/file-037",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-037/main/frame/000878-000878.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-037/main/frame/000385-000385.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-009/main/frame/000482-000482.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-029/main/frame/000126-000126.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-037/file-037@f000498@image_in_video",
+   "video_id": "stack_cubes/file-037",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-003/main/frame/001137-001137.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-037/main/frame/000136-000136.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-033/main/frame/000127-000127.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-037/main/frame/000653-000653.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-037/file-037@f000809@image_in_video",
+   "video_id": "stack_cubes/file-037",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-020/main/frame/000832-000832.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-037/main/frame/000878-000878.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-041/main/frame/000578-000578.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-037/main/frame/000385-000385.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-038/file-038@f000000@image_in_video",
+   "video_id": "stack_cubes/file-038",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-038/main/frame/000158-000158.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-038/main/frame/000876-000876.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-036/main/frame/000167-000167.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-016/main/frame/000384-000384.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-038/file-038@f000318@image_in_video",
+   "video_id": "stack_cubes/file-038",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000666-000666.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-036/main/frame/000935-000935.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-038/main/frame/000876-000876.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-038/main/frame/000381-000381.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-038/file-038@f000445@image_in_video",
+   "video_id": "stack_cubes/file-038",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-038/main/frame/000602-000602.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-039/main/frame/000822-000822.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-038/main/frame/000158-000158.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-009/main/frame/000731-000731.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-038/file-038@f000761@image_in_video",
+   "video_id": "stack_cubes/file-038",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-038/main/frame/000876-000876.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-038/main/frame/000381-000381.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000893-000893.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-027/main/frame/000533-000533.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-039/file-039@f000000@image_in_video",
+   "video_id": "stack_cubes/file-039",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-039/main/frame/000822-000822.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-019/main/frame/000378-000378.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-040/main/frame/000150-000150.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-039/main/frame/000144-000144.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-039/file-039@f000289@image_in_video",
+   "video_id": "stack_cubes/file-039",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-047/main/frame/000149-000149.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000356-000356.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-039/main/frame/000822-000822.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-039/main/frame/000352-000352.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-039/file-039@f000416@image_in_video",
+   "video_id": "stack_cubes/file-039",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-039/main/frame/000144-000144.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-043/main/frame/000862-000862.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-039/main/frame/000584-000584.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-023/main/frame/000185-000185.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-039/file-039@f000753@image_in_video",
+   "video_id": "stack_cubes/file-039",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-039/main/frame/000822-000822.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-006/main/frame/000456-000456.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-039/main/frame/000352-000352.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000157-000157.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-040/file-040@f000000@image_in_video",
+   "video_id": "stack_cubes/file-040",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-015/main/frame/000766-000766.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-040/main/frame/000536-000536.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-046/main/frame/000144-000144.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-040/main/frame/000150-000150.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-040/file-040@f000302@image_in_video",
+   "video_id": "stack_cubes/file-040",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-032/main/frame/000130-000130.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-040/main/frame/000715-000715.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-040/main/frame/000352-000352.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-012/main/frame/000427-000427.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-040/file-040@f000404@image_in_video",
+   "video_id": "stack_cubes/file-040",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-040/main/frame/000536-000536.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-039/main/frame/000584-000584.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-019/main/frame/000876-000876.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-040/main/frame/000150-000150.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-040/file-040@f000669@image_in_video",
+   "video_id": "stack_cubes/file-040",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-040/main/frame/000715-000715.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-038/main/frame/000602-000602.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-040/main/frame/000150-000150.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-009/main/frame/000482-000482.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-041/file-041@f000000@image_in_video",
+   "video_id": "stack_cubes/file-041",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-040/main/frame/000536-000536.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-041/main/frame/000798-000798.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-041/main/frame/000163-000163.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-020/main/frame/000832-000832.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-041/file-041@f000328@image_in_video",
+   "video_id": "stack_cubes/file-041",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-013/main/frame/000658-000658.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-041/main/frame/000798-000798.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-033/main/frame/000304-000304.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-041/main/frame/000370-000370.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-041/file-041@f000414@image_in_video",
+   "video_id": "stack_cubes/file-041",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-041/main/frame/000578-000578.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-041/main/frame/000163-000163.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-029/main/frame/000126-000126.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-049/main/frame/000806-000806.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-041/file-041@f000743@image_in_video",
+   "video_id": "stack_cubes/file-041",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-041/main/frame/000798-000798.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-041/main/frame/000163-000163.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-005/main/frame/000967-000967.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-035/main/frame/000172-000172.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-042/file-042@f000000@image_in_video",
+   "video_id": "stack_cubes/file-042",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-020/main/frame/000619-000619.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-040/main/frame/000352-000352.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-042/main/frame/000162-000162.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-042/main/frame/000648-000648.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-042/file-042@f000325@image_in_video",
+   "video_id": "stack_cubes/file-042",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-042/main/frame/000378-000378.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-012/main/frame/000637-000637.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-041/main/frame/000798-000798.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-042/main/frame/000934-000934.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-042/file-042@f000433@image_in_video",
+   "video_id": "stack_cubes/file-042",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-042/main/frame/000162-000162.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-042/main/frame/000648-000648.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-023/main/frame/000849-000849.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-044/main/frame/000632-000632.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-042/file-042@f000864@image_in_video",
+   "video_id": "stack_cubes/file-042",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-042/main/frame/000378-000378.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-036/main/frame/000422-000422.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-042/main/frame/000934-000934.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000190-000190.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-043/file-043@f000000@image_in_video",
+   "video_id": "stack_cubes/file-043",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-004/main/frame/000502-000502.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-043/main/frame/000862-000862.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-024/main/frame/000178-000178.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-043/main/frame/000164-000164.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-043/file-043@f000330@image_in_video",
+   "video_id": "stack_cubes/file-043",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-043/main/frame/000382-000382.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000893-000893.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-043/main/frame/000862-000862.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-037/main/frame/000136-000136.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-043/file-043@f000436@image_in_video",
+   "video_id": "stack_cubes/file-043",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-047/main/frame/000350-000350.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-026/main/frame/000564-000564.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-043/main/frame/000613-000613.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-043/main/frame/000164-000164.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-043/file-043@f000792@image_in_video",
+   "video_id": "stack_cubes/file-043",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-043/main/frame/000862-000862.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-043/main/frame/000382-000382.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-037/main/frame/000385-000385.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000196-000196.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-044/file-044@f000000@image_in_video",
+   "video_id": "stack_cubes/file-044",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-044/main/frame/000173-000173.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-014/main/frame/000408-000408.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-044/main/frame/000866-000866.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-034/main/frame/000170-000170.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-044/file-044@f000348@image_in_video",
+   "video_id": "stack_cubes/file-044",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000196-000196.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-037/main/frame/000385-000385.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-044/main/frame/000866-000866.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-044/main/frame/000401-000401.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-044/file-044@f000456@image_in_video",
+   "video_id": "stack_cubes/file-044",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-044/main/frame/000632-000632.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-035/main/frame/000940-000940.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-006/main/frame/000658-000658.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-044/main/frame/000173-000173.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-044/file-044@f000809@image_in_video",
+   "video_id": "stack_cubes/file-044",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-027/main/frame/000724-000724.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-044/main/frame/000866-000866.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-048/main/frame/000532-000532.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-044/main/frame/000401-000401.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-045/file-045@f000000@image_in_video",
+   "video_id": "stack_cubes/file-045",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-045/main/frame/000149-000149.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-015/main/frame/000149-000149.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-045/main/frame/000578-000578.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-034/main/frame/000804-000804.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-045/file-045@f000300@image_in_video",
+   "video_id": "stack_cubes/file-045",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000129-000129.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-045/main/frame/000801-000801.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-045/main/frame/000354-000354.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-000/main/frame/001219-001219.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-045/file-045@f000409@image_in_video",
+   "video_id": "stack_cubes/file-045",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-045/main/frame/000578-000578.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-037/main/frame/000385-000385.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-045/main/frame/000149-000149.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-008/main/frame/000196-000196.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-045/file-045@f000748@image_in_video",
+   "video_id": "stack_cubes/file-045",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-045/main/frame/000801-000801.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-045/main/frame/000149-000149.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-000/main/frame/000900-000900.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-020/main/frame/000410-000410.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-046/file-046@f000000@image_in_video",
+   "video_id": "stack_cubes/file-046",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-046/main/frame/000144-000144.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-046/main/frame/000573-000573.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-003/main/frame/000815-000815.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-023/main/frame/000411-000411.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-046/file-046@f000289@image_in_video",
+   "video_id": "stack_cubes/file-046",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-002/main/frame/001173-001173.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-046/main/frame/000812-000812.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-046/main/frame/000344-000344.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-032/main/frame/000130-000130.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-046/file-046@f000401@image_in_video",
+   "video_id": "stack_cubes/file-046",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-025/main/frame/000890-000890.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-046/main/frame/000573-000573.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-045/main/frame/000578-000578.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-046/main/frame/000144-000144.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-046/file-046@f000747@image_in_video",
+   "video_id": "stack_cubes/file-046",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-046/main/frame/000812-000812.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-046/main/frame/000344-000344.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-013/main/frame/000193-000193.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-042/main/frame/000378-000378.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-047/file-047@f000000@image_in_video",
+   "video_id": "stack_cubes/file-047",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-047/main/frame/000547-000547.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-043/main/frame/000382-000382.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-047/main/frame/000149-000149.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-023/main/frame/000628-000628.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-047/file-047@f000299@image_in_video",
+   "video_id": "stack_cubes/file-047",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-016/main/frame/000171-000171.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-047/main/frame/000350-000350.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-045/main/frame/000354-000354.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-047/main/frame/000761-000761.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-047/file-047@f000403@image_in_video",
+   "video_id": "stack_cubes/file-047",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-047/main/frame/000149-000149.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-012/main/frame/000637-000637.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-032/main/frame/000342-000342.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-047/main/frame/000547-000547.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-047/file-047@f000693@image_in_video",
+   "video_id": "stack_cubes/file-047",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-047/main/frame/000761-000761.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-032/main/frame/000342-000342.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-003/main/frame/000228-000228.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-047/main/frame/000350-000350.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-048/file-048@f000000@image_in_video",
+   "video_id": "stack_cubes/file-048",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "B",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-044/main/frame/000632-000632.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-048/main/frame/000145-000145.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-048/main/frame/000736-000736.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-024/main/frame/000862-000862.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-048/file-048@f000291@image_in_video",
+   "video_id": "stack_cubes/file-048",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-017/main/frame/000827-000827.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-048/main/frame/000736-000736.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-047/main/frame/000149-000149.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-048/main/frame/000334-000334.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-048/file-048@f000378@image_in_video",
+   "video_id": "stack_cubes/file-048",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "A",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-048/main/frame/000532-000532.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-010/main/frame/000382-000382.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-048/main/frame/000145-000145.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-030/main/frame/000129-000129.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-048/file-048@f000687@image_in_video",
+   "video_id": "stack_cubes/file-048",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-048/main/frame/000334-000334.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-033/main/frame/000127-000127.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-013/main/frame/000429-000429.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-048/main/frame/000736-000736.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-049/file-049@f000000@image_in_video",
+   "video_id": "stack_cubes/file-049",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-034/main/frame/000395-000395.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-014/main/frame/000620-000620.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-049/main/frame/000588-000588.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-049/main/frame/000158-000158.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-049/file-049@f000318@image_in_video",
+   "video_id": "stack_cubes/file-049",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-049/main/frame/000806-000806.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-007/main/frame/000431-000431.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-027/main/frame/000157-000157.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-049/main/frame/000375-000375.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-049/file-049@f000433@image_in_video",
+   "video_id": "stack_cubes/file-049",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "D",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-045/main/frame/000354-000354.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-025/main/frame/000647-000647.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-049/main/frame/000158-000158.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-049/main/frame/000588-000588.jpg"
+    }
+   ]
+  },
+  {
+   "id": "stack_cubes/file-049/file-049@f000744@image_in_video",
+   "video_id": "stack_cubes/file-049",
+   "type": "image_in_video",
+   "question": "Given this video clip of an action segment, which option image appeared in the clip?",
+   "answer": "C",
+   "answer_text": "the option image that appeared in the clip",
+   "input": {},
+   "options": [
+    {
+     "id": "A",
+     "image_path": "../../assets/stack_cubes/file-042/main/frame/000934-000934.jpg"
+    },
+    {
+     "id": "B",
+     "image_path": "../../assets/stack_cubes/file-023/main/frame/000185-000185.jpg"
+    },
+    {
+     "id": "C",
+     "image_path": "../../assets/stack_cubes/file-049/main/frame/000806-000806.jpg"
+    },
+    {
+     "id": "D",
+     "image_path": "../../assets/stack_cubes/file-049/main/frame/000158-000158.jpg"
+    }
+   ]
+  }
+ ]
+}
