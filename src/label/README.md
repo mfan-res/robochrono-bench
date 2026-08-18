@@ -104,11 +104,9 @@ data/
 | `schemas/segments.json` | ✅ 320/320 通过 |
 | 上游 OpenCV 工具 | 📦 原样存在 `upstream/`，**已不使用**，仅供比对 |
 
-`validate.py` 当前报 **40 条**，全部是 ⚠：
-
-```
-⚠ 歧义 40 条  wash 每集重复动作 —— 洗两个盘子（P-05，处理中）
-```
+`validate.py` **七条检查全部通过，零条发现。**
+P-05（wash 洗两个盘子）已解决：两个盘子加了相对位置，
+38 集用 left/right、file-000 与 file-001 机位不同用 far/near，全部经人看图确认。
 
 > 64 → 42：tea2 与 express 移出（D-42）。42 → 40：删掉 pen_inbox 的零长度段（D-44）。
 
@@ -151,7 +149,7 @@ data/
 
 ```bash
 python3 src/label/tests/test_core_replay.py   # 语义没走样
-python3 src/label/validate.py                 # 应当仍是 40 条，不多不少
+python3 src/label/validate.py                 # 应当仍是零条
 ```
 
 **回归的判据不是「输出相同」，是「每一处差异都被声明过」。** 冒出未声明的差异，

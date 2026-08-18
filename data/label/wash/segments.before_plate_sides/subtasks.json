@@ -1,0 +1,47 @@
+{
+  "family": "wash",
+  "version": 1,
+  "_note": "subtask 定义。ID 永不改变；修措辞只改 text，所有引用自动跟随。标注段用 subtask 字段引用这里的 id，不再存渲染后的字符串。",
+  "subtasks": [
+    {
+      "id": "pick_brush",
+      "text": "Pick the brush."
+    },
+    {
+      "id": "pick_bowl",
+      "text": "Pick the bowl."
+    },
+    {
+      "id": "wipe_bowl_with_brush",
+      "text": "Wipe the bowl with brush."
+    },
+    {
+      "id": "put_brush",
+      "text": "Put the brush."
+    },
+    {
+      "id": "put_bowl",
+      "text": "Put the bowl."
+    },
+    {
+      "id": "pick_plate",
+      "text": "Pick the plate."
+    },
+    {
+      "id": "pick_rag",
+      "text": "Pick the rag."
+    },
+    {
+      "id": "wipe_plate_with_rag",
+      "text": "Wipe the plate with rag."
+    },
+    {
+      "id": "put_plate",
+      "text": "Put the plate."
+    },
+    {
+      "id": "put_rag",
+      "text": "Put the rag."
+    }
+  ]
+}

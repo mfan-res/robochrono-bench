@@ -30,23 +30,13 @@
     },
     {
       "id": "file-026@f000303",
-      "start": 12.12,
-      "end": 18.04,
-      "start_time": "00:00:12.120",
-      "end_time": "00:00:18.040",
+      "subtask": "wipe_bowl_with_brush",
       "start_frame": 303,
-      "end_frame": 450,
-      "subtask": "wipe_bowl_with_brush"
-    },
-    {
-      "id": "file-026@f000450",
-      "start": 18.0,
-      "end": 20.96,
-      "start_time": "00:00:18.000",
-      "end_time": "00:00:20.960",
-      "start_frame": 450,
       "end_frame": 523,
-      "subtask": "wipe_bowl_with_brush"
+      "start": 12.12,
+      "end": 20.96,
+      "start_time": "00:00:12.120",
+      "end_time": "00:00:20.960"
     },
     {
       "id": "file-026@f000523",
@@ -66,7 +56,7 @@
       "end_time": "00:00:29.920",
       "start_frame": 661,
       "end_frame": 747,
-      "subtask": "pick_plate"
+      "subtask": "pick_left_plate"
     },
     {
       "id": "file-026@f000747",
@@ -86,7 +76,7 @@
       "end_time": "00:00:39.760",
       "start_frame": 852,
       "end_frame": 993,
-      "subtask": "wipe_plate_with_rag"
+      "subtask": "wipe_left_plate_with_rag"
     },
     {
       "id": "file-026@f000993",
@@ -96,7 +86,7 @@
       "end_time": "00:00:45.120",
       "start_frame": 993,
       "end_frame": 1127,
-      "subtask": "put_plate"
+      "subtask": "put_left_plate"
     },
     {
       "id": "file-026@f001147",
@@ -106,7 +96,7 @@
       "end_time": "00:00:50.080",
       "start_frame": 1147,
       "end_frame": 1251,
-      "subtask": "pick_plate"
+      "subtask": "pick_right_plate"
     },
     {
       "id": "file-026@f001251",
@@ -116,7 +106,7 @@
       "end_time": "00:00:55.760",
       "start_frame": 1251,
       "end_frame": 1393,
-      "subtask": "wipe_plate_with_rag"
+      "subtask": "wipe_right_plate_with_rag"
     },
     {
       "id": "file-026@f001393",
@@ -136,7 +126,7 @@
       "end_time": "00:01:02.160",
       "start_frame": 1448,
       "end_frame": 1553,
-      "subtask": "put_plate"
+      "subtask": "put_right_plate"
     }
   ]
 }

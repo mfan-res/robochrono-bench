@@ -71,7 +71,7 @@
       "end_time": "00:00:33.800",
       "start_frame": 688,
       "end_frame": 844,
-      "subtask": "pick_plate"
+      "subtask": "pick_left_plate"
     },
     {
       "id": "file-032@f000844",
@@ -91,7 +91,7 @@
       "end_time": "00:00:42.880",
       "start_frame": 924,
       "end_frame": 1071,
-      "subtask": "wipe_plate_with_rag"
+      "subtask": "wipe_left_plate_with_rag"
     },
     {
       "id": "file-032@f001071",
@@ -101,7 +101,7 @@
       "end_time": "00:00:46.280",
       "start_frame": 1071,
       "end_frame": 1156,
-      "subtask": "put_plate"
+      "subtask": "put_left_plate"
     },
     {
       "id": "file-032@f001156",
@@ -111,7 +111,7 @@
       "end_time": "00:00:49.960",
       "start_frame": 1156,
       "end_frame": 1248,
-      "subtask": "pick_plate"
+      "subtask": "pick_right_plate"
     },
     {
       "id": "file-032@f001248",
@@ -121,7 +121,7 @@
       "end_time": "00:00:55.040",
       "start_frame": 1248,
       "end_frame": 1375,
-      "subtask": "wipe_plate_with_rag"
+      "subtask": "wipe_right_plate_with_rag"
     },
     {
       "id": "file-032@f001375",
@@ -141,7 +141,7 @@
       "end_time": "00:01:00.960",
       "start_frame": 1434,
       "end_frame": 1523,
-      "subtask": "put_plate"
+      "subtask": "put_right_plate"
     }
   ]
 }
