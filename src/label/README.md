@@ -104,14 +104,13 @@ data/
 | `schemas/segments.json` | ✅ 320/320 通过 |
 | 上游 OpenCV 工具 | 📦 原样存在 `upstream/`，**已不使用**，仅供比对 |
 
-`validate.py` 当前报 **42 条**，全部是**数据固有、不可用工程手段消除**的：
+`validate.py` 当前报 **40 条**，全部来自同一件事：
 
 ```
-wash   40 条  每集重复动作 —— 洗两个盘子，同一动作做两遍
-可疑    2 条  pen_inbox/file-037 有个零长度段（帧 272–272），疑似连按了两次 K
+wash   40 条  每集重复动作 —— 洗两个盘子，同一动作做两遍（P-05，处理中）
 ```
 
-> 曾经是 64 条，其中 tea2 的 20 条与 express 的 2 条随两族移出而消失（D-42）。
+> 64 → 42：tea2 与 express 移出（D-42）。42 → 40：删掉 pen_inbox 的零长度段（D-44）。
 
 **这些不是 bug，是待决策项。** 详见根目录 `DEVLOG.md` 的「问题记录」P-01 / P-05。
 
@@ -152,7 +151,7 @@ wash   40 条  每集重复动作 —— 洗两个盘子，同一动作做两遍
 
 ```bash
 python3 src/label/tests/test_core_replay.py   # 语义没走样
-python3 src/label/validate.py                 # 应当仍是 42 条，不多不少
+python3 src/label/validate.py                 # 应当仍是 40 条，不多不少
 ```
 
 **回归的判据不是「输出相同」，是「每一处差异都被声明过」。** 冒出未声明的差异，

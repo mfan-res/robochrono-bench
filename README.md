@@ -137,17 +137,15 @@ schema 因此**显式拒绝**出题产物字段出现在标注里。
 ```bash
 pip install numpy pyarrow jsonschema        # 另需 ffmpeg / ffprobe
 
-python3 src/label/validate.py               # 标注六项核验（应报 42 条，见下）
+python3 src/label/validate.py               # 标注六项核验（应报 40 条，见下）
 python3 src/label/tests/test_core_replay.py # 语义回归（不需要视频）
 python3 src/label/serve.py --port 8000      # 网页标注器
 ```
 
-`validate.py` 报的 **42 条不是 bug，是待决策项** ——
-全部是数据固有、不可用工程手段消除的：
+`validate.py` 报的 **40 条不是 bug，是待决策项** —— 全部来自同一件事：
 
 ```
-wash    40 条   每集重复动作 —— 洗两个盘子，同一动作做两遍（P-05，待决）
-可疑     2 条   一个零长度标注段，疑似连按了两次
+wash    40 条   每集重复动作 —— 洗两个盘子，同一动作做两遍（P-05，处理中）
 ```
 
 > 此前是 64 条，多出的 22 条属于 tea2（20）与 express（2）。

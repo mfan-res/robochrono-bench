@@ -10,14 +10,15 @@
 ```bash
 cd <repo-root>
 python3 src/label/tests/test_core_replay.py   # 必须全绿
-python3 src/label/validate.py                 # 必须**恰好 42 条**发现
+python3 src/label/validate.py                 # 必须**恰好 40 条**发现
 ```
 
-**42 这个数字是基线。** 变多 = 改坏了；变少 = 要么真修好了（那就在 DEVLOG 说明），
+**40 这个数字是基线。** 变多 = 改坏了；变少 = 要么真修好了（那就在 DEVLOG 说明），
 要么把检查弄失效了（更常见）。**不要为了让它变少而放松判据。**
 
-> 曾经是 64。tea2 与 express 移出 `data/` 之后降到 42（D-42）——
-> **族数变了就要连基线一起改，否则这个数字会变成「反正对不上」而被忽略。**
+> 64 → 42：tea2 与 express 移出 `data/`（D-42）。
+> 42 → 40：删掉 pen_inbox 的零长度段（D-44）。
+> **数据变了就要连基线一起改，否则这个数字会变成「反正对不上」而被忽略。**
 
 schema 校验：
 
