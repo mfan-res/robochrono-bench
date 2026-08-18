@@ -1,0 +1,52 @@
+Input items: 10
+Existing results: 0
+Pending: 10
+Provider: local_sensenova_si_1_1_internvl3_2b
+Model: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/models/SenseNova-SI-1_1-InternVL3-2B
+API URL: 
+[1/10] file-000-1_trajectory_2d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] pick the red cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key trajectory points **in the main-view image** (left_eye) needed to complete this task from the main viewpoint onward.
+Loading local InternVL model: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/models/SenseNova-SI-1_1-InternVL3-2B
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+FlashAttention2 is not installed.
+  H=1109.865757 F=1109.865757 C=1686.713515 score=0.199245 mean_H=1109.865757
+[2/10] file-000-1_file-000-2_move_trajectory_2d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] move the red cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key trajectory points **in the main-view image** (left_eye) needed to complete this task from the main viewpoint onward.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  H=817.573972 F=817.573972 C=1328.19006 score=0.358346 mean_H=963.719865
+[3/10] file-000-2_trajectory_2d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] place the red cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key trajectory points **in the main-view image** (left_eye) needed to complete this task from the main viewpoint onward.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  H=869.649662 F=869.649662 C=1256.475141 score=0.330205 mean_H=932.36313
+[4/10] file-000-3_trajectory_2d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] pick the yellow cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key trajectory points **in the main-view image** (left_eye) needed to complete this task from the main viewpoint onward.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  H=642.410809 F=642.410809 C=928.471575 score=0.603245 mean_H=859.87505
+[5/10] file-000-3_file-000-4_move_trajectory_2d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] move the yellow cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key trajectory points **in the main-view image** (left_eye) needed to complete this task from the main viewpoint onward.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  H=459.848189 F=459.848189 C=772.138922 score=1.111403 mean_H=779.869678
+[6/10] file-000-4_trajectory_2d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] place the yellow cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key trajectory points **in the main-view image** (left_eye) needed to complete this task from the main viewpoint onward.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  H=463.253003 F=463.253003 C=649.847631 score=1.166768 mean_H=727.100232
+[7/10] file-001-1_trajectory_2d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] pick the yellow cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key trajectory points **in the main-view image** (left_eye) needed to complete this task from the main viewpoint onward.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  H=1078.18911 F=1078.18911 C=1631.592751 score=0.211418 mean_H=777.255786
+[8/10] file-001-1_file-001-2_move_trajectory_2d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] move the yellow cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key trajectory points **in the main-view image** (left_eye) needed to complete this task from the main viewpoint onward.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  H=816.583703 F=816.583703 C=1354.847786 score=0.356848 mean_H=782.171776
+[9/10] file-001-2_trajectory_2d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] place the yellow cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key trajectory points **in the main-view image** (left_eye) needed to complete this task from the main viewpoint onward.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  H=743.976319 F=743.976319 C=1267.33877 score=0.426147 mean_H=777.927836
+[10/10] file-001-3_trajectory_2d images=3 ['primary:left_eye', 'context:left_wrist', 'context:right_eye'] pick the red cube. You are given synchronized images from three camera views: left_eye, right_eye, left_wrist. Use all views as context, but predict the key trajectory points **in the main-view image** (left_eye) needed to complete this task from the main viewpoint onward.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  H=312.885085 F=312.885085 C=491.300691 score=2.417018 mean_H=731.423561
+{
+  "total": 10,
+  "answered": 10,
+  "errors": 0,
+  "mean_hausdorff": 731.423561,
+  "mean_discrete_frechet": 731.423561,
+  "mean_chamfer": 1136.691684,
+  "mean_hausdorff_score": 0.889701,
+  "mean_discrete_frechet_score": 0.889701,
+  "mean_chamfer_score": 0.37479,
+  "mean_score": 0.718064,
+  "elapsed_seconds": 29.188
+}
+Output: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/results/baseline/trajectory_2D.json

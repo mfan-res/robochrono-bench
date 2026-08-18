@@ -1,0 +1,2117 @@
+{
+  "source": "../../json_pickplace",
+  "video_dir": "../../../../../kewei/YWC/egodata/pickplace/video",
+  "prejoined_video_dir": "time_joined_videos",
+  "multi_view_video_root": "../../../../NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos",
+  "views": {
+    "left_eye": "observation.images.left_eye",
+    "left_wrist": "observation.images.left_wrist",
+    "right_wrist": "observation.images.right_wrist"
+  },
+  "time_crop_top_applied": false,
+  "time_crop_top_fraction": null,
+  "time_cropped_video_dir": null,
+  "window_mode": "raw",
+  "num_source_segments": 300,
+  "task": "next_action_planning_with_task_prompt",
+  "frames_dir": "planning_2_frames",
+  "timestamp_key": "start",
+  "task_name": "stack all cubes",
+  "question": "The overall task is {task_name}. Based on the current visual state, what should happen next?",
+  "option_design": {
+    "num_options": 6,
+    "correct": 1,
+    "none": 1,
+    "nearby_action_distractors": 2,
+    "generated_wrong_label_distractors": 2,
+    "llm_distractors_per_label": 6,
+    "use_llm_distractors": true,
+    "llm_distractor_model": "glm-5.2",
+    "llm_distractor_cache_path": "llm_distractors.json",
+    "category_label_path": "../../workflow/stack_all_cubes.txt",
+    "num_category_labels": 9,
+    "category_labels": [
+      "pick red cube",
+      "place red cube",
+      "pick blue cube",
+      "place blue cube",
+      "pick yellow cube",
+      "place yellow cube",
+      "move red cube",
+      "move yellow cube",
+      "move blue cube"
+    ],
+    "task_name": "stack all cubes",
+    "note": "Planning/Understanding options are correct + nearby real action labels + generated wrong labels + All other options are wrong."
+  },
+  "items": [
+    {
+      "id": "file-000-1_plan2_start",
+      "source_id": "file-000-1",
+      "next_source_id": "file-000-1_file-000-2_move",
+      "video_id": "file-000",
+      "type": "planning_2",
+      "task_name": "stack all cubes",
+      "input": {
+        "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "timestamp": 10.0,
+        "timestamp_key": "start",
+        "task_name": "stack all cubes",
+        "video_paths": [
+          "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "image_path": "planning_2_frames/prejoined/file-000/file-000_file-000-1_start_10.000s_prejoined.jpg",
+        "image_paths": [
+          "planning_2_frames/prejoined/file-000/file-000_file-000-1_start_10.000s_prejoined.jpg"
+        ],
+        "images": {
+          "prejoined": {
+            "view": "prejoined",
+            "image_path": "planning_2_frames/prejoined/file-000/file-000_file-000-1_start_10.000s_prejoined.jpg",
+            "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+            "timestamp": 10.0,
+            "actual_timestamp": 10.0,
+            "frame_index": 200
+          }
+        },
+        "actual_timestamp": 10.0,
+        "frame_index": 200
+      },
+      "Q": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. move the red cube\nB. place the red cube\nC. open the red cube\nD. pick the red cube\nE. remove the red cube\nF. All other options are wrong.",
+      "A": "D",
+      "question": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. move the red cube\nB. place the red cube\nC. open the red cube\nD. pick the red cube\nE. remove the red cube\nF. All other options are wrong.",
+      "answer": "D",
+      "answer_text": "pick the red cube",
+      "answer_action": "pick",
+      "answer_objects": [
+        "red cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "move the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "B",
+          "text": "place the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "C",
+          "text": "open the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "D",
+          "text": "pick the red cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "E",
+          "text": "remove the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "F",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        }
+      ],
+      "correct_option": {
+        "id": "D",
+        "text": "pick the red cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-000-1",
+        "source_id": "file-000-1",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"pick the red cube\" happen?",
+        "A": "00:00:10.000-00:00:27.700",
+        "question": "When did the action \"pick the red cube\" happen?",
+        "answer": "00:00:10.000-00:00:27.700",
+        "answer_text": "00:00:10.000-00:00:27.700",
+        "answer_seconds": {
+          "start": 10.0,
+          "end": 27.7
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 10.0,
+          "end": 27.7,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-1",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 10.0,
+            "end": 27.7,
+            "start_time": "00:00:10.000",
+            "end_time": "00:00:27.700",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 10.0,
+          "original_end": 27.7,
+          "original_start_time": "00:00:10.000",
+          "original_end_time": "00:00:27.700",
+          "window_start": 10.0,
+          "window_end": 27.7,
+          "window_type": "raw_segment",
+          "start_frame": 200,
+          "end_frame": 553
+        }
+      },
+      "next_time_eqa": {
+        "id": "file-000-1_file-000-2_move",
+        "source_id": "file-000-1_file-000-2_move",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"move the red cube\" happen?",
+        "A": "00:00:26.700-00:00:32.050",
+        "question": "When did the action \"move the red cube\" happen?",
+        "answer": "00:00:26.700-00:00:32.050",
+        "answer_text": "00:00:26.700-00:00:32.050",
+        "answer_seconds": {
+          "start": 26.7,
+          "end": 32.05
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 26.7,
+          "end": 32.05,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-1_file-000-2_move",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 26.7,
+            "end": 32.05,
+            "start_time": "00:00:26.700",
+            "end_time": "00:00:32.050",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 26.7,
+          "original_end": 32.05,
+          "original_start_time": "00:00:26.700",
+          "original_end_time": "00:00:32.050",
+          "window_start": 26.7,
+          "window_end": 32.05,
+          "window_type": "raw_segment",
+          "start_frame": 534,
+          "end_frame": 640
+        }
+      }
+    },
+    {
+      "id": "file-000-1_file-000-2_move_plan2_start",
+      "source_id": "file-000-1_file-000-2_move",
+      "next_source_id": "file-000-2",
+      "video_id": "file-000",
+      "type": "planning_2",
+      "task_name": "stack all cubes",
+      "input": {
+        "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "timestamp": 26.7,
+        "timestamp_key": "start",
+        "task_name": "stack all cubes",
+        "video_paths": [
+          "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "image_path": "planning_2_frames/prejoined/file-000/file-000_file-000-1_file-000-2_move_start_26.700s_prejoined.jpg",
+        "image_paths": [
+          "planning_2_frames/prejoined/file-000/file-000_file-000-1_file-000-2_move_start_26.700s_prejoined.jpg"
+        ],
+        "images": {
+          "prejoined": {
+            "view": "prejoined",
+            "image_path": "planning_2_frames/prejoined/file-000/file-000_file-000-1_file-000-2_move_start_26.700s_prejoined.jpg",
+            "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+            "timestamp": 26.7,
+            "actual_timestamp": 26.7,
+            "frame_index": 534
+          }
+        },
+        "actual_timestamp": 26.7,
+        "frame_index": 534
+      },
+      "Q": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. place the red cube\nB. pick the red cube\nC. close the red cube\nD. All other options are wrong.\nE. remove the red cube\nF. move the red cube",
+      "A": "F",
+      "question": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. place the red cube\nB. pick the red cube\nC. close the red cube\nD. All other options are wrong.\nE. remove the red cube\nF. move the red cube",
+      "answer": "F",
+      "answer_text": "move the red cube",
+      "answer_action": "move",
+      "answer_objects": [
+        "red cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "place the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "B",
+          "text": "pick the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "C",
+          "text": "close the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "D",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "E",
+          "text": "remove the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "F",
+          "text": "move the red cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        }
+      ],
+      "correct_option": {
+        "id": "F",
+        "text": "move the red cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-000-1_file-000-2_move",
+        "source_id": "file-000-1_file-000-2_move",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"move the red cube\" happen?",
+        "A": "00:00:26.700-00:00:32.050",
+        "question": "When did the action \"move the red cube\" happen?",
+        "answer": "00:00:26.700-00:00:32.050",
+        "answer_text": "00:00:26.700-00:00:32.050",
+        "answer_seconds": {
+          "start": 26.7,
+          "end": 32.05
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 26.7,
+          "end": 32.05,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-1_file-000-2_move",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 26.7,
+            "end": 32.05,
+            "start_time": "00:00:26.700",
+            "end_time": "00:00:32.050",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 26.7,
+          "original_end": 32.05,
+          "original_start_time": "00:00:26.700",
+          "original_end_time": "00:00:32.050",
+          "window_start": 26.7,
+          "window_end": 32.05,
+          "window_type": "raw_segment",
+          "start_frame": 534,
+          "end_frame": 640
+        }
+      },
+      "next_time_eqa": {
+        "id": "file-000-2",
+        "source_id": "file-000-2",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"place the red cube\" happen?",
+        "A": "00:00:31.050-00:00:35.050",
+        "question": "When did the action \"place the red cube\" happen?",
+        "answer": "00:00:31.050-00:00:35.050",
+        "answer_text": "00:00:31.050-00:00:35.050",
+        "answer_seconds": {
+          "start": 31.05,
+          "end": 35.05
+        },
+        "answer_action": "place",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 31.05,
+          "end": 35.05,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-2",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 31.05,
+            "end": 35.05,
+            "start_time": "00:00:31.050",
+            "end_time": "00:00:35.050",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Place the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "place"
+          ],
+          "original_start": 31.05,
+          "original_end": 35.05,
+          "original_start_time": "00:00:31.050",
+          "original_end_time": "00:00:35.050",
+          "window_start": 31.05,
+          "window_end": 35.05,
+          "window_type": "raw_segment",
+          "start_frame": 621,
+          "end_frame": 700
+        }
+      }
+    },
+    {
+      "id": "file-000-2_plan2_start",
+      "source_id": "file-000-2",
+      "next_source_id": "file-000-3",
+      "video_id": "file-000",
+      "type": "planning_2",
+      "task_name": "stack all cubes",
+      "input": {
+        "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "timestamp": 31.05,
+        "timestamp_key": "start",
+        "task_name": "stack all cubes",
+        "video_paths": [
+          "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "image_path": "planning_2_frames/prejoined/file-000/file-000_file-000-2_start_31.050s_prejoined.jpg",
+        "image_paths": [
+          "planning_2_frames/prejoined/file-000/file-000_file-000-2_start_31.050s_prejoined.jpg"
+        ],
+        "images": {
+          "prejoined": {
+            "view": "prejoined",
+            "image_path": "planning_2_frames/prejoined/file-000/file-000_file-000-2_start_31.050s_prejoined.jpg",
+            "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+            "timestamp": 31.05,
+            "actual_timestamp": 31.05,
+            "frame_index": 621
+          }
+        },
+        "actual_timestamp": 31.05,
+        "frame_index": 621
+      },
+      "Q": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. move the red cube\nB. All other options are wrong.\nC. close the red cube\nD. place the yellow cube\nE. pick the yellow cube\nF. place the red cube",
+      "A": "F",
+      "question": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. move the red cube\nB. All other options are wrong.\nC. close the red cube\nD. place the yellow cube\nE. pick the yellow cube\nF. place the red cube",
+      "answer": "F",
+      "answer_text": "place the red cube",
+      "answer_action": "place",
+      "answer_objects": [
+        "red cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "move the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "B",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "C",
+          "text": "close the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "D",
+          "text": "place the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "E",
+          "text": "pick the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "F",
+          "text": "place the red cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        }
+      ],
+      "correct_option": {
+        "id": "F",
+        "text": "place the red cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-000-2",
+        "source_id": "file-000-2",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"place the red cube\" happen?",
+        "A": "00:00:31.050-00:00:35.050",
+        "question": "When did the action \"place the red cube\" happen?",
+        "answer": "00:00:31.050-00:00:35.050",
+        "answer_text": "00:00:31.050-00:00:35.050",
+        "answer_seconds": {
+          "start": 31.05,
+          "end": 35.05
+        },
+        "answer_action": "place",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 31.05,
+          "end": 35.05,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-2",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 31.05,
+            "end": 35.05,
+            "start_time": "00:00:31.050",
+            "end_time": "00:00:35.050",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Place the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "place"
+          ],
+          "original_start": 31.05,
+          "original_end": 35.05,
+          "original_start_time": "00:00:31.050",
+          "original_end_time": "00:00:35.050",
+          "window_start": 31.05,
+          "window_end": 35.05,
+          "window_type": "raw_segment",
+          "start_frame": 621,
+          "end_frame": 700
+        }
+      },
+      "next_time_eqa": {
+        "id": "file-000-3",
+        "source_id": "file-000-3",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"pick the yellow cube\" happen?",
+        "A": "00:00:43.050-00:00:59.000",
+        "question": "When did the action \"pick the yellow cube\" happen?",
+        "answer": "00:00:43.050-00:00:59.000",
+        "answer_text": "00:00:43.050-00:00:59.000",
+        "answer_seconds": {
+          "start": 43.05,
+          "end": 59.0
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 43.05,
+          "end": 59.0,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-3",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 43.05,
+            "end": 59.0,
+            "start_time": "00:00:43.050",
+            "end_time": "00:00:59.000",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 43.05,
+          "original_end": 59.0,
+          "original_start_time": "00:00:43.050",
+          "original_end_time": "00:00:59.000",
+          "window_start": 43.05,
+          "window_end": 59.0,
+          "window_type": "raw_segment",
+          "start_frame": 861,
+          "end_frame": 1179
+        }
+      }
+    },
+    {
+      "id": "file-000-3_plan2_start",
+      "source_id": "file-000-3",
+      "next_source_id": "file-000-3_file-000-4_move",
+      "video_id": "file-000",
+      "type": "planning_2",
+      "task_name": "stack all cubes",
+      "input": {
+        "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "timestamp": 43.05,
+        "timestamp_key": "start",
+        "task_name": "stack all cubes",
+        "video_paths": [
+          "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "image_path": "planning_2_frames/prejoined/file-000/file-000_file-000-3_start_43.050s_prejoined.jpg",
+        "image_paths": [
+          "planning_2_frames/prejoined/file-000/file-000_file-000-3_start_43.050s_prejoined.jpg"
+        ],
+        "images": {
+          "prejoined": {
+            "view": "prejoined",
+            "image_path": "planning_2_frames/prejoined/file-000/file-000_file-000-3_start_43.050s_prejoined.jpg",
+            "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+            "timestamp": 43.05,
+            "actual_timestamp": 43.05,
+            "frame_index": 861
+          }
+        },
+        "actual_timestamp": 43.05,
+        "frame_index": 861
+      },
+      "Q": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. open the yellow cube\nB. All other options are wrong.\nC. move the yellow cube\nD. put the yellow cube\nE. place the red cube\nF. pick the yellow cube",
+      "A": "F",
+      "question": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. open the yellow cube\nB. All other options are wrong.\nC. move the yellow cube\nD. put the yellow cube\nE. place the red cube\nF. pick the yellow cube",
+      "answer": "F",
+      "answer_text": "pick the yellow cube",
+      "answer_action": "pick",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "open the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "B",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "C",
+          "text": "move the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "D",
+          "text": "put the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "E",
+          "text": "place the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "F",
+          "text": "pick the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        }
+      ],
+      "correct_option": {
+        "id": "F",
+        "text": "pick the yellow cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-000-3",
+        "source_id": "file-000-3",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"pick the yellow cube\" happen?",
+        "A": "00:00:43.050-00:00:59.000",
+        "question": "When did the action \"pick the yellow cube\" happen?",
+        "answer": "00:00:43.050-00:00:59.000",
+        "answer_text": "00:00:43.050-00:00:59.000",
+        "answer_seconds": {
+          "start": 43.05,
+          "end": 59.0
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 43.05,
+          "end": 59.0,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-3",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 43.05,
+            "end": 59.0,
+            "start_time": "00:00:43.050",
+            "end_time": "00:00:59.000",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 43.05,
+          "original_end": 59.0,
+          "original_start_time": "00:00:43.050",
+          "original_end_time": "00:00:59.000",
+          "window_start": 43.05,
+          "window_end": 59.0,
+          "window_type": "raw_segment",
+          "start_frame": 861,
+          "end_frame": 1179
+        }
+      },
+      "next_time_eqa": {
+        "id": "file-000-3_file-000-4_move",
+        "source_id": "file-000-3_file-000-4_move",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"move the yellow cube\" happen?",
+        "A": "00:00:58.000-00:01:03.950",
+        "question": "When did the action \"move the yellow cube\" happen?",
+        "answer": "00:00:58.000-00:01:03.950",
+        "answer_text": "00:00:58.000-00:01:03.950",
+        "answer_seconds": {
+          "start": 58.0,
+          "end": 63.95
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 58.0,
+          "end": 63.95,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-3_file-000-4_move",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 58.0,
+            "end": 63.95,
+            "start_time": "00:00:58.000",
+            "end_time": "00:01:03.950",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 58.0,
+          "original_end": 63.95,
+          "original_start_time": "00:00:58.000",
+          "original_end_time": "00:01:03.950",
+          "window_start": 58.0,
+          "window_end": 63.95,
+          "window_type": "raw_segment",
+          "start_frame": 1160,
+          "end_frame": 1278
+        }
+      }
+    },
+    {
+      "id": "file-000-3_file-000-4_move_plan2_start",
+      "source_id": "file-000-3_file-000-4_move",
+      "next_source_id": "file-000-4",
+      "video_id": "file-000",
+      "type": "planning_2",
+      "task_name": "stack all cubes",
+      "input": {
+        "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "timestamp": 58.0,
+        "timestamp_key": "start",
+        "task_name": "stack all cubes",
+        "video_paths": [
+          "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "image_path": "planning_2_frames/prejoined/file-000/file-000_file-000-3_file-000-4_move_start_58.000s_prejoined.jpg",
+        "image_paths": [
+          "planning_2_frames/prejoined/file-000/file-000_file-000-3_file-000-4_move_start_58.000s_prejoined.jpg"
+        ],
+        "images": {
+          "prejoined": {
+            "view": "prejoined",
+            "image_path": "planning_2_frames/prejoined/file-000/file-000_file-000-3_file-000-4_move_start_58.000s_prejoined.jpg",
+            "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+            "timestamp": 58.0,
+            "actual_timestamp": 52.1,
+            "frame_index": 1042
+          }
+        },
+        "actual_timestamp": 52.1,
+        "frame_index": 1042
+      },
+      "Q": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. move the object\nB. move the yellow cube\nC. place the yellow cube\nD. put the yellow cube\nE. All other options are wrong.\nF. pick the yellow cube",
+      "A": "B",
+      "question": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. move the object\nB. move the yellow cube\nC. place the yellow cube\nD. put the yellow cube\nE. All other options are wrong.\nF. pick the yellow cube",
+      "answer": "B",
+      "answer_text": "move the yellow cube",
+      "answer_action": "move",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "move the object",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "B",
+          "text": "move the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "C",
+          "text": "place the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "D",
+          "text": "put the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "E",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "F",
+          "text": "pick the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        }
+      ],
+      "correct_option": {
+        "id": "B",
+        "text": "move the yellow cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-000-3_file-000-4_move",
+        "source_id": "file-000-3_file-000-4_move",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"move the yellow cube\" happen?",
+        "A": "00:00:58.000-00:01:03.950",
+        "question": "When did the action \"move the yellow cube\" happen?",
+        "answer": "00:00:58.000-00:01:03.950",
+        "answer_text": "00:00:58.000-00:01:03.950",
+        "answer_seconds": {
+          "start": 58.0,
+          "end": 63.95
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 58.0,
+          "end": 63.95,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-3_file-000-4_move",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 58.0,
+            "end": 63.95,
+            "start_time": "00:00:58.000",
+            "end_time": "00:01:03.950",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 58.0,
+          "original_end": 63.95,
+          "original_start_time": "00:00:58.000",
+          "original_end_time": "00:01:03.950",
+          "window_start": 58.0,
+          "window_end": 63.95,
+          "window_type": "raw_segment",
+          "start_frame": 1160,
+          "end_frame": 1278
+        }
+      },
+      "next_time_eqa": {
+        "id": "file-000-4",
+        "source_id": "file-000-4",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"place the yellow cube\" happen?",
+        "A": "00:01:02.950-00:01:06.950",
+        "question": "When did the action \"place the yellow cube\" happen?",
+        "answer": "00:01:02.950-00:01:06.950",
+        "answer_text": "00:01:02.950-00:01:06.950",
+        "answer_seconds": {
+          "start": 62.95,
+          "end": 66.95
+        },
+        "answer_action": "place",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 62.95,
+          "end": 66.95,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-4",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 62.95,
+            "end": 66.95,
+            "start_time": "00:01:02.950",
+            "end_time": "00:01:06.950",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Place the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "place"
+          ],
+          "original_start": 62.95,
+          "original_end": 66.95,
+          "original_start_time": "00:01:02.950",
+          "original_end_time": "00:01:06.950",
+          "window_start": 62.95,
+          "window_end": 66.95,
+          "window_type": "raw_segment",
+          "start_frame": 1259,
+          "end_frame": 1338
+        }
+      }
+    },
+    {
+      "id": "file-000-4_plan2_start",
+      "source_id": "file-000-4",
+      "next_source_id": null,
+      "video_id": "file-000",
+      "type": "planning_2",
+      "task_name": "stack all cubes",
+      "input": {
+        "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "timestamp": 62.95,
+        "timestamp_key": "start",
+        "task_name": "stack all cubes",
+        "video_paths": [
+          "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "image_path": "planning_2_frames/prejoined/file-000/file-000_file-000-4_start_62.950s_prejoined.jpg",
+        "image_paths": [
+          "planning_2_frames/prejoined/file-000/file-000_file-000-4_start_62.950s_prejoined.jpg"
+        ],
+        "images": {
+          "prejoined": {
+            "view": "prejoined",
+            "image_path": "planning_2_frames/prejoined/file-000/file-000_file-000-4_start_62.950s_prejoined.jpg",
+            "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+            "timestamp": 62.95,
+            "actual_timestamp": 52.1,
+            "frame_index": 1042
+          }
+        },
+        "actual_timestamp": 52.1,
+        "frame_index": 1042
+      },
+      "Q": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. place the red cube\nB. put the yellow cube\nC. place the yellow cube\nD. All other options are wrong.\nE. pick the yellow cube\nF. move the yellow cube",
+      "A": "C",
+      "question": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. place the red cube\nB. put the yellow cube\nC. place the yellow cube\nD. All other options are wrong.\nE. pick the yellow cube\nF. move the yellow cube",
+      "answer": "C",
+      "answer_text": "place the yellow cube",
+      "answer_action": "place",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "place the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "B",
+          "text": "put the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "C",
+          "text": "place the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "D",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "E",
+          "text": "pick the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "F",
+          "text": "move the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        }
+      ],
+      "correct_option": {
+        "id": "C",
+        "text": "place the yellow cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-000-4",
+        "source_id": "file-000-4",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"place the yellow cube\" happen?",
+        "A": "00:01:02.950-00:01:06.950",
+        "question": "When did the action \"place the yellow cube\" happen?",
+        "answer": "00:01:02.950-00:01:06.950",
+        "answer_text": "00:01:02.950-00:01:06.950",
+        "answer_seconds": {
+          "start": 62.95,
+          "end": 66.95
+        },
+        "answer_action": "place",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 62.95,
+          "end": 66.95,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-4",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 62.95,
+            "end": 66.95,
+            "start_time": "00:01:02.950",
+            "end_time": "00:01:06.950",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Place the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "place"
+          ],
+          "original_start": 62.95,
+          "original_end": 66.95,
+          "original_start_time": "00:01:02.950",
+          "original_end_time": "00:01:06.950",
+          "window_start": 62.95,
+          "window_end": 66.95,
+          "window_type": "raw_segment",
+          "start_frame": 1259,
+          "end_frame": 1338
+        }
+      },
+      "next_time_eqa": null
+    },
+    {
+      "id": "file-001-1_plan2_start",
+      "source_id": "file-001-1",
+      "next_source_id": "file-001-1_file-001-2_move",
+      "video_id": "file-001",
+      "type": "planning_2",
+      "task_name": "stack all cubes",
+      "input": {
+        "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+        "timestamp": 10.0,
+        "timestamp_key": "start",
+        "task_name": "stack all cubes",
+        "video_paths": [
+          "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+        "image_path": "planning_2_frames/prejoined/file-001/file-001_file-001-1_start_10.000s_prejoined.jpg",
+        "image_paths": [
+          "planning_2_frames/prejoined/file-001/file-001_file-001-1_start_10.000s_prejoined.jpg"
+        ],
+        "images": {
+          "prejoined": {
+            "view": "prejoined",
+            "image_path": "planning_2_frames/prejoined/file-001/file-001_file-001-1_start_10.000s_prejoined.jpg",
+            "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+            "timestamp": 10.0,
+            "actual_timestamp": 10.0,
+            "frame_index": 200
+          }
+        },
+        "actual_timestamp": 10.0,
+        "frame_index": 200
+      },
+      "Q": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. close the yellow cube\nB. All other options are wrong.\nC. pick the object\nD. move the yellow cube\nE. place the yellow cube\nF. pick the yellow cube",
+      "A": "F",
+      "question": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. close the yellow cube\nB. All other options are wrong.\nC. pick the object\nD. move the yellow cube\nE. place the yellow cube\nF. pick the yellow cube",
+      "answer": "F",
+      "answer_text": "pick the yellow cube",
+      "answer_action": "pick",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "close the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "B",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "C",
+          "text": "pick the object",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "D",
+          "text": "move the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "E",
+          "text": "place the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "F",
+          "text": "pick the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        }
+      ],
+      "correct_option": {
+        "id": "F",
+        "text": "pick the yellow cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-001-1",
+        "source_id": "file-001-1",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"pick the yellow cube\" happen?",
+        "A": "00:00:10.000-00:00:26.550",
+        "question": "When did the action \"pick the yellow cube\" happen?",
+        "answer": "00:00:10.000-00:00:26.550",
+        "answer_text": "00:00:10.000-00:00:26.550",
+        "answer_seconds": {
+          "start": 10.0,
+          "end": 26.55
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 10.0,
+          "end": 26.55,
+          "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-1",
+            "source_path": "../../json_pickplace/file-001_segments.json",
+            "start": 10.0,
+            "end": 26.55,
+            "start_time": "00:00:10.000",
+            "end_time": "00:00:26.550",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 10.0,
+          "original_end": 26.55,
+          "original_start_time": "00:00:10.000",
+          "original_end_time": "00:00:26.550",
+          "window_start": 10.0,
+          "window_end": 26.55,
+          "window_type": "raw_segment",
+          "start_frame": 200,
+          "end_frame": 530
+        }
+      },
+      "next_time_eqa": {
+        "id": "file-001-1_file-001-2_move",
+        "source_id": "file-001-1_file-001-2_move",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"move the yellow cube\" happen?",
+        "A": "00:00:25.550-00:00:29.550",
+        "question": "When did the action \"move the yellow cube\" happen?",
+        "answer": "00:00:25.550-00:00:29.550",
+        "answer_text": "00:00:25.550-00:00:29.550",
+        "answer_seconds": {
+          "start": 25.55,
+          "end": 29.55
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 25.55,
+          "end": 29.55,
+          "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-1_file-001-2_move",
+            "source_path": "../../json_pickplace/file-001_segments.json",
+            "start": 25.55,
+            "end": 29.55,
+            "start_time": "00:00:25.550",
+            "end_time": "00:00:29.550",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 25.55,
+          "original_end": 29.55,
+          "original_start_time": "00:00:25.550",
+          "original_end_time": "00:00:29.550",
+          "window_start": 25.55,
+          "window_end": 29.55,
+          "window_type": "raw_segment",
+          "start_frame": 511,
+          "end_frame": 590
+        }
+      }
+    },
+    {
+      "id": "file-001-1_file-001-2_move_plan2_start",
+      "source_id": "file-001-1_file-001-2_move",
+      "next_source_id": "file-001-2",
+      "video_id": "file-001",
+      "type": "planning_2",
+      "task_name": "stack all cubes",
+      "input": {
+        "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+        "timestamp": 25.55,
+        "timestamp_key": "start",
+        "task_name": "stack all cubes",
+        "video_paths": [
+          "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+        "image_path": "planning_2_frames/prejoined/file-001/file-001_file-001-1_file-001-2_move_start_25.550s_prejoined.jpg",
+        "image_paths": [
+          "planning_2_frames/prejoined/file-001/file-001_file-001-1_file-001-2_move_start_25.550s_prejoined.jpg"
+        ],
+        "images": {
+          "prejoined": {
+            "view": "prejoined",
+            "image_path": "planning_2_frames/prejoined/file-001/file-001_file-001-1_file-001-2_move_start_25.550s_prejoined.jpg",
+            "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+            "timestamp": 25.55,
+            "actual_timestamp": 25.55,
+            "frame_index": 511
+          }
+        },
+        "actual_timestamp": 25.55,
+        "frame_index": 511
+      },
+      "Q": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. remove the yellow cube\nB. place the yellow cube\nC. put the yellow cube\nD. All other options are wrong.\nE. pick the yellow cube\nF. move the yellow cube",
+      "A": "F",
+      "question": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. remove the yellow cube\nB. place the yellow cube\nC. put the yellow cube\nD. All other options are wrong.\nE. pick the yellow cube\nF. move the yellow cube",
+      "answer": "F",
+      "answer_text": "move the yellow cube",
+      "answer_action": "move",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "remove the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "B",
+          "text": "place the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "C",
+          "text": "put the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "D",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "E",
+          "text": "pick the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "F",
+          "text": "move the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        }
+      ],
+      "correct_option": {
+        "id": "F",
+        "text": "move the yellow cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-001-1_file-001-2_move",
+        "source_id": "file-001-1_file-001-2_move",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"move the yellow cube\" happen?",
+        "A": "00:00:25.550-00:00:29.550",
+        "question": "When did the action \"move the yellow cube\" happen?",
+        "answer": "00:00:25.550-00:00:29.550",
+        "answer_text": "00:00:25.550-00:00:29.550",
+        "answer_seconds": {
+          "start": 25.55,
+          "end": 29.55
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 25.55,
+          "end": 29.55,
+          "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-1_file-001-2_move",
+            "source_path": "../../json_pickplace/file-001_segments.json",
+            "start": 25.55,
+            "end": 29.55,
+            "start_time": "00:00:25.550",
+            "end_time": "00:00:29.550",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 25.55,
+          "original_end": 29.55,
+          "original_start_time": "00:00:25.550",
+          "original_end_time": "00:00:29.550",
+          "window_start": 25.55,
+          "window_end": 29.55,
+          "window_type": "raw_segment",
+          "start_frame": 511,
+          "end_frame": 590
+        }
+      },
+      "next_time_eqa": {
+        "id": "file-001-2",
+        "source_id": "file-001-2",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"place the yellow cube\" happen?",
+        "A": "00:00:28.550-00:00:32.550",
+        "question": "When did the action \"place the yellow cube\" happen?",
+        "answer": "00:00:28.550-00:00:32.550",
+        "answer_text": "00:00:28.550-00:00:32.550",
+        "answer_seconds": {
+          "start": 28.55,
+          "end": 32.55
+        },
+        "answer_action": "place",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 28.55,
+          "end": 32.55,
+          "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-2",
+            "source_path": "../../json_pickplace/file-001_segments.json",
+            "start": 28.55,
+            "end": 32.55,
+            "start_time": "00:00:28.550",
+            "end_time": "00:00:32.550",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Place the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "place"
+          ],
+          "original_start": 28.55,
+          "original_end": 32.55,
+          "original_start_time": "00:00:28.550",
+          "original_end_time": "00:00:32.550",
+          "window_start": 28.55,
+          "window_end": 32.55,
+          "window_type": "raw_segment",
+          "start_frame": 571,
+          "end_frame": 650
+        }
+      }
+    },
+    {
+      "id": "file-001-2_plan2_start",
+      "source_id": "file-001-2",
+      "next_source_id": "file-001-3",
+      "video_id": "file-001",
+      "type": "planning_2",
+      "task_name": "stack all cubes",
+      "input": {
+        "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+        "timestamp": 28.55,
+        "timestamp_key": "start",
+        "task_name": "stack all cubes",
+        "video_paths": [
+          "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+        "image_path": "planning_2_frames/prejoined/file-001/file-001_file-001-2_start_28.550s_prejoined.jpg",
+        "image_paths": [
+          "planning_2_frames/prejoined/file-001/file-001_file-001-2_start_28.550s_prejoined.jpg"
+        ],
+        "images": {
+          "prejoined": {
+            "view": "prejoined",
+            "image_path": "planning_2_frames/prejoined/file-001/file-001_file-001-2_start_28.550s_prejoined.jpg",
+            "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+            "timestamp": 28.55,
+            "actual_timestamp": 28.55,
+            "frame_index": 571
+          }
+        },
+        "actual_timestamp": 28.55,
+        "frame_index": 571
+      },
+      "Q": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. move the yellow cube\nB. pick the red cube\nC. place the yellow cube\nD. pick the yellow cube\nE. All other options are wrong.\nF. place the red cube",
+      "A": "C",
+      "question": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. move the yellow cube\nB. pick the red cube\nC. place the yellow cube\nD. pick the yellow cube\nE. All other options are wrong.\nF. place the red cube",
+      "answer": "C",
+      "answer_text": "place the yellow cube",
+      "answer_action": "place",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "move the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "B",
+          "text": "pick the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "C",
+          "text": "place the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "D",
+          "text": "pick the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "E",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "F",
+          "text": "place the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        }
+      ],
+      "correct_option": {
+        "id": "C",
+        "text": "place the yellow cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-001-2",
+        "source_id": "file-001-2",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"place the yellow cube\" happen?",
+        "A": "00:00:28.550-00:00:32.550",
+        "question": "When did the action \"place the yellow cube\" happen?",
+        "answer": "00:00:28.550-00:00:32.550",
+        "answer_text": "00:00:28.550-00:00:32.550",
+        "answer_seconds": {
+          "start": 28.55,
+          "end": 32.55
+        },
+        "answer_action": "place",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 28.55,
+          "end": 32.55,
+          "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-2",
+            "source_path": "../../json_pickplace/file-001_segments.json",
+            "start": 28.55,
+            "end": 32.55,
+            "start_time": "00:00:28.550",
+            "end_time": "00:00:32.550",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Place the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "place"
+          ],
+          "original_start": 28.55,
+          "original_end": 32.55,
+          "original_start_time": "00:00:28.550",
+          "original_end_time": "00:00:32.550",
+          "window_start": 28.55,
+          "window_end": 32.55,
+          "window_type": "raw_segment",
+          "start_frame": 571,
+          "end_frame": 650
+        }
+      },
+      "next_time_eqa": {
+        "id": "file-001-3",
+        "source_id": "file-001-3",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"pick the red cube\" happen?",
+        "A": "00:00:40.550-00:01:02.800",
+        "question": "When did the action \"pick the red cube\" happen?",
+        "answer": "00:00:40.550-00:01:02.800",
+        "answer_text": "00:00:40.550-00:01:02.800",
+        "answer_seconds": {
+          "start": 40.55,
+          "end": 62.8
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 40.55,
+          "end": 62.8,
+          "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-3",
+            "source_path": "../../json_pickplace/file-001_segments.json",
+            "start": 40.55,
+            "end": 62.8,
+            "start_time": "00:00:40.550",
+            "end_time": "00:01:02.800",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 40.55,
+          "original_end": 62.8,
+          "original_start_time": "00:00:40.550",
+          "original_end_time": "00:01:02.800",
+          "window_start": 40.55,
+          "window_end": 62.8,
+          "window_type": "raw_segment",
+          "start_frame": 811,
+          "end_frame": 1255
+        }
+      }
+    },
+    {
+      "id": "file-001-3_plan2_start",
+      "source_id": "file-001-3",
+      "next_source_id": "file-001-3_file-001-4_move",
+      "video_id": "file-001",
+      "type": "planning_2",
+      "task_name": "stack all cubes",
+      "input": {
+        "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+        "timestamp": 40.55,
+        "timestamp_key": "start",
+        "task_name": "stack all cubes",
+        "video_paths": [
+          "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+        "image_path": "planning_2_frames/prejoined/file-001/file-001_file-001-3_start_40.550s_prejoined.jpg",
+        "image_paths": [
+          "planning_2_frames/prejoined/file-001/file-001_file-001-3_start_40.550s_prejoined.jpg"
+        ],
+        "images": {
+          "prejoined": {
+            "view": "prejoined",
+            "image_path": "planning_2_frames/prejoined/file-001/file-001_file-001-3_start_40.550s_prejoined.jpg",
+            "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+            "timestamp": 40.55,
+            "actual_timestamp": 40.55,
+            "frame_index": 811
+          }
+        },
+        "actual_timestamp": 40.55,
+        "frame_index": 811
+      },
+      "Q": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. place the red cube\nB. move the red cube\nC. pick the red cube\nD. place the yellow cube\nE. put the red cube\nF. All other options are wrong.",
+      "A": "C",
+      "question": "The overall task is stack all cubes. Based on the current visual state, what should happen next?\nOptions:\nA. place the red cube\nB. move the red cube\nC. pick the red cube\nD. place the yellow cube\nE. put the red cube\nF. All other options are wrong.",
+      "answer": "C",
+      "answer_text": "pick the red cube",
+      "answer_action": "pick",
+      "answer_objects": [
+        "red cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "place the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "B",
+          "text": "move the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "C",
+          "text": "pick the red cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "D",
+          "text": "place the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "E",
+          "text": "put the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "F",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        }
+      ],
+      "correct_option": {
+        "id": "C",
+        "text": "pick the red cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-001-3",
+        "source_id": "file-001-3",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"pick the red cube\" happen?",
+        "A": "00:00:40.550-00:01:02.800",
+        "question": "When did the action \"pick the red cube\" happen?",
+        "answer": "00:00:40.550-00:01:02.800",
+        "answer_text": "00:00:40.550-00:01:02.800",
+        "answer_seconds": {
+          "start": 40.55,
+          "end": 62.8
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 40.55,
+          "end": 62.8,
+          "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-3",
+            "source_path": "../../json_pickplace/file-001_segments.json",
+            "start": 40.55,
+            "end": 62.8,
+            "start_time": "00:00:40.550",
+            "end_time": "00:01:02.800",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 40.55,
+          "original_end": 62.8,
+          "original_start_time": "00:00:40.550",
+          "original_end_time": "00:01:02.800",
+          "window_start": 40.55,
+          "window_end": 62.8,
+          "window_type": "raw_segment",
+          "start_frame": 811,
+          "end_frame": 1255
+        }
+      },
+      "next_time_eqa": {
+        "id": "file-001-3_file-001-4_move",
+        "source_id": "file-001-3_file-001-4_move",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"move the red cube\" happen?",
+        "A": "00:01:01.800-00:01:05.700",
+        "question": "When did the action \"move the red cube\" happen?",
+        "answer": "00:01:01.800-00:01:05.700",
+        "answer_text": "00:01:01.800-00:01:05.700",
+        "answer_seconds": {
+          "start": 61.8,
+          "end": 65.7
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 61.8,
+          "end": 65.7,
+          "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-3_file-001-4_move",
+            "source_path": "../../json_pickplace/file-001_segments.json",
+            "start": 61.8,
+            "end": 65.7,
+            "start_time": "00:01:01.800",
+            "end_time": "00:01:05.700",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 61.8,
+          "original_end": 65.7,
+          "original_start_time": "00:01:01.800",
+          "original_end_time": "00:01:05.700",
+          "window_start": 61.8,
+          "window_end": 65.7,
+          "window_type": "raw_segment",
+          "start_frame": 1236,
+          "end_frame": 1313
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+Input items: 10
+Existing results: 0
+Pending: 10
+Provider: local_sensenova_si_1_1_internvl3_2b
+Model: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/models/SenseNova-SI-1_1-InternVL3-2B
+API URL: 
+[1/10] file-000_step_order images=2
+Loading local InternVL model: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/models/SenseNova-SI-1_1-InternVL3-2B
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+FlashAttention2 is not installed.
+  correct=False choice=A expected=B acc=0.0000
+[2/10] file-001_step_order images=2
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=A expected=F acc=0.0000
+[3/10] file-002_step_order images=2
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=D expected=C acc=0.0000
+[4/10] file-003_step_order images=2
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=True choice=C expected=C acc=0.2500
+[5/10] file-004_step_order images=2
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=True choice=C expected=C acc=0.4000
+[6/10] file-005_step_order images=2
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=A expected=B acc=0.3333
+[7/10] file-006_step_order images=2
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=A expected=E acc=0.2857
+[8/10] file-007_step_order images=2
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=A expected=B acc=0.2500
+[9/10] file-008_step_order images=2
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=True choice=A expected=A acc=0.3333
+[10/10] file-009_step_order images=2
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=A expected=E acc=0.3000
+{
+  "total": 10,
+  "answered": 10,
+  "errors": 0,
+  "accuracy": 0.3,
+  "elapsed_seconds": 45.667
+}
+Output: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/results/baseline/step_order.json

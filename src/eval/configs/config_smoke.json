@@ -1,0 +1,33 @@
+{
+  "_note": [
+    "阶段 0 冒烟专用配置，不是最终评测配置。",
+    "与 test/config_test.json 的唯一实质差别：video_sample_fps 设为 0。",
+    "原因：internvl_frame_indices() 里 sample_fps > 0 会直接 return，num_segments 成为死参数。",
+    "video_sample_fps=1.0 对一段 73 秒的 episode 会抽 73 帧，一次过 ViT 在 24GB 卡上 OOM。",
+    "设为 0 后改由 num_segments 控制帧数。抽帧策略会显著影响 Time EQA 的 tIoU，",
+    "正式评测用哪个值需要单独确定，见 REFACTOR_PLAN.md 第 11 节。"
+  ],
+  "provider": "local_sensenova_si_1_1_internvl3_2b",
+  "defaults": {
+    "temperature": 0.0,
+    "thinking": "disabled",
+    "timeout": 300,
+    "max_retries": 3
+  },
+  "providers": {
+    "local_sensenova_si_1_1_internvl3_2b": {
+      "type": "local_internvl",
+      "model": "eval/models/SenseNova-SI-1_1-InternVL3-2B",
+      "model_env": "SENSENOVA_SI_1_1_INTERNVL3_2B_MODEL_PATH",
+      "temperature": 0.0,
+      "max_new_tokens": 1024,
+      "num_segments": 8,
+      "video_sample_fps": 0,
+      "max_image_tiles": 4,
+      "max_video_tiles": 1,
+      "use_flash_attn": false,
+      "system_prompt": "You are a strict JSON API. Return only one JSON object. Do not include markdown or analysis outside JSON."
+    }
+  },
+  "tasks": {}
+}

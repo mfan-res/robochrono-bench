@@ -1,0 +1,153 @@
+Input items: 10
+Existing results: 0
+Pending: 10
+Provider: local_sensenova_si_1_1_internvl3_2b
+Model: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/models/SenseNova-SI-1_1-InternVL3-2B
+API URL: 
+Media key: input.clip_path / input.clip_paths
+[1/10] file-000-1_understand videos=1 Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?
+Options:
+A. place the red cube
+B. rotate the red cube
+C. flip the yellow cube
+D. All other options are wrong.
+E. pick the red cube
+F. move the red cube
+Loading local InternVL model: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/models/SenseNova-SI-1_1-InternVL3-2B
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+FlashAttention2 is not installed.
+  correct=False choice=B expected=E acc=0.0000
+[2/10] file-000-1_file-000-2_move_understand videos=1 Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?
+Options:
+A. pick the red cube
+B. place the red cube
+C. slide the red cube
+D. move the red cube
+E. All other options are wrong.
+F. move the green cube
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=True choice=D expected=D acc=0.5000
+[3/10] file-000-2_understand videos=1 Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?
+Options:
+A. place the red cube
+B. pick the yellow cube
+C. move the red cube
+D. place the blue cube
+E. All other options are wrong.
+F. place the yellow ball
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=C expected=A acc=0.3333
+[4/10] file-000-3_understand videos=1 Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?
+Options:
+A. move the yellow cube
+B. pick the yellow cube
+C. place the red cube
+D. flip the red cube
+E. All other options are wrong.
+F. pick the green cube
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=A expected=B acc=0.2500
+[5/10] file-000-3_file-000-4_move_understand videos=1 Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?
+Options:
+A. drop the yellow cube
+B. drag the yellow cube
+C. pick the yellow cube
+D. move the yellow cube
+E. place the yellow cube
+F. All other options are wrong.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=True choice=D expected=D acc=0.4000
+[6/10] file-000-4_understand videos=1 Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?
+Options:
+A. stack the yellow cube
+B. place the yellow cube
+C. throw the yellow cube
+D. All other options are wrong.
+E. move the yellow cube
+F. pick the yellow cube
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=True choice=B expected=B acc=0.5000
+[7/10] file-001-1_understand videos=1 Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?
+Options:
+A. All other options are wrong.
+B. pick the yellow ball
+C. pick the yellow cube
+D. place the yellow cube
+E. move the yellow cube
+F. flip the red cube
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=True choice=C expected=C acc=0.5714
+[8/10] file-001-1_file-001-2_move_understand videos=1 Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?
+Options:
+A. place the yellow cube
+B. drop the yellow cube
+C. All other options are wrong.
+D. pick the yellow cube
+E. move the yellow cube
+F. slide the yellow cube
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=A expected=E acc=0.5000
+[9/10] file-001-2_understand videos=1 Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?
+Options:
+A. place the yellow cube
+B. pick the red cube
+C. stack the yellow cube
+D. push the yellow cube
+E. move the yellow cube
+F. All other options are wrong.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=True choice=A expected=A acc=0.5556
+[10/10] file-001-3_understand videos=1 Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?
+Options:
+A. rotate the red cube
+B. move the red cube
+C. pick the red cube
+D. place the yellow cube
+E. push the red cube
+F. All other options are wrong.
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=B expected=C acc=0.5000
+{
+  "total": 10,
+  "answered": 10,
+  "errors": 0,
+  "accuracy": 0.5,
+  "elapsed_seconds": 44.104,
+  "by_action": {
+    "move": {
+      "total": 3,
+      "accuracy": 0.6666666666666666
+    },
+    "pick": {
+      "total": 4,
+      "accuracy": 0.25
+    },
+    "place": {
+      "total": 3,
+      "accuracy": 0.6666666666666666
+    }
+  },
+  "by_choice": {
+    "A": {
+      "total": 2,
+      "accuracy": 0.5
+    },
+    "B": {
+      "total": 2,
+      "accuracy": 0.5
+    },
+    "C": {
+      "total": 2,
+      "accuracy": 0.5
+    },
+    "D": {
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "E": {
+      "total": 2,
+      "accuracy": 0.0
+    }
+  }
+}
+Output: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/results/baseline/understanding.json

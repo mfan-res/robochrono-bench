@@ -1,0 +1,91 @@
+{
+  "_note": [
+    "评测矩阵定义。models 里的 provider 必须在 configs/providers.json 里存在。",
+    "",
+    "当前只列了本机可跑的模型与已下载的任务族。",
+    "另外 14 个模型和 19 个族的数据到位后往这里加即可，代码不用动。",
+    "",
+    "kind: local 走本地权重（model-major 调度，权重只加载一次）",
+    "      api   走远程接口（可并发，需要预算闸门）",
+    "",
+    "frame_variants: 本地模型统一测 fps=1 与 fps=2 两档（团队定案）。",
+    "  API 模型的抽帧在服务端，无法调整，只按默认跑一档。",
+    "  该档位只对四个视频任务展开；五个静态图任务不受影响。",
+    "  frames 只影响预处理不影响权重，所以两档共用同一次模型加载。",
+    "",
+    "",
+    "Cosmos3-Edge-2B 的架构 cosmos3_edge 在 transformers 4.57.6 上未注册、5.15.0 上可用，",
+    "  所以它在 configs/environments.json 里被映射到 groupB，由 dispatch 分派。",
+    "",
+    "trajectory_2D / trajectory_3D 已于 2026-08-16 暂时移出（指标不具说明性，见报告第五之二节）。",
+    "八个族的 QA 有两种布局：一半直接在族目录下，一半多嵌一层子目录且名称不统一，",
+    "  由 tasks.qa_path 递归定位，多处命中时报错而非静默取第一个。"
+  ],
+  "models": [
+    {
+      "name": "SenseNova-SI-1.1-InternVL3-2B",
+      "provider": "local_sensenova_si_1_1_internvl3_2b",
+      "kind": "local",
+      "note": "adapter: local_internvl，权重 4.18 GB"
+    },
+    {
+      "name": "RynnBrain-2B",
+      "provider": "local_rynnbrain_2b",
+      "kind": "local",
+      "note": "adapter: local_transformers_vlm，权重 4.88 GB"
+    },
+    {
+      "name": "Qwen3-VL-8B-Instruct",
+      "provider": "local_qwen",
+      "kind": "local",
+      "note": "adapter: local_qwen，权重 17.53 GB"
+    },
+    {
+      "name": "qwen3.8-max",
+      "provider": "qwen",
+      "kind": "api",
+      "note": "抽帧由服务端决定，不参与 fps 档位"
+    },
+    {
+      "name": "Cosmos3-Edge-2B",
+      "provider": "local_cosmos3_edge_2b",
+      "kind": "local",
+      "note": "adapter: local_cosmos_transformers，权重 8.6 GB。架构 cosmos3_edge 需 transformers 5.x，走 groupB。"
+    }
+  ],
+  "families": [
+    "stack_cubes",
+    "airpods",
+    "express",
+    "tea2",
+    "gift_inhand",
+    "pen_inbox",
+    "tea",
+    "wash"
+  ],
+  "runs": [
+    "time",
+    "understanding",
+    "left_right",
+    "image_in_video",
+    "planning",
+    "planning_2",
+    "step_order"
+  ],
+  "family_attrs": {
+    "stack_cubes": {
+      "two_handed": true
+    }
+  },
+  "skip_rules": [
+    {
+      "run": "left_right",
+      "unless": "two_handed",
+      "_why": "视角识别依赖左右手视角差异，单手任务不适用（见 test/testproject.md）"
+    }
+  ],
+  "frame_variants": [
+    1.0,
+    2.0
+  ]
+}

@@ -1,0 +1,2866 @@
+{
+  "input": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order_vqa.json",
+  "provider": "local_sensenova_si_1_1_internvl3_2b",
+  "model": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/models/SenseNova-SI-1_1-InternVL3-2B",
+  "api_url": "",
+  "prompt_note": "Each result item contains the exact prompt sent to the model in the `prompt` field.",
+  "results": [
+    {
+      "id": "file-000_step_order",
+      "source_id": "file-000",
+      "video_id": "file-000",
+      "type": "step_order",
+      "task": "step_order_with_initial_state",
+      "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+      "video_paths": {
+        "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+        "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+        "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4"
+      },
+      "segments_path": "../../json_pickplace/file-000_segments.json",
+      "view": "multiview",
+      "views": [
+        "left_eye",
+        "left_wrist",
+        "right_wrist"
+      ],
+      "input": {
+        "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-000_multiview_initial.jpg",
+        "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-000_multiview_step_order.jpg",
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-000_multiview_step_order.jpg",
+        "image_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-000_multiview_initial.jpg",
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-000_multiview_step_order.jpg"
+        ],
+        "images": [
+          {
+            "source_order": 4,
+            "role": "result",
+            "frame_index": 1169,
+            "description": "pick yellow cube",
+            "segment_id": "file-000-3",
+            "display_label": "Image 1",
+            "display_index": 1,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-000/file-000_multiview_image_1.jpg"
+          },
+          {
+            "source_order": 2,
+            "role": "result",
+            "frame_index": 635,
+            "description": "move red cube",
+            "segment_id": "file-000-1_file-000-2_move",
+            "display_label": "Image 2",
+            "display_index": 2,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-000/file-000_multiview_image_2.jpg"
+          },
+          {
+            "source_order": 3,
+            "role": "result",
+            "frame_index": 696,
+            "description": "place red cube",
+            "segment_id": "file-000-2",
+            "display_label": "Image 3",
+            "display_index": 3,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-000/file-000_multiview_image_3.jpg"
+          },
+          {
+            "source_order": 5,
+            "role": "result",
+            "frame_index": 1272,
+            "description": "move yellow cube",
+            "segment_id": "file-000-3_file-000-4_move",
+            "display_label": "Image 4",
+            "display_index": 4,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-000/file-000_multiview_image_4.jpg"
+          },
+          {
+            "source_order": 1,
+            "role": "result",
+            "frame_index": 543,
+            "description": "pick red cube",
+            "segment_id": "file-000-1",
+            "display_label": "Image 5",
+            "display_index": 5,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-000/file-000_multiview_image_5.jpg"
+          },
+          {
+            "source_order": 6,
+            "role": "result",
+            "frame_index": 1334,
+            "description": "place yellow cube",
+            "segment_id": "file-000-4",
+            "display_label": "Image 6",
+            "display_index": 6,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-000/file-000_multiview_image_6.jpg"
+          }
+        ],
+        "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+        "video_paths": {
+          "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+          "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4"
+        },
+        "views": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "segments_path": "../../json_pickplace/file-000_segments.json"
+      },
+      "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-000_multiview_initial.jpg",
+      "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-000_multiview_step_order.jpg",
+      "images": [
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 1169,
+          "description": "pick yellow cube",
+          "segment_id": "file-000-3",
+          "display_label": "Image 1",
+          "display_index": 1,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-000/file-000_multiview_image_1.jpg"
+        },
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 635,
+          "description": "move red cube",
+          "segment_id": "file-000-1_file-000-2_move",
+          "display_label": "Image 2",
+          "display_index": 2,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-000/file-000_multiview_image_2.jpg"
+        },
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 696,
+          "description": "place red cube",
+          "segment_id": "file-000-2",
+          "display_label": "Image 3",
+          "display_index": 3,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-000/file-000_multiview_image_3.jpg"
+        },
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 1272,
+          "description": "move yellow cube",
+          "segment_id": "file-000-3_file-000-4_move",
+          "display_label": "Image 4",
+          "display_index": 4,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-000/file-000_multiview_image_4.jpg"
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 543,
+          "description": "pick red cube",
+          "segment_id": "file-000-1",
+          "display_label": "Image 5",
+          "display_index": 5,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-000/file-000_multiview_image_5.jpg"
+        },
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 1334,
+          "description": "place yellow cube",
+          "segment_id": "file-000-4",
+          "display_label": "Image 6",
+          "display_index": 6,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-000/file-000_multiview_image_6.jpg"
+        }
+      ],
+      "Q": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 5-2-1-3-4-6\nB. 5-2-3-1-4-6\nC. 5-3-2-1-4-6\nD. 5-2-3-4-1-6\nE. 5-2-3-1-6-4\nF. 2-5-3-1-4-6",
+      "A": "B",
+      "question": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 5-2-1-3-4-6\nB. 5-2-3-1-4-6\nC. 5-3-2-1-4-6\nD. 5-2-3-4-1-6\nE. 5-2-3-1-6-4\nF. 2-5-3-1-4-6",
+      "answer": "B",
+      "answer_text": "5-2-3-1-4-6",
+      "answer_order": "5-2-3-1-4-6",
+      "options": [
+        {
+          "id": "A",
+          "text": "5-2-1-3-4-6",
+          "is_correct": false
+        },
+        {
+          "id": "B",
+          "text": "5-2-3-1-4-6",
+          "is_correct": true
+        },
+        {
+          "id": "C",
+          "text": "5-3-2-1-4-6",
+          "is_correct": false
+        },
+        {
+          "id": "D",
+          "text": "5-2-3-4-1-6",
+          "is_correct": false
+        },
+        {
+          "id": "E",
+          "text": "5-2-3-1-6-4",
+          "is_correct": false
+        },
+        {
+          "id": "F",
+          "text": "2-5-3-1-4-6",
+          "is_correct": false
+        }
+      ],
+      "choices": {
+        "A": "5-2-1-3-4-6",
+        "B": "5-2-3-1-4-6",
+        "C": "5-3-2-1-4-6",
+        "D": "5-2-3-4-1-6",
+        "E": "5-2-3-1-6-4",
+        "F": "2-5-3-1-4-6"
+      },
+      "num_choices_to_order": 6,
+      "chronological_states": [
+        {
+          "source_order": 0,
+          "role": "initial",
+          "frame_index": 0,
+          "description": "initial state",
+          "segment_id": null,
+          "display_index": null
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 543,
+          "description": "pick red cube",
+          "segment_id": "file-000-1",
+          "display_index": 5
+        },
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 635,
+          "description": "move red cube",
+          "segment_id": "file-000-1_file-000-2_move",
+          "display_index": 2
+        },
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 696,
+          "description": "place red cube",
+          "segment_id": "file-000-2",
+          "display_index": 3
+        },
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 1169,
+          "description": "pick yellow cube",
+          "segment_id": "file-000-3",
+          "display_index": 1
+        },
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 1272,
+          "description": "move yellow cube",
+          "segment_id": "file-000-3_file-000-4_move",
+          "display_index": 4
+        },
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 1334,
+          "description": "place yellow cube",
+          "segment_id": "file-000-4",
+          "display_index": 6
+        }
+      ],
+      "prompt": "You are solving a robot manipulation step-order VQA task.\n\nYou will receive two images in this order:\n1. The initial state image.\n2. A montage of shuffled result-state images labeled Image 1, Image 2, etc.\n\nChoose the option whose sequence puts the numbered result-state images in the correct chronological operation order after the initial state.\nChoose exactly one option letter from the provided options. Do not invent a new option.\n\nQuestion:\nGiven the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 5-2-1-3-4-6\nB. 5-2-3-1-4-6\nC. 5-3-2-1-4-6\nD. 5-2-3-4-1-6\nE. 5-2-3-1-6-4\nF. 2-5-3-1-4-6\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"A\",\n  \"reason\": \"The sequence shows the robot moving from the initial state to a final state with the red object on the table, consistent with the manipulation task. The images progress logically from the initial state to the final state, with the red object being manipulated and moved around the table.\"\n}",
+      "model_prediction": {
+        "choice": "A",
+        "reason": "The sequence shows the robot moving from the initial state to a final state with the red object on the table, consistent with the manipulation task. The images progress logically from the initial state to the final state, with the red object being manipulated and moved around the table."
+      },
+      "expected_choice": "B",
+      "expected_answer_order": "5-2-3-1-4-6",
+      "pred_choice": "A",
+      "correct": false,
+      "timing": {
+        "seconds": 20.833
+      }
+    },
+    {
+      "id": "file-001_step_order",
+      "source_id": "file-001",
+      "video_id": "file-001",
+      "type": "step_order",
+      "task": "step_order_with_initial_state",
+      "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+      "video_paths": {
+        "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+        "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-001.mp4",
+        "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-001.mp4"
+      },
+      "segments_path": "../../json_pickplace/file-001_segments.json",
+      "view": "multiview",
+      "views": [
+        "left_eye",
+        "left_wrist",
+        "right_wrist"
+      ],
+      "input": {
+        "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-001_multiview_initial.jpg",
+        "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-001_multiview_step_order.jpg",
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-001_multiview_step_order.jpg",
+        "image_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-001_multiview_initial.jpg",
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-001_multiview_step_order.jpg"
+        ],
+        "images": [
+          {
+            "source_order": 4,
+            "role": "result",
+            "frame_index": 1245,
+            "description": "pick red cube",
+            "segment_id": "file-001-3",
+            "display_label": "Image 1",
+            "display_index": 1,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-001/file-001_multiview_image_1.jpg"
+          },
+          {
+            "source_order": 2,
+            "role": "result",
+            "frame_index": 586,
+            "description": "move yellow cube",
+            "segment_id": "file-001-1_file-001-2_move",
+            "display_label": "Image 2",
+            "display_index": 2,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-001/file-001_multiview_image_2.jpg"
+          },
+          {
+            "source_order": 3,
+            "role": "result",
+            "frame_index": 646,
+            "description": "place yellow cube",
+            "segment_id": "file-001-2",
+            "display_label": "Image 3",
+            "display_index": 3,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-001/file-001_multiview_image_3.jpg"
+          },
+          {
+            "source_order": 1,
+            "role": "result",
+            "frame_index": 520,
+            "description": "pick yellow cube",
+            "segment_id": "file-001-1",
+            "display_label": "Image 4",
+            "display_index": 4,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-001/file-001_multiview_image_4.jpg"
+          },
+          {
+            "source_order": 5,
+            "role": "result",
+            "frame_index": 1309,
+            "description": "move red cube",
+            "segment_id": "file-001-3_file-001-4_move",
+            "display_label": "Image 5",
+            "display_index": 5,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-001/file-001_multiview_image_5.jpg"
+          },
+          {
+            "source_order": 6,
+            "role": "result",
+            "frame_index": 1369,
+            "description": "place red cube",
+            "segment_id": "file-001-4",
+            "display_label": "Image 6",
+            "display_index": 6,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-001/file-001_multiview_image_6.jpg"
+          }
+        ],
+        "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+        "video_paths": {
+          "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+          "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-001.mp4",
+          "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-001.mp4"
+        },
+        "views": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "segments_path": "../../json_pickplace/file-001_segments.json"
+      },
+      "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-001_multiview_initial.jpg",
+      "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-001_multiview_step_order.jpg",
+      "images": [
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 1245,
+          "description": "pick red cube",
+          "segment_id": "file-001-3",
+          "display_label": "Image 1",
+          "display_index": 1,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-001/file-001_multiview_image_1.jpg"
+        },
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 586,
+          "description": "move yellow cube",
+          "segment_id": "file-001-1_file-001-2_move",
+          "display_label": "Image 2",
+          "display_index": 2,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-001/file-001_multiview_image_2.jpg"
+        },
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 646,
+          "description": "place yellow cube",
+          "segment_id": "file-001-2",
+          "display_label": "Image 3",
+          "display_index": 3,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-001/file-001_multiview_image_3.jpg"
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 520,
+          "description": "pick yellow cube",
+          "segment_id": "file-001-1",
+          "display_label": "Image 4",
+          "display_index": 4,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-001/file-001_multiview_image_4.jpg"
+        },
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 1309,
+          "description": "move red cube",
+          "segment_id": "file-001-3_file-001-4_move",
+          "display_label": "Image 5",
+          "display_index": 5,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-001/file-001_multiview_image_5.jpg"
+        },
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 1369,
+          "description": "place red cube",
+          "segment_id": "file-001-4",
+          "display_label": "Image 6",
+          "display_index": 6,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-001/file-001_multiview_image_6.jpg"
+        }
+      ],
+      "Q": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 2-4-3-1-5-6\nB. 4-3-2-1-5-6\nC. 4-2-1-3-5-6\nD. 4-2-3-5-1-6\nE. 4-2-3-1-6-5\nF. 4-2-3-1-5-6",
+      "A": "F",
+      "question": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 2-4-3-1-5-6\nB. 4-3-2-1-5-6\nC. 4-2-1-3-5-6\nD. 4-2-3-5-1-6\nE. 4-2-3-1-6-5\nF. 4-2-3-1-5-6",
+      "answer": "F",
+      "answer_text": "4-2-3-1-5-6",
+      "answer_order": "4-2-3-1-5-6",
+      "options": [
+        {
+          "id": "A",
+          "text": "2-4-3-1-5-6",
+          "is_correct": false
+        },
+        {
+          "id": "B",
+          "text": "4-3-2-1-5-6",
+          "is_correct": false
+        },
+        {
+          "id": "C",
+          "text": "4-2-1-3-5-6",
+          "is_correct": false
+        },
+        {
+          "id": "D",
+          "text": "4-2-3-5-1-6",
+          "is_correct": false
+        },
+        {
+          "id": "E",
+          "text": "4-2-3-1-6-5",
+          "is_correct": false
+        },
+        {
+          "id": "F",
+          "text": "4-2-3-1-5-6",
+          "is_correct": true
+        }
+      ],
+      "choices": {
+        "A": "2-4-3-1-5-6",
+        "B": "4-3-2-1-5-6",
+        "C": "4-2-1-3-5-6",
+        "D": "4-2-3-5-1-6",
+        "E": "4-2-3-1-6-5",
+        "F": "4-2-3-1-5-6"
+      },
+      "num_choices_to_order": 6,
+      "chronological_states": [
+        {
+          "source_order": 0,
+          "role": "initial",
+          "frame_index": 0,
+          "description": "initial state",
+          "segment_id": null,
+          "display_index": null
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 520,
+          "description": "pick yellow cube",
+          "segment_id": "file-001-1",
+          "display_index": 4
+        },
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 586,
+          "description": "move yellow cube",
+          "segment_id": "file-001-1_file-001-2_move",
+          "display_index": 2
+        },
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 646,
+          "description": "place yellow cube",
+          "segment_id": "file-001-2",
+          "display_index": 3
+        },
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 1245,
+          "description": "pick red cube",
+          "segment_id": "file-001-3",
+          "display_index": 1
+        },
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 1309,
+          "description": "move red cube",
+          "segment_id": "file-001-3_file-001-4_move",
+          "display_index": 5
+        },
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 1369,
+          "description": "place red cube",
+          "segment_id": "file-001-4",
+          "display_index": 6
+        }
+      ],
+      "prompt": "You are solving a robot manipulation step-order VQA task.\n\nYou will receive two images in this order:\n1. The initial state image.\n2. A montage of shuffled result-state images labeled Image 1, Image 2, etc.\n\nChoose the option whose sequence puts the numbered result-state images in the correct chronological operation order after the initial state.\nChoose exactly one option letter from the provided options. Do not invent a new option.\n\nQuestion:\nGiven the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 2-4-3-1-5-6\nB. 4-3-2-1-5-6\nC. 4-2-1-3-5-6\nD. 4-2-3-5-1-6\nE. 4-2-3-1-6-5\nF. 4-2-3-1-5-6\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"A\",\n  \"reason\": \"The sequence shows the robot moving from the initial state to a final state with the yellow object on the table, consistent with the manipulation task. The images progress logically from the initial state to the final state, with the yellow object being manipulated and moved around the table.\"\n}",
+      "model_prediction": {
+        "choice": "A",
+        "reason": "The sequence shows the robot moving from the initial state to a final state with the yellow object on the table, consistent with the manipulation task. The images progress logically from the initial state to the final state, with the yellow object being manipulated and moved around the table."
+      },
+      "expected_choice": "F",
+      "expected_answer_order": "4-2-3-1-5-6",
+      "pred_choice": "A",
+      "correct": false,
+      "timing": {
+        "seconds": 2.534
+      }
+    },
+    {
+      "id": "file-002_step_order",
+      "source_id": "file-002",
+      "video_id": "file-002",
+      "type": "step_order",
+      "task": "step_order_with_initial_state",
+      "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4",
+      "video_paths": {
+        "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4",
+        "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-002.mp4",
+        "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-002.mp4"
+      },
+      "segments_path": "../../json_pickplace/file-002_segments.json",
+      "view": "multiview",
+      "views": [
+        "left_eye",
+        "left_wrist",
+        "right_wrist"
+      ],
+      "input": {
+        "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-002_multiview_initial.jpg",
+        "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-002_multiview_step_order.jpg",
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-002_multiview_step_order.jpg",
+        "image_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-002_multiview_initial.jpg",
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-002_multiview_step_order.jpg"
+        ],
+        "images": [
+          {
+            "source_order": 2,
+            "role": "result",
+            "frame_index": 621,
+            "description": "move red cube",
+            "segment_id": "file-002-1_file-002-2_move",
+            "display_label": "Image 1",
+            "display_index": 1,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-002/file-002_multiview_image_1.jpg"
+          },
+          {
+            "source_order": 4,
+            "role": "result",
+            "frame_index": 1147,
+            "description": "pick yellow cube",
+            "segment_id": "file-002-3",
+            "display_label": "Image 2",
+            "display_index": 2,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-002/file-002_multiview_image_2.jpg"
+          },
+          {
+            "source_order": 3,
+            "role": "result",
+            "frame_index": 680,
+            "description": "place red cube",
+            "segment_id": "file-002-2",
+            "display_label": "Image 3",
+            "display_index": 3,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-002/file-002_multiview_image_3.jpg"
+          },
+          {
+            "source_order": 1,
+            "role": "result",
+            "frame_index": 572,
+            "description": "pick red cube",
+            "segment_id": "file-002-1",
+            "display_label": "Image 4",
+            "display_index": 4,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-002/file-002_multiview_image_4.jpg"
+          },
+          {
+            "source_order": 6,
+            "role": "result",
+            "frame_index": 1265,
+            "description": "place yellow cube",
+            "segment_id": "file-002-4",
+            "display_label": "Image 5",
+            "display_index": 5,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-002/file-002_multiview_image_5.jpg"
+          },
+          {
+            "source_order": 5,
+            "role": "result",
+            "frame_index": 1205,
+            "description": "move yellow cube",
+            "segment_id": "file-002-3_file-002-4_move",
+            "display_label": "Image 6",
+            "display_index": 6,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-002/file-002_multiview_image_6.jpg"
+          }
+        ],
+        "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4",
+        "video_paths": {
+          "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-002.mp4",
+          "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-002.mp4",
+          "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-002.mp4"
+        },
+        "views": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "segments_path": "../../json_pickplace/file-002_segments.json"
+      },
+      "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-002_multiview_initial.jpg",
+      "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-002_multiview_step_order.jpg",
+      "images": [
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 621,
+          "description": "move red cube",
+          "segment_id": "file-002-1_file-002-2_move",
+          "display_label": "Image 1",
+          "display_index": 1,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-002/file-002_multiview_image_1.jpg"
+        },
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 1147,
+          "description": "pick yellow cube",
+          "segment_id": "file-002-3",
+          "display_label": "Image 2",
+          "display_index": 2,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-002/file-002_multiview_image_2.jpg"
+        },
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 680,
+          "description": "place red cube",
+          "segment_id": "file-002-2",
+          "display_label": "Image 3",
+          "display_index": 3,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-002/file-002_multiview_image_3.jpg"
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 572,
+          "description": "pick red cube",
+          "segment_id": "file-002-1",
+          "display_label": "Image 4",
+          "display_index": 4,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-002/file-002_multiview_image_4.jpg"
+        },
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 1265,
+          "description": "place yellow cube",
+          "segment_id": "file-002-4",
+          "display_label": "Image 5",
+          "display_index": 5,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-002/file-002_multiview_image_5.jpg"
+        },
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 1205,
+          "description": "move yellow cube",
+          "segment_id": "file-002-3_file-002-4_move",
+          "display_label": "Image 6",
+          "display_index": 6,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-002/file-002_multiview_image_6.jpg"
+        }
+      ],
+      "Q": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 4-3-1-2-6-5\nB. 1-4-3-2-6-5\nC. 4-1-3-2-6-5\nD. 4-1-2-3-6-5\nE. 4-1-3-6-2-5\nF. 4-1-3-2-5-6",
+      "A": "C",
+      "question": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 4-3-1-2-6-5\nB. 1-4-3-2-6-5\nC. 4-1-3-2-6-5\nD. 4-1-2-3-6-5\nE. 4-1-3-6-2-5\nF. 4-1-3-2-5-6",
+      "answer": "C",
+      "answer_text": "4-1-3-2-6-5",
+      "answer_order": "4-1-3-2-6-5",
+      "options": [
+        {
+          "id": "A",
+          "text": "4-3-1-2-6-5",
+          "is_correct": false
+        },
+        {
+          "id": "B",
+          "text": "1-4-3-2-6-5",
+          "is_correct": false
+        },
+        {
+          "id": "C",
+          "text": "4-1-3-2-6-5",
+          "is_correct": true
+        },
+        {
+          "id": "D",
+          "text": "4-1-2-3-6-5",
+          "is_correct": false
+        },
+        {
+          "id": "E",
+          "text": "4-1-3-6-2-5",
+          "is_correct": false
+        },
+        {
+          "id": "F",
+          "text": "4-1-3-2-5-6",
+          "is_correct": false
+        }
+      ],
+      "choices": {
+        "A": "4-3-1-2-6-5",
+        "B": "1-4-3-2-6-5",
+        "C": "4-1-3-2-6-5",
+        "D": "4-1-2-3-6-5",
+        "E": "4-1-3-6-2-5",
+        "F": "4-1-3-2-5-6"
+      },
+      "num_choices_to_order": 6,
+      "chronological_states": [
+        {
+          "source_order": 0,
+          "role": "initial",
+          "frame_index": 0,
+          "description": "initial state",
+          "segment_id": null,
+          "display_index": null
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 572,
+          "description": "pick red cube",
+          "segment_id": "file-002-1",
+          "display_index": 4
+        },
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 621,
+          "description": "move red cube",
+          "segment_id": "file-002-1_file-002-2_move",
+          "display_index": 1
+        },
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 680,
+          "description": "place red cube",
+          "segment_id": "file-002-2",
+          "display_index": 3
+        },
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 1147,
+          "description": "pick yellow cube",
+          "segment_id": "file-002-3",
+          "display_index": 2
+        },
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 1205,
+          "description": "move yellow cube",
+          "segment_id": "file-002-3_file-002-4_move",
+          "display_index": 6
+        },
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 1265,
+          "description": "place yellow cube",
+          "segment_id": "file-002-4",
+          "display_index": 5
+        }
+      ],
+      "prompt": "You are solving a robot manipulation step-order VQA task.\n\nYou will receive two images in this order:\n1. The initial state image.\n2. A montage of shuffled result-state images labeled Image 1, Image 2, etc.\n\nChoose the option whose sequence puts the numbered result-state images in the correct chronological operation order after the initial state.\nChoose exactly one option letter from the provided options. Do not invent a new option.\n\nQuestion:\nGiven the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 4-3-1-2-6-5\nB. 1-4-3-2-6-5\nC. 4-1-3-2-6-5\nD. 4-1-2-3-6-5\nE. 4-1-3-6-2-5\nF. 4-1-3-2-5-6\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"D\",\n  \"reason\": \"The sequence 4-1-3-2-6-5 shows the correct manipulation order: the robot first picks up the yellow block, then moves it to the right side, places it down, picks up the red block, moves it to the left side, and finally places it down. This sequence matches the observed manipulation steps in the images.\"\n}",
+      "model_prediction": {
+        "choice": "D",
+        "reason": "The sequence 4-1-3-2-6-5 shows the correct manipulation order: the robot first picks up the yellow block, then moves it to the right side, places it down, picks up the red block, moves it to the left side, and finally places it down. This sequence matches the observed manipulation steps in the images."
+      },
+      "expected_choice": "C",
+      "expected_answer_order": "4-1-3-2-6-5",
+      "pred_choice": "D",
+      "correct": false,
+      "timing": {
+        "seconds": 3.725
+      }
+    },
+    {
+      "id": "file-003_step_order",
+      "source_id": "file-003",
+      "video_id": "file-003",
+      "type": "step_order",
+      "task": "step_order_with_initial_state",
+      "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4",
+      "video_paths": {
+        "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4",
+        "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-003.mp4",
+        "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-003.mp4"
+      },
+      "segments_path": "../../json_pickplace/file-003_segments.json",
+      "view": "multiview",
+      "views": [
+        "left_eye",
+        "left_wrist",
+        "right_wrist"
+      ],
+      "input": {
+        "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-003_multiview_initial.jpg",
+        "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-003_multiview_step_order.jpg",
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-003_multiview_step_order.jpg",
+        "image_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-003_multiview_initial.jpg",
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-003_multiview_step_order.jpg"
+        ],
+        "images": [
+          {
+            "source_order": 6,
+            "role": "result",
+            "frame_index": 1219,
+            "description": "place yellow cube",
+            "segment_id": "file-003-4",
+            "display_label": "Image 1",
+            "display_index": 1,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-003/file-003_multiview_image_1.jpg"
+          },
+          {
+            "source_order": 2,
+            "role": "result",
+            "frame_index": 517,
+            "description": "move red cube",
+            "segment_id": "file-003-1_file-003-2_move",
+            "display_label": "Image 2",
+            "display_index": 2,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-003/file-003_multiview_image_2.jpg"
+          },
+          {
+            "source_order": 4,
+            "role": "result",
+            "frame_index": 1120,
+            "description": "pick yellow cube",
+            "segment_id": "file-003-3",
+            "display_label": "Image 3",
+            "display_index": 3,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-003/file-003_multiview_image_3.jpg"
+          },
+          {
+            "source_order": 1,
+            "role": "result",
+            "frame_index": 486,
+            "description": "pick red cube",
+            "segment_id": "file-003-1",
+            "display_label": "Image 4",
+            "display_index": 4,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-003/file-003_multiview_image_4.jpg"
+          },
+          {
+            "source_order": 3,
+            "role": "result",
+            "frame_index": 575,
+            "description": "place red cube",
+            "segment_id": "file-003-2",
+            "display_label": "Image 5",
+            "display_index": 5,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-003/file-003_multiview_image_5.jpg"
+          },
+          {
+            "source_order": 5,
+            "role": "result",
+            "frame_index": 1160,
+            "description": "move yellow cube",
+            "segment_id": "file-003-3_file-003-4_move",
+            "display_label": "Image 6",
+            "display_index": 6,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-003/file-003_multiview_image_6.jpg"
+          }
+        ],
+        "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4",
+        "video_paths": {
+          "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-003.mp4",
+          "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-003.mp4",
+          "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-003.mp4"
+        },
+        "views": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "segments_path": "../../json_pickplace/file-003_segments.json"
+      },
+      "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-003_multiview_initial.jpg",
+      "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-003_multiview_step_order.jpg",
+      "images": [
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 1219,
+          "description": "place yellow cube",
+          "segment_id": "file-003-4",
+          "display_label": "Image 1",
+          "display_index": 1,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-003/file-003_multiview_image_1.jpg"
+        },
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 517,
+          "description": "move red cube",
+          "segment_id": "file-003-1_file-003-2_move",
+          "display_label": "Image 2",
+          "display_index": 2,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-003/file-003_multiview_image_2.jpg"
+        },
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 1120,
+          "description": "pick yellow cube",
+          "segment_id": "file-003-3",
+          "display_label": "Image 3",
+          "display_index": 3,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-003/file-003_multiview_image_3.jpg"
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 486,
+          "description": "pick red cube",
+          "segment_id": "file-003-1",
+          "display_label": "Image 4",
+          "display_index": 4,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-003/file-003_multiview_image_4.jpg"
+        },
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 575,
+          "description": "place red cube",
+          "segment_id": "file-003-2",
+          "display_label": "Image 5",
+          "display_index": 5,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-003/file-003_multiview_image_5.jpg"
+        },
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 1160,
+          "description": "move yellow cube",
+          "segment_id": "file-003-3_file-003-4_move",
+          "display_label": "Image 6",
+          "display_index": 6,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-003/file-003_multiview_image_6.jpg"
+        }
+      ],
+      "Q": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 4-2-5-6-3-1\nB. 4-2-3-5-6-1\nC. 4-2-5-3-6-1\nD. 2-4-5-3-6-1\nE. 4-2-5-3-1-6\nF. 4-5-2-3-6-1",
+      "A": "C",
+      "question": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 4-2-5-6-3-1\nB. 4-2-3-5-6-1\nC. 4-2-5-3-6-1\nD. 2-4-5-3-6-1\nE. 4-2-5-3-1-6\nF. 4-5-2-3-6-1",
+      "answer": "C",
+      "answer_text": "4-2-5-3-6-1",
+      "answer_order": "4-2-5-3-6-1",
+      "options": [
+        {
+          "id": "A",
+          "text": "4-2-5-6-3-1",
+          "is_correct": false
+        },
+        {
+          "id": "B",
+          "text": "4-2-3-5-6-1",
+          "is_correct": false
+        },
+        {
+          "id": "C",
+          "text": "4-2-5-3-6-1",
+          "is_correct": true
+        },
+        {
+          "id": "D",
+          "text": "2-4-5-3-6-1",
+          "is_correct": false
+        },
+        {
+          "id": "E",
+          "text": "4-2-5-3-1-6",
+          "is_correct": false
+        },
+        {
+          "id": "F",
+          "text": "4-5-2-3-6-1",
+          "is_correct": false
+        }
+      ],
+      "choices": {
+        "A": "4-2-5-6-3-1",
+        "B": "4-2-3-5-6-1",
+        "C": "4-2-5-3-6-1",
+        "D": "2-4-5-3-6-1",
+        "E": "4-2-5-3-1-6",
+        "F": "4-5-2-3-6-1"
+      },
+      "num_choices_to_order": 6,
+      "chronological_states": [
+        {
+          "source_order": 0,
+          "role": "initial",
+          "frame_index": 0,
+          "description": "initial state",
+          "segment_id": null,
+          "display_index": null
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 486,
+          "description": "pick red cube",
+          "segment_id": "file-003-1",
+          "display_index": 4
+        },
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 517,
+          "description": "move red cube",
+          "segment_id": "file-003-1_file-003-2_move",
+          "display_index": 2
+        },
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 575,
+          "description": "place red cube",
+          "segment_id": "file-003-2",
+          "display_index": 5
+        },
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 1120,
+          "description": "pick yellow cube",
+          "segment_id": "file-003-3",
+          "display_index": 3
+        },
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 1160,
+          "description": "move yellow cube",
+          "segment_id": "file-003-3_file-003-4_move",
+          "display_index": 6
+        },
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 1219,
+          "description": "place yellow cube",
+          "segment_id": "file-003-4",
+          "display_index": 1
+        }
+      ],
+      "prompt": "You are solving a robot manipulation step-order VQA task.\n\nYou will receive two images in this order:\n1. The initial state image.\n2. A montage of shuffled result-state images labeled Image 1, Image 2, etc.\n\nChoose the option whose sequence puts the numbered result-state images in the correct chronological operation order after the initial state.\nChoose exactly one option letter from the provided options. Do not invent a new option.\n\nQuestion:\nGiven the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 4-2-5-6-3-1\nB. 4-2-3-5-6-1\nC. 4-2-5-3-6-1\nD. 2-4-5-3-6-1\nE. 4-2-5-3-1-6\nF. 4-5-2-3-6-1\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"C\",\n  \"reason\": \"The sequence shows the robot moving from the initial state to a final configuration with the yellow cube on the right side of the table, consistent with the manipulation task.\"\n}",
+      "model_prediction": {
+        "choice": "C",
+        "reason": "The sequence shows the robot moving from the initial state to a final configuration with the yellow cube on the right side of the table, consistent with the manipulation task."
+      },
+      "expected_choice": "C",
+      "expected_answer_order": "4-2-5-3-6-1",
+      "pred_choice": "C",
+      "correct": true,
+      "timing": {
+        "seconds": 1.908
+      }
+    },
+    {
+      "id": "file-004_step_order",
+      "source_id": "file-004",
+      "video_id": "file-004",
+      "type": "step_order",
+      "task": "step_order_with_initial_state",
+      "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4",
+      "video_paths": {
+        "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4",
+        "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-004.mp4",
+        "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-004.mp4"
+      },
+      "segments_path": "../../json_pickplace/file-004_segments.json",
+      "view": "multiview",
+      "views": [
+        "left_eye",
+        "left_wrist",
+        "right_wrist"
+      ],
+      "input": {
+        "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-004_multiview_initial.jpg",
+        "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-004_multiview_step_order.jpg",
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-004_multiview_step_order.jpg",
+        "image_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-004_multiview_initial.jpg",
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-004_multiview_step_order.jpg"
+        ],
+        "images": [
+          {
+            "source_order": 3,
+            "role": "result",
+            "frame_index": 576,
+            "description": "place yellow cube",
+            "segment_id": "file-004-2",
+            "display_label": "Image 1",
+            "display_index": 1,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-004/file-004_multiview_image_1.jpg"
+          },
+          {
+            "source_order": 2,
+            "role": "result",
+            "frame_index": 518,
+            "description": "move yellow cube",
+            "segment_id": "file-004-1_file-004-2_move",
+            "display_label": "Image 2",
+            "display_index": 2,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-004/file-004_multiview_image_2.jpg"
+          },
+          {
+            "source_order": 5,
+            "role": "result",
+            "frame_index": 961,
+            "description": "move red cube",
+            "segment_id": "file-004-3_file-004-4_move",
+            "display_label": "Image 3",
+            "display_index": 3,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-004/file-004_multiview_image_3.jpg"
+          },
+          {
+            "source_order": 4,
+            "role": "result",
+            "frame_index": 918,
+            "description": "pick red cube",
+            "segment_id": "file-004-3",
+            "display_label": "Image 4",
+            "display_index": 4,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-004/file-004_multiview_image_4.jpg"
+          },
+          {
+            "source_order": 6,
+            "role": "result",
+            "frame_index": 1020,
+            "description": "place red cube",
+            "segment_id": "file-004-4",
+            "display_label": "Image 5",
+            "display_index": 5,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-004/file-004_multiview_image_5.jpg"
+          },
+          {
+            "source_order": 1,
+            "role": "result",
+            "frame_index": 493,
+            "description": "pick yellow cube",
+            "segment_id": "file-004-1",
+            "display_label": "Image 6",
+            "display_index": 6,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-004/file-004_multiview_image_6.jpg"
+          }
+        ],
+        "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4",
+        "video_paths": {
+          "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-004.mp4",
+          "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-004.mp4",
+          "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-004.mp4"
+        },
+        "views": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "segments_path": "../../json_pickplace/file-004_segments.json"
+      },
+      "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-004_multiview_initial.jpg",
+      "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-004_multiview_step_order.jpg",
+      "images": [
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 576,
+          "description": "place yellow cube",
+          "segment_id": "file-004-2",
+          "display_label": "Image 1",
+          "display_index": 1,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-004/file-004_multiview_image_1.jpg"
+        },
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 518,
+          "description": "move yellow cube",
+          "segment_id": "file-004-1_file-004-2_move",
+          "display_label": "Image 2",
+          "display_index": 2,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-004/file-004_multiview_image_2.jpg"
+        },
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 961,
+          "description": "move red cube",
+          "segment_id": "file-004-3_file-004-4_move",
+          "display_label": "Image 3",
+          "display_index": 3,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-004/file-004_multiview_image_3.jpg"
+        },
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 918,
+          "description": "pick red cube",
+          "segment_id": "file-004-3",
+          "display_label": "Image 4",
+          "display_index": 4,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-004/file-004_multiview_image_4.jpg"
+        },
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 1020,
+          "description": "place red cube",
+          "segment_id": "file-004-4",
+          "display_label": "Image 5",
+          "display_index": 5,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-004/file-004_multiview_image_5.jpg"
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 493,
+          "description": "pick yellow cube",
+          "segment_id": "file-004-1",
+          "display_label": "Image 6",
+          "display_index": 6,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-004/file-004_multiview_image_6.jpg"
+        }
+      ],
+      "Q": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 6-2-4-1-3-5\nB. 2-6-1-4-3-5\nC. 6-2-1-4-3-5\nD. 6-2-1-4-5-3\nE. 6-2-1-3-4-5\nF. 6-1-2-4-3-5",
+      "A": "C",
+      "question": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 6-2-4-1-3-5\nB. 2-6-1-4-3-5\nC. 6-2-1-4-3-5\nD. 6-2-1-4-5-3\nE. 6-2-1-3-4-5\nF. 6-1-2-4-3-5",
+      "answer": "C",
+      "answer_text": "6-2-1-4-3-5",
+      "answer_order": "6-2-1-4-3-5",
+      "options": [
+        {
+          "id": "A",
+          "text": "6-2-4-1-3-5",
+          "is_correct": false
+        },
+        {
+          "id": "B",
+          "text": "2-6-1-4-3-5",
+          "is_correct": false
+        },
+        {
+          "id": "C",
+          "text": "6-2-1-4-3-5",
+          "is_correct": true
+        },
+        {
+          "id": "D",
+          "text": "6-2-1-4-5-3",
+          "is_correct": false
+        },
+        {
+          "id": "E",
+          "text": "6-2-1-3-4-5",
+          "is_correct": false
+        },
+        {
+          "id": "F",
+          "text": "6-1-2-4-3-5",
+          "is_correct": false
+        }
+      ],
+      "choices": {
+        "A": "6-2-4-1-3-5",
+        "B": "2-6-1-4-3-5",
+        "C": "6-2-1-4-3-5",
+        "D": "6-2-1-4-5-3",
+        "E": "6-2-1-3-4-5",
+        "F": "6-1-2-4-3-5"
+      },
+      "num_choices_to_order": 6,
+      "chronological_states": [
+        {
+          "source_order": 0,
+          "role": "initial",
+          "frame_index": 0,
+          "description": "initial state",
+          "segment_id": null,
+          "display_index": null
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 493,
+          "description": "pick yellow cube",
+          "segment_id": "file-004-1",
+          "display_index": 6
+        },
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 518,
+          "description": "move yellow cube",
+          "segment_id": "file-004-1_file-004-2_move",
+          "display_index": 2
+        },
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 576,
+          "description": "place yellow cube",
+          "segment_id": "file-004-2",
+          "display_index": 1
+        },
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 918,
+          "description": "pick red cube",
+          "segment_id": "file-004-3",
+          "display_index": 4
+        },
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 961,
+          "description": "move red cube",
+          "segment_id": "file-004-3_file-004-4_move",
+          "display_index": 3
+        },
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 1020,
+          "description": "place red cube",
+          "segment_id": "file-004-4",
+          "display_index": 5
+        }
+      ],
+      "prompt": "You are solving a robot manipulation step-order VQA task.\n\nYou will receive two images in this order:\n1. The initial state image.\n2. A montage of shuffled result-state images labeled Image 1, Image 2, etc.\n\nChoose the option whose sequence puts the numbered result-state images in the correct chronological operation order after the initial state.\nChoose exactly one option letter from the provided options. Do not invent a new option.\n\nQuestion:\nGiven the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 6-2-4-1-3-5\nB. 2-6-1-4-3-5\nC. 6-2-1-4-3-5\nD. 6-2-1-4-5-3\nE. 6-2-1-3-4-5\nF. 6-1-2-4-3-5\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"C\",\n  \"reason\": \"The sequence shows the robot moving from the initial state to a final configuration with the red object on the table, consistent with the manipulation task. The images progress logically from the initial state through intermediate steps, with the red object being manipulated and moved to the center of the table.\"\n}",
+      "model_prediction": {
+        "choice": "C",
+        "reason": "The sequence shows the robot moving from the initial state to a final configuration with the red object on the table, consistent with the manipulation task. The images progress logically from the initial state through intermediate steps, with the red object being manipulated and moved to the center of the table."
+      },
+      "expected_choice": "C",
+      "expected_answer_order": "6-2-1-4-3-5",
+      "pred_choice": "C",
+      "correct": true,
+      "timing": {
+        "seconds": 2.55
+      }
+    },
+    {
+      "id": "file-005_step_order",
+      "source_id": "file-005",
+      "video_id": "file-005",
+      "type": "step_order",
+      "task": "step_order_with_initial_state",
+      "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4",
+      "video_paths": {
+        "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4",
+        "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-005.mp4",
+        "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-005.mp4"
+      },
+      "segments_path": "../../json_pickplace/file-005_segments.json",
+      "view": "multiview",
+      "views": [
+        "left_eye",
+        "left_wrist",
+        "right_wrist"
+      ],
+      "input": {
+        "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-005_multiview_initial.jpg",
+        "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-005_multiview_step_order.jpg",
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-005_multiview_step_order.jpg",
+        "image_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-005_multiview_initial.jpg",
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-005_multiview_step_order.jpg"
+        ],
+        "images": [
+          {
+            "source_order": 3,
+            "role": "result",
+            "frame_index": 537,
+            "description": "place yellow cube",
+            "segment_id": "file-005-2",
+            "display_label": "Image 1",
+            "display_index": 1,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-005/file-005_multiview_image_1.jpg"
+          },
+          {
+            "source_order": 2,
+            "role": "result",
+            "frame_index": 478,
+            "description": "move yellow cube",
+            "segment_id": "file-005-1_file-005-2_move",
+            "display_label": "Image 2",
+            "display_index": 2,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-005/file-005_multiview_image_2.jpg"
+          },
+          {
+            "source_order": 6,
+            "role": "result",
+            "frame_index": 1054,
+            "description": "place red cube",
+            "segment_id": "file-005-4",
+            "display_label": "Image 3",
+            "display_index": 3,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-005/file-005_multiview_image_3.jpg"
+          },
+          {
+            "source_order": 4,
+            "role": "result",
+            "frame_index": 946,
+            "description": "pick red cube",
+            "segment_id": "file-005-3",
+            "display_label": "Image 4",
+            "display_index": 4,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-005/file-005_multiview_image_4.jpg"
+          },
+          {
+            "source_order": 1,
+            "role": "result",
+            "frame_index": 440,
+            "description": "pick yellow cube",
+            "segment_id": "file-005-1",
+            "display_label": "Image 5",
+            "display_index": 5,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-005/file-005_multiview_image_5.jpg"
+          },
+          {
+            "source_order": 5,
+            "role": "result",
+            "frame_index": 995,
+            "description": "move red cube",
+            "segment_id": "file-005-3_file-005-4_move",
+            "display_label": "Image 6",
+            "display_index": 6,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-005/file-005_multiview_image_6.jpg"
+          }
+        ],
+        "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4",
+        "video_paths": {
+          "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-005.mp4",
+          "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-005.mp4",
+          "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-005.mp4"
+        },
+        "views": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "segments_path": "../../json_pickplace/file-005_segments.json"
+      },
+      "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-005_multiview_initial.jpg",
+      "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-005_multiview_step_order.jpg",
+      "images": [
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 537,
+          "description": "place yellow cube",
+          "segment_id": "file-005-2",
+          "display_label": "Image 1",
+          "display_index": 1,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-005/file-005_multiview_image_1.jpg"
+        },
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 478,
+          "description": "move yellow cube",
+          "segment_id": "file-005-1_file-005-2_move",
+          "display_label": "Image 2",
+          "display_index": 2,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-005/file-005_multiview_image_2.jpg"
+        },
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 1054,
+          "description": "place red cube",
+          "segment_id": "file-005-4",
+          "display_label": "Image 3",
+          "display_index": 3,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-005/file-005_multiview_image_3.jpg"
+        },
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 946,
+          "description": "pick red cube",
+          "segment_id": "file-005-3",
+          "display_label": "Image 4",
+          "display_index": 4,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-005/file-005_multiview_image_4.jpg"
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 440,
+          "description": "pick yellow cube",
+          "segment_id": "file-005-1",
+          "display_label": "Image 5",
+          "display_index": 5,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-005/file-005_multiview_image_5.jpg"
+        },
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 995,
+          "description": "move red cube",
+          "segment_id": "file-005-3_file-005-4_move",
+          "display_label": "Image 6",
+          "display_index": 6,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-005/file-005_multiview_image_6.jpg"
+        }
+      ],
+      "Q": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 2-5-1-4-6-3\nB. 5-2-1-4-6-3\nC. 5-2-4-1-6-3\nD. 5-1-2-4-6-3\nE. 5-2-1-6-4-3\nF. 5-2-1-4-3-6",
+      "A": "B",
+      "question": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 2-5-1-4-6-3\nB. 5-2-1-4-6-3\nC. 5-2-4-1-6-3\nD. 5-1-2-4-6-3\nE. 5-2-1-6-4-3\nF. 5-2-1-4-3-6",
+      "answer": "B",
+      "answer_text": "5-2-1-4-6-3",
+      "answer_order": "5-2-1-4-6-3",
+      "options": [
+        {
+          "id": "A",
+          "text": "2-5-1-4-6-3",
+          "is_correct": false
+        },
+        {
+          "id": "B",
+          "text": "5-2-1-4-6-3",
+          "is_correct": true
+        },
+        {
+          "id": "C",
+          "text": "5-2-4-1-6-3",
+          "is_correct": false
+        },
+        {
+          "id": "D",
+          "text": "5-1-2-4-6-3",
+          "is_correct": false
+        },
+        {
+          "id": "E",
+          "text": "5-2-1-6-4-3",
+          "is_correct": false
+        },
+        {
+          "id": "F",
+          "text": "5-2-1-4-3-6",
+          "is_correct": false
+        }
+      ],
+      "choices": {
+        "A": "2-5-1-4-6-3",
+        "B": "5-2-1-4-6-3",
+        "C": "5-2-4-1-6-3",
+        "D": "5-1-2-4-6-3",
+        "E": "5-2-1-6-4-3",
+        "F": "5-2-1-4-3-6"
+      },
+      "num_choices_to_order": 6,
+      "chronological_states": [
+        {
+          "source_order": 0,
+          "role": "initial",
+          "frame_index": 0,
+          "description": "initial state",
+          "segment_id": null,
+          "display_index": null
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 440,
+          "description": "pick yellow cube",
+          "segment_id": "file-005-1",
+          "display_index": 5
+        },
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 478,
+          "description": "move yellow cube",
+          "segment_id": "file-005-1_file-005-2_move",
+          "display_index": 2
+        },
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 537,
+          "description": "place yellow cube",
+          "segment_id": "file-005-2",
+          "display_index": 1
+        },
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 946,
+          "description": "pick red cube",
+          "segment_id": "file-005-3",
+          "display_index": 4
+        },
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 995,
+          "description": "move red cube",
+          "segment_id": "file-005-3_file-005-4_move",
+          "display_index": 6
+        },
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 1054,
+          "description": "place red cube",
+          "segment_id": "file-005-4",
+          "display_index": 3
+        }
+      ],
+      "prompt": "You are solving a robot manipulation step-order VQA task.\n\nYou will receive two images in this order:\n1. The initial state image.\n2. A montage of shuffled result-state images labeled Image 1, Image 2, etc.\n\nChoose the option whose sequence puts the numbered result-state images in the correct chronological operation order after the initial state.\nChoose exactly one option letter from the provided options. Do not invent a new option.\n\nQuestion:\nGiven the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 2-5-1-4-6-3\nB. 5-2-1-4-6-3\nC. 5-2-4-1-6-3\nD. 5-1-2-4-6-3\nE. 5-2-1-6-4-3\nF. 5-2-1-4-3-6\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"A\",\n  \"reason\": \"The sequence shows the robot moving from the initial state to a more complex manipulation task, with the gripper approaching and interacting with the objects, consistent with the provided images.\"\n}",
+      "model_prediction": {
+        "choice": "A",
+        "reason": "The sequence shows the robot moving from the initial state to a more complex manipulation task, with the gripper approaching and interacting with the objects, consistent with the provided images."
+      },
+      "expected_choice": "B",
+      "expected_answer_order": "5-2-1-4-6-3",
+      "pred_choice": "A",
+      "correct": false,
+      "timing": {
+        "seconds": 2.834
+      }
+    },
+    {
+      "id": "file-006_step_order",
+      "source_id": "file-006",
+      "video_id": "file-006",
+      "type": "step_order",
+      "task": "step_order_with_initial_state",
+      "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4",
+      "video_paths": {
+        "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4",
+        "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-006.mp4",
+        "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-006.mp4"
+      },
+      "segments_path": "../../json_pickplace/file-006_segments.json",
+      "view": "multiview",
+      "views": [
+        "left_eye",
+        "left_wrist",
+        "right_wrist"
+      ],
+      "input": {
+        "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-006_multiview_initial.jpg",
+        "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-006_multiview_step_order.jpg",
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-006_multiview_step_order.jpg",
+        "image_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-006_multiview_initial.jpg",
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-006_multiview_step_order.jpg"
+        ],
+        "images": [
+          {
+            "source_order": 2,
+            "role": "result",
+            "frame_index": 478,
+            "description": "move yellow cube",
+            "segment_id": "file-006-1_file-006-2_move",
+            "display_label": "Image 1",
+            "display_index": 1,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-006/file-006_multiview_image_1.jpg"
+          },
+          {
+            "source_order": 4,
+            "role": "result",
+            "frame_index": 847,
+            "description": "pick red cube",
+            "segment_id": "file-006-3",
+            "display_label": "Image 2",
+            "display_index": 2,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-006/file-006_multiview_image_2.jpg"
+          },
+          {
+            "source_order": 3,
+            "role": "result",
+            "frame_index": 537,
+            "description": "place yellow cube",
+            "segment_id": "file-006-2",
+            "display_label": "Image 3",
+            "display_index": 3,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-006/file-006_multiview_image_3.jpg"
+          },
+          {
+            "source_order": 5,
+            "role": "result",
+            "frame_index": 912,
+            "description": "move red cube",
+            "segment_id": "file-006-3_file-006-4_move",
+            "display_label": "Image 4",
+            "display_index": 4,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-006/file-006_multiview_image_4.jpg"
+          },
+          {
+            "source_order": 1,
+            "role": "result",
+            "frame_index": 440,
+            "description": "pick yellow cube",
+            "segment_id": "file-006-1",
+            "display_label": "Image 5",
+            "display_index": 5,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-006/file-006_multiview_image_5.jpg"
+          },
+          {
+            "source_order": 6,
+            "role": "result",
+            "frame_index": 972,
+            "description": "place red cube",
+            "segment_id": "file-006-4",
+            "display_label": "Image 6",
+            "display_index": 6,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-006/file-006_multiview_image_6.jpg"
+          }
+        ],
+        "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4",
+        "video_paths": {
+          "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-006.mp4",
+          "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-006.mp4",
+          "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-006.mp4"
+        },
+        "views": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "segments_path": "../../json_pickplace/file-006_segments.json"
+      },
+      "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-006_multiview_initial.jpg",
+      "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-006_multiview_step_order.jpg",
+      "images": [
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 478,
+          "description": "move yellow cube",
+          "segment_id": "file-006-1_file-006-2_move",
+          "display_label": "Image 1",
+          "display_index": 1,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-006/file-006_multiview_image_1.jpg"
+        },
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 847,
+          "description": "pick red cube",
+          "segment_id": "file-006-3",
+          "display_label": "Image 2",
+          "display_index": 2,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-006/file-006_multiview_image_2.jpg"
+        },
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 537,
+          "description": "place yellow cube",
+          "segment_id": "file-006-2",
+          "display_label": "Image 3",
+          "display_index": 3,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-006/file-006_multiview_image_3.jpg"
+        },
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 912,
+          "description": "move red cube",
+          "segment_id": "file-006-3_file-006-4_move",
+          "display_label": "Image 4",
+          "display_index": 4,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-006/file-006_multiview_image_4.jpg"
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 440,
+          "description": "pick yellow cube",
+          "segment_id": "file-006-1",
+          "display_label": "Image 5",
+          "display_index": 5,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-006/file-006_multiview_image_5.jpg"
+        },
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 972,
+          "description": "place red cube",
+          "segment_id": "file-006-4",
+          "display_label": "Image 6",
+          "display_index": 6,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-006/file-006_multiview_image_6.jpg"
+        }
+      ],
+      "Q": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 5-1-3-2-6-4\nB. 5-1-2-3-4-6\nC. 5-1-3-4-2-6\nD. 1-5-3-2-4-6\nE. 5-1-3-2-4-6\nF. 5-3-1-2-4-6",
+      "A": "E",
+      "question": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 5-1-3-2-6-4\nB. 5-1-2-3-4-6\nC. 5-1-3-4-2-6\nD. 1-5-3-2-4-6\nE. 5-1-3-2-4-6\nF. 5-3-1-2-4-6",
+      "answer": "E",
+      "answer_text": "5-1-3-2-4-6",
+      "answer_order": "5-1-3-2-4-6",
+      "options": [
+        {
+          "id": "A",
+          "text": "5-1-3-2-6-4",
+          "is_correct": false
+        },
+        {
+          "id": "B",
+          "text": "5-1-2-3-4-6",
+          "is_correct": false
+        },
+        {
+          "id": "C",
+          "text": "5-1-3-4-2-6",
+          "is_correct": false
+        },
+        {
+          "id": "D",
+          "text": "1-5-3-2-4-6",
+          "is_correct": false
+        },
+        {
+          "id": "E",
+          "text": "5-1-3-2-4-6",
+          "is_correct": true
+        },
+        {
+          "id": "F",
+          "text": "5-3-1-2-4-6",
+          "is_correct": false
+        }
+      ],
+      "choices": {
+        "A": "5-1-3-2-6-4",
+        "B": "5-1-2-3-4-6",
+        "C": "5-1-3-4-2-6",
+        "D": "1-5-3-2-4-6",
+        "E": "5-1-3-2-4-6",
+        "F": "5-3-1-2-4-6"
+      },
+      "num_choices_to_order": 6,
+      "chronological_states": [
+        {
+          "source_order": 0,
+          "role": "initial",
+          "frame_index": 0,
+          "description": "initial state",
+          "segment_id": null,
+          "display_index": null
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 440,
+          "description": "pick yellow cube",
+          "segment_id": "file-006-1",
+          "display_index": 5
+        },
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 478,
+          "description": "move yellow cube",
+          "segment_id": "file-006-1_file-006-2_move",
+          "display_index": 1
+        },
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 537,
+          "description": "place yellow cube",
+          "segment_id": "file-006-2",
+          "display_index": 3
+        },
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 847,
+          "description": "pick red cube",
+          "segment_id": "file-006-3",
+          "display_index": 2
+        },
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 912,
+          "description": "move red cube",
+          "segment_id": "file-006-3_file-006-4_move",
+          "display_index": 4
+        },
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 972,
+          "description": "place red cube",
+          "segment_id": "file-006-4",
+          "display_index": 6
+        }
+      ],
+      "prompt": "You are solving a robot manipulation step-order VQA task.\n\nYou will receive two images in this order:\n1. The initial state image.\n2. A montage of shuffled result-state images labeled Image 1, Image 2, etc.\n\nChoose the option whose sequence puts the numbered result-state images in the correct chronological operation order after the initial state.\nChoose exactly one option letter from the provided options. Do not invent a new option.\n\nQuestion:\nGiven the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 5-1-3-2-6-4\nB. 5-1-2-3-4-6\nC. 5-1-3-4-2-6\nD. 1-5-3-2-4-6\nE. 5-1-3-2-4-6\nF. 5-3-1-2-4-6\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"A\",\n  \"reason\": \"The sequence shows the robot moving from the initial state to a final state with the yellow box fully assembled and the robot's hand positioned over it, consistent with the manipulation task.\"\n}",
+      "model_prediction": {
+        "choice": "A",
+        "reason": "The sequence shows the robot moving from the initial state to a final state with the yellow box fully assembled and the robot's hand positioned over it, consistent with the manipulation task."
+      },
+      "expected_choice": "E",
+      "expected_answer_order": "5-1-3-2-4-6",
+      "pred_choice": "A",
+      "correct": false,
+      "timing": {
+        "seconds": 2.895
+      }
+    },
+    {
+      "id": "file-007_step_order",
+      "source_id": "file-007",
+      "video_id": "file-007",
+      "type": "step_order",
+      "task": "step_order_with_initial_state",
+      "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4",
+      "video_paths": {
+        "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4",
+        "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-007.mp4",
+        "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-007.mp4"
+      },
+      "segments_path": "../../json_pickplace/file-007_segments.json",
+      "view": "multiview",
+      "views": [
+        "left_eye",
+        "left_wrist",
+        "right_wrist"
+      ],
+      "input": {
+        "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-007_multiview_initial.jpg",
+        "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-007_multiview_step_order.jpg",
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-007_multiview_step_order.jpg",
+        "image_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-007_multiview_initial.jpg",
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-007_multiview_step_order.jpg"
+        ],
+        "images": [
+          {
+            "source_order": 5,
+            "role": "result",
+            "frame_index": 913,
+            "description": "move red cube",
+            "segment_id": "file-007-3_file-007-4_move",
+            "display_label": "Image 1",
+            "display_index": 1,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-007/file-007_multiview_image_1.jpg"
+          },
+          {
+            "source_order": 2,
+            "role": "result",
+            "frame_index": 457,
+            "description": "move yellow cube",
+            "segment_id": "file-007-1_file-007-2_move",
+            "display_label": "Image 2",
+            "display_index": 2,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-007/file-007_multiview_image_2.jpg"
+          },
+          {
+            "source_order": 1,
+            "role": "result",
+            "frame_index": 411,
+            "description": "pick yellow cube",
+            "segment_id": "file-007-1",
+            "display_label": "Image 3",
+            "display_index": 3,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-007/file-007_multiview_image_3.jpg"
+          },
+          {
+            "source_order": 6,
+            "role": "result",
+            "frame_index": 971,
+            "description": "place red cube",
+            "segment_id": "file-007-4",
+            "display_label": "Image 4",
+            "display_index": 4,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-007/file-007_multiview_image_4.jpg"
+          },
+          {
+            "source_order": 4,
+            "role": "result",
+            "frame_index": 881,
+            "description": "pick red cube",
+            "segment_id": "file-007-3",
+            "display_label": "Image 5",
+            "display_index": 5,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-007/file-007_multiview_image_5.jpg"
+          },
+          {
+            "source_order": 3,
+            "role": "result",
+            "frame_index": 516,
+            "description": "place yellow cube",
+            "segment_id": "file-007-2",
+            "display_label": "Image 6",
+            "display_index": 6,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-007/file-007_multiview_image_6.jpg"
+          }
+        ],
+        "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4",
+        "video_paths": {
+          "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-007.mp4",
+          "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-007.mp4",
+          "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-007.mp4"
+        },
+        "views": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "segments_path": "../../json_pickplace/file-007_segments.json"
+      },
+      "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-007_multiview_initial.jpg",
+      "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-007_multiview_step_order.jpg",
+      "images": [
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 913,
+          "description": "move red cube",
+          "segment_id": "file-007-3_file-007-4_move",
+          "display_label": "Image 1",
+          "display_index": 1,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-007/file-007_multiview_image_1.jpg"
+        },
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 457,
+          "description": "move yellow cube",
+          "segment_id": "file-007-1_file-007-2_move",
+          "display_label": "Image 2",
+          "display_index": 2,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-007/file-007_multiview_image_2.jpg"
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 411,
+          "description": "pick yellow cube",
+          "segment_id": "file-007-1",
+          "display_label": "Image 3",
+          "display_index": 3,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-007/file-007_multiview_image_3.jpg"
+        },
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 971,
+          "description": "place red cube",
+          "segment_id": "file-007-4",
+          "display_label": "Image 4",
+          "display_index": 4,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-007/file-007_multiview_image_4.jpg"
+        },
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 881,
+          "description": "pick red cube",
+          "segment_id": "file-007-3",
+          "display_label": "Image 5",
+          "display_index": 5,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-007/file-007_multiview_image_5.jpg"
+        },
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 516,
+          "description": "place yellow cube",
+          "segment_id": "file-007-2",
+          "display_label": "Image 6",
+          "display_index": 6,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-007/file-007_multiview_image_6.jpg"
+        }
+      ],
+      "Q": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 3-2-6-1-5-4\nB. 3-2-6-5-1-4\nC. 3-2-5-6-1-4\nD. 3-2-6-5-4-1\nE. 2-3-6-5-1-4\nF. 3-6-2-5-1-4",
+      "A": "B",
+      "question": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 3-2-6-1-5-4\nB. 3-2-6-5-1-4\nC. 3-2-5-6-1-4\nD. 3-2-6-5-4-1\nE. 2-3-6-5-1-4\nF. 3-6-2-5-1-4",
+      "answer": "B",
+      "answer_text": "3-2-6-5-1-4",
+      "answer_order": "3-2-6-5-1-4",
+      "options": [
+        {
+          "id": "A",
+          "text": "3-2-6-1-5-4",
+          "is_correct": false
+        },
+        {
+          "id": "B",
+          "text": "3-2-6-5-1-4",
+          "is_correct": true
+        },
+        {
+          "id": "C",
+          "text": "3-2-5-6-1-4",
+          "is_correct": false
+        },
+        {
+          "id": "D",
+          "text": "3-2-6-5-4-1",
+          "is_correct": false
+        },
+        {
+          "id": "E",
+          "text": "2-3-6-5-1-4",
+          "is_correct": false
+        },
+        {
+          "id": "F",
+          "text": "3-6-2-5-1-4",
+          "is_correct": false
+        }
+      ],
+      "choices": {
+        "A": "3-2-6-1-5-4",
+        "B": "3-2-6-5-1-4",
+        "C": "3-2-5-6-1-4",
+        "D": "3-2-6-5-4-1",
+        "E": "2-3-6-5-1-4",
+        "F": "3-6-2-5-1-4"
+      },
+      "num_choices_to_order": 6,
+      "chronological_states": [
+        {
+          "source_order": 0,
+          "role": "initial",
+          "frame_index": 0,
+          "description": "initial state",
+          "segment_id": null,
+          "display_index": null
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 411,
+          "description": "pick yellow cube",
+          "segment_id": "file-007-1",
+          "display_index": 3
+        },
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 457,
+          "description": "move yellow cube",
+          "segment_id": "file-007-1_file-007-2_move",
+          "display_index": 2
+        },
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 516,
+          "description": "place yellow cube",
+          "segment_id": "file-007-2",
+          "display_index": 6
+        },
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 881,
+          "description": "pick red cube",
+          "segment_id": "file-007-3",
+          "display_index": 5
+        },
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 913,
+          "description": "move red cube",
+          "segment_id": "file-007-3_file-007-4_move",
+          "display_index": 1
+        },
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 971,
+          "description": "place red cube",
+          "segment_id": "file-007-4",
+          "display_index": 4
+        }
+      ],
+      "prompt": "You are solving a robot manipulation step-order VQA task.\n\nYou will receive two images in this order:\n1. The initial state image.\n2. A montage of shuffled result-state images labeled Image 1, Image 2, etc.\n\nChoose the option whose sequence puts the numbered result-state images in the correct chronological operation order after the initial state.\nChoose exactly one option letter from the provided options. Do not invent a new option.\n\nQuestion:\nGiven the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 3-2-6-1-5-4\nB. 3-2-6-5-1-4\nC. 3-2-5-6-1-4\nD. 3-2-6-5-4-1\nE. 2-3-6-5-1-4\nF. 3-6-2-5-1-4\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"A\",\n  \"reason\": \"The sequence shows the robot moving from the initial state to a final configuration where the red cube is on the table, consistent with the manipulation task.\"\n}",
+      "model_prediction": {
+        "choice": "A",
+        "reason": "The sequence shows the robot moving from the initial state to a final configuration where the red cube is on the table, consistent with the manipulation task."
+      },
+      "expected_choice": "B",
+      "expected_answer_order": "3-2-6-5-1-4",
+      "pred_choice": "A",
+      "correct": false,
+      "timing": {
+        "seconds": 2.668
+      }
+    },
+    {
+      "id": "file-008_step_order",
+      "source_id": "file-008",
+      "video_id": "file-008",
+      "type": "step_order",
+      "task": "step_order_with_initial_state",
+      "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4",
+      "video_paths": {
+        "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4",
+        "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-008.mp4",
+        "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-008.mp4"
+      },
+      "segments_path": "../../json_pickplace/file-008_segments.json",
+      "view": "multiview",
+      "views": [
+        "left_eye",
+        "left_wrist",
+        "right_wrist"
+      ],
+      "input": {
+        "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-008_multiview_initial.jpg",
+        "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-008_multiview_step_order.jpg",
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-008_multiview_step_order.jpg",
+        "image_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-008_multiview_initial.jpg",
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-008_multiview_step_order.jpg"
+        ],
+        "images": [
+          {
+            "source_order": 3,
+            "role": "result",
+            "frame_index": 508,
+            "description": "place red cube",
+            "segment_id": "file-008-2",
+            "display_label": "Image 1",
+            "display_index": 1,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-008/file-008_multiview_image_1.jpg"
+          },
+          {
+            "source_order": 4,
+            "role": "result",
+            "frame_index": 852,
+            "description": "pick yellow cube",
+            "segment_id": "file-008-3",
+            "display_label": "Image 2",
+            "display_index": 2,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-008/file-008_multiview_image_2.jpg"
+          },
+          {
+            "source_order": 1,
+            "role": "result",
+            "frame_index": 423,
+            "description": "pick red cube",
+            "segment_id": "file-008-1",
+            "display_label": "Image 3",
+            "display_index": 3,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-008/file-008_multiview_image_3.jpg"
+          },
+          {
+            "source_order": 6,
+            "role": "result",
+            "frame_index": 947,
+            "description": "place yellow cube",
+            "segment_id": "file-008-4",
+            "display_label": "Image 4",
+            "display_index": 4,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-008/file-008_multiview_image_4.jpg"
+          },
+          {
+            "source_order": 2,
+            "role": "result",
+            "frame_index": 450,
+            "description": "move red cube",
+            "segment_id": "file-008-1_file-008-2_move",
+            "display_label": "Image 5",
+            "display_index": 5,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-008/file-008_multiview_image_5.jpg"
+          },
+          {
+            "source_order": 5,
+            "role": "result",
+            "frame_index": 889,
+            "description": "move yellow cube",
+            "segment_id": "file-008-3_file-008-4_move",
+            "display_label": "Image 6",
+            "display_index": 6,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-008/file-008_multiview_image_6.jpg"
+          }
+        ],
+        "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4",
+        "video_paths": {
+          "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-008.mp4",
+          "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-008.mp4",
+          "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-008.mp4"
+        },
+        "views": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "segments_path": "../../json_pickplace/file-008_segments.json"
+      },
+      "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-008_multiview_initial.jpg",
+      "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-008_multiview_step_order.jpg",
+      "images": [
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 508,
+          "description": "place red cube",
+          "segment_id": "file-008-2",
+          "display_label": "Image 1",
+          "display_index": 1,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-008/file-008_multiview_image_1.jpg"
+        },
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 852,
+          "description": "pick yellow cube",
+          "segment_id": "file-008-3",
+          "display_label": "Image 2",
+          "display_index": 2,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-008/file-008_multiview_image_2.jpg"
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 423,
+          "description": "pick red cube",
+          "segment_id": "file-008-1",
+          "display_label": "Image 3",
+          "display_index": 3,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-008/file-008_multiview_image_3.jpg"
+        },
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 947,
+          "description": "place yellow cube",
+          "segment_id": "file-008-4",
+          "display_label": "Image 4",
+          "display_index": 4,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-008/file-008_multiview_image_4.jpg"
+        },
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 450,
+          "description": "move red cube",
+          "segment_id": "file-008-1_file-008-2_move",
+          "display_label": "Image 5",
+          "display_index": 5,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-008/file-008_multiview_image_5.jpg"
+        },
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 889,
+          "description": "move yellow cube",
+          "segment_id": "file-008-3_file-008-4_move",
+          "display_label": "Image 6",
+          "display_index": 6,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-008/file-008_multiview_image_6.jpg"
+        }
+      ],
+      "Q": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 3-5-1-2-6-4\nB. 3-5-1-2-4-6\nC. 3-5-1-6-2-4\nD. 5-3-1-2-6-4\nE. 3-1-5-2-6-4\nF. 3-5-2-1-6-4",
+      "A": "A",
+      "question": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 3-5-1-2-6-4\nB. 3-5-1-2-4-6\nC. 3-5-1-6-2-4\nD. 5-3-1-2-6-4\nE. 3-1-5-2-6-4\nF. 3-5-2-1-6-4",
+      "answer": "A",
+      "answer_text": "3-5-1-2-6-4",
+      "answer_order": "3-5-1-2-6-4",
+      "options": [
+        {
+          "id": "A",
+          "text": "3-5-1-2-6-4",
+          "is_correct": true
+        },
+        {
+          "id": "B",
+          "text": "3-5-1-2-4-6",
+          "is_correct": false
+        },
+        {
+          "id": "C",
+          "text": "3-5-1-6-2-4",
+          "is_correct": false
+        },
+        {
+          "id": "D",
+          "text": "5-3-1-2-6-4",
+          "is_correct": false
+        },
+        {
+          "id": "E",
+          "text": "3-1-5-2-6-4",
+          "is_correct": false
+        },
+        {
+          "id": "F",
+          "text": "3-5-2-1-6-4",
+          "is_correct": false
+        }
+      ],
+      "choices": {
+        "A": "3-5-1-2-6-4",
+        "B": "3-5-1-2-4-6",
+        "C": "3-5-1-6-2-4",
+        "D": "5-3-1-2-6-4",
+        "E": "3-1-5-2-6-4",
+        "F": "3-5-2-1-6-4"
+      },
+      "num_choices_to_order": 6,
+      "chronological_states": [
+        {
+          "source_order": 0,
+          "role": "initial",
+          "frame_index": 0,
+          "description": "initial state",
+          "segment_id": null,
+          "display_index": null
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 423,
+          "description": "pick red cube",
+          "segment_id": "file-008-1",
+          "display_index": 3
+        },
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 450,
+          "description": "move red cube",
+          "segment_id": "file-008-1_file-008-2_move",
+          "display_index": 5
+        },
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 508,
+          "description": "place red cube",
+          "segment_id": "file-008-2",
+          "display_index": 1
+        },
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 852,
+          "description": "pick yellow cube",
+          "segment_id": "file-008-3",
+          "display_index": 2
+        },
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 889,
+          "description": "move yellow cube",
+          "segment_id": "file-008-3_file-008-4_move",
+          "display_index": 6
+        },
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 947,
+          "description": "place yellow cube",
+          "segment_id": "file-008-4",
+          "display_index": 4
+        }
+      ],
+      "prompt": "You are solving a robot manipulation step-order VQA task.\n\nYou will receive two images in this order:\n1. The initial state image.\n2. A montage of shuffled result-state images labeled Image 1, Image 2, etc.\n\nChoose the option whose sequence puts the numbered result-state images in the correct chronological operation order after the initial state.\nChoose exactly one option letter from the provided options. Do not invent a new option.\n\nQuestion:\nGiven the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 3-5-1-2-6-4\nB. 3-5-1-2-4-6\nC. 3-5-1-6-2-4\nD. 5-3-1-2-6-4\nE. 3-1-5-2-6-4\nF. 3-5-2-1-6-4\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"A\",\n  \"reason\": \"The sequence of images shows the robot moving from the initial state to a final state where the yellow cube is lifted and the red cube is placed on top of the yellow cube, consistent with the manipulation steps.\"\n}",
+      "model_prediction": {
+        "choice": "A",
+        "reason": "The sequence of images shows the robot moving from the initial state to a final state where the yellow cube is lifted and the red cube is placed on top of the yellow cube, consistent with the manipulation steps."
+      },
+      "expected_choice": "A",
+      "expected_answer_order": "3-5-1-2-6-4",
+      "pred_choice": "A",
+      "correct": true,
+      "timing": {
+        "seconds": 3.03
+      }
+    },
+    {
+      "id": "file-009_step_order",
+      "source_id": "file-009",
+      "video_id": "file-009",
+      "type": "step_order",
+      "task": "step_order_with_initial_state",
+      "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4",
+      "video_paths": {
+        "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4",
+        "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-009.mp4",
+        "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-009.mp4"
+      },
+      "segments_path": "../../json_pickplace/file-009_segments.json",
+      "view": "multiview",
+      "views": [
+        "left_eye",
+        "left_wrist",
+        "right_wrist"
+      ],
+      "input": {
+        "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-009_multiview_initial.jpg",
+        "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-009_multiview_step_order.jpg",
+        "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-009_multiview_step_order.jpg",
+        "image_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-009_multiview_initial.jpg",
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-009_multiview_step_order.jpg"
+        ],
+        "images": [
+          {
+            "source_order": 4,
+            "role": "result",
+            "frame_index": 966,
+            "description": "pick red cube",
+            "segment_id": "file-009-3",
+            "display_label": "Image 1",
+            "display_index": 1,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-009/file-009_multiview_image_1.jpg"
+          },
+          {
+            "source_order": 3,
+            "role": "result",
+            "frame_index": 561,
+            "description": "place yellow cube",
+            "segment_id": "file-009-2",
+            "display_label": "Image 2",
+            "display_index": 2,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-009/file-009_multiview_image_2.jpg"
+          },
+          {
+            "source_order": 5,
+            "role": "result",
+            "frame_index": 1005,
+            "description": "move red cube",
+            "segment_id": "file-009-3_file-009-4_move",
+            "display_label": "Image 3",
+            "display_index": 3,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-009/file-009_multiview_image_3.jpg"
+          },
+          {
+            "source_order": 6,
+            "role": "result",
+            "frame_index": 1064,
+            "description": "place red cube",
+            "segment_id": "file-009-4",
+            "display_label": "Image 4",
+            "display_index": 4,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-009/file-009_multiview_image_4.jpg"
+          },
+          {
+            "source_order": 2,
+            "role": "result",
+            "frame_index": 503,
+            "description": "move yellow cube",
+            "segment_id": "file-009-1_file-009-2_move",
+            "display_label": "Image 5",
+            "display_index": 5,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-009/file-009_multiview_image_5.jpg"
+          },
+          {
+            "source_order": 1,
+            "role": "result",
+            "frame_index": 468,
+            "description": "pick yellow cube",
+            "segment_id": "file-009-1",
+            "display_label": "Image 6",
+            "display_index": 6,
+            "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-009/file-009_multiview_image_6.jpg"
+          }
+        ],
+        "video_path": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4",
+        "video_paths": {
+          "left_eye": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_eye/chunk-000/file-009.mp4",
+          "left_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.left_wrist/chunk-000/file-009.mp4",
+          "right_wrist": "../../../../NAS/自采数据集/internal__lerobot_gripper_hand__2026_06_17/gripper/videos/observation.images.right_wrist/chunk-000/file-009.mp4"
+        },
+        "views": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "segments_path": "../../json_pickplace/file-009_segments.json"
+      },
+      "initial_image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/initial_images/file-009_multiview_initial.jpg",
+      "image": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/montages/file-009_multiview_step_order.jpg",
+      "images": [
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 966,
+          "description": "pick red cube",
+          "segment_id": "file-009-3",
+          "display_label": "Image 1",
+          "display_index": 1,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-009/file-009_multiview_image_1.jpg"
+        },
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 561,
+          "description": "place yellow cube",
+          "segment_id": "file-009-2",
+          "display_label": "Image 2",
+          "display_index": 2,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-009/file-009_multiview_image_2.jpg"
+        },
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 1005,
+          "description": "move red cube",
+          "segment_id": "file-009-3_file-009-4_move",
+          "display_label": "Image 3",
+          "display_index": 3,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-009/file-009_multiview_image_3.jpg"
+        },
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 1064,
+          "description": "place red cube",
+          "segment_id": "file-009-4",
+          "display_label": "Image 4",
+          "display_index": 4,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-009/file-009_multiview_image_4.jpg"
+        },
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 503,
+          "description": "move yellow cube",
+          "segment_id": "file-009-1_file-009-2_move",
+          "display_label": "Image 5",
+          "display_index": 5,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-009/file-009_multiview_image_5.jpg"
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 468,
+          "description": "pick yellow cube",
+          "segment_id": "file-009-1",
+          "display_label": "Image 6",
+          "display_index": 6,
+          "image_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/step_order/images/file-009/file-009_multiview_image_6.jpg"
+        }
+      ],
+      "Q": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 6-5-2-3-1-4\nB. 6-5-1-2-3-4\nC. 6-5-2-1-4-3\nD. 5-6-2-1-3-4\nE. 6-5-2-1-3-4\nF. 6-2-5-1-3-4",
+      "A": "E",
+      "question": "Given the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 6-5-2-3-1-4\nB. 6-5-1-2-3-4\nC. 6-5-2-1-4-3\nD. 5-6-2-1-3-4\nE. 6-5-2-1-3-4\nF. 6-2-5-1-3-4",
+      "answer": "E",
+      "answer_text": "6-5-2-1-3-4",
+      "answer_order": "6-5-2-1-3-4",
+      "options": [
+        {
+          "id": "A",
+          "text": "6-5-2-3-1-4",
+          "is_correct": false
+        },
+        {
+          "id": "B",
+          "text": "6-5-1-2-3-4",
+          "is_correct": false
+        },
+        {
+          "id": "C",
+          "text": "6-5-2-1-4-3",
+          "is_correct": false
+        },
+        {
+          "id": "D",
+          "text": "5-6-2-1-3-4",
+          "is_correct": false
+        },
+        {
+          "id": "E",
+          "text": "6-5-2-1-3-4",
+          "is_correct": true
+        },
+        {
+          "id": "F",
+          "text": "6-2-5-1-3-4",
+          "is_correct": false
+        }
+      ],
+      "choices": {
+        "A": "6-5-2-3-1-4",
+        "B": "6-5-1-2-3-4",
+        "C": "6-5-2-1-4-3",
+        "D": "5-6-2-1-3-4",
+        "E": "6-5-2-1-3-4",
+        "F": "6-2-5-1-3-4"
+      },
+      "num_choices_to_order": 6,
+      "chronological_states": [
+        {
+          "source_order": 0,
+          "role": "initial",
+          "frame_index": 0,
+          "description": "initial state",
+          "segment_id": null,
+          "display_index": null
+        },
+        {
+          "source_order": 1,
+          "role": "result",
+          "frame_index": 468,
+          "description": "pick yellow cube",
+          "segment_id": "file-009-1",
+          "display_index": 6
+        },
+        {
+          "source_order": 2,
+          "role": "result",
+          "frame_index": 503,
+          "description": "move yellow cube",
+          "segment_id": "file-009-1_file-009-2_move",
+          "display_index": 5
+        },
+        {
+          "source_order": 3,
+          "role": "result",
+          "frame_index": 561,
+          "description": "place yellow cube",
+          "segment_id": "file-009-2",
+          "display_index": 2
+        },
+        {
+          "source_order": 4,
+          "role": "result",
+          "frame_index": 966,
+          "description": "pick red cube",
+          "segment_id": "file-009-3",
+          "display_index": 1
+        },
+        {
+          "source_order": 5,
+          "role": "result",
+          "frame_index": 1005,
+          "description": "move red cube",
+          "segment_id": "file-009-3_file-009-4_move",
+          "display_index": 3
+        },
+        {
+          "source_order": 6,
+          "role": "result",
+          "frame_index": 1064,
+          "description": "place red cube",
+          "segment_id": "file-009-4",
+          "display_index": 4
+        }
+      ],
+      "prompt": "You are solving a robot manipulation step-order VQA task.\n\nYou will receive two images in this order:\n1. The initial state image.\n2. A montage of shuffled result-state images labeled Image 1, Image 2, etc.\n\nChoose the option whose sequence puts the numbered result-state images in the correct chronological operation order after the initial state.\nChoose exactly one option letter from the provided options. Do not invent a new option.\n\nQuestion:\nGiven the initial image, the numbered images are shuffled result states from the same robot episode. Which option arranges the numbered images in the correct operation order?\nOptions:\nA. 6-5-2-3-1-4\nB. 6-5-1-2-3-4\nC. 6-5-2-1-4-3\nD. 5-6-2-1-3-4\nE. 6-5-2-1-3-4\nF. 6-2-5-1-3-4\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"A\",\n  \"reason\": \"The sequence shows the robot moving from the initial state to a final state where the red cube is on the table, consistent with the manipulation task. The images progress logically from the initial state to the final state, with the red cube being manipulated and moved around the table.\"\n}",
+      "model_prediction": {
+        "choice": "A",
+        "reason": "The sequence shows the robot moving from the initial state to a final state where the red cube is on the table, consistent with the manipulation task. The images progress logically from the initial state to the final state, with the red cube being manipulated and moved around the table."
+      },
+      "expected_choice": "E",
+      "expected_answer_order": "6-5-2-1-3-4",
+      "pred_choice": "A",
+      "correct": false,
+      "timing": {
+        "seconds": 2.625
+      }
+    }
+  ],
+  "summary": {
+    "total": 10,
+    "answered": 10,
+    "errors": 0,
+    "accuracy": 0.3,
+    "elapsed_seconds": 45.667
+  }
+}

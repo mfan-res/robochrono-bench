@@ -1,0 +1,39 @@
+Input items: 10
+Existing results: 0
+Pending: 10
+Provider: local_sensenova_si_1_1_internvl3_2b
+Model: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/models/SenseNova-SI-1_1-InternVL3-2B
+API URL: 
+[1/10] file-000-1_image_in_video video=1 images=5
+Loading local InternVL model: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/models/SenseNova-SI-1_1-InternVL3-2B
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+FlashAttention2 is not installed.
+  correct=False choice=B expected=A acc=0.0000
+[2/10] file-000-1_file-000-2_move_image_in_video video=1 images=5
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=B expected=E acc=0.0000
+[3/10] file-000-2_image_in_video video=1 images=5
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=D expected=F acc=0.0000
+[4/10] file-000-3_image_in_video video=1 images=5
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=A expected=F acc=0.0000
+[5/10] file-000-3_file-000-4_move_image_in_video video=1 images=5
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=D expected=F acc=0.0000
+[6/10] file-000-4_image_in_video video=1 images=5
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=D expected=F acc=0.0000
+[7/10] file-001-1_image_in_video video=1 images=5
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=B expected=C acc=0.0000
+[8/10] file-001-1_file-001-2_move_image_in_video video=1 images=5
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=B expected=D acc=0.0000
+[9/10] file-001-2_image_in_video video=1 images=5
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=D expected=A acc=0.0000
+[10/10] file-001-3_image_in_video video=1 images=5
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  correct=False choice=A expected=E acc=0.0000
+Saved: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/results/baseline/image_in_video.json

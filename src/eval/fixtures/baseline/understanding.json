@@ -1,0 +1,2026 @@
+{
+  "input": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_vqa.json",
+  "provider": "local_sensenova_si_1_1_internvl3_2b",
+  "model": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/models/SenseNova-SI-1_1-InternVL3-2B",
+  "api_url": "",
+  "media_key": "clip_path",
+  "prompt_note": "Each result item contains the exact prompt sent to the model in the `prompt` field.",
+  "results": [
+    {
+      "id": "file-000-1_understand",
+      "source_id": "file-000-1",
+      "video_id": "file-000",
+      "type": "understanding",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-1_10.000_27.700_joined_views.mp4",
+        "start": 10.0,
+        "end": 27.7,
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-1_10.000_27.700_joined_views.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-1_10.000_27.700_joined_views.mp4"
+        ],
+        "joined_clip": {
+          "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-1_10.000_27.700_joined_views.mp4",
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-1_10.000_27.700_joined_views.mp4",
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+            "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+            "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4"
+          },
+          "start": 10.0,
+          "end": 27.7,
+          "fps": 20.0,
+          "frames": 354,
+          "width": 2880,
+          "height": 540
+        },
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-1_10.000_27.700_joined_views.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+          "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4"
+        },
+        "view_order": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "fps": 20.0,
+        "frames": 354
+      },
+      "Q": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. place the red cube\nB. rotate the red cube\nC. flip the yellow cube\nD. All other options are wrong.\nE. pick the red cube\nF. move the red cube",
+      "A": "E",
+      "question": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. place the red cube\nB. rotate the red cube\nC. flip the yellow cube\nD. All other options are wrong.\nE. pick the red cube\nF. move the red cube",
+      "answer": "E",
+      "answer_text": "pick the red cube",
+      "answer_action": "pick",
+      "answer_objects": [
+        "red cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "place the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "B",
+          "text": "rotate the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "C",
+          "text": "flip the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "D",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "E",
+          "text": "pick the red cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "F",
+          "text": "move the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        }
+      ],
+      "correct_option": {
+        "id": "E",
+        "text": "pick the red cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-000-1",
+        "source_id": "file-000-1",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"pick the red cube\" happen?",
+        "A": "00:00:10.000-00:00:27.700",
+        "question": "When did the action \"pick the red cube\" happen?",
+        "answer": "00:00:10.000-00:00:27.700",
+        "answer_text": "00:00:10.000-00:00:27.700",
+        "answer_seconds": {
+          "start": 10.0,
+          "end": 27.7
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 10.0,
+          "end": 27.7,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-1",
+            "source_path": "/home/llm/yyywv/test_vlm/json_pickplace/file-000_segments.json",
+            "start": 10.0,
+            "end": 27.7,
+            "start_time": "00:00:10.000",
+            "end_time": "00:00:27.700",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 10.0,
+          "original_end": 27.7,
+          "original_start_time": "00:00:10.000",
+          "original_end_time": "00:00:27.700",
+          "window_start": 10.0,
+          "window_end": 27.7,
+          "window_type": "raw_segment",
+          "start_frame": 200,
+          "end_frame": 553
+        }
+      },
+      "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-1_10.000_27.700_joined_views.mp4",
+      "video_paths": [
+        "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-1_10.000_27.700_joined_views.mp4"
+      ],
+      "prompt": "You are answering a multiple-choice visual understanding question about an egocentric robot manipulation video clip.\n\nThe input may contain multiple synchronized camera-view clips of the same moment. Use all views together.\nThe clips show the video up to the current moment. Choose the option that best matches what is happening right now.\nChoose exactly one option letter from the provided options. Do not invent a new action.\n\nQuestion:\nBased on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. place the red cube\nB. rotate the red cube\nC. flip the yellow cube\nD. All other options are wrong.\nE. pick the red cube\nF. move the red cube\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": B,\n  \"reason\": \"The ego view shows the red cube being held and rotated, consistent with the action 'rotate the red cube'.\"\n}",
+      "model_prediction": "{\n  \"choice\": B,\n  \"reason\": \"The ego view shows the red cube being held and rotated, consistent with the action 'rotate the red cube'.\"\n}",
+      "expected_choice": "E",
+      "expected_answer_text": "pick the red cube",
+      "expected_action": "pick",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "B",
+      "correct": false,
+      "timing": {
+        "seconds": 20.842
+      }
+    },
+    {
+      "id": "file-000-1_file-000-2_move_understand",
+      "source_id": "file-000-1_file-000-2_move",
+      "video_id": "file-000",
+      "type": "understanding",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-1_file-000-2_move_26.700_32.050_joined_views.mp4",
+        "start": 26.7,
+        "end": 32.05,
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-1_file-000-2_move_26.700_32.050_joined_views.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-1_file-000-2_move_26.700_32.050_joined_views.mp4"
+        ],
+        "joined_clip": {
+          "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-1_file-000-2_move_26.700_32.050_joined_views.mp4",
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-1_file-000-2_move_26.700_32.050_joined_views.mp4",
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+            "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+            "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4"
+          },
+          "start": 26.7,
+          "end": 32.05,
+          "fps": 20.0,
+          "frames": 107,
+          "width": 2880,
+          "height": 540
+        },
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-1_file-000-2_move_26.700_32.050_joined_views.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+          "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4"
+        },
+        "view_order": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "fps": 20.0,
+        "frames": 107
+      },
+      "Q": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. pick the red cube\nB. place the red cube\nC. slide the red cube\nD. move the red cube\nE. All other options are wrong.\nF. move the green cube",
+      "A": "D",
+      "question": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. pick the red cube\nB. place the red cube\nC. slide the red cube\nD. move the red cube\nE. All other options are wrong.\nF. move the green cube",
+      "answer": "D",
+      "answer_text": "move the red cube",
+      "answer_action": "move",
+      "answer_objects": [
+        "red cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "pick the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "B",
+          "text": "place the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "C",
+          "text": "slide the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "D",
+          "text": "move the red cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "E",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "F",
+          "text": "move the green cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        }
+      ],
+      "correct_option": {
+        "id": "D",
+        "text": "move the red cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-000-1_file-000-2_move",
+        "source_id": "file-000-1_file-000-2_move",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"move the red cube\" happen?",
+        "A": "00:00:26.700-00:00:32.050",
+        "question": "When did the action \"move the red cube\" happen?",
+        "answer": "00:00:26.700-00:00:32.050",
+        "answer_text": "00:00:26.700-00:00:32.050",
+        "answer_seconds": {
+          "start": 26.7,
+          "end": 32.05
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 26.7,
+          "end": 32.05,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-1_file-000-2_move",
+            "source_path": "/home/llm/yyywv/test_vlm/json_pickplace/file-000_segments.json",
+            "start": 26.7,
+            "end": 32.05,
+            "start_time": "00:00:26.700",
+            "end_time": "00:00:32.050",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 26.7,
+          "original_end": 32.05,
+          "original_start_time": "00:00:26.700",
+          "original_end_time": "00:00:32.050",
+          "window_start": 26.7,
+          "window_end": 32.05,
+          "window_type": "raw_segment",
+          "start_frame": 534,
+          "end_frame": 640
+        }
+      },
+      "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-1_file-000-2_move_26.700_32.050_joined_views.mp4",
+      "video_paths": [
+        "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-1_file-000-2_move_26.700_32.050_joined_views.mp4"
+      ],
+      "prompt": "You are answering a multiple-choice visual understanding question about an egocentric robot manipulation video clip.\n\nThe input may contain multiple synchronized camera-view clips of the same moment. Use all views together.\nThe clips show the video up to the current moment. Choose the option that best matches what is happening right now.\nChoose exactly one option letter from the provided options. Do not invent a new action.\n\nQuestion:\nBased on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. pick the red cube\nB. place the red cube\nC. slide the red cube\nD. move the red cube\nE. All other options are wrong.\nF. move the green cube\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": D,\n  \"reason\": \"The red cube is being moved from the right side of the table to the center, consistent with the action 'slide the red cube'.\"\n}",
+      "model_prediction": "{\n  \"choice\": D,\n  \"reason\": \"The red cube is being moved from the right side of the table to the center, consistent with the action 'slide the red cube'.\"\n}",
+      "expected_choice": "D",
+      "expected_answer_text": "move the red cube",
+      "expected_action": "move",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "D",
+      "correct": true,
+      "timing": {
+        "seconds": 2.514
+      }
+    },
+    {
+      "id": "file-000-2_understand",
+      "source_id": "file-000-2",
+      "video_id": "file-000",
+      "type": "understanding",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-2_31.050_35.050_joined_views.mp4",
+        "start": 31.05,
+        "end": 35.05,
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-2_31.050_35.050_joined_views.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-2_31.050_35.050_joined_views.mp4"
+        ],
+        "joined_clip": {
+          "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-2_31.050_35.050_joined_views.mp4",
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-2_31.050_35.050_joined_views.mp4",
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+            "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+            "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4"
+          },
+          "start": 31.05,
+          "end": 35.05,
+          "fps": 20.0,
+          "frames": 80,
+          "width": 2880,
+          "height": 540
+        },
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-2_31.050_35.050_joined_views.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+          "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4"
+        },
+        "view_order": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "fps": 20.0,
+        "frames": 80
+      },
+      "Q": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. place the red cube\nB. pick the yellow cube\nC. move the red cube\nD. place the blue cube\nE. All other options are wrong.\nF. place the yellow ball",
+      "A": "A",
+      "question": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. place the red cube\nB. pick the yellow cube\nC. move the red cube\nD. place the blue cube\nE. All other options are wrong.\nF. place the yellow ball",
+      "answer": "A",
+      "answer_text": "place the red cube",
+      "answer_action": "place",
+      "answer_objects": [
+        "red cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "place the red cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "B",
+          "text": "pick the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "C",
+          "text": "move the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "D",
+          "text": "place the blue cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "E",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "F",
+          "text": "place the yellow ball",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        }
+      ],
+      "correct_option": {
+        "id": "A",
+        "text": "place the red cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-000-2",
+        "source_id": "file-000-2",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"place the red cube\" happen?",
+        "A": "00:00:31.050-00:00:35.050",
+        "question": "When did the action \"place the red cube\" happen?",
+        "answer": "00:00:31.050-00:00:35.050",
+        "answer_text": "00:00:31.050-00:00:35.050",
+        "answer_seconds": {
+          "start": 31.05,
+          "end": 35.05
+        },
+        "answer_action": "place",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 31.05,
+          "end": 35.05,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-2",
+            "source_path": "/home/llm/yyywv/test_vlm/json_pickplace/file-000_segments.json",
+            "start": 31.05,
+            "end": 35.05,
+            "start_time": "00:00:31.050",
+            "end_time": "00:00:35.050",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Place the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "place"
+          ],
+          "original_start": 31.05,
+          "original_end": 35.05,
+          "original_start_time": "00:00:31.050",
+          "original_end_time": "00:00:35.050",
+          "window_start": 31.05,
+          "window_end": 35.05,
+          "window_type": "raw_segment",
+          "start_frame": 621,
+          "end_frame": 700
+        }
+      },
+      "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-2_31.050_35.050_joined_views.mp4",
+      "video_paths": [
+        "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-2_31.050_35.050_joined_views.mp4"
+      ],
+      "prompt": "You are answering a multiple-choice visual understanding question about an egocentric robot manipulation video clip.\n\nThe input may contain multiple synchronized camera-view clips of the same moment. Use all views together.\nThe clips show the video up to the current moment. Choose the option that best matches what is happening right now.\nChoose exactly one option letter from the provided options. Do not invent a new action.\n\nQuestion:\nBased on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. place the red cube\nB. pick the yellow cube\nC. move the red cube\nD. place the blue cube\nE. All other options are wrong.\nF. place the yellow ball\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": C,\n  \"reason\": \"The robot arm is moving the red cube from the right side of the table towards the center, consistent with the action 'move the red cube'.\"\n}",
+      "model_prediction": "{\n  \"choice\": C,\n  \"reason\": \"The robot arm is moving the red cube from the right side of the table towards the center, consistent with the action 'move the red cube'.\"\n}",
+      "expected_choice": "A",
+      "expected_answer_text": "place the red cube",
+      "expected_action": "place",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "C",
+      "correct": false,
+      "timing": {
+        "seconds": 2.464
+      }
+    },
+    {
+      "id": "file-000-3_understand",
+      "source_id": "file-000-3",
+      "video_id": "file-000",
+      "type": "understanding",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-3_43.050_59.000_joined_views.mp4",
+        "start": 43.05,
+        "end": 59.0,
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-3_43.050_59.000_joined_views.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-3_43.050_59.000_joined_views.mp4"
+        ],
+        "joined_clip": {
+          "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-3_43.050_59.000_joined_views.mp4",
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-3_43.050_59.000_joined_views.mp4",
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+            "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+            "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4"
+          },
+          "start": 43.05,
+          "end": 59.0,
+          "fps": 20.0,
+          "frames": 319,
+          "width": 2880,
+          "height": 540
+        },
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-3_43.050_59.000_joined_views.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+          "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4"
+        },
+        "view_order": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "fps": 20.0,
+        "frames": 319
+      },
+      "Q": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. move the yellow cube\nB. pick the yellow cube\nC. place the red cube\nD. flip the red cube\nE. All other options are wrong.\nF. pick the green cube",
+      "A": "B",
+      "question": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. move the yellow cube\nB. pick the yellow cube\nC. place the red cube\nD. flip the red cube\nE. All other options are wrong.\nF. pick the green cube",
+      "answer": "B",
+      "answer_text": "pick the yellow cube",
+      "answer_action": "pick",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "move the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "B",
+          "text": "pick the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "C",
+          "text": "place the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "D",
+          "text": "flip the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "E",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "F",
+          "text": "pick the green cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        }
+      ],
+      "correct_option": {
+        "id": "B",
+        "text": "pick the yellow cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-000-3",
+        "source_id": "file-000-3",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"pick the yellow cube\" happen?",
+        "A": "00:00:43.050-00:00:59.000",
+        "question": "When did the action \"pick the yellow cube\" happen?",
+        "answer": "00:00:43.050-00:00:59.000",
+        "answer_text": "00:00:43.050-00:00:59.000",
+        "answer_seconds": {
+          "start": 43.05,
+          "end": 59.0
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 43.05,
+          "end": 59.0,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-3",
+            "source_path": "/home/llm/yyywv/test_vlm/json_pickplace/file-000_segments.json",
+            "start": 43.05,
+            "end": 59.0,
+            "start_time": "00:00:43.050",
+            "end_time": "00:00:59.000",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 43.05,
+          "original_end": 59.0,
+          "original_start_time": "00:00:43.050",
+          "original_end_time": "00:00:59.000",
+          "window_start": 43.05,
+          "window_end": 59.0,
+          "window_type": "raw_segment",
+          "start_frame": 861,
+          "end_frame": 1179
+        }
+      },
+      "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-3_43.050_59.000_joined_views.mp4",
+      "video_paths": [
+        "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-3_43.050_59.000_joined_views.mp4"
+      ],
+      "prompt": "You are answering a multiple-choice visual understanding question about an egocentric robot manipulation video clip.\n\nThe input may contain multiple synchronized camera-view clips of the same moment. Use all views together.\nThe clips show the video up to the current moment. Choose the option that best matches what is happening right now.\nChoose exactly one option letter from the provided options. Do not invent a new action.\n\nQuestion:\nBased on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. move the yellow cube\nB. pick the yellow cube\nC. place the red cube\nD. flip the red cube\nE. All other options are wrong.\nF. pick the green cube\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": A,\n  \"reason\": \"The ego view shows the yellow cube being moved closer to the camera, consistent with the action of moving the yellow cube.\"\n}",
+      "model_prediction": "{\n  \"choice\": A,\n  \"reason\": \"The ego view shows the yellow cube being moved closer to the camera, consistent with the action of moving the yellow cube.\"\n}",
+      "expected_choice": "B",
+      "expected_answer_text": "pick the yellow cube",
+      "expected_action": "pick",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "A",
+      "correct": false,
+      "timing": {
+        "seconds": 2.565
+      }
+    },
+    {
+      "id": "file-000-3_file-000-4_move_understand",
+      "source_id": "file-000-3_file-000-4_move",
+      "video_id": "file-000",
+      "type": "understanding",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-3_file-000-4_move_58.000_63.950_joined_views.mp4",
+        "start": 58.0,
+        "end": 63.95,
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-3_file-000-4_move_58.000_63.950_joined_views.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-3_file-000-4_move_58.000_63.950_joined_views.mp4"
+        ],
+        "joined_clip": {
+          "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-3_file-000-4_move_58.000_63.950_joined_views.mp4",
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-3_file-000-4_move_58.000_63.950_joined_views.mp4",
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+            "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+            "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4"
+          },
+          "start": 58.0,
+          "end": 63.95,
+          "fps": 20.0,
+          "frames": 119,
+          "width": 2880,
+          "height": 540
+        },
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-3_file-000-4_move_58.000_63.950_joined_views.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+          "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4"
+        },
+        "view_order": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "fps": 20.0,
+        "frames": 119
+      },
+      "Q": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. drop the yellow cube\nB. drag the yellow cube\nC. pick the yellow cube\nD. move the yellow cube\nE. place the yellow cube\nF. All other options are wrong.",
+      "A": "D",
+      "question": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. drop the yellow cube\nB. drag the yellow cube\nC. pick the yellow cube\nD. move the yellow cube\nE. place the yellow cube\nF. All other options are wrong.",
+      "answer": "D",
+      "answer_text": "move the yellow cube",
+      "answer_action": "move",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "drop the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "B",
+          "text": "drag the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "C",
+          "text": "pick the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "D",
+          "text": "move the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "E",
+          "text": "place the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "F",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        }
+      ],
+      "correct_option": {
+        "id": "D",
+        "text": "move the yellow cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-000-3_file-000-4_move",
+        "source_id": "file-000-3_file-000-4_move",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"move the yellow cube\" happen?",
+        "A": "00:00:58.000-00:01:03.950",
+        "question": "When did the action \"move the yellow cube\" happen?",
+        "answer": "00:00:58.000-00:01:03.950",
+        "answer_text": "00:00:58.000-00:01:03.950",
+        "answer_seconds": {
+          "start": 58.0,
+          "end": 63.95
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 58.0,
+          "end": 63.95,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-3_file-000-4_move",
+            "source_path": "/home/llm/yyywv/test_vlm/json_pickplace/file-000_segments.json",
+            "start": 58.0,
+            "end": 63.95,
+            "start_time": "00:00:58.000",
+            "end_time": "00:01:03.950",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 58.0,
+          "original_end": 63.95,
+          "original_start_time": "00:00:58.000",
+          "original_end_time": "00:01:03.950",
+          "window_start": 58.0,
+          "window_end": 63.95,
+          "window_type": "raw_segment",
+          "start_frame": 1160,
+          "end_frame": 1278
+        }
+      },
+      "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-3_file-000-4_move_58.000_63.950_joined_views.mp4",
+      "video_paths": [
+        "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-3_file-000-4_move_58.000_63.950_joined_views.mp4"
+      ],
+      "prompt": "You are answering a multiple-choice visual understanding question about an egocentric robot manipulation video clip.\n\nThe input may contain multiple synchronized camera-view clips of the same moment. Use all views together.\nThe clips show the video up to the current moment. Choose the option that best matches what is happening right now.\nChoose exactly one option letter from the provided options. Do not invent a new action.\n\nQuestion:\nBased on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. drop the yellow cube\nB. drag the yellow cube\nC. pick the yellow cube\nD. move the yellow cube\nE. place the yellow cube\nF. All other options are wrong.\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": D,\n  \"reason\": \"The robot arm is moving the yellow cube, consistent with the action 'move the yellow cube' and the other frames showing the cube being carried.\"\n}",
+      "model_prediction": "{\n  \"choice\": D,\n  \"reason\": \"The robot arm is moving the yellow cube, consistent with the action 'move the yellow cube' and the other frames showing the cube being carried.\"\n}",
+      "expected_choice": "D",
+      "expected_answer_text": "move the yellow cube",
+      "expected_action": "move",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "D",
+      "correct": true,
+      "timing": {
+        "seconds": 2.726
+      }
+    },
+    {
+      "id": "file-000-4_understand",
+      "source_id": "file-000-4",
+      "video_id": "file-000",
+      "type": "understanding",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-4_62.950_66.950_joined_views.mp4",
+        "start": 62.95,
+        "end": 66.95,
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-4_62.950_66.950_joined_views.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-4_62.950_66.950_joined_views.mp4"
+        ],
+        "joined_clip": {
+          "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-4_62.950_66.950_joined_views.mp4",
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-4_62.950_66.950_joined_views.mp4",
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+            "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+            "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4"
+          },
+          "start": 62.95,
+          "end": 66.95,
+          "fps": 20.0,
+          "frames": 80,
+          "width": 2880,
+          "height": 540
+        },
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-4_62.950_66.950_joined_views.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+          "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-000.mp4",
+          "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-000.mp4"
+        },
+        "view_order": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "fps": 20.0,
+        "frames": 80
+      },
+      "Q": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. stack the yellow cube\nB. place the yellow cube\nC. throw the yellow cube\nD. All other options are wrong.\nE. move the yellow cube\nF. pick the yellow cube",
+      "A": "B",
+      "question": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. stack the yellow cube\nB. place the yellow cube\nC. throw the yellow cube\nD. All other options are wrong.\nE. move the yellow cube\nF. pick the yellow cube",
+      "answer": "B",
+      "answer_text": "place the yellow cube",
+      "answer_action": "place",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "stack the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "B",
+          "text": "place the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "C",
+          "text": "throw the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "D",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "E",
+          "text": "move the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "F",
+          "text": "pick the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        }
+      ],
+      "correct_option": {
+        "id": "B",
+        "text": "place the yellow cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-000-4",
+        "source_id": "file-000-4",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"place the yellow cube\" happen?",
+        "A": "00:01:02.950-00:01:06.950",
+        "question": "When did the action \"place the yellow cube\" happen?",
+        "answer": "00:01:02.950-00:01:06.950",
+        "answer_text": "00:01:02.950-00:01:06.950",
+        "answer_seconds": {
+          "start": 62.95,
+          "end": 66.95
+        },
+        "answer_action": "place",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 62.95,
+          "end": 66.95,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-000.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-4",
+            "source_path": "/home/llm/yyywv/test_vlm/json_pickplace/file-000_segments.json",
+            "start": 62.95,
+            "end": 66.95,
+            "start_time": "00:01:02.950",
+            "end_time": "00:01:06.950",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Place the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "place"
+          ],
+          "original_start": 62.95,
+          "original_end": 66.95,
+          "original_start_time": "00:01:02.950",
+          "original_end_time": "00:01:06.950",
+          "window_start": 62.95,
+          "window_end": 66.95,
+          "window_type": "raw_segment",
+          "start_frame": 1259,
+          "end_frame": 1338
+        }
+      },
+      "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-4_62.950_66.950_joined_views.mp4",
+      "video_paths": [
+        "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-000/file-000_file-000-4_62.950_66.950_joined_views.mp4"
+      ],
+      "prompt": "You are answering a multiple-choice visual understanding question about an egocentric robot manipulation video clip.\n\nThe input may contain multiple synchronized camera-view clips of the same moment. Use all views together.\nThe clips show the video up to the current moment. Choose the option that best matches what is happening right now.\nChoose exactly one option letter from the provided options. Do not invent a new action.\n\nQuestion:\nBased on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. stack the yellow cube\nB. place the yellow cube\nC. throw the yellow cube\nD. All other options are wrong.\nE. move the yellow cube\nF. pick the yellow cube\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": B,\n  \"reason\": \"The robot arm is positioned to place the yellow cube on the table, consistent with the action 'place the yellow cube'.\"\n}",
+      "model_prediction": "{\n  \"choice\": B,\n  \"reason\": \"The robot arm is positioned to place the yellow cube on the table, consistent with the action 'place the yellow cube'.\"\n}",
+      "expected_choice": "B",
+      "expected_answer_text": "place the yellow cube",
+      "expected_action": "place",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "B",
+      "correct": true,
+      "timing": {
+        "seconds": 2.468
+      }
+    },
+    {
+      "id": "file-001-1_understand",
+      "source_id": "file-001-1",
+      "video_id": "file-001",
+      "type": "understanding",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-1_10.000_26.550_joined_views.mp4",
+        "start": 10.0,
+        "end": 26.55,
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-1_10.000_26.550_joined_views.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-1_10.000_26.550_joined_views.mp4"
+        ],
+        "joined_clip": {
+          "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-1_10.000_26.550_joined_views.mp4",
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-1_10.000_26.550_joined_views.mp4",
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+            "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-001.mp4",
+            "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-001.mp4"
+          },
+          "start": 10.0,
+          "end": 26.55,
+          "fps": 20.0,
+          "frames": 331,
+          "width": 2880,
+          "height": 540
+        },
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-1_10.000_26.550_joined_views.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+          "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-001.mp4",
+          "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-001.mp4"
+        },
+        "view_order": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "fps": 20.0,
+        "frames": 331
+      },
+      "Q": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. All other options are wrong.\nB. pick the yellow ball\nC. pick the yellow cube\nD. place the yellow cube\nE. move the yellow cube\nF. flip the red cube",
+      "A": "C",
+      "question": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. All other options are wrong.\nB. pick the yellow ball\nC. pick the yellow cube\nD. place the yellow cube\nE. move the yellow cube\nF. flip the red cube",
+      "answer": "C",
+      "answer_text": "pick the yellow cube",
+      "answer_action": "pick",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "B",
+          "text": "pick the yellow ball",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "C",
+          "text": "pick the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "D",
+          "text": "place the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "E",
+          "text": "move the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "F",
+          "text": "flip the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        }
+      ],
+      "correct_option": {
+        "id": "C",
+        "text": "pick the yellow cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-001-1",
+        "source_id": "file-001-1",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"pick the yellow cube\" happen?",
+        "A": "00:00:10.000-00:00:26.550",
+        "question": "When did the action \"pick the yellow cube\" happen?",
+        "answer": "00:00:10.000-00:00:26.550",
+        "answer_text": "00:00:10.000-00:00:26.550",
+        "answer_seconds": {
+          "start": 10.0,
+          "end": 26.55
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 10.0,
+          "end": 26.55,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-001.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-001.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-001.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-1",
+            "source_path": "/home/llm/yyywv/test_vlm/json_pickplace/file-001_segments.json",
+            "start": 10.0,
+            "end": 26.55,
+            "start_time": "00:00:10.000",
+            "end_time": "00:00:26.550",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 10.0,
+          "original_end": 26.55,
+          "original_start_time": "00:00:10.000",
+          "original_end_time": "00:00:26.550",
+          "window_start": 10.0,
+          "window_end": 26.55,
+          "window_type": "raw_segment",
+          "start_frame": 200,
+          "end_frame": 530
+        }
+      },
+      "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-1_10.000_26.550_joined_views.mp4",
+      "video_paths": [
+        "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-1_10.000_26.550_joined_views.mp4"
+      ],
+      "prompt": "You are answering a multiple-choice visual understanding question about an egocentric robot manipulation video clip.\n\nThe input may contain multiple synchronized camera-view clips of the same moment. Use all views together.\nThe clips show the video up to the current moment. Choose the option that best matches what is happening right now.\nChoose exactly one option letter from the provided options. Do not invent a new action.\n\nQuestion:\nBased on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. All other options are wrong.\nB. pick the yellow ball\nC. pick the yellow cube\nD. place the yellow cube\nE. move the yellow cube\nF. flip the red cube\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"C\",\n  \"reason\": \"The ego view shows the right hand holding the yellow cube, indicating the action of picking it. The other frames do not show the hand holding the yellow cube.\"\n}",
+      "model_prediction": {
+        "choice": "C",
+        "reason": "The ego view shows the right hand holding the yellow cube, indicating the action of picking it. The other frames do not show the hand holding the yellow cube."
+      },
+      "expected_choice": "C",
+      "expected_answer_text": "pick the yellow cube",
+      "expected_action": "pick",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "C",
+      "correct": true,
+      "timing": {
+        "seconds": 2.777
+      }
+    },
+    {
+      "id": "file-001-1_file-001-2_move_understand",
+      "source_id": "file-001-1_file-001-2_move",
+      "video_id": "file-001",
+      "type": "understanding",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-1_file-001-2_move_25.550_29.550_joined_views.mp4",
+        "start": 25.55,
+        "end": 29.55,
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-1_file-001-2_move_25.550_29.550_joined_views.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-1_file-001-2_move_25.550_29.550_joined_views.mp4"
+        ],
+        "joined_clip": {
+          "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-1_file-001-2_move_25.550_29.550_joined_views.mp4",
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-1_file-001-2_move_25.550_29.550_joined_views.mp4",
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+            "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-001.mp4",
+            "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-001.mp4"
+          },
+          "start": 25.55,
+          "end": 29.55,
+          "fps": 20.0,
+          "frames": 80,
+          "width": 2880,
+          "height": 540
+        },
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-1_file-001-2_move_25.550_29.550_joined_views.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+          "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-001.mp4",
+          "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-001.mp4"
+        },
+        "view_order": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "fps": 20.0,
+        "frames": 80
+      },
+      "Q": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. place the yellow cube\nB. drop the yellow cube\nC. All other options are wrong.\nD. pick the yellow cube\nE. move the yellow cube\nF. slide the yellow cube",
+      "A": "E",
+      "question": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. place the yellow cube\nB. drop the yellow cube\nC. All other options are wrong.\nD. pick the yellow cube\nE. move the yellow cube\nF. slide the yellow cube",
+      "answer": "E",
+      "answer_text": "move the yellow cube",
+      "answer_action": "move",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "place the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "B",
+          "text": "drop the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "C",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "D",
+          "text": "pick the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "E",
+          "text": "move the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "F",
+          "text": "slide the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        }
+      ],
+      "correct_option": {
+        "id": "E",
+        "text": "move the yellow cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-001-1_file-001-2_move",
+        "source_id": "file-001-1_file-001-2_move",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"move the yellow cube\" happen?",
+        "A": "00:00:25.550-00:00:29.550",
+        "question": "When did the action \"move the yellow cube\" happen?",
+        "answer": "00:00:25.550-00:00:29.550",
+        "answer_text": "00:00:25.550-00:00:29.550",
+        "answer_seconds": {
+          "start": 25.55,
+          "end": 29.55
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 25.55,
+          "end": 29.55,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-001.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-001.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-001.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-1_file-001-2_move",
+            "source_path": "/home/llm/yyywv/test_vlm/json_pickplace/file-001_segments.json",
+            "start": 25.55,
+            "end": 29.55,
+            "start_time": "00:00:25.550",
+            "end_time": "00:00:29.550",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 25.55,
+          "original_end": 29.55,
+          "original_start_time": "00:00:25.550",
+          "original_end_time": "00:00:29.550",
+          "window_start": 25.55,
+          "window_end": 29.55,
+          "window_type": "raw_segment",
+          "start_frame": 511,
+          "end_frame": 590
+        }
+      },
+      "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-1_file-001-2_move_25.550_29.550_joined_views.mp4",
+      "video_paths": [
+        "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-1_file-001-2_move_25.550_29.550_joined_views.mp4"
+      ],
+      "prompt": "You are answering a multiple-choice visual understanding question about an egocentric robot manipulation video clip.\n\nThe input may contain multiple synchronized camera-view clips of the same moment. Use all views together.\nThe clips show the video up to the current moment. Choose the option that best matches what is happening right now.\nChoose exactly one option letter from the provided options. Do not invent a new action.\n\nQuestion:\nBased on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. place the yellow cube\nB. drop the yellow cube\nC. All other options are wrong.\nD. pick the yellow cube\nE. move the yellow cube\nF. slide the yellow cube\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": A,\n  \"reason\": \"The robot arm is holding the yellow cube and is about to place it on the table, consistent with the action 'place the yellow cube'.\"\n}",
+      "model_prediction": "{\n  \"choice\": A,\n  \"reason\": \"The robot arm is holding the yellow cube and is about to place it on the table, consistent with the action 'place the yellow cube'.\"\n}",
+      "expected_choice": "E",
+      "expected_answer_text": "move the yellow cube",
+      "expected_action": "move",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "A",
+      "correct": false,
+      "timing": {
+        "seconds": 2.592
+      }
+    },
+    {
+      "id": "file-001-2_understand",
+      "source_id": "file-001-2",
+      "video_id": "file-001",
+      "type": "understanding",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-2_28.550_32.550_joined_views.mp4",
+        "start": 28.55,
+        "end": 32.55,
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-2_28.550_32.550_joined_views.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-2_28.550_32.550_joined_views.mp4"
+        ],
+        "joined_clip": {
+          "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-2_28.550_32.550_joined_views.mp4",
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-2_28.550_32.550_joined_views.mp4",
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+            "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-001.mp4",
+            "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-001.mp4"
+          },
+          "start": 28.55,
+          "end": 32.55,
+          "fps": 20.0,
+          "frames": 80,
+          "width": 2880,
+          "height": 540
+        },
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-2_28.550_32.550_joined_views.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+          "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-001.mp4",
+          "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-001.mp4"
+        },
+        "view_order": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "fps": 20.0,
+        "frames": 80
+      },
+      "Q": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. place the yellow cube\nB. pick the red cube\nC. stack the yellow cube\nD. push the yellow cube\nE. move the yellow cube\nF. All other options are wrong.",
+      "A": "A",
+      "question": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. place the yellow cube\nB. pick the red cube\nC. stack the yellow cube\nD. push the yellow cube\nE. move the yellow cube\nF. All other options are wrong.",
+      "answer": "A",
+      "answer_text": "place the yellow cube",
+      "answer_action": "place",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "place the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "B",
+          "text": "pick the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "C",
+          "text": "stack the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "D",
+          "text": "push the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "E",
+          "text": "move the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "F",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        }
+      ],
+      "correct_option": {
+        "id": "A",
+        "text": "place the yellow cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-001-2",
+        "source_id": "file-001-2",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"place the yellow cube\" happen?",
+        "A": "00:00:28.550-00:00:32.550",
+        "question": "When did the action \"place the yellow cube\" happen?",
+        "answer": "00:00:28.550-00:00:32.550",
+        "answer_text": "00:00:28.550-00:00:32.550",
+        "answer_seconds": {
+          "start": 28.55,
+          "end": 32.55
+        },
+        "answer_action": "place",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 28.55,
+          "end": 32.55,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-001.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-001.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-001.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-2",
+            "source_path": "/home/llm/yyywv/test_vlm/json_pickplace/file-001_segments.json",
+            "start": 28.55,
+            "end": 32.55,
+            "start_time": "00:00:28.550",
+            "end_time": "00:00:32.550",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Place the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "place"
+          ],
+          "original_start": 28.55,
+          "original_end": 32.55,
+          "original_start_time": "00:00:28.550",
+          "original_end_time": "00:00:32.550",
+          "window_start": 28.55,
+          "window_end": 32.55,
+          "window_type": "raw_segment",
+          "start_frame": 571,
+          "end_frame": 650
+        }
+      },
+      "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-2_28.550_32.550_joined_views.mp4",
+      "video_paths": [
+        "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-2_28.550_32.550_joined_views.mp4"
+      ],
+      "prompt": "You are answering a multiple-choice visual understanding question about an egocentric robot manipulation video clip.\n\nThe input may contain multiple synchronized camera-view clips of the same moment. Use all views together.\nThe clips show the video up to the current moment. Choose the option that best matches what is happening right now.\nChoose exactly one option letter from the provided options. Do not invent a new action.\n\nQuestion:\nBased on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. place the yellow cube\nB. pick the red cube\nC. stack the yellow cube\nD. push the yellow cube\nE. move the yellow cube\nF. All other options are wrong.\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": A,\n  \"reason\": \"The robot is holding the yellow cube and is about to place it on the table, consistent with the action 'place the yellow cube'.\"\n}",
+      "model_prediction": "{\n  \"choice\": A,\n  \"reason\": \"The robot is holding the yellow cube and is about to place it on the table, consistent with the action 'place the yellow cube'.\"\n}",
+      "expected_choice": "A",
+      "expected_answer_text": "place the yellow cube",
+      "expected_action": "place",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "A",
+      "correct": true,
+      "timing": {
+        "seconds": 2.568
+      }
+    },
+    {
+      "id": "file-001-3_understand",
+      "source_id": "file-001-3",
+      "video_id": "file-001",
+      "type": "understanding",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-3_40.550_62.800_joined_views.mp4",
+        "start": 40.55,
+        "end": 62.8,
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-3_40.550_62.800_joined_views.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-3_40.550_62.800_joined_views.mp4"
+        ],
+        "joined_clip": {
+          "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-3_40.550_62.800_joined_views.mp4",
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-3_40.550_62.800_joined_views.mp4",
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+            "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-001.mp4",
+            "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-001.mp4"
+          },
+          "start": 40.55,
+          "end": 62.8,
+          "fps": 20.0,
+          "frames": 445,
+          "width": 2880,
+          "height": 540
+        },
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-3_40.550_62.800_joined_views.mp4"
+        ],
+        "source_video_paths": {
+          "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+          "left_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_wrist/chunk-000/file-001.mp4",
+          "right_wrist": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.right_wrist/chunk-000/file-001.mp4"
+        },
+        "view_order": [
+          "left_eye",
+          "left_wrist",
+          "right_wrist"
+        ],
+        "fps": 20.0,
+        "frames": 445
+      },
+      "Q": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. rotate the red cube\nB. move the red cube\nC. pick the red cube\nD. place the yellow cube\nE. push the red cube\nF. All other options are wrong.",
+      "A": "C",
+      "question": "Based on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. rotate the red cube\nB. move the red cube\nC. pick the red cube\nD. place the yellow cube\nE. push the red cube\nF. All other options are wrong.",
+      "answer": "C",
+      "answer_text": "pick the red cube",
+      "answer_action": "pick",
+      "answer_objects": [
+        "red cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "rotate the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "B",
+          "text": "move the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "C",
+          "text": "pick the red cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "D",
+          "text": "place the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "E",
+          "text": "push the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "F",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        }
+      ],
+      "correct_option": {
+        "id": "C",
+        "text": "pick the red cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-001-3",
+        "source_id": "file-001-3",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"pick the red cube\" happen?",
+        "A": "00:00:40.550-00:01:02.800",
+        "question": "When did the action \"pick the red cube\" happen?",
+        "answer": "00:00:40.550-00:01:02.800",
+        "answer_text": "00:00:40.550-00:01:02.800",
+        "answer_seconds": {
+          "start": 40.55,
+          "end": 62.8
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 40.55,
+          "end": 62.8,
+          "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-001.mp4",
+          "video_paths": [
+            "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-001.mp4"
+          ],
+          "source_video_paths": {
+            "left_eye": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+          },
+          "view_order": [
+            "left_eye"
+          ],
+          "time_view": "left_eye",
+          "videos": {
+            "left_eye": {
+              "view": "left_eye",
+              "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-001.mp4",
+              "original_video_path": "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4",
+              "crop_top_applied": true,
+              "crop_top_fraction": 0.1
+            }
+          },
+          "original_video_paths": [
+            "/home/tianhao/NAS/lerobot_datasets-26-06-17-17-25-20/gripper/videos/observation.images.left_eye/chunk-000/file-001.mp4"
+          ],
+          "crop_top_applied": true,
+          "crop_top_fraction": 0.1
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-3",
+            "source_path": "/home/llm/yyywv/test_vlm/json_pickplace/file-001_segments.json",
+            "start": 40.55,
+            "end": 62.8,
+            "start_time": "00:00:40.550",
+            "end_time": "00:01:02.800",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 40.55,
+          "original_end": 62.8,
+          "original_start_time": "00:00:40.550",
+          "original_end_time": "00:01:02.800",
+          "window_start": 40.55,
+          "window_end": 62.8,
+          "window_type": "raw_segment",
+          "start_frame": 811,
+          "end_frame": 1255
+        }
+      },
+      "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-3_40.550_62.800_joined_views.mp4",
+      "video_paths": [
+        "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/understanding_clips/file-001/file-001_file-001-3_40.550_62.800_joined_views.mp4"
+      ],
+      "prompt": "You are answering a multiple-choice visual understanding question about an egocentric robot manipulation video clip.\n\nThe input may contain multiple synchronized camera-view clips of the same moment. Use all views together.\nThe clips show the video up to the current moment. Choose the option that best matches what is happening right now.\nChoose exactly one option letter from the provided options. Do not invent a new action.\n\nQuestion:\nBased on the egocentric video up to now, choose the ONE option that best matches what is happening RIGHT NOW?\nOptions:\nA. rotate the red cube\nB. move the red cube\nC. pick the red cube\nD. place the yellow cube\nE. push the red cube\nF. All other options are wrong.\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": B,\n  \"reason\": \"The ego view shows the red cube being moved closer to the camera, consistent with the action of 'move the red cube'.\"\n}",
+      "model_prediction": "{\n  \"choice\": B,\n  \"reason\": \"The ego view shows the red cube being moved closer to the camera, consistent with the action of 'move the red cube'.\"\n}",
+      "expected_choice": "C",
+      "expected_answer_text": "pick the red cube",
+      "expected_action": "pick",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "B",
+      "correct": false,
+      "timing": {
+        "seconds": 2.536
+      }
+    }
+  ],
+  "summary": {
+    "total": 10,
+    "answered": 10,
+    "errors": 0,
+    "accuracy": 0.5,
+    "elapsed_seconds": 44.104,
+    "by_action": {
+      "move": {
+        "total": 3,
+        "accuracy": 0.6666666666666666
+      },
+      "pick": {
+        "total": 4,
+        "accuracy": 0.25
+      },
+      "place": {
+        "total": 3,
+        "accuracy": 0.6666666666666666
+      }
+    },
+    "by_choice": {
+      "A": {
+        "total": 2,
+        "accuracy": 0.5
+      },
+      "B": {
+        "total": 2,
+        "accuracy": 0.5
+      },
+      "C": {
+        "total": 2,
+        "accuracy": 0.5
+      },
+      "D": {
+        "total": 2,
+        "accuracy": 1.0
+      },
+      "E": {
+        "total": 2,
+        "accuracy": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,138 @@
+Input items: 300
+Input videos: 50
+Selected items: 60
+Selected videos: 10
+Existing results: 0
+Pending: 60
+Provider: local_sensenova_si_1_1_internvl3_2b
+Model: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/models/SenseNova-SI-1_1-InternVL3-2B
+API URL: 
+Pending videos: 10
+[1/10] file-000 questions=6
+  videos=1
+  video_path=/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-000.mp4
+Loading local InternVL model: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/models/SenseNova-SI-1_1-InternVL3-2B
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+FlashAttention2 is not installed.
+  file-000-1 When did the action "pick the red cube" happen? tIoU=0.0000
+  file-000-1_file-000-2_move When did the action "move the red cube" happen? tIoU=0.0000
+  file-000-2 When did the action "place the red cube" happen? tIoU=0.0000
+  file-000-3 When did the action "pick the yellow cube" happen? tIoU=0.0000
+  file-000-3_file-000-4_move When did the action "move the yellow cube" happen? tIoU=0.0000
+  file-000-4 When did the action "place the yellow cube" happen? tIoU=0.0000
+  mean=0.0000 answered=6/6
+[2/10] file-001 questions=6
+  videos=1
+  video_path=/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-001.mp4
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  file-001-1 When did the action "pick the yellow cube" happen? tIoU=0.0000
+  file-001-1_file-001-2_move When did the action "move the yellow cube" happen? tIoU=0.0000
+  file-001-2 When did the action "place the yellow cube" happen? tIoU=0.0000
+  file-001-3 When did the action "pick the red cube" happen? tIoU=0.0000
+  file-001-3_file-001-4_move When did the action "move the red cube" happen? tIoU=0.0000
+  file-001-4 When did the action "place the red cube" happen? tIoU=0.0000
+  mean=0.0000 answered=12/12
+[3/10] file-002 questions=6
+  videos=1
+  video_path=/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-002.mp4
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  file-002-1 When did the action "pick the red cube" happen? tIoU=0.0000
+  file-002-1_file-002-2_move When did the action "move the red cube" happen? tIoU=0.0000
+  file-002-2 When did the action "place the red cube" happen? tIoU=0.0000
+  file-002-3 When did the action "pick the yellow cube" happen? tIoU=0.0000
+  file-002-3_file-002-4_move When did the action "move the yellow cube" happen? tIoU=0.0000
+  file-002-4 When did the action "place the yellow cube" happen? tIoU=0.0000
+  mean=0.0000 answered=18/18
+[4/10] file-003 questions=6
+  videos=1
+  video_path=/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-003.mp4
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  file-003-1 When did the action "pick the red cube" happen? tIoU=0.0000
+  file-003-1_file-003-2_move When did the action "move the red cube" happen? tIoU=0.0000
+  file-003-2 When did the action "place the red cube" happen? tIoU=0.0000
+  file-003-3 When did the action "pick the yellow cube" happen? tIoU=0.0000
+  file-003-3_file-003-4_move When did the action "move the yellow cube" happen? tIoU=0.0000
+  file-003-4 When did the action "place the yellow cube" happen? tIoU=0.0000
+  mean=0.0000 answered=24/24
+[5/10] file-004 questions=6
+  videos=1
+  video_path=/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-004.mp4
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  file-004-1 When did the action "pick the yellow cube" happen? tIoU=0.0000
+  file-004-1_file-004-2_move When did the action "move the yellow cube" happen? tIoU=0.0000
+  file-004-2 When did the action "place the yellow cube" happen? tIoU=0.0000
+  file-004-3 When did the action "pick the red cube" happen? tIoU=0.0000
+  file-004-3_file-004-4_move When did the action "move the red cube" happen? tIoU=0.0000
+  file-004-4 When did the action "place the red cube" happen? tIoU=0.0000
+  mean=0.0000 answered=30/30
+[6/10] file-005 questions=6
+  videos=1
+  video_path=/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-005.mp4
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  file-005-1 When did the action "pick the yellow cube" happen? tIoU=0.0000
+  file-005-1_file-005-2_move When did the action "move the yellow cube" happen? tIoU=0.0000
+  file-005-2 When did the action "place the yellow cube" happen? tIoU=0.0000
+  file-005-3 When did the action "pick the red cube" happen? tIoU=0.0000
+  file-005-3_file-005-4_move When did the action "move the red cube" happen? tIoU=0.0000
+  file-005-4 When did the action "place the red cube" happen? tIoU=0.0000
+  mean=0.0000 answered=36/36
+[7/10] file-006 questions=6
+  videos=1
+  video_path=/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-006.mp4
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  file-006-1 When did the action "pick the yellow cube" happen? tIoU=0.0000
+  file-006-1_file-006-2_move When did the action "move the yellow cube" happen? tIoU=0.0000
+  file-006-2 When did the action "place the yellow cube" happen? tIoU=0.0000
+  file-006-3 When did the action "pick the red cube" happen? tIoU=0.0000
+  file-006-3_file-006-4_move When did the action "move the red cube" happen? tIoU=0.0000
+  file-006-4 When did the action "place the red cube" happen? tIoU=0.0000
+  mean=0.0000 answered=42/42
+[8/10] file-007 questions=6
+  videos=1
+  video_path=/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-007.mp4
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  file-007-1 When did the action "pick the yellow cube" happen? tIoU=0.0000
+  file-007-1_file-007-2_move When did the action "move the yellow cube" happen? tIoU=0.0000
+  file-007-2 When did the action "place the yellow cube" happen? tIoU=0.0000
+  file-007-3 When did the action "pick the red cube" happen? tIoU=0.0000
+  file-007-3_file-007-4_move When did the action "move the red cube" happen? tIoU=0.0000
+  file-007-4 When did the action "place the red cube" happen? tIoU=0.0000
+  mean=0.0000 answered=48/48
+[9/10] file-008 questions=6
+  videos=1
+  video_path=/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-008.mp4
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  file-008-1 When did the action "pick the red cube" happen? tIoU=0.0000
+  file-008-1_file-008-2_move When did the action "move the red cube" happen? tIoU=0.0000
+  file-008-2 When did the action "place the red cube" happen? tIoU=0.0000
+  file-008-3 When did the action "pick the yellow cube" happen? tIoU=0.0000
+  file-008-3_file-008-4_move When did the action "move the yellow cube" happen? tIoU=0.0000
+  file-008-4 When did the action "place the yellow cube" happen? tIoU=0.0000
+  mean=0.0000 answered=54/54
+[10/10] file-009 questions=6
+  videos=1
+  video_path=/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/understanding/stack_cubes/time_video_crop_top/left_eye/file-009.mp4
+Setting `pad_token_id` to `eos_token_id`:151645 for open-end generation.
+  file-009-1 When did the action "pick the yellow cube" happen? tIoU=0.0000
+  file-009-1_file-009-2_move When did the action "move the yellow cube" happen? tIoU=0.0000
+  file-009-2 When did the action "place the yellow cube" happen? tIoU=0.0000
+  file-009-3 When did the action "pick the red cube" happen? tIoU=0.0000
+  file-009-3_file-009-4_move When did the action "move the red cube" happen? tIoU=0.0000
+  file-009-4 When did the action "place the red cube" happen? tIoU=0.0000
+  mean=0.0000 answered=60/60
+{
+  "total": 60,
+  "answered": 60,
+  "errors": 0,
+  "mean_tIoU": 0.0,
+  "tIoU@0.3": 0.0,
+  "tIoU@0.5": 0.0,
+  "tIoU@0.7": 0.0,
+  "center_inside_acc": 0.0,
+  "pointing_acc": 0.0,
+  "mean_overlap_recall": 0.0,
+  "mean_abs_start_error": 33.0755,
+  "mean_abs_end_error": 40.11866666666667,
+  "elapsed_seconds": 195.368
+}
+Output: /mnt/public/users/wbcd/workspace/michael/benchmark/eval/results/baseline/time.json

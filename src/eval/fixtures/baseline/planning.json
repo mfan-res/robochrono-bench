@@ -1,0 +1,2371 @@
+{
+  "input": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_vqa.json",
+  "provider": "local_sensenova_si_1_1_internvl3_2b",
+  "model": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/models/SenseNova-SI-1_1-InternVL3-2B",
+  "api_url": "",
+  "prompt_note": "Each result item contains the exact prompt sent to the model in the `prompt` field.",
+  "results": [
+    {
+      "id": "file-000-1_plan_next",
+      "source_id": "file-000-1",
+      "next_source_id": "file-000-1_file-000-2_move",
+      "video_id": "file-000",
+      "type": "planning",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-1_10.000_27.700_prejoined.mp4",
+        "start": 10.0,
+        "end": 27.7,
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-1_10.000_27.700_prejoined.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-1_10.000_27.700_prejoined.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-1_10.000_27.700_prejoined.mp4"
+        ],
+        "clips": {
+          "prejoined": {
+            "view": "prejoined",
+            "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-1_10.000_27.700_prejoined.mp4",
+            "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+            "start": 10.0,
+            "end": 27.7,
+            "start_frame": 200,
+            "end_frame": 553,
+            "fps": 20.0,
+            "frames": 354,
+            "skipped_existing": true
+          }
+        },
+        "source_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "start_frame": 200,
+        "end_frame": 553,
+        "fps": 20.0,
+        "frames": 354,
+        "skipped_existing": true
+      },
+      "Q": "Based on the current visual state, what should happen next?\nOptions:\nA. open the red cube\nB. pick the red cube\nC. move the red cube\nD. All other options are wrong.\nE. place the red cube\nF. close the red cube",
+      "A": "C",
+      "question": "Based on the current visual state, what should happen next?\nOptions:\nA. open the red cube\nB. pick the red cube\nC. move the red cube\nD. All other options are wrong.\nE. place the red cube\nF. close the red cube",
+      "answer": "C",
+      "answer_text": "move the red cube",
+      "answer_action": "move",
+      "answer_objects": [
+        "red cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "open the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "B",
+          "text": "pick the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "C",
+          "text": "move the red cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "D",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "E",
+          "text": "place the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "F",
+          "text": "close the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        }
+      ],
+      "correct_option": {
+        "id": "C",
+        "text": "move the red cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-000-1",
+        "source_id": "file-000-1",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"pick the red cube\" happen?",
+        "A": "00:00:10.000-00:00:27.700",
+        "question": "When did the action \"pick the red cube\" happen?",
+        "answer": "00:00:10.000-00:00:27.700",
+        "answer_text": "00:00:10.000-00:00:27.700",
+        "answer_seconds": {
+          "start": 10.0,
+          "end": 27.7
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 10.0,
+          "end": 27.7,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-1",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 10.0,
+            "end": 27.7,
+            "start_time": "00:00:10.000",
+            "end_time": "00:00:27.700",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 10.0,
+          "original_end": 27.7,
+          "original_start_time": "00:00:10.000",
+          "original_end_time": "00:00:27.700",
+          "window_start": 10.0,
+          "window_end": 27.7,
+          "window_type": "raw_segment",
+          "start_frame": 200,
+          "end_frame": 553
+        }
+      },
+      "next_time_eqa": {
+        "id": "file-000-1_file-000-2_move",
+        "source_id": "file-000-1_file-000-2_move",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"move the red cube\" happen?",
+        "A": "00:00:26.700-00:00:32.050",
+        "question": "When did the action \"move the red cube\" happen?",
+        "answer": "00:00:26.700-00:00:32.050",
+        "answer_text": "00:00:26.700-00:00:32.050",
+        "answer_seconds": {
+          "start": 26.7,
+          "end": 32.05
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 26.7,
+          "end": 32.05,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-1_file-000-2_move",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 26.7,
+            "end": 32.05,
+            "start_time": "00:00:26.700",
+            "end_time": "00:00:32.050",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 26.7,
+          "original_end": 32.05,
+          "original_start_time": "00:00:26.700",
+          "original_end_time": "00:00:32.050",
+          "window_start": 26.7,
+          "window_end": 32.05,
+          "window_type": "raw_segment",
+          "start_frame": 534,
+          "end_frame": 640
+        }
+      },
+      "prompt": "You are observing a robot manipulation task and need to predict the next action.\n\nLook at the current video clip and choose the next action the robot should take.\nChoose exactly one option from the provided option letters. Do not invent a new action.\n\nQuestion:\nBased on the current visual state, what should happen next?\nOptions:\nA. open the red cube\nB. pick the red cube\nC. move the red cube\nD. All other options are wrong.\nE. place the red cube\nF. close the red cube\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": B,\n  \"reason\": \"The robot arm is currently holding the red cube and is about to place it on the table.\"\n}",
+      "model_prediction": "{\n  \"choice\": B,\n  \"reason\": \"The robot arm is currently holding the red cube and is about to place it on the table.\"\n}",
+      "expected_choice": "C",
+      "expected_answer_text": "move the red cube",
+      "expected_action": "move",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "B",
+      "correct": false,
+      "timing": {
+        "seconds": 20.449
+      }
+    },
+    {
+      "id": "file-000-1_file-000-2_move_plan_next",
+      "source_id": "file-000-1_file-000-2_move",
+      "next_source_id": "file-000-2",
+      "video_id": "file-000",
+      "type": "planning",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-1_file-000-2_move_26.700_32.050_prejoined.mp4",
+        "start": 26.7,
+        "end": 32.05,
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-1_file-000-2_move_26.700_32.050_prejoined.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-1_file-000-2_move_26.700_32.050_prejoined.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-1_file-000-2_move_26.700_32.050_prejoined.mp4"
+        ],
+        "clips": {
+          "prejoined": {
+            "view": "prejoined",
+            "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-1_file-000-2_move_26.700_32.050_prejoined.mp4",
+            "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+            "start": 26.7,
+            "end": 32.05,
+            "start_frame": 534,
+            "end_frame": 640,
+            "fps": 20.0,
+            "frames": 107,
+            "skipped_existing": true
+          }
+        },
+        "source_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "start_frame": 534,
+        "end_frame": 640,
+        "fps": 20.0,
+        "frames": 107,
+        "skipped_existing": true
+      },
+      "Q": "Based on the current visual state, what should happen next?\nOptions:\nA. place the red cube\nB. All other options are wrong.\nC. pick the yellow cube\nD. pick the red cube\nE. move the red cube\nF. open the red cube",
+      "A": "A",
+      "question": "Based on the current visual state, what should happen next?\nOptions:\nA. place the red cube\nB. All other options are wrong.\nC. pick the yellow cube\nD. pick the red cube\nE. move the red cube\nF. open the red cube",
+      "answer": "A",
+      "answer_text": "place the red cube",
+      "answer_action": "place",
+      "answer_objects": [
+        "red cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "place the red cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "B",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "C",
+          "text": "pick the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "D",
+          "text": "pick the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "E",
+          "text": "move the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "F",
+          "text": "open the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        }
+      ],
+      "correct_option": {
+        "id": "A",
+        "text": "place the red cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-000-1_file-000-2_move",
+        "source_id": "file-000-1_file-000-2_move",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"move the red cube\" happen?",
+        "A": "00:00:26.700-00:00:32.050",
+        "question": "When did the action \"move the red cube\" happen?",
+        "answer": "00:00:26.700-00:00:32.050",
+        "answer_text": "00:00:26.700-00:00:32.050",
+        "answer_seconds": {
+          "start": 26.7,
+          "end": 32.05
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 26.7,
+          "end": 32.05,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-1_file-000-2_move",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 26.7,
+            "end": 32.05,
+            "start_time": "00:00:26.700",
+            "end_time": "00:00:32.050",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 26.7,
+          "original_end": 32.05,
+          "original_start_time": "00:00:26.700",
+          "original_end_time": "00:00:32.050",
+          "window_start": 26.7,
+          "window_end": 32.05,
+          "window_type": "raw_segment",
+          "start_frame": 534,
+          "end_frame": 640
+        }
+      },
+      "next_time_eqa": {
+        "id": "file-000-2",
+        "source_id": "file-000-2",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"place the red cube\" happen?",
+        "A": "00:00:31.050-00:00:35.050",
+        "question": "When did the action \"place the red cube\" happen?",
+        "answer": "00:00:31.050-00:00:35.050",
+        "answer_text": "00:00:31.050-00:00:35.050",
+        "answer_seconds": {
+          "start": 31.05,
+          "end": 35.05
+        },
+        "answer_action": "place",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 31.05,
+          "end": 35.05,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-2",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 31.05,
+            "end": 35.05,
+            "start_time": "00:00:31.050",
+            "end_time": "00:00:35.050",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Place the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "place"
+          ],
+          "original_start": 31.05,
+          "original_end": 35.05,
+          "original_start_time": "00:00:31.050",
+          "original_end_time": "00:00:35.050",
+          "window_start": 31.05,
+          "window_end": 35.05,
+          "window_type": "raw_segment",
+          "start_frame": 621,
+          "end_frame": 700
+        }
+      },
+      "prompt": "You are observing a robot manipulation task and need to predict the next action.\n\nLook at the current video clip and choose the next action the robot should take.\nChoose exactly one option from the provided option letters. Do not invent a new action.\n\nQuestion:\nBased on the current visual state, what should happen next?\nOptions:\nA. place the red cube\nB. All other options are wrong.\nC. pick the yellow cube\nD. pick the red cube\nE. move the red cube\nF. open the red cube\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": D,\n  \"reason\": \"The robot arm is currently holding the red cube and is about to move it, as indicated by the arm's orientation and the cube's position relative to the table edges.\"\n}",
+      "model_prediction": "{\n  \"choice\": D,\n  \"reason\": \"The robot arm is currently holding the red cube and is about to move it, as indicated by the arm's orientation and the cube's position relative to the table edges.\"\n}",
+      "expected_choice": "A",
+      "expected_answer_text": "place the red cube",
+      "expected_action": "place",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "D",
+      "correct": false,
+      "timing": {
+        "seconds": 2.95
+      }
+    },
+    {
+      "id": "file-000-2_plan_next",
+      "source_id": "file-000-2",
+      "next_source_id": "file-000-3",
+      "video_id": "file-000",
+      "type": "planning",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-2_31.050_35.050_prejoined.mp4",
+        "start": 31.05,
+        "end": 35.05,
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-2_31.050_35.050_prejoined.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-2_31.050_35.050_prejoined.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-2_31.050_35.050_prejoined.mp4"
+        ],
+        "clips": {
+          "prejoined": {
+            "view": "prejoined",
+            "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-2_31.050_35.050_prejoined.mp4",
+            "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+            "start": 31.05,
+            "end": 35.05,
+            "start_frame": 621,
+            "end_frame": 700,
+            "fps": 20.0,
+            "frames": 80,
+            "skipped_existing": true
+          }
+        },
+        "source_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "start_frame": 621,
+        "end_frame": 700,
+        "fps": 20.0,
+        "frames": 80,
+        "skipped_existing": true
+      },
+      "Q": "Based on the current visual state, what should happen next?\nOptions:\nA. All other options are wrong.\nB. move the yellow cube\nC. place the red cube\nD. pick the yellow cube\nE. pick the object\nF. place the yellow cube",
+      "A": "D",
+      "question": "Based on the current visual state, what should happen next?\nOptions:\nA. All other options are wrong.\nB. move the yellow cube\nC. place the red cube\nD. pick the yellow cube\nE. pick the object\nF. place the yellow cube",
+      "answer": "D",
+      "answer_text": "pick the yellow cube",
+      "answer_action": "pick",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "B",
+          "text": "move the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "C",
+          "text": "place the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "D",
+          "text": "pick the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "E",
+          "text": "pick the object",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "F",
+          "text": "place the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        }
+      ],
+      "correct_option": {
+        "id": "D",
+        "text": "pick the yellow cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-000-2",
+        "source_id": "file-000-2",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"place the red cube\" happen?",
+        "A": "00:00:31.050-00:00:35.050",
+        "question": "When did the action \"place the red cube\" happen?",
+        "answer": "00:00:31.050-00:00:35.050",
+        "answer_text": "00:00:31.050-00:00:35.050",
+        "answer_seconds": {
+          "start": 31.05,
+          "end": 35.05
+        },
+        "answer_action": "place",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 31.05,
+          "end": 35.05,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-2",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 31.05,
+            "end": 35.05,
+            "start_time": "00:00:31.050",
+            "end_time": "00:00:35.050",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Place the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "place"
+          ],
+          "original_start": 31.05,
+          "original_end": 35.05,
+          "original_start_time": "00:00:31.050",
+          "original_end_time": "00:00:35.050",
+          "window_start": 31.05,
+          "window_end": 35.05,
+          "window_type": "raw_segment",
+          "start_frame": 621,
+          "end_frame": 700
+        }
+      },
+      "next_time_eqa": {
+        "id": "file-000-3",
+        "source_id": "file-000-3",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"pick the yellow cube\" happen?",
+        "A": "00:00:43.050-00:00:59.000",
+        "question": "When did the action \"pick the yellow cube\" happen?",
+        "answer": "00:00:43.050-00:00:59.000",
+        "answer_text": "00:00:43.050-00:00:59.000",
+        "answer_seconds": {
+          "start": 43.05,
+          "end": 59.0
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 43.05,
+          "end": 59.0,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-3",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 43.05,
+            "end": 59.0,
+            "start_time": "00:00:43.050",
+            "end_time": "00:00:59.000",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 43.05,
+          "original_end": 59.0,
+          "original_start_time": "00:00:43.050",
+          "original_end_time": "00:00:59.000",
+          "window_start": 43.05,
+          "window_end": 59.0,
+          "window_type": "raw_segment",
+          "start_frame": 861,
+          "end_frame": 1179
+        }
+      },
+      "prompt": "You are observing a robot manipulation task and need to predict the next action.\n\nLook at the current video clip and choose the next action the robot should take.\nChoose exactly one option from the provided option letters. Do not invent a new action.\n\nQuestion:\nBased on the current visual state, what should happen next?\nOptions:\nA. All other options are wrong.\nB. move the yellow cube\nC. place the red cube\nD. pick the yellow cube\nE. pick the object\nF. place the yellow cube\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": B,\n  \"reason\": \"The robot arm is currently holding the yellow cube and is about to move it. The other options are not the next logical action.\"\n}",
+      "model_prediction": "{\n  \"choice\": B,\n  \"reason\": \"The robot arm is currently holding the yellow cube and is about to move it. The other options are not the next logical action.\"\n}",
+      "expected_choice": "D",
+      "expected_answer_text": "pick the yellow cube",
+      "expected_action": "pick",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "B",
+      "correct": false,
+      "timing": {
+        "seconds": 2.421
+      }
+    },
+    {
+      "id": "file-000-3_plan_next",
+      "source_id": "file-000-3",
+      "next_source_id": "file-000-3_file-000-4_move",
+      "video_id": "file-000",
+      "type": "planning",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-3_43.050_59.000_prejoined.mp4",
+        "start": 43.05,
+        "end": 52.15,
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-3_43.050_59.000_prejoined.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-3_43.050_59.000_prejoined.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-3_43.050_59.000_prejoined.mp4"
+        ],
+        "clips": {
+          "prejoined": {
+            "view": "prejoined",
+            "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-3_43.050_59.000_prejoined.mp4",
+            "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+            "start": 43.05,
+            "end": 52.15,
+            "start_frame": 861,
+            "end_frame": 1042,
+            "fps": 20.0,
+            "frames": 182,
+            "skipped_existing": true
+          }
+        },
+        "source_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "start_frame": 861,
+        "end_frame": 1042,
+        "fps": 20.0,
+        "frames": 182,
+        "skipped_existing": true
+      },
+      "Q": "Based on the current visual state, what should happen next?\nOptions:\nA. open the yellow cube\nB. put the yellow cube\nC. move the yellow cube\nD. All other options are wrong.\nE. pick the yellow cube\nF. place the yellow cube",
+      "A": "C",
+      "question": "Based on the current visual state, what should happen next?\nOptions:\nA. open the yellow cube\nB. put the yellow cube\nC. move the yellow cube\nD. All other options are wrong.\nE. pick the yellow cube\nF. place the yellow cube",
+      "answer": "C",
+      "answer_text": "move the yellow cube",
+      "answer_action": "move",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "open the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "B",
+          "text": "put the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "C",
+          "text": "move the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "D",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "E",
+          "text": "pick the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "F",
+          "text": "place the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        }
+      ],
+      "correct_option": {
+        "id": "C",
+        "text": "move the yellow cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-000-3",
+        "source_id": "file-000-3",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"pick the yellow cube\" happen?",
+        "A": "00:00:43.050-00:00:59.000",
+        "question": "When did the action \"pick the yellow cube\" happen?",
+        "answer": "00:00:43.050-00:00:59.000",
+        "answer_text": "00:00:43.050-00:00:59.000",
+        "answer_seconds": {
+          "start": 43.05,
+          "end": 59.0
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 43.05,
+          "end": 59.0,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-3",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 43.05,
+            "end": 59.0,
+            "start_time": "00:00:43.050",
+            "end_time": "00:00:59.000",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 43.05,
+          "original_end": 59.0,
+          "original_start_time": "00:00:43.050",
+          "original_end_time": "00:00:59.000",
+          "window_start": 43.05,
+          "window_end": 59.0,
+          "window_type": "raw_segment",
+          "start_frame": 861,
+          "end_frame": 1179
+        }
+      },
+      "next_time_eqa": {
+        "id": "file-000-3_file-000-4_move",
+        "source_id": "file-000-3_file-000-4_move",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"move the yellow cube\" happen?",
+        "A": "00:00:58.000-00:01:03.950",
+        "question": "When did the action \"move the yellow cube\" happen?",
+        "answer": "00:00:58.000-00:01:03.950",
+        "answer_text": "00:00:58.000-00:01:03.950",
+        "answer_seconds": {
+          "start": 58.0,
+          "end": 63.95
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 58.0,
+          "end": 63.95,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-3_file-000-4_move",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 58.0,
+            "end": 63.95,
+            "start_time": "00:00:58.000",
+            "end_time": "00:01:03.950",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 58.0,
+          "original_end": 63.95,
+          "original_start_time": "00:00:58.000",
+          "original_end_time": "00:01:03.950",
+          "window_start": 58.0,
+          "window_end": 63.95,
+          "window_type": "raw_segment",
+          "start_frame": 1160,
+          "end_frame": 1278
+        }
+      },
+      "prompt": "You are observing a robot manipulation task and need to predict the next action.\n\nLook at the current video clip and choose the next action the robot should take.\nChoose exactly one option from the provided option letters. Do not invent a new action.\n\nQuestion:\nBased on the current visual state, what should happen next?\nOptions:\nA. open the yellow cube\nB. put the yellow cube\nC. move the yellow cube\nD. All other options are wrong.\nE. pick the yellow cube\nF. place the yellow cube\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": B,\n  \"reason\": \"The robot arm is currently holding the yellow cube and is about to place it on the table.\"\n}",
+      "model_prediction": "{\n  \"choice\": B,\n  \"reason\": \"The robot arm is currently holding the yellow cube and is about to place it on the table.\"\n}",
+      "expected_choice": "C",
+      "expected_answer_text": "move the yellow cube",
+      "expected_action": "move",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "B",
+      "correct": false,
+      "timing": {
+        "seconds": 2.145
+      }
+    },
+    {
+      "id": "file-000-3_file-000-4_move_plan_next",
+      "source_id": "file-000-3_file-000-4_move",
+      "next_source_id": "file-000-4",
+      "video_id": "file-000",
+      "type": "planning",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-3_file-000-4_move_58.000_63.950_prejoined.mp4",
+        "start": 52.1,
+        "end": 52.15,
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-3_file-000-4_move_58.000_63.950_prejoined.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-3_file-000-4_move_58.000_63.950_prejoined.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-3_file-000-4_move_58.000_63.950_prejoined.mp4"
+        ],
+        "clips": {
+          "prejoined": {
+            "view": "prejoined",
+            "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-000/file-000_file-000-3_file-000-4_move_58.000_63.950_prejoined.mp4",
+            "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+            "start": 52.1,
+            "end": 52.15,
+            "start_frame": 1042,
+            "end_frame": 1042,
+            "fps": 20.0,
+            "frames": 1,
+            "skipped_existing": true
+          }
+        },
+        "source_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+        "start_frame": 1042,
+        "end_frame": 1042,
+        "fps": 20.0,
+        "frames": 1,
+        "skipped_existing": true
+      },
+      "Q": "Based on the current visual state, what should happen next?\nOptions:\nA. pick the yellow cube\nB. open the yellow cube\nC. place the yellow cube\nD. move the yellow cube\nE. All other options are wrong.\nF. remove the yellow cube",
+      "A": "C",
+      "question": "Based on the current visual state, what should happen next?\nOptions:\nA. pick the yellow cube\nB. open the yellow cube\nC. place the yellow cube\nD. move the yellow cube\nE. All other options are wrong.\nF. remove the yellow cube",
+      "answer": "C",
+      "answer_text": "place the yellow cube",
+      "answer_action": "place",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "pick the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "B",
+          "text": "open the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "C",
+          "text": "place the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "D",
+          "text": "move the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "E",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "F",
+          "text": "remove the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        }
+      ],
+      "correct_option": {
+        "id": "C",
+        "text": "place the yellow cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-000-3_file-000-4_move",
+        "source_id": "file-000-3_file-000-4_move",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"move the yellow cube\" happen?",
+        "A": "00:00:58.000-00:01:03.950",
+        "question": "When did the action \"move the yellow cube\" happen?",
+        "answer": "00:00:58.000-00:01:03.950",
+        "answer_text": "00:00:58.000-00:01:03.950",
+        "answer_seconds": {
+          "start": 58.0,
+          "end": 63.95
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 58.0,
+          "end": 63.95,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-3_file-000-4_move",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 58.0,
+            "end": 63.95,
+            "start_time": "00:00:58.000",
+            "end_time": "00:01:03.950",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 58.0,
+          "original_end": 63.95,
+          "original_start_time": "00:00:58.000",
+          "original_end_time": "00:01:03.950",
+          "window_start": 58.0,
+          "window_end": 63.95,
+          "window_type": "raw_segment",
+          "start_frame": 1160,
+          "end_frame": 1278
+        }
+      },
+      "next_time_eqa": {
+        "id": "file-000-4",
+        "source_id": "file-000-4",
+        "video_id": "file-000",
+        "type": "time",
+        "Q": "When did the action \"place the yellow cube\" happen?",
+        "A": "00:01:02.950-00:01:06.950",
+        "question": "When did the action \"place the yellow cube\" happen?",
+        "answer": "00:01:02.950-00:01:06.950",
+        "answer_text": "00:01:02.950-00:01:06.950",
+        "answer_seconds": {
+          "start": 62.95,
+          "end": 66.95
+        },
+        "answer_action": "place",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 62.95,
+          "end": 66.95,
+          "video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-000/file-000_file-000_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-000-4",
+            "source_path": "../../json_pickplace/file-000_segments.json",
+            "start": 62.95,
+            "end": 66.95,
+            "start_time": "00:01:02.950",
+            "end_time": "00:01:06.950",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Place the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "place"
+          ],
+          "original_start": 62.95,
+          "original_end": 66.95,
+          "original_start_time": "00:01:02.950",
+          "original_end_time": "00:01:06.950",
+          "window_start": 62.95,
+          "window_end": 66.95,
+          "window_type": "raw_segment",
+          "start_frame": 1259,
+          "end_frame": 1338
+        }
+      },
+      "prompt": "You are observing a robot manipulation task and need to predict the next action.\n\nLook at the current video clip and choose the next action the robot should take.\nChoose exactly one option from the provided option letters. Do not invent a new action.\n\nQuestion:\nBased on the current visual state, what should happen next?\nOptions:\nA. pick the yellow cube\nB. open the yellow cube\nC. place the yellow cube\nD. move the yellow cube\nE. All other options are wrong.\nF. remove the yellow cube\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": C,\n  \"reason\": \"The robot is currently holding the yellow cube and is about to place it on the table.\"\n}",
+      "model_prediction": "{\n  \"choice\": C,\n  \"reason\": \"The robot is currently holding the yellow cube and is about to place it on the table.\"\n}",
+      "expected_choice": "C",
+      "expected_answer_text": "place the yellow cube",
+      "expected_action": "place",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "C",
+      "correct": true,
+      "timing": {
+        "seconds": 1.469
+      }
+    },
+    {
+      "id": "file-001-1_plan_next",
+      "source_id": "file-001-1",
+      "next_source_id": "file-001-1_file-001-2_move",
+      "video_id": "file-001",
+      "type": "planning",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-1_10.000_26.550_prejoined.mp4",
+        "start": 10.0,
+        "end": 26.55,
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-1_10.000_26.550_prejoined.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-1_10.000_26.550_prejoined.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-1_10.000_26.550_prejoined.mp4"
+        ],
+        "clips": {
+          "prejoined": {
+            "view": "prejoined",
+            "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-1_10.000_26.550_prejoined.mp4",
+            "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+            "start": 10.0,
+            "end": 26.55,
+            "start_frame": 200,
+            "end_frame": 530,
+            "fps": 20.0,
+            "frames": 331,
+            "skipped_existing": true
+          }
+        },
+        "source_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+        "start_frame": 200,
+        "end_frame": 530,
+        "fps": 20.0,
+        "frames": 331,
+        "skipped_existing": true
+      },
+      "Q": "Based on the current visual state, what should happen next?\nOptions:\nA. close the yellow cube\nB. open the yellow cube\nC. pick the yellow cube\nD. move the yellow cube\nE. place the yellow cube\nF. All other options are wrong.",
+      "A": "D",
+      "question": "Based on the current visual state, what should happen next?\nOptions:\nA. close the yellow cube\nB. open the yellow cube\nC. pick the yellow cube\nD. move the yellow cube\nE. place the yellow cube\nF. All other options are wrong.",
+      "answer": "D",
+      "answer_text": "move the yellow cube",
+      "answer_action": "move",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "close the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "B",
+          "text": "open the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "C",
+          "text": "pick the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "D",
+          "text": "move the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "E",
+          "text": "place the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "F",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        }
+      ],
+      "correct_option": {
+        "id": "D",
+        "text": "move the yellow cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-001-1",
+        "source_id": "file-001-1",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"pick the yellow cube\" happen?",
+        "A": "00:00:10.000-00:00:26.550",
+        "question": "When did the action \"pick the yellow cube\" happen?",
+        "answer": "00:00:10.000-00:00:26.550",
+        "answer_text": "00:00:10.000-00:00:26.550",
+        "answer_seconds": {
+          "start": 10.0,
+          "end": 26.55
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 10.0,
+          "end": 26.55,
+          "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-1",
+            "source_path": "../../json_pickplace/file-001_segments.json",
+            "start": 10.0,
+            "end": 26.55,
+            "start_time": "00:00:10.000",
+            "end_time": "00:00:26.550",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 10.0,
+          "original_end": 26.55,
+          "original_start_time": "00:00:10.000",
+          "original_end_time": "00:00:26.550",
+          "window_start": 10.0,
+          "window_end": 26.55,
+          "window_type": "raw_segment",
+          "start_frame": 200,
+          "end_frame": 530
+        }
+      },
+      "next_time_eqa": {
+        "id": "file-001-1_file-001-2_move",
+        "source_id": "file-001-1_file-001-2_move",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"move the yellow cube\" happen?",
+        "A": "00:00:25.550-00:00:29.550",
+        "question": "When did the action \"move the yellow cube\" happen?",
+        "answer": "00:00:25.550-00:00:29.550",
+        "answer_text": "00:00:25.550-00:00:29.550",
+        "answer_seconds": {
+          "start": 25.55,
+          "end": 29.55
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 25.55,
+          "end": 29.55,
+          "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-1_file-001-2_move",
+            "source_path": "../../json_pickplace/file-001_segments.json",
+            "start": 25.55,
+            "end": 29.55,
+            "start_time": "00:00:25.550",
+            "end_time": "00:00:29.550",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 25.55,
+          "original_end": 29.55,
+          "original_start_time": "00:00:25.550",
+          "original_end_time": "00:00:29.550",
+          "window_start": 25.55,
+          "window_end": 29.55,
+          "window_type": "raw_segment",
+          "start_frame": 511,
+          "end_frame": 590
+        }
+      },
+      "prompt": "You are observing a robot manipulation task and need to predict the next action.\n\nLook at the current video clip and choose the next action the robot should take.\nChoose exactly one option from the provided option letters. Do not invent a new action.\n\nQuestion:\nBased on the current visual state, what should happen next?\nOptions:\nA. close the yellow cube\nB. open the yellow cube\nC. pick the yellow cube\nD. move the yellow cube\nE. place the yellow cube\nF. All other options are wrong.\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": C,\n  \"reason\": \"The robot arm is currently holding the yellow cube and is poised to place it. The other options are not the next logical action.\"\n}",
+      "model_prediction": "{\n  \"choice\": C,\n  \"reason\": \"The robot arm is currently holding the yellow cube and is poised to place it. The other options are not the next logical action.\"\n}",
+      "expected_choice": "D",
+      "expected_answer_text": "move the yellow cube",
+      "expected_action": "move",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "C",
+      "correct": false,
+      "timing": {
+        "seconds": 2.391
+      }
+    },
+    {
+      "id": "file-001-1_file-001-2_move_plan_next",
+      "source_id": "file-001-1_file-001-2_move",
+      "next_source_id": "file-001-2",
+      "video_id": "file-001",
+      "type": "planning",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-1_file-001-2_move_25.550_29.550_prejoined.mp4",
+        "start": 25.55,
+        "end": 29.55,
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-1_file-001-2_move_25.550_29.550_prejoined.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-1_file-001-2_move_25.550_29.550_prejoined.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-1_file-001-2_move_25.550_29.550_prejoined.mp4"
+        ],
+        "clips": {
+          "prejoined": {
+            "view": "prejoined",
+            "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-1_file-001-2_move_25.550_29.550_prejoined.mp4",
+            "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+            "start": 25.55,
+            "end": 29.55,
+            "start_frame": 511,
+            "end_frame": 590,
+            "fps": 20.0,
+            "frames": 80,
+            "skipped_existing": true
+          }
+        },
+        "source_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+        "start_frame": 511,
+        "end_frame": 590,
+        "fps": 20.0,
+        "frames": 80,
+        "skipped_existing": true
+      },
+      "Q": "Based on the current visual state, what should happen next?\nOptions:\nA. pick the red cube\nB. move the yellow cube\nC. open the yellow cube\nD. place the yellow cube\nE. place the red cube\nF. All other options are wrong.",
+      "A": "D",
+      "question": "Based on the current visual state, what should happen next?\nOptions:\nA. pick the red cube\nB. move the yellow cube\nC. open the yellow cube\nD. place the yellow cube\nE. place the red cube\nF. All other options are wrong.",
+      "answer": "D",
+      "answer_text": "place the yellow cube",
+      "answer_action": "place",
+      "answer_objects": [
+        "yellow cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "pick the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "B",
+          "text": "move the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "C",
+          "text": "open the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "D",
+          "text": "place the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "E",
+          "text": "place the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "F",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        }
+      ],
+      "correct_option": {
+        "id": "D",
+        "text": "place the yellow cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-001-1_file-001-2_move",
+        "source_id": "file-001-1_file-001-2_move",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"move the yellow cube\" happen?",
+        "A": "00:00:25.550-00:00:29.550",
+        "question": "When did the action \"move the yellow cube\" happen?",
+        "answer": "00:00:25.550-00:00:29.550",
+        "answer_text": "00:00:25.550-00:00:29.550",
+        "answer_seconds": {
+          "start": 25.55,
+          "end": 29.55
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 25.55,
+          "end": 29.55,
+          "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-1_file-001-2_move",
+            "source_path": "../../json_pickplace/file-001_segments.json",
+            "start": 25.55,
+            "end": 29.55,
+            "start_time": "00:00:25.550",
+            "end_time": "00:00:29.550",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 25.55,
+          "original_end": 29.55,
+          "original_start_time": "00:00:25.550",
+          "original_end_time": "00:00:29.550",
+          "window_start": 25.55,
+          "window_end": 29.55,
+          "window_type": "raw_segment",
+          "start_frame": 511,
+          "end_frame": 590
+        }
+      },
+      "next_time_eqa": {
+        "id": "file-001-2",
+        "source_id": "file-001-2",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"place the yellow cube\" happen?",
+        "A": "00:00:28.550-00:00:32.550",
+        "question": "When did the action \"place the yellow cube\" happen?",
+        "answer": "00:00:28.550-00:00:32.550",
+        "answer_text": "00:00:28.550-00:00:32.550",
+        "answer_seconds": {
+          "start": 28.55,
+          "end": 32.55
+        },
+        "answer_action": "place",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 28.55,
+          "end": 32.55,
+          "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-2",
+            "source_path": "../../json_pickplace/file-001_segments.json",
+            "start": 28.55,
+            "end": 32.55,
+            "start_time": "00:00:28.550",
+            "end_time": "00:00:32.550",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Place the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "place"
+          ],
+          "original_start": 28.55,
+          "original_end": 32.55,
+          "original_start_time": "00:00:28.550",
+          "original_end_time": "00:00:32.550",
+          "window_start": 28.55,
+          "window_end": 32.55,
+          "window_type": "raw_segment",
+          "start_frame": 571,
+          "end_frame": 650
+        }
+      },
+      "prompt": "You are observing a robot manipulation task and need to predict the next action.\n\nLook at the current video clip and choose the next action the robot should take.\nChoose exactly one option from the provided option letters. Do not invent a new action.\n\nQuestion:\nBased on the current visual state, what should happen next?\nOptions:\nA. pick the red cube\nB. move the yellow cube\nC. open the yellow cube\nD. place the yellow cube\nE. place the red cube\nF. All other options are wrong.\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": B,\n  \"reason\": \"The robot is currently holding the yellow cube and is about to move it. The next logical step is to place the yellow cube, as indicated by the 'place the yellow cube' option.\"\n}",
+      "model_prediction": "{\n  \"choice\": B,\n  \"reason\": \"The robot is currently holding the yellow cube and is about to move it. The next logical step is to place the yellow cube, as indicated by the 'place the yellow cube' option.\"\n}",
+      "expected_choice": "D",
+      "expected_answer_text": "place the yellow cube",
+      "expected_action": "place",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "B",
+      "correct": false,
+      "timing": {
+        "seconds": 2.745
+      }
+    },
+    {
+      "id": "file-001-2_plan_next",
+      "source_id": "file-001-2",
+      "next_source_id": "file-001-3",
+      "video_id": "file-001",
+      "type": "planning",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-2_28.550_32.550_prejoined.mp4",
+        "start": 28.55,
+        "end": 32.55,
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-2_28.550_32.550_prejoined.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-2_28.550_32.550_prejoined.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-2_28.550_32.550_prejoined.mp4"
+        ],
+        "clips": {
+          "prejoined": {
+            "view": "prejoined",
+            "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-2_28.550_32.550_prejoined.mp4",
+            "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+            "start": 28.55,
+            "end": 32.55,
+            "start_frame": 571,
+            "end_frame": 650,
+            "fps": 20.0,
+            "frames": 80,
+            "skipped_existing": true
+          }
+        },
+        "source_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+        "start_frame": 571,
+        "end_frame": 650,
+        "fps": 20.0,
+        "frames": 80,
+        "skipped_existing": true
+      },
+      "Q": "Based on the current visual state, what should happen next?\nOptions:\nA. All other options are wrong.\nB. pick the yellow cube\nC. move the red cube\nD. pick the red cube\nE. place the yellow cube\nF. pick the object",
+      "A": "D",
+      "question": "Based on the current visual state, what should happen next?\nOptions:\nA. All other options are wrong.\nB. pick the yellow cube\nC. move the red cube\nD. pick the red cube\nE. place the yellow cube\nF. pick the object",
+      "answer": "D",
+      "answer_text": "pick the red cube",
+      "answer_action": "pick",
+      "answer_objects": [
+        "red cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "B",
+          "text": "pick the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "C",
+          "text": "move the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "D",
+          "text": "pick the red cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "E",
+          "text": "place the yellow cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "F",
+          "text": "pick the object",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        }
+      ],
+      "correct_option": {
+        "id": "D",
+        "text": "pick the red cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-001-2",
+        "source_id": "file-001-2",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"place the yellow cube\" happen?",
+        "A": "00:00:28.550-00:00:32.550",
+        "question": "When did the action \"place the yellow cube\" happen?",
+        "answer": "00:00:28.550-00:00:32.550",
+        "answer_text": "00:00:28.550-00:00:32.550",
+        "answer_seconds": {
+          "start": 28.55,
+          "end": 32.55
+        },
+        "answer_action": "place",
+        "answer_objects": [
+          "yellow cube"
+        ],
+        "input": {
+          "start": 28.55,
+          "end": 32.55,
+          "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-2",
+            "source_path": "../../json_pickplace/file-001_segments.json",
+            "start": 28.55,
+            "end": 32.55,
+            "start_time": "00:00:28.550",
+            "end_time": "00:00:32.550",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Place the yellow cube.",
+          "objects": [
+            "yellow cube"
+          ],
+          "main_verbs": [
+            "place"
+          ],
+          "original_start": 28.55,
+          "original_end": 32.55,
+          "original_start_time": "00:00:28.550",
+          "original_end_time": "00:00:32.550",
+          "window_start": 28.55,
+          "window_end": 32.55,
+          "window_type": "raw_segment",
+          "start_frame": 571,
+          "end_frame": 650
+        }
+      },
+      "next_time_eqa": {
+        "id": "file-001-3",
+        "source_id": "file-001-3",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"pick the red cube\" happen?",
+        "A": "00:00:40.550-00:01:02.800",
+        "question": "When did the action \"pick the red cube\" happen?",
+        "answer": "00:00:40.550-00:01:02.800",
+        "answer_text": "00:00:40.550-00:01:02.800",
+        "answer_seconds": {
+          "start": 40.55,
+          "end": 62.8
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 40.55,
+          "end": 62.8,
+          "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-3",
+            "source_path": "../../json_pickplace/file-001_segments.json",
+            "start": 40.55,
+            "end": 62.8,
+            "start_time": "00:00:40.550",
+            "end_time": "00:01:02.800",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 40.55,
+          "original_end": 62.8,
+          "original_start_time": "00:00:40.550",
+          "original_end_time": "00:01:02.800",
+          "window_start": 40.55,
+          "window_end": 62.8,
+          "window_type": "raw_segment",
+          "start_frame": 811,
+          "end_frame": 1255
+        }
+      },
+      "prompt": "You are observing a robot manipulation task and need to predict the next action.\n\nLook at the current video clip and choose the next action the robot should take.\nChoose exactly one option from the provided option letters. Do not invent a new action.\n\nQuestion:\nBased on the current visual state, what should happen next?\nOptions:\nA. All other options are wrong.\nB. pick the yellow cube\nC. move the red cube\nD. pick the red cube\nE. place the yellow cube\nF. pick the object\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": B,\n  \"reason\": \"The robot is currently holding the yellow cube and is about to place it. The other options are not the next logical action.\"\n}",
+      "model_prediction": "{\n  \"choice\": B,\n  \"reason\": \"The robot is currently holding the yellow cube and is about to place it. The other options are not the next logical action.\"\n}",
+      "expected_choice": "D",
+      "expected_answer_text": "pick the red cube",
+      "expected_action": "pick",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "B",
+      "correct": false,
+      "timing": {
+        "seconds": 2.452
+      }
+    },
+    {
+      "id": "file-001-3_plan_next",
+      "source_id": "file-001-3",
+      "next_source_id": "file-001-3_file-001-4_move",
+      "video_id": "file-001",
+      "type": "planning",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-3_40.550_62.800_prejoined.mp4",
+        "start": 40.55,
+        "end": 62.8,
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-3_40.550_62.800_prejoined.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-3_40.550_62.800_prejoined.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-3_40.550_62.800_prejoined.mp4"
+        ],
+        "clips": {
+          "prejoined": {
+            "view": "prejoined",
+            "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-3_40.550_62.800_prejoined.mp4",
+            "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+            "start": 40.55,
+            "end": 62.8,
+            "start_frame": 811,
+            "end_frame": 1255,
+            "fps": 20.0,
+            "frames": 445,
+            "skipped_existing": true
+          }
+        },
+        "source_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+        "start_frame": 811,
+        "end_frame": 1255,
+        "fps": 20.0,
+        "frames": 445,
+        "skipped_existing": true
+      },
+      "Q": "Based on the current visual state, what should happen next?\nOptions:\nA. move the object\nB. close the red cube\nC. place the red cube\nD. All other options are wrong.\nE. move the red cube\nF. pick the red cube",
+      "A": "E",
+      "question": "Based on the current visual state, what should happen next?\nOptions:\nA. move the object\nB. close the red cube\nC. place the red cube\nD. All other options are wrong.\nE. move the red cube\nF. pick the red cube",
+      "answer": "E",
+      "answer_text": "move the red cube",
+      "answer_action": "move",
+      "answer_objects": [
+        "red cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "move the object",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "B",
+          "text": "close the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "C",
+          "text": "place the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "D",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "E",
+          "text": "move the red cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "F",
+          "text": "pick the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        }
+      ],
+      "correct_option": {
+        "id": "E",
+        "text": "move the red cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-001-3",
+        "source_id": "file-001-3",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"pick the red cube\" happen?",
+        "A": "00:00:40.550-00:01:02.800",
+        "question": "When did the action \"pick the red cube\" happen?",
+        "answer": "00:00:40.550-00:01:02.800",
+        "answer_text": "00:00:40.550-00:01:02.800",
+        "answer_seconds": {
+          "start": 40.55,
+          "end": 62.8
+        },
+        "answer_action": "pick",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 40.55,
+          "end": 62.8,
+          "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-3",
+            "source_path": "../../json_pickplace/file-001_segments.json",
+            "start": 40.55,
+            "end": 62.8,
+            "start_time": "00:00:40.550",
+            "end_time": "00:01:02.800",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Pick the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "pick"
+          ],
+          "original_start": 40.55,
+          "original_end": 62.8,
+          "original_start_time": "00:00:40.550",
+          "original_end_time": "00:01:02.800",
+          "window_start": 40.55,
+          "window_end": 62.8,
+          "window_type": "raw_segment",
+          "start_frame": 811,
+          "end_frame": 1255
+        }
+      },
+      "next_time_eqa": {
+        "id": "file-001-3_file-001-4_move",
+        "source_id": "file-001-3_file-001-4_move",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"move the red cube\" happen?",
+        "A": "00:01:01.800-00:01:05.700",
+        "question": "When did the action \"move the red cube\" happen?",
+        "answer": "00:01:01.800-00:01:05.700",
+        "answer_text": "00:01:01.800-00:01:05.700",
+        "answer_seconds": {
+          "start": 61.8,
+          "end": 65.7
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 61.8,
+          "end": 65.7,
+          "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-3_file-001-4_move",
+            "source_path": "../../json_pickplace/file-001_segments.json",
+            "start": 61.8,
+            "end": 65.7,
+            "start_time": "00:01:01.800",
+            "end_time": "00:01:05.700",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 61.8,
+          "original_end": 65.7,
+          "original_start_time": "00:01:01.800",
+          "original_end_time": "00:01:05.700",
+          "window_start": 61.8,
+          "window_end": 65.7,
+          "window_type": "raw_segment",
+          "start_frame": 1236,
+          "end_frame": 1313
+        }
+      },
+      "prompt": "You are observing a robot manipulation task and need to predict the next action.\n\nLook at the current video clip and choose the next action the robot should take.\nChoose exactly one option from the provided option letters. Do not invent a new action.\n\nQuestion:\nBased on the current visual state, what should happen next?\nOptions:\nA. move the object\nB. close the red cube\nC. place the red cube\nD. All other options are wrong.\nE. move the red cube\nF. pick the red cube\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": B,\n  \"reason\": \"The red cube is the closest object to the camera and the robot's hand is positioned to pick it up.\"\n}",
+      "model_prediction": "{\n  \"choice\": B,\n  \"reason\": \"The red cube is the closest object to the camera and the robot's hand is positioned to pick it up.\"\n}",
+      "expected_choice": "E",
+      "expected_answer_text": "move the red cube",
+      "expected_action": "move",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "B",
+      "correct": false,
+      "timing": {
+        "seconds": 2.284
+      }
+    },
+    {
+      "id": "file-001-3_file-001-4_move_plan_next",
+      "source_id": "file-001-3_file-001-4_move",
+      "next_source_id": "file-001-4",
+      "video_id": "file-001",
+      "type": "planning",
+      "input": {
+        "video_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-3_file-001-4_move_61.800_65.700_prejoined.mp4",
+        "start": 61.8,
+        "end": 65.7,
+        "video_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-3_file-001-4_move_61.800_65.700_prejoined.mp4"
+        ],
+        "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+        "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-3_file-001-4_move_61.800_65.700_prejoined.mp4",
+        "clip_paths": [
+          "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-3_file-001-4_move_61.800_65.700_prejoined.mp4"
+        ],
+        "clips": {
+          "prejoined": {
+            "view": "prejoined",
+            "clip_path": "/mnt/public/users/wbcd/workspace/michael/benchmark/eval/datasets/QA/planning/stack_cubes/planning_clips/file-001/file-001_file-001-3_file-001-4_move_61.800_65.700_prejoined.mp4",
+            "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+            "start": 61.8,
+            "end": 65.7,
+            "start_frame": 1236,
+            "end_frame": 1313,
+            "fps": 20.0,
+            "frames": 78,
+            "skipped_existing": true
+          }
+        },
+        "source_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+        "start_frame": 1236,
+        "end_frame": 1313,
+        "fps": 20.0,
+        "frames": 78,
+        "skipped_existing": true
+      },
+      "Q": "Based on the current visual state, what should happen next?\nOptions:\nA. open the red cube\nB. move the red cube\nC. place the red cube\nD. All other options are wrong.\nE. put the red cube\nF. pick the red cube",
+      "A": "C",
+      "question": "Based on the current visual state, what should happen next?\nOptions:\nA. open the red cube\nB. move the red cube\nC. place the red cube\nD. All other options are wrong.\nE. put the red cube\nF. pick the red cube",
+      "answer": "C",
+      "answer_text": "place the red cube",
+      "answer_action": "place",
+      "answer_objects": [
+        "red cube"
+      ],
+      "options": [
+        {
+          "id": "A",
+          "text": "open the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "B",
+          "text": "move the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        },
+        {
+          "id": "C",
+          "text": "place the red cube",
+          "is_none_option": false,
+          "distractor_type": "correct"
+        },
+        {
+          "id": "D",
+          "text": "All other options are wrong.",
+          "is_none_option": true,
+          "distractor_type": "none"
+        },
+        {
+          "id": "E",
+          "text": "put the red cube",
+          "is_none_option": false,
+          "distractor_type": "generated_wrong_label"
+        },
+        {
+          "id": "F",
+          "text": "pick the red cube",
+          "is_none_option": false,
+          "distractor_type": "nearby_action"
+        }
+      ],
+      "correct_option": {
+        "id": "C",
+        "text": "place the red cube",
+        "is_none_option": false,
+        "distractor_type": "correct"
+      },
+      "source_time_eqa": {
+        "id": "file-001-3_file-001-4_move",
+        "source_id": "file-001-3_file-001-4_move",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"move the red cube\" happen?",
+        "A": "00:01:01.800-00:01:05.700",
+        "question": "When did the action \"move the red cube\" happen?",
+        "answer": "00:01:01.800-00:01:05.700",
+        "answer_text": "00:01:01.800-00:01:05.700",
+        "answer_seconds": {
+          "start": 61.8,
+          "end": 65.7
+        },
+        "answer_action": "move",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 61.8,
+          "end": 65.7,
+          "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-3_file-001-4_move",
+            "source_path": "../../json_pickplace/file-001_segments.json",
+            "start": 61.8,
+            "end": 65.7,
+            "start_time": "00:01:01.800",
+            "end_time": "00:01:05.700",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Move the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "move"
+          ],
+          "original_start": 61.8,
+          "original_end": 65.7,
+          "original_start_time": "00:01:01.800",
+          "original_end_time": "00:01:05.700",
+          "window_start": 61.8,
+          "window_end": 65.7,
+          "window_type": "raw_segment",
+          "start_frame": 1236,
+          "end_frame": 1313
+        }
+      },
+      "next_time_eqa": {
+        "id": "file-001-4",
+        "source_id": "file-001-4",
+        "video_id": "file-001",
+        "type": "time",
+        "Q": "When did the action \"place the red cube\" happen?",
+        "A": "00:01:04.700-00:01:08.700",
+        "question": "When did the action \"place the red cube\" happen?",
+        "answer": "00:01:04.700-00:01:08.700",
+        "answer_text": "00:01:04.700-00:01:08.700",
+        "answer_seconds": {
+          "start": 64.7,
+          "end": 68.7
+        },
+        "answer_action": "place",
+        "answer_objects": [
+          "red cube"
+        ],
+        "input": {
+          "start": 64.7,
+          "end": 68.7,
+          "video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "video_paths": [
+            "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4"
+          ],
+          "prejoined_video_path": "time_joined_videos/file-001/file-001_file-001_0.000_full_time_joined_views.mp4",
+          "source_video_paths": null,
+          "view_order": [
+            "left_eye",
+            "left_wrist",
+            "right_wrist"
+          ]
+        },
+        "evidence": [
+          {
+            "segment_id": "file-001-4",
+            "source_path": "../../json_pickplace/file-001_segments.json",
+            "start": 64.7,
+            "end": 68.7,
+            "start_time": "00:01:04.700",
+            "end_time": "00:01:08.700",
+            "window_type": "raw_segment"
+          }
+        ],
+        "metadata": {
+          "narration": " Place the red cube.",
+          "objects": [
+            "red cube"
+          ],
+          "main_verbs": [
+            "place"
+          ],
+          "original_start": 64.7,
+          "original_end": 68.7,
+          "original_start_time": "00:01:04.700",
+          "original_end_time": "00:01:08.700",
+          "window_start": 64.7,
+          "window_end": 68.7,
+          "window_type": "raw_segment",
+          "start_frame": 1294,
+          "end_frame": 1373
+        }
+      },
+      "prompt": "You are observing a robot manipulation task and need to predict the next action.\n\nLook at the current video clip and choose the next action the robot should take.\nChoose exactly one option from the provided option letters. Do not invent a new action.\n\nQuestion:\nBased on the current visual state, what should happen next?\nOptions:\nA. open the red cube\nB. move the red cube\nC. place the red cube\nD. All other options are wrong.\nE. put the red cube\nF. pick the red cube\n\nOutput JSON only. Do not use Markdown.\nRequired schema:\n{\n  \"choice\": \"<one option letter, e.g. A>\",\n  \"reason\": \"<brief visual reason>\"\n}\n",
+      "model_output": "{\n  \"choice\": \"B\",\n  \"reason\": \"The robot arm is currently holding the red cube and is positioned to move it. The next logical step is to continue the movement of the red cube.\"\n}",
+      "model_prediction": {
+        "choice": "B",
+        "reason": "The robot arm is currently holding the red cube and is positioned to move it. The next logical step is to continue the movement of the red cube."
+      },
+      "expected_choice": "C",
+      "expected_answer_text": "place the red cube",
+      "expected_action": "place",
+      "expected_subject": null,
+      "expected_target": null,
+      "pred_choice": "B",
+      "correct": false,
+      "timing": {
+        "seconds": 2.563
+      }
+    }
+  ],
+  "summary": {
+    "total": 10,
+    "answered": 10,
+    "errors": 0,
+    "accuracy": 0.1,
+    "elapsed_seconds": 41.954,
+    "by_action": {
+      "move": {
+        "total": 4,
+        "accuracy": 0.0
+      },
+      "pick": {
+        "total": 2,
+        "accuracy": 0.0
+      },
+      "place": {
+        "total": 4,
+        "accuracy": 0.25
+      }
+    },
+    "by_choice": {
+      "A": {
+        "total": 1,
+        "accuracy": 0.0
+      },
+      "C": {
+        "total": 4,
+        "accuracy": 0.25
+      },
+      "D": {
+        "total": 4,
+        "accuracy": 0.0
+      },
+      "E": {
+        "total": 1,
+        "accuracy": 0.0
+      }
+    }
+  }
+}
