@@ -20,16 +20,25 @@ v1 的 time 题在 `input` 里带着 `start` / `end`，而那**恰好等于答�
 本步不发这两个字段。已确认评测端不读它们 ——
 `time_eqa.py` 里对 `start`/`end` 的读取全部是在解析**模型输出**，不是读题目。
 
-媒体路径写成相对路径
---------------------
-相对于输出文件自身所在目录。**不写绝对路径** ——
-BC-08 曾把绝对路径就地写进九个 QA 文件，结果掩盖了「走 normalized 与走原始 QA
-发出去的内容其实不同」这个差别，事后才发现。
+媒体路径写**绝对路径**
+----------------------
+评测端解析媒体的顺序是：先按 CWD 试这个路径，不行就**按文件名**在
+`QA/<组>/<族>/` 下建索引找。我们的素材在 QA 树之外，两条都不通；
+而文件名索引对我们尤其危险 —— `000163-000264.mp4` 这种名字**跨族会重名**，
+索引只会报「多处同名」然后放弃，或者更糟，选错一个。
 
-输出布局照搬 v1
----------------
-`data/vqa/eval/<族>/<题型>.json`，与 v1 的 `datasets/QA/…` 同构，
-评测端现有的配置与矩阵不用改。
+> BC-08 的教训是「不要把绝对路径**就地写进只读的源 QA 文件**」——
+> 那会掩盖差别且不可逆。本步的产物是**投影**，一条命令重生成，
+> 写绝对路径不涉及那个问题。换机器重跑 `pack.py --write` 即可。
+
+输出布局由**评测端的函数决定**，不由我猜
+------------------------------------
+`data/vqa/eval/QA/<组>/<族>/<文件名>`，其中「组」与「文件名」直接从
+`robochrono.tasks` 的 `QA_GROUP` / `QA_FILENAME` 取。
+
+**第一版我按「看起来同构」自己拼了 `<族>/<题型>.json`，结果 preflight 报
+408 个组合全部「QA 文件缺失」。** 消费者怎么找文件是消费者的事 ——
+导入它的映射表，不要照着样例反推。
 """
 
 from __future__ import annotations
@@ -44,6 +53,10 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[2]
 ITEMS = ROOT / "data" / "vqa" / "items.jsonl"
 OUT = ROOT / "data" / "vqa" / "eval"
+
+# 布局映射从评测端导入，不在这里另写一份
+sys.path.insert(0, str(ROOT / "src" / "eval"))
+from robochrono.tasks import QA_FILENAME, QA_GROUP  # noqa: E402
 
 
 def render(stem: str, options: list[dict[str, Any]]) -> str:
@@ -62,7 +75,7 @@ def render(stem: str, options: list[dict[str, Any]]) -> str:
 def project(item: dict[str, Any], out_dir: Path) -> dict[str, Any]:
     prov = item["provenance"]
     media = item["prompt"]["media"]
-    rel = [os.path.relpath(ROOT / m["path"], out_dir) for m in media]
+    rel = [str((ROOT / m["path"]).resolve()) for m in media]
     key = "video_path" if item["task"] == "time" else "clip_path"
 
     row: dict[str, Any] = {
@@ -105,7 +118,7 @@ def main() -> int:
     problems: list[str] = []
 
     for (family, task), rows in sorted(groups.items()):
-        out_dir = OUT / family
+        out_dir = OUT / "QA" / QA_GROUP[task] / family
         packed = [project(i, out_dir) for i in rows]
 
         # ── 出厂检查 ──
@@ -113,8 +126,8 @@ def main() -> int:
             for k in ("start", "end", "answer_seconds", "seconds"):
                 if k in p["input"]:
                     problems.append(f"{p['id']}: input 里出现了 {k}（可反推答案）")
-            for m, r in zip(orig["prompt"]["media"], [p["input"][k] for k in p["input"]][:1]):
-                if not (out_dir / r).resolve().exists():
+            for r in [v for v in p["input"].values() if isinstance(v, str)]:
+                if not Path(r).exists():
                     problems.append(f"{p['id']}: 媒体解析不到 {r}")
             if p["question"].count("Options:") > 1:
                 problems.append(f"{p['id']}: 题干里重复出现 Options:")
@@ -123,10 +136,10 @@ def main() -> int:
                 if p["answer"] not in {o["id"] for o in p["options"]}:
                     problems.append(f"{p['id']}: answer 不在 options 里")
 
-        written.append((family, task, len(packed), out_dir / f"{task}.json"))
+        written.append((family, task, len(packed), out_dir / QA_FILENAME[task]))
         if "--write" in sys.argv:
             out_dir.mkdir(parents=True, exist_ok=True)
-            (out_dir / f"{task}.json").write_text(
+            (out_dir / QA_FILENAME[task]).write_text(
                 json.dumps({"items": packed}, ensure_ascii=False, indent=1) + "\n",
                 encoding="utf-8")
 
