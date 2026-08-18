@@ -9667,7 +9667,12 @@
           "episode": "file-000",
           "frames": 1464,
           "duration": 73.2,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              73.2
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -9737,7 +9742,12 @@
           "episode": "file-001",
           "frames": 1620,
           "duration": 81.0,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              81.0
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -9807,7 +9817,12 @@
           "episode": "file-002",
           "frames": 1468,
           "duration": 73.4,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              73.4
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -9877,7 +9892,12 @@
           "episode": "file-003",
           "frames": 1340,
           "duration": 67.0,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              67.0
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -9947,7 +9967,12 @@
           "episode": "file-004",
           "frames": 1136,
           "duration": 56.8,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              56.8
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -10017,7 +10042,12 @@
           "episode": "file-005",
           "frames": 1183,
           "duration": 59.15,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              59.15
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -10087,7 +10117,12 @@
           "episode": "file-006",
           "frames": 1104,
           "duration": 55.2,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              55.2
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -10157,7 +10192,12 @@
           "episode": "file-007",
           "frames": 1125,
           "duration": 56.25,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              56.25
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -10227,7 +10267,12 @@
           "episode": "file-008",
           "frames": 1091,
           "duration": 54.55,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              54.55
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -10297,7 +10342,12 @@
           "episode": "file-009",
           "frames": 1182,
           "duration": 59.1,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              59.1
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -10367,7 +10417,12 @@
           "episode": "file-010",
           "frames": 1034,
           "duration": 51.7,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              51.7
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -10437,7 +10492,12 @@
           "episode": "file-011",
           "frames": 1310,
           "duration": 65.5,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              65.5
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -10507,7 +10567,12 @@
           "episode": "file-012",
           "frames": 1069,
           "duration": 53.45,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              53.45
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -10577,7 +10642,12 @@
           "episode": "file-013",
           "frames": 1062,
           "duration": 53.1,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              53.1
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -10647,7 +10717,12 @@
           "episode": "file-014",
           "frames": 1076,
           "duration": 53.8,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              53.8
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -10717,7 +10792,12 @@
           "episode": "file-015",
           "frames": 970,
           "duration": 48.5,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              48.5
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -10787,7 +10867,12 @@
           "episode": "file-016",
           "frames": 1112,
           "duration": 55.6,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              55.6
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -10857,7 +10942,12 @@
           "episode": "file-017",
           "frames": 1029,
           "duration": 51.45,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              51.45
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -10927,7 +11017,12 @@
           "episode": "file-018",
           "frames": 1196,
           "duration": 59.8,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              59.8
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -10997,7 +11092,12 @@
           "episode": "file-019",
           "frames": 1069,
           "duration": 53.45,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              53.45
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -11067,7 +11167,12 @@
           "episode": "file-020",
           "frames": 1078,
           "duration": 53.9,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              53.9
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -11137,7 +11242,12 @@
           "episode": "file-021",
           "frames": 1157,
           "duration": 57.85,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              57.85
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -11207,7 +11317,12 @@
           "episode": "file-022",
           "frames": 1093,
           "duration": 54.65,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              54.65
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -11277,7 +11392,12 @@
           "episode": "file-023",
           "frames": 1046,
           "duration": 52.3,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              52.3
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -11347,7 +11467,12 @@
           "episode": "file-024",
           "frames": 1057,
           "duration": 52.85,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              52.85
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -11417,7 +11542,12 @@
           "episode": "file-025",
           "frames": 1088,
           "duration": 54.4,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              54.4
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -11487,7 +11617,12 @@
           "episode": "file-026",
           "frames": 1010,
           "duration": 50.5,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              50.5
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -11557,7 +11692,12 @@
           "episode": "file-027",
           "frames": 918,
           "duration": 45.9,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              45.9
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -11627,7 +11767,12 @@
           "episode": "file-028",
           "frames": 1109,
           "duration": 55.45,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              55.45
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -11697,7 +11842,12 @@
           "episode": "file-029",
           "frames": 1016,
           "duration": 50.8,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              50.8
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -11767,7 +11917,12 @@
           "episode": "file-030",
           "frames": 923,
           "duration": 46.15,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              46.15
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -11837,7 +11992,12 @@
           "episode": "file-031",
           "frames": 959,
           "duration": 47.95,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              47.95
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -11907,7 +12067,12 @@
           "episode": "file-032",
           "frames": 1020,
           "duration": 51.0,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              51.0
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -11977,7 +12142,12 @@
           "episode": "file-033",
           "frames": 903,
           "duration": 45.15,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              45.15
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -12047,7 +12217,12 @@
           "episode": "file-034",
           "frames": 1049,
           "duration": 52.45,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              52.45
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -12117,7 +12292,12 @@
           "episode": "file-035",
           "frames": 1155,
           "duration": 57.75,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              57.75
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -12187,7 +12367,12 @@
           "episode": "file-036",
           "frames": 1171,
           "duration": 58.55,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              58.55
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -12257,7 +12442,12 @@
           "episode": "file-037",
           "frames": 1105,
           "duration": 55.25,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              55.25
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -12327,7 +12517,12 @@
           "episode": "file-038",
           "frames": 1178,
           "duration": 58.9,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              58.9
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -12397,7 +12592,12 @@
           "episode": "file-039",
           "frames": 1059,
           "duration": 52.95,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              52.95
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -12467,7 +12667,12 @@
           "episode": "file-040",
           "frames": 929,
           "duration": 46.45,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              46.45
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -12537,7 +12742,12 @@
           "episode": "file-041",
           "frames": 1026,
           "duration": 51.3,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              51.3
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -12607,7 +12817,12 @@
           "episode": "file-042",
           "frames": 1166,
           "duration": 58.3,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              58.3
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -12677,7 +12892,12 @@
           "episode": "file-043",
           "frames": 1116,
           "duration": 55.8,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              55.8
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -12747,7 +12967,12 @@
           "episode": "file-044",
           "frames": 1115,
           "duration": 55.75,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              55.75
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -12817,7 +13042,12 @@
           "episode": "file-045",
           "frames": 1046,
           "duration": 52.3,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              52.3
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -12887,7 +13117,12 @@
           "episode": "file-046",
           "frames": 1065,
           "duration": 53.25,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              53.25
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -12957,7 +13192,12 @@
           "episode": "file-047",
           "frames": 1014,
           "duration": 50.7,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              50.7
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -13027,7 +13267,12 @@
           "episode": "file-048",
           "frames": 973,
           "duration": 48.65,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              48.65
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -13097,7 +13342,12 @@
           "episode": "file-049",
           "frames": 1042,
           "duration": 52.1,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              52.1
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -13209,7 +13459,12 @@
           "episode": "file-000",
           "frames": 2994,
           "duration": 119.76,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              119.76
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -13319,7 +13574,12 @@
           "episode": "file-001",
           "frames": 2640,
           "duration": 105.6,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              105.6
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -13437,7 +13697,12 @@
           "episode": "file-002",
           "frames": 2877,
           "duration": 115.08,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              115.08
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -13555,7 +13820,12 @@
           "episode": "file-003",
           "frames": 2797,
           "duration": 111.88,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              111.88
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -13669,7 +13939,12 @@
           "episode": "file-004",
           "frames": 2507,
           "duration": 100.28,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              100.28
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -13783,7 +14058,12 @@
           "episode": "file-005",
           "frames": 2680,
           "duration": 107.2,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              107.2
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -13901,7 +14181,12 @@
           "episode": "file-006",
           "frames": 2836,
           "duration": 113.44,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              113.44
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -14019,7 +14304,12 @@
           "episode": "file-007",
           "frames": 2837,
           "duration": 113.48,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              113.48
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -14137,7 +14427,12 @@
           "episode": "file-008",
           "frames": 2618,
           "duration": 104.72,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              104.72
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -14255,7 +14550,12 @@
           "episode": "file-009",
           "frames": 2636,
           "duration": 105.44,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              105.44
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -15575,7 +15875,12 @@
           "episode": "file-020",
           "frames": 2528,
           "duration": 101.12,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              101.12
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -15689,7 +15994,12 @@
           "episode": "file-021",
           "frames": 2426,
           "duration": 97.04,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              97.04
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -15803,7 +16113,12 @@
           "episode": "file-022",
           "frames": 2427,
           "duration": 97.08,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              97.08
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -15917,7 +16232,12 @@
           "episode": "file-023",
           "frames": 2353,
           "duration": 94.12,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              94.12
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -16031,7 +16351,12 @@
           "episode": "file-024",
           "frames": 2517,
           "duration": 100.68,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              100.68
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -16145,7 +16470,12 @@
           "episode": "file-025",
           "frames": 2706,
           "duration": 108.24,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              108.24
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -16259,7 +16589,12 @@
           "episode": "file-026",
           "frames": 2464,
           "duration": 98.56,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              98.56
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -16373,7 +16708,12 @@
           "episode": "file-027",
           "frames": 2567,
           "duration": 102.68,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              102.68
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -16487,7 +16827,12 @@
           "episode": "file-028",
           "frames": 2868,
           "duration": 114.72,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              114.72
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -16601,7 +16946,12 @@
           "episode": "file-029",
           "frames": 2673,
           "duration": 106.92,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              106.92
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -16715,7 +17065,12 @@
           "episode": "file-030",
           "frames": 2669,
           "duration": 106.76,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              106.76
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -16829,7 +17184,12 @@
           "episode": "file-031",
           "frames": 2398,
           "duration": 95.92,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              95.92
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -16943,7 +17303,12 @@
           "episode": "file-032",
           "frames": 2389,
           "duration": 95.56,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              95.56
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -17057,7 +17422,12 @@
           "episode": "file-033",
           "frames": 2560,
           "duration": 102.4,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              102.4
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -17171,7 +17541,12 @@
           "episode": "file-034",
           "frames": 2606,
           "duration": 104.24,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              104.24
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -17285,7 +17660,12 @@
           "episode": "file-035",
           "frames": 2464,
           "duration": 98.56,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              98.56
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -17399,7 +17779,12 @@
           "episode": "file-036",
           "frames": 2402,
           "duration": 96.08,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              96.08
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -17513,7 +17898,12 @@
           "episode": "file-037",
           "frames": 2545,
           "duration": 101.8,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              101.8
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -17627,7 +18017,12 @@
           "episode": "file-038",
           "frames": 2297,
           "duration": 91.88,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              91.88
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -17743,3288 +18138,6 @@
         }
       ]
     },
-    "tea2": {
-      "family": "tea2",
-      "fps": 30.0,
-      "resolution": [
-        640,
-        480
-      ],
-      "views": [
-        "main",
-        "wrist_left",
-        "wrist_right"
-      ],
-      "timestamp_bar_cropped": 0,
-      "subtasks": [
-        {
-          "id": "pick_up_teapot_lid",
-          "text": "Pick up the teapot lid."
-        },
-        {
-          "id": "pick_up_tea_bag",
-          "text": "Pick up the tea bag."
-        },
-        {
-          "id": "place_tea_bag_in_teapot",
-          "text": "Place the tea bag in teapot."
-        },
-        {
-          "id": "pick_up_kettle",
-          "text": "Pick up the kettle."
-        },
-        {
-          "id": "pour_water",
-          "text": "Pour the water."
-        },
-        {
-          "id": "put_lid_on_teapot",
-          "text": "Put the lid on the teapot."
-        },
-        {
-          "id": "pick_up_teapot",
-          "text": "Pick up the teapot."
-        },
-        {
-          "id": "pour_tea",
-          "text": "Pour the tea."
-        }
-      ],
-      "episodes": [
-        {
-          "episode": "file-000",
-          "frames": 10212,
-          "duration": 340.4,
-          "episode_bounds": [
-            [
-              0.0,
-              115.66666666666667
-            ],
-            [
-              115.66666666666667,
-              230.73333333333335
-            ],
-            [
-              230.73333333333335,
-              340.40000000000003
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1,
-            2
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              276
-            ],
-            [
-              428,
-              730
-            ],
-            [
-              847,
-              862
-            ],
-            [
-              995,
-              1256
-            ],
-            [
-              1398,
-              1502
-            ],
-            [
-              1701,
-              2159
-            ],
-            [
-              2482,
-              2620
-            ],
-            [
-              2868,
-              2882
-            ],
-            [
-              3238,
-              10211
-            ]
-          ],
-          "span_coverage": 0.29,
-          "labeled_fraction": 0.163,
-          "full_video_usable": false,
-          "full_video_reason": "含 3 个 episode，第 [1, 2] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-000@f000277",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 277,
-              "end_frame": 427,
-              "start": 9.233,
-              "end": 14.267,
-              "duration": 5.034,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-000@f000731",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 731,
-              "end_frame": 846,
-              "start": 24.367,
-              "end": 28.233,
-              "duration": 3.866,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-000@f000863",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 863,
-              "end_frame": 994,
-              "start": 28.767,
-              "end": 33.167,
-              "duration": 4.4,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-000@f001257",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 1257,
-              "end_frame": 1397,
-              "start": 41.9,
-              "end": 46.6,
-              "duration": 4.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-000@f001503",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1503,
-              "end_frame": 1700,
-              "start": 50.1,
-              "end": 56.7,
-              "duration": 6.6,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-000@f002160",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 2160,
-              "end_frame": 2481,
-              "start": 72.0,
-              "end": 82.733,
-              "duration": 10.733,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-000@f002621",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 2621,
-              "end_frame": 2867,
-              "start": 87.367,
-              "end": 95.6,
-              "duration": 8.233,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-000@f002883",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 2883,
-              "end_frame": 3237,
-              "start": 96.1,
-              "end": 107.933,
-              "duration": 11.833,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        },
-        {
-          "episode": "file-001",
-          "frames": 9413,
-          "duration": 313.767,
-          "episode_bounds": [
-            [
-              0.0,
-              114.7
-            ],
-            [
-              114.7,
-              223.83333333333334
-            ],
-            [
-              223.83333333333334,
-              313.76666666666665
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1,
-            2
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              60
-            ],
-            [
-              516,
-              680
-            ],
-            [
-              857,
-              881
-            ],
-            [
-              1029,
-              1150
-            ],
-            [
-              1336,
-              1385
-            ],
-            [
-              1614,
-              2021
-            ],
-            [
-              2318,
-              2543
-            ],
-            [
-              2750,
-              2763
-            ],
-            [
-              3204,
-              9412
-            ]
-          ],
-          "span_coverage": 0.334,
-          "labeled_fraction": 0.227,
-          "full_video_usable": false,
-          "full_video_reason": "含 3 个 episode，第 [1, 2] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-001@f000061",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 61,
-              "end_frame": 515,
-              "start": 2.033,
-              "end": 17.2,
-              "duration": 15.167,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-001@f000681",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 681,
-              "end_frame": 856,
-              "start": 22.7,
-              "end": 28.567,
-              "duration": 5.867,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-001@f000882",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 882,
-              "end_frame": 1028,
-              "start": 29.4,
-              "end": 34.3,
-              "duration": 4.9,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-001@f001151",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 1151,
-              "end_frame": 1335,
-              "start": 38.367,
-              "end": 44.533,
-              "duration": 6.166,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-001@f001386",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1386,
-              "end_frame": 1613,
-              "start": 46.2,
-              "end": 53.8,
-              "duration": 7.6,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-001@f002022",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 2022,
-              "end_frame": 2317,
-              "start": 67.4,
-              "end": 77.267,
-              "duration": 9.867,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-001@f002544",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 2544,
-              "end_frame": 2749,
-              "start": 84.8,
-              "end": 91.667,
-              "duration": 6.867,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-001@f002764",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 2764,
-              "end_frame": 3203,
-              "start": 92.133,
-              "end": 106.8,
-              "duration": 14.667,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        },
-        {
-          "episode": "file-002",
-          "frames": 8874,
-          "duration": 295.8,
-          "episode_bounds": [
-            [
-              0.0,
-              94.6
-            ],
-            [
-              94.6,
-              197.83333333333331
-            ],
-            [
-              197.83333333333331,
-              295.79999999999995
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1,
-            2
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              140
-            ],
-            [
-              360,
-              534
-            ],
-            [
-              729,
-              934
-            ],
-            [
-              1015,
-              1070
-            ],
-            [
-              1229,
-              1627
-            ],
-            [
-              1793,
-              2126
-            ],
-            [
-              2592,
-              8873
-            ]
-          ],
-          "span_coverage": 0.276,
-          "labeled_fraction": 0.145,
-          "full_video_usable": false,
-          "full_video_reason": "含 3 个 episode，第 [1, 2] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-002@f000141",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 141,
-              "end_frame": 359,
-              "start": 4.7,
-              "end": 12.0,
-              "duration": 7.3,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-002@f000535",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 535,
-              "end_frame": 628,
-              "start": 17.833,
-              "end": 20.967,
-              "duration": 3.134,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-002@f000628",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 628,
-              "end_frame": 728,
-              "start": 20.933,
-              "end": 24.3,
-              "duration": 3.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-002@f000935",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 935,
-              "end_frame": 1014,
-              "start": 31.167,
-              "end": 33.833,
-              "duration": 2.666,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-002@f001071",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1071,
-              "end_frame": 1228,
-              "start": 35.7,
-              "end": 40.967,
-              "duration": 5.267,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-002@f001628",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 1628,
-              "end_frame": 1792,
-              "start": 54.267,
-              "end": 59.767,
-              "duration": 5.5,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-002@f002127",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 2127,
-              "end_frame": 2199,
-              "start": 70.9,
-              "end": 73.333,
-              "duration": 2.433,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-002@f002199",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 2199,
-              "end_frame": 2591,
-              "start": 73.3,
-              "end": 86.4,
-              "duration": 13.1,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        },
-        {
-          "episode": "file-003",
-          "frames": 7999,
-          "duration": 266.634,
-          "episode_bounds": [
-            [
-              0.0,
-              105.9
-            ],
-            [
-              105.9,
-              266.6333333333333
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              166
-            ],
-            [
-              361,
-              552
-            ],
-            [
-              632,
-              668
-            ],
-            [
-              735,
-              958
-            ],
-            [
-              1043,
-              1183
-            ],
-            [
-              1339,
-              1711
-            ],
-            [
-              1931,
-              2264
-            ],
-            [
-              2716,
-              7998
-            ]
-          ],
-          "span_coverage": 0.319,
-          "labeled_fraction": 0.156,
-          "full_video_usable": false,
-          "full_video_reason": "含 2 个 episode，第 [1] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-003@f000167",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 167,
-              "end_frame": 360,
-              "start": 5.567,
-              "end": 12.033,
-              "duration": 6.466,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-003@f000553",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 553,
-              "end_frame": 631,
-              "start": 18.433,
-              "end": 21.067,
-              "duration": 2.634,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-003@f000669",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 669,
-              "end_frame": 734,
-              "start": 22.3,
-              "end": 24.5,
-              "duration": 2.2,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-003@f000959",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 959,
-              "end_frame": 1042,
-              "start": 31.967,
-              "end": 34.767,
-              "duration": 2.8,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-003@f001184",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1184,
-              "end_frame": 1338,
-              "start": 39.467,
-              "end": 44.633,
-              "duration": 5.166,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-003@f001712",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 1712,
-              "end_frame": 1930,
-              "start": 57.067,
-              "end": 64.367,
-              "duration": 7.3,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-003@f002265",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 2265,
-              "end_frame": 2304,
-              "start": 75.5,
-              "end": 76.833,
-              "duration": 1.333,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-003@f002304",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 2304,
-              "end_frame": 2715,
-              "start": 76.8,
-              "end": 90.533,
-              "duration": 13.733,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        },
-        {
-          "episode": "file-004",
-          "frames": 9904,
-          "duration": 330.134,
-          "episode_bounds": [
-            [
-              0.0,
-              157.63333333333333
-            ],
-            [
-              157.63333333333333,
-              330.1333333333333
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              174
-            ],
-            [
-              455,
-              700
-            ],
-            [
-              798,
-              820
-            ],
-            [
-              1100,
-              1409
-            ],
-            [
-              1594,
-              1808
-            ],
-            [
-              2104,
-              2899
-            ],
-            [
-              3164,
-              3433
-            ],
-            [
-              3650,
-              3696
-            ],
-            [
-              4295,
-              9903
-            ]
-          ],
-          "span_coverage": 0.416,
-          "labeled_fraction": 0.223,
-          "full_video_usable": false,
-          "full_video_reason": "含 2 个 episode，第 [1] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-004@f000175",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 175,
-              "end_frame": 454,
-              "start": 5.833,
-              "end": 15.167,
-              "duration": 9.334,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-004@f000701",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 701,
-              "end_frame": 797,
-              "start": 23.367,
-              "end": 26.6,
-              "duration": 3.233,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-004@f000821",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 821,
-              "end_frame": 1099,
-              "start": 27.367,
-              "end": 36.667,
-              "duration": 9.3,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-004@f001410",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 1410,
-              "end_frame": 1593,
-              "start": 47.0,
-              "end": 53.133,
-              "duration": 6.133,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-004@f001809",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1809,
-              "end_frame": 2103,
-              "start": 60.3,
-              "end": 70.133,
-              "duration": 9.833,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-004@f002900",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 2900,
-              "end_frame": 3163,
-              "start": 96.667,
-              "end": 105.467,
-              "duration": 8.8,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-004@f003434",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 3434,
-              "end_frame": 3649,
-              "start": 114.467,
-              "end": 121.667,
-              "duration": 7.2,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-004@f003697",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 3697,
-              "end_frame": 4294,
-              "start": 123.233,
-              "end": 143.167,
-              "duration": 19.934,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        },
-        {
-          "episode": "file-005",
-          "frames": 9279,
-          "duration": 309.3,
-          "episode_bounds": [
-            [
-              0.0,
-              162.8
-            ],
-            [
-              162.8,
-              309.3
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              186
-            ],
-            [
-              635,
-              917
-            ],
-            [
-              1307,
-              1544
-            ],
-            [
-              1807,
-              1940
-            ],
-            [
-              2255,
-              2985
-            ],
-            [
-              3390,
-              3470
-            ],
-            [
-              4472,
-              9278
-            ]
-          ],
-          "span_coverage": 0.462,
-          "labeled_fraction": 0.304,
-          "full_video_usable": false,
-          "full_video_reason": "含 2 个 episode，第 [1] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-005@f000187",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 187,
-              "end_frame": 634,
-              "start": 6.233,
-              "end": 21.167,
-              "duration": 14.934,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-005@f000918",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 918,
-              "end_frame": 1045,
-              "start": 30.6,
-              "end": 34.867,
-              "duration": 4.267,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-005@f001045",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 1045,
-              "end_frame": 1306,
-              "start": 34.833,
-              "end": 43.567,
-              "duration": 8.734,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-005@f001545",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 1545,
-              "end_frame": 1806,
-              "start": 51.5,
-              "end": 60.233,
-              "duration": 8.733,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-005@f001941",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1941,
-              "end_frame": 2254,
-              "start": 64.7,
-              "end": 75.167,
-              "duration": 10.467,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-005@f002986",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 2986,
-              "end_frame": 3389,
-              "start": 99.533,
-              "end": 113.0,
-              "duration": 13.467,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-005@f003471",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 3471,
-              "end_frame": 3814,
-              "start": 115.7,
-              "end": 127.167,
-              "duration": 11.467,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-005@f003814",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 3814,
-              "end_frame": 4471,
-              "start": 127.133,
-              "end": 149.067,
-              "duration": 21.934,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        },
-        {
-          "episode": "file-006",
-          "frames": 7802,
-          "duration": 260.067,
-          "episode_bounds": [
-            [
-              0.0,
-              123.93333333333334
-            ],
-            [
-              123.93333333333334,
-              260.06666666666666
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              112
-            ],
-            [
-              421,
-              658
-            ],
-            [
-              1018,
-              1166
-            ],
-            [
-              1394,
-              1555
-            ],
-            [
-              1771,
-              2277
-            ],
-            [
-              2612,
-              2698
-            ],
-            [
-              3403,
-              7801
-            ]
-          ],
-          "span_coverage": 0.422,
-          "labeled_fraction": 0.275,
-          "full_video_usable": false,
-          "full_video_reason": "含 2 个 episode，第 [1] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-006@f000113",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 113,
-              "end_frame": 420,
-              "start": 3.767,
-              "end": 14.033,
-              "duration": 10.266,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-006@f000659",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 659,
-              "end_frame": 847,
-              "start": 21.967,
-              "end": 28.267,
-              "duration": 6.3,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-006@f000847",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 847,
-              "end_frame": 1017,
-              "start": 28.233,
-              "end": 33.933,
-              "duration": 5.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-006@f001167",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 1167,
-              "end_frame": 1393,
-              "start": 38.9,
-              "end": 46.467,
-              "duration": 7.567,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-006@f001556",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1556,
-              "end_frame": 1770,
-              "start": 51.867,
-              "end": 59.033,
-              "duration": 7.166,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-006@f002278",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 2278,
-              "end_frame": 2611,
-              "start": 75.933,
-              "end": 87.067,
-              "duration": 11.134,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-006@f002699",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 2699,
-              "end_frame": 2931,
-              "start": 89.967,
-              "end": 97.733,
-              "duration": 7.766,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-006@f002931",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 2931,
-              "end_frame": 3402,
-              "start": 97.7,
-              "end": 113.433,
-              "duration": 15.733,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        },
-        {
-          "episode": "file-007",
-          "frames": 9367,
-          "duration": 312.234,
-          "episode_bounds": [
-            [
-              0.0,
-              147.0
-            ],
-            [
-              147.0,
-              312.23333333333335
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              104
-            ],
-            [
-              528,
-              745
-            ],
-            [
-              1154,
-              1453
-            ],
-            [
-              1704,
-              1830
-            ],
-            [
-              2043,
-              2689
-            ],
-            [
-              3000,
-              3194
-            ],
-            [
-              3942,
-              9366
-            ]
-          ],
-          "span_coverage": 0.41,
-          "labeled_fraction": 0.251,
-          "full_video_usable": false,
-          "full_video_reason": "含 2 个 episode，第 [1] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-007@f000105",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 105,
-              "end_frame": 527,
-              "start": 3.5,
-              "end": 17.6,
-              "duration": 14.1,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-007@f000746",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 746,
-              "end_frame": 949,
-              "start": 24.867,
-              "end": 31.667,
-              "duration": 6.8,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-007@f000949",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 949,
-              "end_frame": 1153,
-              "start": 31.633,
-              "end": 38.467,
-              "duration": 6.834,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-007@f001454",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 1454,
-              "end_frame": 1703,
-              "start": 48.467,
-              "end": 56.8,
-              "duration": 8.333,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-007@f001831",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1831,
-              "end_frame": 2042,
-              "start": 61.033,
-              "end": 68.1,
-              "duration": 7.067,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-007@f002690",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 2690,
-              "end_frame": 2999,
-              "start": 89.667,
-              "end": 100.0,
-              "duration": 10.333,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-007@f003195",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 3195,
-              "end_frame": 3376,
-              "start": 106.5,
-              "end": 112.567,
-              "duration": 6.067,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-007@f003376",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 3376,
-              "end_frame": 3941,
-              "start": 112.533,
-              "end": 131.4,
-              "duration": 18.867,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        },
-        {
-          "episode": "file-008",
-          "frames": 10716,
-          "duration": 357.2,
-          "episode_bounds": [
-            [
-              0.0,
-              132.9
-            ],
-            [
-              132.9,
-              287.23333333333335
-            ],
-            [
-              287.23333333333335,
-              357.20000000000005
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1,
-            2
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              94
-            ],
-            [
-              432,
-              680
-            ],
-            [
-              1044,
-              1283
-            ],
-            [
-              1535,
-              1620
-            ],
-            [
-              1880,
-              2585
-            ],
-            [
-              2915,
-              3016
-            ],
-            [
-              3587,
-              10715
-            ]
-          ],
-          "span_coverage": 0.326,
-          "labeled_fraction": 0.197,
-          "full_video_usable": false,
-          "full_video_reason": "含 3 个 episode，第 [1, 2] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-008@f000095",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 95,
-              "end_frame": 431,
-              "start": 3.167,
-              "end": 14.4,
-              "duration": 11.233,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-008@f000681",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 681,
-              "end_frame": 828,
-              "start": 22.7,
-              "end": 27.633,
-              "duration": 4.933,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-008@f000828",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 828,
-              "end_frame": 1043,
-              "start": 27.6,
-              "end": 34.8,
-              "duration": 7.2,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-008@f001284",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 1284,
-              "end_frame": 1534,
-              "start": 42.8,
-              "end": 51.167,
-              "duration": 8.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-008@f001621",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1621,
-              "end_frame": 1879,
-              "start": 54.033,
-              "end": 62.667,
-              "duration": 8.634,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-008@f002586",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 2586,
-              "end_frame": 2914,
-              "start": 86.2,
-              "end": 97.167,
-              "duration": 10.967,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-008@f003017",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 3017,
-              "end_frame": 3190,
-              "start": 100.567,
-              "end": 106.367,
-              "duration": 5.8,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-008@f003190",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 3190,
-              "end_frame": 3586,
-              "start": 106.333,
-              "end": 119.567,
-              "duration": 13.234,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        },
-        {
-          "episode": "file-009",
-          "frames": 10951,
-          "duration": 365.034,
-          "episode_bounds": [
-            [
-              0.0,
-              127.23333333333333
-            ],
-            [
-              127.23333333333333,
-              244.76666666666665
-            ],
-            [
-              244.76666666666665,
-              365.0333333333333
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1,
-            2
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              114
-            ],
-            [
-              327,
-              554
-            ],
-            [
-              829,
-              1039
-            ],
-            [
-              1181,
-              1356
-            ],
-            [
-              1930,
-              2228
-            ],
-            [
-              2441,
-              2730
-            ],
-            [
-              2908,
-              2950
-            ],
-            [
-              3542,
-              10950
-            ]
-          ],
-          "span_coverage": 0.313,
-          "labeled_fraction": 0.199,
-          "full_video_usable": false,
-          "full_video_reason": "含 3 个 episode，第 [1, 2] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-009@f000115",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 115,
-              "end_frame": 326,
-              "start": 3.833,
-              "end": 10.9,
-              "duration": 7.067,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-009@f000555",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 555,
-              "end_frame": 661,
-              "start": 18.5,
-              "end": 22.067,
-              "duration": 3.567,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-009@f000661",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 661,
-              "end_frame": 828,
-              "start": 22.033,
-              "end": 27.633,
-              "duration": 5.6,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-009@f001040",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 1040,
-              "end_frame": 1180,
-              "start": 34.667,
-              "end": 39.367,
-              "duration": 4.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-009@f001357",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1357,
-              "end_frame": 1929,
-              "start": 45.233,
-              "end": 64.333,
-              "duration": 19.1,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-009@f002229",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 2229,
-              "end_frame": 2440,
-              "start": 74.3,
-              "end": 81.367,
-              "duration": 7.067,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-009@f002731",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 2731,
-              "end_frame": 2907,
-              "start": 91.033,
-              "end": 96.933,
-              "duration": 5.9,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-009@f002951",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 2951,
-              "end_frame": 3541,
-              "start": 98.367,
-              "end": 118.067,
-              "duration": 19.7,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        },
-        {
-          "episode": "file-010",
-          "frames": 9885,
-          "duration": 329.5,
-          "episode_bounds": [
-            [
-              0.0,
-              122.9
-            ],
-            [
-              122.9,
-              228.43333333333334
-            ],
-            [
-              228.43333333333334,
-              329.5
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1,
-            2
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              119
-            ],
-            [
-              351,
-              549
-            ],
-            [
-              681,
-              699
-            ],
-            [
-              801,
-              1029
-            ],
-            [
-              1191,
-              1309
-            ],
-            [
-              1777,
-              2154
-            ],
-            [
-              2326,
-              2604
-            ],
-            [
-              2776,
-              2784
-            ],
-            [
-              3186,
-              9884
-            ]
-          ],
-          "span_coverage": 0.31,
-          "labeled_fraction": 0.186,
-          "full_video_usable": false,
-          "full_video_reason": "含 3 个 episode，第 [1, 2] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-010@f000120",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 120,
-              "end_frame": 350,
-              "start": 4.0,
-              "end": 11.7,
-              "duration": 7.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-010@f000550",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 550,
-              "end_frame": 680,
-              "start": 18.333,
-              "end": 22.7,
-              "duration": 4.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-010@f000700",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 700,
-              "end_frame": 800,
-              "start": 23.333,
-              "end": 26.7,
-              "duration": 3.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-010@f001030",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 1030,
-              "end_frame": 1190,
-              "start": 34.333,
-              "end": 39.7,
-              "duration": 5.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-010@f001310",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1310,
-              "end_frame": 1776,
-              "start": 43.667,
-              "end": 59.233,
-              "duration": 15.566,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-010@f002155",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 2155,
-              "end_frame": 2325,
-              "start": 71.833,
-              "end": 77.533,
-              "duration": 5.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-010@f002605",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 2605,
-              "end_frame": 2775,
-              "start": 86.833,
-              "end": 92.533,
-              "duration": 5.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-010@f002785",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 2785,
-              "end_frame": 3185,
-              "start": 92.833,
-              "end": 106.2,
-              "duration": 13.367,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        },
-        {
-          "episode": "file-011",
-          "frames": 9035,
-          "duration": 301.167,
-          "episode_bounds": [
-            [
-              0.0,
-              103.4
-            ],
-            [
-              103.4,
-              204.73333333333335
-            ],
-            [
-              204.73333333333335,
-              301.1666666666667
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1,
-            2
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              129
-            ],
-            [
-              261,
-              509
-            ],
-            [
-              561,
-              619
-            ],
-            [
-              681,
-              869
-            ],
-            [
-              971,
-              1069
-            ],
-            [
-              1411,
-              1749
-            ],
-            [
-              1941,
-              2229
-            ],
-            [
-              2331,
-              2409
-            ],
-            [
-              2711,
-              9034
-            ]
-          ],
-          "span_coverage": 0.286,
-          "labeled_fraction": 0.141,
-          "full_video_usable": false,
-          "full_video_reason": "含 3 个 episode，第 [1, 2] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-011@f000130",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 130,
-              "end_frame": 260,
-              "start": 4.333,
-              "end": 8.7,
-              "duration": 4.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-011@f000510",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 510,
-              "end_frame": 560,
-              "start": 17.0,
-              "end": 18.7,
-              "duration": 1.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-011@f000620",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 620,
-              "end_frame": 680,
-              "start": 20.667,
-              "end": 22.7,
-              "duration": 2.033,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-011@f000870",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 870,
-              "end_frame": 970,
-              "start": 29.0,
-              "end": 32.367,
-              "duration": 3.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-011@f001070",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1070,
-              "end_frame": 1410,
-              "start": 35.667,
-              "end": 47.033,
-              "duration": 11.366,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-011@f001750",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 1750,
-              "end_frame": 1940,
-              "start": 58.333,
-              "end": 64.7,
-              "duration": 6.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-011@f002230",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 2230,
-              "end_frame": 2330,
-              "start": 74.333,
-              "end": 77.7,
-              "duration": 3.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-011@f002410",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 2410,
-              "end_frame": 2710,
-              "start": 80.333,
-              "end": 90.367,
-              "duration": 10.034,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        },
-        {
-          "episode": "file-012",
-          "frames": 8864,
-          "duration": 295.467,
-          "episode_bounds": [
-            [
-              0.0,
-              105.26666666666667
-            ],
-            [
-              105.26666666666667,
-              200.9
-            ],
-            [
-              200.9,
-              295.4666666666667
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1,
-            2
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              189
-            ],
-            [
-              271,
-              499
-            ],
-            [
-              531,
-              599
-            ],
-            [
-              650,
-              918
-            ],
-            [
-              1040,
-              1188
-            ],
-            [
-              1530,
-              1928
-            ],
-            [
-              2120,
-              2378
-            ],
-            [
-              2500,
-              2578
-            ],
-            [
-              2830,
-              8863
-            ]
-          ],
-          "span_coverage": 0.298,
-          "labeled_fraction": 0.134,
-          "full_video_usable": false,
-          "full_video_reason": "含 3 个 episode，第 [1, 2] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-012@f000190",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 190,
-              "end_frame": 270,
-              "start": 6.333,
-              "end": 9.033,
-              "duration": 2.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-012@f000500",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 500,
-              "end_frame": 530,
-              "start": 16.667,
-              "end": 17.7,
-              "duration": 1.033,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-012@f000600",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 600,
-              "end_frame": 649,
-              "start": 20.0,
-              "end": 21.667,
-              "duration": 1.667,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-012@f000919",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 919,
-              "end_frame": 1039,
-              "start": 30.633,
-              "end": 34.667,
-              "duration": 4.034,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-012@f001189",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1189,
-              "end_frame": 1529,
-              "start": 39.633,
-              "end": 51.0,
-              "duration": 11.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-012@f001929",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 1929,
-              "end_frame": 2119,
-              "start": 64.3,
-              "end": 70.667,
-              "duration": 6.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-012@f002379",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 2379,
-              "end_frame": 2499,
-              "start": 79.3,
-              "end": 83.333,
-              "duration": 4.033,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-012@f002579",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 2579,
-              "end_frame": 2829,
-              "start": 85.967,
-              "end": 94.333,
-              "duration": 8.366,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        },
-        {
-          "episode": "file-013",
-          "frames": 9427,
-          "duration": 314.234,
-          "episode_bounds": [
-            [
-              0.0,
-              111.03333333333333
-            ],
-            [
-              111.03333333333333,
-              208.66666666666669
-            ],
-            [
-              208.66666666666669,
-              314.23333333333335
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1,
-            2
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              279
-            ],
-            [
-              361,
-              659
-            ],
-            [
-              701,
-              757
-            ],
-            [
-              819,
-              1057
-            ],
-            [
-              1109,
-              1247
-            ],
-            [
-              1559,
-              2007
-            ],
-            [
-              2119,
-              2317
-            ],
-            [
-              2449,
-              2547
-            ],
-            [
-              2949,
-              9426
-            ]
-          ],
-          "span_coverage": 0.283,
-          "labeled_fraction": 0.126,
-          "full_video_usable": false,
-          "full_video_reason": "含 3 个 episode，第 [1, 2] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-013@f000280",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 280,
-              "end_frame": 360,
-              "start": 9.333,
-              "end": 12.033,
-              "duration": 2.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-013@f000660",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 660,
-              "end_frame": 700,
-              "start": 22.0,
-              "end": 23.367,
-              "duration": 1.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-013@f000758",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 758,
-              "end_frame": 818,
-              "start": 25.267,
-              "end": 27.3,
-              "duration": 2.033,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-013@f001058",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 1058,
-              "end_frame": 1108,
-              "start": 35.267,
-              "end": 36.967,
-              "duration": 1.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-013@f001248",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1248,
-              "end_frame": 1558,
-              "start": 41.6,
-              "end": 51.967,
-              "duration": 10.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-013@f002008",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 2008,
-              "end_frame": 2118,
-              "start": 66.933,
-              "end": 70.633,
-              "duration": 3.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-013@f002318",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 2318,
-              "end_frame": 2448,
-              "start": 77.267,
-              "end": 81.633,
-              "duration": 4.366,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-013@f002548",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 2548,
-              "end_frame": 2948,
-              "start": 84.933,
-              "end": 98.3,
-              "duration": 13.367,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        },
-        {
-          "episode": "file-014",
-          "frames": 7530,
-          "duration": 251.0,
-          "episode_bounds": [
-            [
-              0.0,
-              110.53333333333333
-            ],
-            [
-              110.53333333333333,
-              251.0
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              199
-            ],
-            [
-              301,
-              509
-            ],
-            [
-              571,
-              639
-            ],
-            [
-              691,
-              939
-            ],
-            [
-              1041,
-              1179
-            ],
-            [
-              1481,
-              2039
-            ],
-            [
-              2161,
-              2369
-            ],
-            [
-              2511,
-              2586
-            ],
-            [
-              2918,
-              7529
-            ]
-          ],
-          "span_coverage": 0.361,
-          "labeled_fraction": 0.16,
-          "full_video_usable": false,
-          "full_video_reason": "含 2 个 episode，第 [1] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-014@f000200",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 200,
-              "end_frame": 300,
-              "start": 6.667,
-              "end": 10.033,
-              "duration": 3.366,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-014@f000510",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 510,
-              "end_frame": 570,
-              "start": 17.0,
-              "end": 19.033,
-              "duration": 2.033,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-014@f000640",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 640,
-              "end_frame": 690,
-              "start": 21.333,
-              "end": 23.033,
-              "duration": 1.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-014@f000940",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 940,
-              "end_frame": 1040,
-              "start": 31.333,
-              "end": 34.7,
-              "duration": 3.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-014@f001180",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1180,
-              "end_frame": 1480,
-              "start": 39.333,
-              "end": 49.367,
-              "duration": 10.034,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-014@f002040",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 2040,
-              "end_frame": 2160,
-              "start": 68.0,
-              "end": 72.033,
-              "duration": 4.033,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-014@f002370",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 2370,
-              "end_frame": 2510,
-              "start": 79.0,
-              "end": 83.7,
-              "duration": 4.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-014@f002587",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 2587,
-              "end_frame": 2917,
-              "start": 86.233,
-              "end": 97.267,
-              "duration": 11.034,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        },
-        {
-          "episode": "file-015",
-          "frames": 10749,
-          "duration": 358.3,
-          "episode_bounds": [
-            [
-              0.0,
-              108.8
-            ],
-            [
-              108.8,
-              231.5
-            ],
-            [
-              231.5,
-              358.3
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1,
-            2
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              229
-            ],
-            [
-              341,
-              609
-            ],
-            [
-              681,
-              739
-            ],
-            [
-              811,
-              1039
-            ],
-            [
-              1201,
-              1389
-            ],
-            [
-              1601,
-              2119
-            ],
-            [
-              2231,
-              2369
-            ],
-            [
-              2501,
-              2569
-            ],
-            [
-              2911,
-              10748
-            ]
-          ],
-          "span_coverage": 0.249,
-          "labeled_fraction": 0.112,
-          "full_video_usable": false,
-          "full_video_reason": "含 3 个 episode，第 [1, 2] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-015@f000230",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 230,
-              "end_frame": 340,
-              "start": 7.667,
-              "end": 11.367,
-              "duration": 3.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-015@f000610",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 610,
-              "end_frame": 680,
-              "start": 20.333,
-              "end": 22.7,
-              "duration": 2.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-015@f000740",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 740,
-              "end_frame": 810,
-              "start": 24.667,
-              "end": 27.033,
-              "duration": 2.366,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-015@f001040",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 1040,
-              "end_frame": 1200,
-              "start": 34.667,
-              "end": 40.033,
-              "duration": 5.366,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-015@f001390",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1390,
-              "end_frame": 1600,
-              "start": 46.333,
-              "end": 53.367,
-              "duration": 7.034,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-015@f002120",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 2120,
-              "end_frame": 2230,
-              "start": 70.667,
-              "end": 74.367,
-              "duration": 3.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-015@f002370",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 2370,
-              "end_frame": 2500,
-              "start": 79.0,
-              "end": 83.367,
-              "duration": 4.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-015@f002570",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 2570,
-              "end_frame": 2910,
-              "start": 85.667,
-              "end": 97.033,
-              "duration": 11.366,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        },
-        {
-          "episode": "file-016",
-          "frames": 7834,
-          "duration": 261.134,
-          "episode_bounds": [
-            [
-              0.0,
-              132.3
-            ],
-            [
-              132.3,
-              261.1333333333333
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              269
-            ],
-            [
-              471,
-              839
-            ],
-            [
-              971,
-              1049
-            ],
-            [
-              1151,
-              1369
-            ],
-            [
-              1481,
-              1689
-            ],
-            [
-              1961,
-              2609
-            ],
-            [
-              2811,
-              3019
-            ],
-            [
-              3171,
-              3259
-            ],
-            [
-              3551,
-              7833
-            ]
-          ],
-          "span_coverage": 0.419,
-          "labeled_fraction": 0.186,
-          "full_video_usable": false,
-          "full_video_reason": "含 2 个 episode，第 [1] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-016@f000270",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 270,
-              "end_frame": 470,
-              "start": 9.0,
-              "end": 15.7,
-              "duration": 6.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-016@f000840",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 840,
-              "end_frame": 970,
-              "start": 28.0,
-              "end": 32.367,
-              "duration": 4.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-016@f001050",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 1050,
-              "end_frame": 1150,
-              "start": 35.0,
-              "end": 38.367,
-              "duration": 3.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-016@f001370",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 1370,
-              "end_frame": 1480,
-              "start": 45.667,
-              "end": 49.367,
-              "duration": 3.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-016@f001690",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1690,
-              "end_frame": 1960,
-              "start": 56.333,
-              "end": 65.367,
-              "duration": 9.034,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-016@f002610",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 2610,
-              "end_frame": 2810,
-              "start": 87.0,
-              "end": 93.7,
-              "duration": 6.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-016@f003020",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 3020,
-              "end_frame": 3170,
-              "start": 100.667,
-              "end": 105.7,
-              "duration": 5.033,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-016@f003260",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 3260,
-              "end_frame": 3550,
-              "start": 108.667,
-              "end": 118.367,
-              "duration": 9.7,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        },
-        {
-          "episode": "file-017",
-          "frames": 10514,
-          "duration": 350.467,
-          "episode_bounds": [
-            [
-              0.0,
-              117.73333333333333
-            ],
-            [
-              117.73333333333333,
-              231.63333333333333
-            ],
-            [
-              231.63333333333333,
-              350.46666666666664
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1,
-            2
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              259
-            ],
-            [
-              481,
-              819
-            ],
-            [
-              891,
-              959
-            ],
-            [
-              1091,
-              1289
-            ],
-            [
-              1431,
-              1599
-            ],
-            [
-              1821,
-              2279
-            ],
-            [
-              2391,
-              2559
-            ],
-            [
-              2711,
-              2749
-            ],
-            [
-              3111,
-              10513
-            ]
-          ],
-          "span_coverage": 0.271,
-          "labeled_fraction": 0.134,
-          "full_video_usable": false,
-          "full_video_reason": "含 3 个 episode，第 [1, 2] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-017@f000260",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 260,
-              "end_frame": 480,
-              "start": 8.667,
-              "end": 16.033,
-              "duration": 7.366,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-017@f000820",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 820,
-              "end_frame": 890,
-              "start": 27.333,
-              "end": 29.7,
-              "duration": 2.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-017@f000960",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 960,
-              "end_frame": 1090,
-              "start": 32.0,
-              "end": 36.367,
-              "duration": 4.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-017@f001290",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 1290,
-              "end_frame": 1430,
-              "start": 43.0,
-              "end": 47.7,
-              "duration": 4.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-017@f001600",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1600,
-              "end_frame": 1820,
-              "start": 53.333,
-              "end": 60.7,
-              "duration": 7.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-017@f002280",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 2280,
-              "end_frame": 2390,
-              "start": 76.0,
-              "end": 79.7,
-              "duration": 3.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-017@f002560",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 2560,
-              "end_frame": 2710,
-              "start": 85.333,
-              "end": 90.367,
-              "duration": 5.034,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-017@f002750",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 2750,
-              "end_frame": 3110,
-              "start": 91.667,
-              "end": 103.7,
-              "duration": 12.033,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        },
-        {
-          "episode": "file-018",
-          "frames": 9740,
-          "duration": 324.667,
-          "episode_bounds": [
-            [
-              0.0,
-              108.86666666666666
-            ],
-            [
-              108.86666666666666,
-              215.36666666666667
-            ],
-            [
-              215.36666666666667,
-              324.6666666666667
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1,
-            2
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              219
-            ],
-            [
-              321,
-              599
-            ],
-            [
-              691,
-              769
-            ],
-            [
-              881,
-              1109
-            ],
-            [
-              1231,
-              1379
-            ],
-            [
-              1541,
-              2039
-            ],
-            [
-              2151,
-              2359
-            ],
-            [
-              2471,
-              2539
-            ],
-            [
-              2896,
-              9739
-            ]
-          ],
-          "span_coverage": 0.275,
-          "labeled_fraction": 0.119,
-          "full_video_usable": false,
-          "full_video_reason": "含 3 个 episode，第 [1, 2] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-018@f000220",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 220,
-              "end_frame": 320,
-              "start": 7.333,
-              "end": 10.7,
-              "duration": 3.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-018@f000600",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 600,
-              "end_frame": 690,
-              "start": 20.0,
-              "end": 23.033,
-              "duration": 3.033,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-018@f000770",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 770,
-              "end_frame": 880,
-              "start": 25.667,
-              "end": 29.367,
-              "duration": 3.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-018@f001110",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 1110,
-              "end_frame": 1230,
-              "start": 37.0,
-              "end": 41.033,
-              "duration": 4.033,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-018@f001380",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1380,
-              "end_frame": 1540,
-              "start": 46.0,
-              "end": 51.367,
-              "duration": 5.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-018@f002040",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 2040,
-              "end_frame": 2150,
-              "start": 68.0,
-              "end": 71.7,
-              "duration": 3.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-018@f002360",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 2360,
-              "end_frame": 2470,
-              "start": 78.667,
-              "end": 82.367,
-              "duration": 3.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-018@f002540",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 2540,
-              "end_frame": 2895,
-              "start": 84.667,
-              "end": 96.533,
-              "duration": 11.866,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        },
-        {
-          "episode": "file-019",
-          "frames": 7282,
-          "duration": 242.734,
-          "episode_bounds": [
-            [
-              0.0,
-              124.6
-            ],
-            [
-              124.6,
-              242.73333333333335
-            ]
-          ],
-          "labeled_episodes": [
-            0
-          ],
-          "unlabeled_episodes": [
-            1
-          ],
-          "unlabeled_frame_gaps": [
-            [
-              0,
-              139
-            ],
-            [
-              341,
-              659
-            ],
-            [
-              741,
-              809
-            ],
-            [
-              891,
-              1139
-            ],
-            [
-              1351,
-              1489
-            ],
-            [
-              1713,
-              2481
-            ],
-            [
-              2623,
-              2891
-            ],
-            [
-              2993,
-              3061
-            ],
-            [
-              3376,
-              7281
-            ]
-          ],
-          "span_coverage": 0.444,
-          "labeled_fraction": 0.186,
-          "full_video_usable": false,
-          "full_video_reason": "含 2 个 episode，第 [1] 个没有标注 —— 那些动作没有真值",
-          "segments": [
-            {
-              "id": "file-019@f000140",
-              "subtask": "pick_up_teapot_lid",
-              "episode_index": 0,
-              "start_frame": 140,
-              "end_frame": 340,
-              "start": 4.667,
-              "end": 11.367,
-              "duration": 6.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-019@f000660",
-              "subtask": "pick_up_tea_bag",
-              "episode_index": 0,
-              "start_frame": 660,
-              "end_frame": 740,
-              "start": 22.0,
-              "end": 24.7,
-              "duration": 2.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-019@f000810",
-              "subtask": "place_tea_bag_in_teapot",
-              "episode_index": 0,
-              "start_frame": 810,
-              "end_frame": 890,
-              "start": 27.0,
-              "end": 29.7,
-              "duration": 2.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-019@f001140",
-              "subtask": "pick_up_kettle",
-              "episode_index": 0,
-              "start_frame": 1140,
-              "end_frame": 1350,
-              "start": 38.0,
-              "end": 45.033,
-              "duration": 7.033,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-019@f001490",
-              "subtask": "pour_water",
-              "episode_index": 0,
-              "start_frame": 1490,
-              "end_frame": 1712,
-              "start": 49.667,
-              "end": 57.1,
-              "duration": 7.433,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-019@f002482",
-              "subtask": "put_lid_on_teapot",
-              "episode_index": 0,
-              "start_frame": 2482,
-              "end_frame": 2622,
-              "start": 82.733,
-              "end": 87.433,
-              "duration": 4.7,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-019@f002892",
-              "subtask": "pick_up_teapot",
-              "episode_index": 0,
-              "start_frame": 2892,
-              "end_frame": 2992,
-              "start": 96.4,
-              "end": 99.767,
-              "duration": 3.367,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-019@f003062",
-              "subtask": "pour_tea",
-              "episode_index": 0,
-              "start_frame": 3062,
-              "end_frame": 3375,
-              "start": 102.067,
-              "end": 112.533,
-              "duration": 10.466,
-              "usable": true,
-              "reasons": []
-            }
-          ]
-        }
-      ]
-    },
     "wash": {
       "family": "wash",
       "fps": 25.0,
@@ -21085,7 +18198,12 @@
           "episode": "file-000",
           "frames": 2484,
           "duration": 99.36,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              99.36
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -21283,7 +18401,12 @@
           "episode": "file-001",
           "frames": 2276,
           "duration": 91.04,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              91.04
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -21481,7 +18604,12 @@
           "episode": "file-002",
           "frames": 1986,
           "duration": 79.44,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              79.44
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -21675,7 +18803,12 @@
           "episode": "file-003",
           "frames": 2169,
           "duration": 86.76,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              86.76
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -21869,7 +19002,12 @@
           "episode": "file-004",
           "frames": 2164,
           "duration": 86.56,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              86.56
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -22071,7 +19209,12 @@
           "episode": "file-005",
           "frames": 2239,
           "duration": 89.56,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              89.56
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -22273,7 +19416,12 @@
           "episode": "file-006",
           "frames": 2284,
           "duration": 91.36,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              91.36
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -22471,7 +19619,12 @@
           "episode": "file-007",
           "frames": 2093,
           "duration": 83.72,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              83.72
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -22673,7 +19826,12 @@
           "episode": "file-008",
           "frames": 2100,
           "duration": 84.0,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              84.0
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -22883,7 +20041,12 @@
           "episode": "file-009",
           "frames": 2134,
           "duration": 85.36,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              85.36
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -23081,7 +20244,12 @@
           "episode": "file-010",
           "frames": 2020,
           "duration": 80.8,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              80.8
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -23283,7 +20451,12 @@
           "episode": "file-011",
           "frames": 2098,
           "duration": 83.92,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              83.92
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -23477,7 +20650,12 @@
           "episode": "file-012",
           "frames": 2069,
           "duration": 82.76,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              82.76
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -23675,7 +20853,12 @@
           "episode": "file-013",
           "frames": 1976,
           "duration": 79.04,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              79.04
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -23877,7 +21060,12 @@
           "episode": "file-014",
           "frames": 2031,
           "duration": 81.24,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              81.24
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -24079,7 +21267,12 @@
           "episode": "file-015",
           "frames": 2124,
           "duration": 84.96,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              84.96
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -24277,7 +21470,12 @@
           "episode": "file-016",
           "frames": 1934,
           "duration": 77.36,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              77.36
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -24475,7 +21673,12 @@
           "episode": "file-017",
           "frames": 1931,
           "duration": 77.24,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              77.24
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -24681,7 +21884,12 @@
           "episode": "file-018",
           "frames": 1883,
           "duration": 75.32,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              75.32
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -24887,7 +22095,12 @@
           "episode": "file-019",
           "frames": 1863,
           "duration": 74.52,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              74.52
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -25097,7 +22310,12 @@
           "episode": "file-020",
           "frames": 1923,
           "duration": 76.92,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              76.92
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -25303,7 +22521,12 @@
           "episode": "file-021",
           "frames": 1794,
           "duration": 71.76,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              71.76
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -25497,7 +22720,12 @@
           "episode": "file-022",
           "frames": 1728,
           "duration": 69.12,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              69.12
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -25707,7 +22935,12 @@
           "episode": "file-023",
           "frames": 1704,
           "duration": 68.16,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              68.16
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -25905,7 +23138,12 @@
           "episode": "file-024",
           "frames": 1770,
           "duration": 70.8,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              70.8
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -26107,7 +23345,12 @@
           "episode": "file-025",
           "frames": 1789,
           "duration": 71.56,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              71.56
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -26305,7 +23548,12 @@
           "episode": "file-026",
           "frames": 1730,
           "duration": 69.2,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              69.2
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -26511,7 +23759,12 @@
           "episode": "file-027",
           "frames": 1760,
           "duration": 70.4,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              70.4
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -26717,7 +23970,12 @@
           "episode": "file-028",
           "frames": 1630,
           "duration": 65.2,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              65.2
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
@@ -26915,7 +24173,12 @@
           "episode": "file-029",
           "frames": 1871,
           "duration": 74.84,
-          "episode_bounds": null,
+          "episode_bounds": [
+            [
+              0.0,
+              74.84
+            ]
+          ],
           "labeled_episodes": [
             0
           ],
