@@ -40,6 +40,7 @@ import json
 import os
 import subprocess
 import sys
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import Any
@@ -69,7 +70,11 @@ def produce(item: dict[str, Any], fps: float) -> dict[str, Any]:
             if item["start_frame"] is not None else frames_of(src))
 
     if (dst.exists() or dst.is_symlink()) and frames_of(dst) == want:
-        return {**item, "state": "已存在", "frames": want, "bytes": dst.stat().st_size}
+        # ⚠ `stat()` 会跟随符号链接去统计目标大小 —— 那会把 5.6 GB 的
+        # `data/source` 算进「输出」里。实占空间要用 `lstat()`。
+        return {**item, "state": "已存在", "frames": want,
+                "bytes": dst.lstat().st_size,
+                "how": "symlink" if dst.is_symlink() else "clip"}
 
     dst.parent.mkdir(parents=True, exist_ok=True)
     tmp = dst.with_name(f"{dst.stem}.{os.getpid()}.part.mp4")   # 扩展名必须留 .mp4
@@ -98,7 +103,7 @@ def produce(item: dict[str, Any], fps: float) -> dict[str, Any]:
             return {**item, "state": "帧数不符", "frames": got, "want": want}
         os.replace(tmp, dst)
         return {**item, "state": "新建", "how": how, "frames": got,
-                "bytes": 0 if how == "symlink" else dst.stat().st_size}
+                "bytes": dst.lstat().st_size}
     except subprocess.CalledProcessError as exc:
         tmp.unlink(missing_ok=True)
         return {**item, "state": "ffmpeg 失败", "error": str(exc)[:120]}
@@ -127,12 +132,12 @@ def main() -> int:
     with ThreadPoolExecutor(max_workers=WORKERS) as pool:
         done = list(pool.map(lambda m: produce(m, index[m["family"]]["fps"]), media))
 
-    from collections import Counter
     tally = Counter(d["state"] for d in done)
     size = sum(d.get("bytes", 0) for d in done)
-    hard = sum(1 for d in done if d.get("how") == "hardlink")
+    ways = Counter(d.get("how") for d in done if d.get("how"))
     print(f"\n{dict(tally)}")
-    print(f"输出 {size / 1e9:.2f} GB（其中 {hard} 个是硬链接，不额外占空间）")
+    print(f"实占 {size / 1e9:.2f} GB   产出方式 {dict(ways)}"
+          f"（符号链接指向 data/source，本身不占空间）")
 
     bad = [d for d in done if d["state"] not in ("新建", "已存在")]
     if bad:

@@ -8783,7 +8783,7 @@
             ]
           ],
           "span_coverage": 0.828,
-          "labeled_fraction": 0.576,
+          "labeled_fraction": 0.574,
           "full_video_usable": true,
           "full_video_reason": null,
           "segments": [
@@ -8801,18 +8801,6 @@
             },
             {
               "id": "file-037@f000272",
-              "subtask": "pick_box",
-              "episode_index": 0,
-              "start_frame": 272,
-              "end_frame": 272,
-              "start": 13.6,
-              "end": 13.65,
-              "duration": 0.05,
-              "usable": true,
-              "reasons": []
-            },
-            {
-              "id": "file-037@f000272-2",
               "subtask": "place_pen",
               "episode_index": 0,
               "start_frame": 272,

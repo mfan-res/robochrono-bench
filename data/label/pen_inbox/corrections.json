@@ -1,0 +1,14 @@
+{
+  "corrections": [
+    {
+      "at": "2026-08-18T07:32:11+00:00",
+      "episode": "file-037",
+      "what": "删除一个长度为 1 帧的段 file-037@f000272（pick_box，帧 272–272）",
+      "why": "标注是按 K 打起点、再按 K 打终点，连按两次会产生零长度段。该段 0.05 秒，无法承载任何题目 —— 它此前出了 3 道片段题、切出一个 13 KB 的单帧「视频」。这也是当初报给数据方的 Q4「0.05 秒片段」的真正源头。",
+      "also": "同一起始帧的另一段 file-037@f000272-2（place_pen）去掉 -2 后缀 —— 段 id 由起始帧派生，后缀只在冲突时才加，冲突消失就该还原。",
+      "backup": "data/label/pen_inbox/segments.before_zerolen_fix/file-037_segments.json",
+      "segments_before": 3,
+      "segments_after": 2
+    }
+  ]
+}

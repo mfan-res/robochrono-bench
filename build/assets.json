@@ -39,8 +39,8 @@
       "key": "airpods/file-000/main/video",
       "kind": "video",
       "frames": 2687,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-001/main/clip/000110-000280",
@@ -81,8 +81,8 @@
       "key": "airpods/file-001/main/video",
       "kind": "video",
       "frames": 1874,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-002/main/clip/000150-000190",
@@ -123,8 +123,8 @@
       "key": "airpods/file-002/main/video",
       "kind": "video",
       "frames": 1741,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-003/main/clip/000150-000190",
@@ -165,8 +165,8 @@
       "key": "airpods/file-003/main/video",
       "kind": "video",
       "frames": 1873,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-004/main/clip/000140-000180",
@@ -207,8 +207,8 @@
       "key": "airpods/file-004/main/video",
       "kind": "video",
       "frames": 1715,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-005/main/clip/000130-000180",
@@ -249,8 +249,8 @@
       "key": "airpods/file-005/main/video",
       "kind": "video",
       "frames": 1398,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-006/main/clip/000130-000190",
@@ -291,8 +291,8 @@
       "key": "airpods/file-006/main/video",
       "kind": "video",
       "frames": 1588,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-007/main/clip/000150-000200",
@@ -333,8 +333,8 @@
       "key": "airpods/file-007/main/video",
       "kind": "video",
       "frames": 1658,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-008/main/clip/000112-000172",
@@ -375,8 +375,8 @@
       "key": "airpods/file-008/main/video",
       "kind": "video",
       "frames": 1591,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-009/main/clip/000130-000200",
@@ -417,8 +417,8 @@
       "key": "airpods/file-009/main/video",
       "kind": "video",
       "frames": 2005,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-010/main/clip/000120-000170",
@@ -459,8 +459,8 @@
       "key": "airpods/file-010/main/video",
       "kind": "video",
       "frames": 1414,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-011/main/clip/000120-000190",
@@ -501,8 +501,8 @@
       "key": "airpods/file-011/main/video",
       "kind": "video",
       "frames": 1744,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-012/main/clip/000140-000190",
@@ -543,8 +543,8 @@
       "key": "airpods/file-012/main/video",
       "kind": "video",
       "frames": 1491,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-013/main/clip/000110-000180",
@@ -585,8 +585,8 @@
       "key": "airpods/file-013/main/video",
       "kind": "video",
       "frames": 1279,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-014/main/clip/000120-000180",
@@ -627,8 +627,8 @@
       "key": "airpods/file-014/main/video",
       "kind": "video",
       "frames": 1598,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-015/main/clip/000120-000170",
@@ -669,8 +669,8 @@
       "key": "airpods/file-015/main/video",
       "kind": "video",
       "frames": 1391,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-016/main/clip/000120-000200",
@@ -711,8 +711,8 @@
       "key": "airpods/file-016/main/video",
       "kind": "video",
       "frames": 1652,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-017/main/clip/000110-000192",
@@ -753,8 +753,8 @@
       "key": "airpods/file-017/main/video",
       "kind": "video",
       "frames": 1701,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-018/main/clip/000130-000180",
@@ -795,8 +795,8 @@
       "key": "airpods/file-018/main/video",
       "kind": "video",
       "frames": 1530,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-019/main/clip/000113-000175",
@@ -837,8 +837,8 @@
       "key": "airpods/file-019/main/video",
       "kind": "video",
       "frames": 1261,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-020/main/clip/000100-000160",
@@ -879,8 +879,8 @@
       "key": "airpods/file-020/main/video",
       "kind": "video",
       "frames": 1557,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-021/main/clip/000120-000180",
@@ -921,8 +921,8 @@
       "key": "airpods/file-021/main/video",
       "kind": "video",
       "frames": 1291,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-022/main/clip/000100-000160",
@@ -963,8 +963,8 @@
       "key": "airpods/file-022/main/video",
       "kind": "video",
       "frames": 1440,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-023/main/clip/000120-000170",
@@ -1005,8 +1005,8 @@
       "key": "airpods/file-023/main/video",
       "kind": "video",
       "frames": 1617,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-024/main/clip/000130-000190",
@@ -1047,8 +1047,8 @@
       "key": "airpods/file-024/main/video",
       "kind": "video",
       "frames": 1509,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-025/main/clip/000130-000190",
@@ -1089,8 +1089,8 @@
       "key": "airpods/file-025/main/video",
       "kind": "video",
       "frames": 1796,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-026/main/clip/000110-000170",
@@ -1131,8 +1131,8 @@
       "key": "airpods/file-026/main/video",
       "kind": "video",
       "frames": 1681,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-027/main/clip/000110-000180",
@@ -1173,8 +1173,8 @@
       "key": "airpods/file-027/main/video",
       "kind": "video",
       "frames": 1515,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-028/main/clip/000120-000190",
@@ -1215,8 +1215,8 @@
       "key": "airpods/file-028/main/video",
       "kind": "video",
       "frames": 1305,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-029/main/clip/000100-000160",
@@ -1257,8 +1257,8 @@
       "key": "airpods/file-029/main/video",
       "kind": "video",
       "frames": 1697,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-030/main/clip/000110-000190",
@@ -1299,8 +1299,8 @@
       "key": "airpods/file-030/main/video",
       "kind": "video",
       "frames": 1336,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-031/main/clip/000120-000210",
@@ -1341,8 +1341,8 @@
       "key": "airpods/file-031/main/video",
       "kind": "video",
       "frames": 1348,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-032/main/clip/000110-000180",
@@ -1383,8 +1383,8 @@
       "key": "airpods/file-032/main/video",
       "kind": "video",
       "frames": 1378,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-033/main/clip/000110-000180",
@@ -1425,8 +1425,8 @@
       "key": "airpods/file-033/main/video",
       "kind": "video",
       "frames": 1377,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-034/main/clip/000130-000210",
@@ -1467,8 +1467,8 @@
       "key": "airpods/file-034/main/video",
       "kind": "video",
       "frames": 1470,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-035/main/clip/000120-000190",
@@ -1509,8 +1509,8 @@
       "key": "airpods/file-035/main/video",
       "kind": "video",
       "frames": 1763,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-036/main/clip/000110-000160",
@@ -1551,8 +1551,8 @@
       "key": "airpods/file-036/main/video",
       "kind": "video",
       "frames": 1358,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-037/main/clip/000110-000160",
@@ -1593,8 +1593,8 @@
       "key": "airpods/file-037/main/video",
       "kind": "video",
       "frames": 1550,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-038/main/clip/000110-000160",
@@ -1635,8 +1635,8 @@
       "key": "airpods/file-038/main/video",
       "kind": "video",
       "frames": 1307,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "airpods/file-039/main/clip/000090-000147",
@@ -1677,8 +1677,8 @@
       "key": "airpods/file-039/main/video",
       "kind": "video",
       "frames": 1335,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 84,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-000/main/clip/000000-000135",
@@ -1705,8 +1705,8 @@
       "key": "gift_inhand/file-000/main/video",
       "kind": "video",
       "frames": 542,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-001/main/clip/000000-000142",
@@ -1733,8 +1733,8 @@
       "key": "gift_inhand/file-001/main/video",
       "kind": "video",
       "frames": 516,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-002/main/clip/000000-000150",
@@ -1761,8 +1761,8 @@
       "key": "gift_inhand/file-002/main/video",
       "kind": "video",
       "frames": 547,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-003/main/clip/000000-000190",
@@ -1789,8 +1789,8 @@
       "key": "gift_inhand/file-003/main/video",
       "kind": "video",
       "frames": 642,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-004/main/clip/000000-000273",
@@ -1817,8 +1817,8 @@
       "key": "gift_inhand/file-004/main/video",
       "kind": "video",
       "frames": 643,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-005/main/clip/000000-000239",
@@ -1845,8 +1845,8 @@
       "key": "gift_inhand/file-005/main/video",
       "kind": "video",
       "frames": 583,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-006/main/clip/000000-000169",
@@ -1873,8 +1873,8 @@
       "key": "gift_inhand/file-006/main/video",
       "kind": "video",
       "frames": 542,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-007/main/clip/000000-000194",
@@ -1901,8 +1901,8 @@
       "key": "gift_inhand/file-007/main/video",
       "kind": "video",
       "frames": 559,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-008/main/clip/000000-000284",
@@ -1929,8 +1929,8 @@
       "key": "gift_inhand/file-008/main/video",
       "kind": "video",
       "frames": 661,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-009/main/clip/000000-000356",
@@ -1957,8 +1957,8 @@
       "key": "gift_inhand/file-009/main/video",
       "kind": "video",
       "frames": 705,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-010/main/clip/000000-000182",
@@ -1985,8 +1985,8 @@
       "key": "gift_inhand/file-010/main/video",
       "kind": "video",
       "frames": 776,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-011/main/clip/000000-000150",
@@ -2013,8 +2013,8 @@
       "key": "gift_inhand/file-011/main/video",
       "kind": "video",
       "frames": 601,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-012/main/clip/000000-000185",
@@ -2041,8 +2041,8 @@
       "key": "gift_inhand/file-012/main/video",
       "kind": "video",
       "frames": 690,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-013/main/clip/000000-000142",
@@ -2069,8 +2069,8 @@
       "key": "gift_inhand/file-013/main/video",
       "kind": "video",
       "frames": 562,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-014/main/clip/000000-000216",
@@ -2097,8 +2097,8 @@
       "key": "gift_inhand/file-014/main/video",
       "kind": "video",
       "frames": 718,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-015/main/clip/000000-000261",
@@ -2125,8 +2125,8 @@
       "key": "gift_inhand/file-015/main/video",
       "kind": "video",
       "frames": 787,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-016/main/clip/000000-000249",
@@ -2153,8 +2153,8 @@
       "key": "gift_inhand/file-016/main/video",
       "kind": "video",
       "frames": 671,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-017/main/clip/000000-000410",
@@ -2181,8 +2181,8 @@
       "key": "gift_inhand/file-017/main/video",
       "kind": "video",
       "frames": 930,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-018/main/clip/000000-000192",
@@ -2209,8 +2209,8 @@
       "key": "gift_inhand/file-018/main/video",
       "kind": "video",
       "frames": 561,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-019/main/clip/000000-000220",
@@ -2237,8 +2237,8 @@
       "key": "gift_inhand/file-019/main/video",
       "kind": "video",
       "frames": 572,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-020/main/clip/000000-000232",
@@ -2265,8 +2265,8 @@
       "key": "gift_inhand/file-020/main/video",
       "kind": "video",
       "frames": 559,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-021/main/clip/000000-000221",
@@ -2293,8 +2293,8 @@
       "key": "gift_inhand/file-021/main/video",
       "kind": "video",
       "frames": 579,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-022/main/clip/000000-000249",
@@ -2321,8 +2321,8 @@
       "key": "gift_inhand/file-022/main/video",
       "kind": "video",
       "frames": 548,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-023/main/clip/000000-000247",
@@ -2349,8 +2349,8 @@
       "key": "gift_inhand/file-023/main/video",
       "kind": "video",
       "frames": 637,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-024/main/clip/000000-000269",
@@ -2377,8 +2377,8 @@
       "key": "gift_inhand/file-024/main/video",
       "kind": "video",
       "frames": 720,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-025/main/clip/000000-000303",
@@ -2405,8 +2405,8 @@
       "key": "gift_inhand/file-025/main/video",
       "kind": "video",
       "frames": 788,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-026/main/clip/000000-000304",
@@ -2433,8 +2433,8 @@
       "key": "gift_inhand/file-026/main/video",
       "kind": "video",
       "frames": 777,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-027/main/clip/000000-000248",
@@ -2461,8 +2461,8 @@
       "key": "gift_inhand/file-027/main/video",
       "kind": "video",
       "frames": 669,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-028/main/clip/000000-000330",
@@ -2489,8 +2489,8 @@
       "key": "gift_inhand/file-028/main/video",
       "kind": "video",
       "frames": 779,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "gift_inhand/file-029/main/clip/000000-000279",
@@ -2517,8 +2517,8 @@
       "key": "gift_inhand/file-029/main/video",
       "kind": "video",
       "frames": 649,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-000/main/clip/000029-000200",
@@ -2545,8 +2545,8 @@
       "key": "pen_inbox/file-000/main/video",
       "kind": "video",
       "frames": 577,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-001/main/clip/000021-000182",
@@ -2573,8 +2573,8 @@
       "key": "pen_inbox/file-001/main/video",
       "kind": "video",
       "frames": 534,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-002/main/clip/000031-000170",
@@ -2601,8 +2601,8 @@
       "key": "pen_inbox/file-002/main/video",
       "kind": "video",
       "frames": 489,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-003/main/clip/000029-000164",
@@ -2629,8 +2629,8 @@
       "key": "pen_inbox/file-003/main/video",
       "kind": "video",
       "frames": 461,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-004/main/clip/000036-000135",
@@ -2657,8 +2657,8 @@
       "key": "pen_inbox/file-004/main/video",
       "kind": "video",
       "frames": 453,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-005/main/clip/000059-000349",
@@ -2685,8 +2685,8 @@
       "key": "pen_inbox/file-005/main/video",
       "kind": "video",
       "frames": 688,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-006/main/clip/000030-000187",
@@ -2713,8 +2713,8 @@
       "key": "pen_inbox/file-006/main/video",
       "kind": "video",
       "frames": 612,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-007/main/clip/000030-000129",
@@ -2741,8 +2741,8 @@
       "key": "pen_inbox/file-007/main/video",
       "kind": "video",
       "frames": 456,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-008/main/clip/000035-000158",
@@ -2769,8 +2769,8 @@
       "key": "pen_inbox/file-008/main/video",
       "kind": "video",
       "frames": 537,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-009/main/clip/000026-000138",
@@ -2797,8 +2797,8 @@
       "key": "pen_inbox/file-009/main/video",
       "kind": "video",
       "frames": 510,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-010/main/clip/000039-000151",
@@ -2825,8 +2825,8 @@
       "key": "pen_inbox/file-010/main/video",
       "kind": "video",
       "frames": 495,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-011/main/clip/000047-000138",
@@ -2853,8 +2853,8 @@
       "key": "pen_inbox/file-011/main/video",
       "kind": "video",
       "frames": 429,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-012/main/clip/000032-000132",
@@ -2881,8 +2881,8 @@
       "key": "pen_inbox/file-012/main/video",
       "kind": "video",
       "frames": 445,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-013/main/clip/000045-000133",
@@ -2909,8 +2909,8 @@
       "key": "pen_inbox/file-013/main/video",
       "kind": "video",
       "frames": 499,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-014/main/clip/000041-000189",
@@ -2937,8 +2937,8 @@
       "key": "pen_inbox/file-014/main/video",
       "kind": "video",
       "frames": 602,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-015/main/clip/000029-000165",
@@ -2965,8 +2965,8 @@
       "key": "pen_inbox/file-015/main/video",
       "kind": "video",
       "frames": 537,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-016/main/clip/000037-000144",
@@ -2993,8 +2993,8 @@
       "key": "pen_inbox/file-016/main/video",
       "kind": "video",
       "frames": 484,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-017/main/clip/000043-000157",
@@ -3021,8 +3021,8 @@
       "key": "pen_inbox/file-017/main/video",
       "kind": "video",
       "frames": 508,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-018/main/clip/000025-000145",
@@ -3049,8 +3049,8 @@
       "key": "pen_inbox/file-018/main/video",
       "kind": "video",
       "frames": 497,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-019/main/clip/000033-000146",
@@ -3077,8 +3077,8 @@
       "key": "pen_inbox/file-019/main/video",
       "kind": "video",
       "frames": 474,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-020/main/clip/000036-000132",
@@ -3105,8 +3105,8 @@
       "key": "pen_inbox/file-020/main/video",
       "kind": "video",
       "frames": 445,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-021/main/clip/000030-000163",
@@ -3133,8 +3133,8 @@
       "key": "pen_inbox/file-021/main/video",
       "kind": "video",
       "frames": 527,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-022/main/clip/000024-000192",
@@ -3161,8 +3161,8 @@
       "key": "pen_inbox/file-022/main/video",
       "kind": "video",
       "frames": 547,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-023/main/clip/000029-000141",
@@ -3189,8 +3189,8 @@
       "key": "pen_inbox/file-023/main/video",
       "kind": "video",
       "frames": 492,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-024/main/clip/000037-000147",
@@ -3217,8 +3217,8 @@
       "key": "pen_inbox/file-024/main/video",
       "kind": "video",
       "frames": 459,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-025/main/clip/000044-000147",
@@ -3245,8 +3245,8 @@
       "key": "pen_inbox/file-025/main/video",
       "kind": "video",
       "frames": 479,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-026/main/clip/000032-000144",
@@ -3273,8 +3273,8 @@
       "key": "pen_inbox/file-026/main/video",
       "kind": "video",
       "frames": 469,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-027/main/clip/000029-000155",
@@ -3301,8 +3301,8 @@
       "key": "pen_inbox/file-027/main/video",
       "kind": "video",
       "frames": 491,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-028/main/clip/000026-000142",
@@ -3329,8 +3329,8 @@
       "key": "pen_inbox/file-028/main/video",
       "kind": "video",
       "frames": 473,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-029/main/clip/000038-000127",
@@ -3357,8 +3357,8 @@
       "key": "pen_inbox/file-029/main/video",
       "kind": "video",
       "frames": 444,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-030/main/clip/000028-000126",
@@ -3385,8 +3385,8 @@
       "key": "pen_inbox/file-030/main/video",
       "kind": "video",
       "frames": 393,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-031/main/clip/000024-000100",
@@ -3413,8 +3413,8 @@
       "key": "pen_inbox/file-031/main/video",
       "kind": "video",
       "frames": 405,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-032/main/clip/000030-000122",
@@ -3441,8 +3441,8 @@
       "key": "pen_inbox/file-032/main/video",
       "kind": "video",
       "frames": 446,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-033/main/clip/000026-000127",
@@ -3469,8 +3469,8 @@
       "key": "pen_inbox/file-033/main/video",
       "kind": "video",
       "frames": 492,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-034/main/clip/000021-000118",
@@ -3497,8 +3497,8 @@
       "key": "pen_inbox/file-034/main/video",
       "kind": "video",
       "frames": 453,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-035/main/clip/000021-000135",
@@ -3525,8 +3525,8 @@
       "key": "pen_inbox/file-035/main/video",
       "kind": "video",
       "frames": 459,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-036/main/clip/000030-000164",
@@ -3553,8 +3553,8 @@
       "key": "pen_inbox/file-036/main/video",
       "kind": "video",
       "frames": 514,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-037/main/clip/000027-000145",
@@ -3574,8 +3574,8 @@
       "key": "pen_inbox/file-037/main/video",
       "kind": "video",
       "frames": 495,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-038/main/clip/000027-000172",
@@ -3602,8 +3602,8 @@
       "key": "pen_inbox/file-038/main/video",
       "kind": "video",
       "frames": 541,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-039/main/clip/000030-000177",
@@ -3630,8 +3630,8 @@
       "key": "pen_inbox/file-039/main/video",
       "kind": "video",
       "frames": 560,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-040/main/clip/000028-000139",
@@ -3658,8 +3658,8 @@
       "key": "pen_inbox/file-040/main/video",
       "kind": "video",
       "frames": 451,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-041/main/clip/000033-000155",
@@ -3686,8 +3686,8 @@
       "key": "pen_inbox/file-041/main/video",
       "kind": "video",
       "frames": 516,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-042/main/clip/000029-000167",
@@ -3714,8 +3714,8 @@
       "key": "pen_inbox/file-042/main/video",
       "kind": "video",
       "frames": 501,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-043/main/clip/000032-000143",
@@ -3742,8 +3742,8 @@
       "key": "pen_inbox/file-043/main/video",
       "kind": "video",
       "frames": 503,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-044/main/clip/000033-000145",
@@ -3770,8 +3770,8 @@
       "key": "pen_inbox/file-044/main/video",
       "kind": "video",
       "frames": 516,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-045/main/clip/000027-000152",
@@ -3798,8 +3798,8 @@
       "key": "pen_inbox/file-045/main/video",
       "kind": "video",
       "frames": 522,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-046/main/clip/000029-000149",
@@ -3826,8 +3826,8 @@
       "key": "pen_inbox/file-046/main/video",
       "kind": "video",
       "frames": 537,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-047/main/clip/000026-000147",
@@ -3854,8 +3854,8 @@
       "key": "pen_inbox/file-047/main/video",
       "kind": "video",
       "frames": 481,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-048/main/clip/000024-000154",
@@ -3882,8 +3882,8 @@
       "key": "pen_inbox/file-048/main/video",
       "kind": "video",
       "frames": 513,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "pen_inbox/file-049/main/clip/000033-000140",
@@ -3910,8 +3910,8 @@
       "key": "pen_inbox/file-049/main/video",
       "kind": "video",
       "frames": 464,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 86,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-000/main/clip/000000-000513",
@@ -3945,8 +3945,8 @@
       "key": "stack_cubes/file-000/main/video",
       "kind": "video",
       "frames": 1464,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-001/main/clip/000000-000490",
@@ -3980,8 +3980,8 @@
       "key": "stack_cubes/file-001/main/video",
       "kind": "video",
       "frames": 1620,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-002/main/clip/000000-000542",
@@ -4015,8 +4015,8 @@
       "key": "stack_cubes/file-002/main/video",
       "kind": "video",
       "frames": 1468,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-003/main/clip/000000-000456",
@@ -4050,8 +4050,8 @@
       "key": "stack_cubes/file-003/main/video",
       "kind": "video",
       "frames": 1340,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-004/main/clip/000000-000463",
@@ -4085,8 +4085,8 @@
       "key": "stack_cubes/file-004/main/video",
       "kind": "video",
       "frames": 1136,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-005/main/clip/000000-000410",
@@ -4120,8 +4120,8 @@
       "key": "stack_cubes/file-005/main/video",
       "kind": "video",
       "frames": 1183,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-006/main/clip/000000-000410",
@@ -4155,8 +4155,8 @@
       "key": "stack_cubes/file-006/main/video",
       "kind": "video",
       "frames": 1104,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-007/main/clip/000000-000381",
@@ -4190,8 +4190,8 @@
       "key": "stack_cubes/file-007/main/video",
       "kind": "video",
       "frames": 1125,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-008/main/clip/000000-000393",
@@ -4225,8 +4225,8 @@
       "key": "stack_cubes/file-008/main/video",
       "kind": "video",
       "frames": 1091,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-009/main/clip/000000-000438",
@@ -4260,8 +4260,8 @@
       "key": "stack_cubes/file-009/main/video",
       "kind": "video",
       "frames": 1182,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-010/main/clip/000000-000340",
@@ -4295,8 +4295,8 @@
       "key": "stack_cubes/file-010/main/video",
       "kind": "video",
       "frames": 1034,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-011/main/clip/000000-000428",
@@ -4330,8 +4330,8 @@
       "key": "stack_cubes/file-011/main/video",
       "kind": "video",
       "frames": 1310,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-012/main/clip/000000-000393",
@@ -4365,8 +4365,8 @@
       "key": "stack_cubes/file-012/main/video",
       "kind": "video",
       "frames": 1069,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-013/main/clip/000000-000386",
@@ -4400,8 +4400,8 @@
       "key": "stack_cubes/file-013/main/video",
       "kind": "video",
       "frames": 1062,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-014/main/clip/000000-000364",
@@ -4435,8 +4435,8 @@
       "key": "stack_cubes/file-014/main/video",
       "kind": "video",
       "frames": 1076,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-015/main/clip/000000-000299",
@@ -4470,8 +4470,8 @@
       "key": "stack_cubes/file-015/main/video",
       "kind": "video",
       "frames": 970,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-016/main/clip/000000-000342",
@@ -4505,8 +4505,8 @@
       "key": "stack_cubes/file-016/main/video",
       "kind": "video",
       "frames": 1112,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-017/main/clip/000000-000372",
@@ -4540,8 +4540,8 @@
       "key": "stack_cubes/file-017/main/video",
       "kind": "video",
       "frames": 1029,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-018/main/clip/000000-000434",
@@ -4575,8 +4575,8 @@
       "key": "stack_cubes/file-018/main/video",
       "kind": "video",
       "frames": 1196,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-019/main/clip/000000-000330",
@@ -4610,8 +4610,8 @@
       "key": "stack_cubes/file-019/main/video",
       "kind": "video",
       "frames": 1069,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-020/main/clip/000000-000365",
@@ -4645,8 +4645,8 @@
       "key": "stack_cubes/file-020/main/video",
       "kind": "video",
       "frames": 1078,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-021/main/clip/000000-000399",
@@ -4680,8 +4680,8 @@
       "key": "stack_cubes/file-021/main/video",
       "kind": "video",
       "frames": 1157,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-022/main/clip/000000-000346",
@@ -4715,8 +4715,8 @@
       "key": "stack_cubes/file-022/main/video",
       "kind": "video",
       "frames": 1093,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-023/main/clip/000000-000371",
@@ -4750,8 +4750,8 @@
       "key": "stack_cubes/file-023/main/video",
       "kind": "video",
       "frames": 1046,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-024/main/clip/000000-000356",
@@ -4785,8 +4785,8 @@
       "key": "stack_cubes/file-024/main/video",
       "kind": "video",
       "frames": 1057,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-025/main/clip/000000-000372",
@@ -4820,8 +4820,8 @@
       "key": "stack_cubes/file-025/main/video",
       "kind": "video",
       "frames": 1088,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-026/main/clip/000000-000315",
@@ -4855,8 +4855,8 @@
       "key": "stack_cubes/file-026/main/video",
       "kind": "video",
       "frames": 1010,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-027/main/clip/000000-000315",
@@ -4890,8 +4890,8 @@
       "key": "stack_cubes/file-027/main/video",
       "kind": "video",
       "frames": 918,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-028/main/clip/000000-000310",
@@ -4925,8 +4925,8 @@
       "key": "stack_cubes/file-028/main/video",
       "kind": "video",
       "frames": 1109,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-029/main/clip/000000-000252",
@@ -4960,8 +4960,8 @@
       "key": "stack_cubes/file-029/main/video",
       "kind": "video",
       "frames": 1016,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-030/main/clip/000000-000259",
@@ -4995,8 +4995,8 @@
       "key": "stack_cubes/file-030/main/video",
       "kind": "video",
       "frames": 923,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-031/main/clip/000000-000294",
@@ -5030,8 +5030,8 @@
       "key": "stack_cubes/file-031/main/video",
       "kind": "video",
       "frames": 959,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-032/main/clip/000000-000260",
@@ -5065,8 +5065,8 @@
       "key": "stack_cubes/file-032/main/video",
       "kind": "video",
       "frames": 1020,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-033/main/clip/000000-000255",
@@ -5100,8 +5100,8 @@
       "key": "stack_cubes/file-033/main/video",
       "kind": "video",
       "frames": 903,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-034/main/clip/000000-000340",
@@ -5135,8 +5135,8 @@
       "key": "stack_cubes/file-034/main/video",
       "kind": "video",
       "frames": 1049,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-035/main/clip/000000-000344",
@@ -5170,8 +5170,8 @@
       "key": "stack_cubes/file-035/main/video",
       "kind": "video",
       "frames": 1155,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-036/main/clip/000000-000334",
@@ -5205,8 +5205,8 @@
       "key": "stack_cubes/file-036/main/video",
       "kind": "video",
       "frames": 1171,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-037/main/clip/000000-000273",
@@ -5240,8 +5240,8 @@
       "key": "stack_cubes/file-037/main/video",
       "kind": "video",
       "frames": 1105,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-038/main/clip/000000-000317",
@@ -5275,8 +5275,8 @@
       "key": "stack_cubes/file-038/main/video",
       "kind": "video",
       "frames": 1178,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-039/main/clip/000000-000288",
@@ -5310,8 +5310,8 @@
       "key": "stack_cubes/file-039/main/video",
       "kind": "video",
       "frames": 1059,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-040/main/clip/000000-000301",
@@ -5345,8 +5345,8 @@
       "key": "stack_cubes/file-040/main/video",
       "kind": "video",
       "frames": 929,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-041/main/clip/000000-000327",
@@ -5380,8 +5380,8 @@
       "key": "stack_cubes/file-041/main/video",
       "kind": "video",
       "frames": 1026,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-042/main/clip/000000-000324",
@@ -5415,8 +5415,8 @@
       "key": "stack_cubes/file-042/main/video",
       "kind": "video",
       "frames": 1166,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-043/main/clip/000000-000329",
@@ -5450,8 +5450,8 @@
       "key": "stack_cubes/file-043/main/video",
       "kind": "video",
       "frames": 1116,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-044/main/clip/000000-000347",
@@ -5485,8 +5485,8 @@
       "key": "stack_cubes/file-044/main/video",
       "kind": "video",
       "frames": 1115,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-045/main/clip/000000-000299",
@@ -5520,8 +5520,8 @@
       "key": "stack_cubes/file-045/main/video",
       "kind": "video",
       "frames": 1046,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-046/main/clip/000000-000288",
@@ -5555,8 +5555,8 @@
       "key": "stack_cubes/file-046/main/video",
       "kind": "video",
       "frames": 1065,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-047/main/clip/000000-000298",
@@ -5590,8 +5590,8 @@
       "key": "stack_cubes/file-047/main/video",
       "kind": "video",
       "frames": 1014,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-048/main/clip/000000-000290",
@@ -5625,8 +5625,8 @@
       "key": "stack_cubes/file-048/main/video",
       "kind": "video",
       "frames": 973,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "stack_cubes/file-049/main/clip/000000-000317",
@@ -5660,8 +5660,8 @@
       "key": "stack_cubes/file-049/main/video",
       "kind": "video",
       "frames": 1042,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 88,
+      "state": "已存在"
     },
     {
       "key": "tea/file-000/main/clip/000070-000230",
@@ -5709,8 +5709,8 @@
       "key": "tea/file-000/main/video",
       "kind": "video",
       "frames": 2994,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-001/main/clip/000066-000275",
@@ -5758,8 +5758,8 @@
       "key": "tea/file-001/main/video",
       "kind": "video",
       "frames": 2640,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-002/main/clip/000040-000247",
@@ -5807,8 +5807,8 @@
       "key": "tea/file-002/main/video",
       "kind": "video",
       "frames": 2877,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-003/main/clip/000052-000261",
@@ -5856,8 +5856,8 @@
       "key": "tea/file-003/main/video",
       "kind": "video",
       "frames": 2797,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-004/main/clip/000052-000273",
@@ -5905,8 +5905,8 @@
       "key": "tea/file-004/main/video",
       "kind": "video",
       "frames": 2507,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-005/main/clip/000053-000238",
@@ -5954,8 +5954,8 @@
       "key": "tea/file-005/main/video",
       "kind": "video",
       "frames": 2680,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-006/main/clip/000107-000295",
@@ -6003,8 +6003,8 @@
       "key": "tea/file-006/main/video",
       "kind": "video",
       "frames": 2836,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-007/main/clip/000067-000268",
@@ -6052,8 +6052,8 @@
       "key": "tea/file-007/main/video",
       "kind": "video",
       "frames": 2837,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-008/main/clip/000063-000249",
@@ -6101,8 +6101,8 @@
       "key": "tea/file-008/main/video",
       "kind": "video",
       "frames": 2618,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-009/main/clip/000053-000252",
@@ -6150,8 +6150,8 @@
       "key": "tea/file-009/main/video",
       "kind": "video",
       "frames": 2636,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-010/main/clip/000039-000254",
@@ -6199,8 +6199,8 @@
       "key": "tea/file-010/main/video",
       "kind": "video",
       "frames": 2669,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-011/main/clip/000082-000251",
@@ -6248,8 +6248,8 @@
       "key": "tea/file-011/main/video",
       "kind": "video",
       "frames": 2366,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-012/main/clip/000053-000226",
@@ -6297,8 +6297,8 @@
       "key": "tea/file-012/main/video",
       "kind": "video",
       "frames": 2292,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-013/main/clip/000039-000206",
@@ -6346,8 +6346,8 @@
       "key": "tea/file-013/main/video",
       "kind": "video",
       "frames": 2250,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-014/main/clip/000053-000242",
@@ -6395,8 +6395,8 @@
       "key": "tea/file-014/main/video",
       "kind": "video",
       "frames": 2393,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-015/main/clip/000094-000299",
@@ -6444,8 +6444,8 @@
       "key": "tea/file-015/main/video",
       "kind": "video",
       "frames": 2550,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-016/main/clip/000059-000255",
@@ -6493,8 +6493,8 @@
       "key": "tea/file-016/main/video",
       "kind": "video",
       "frames": 2419,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-017/main/clip/000050-000222",
@@ -6542,8 +6542,8 @@
       "key": "tea/file-017/main/video",
       "kind": "video",
       "frames": 2563,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-018/main/clip/000062-000239",
@@ -6591,8 +6591,8 @@
       "key": "tea/file-018/main/video",
       "kind": "video",
       "frames": 2472,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-019/main/clip/000055-000242",
@@ -6640,8 +6640,8 @@
       "key": "tea/file-019/main/video",
       "kind": "video",
       "frames": 2440,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-020/main/clip/000045-000192",
@@ -6689,8 +6689,8 @@
       "key": "tea/file-020/main/video",
       "kind": "video",
       "frames": 2528,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-021/main/clip/000068-000251",
@@ -6738,8 +6738,8 @@
       "key": "tea/file-021/main/video",
       "kind": "video",
       "frames": 2426,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-022/main/clip/000069-000260",
@@ -6787,8 +6787,8 @@
       "key": "tea/file-022/main/video",
       "kind": "video",
       "frames": 2427,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-023/main/clip/000048-000236",
@@ -6836,8 +6836,8 @@
       "key": "tea/file-023/main/video",
       "kind": "video",
       "frames": 2353,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-024/main/clip/000064-000250",
@@ -6885,8 +6885,8 @@
       "key": "tea/file-024/main/video",
       "kind": "video",
       "frames": 2517,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-025/main/clip/000066-000231",
@@ -6934,8 +6934,8 @@
       "key": "tea/file-025/main/video",
       "kind": "video",
       "frames": 2706,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-026/main/clip/000046-000235",
@@ -6983,8 +6983,8 @@
       "key": "tea/file-026/main/video",
       "kind": "video",
       "frames": 2464,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-027/main/clip/000047-000236",
@@ -7032,8 +7032,8 @@
       "key": "tea/file-027/main/video",
       "kind": "video",
       "frames": 2567,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-028/main/clip/000058-000221",
@@ -7081,8 +7081,8 @@
       "key": "tea/file-028/main/video",
       "kind": "video",
       "frames": 2868,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-029/main/clip/000063-000229",
@@ -7130,8 +7130,8 @@
       "key": "tea/file-029/main/video",
       "kind": "video",
       "frames": 2673,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-030/main/clip/000109-000284",
@@ -7179,8 +7179,8 @@
       "key": "tea/file-030/main/video",
       "kind": "video",
       "frames": 2669,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-031/main/clip/000056-000230",
@@ -7228,8 +7228,8 @@
       "key": "tea/file-031/main/video",
       "kind": "video",
       "frames": 2398,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-032/main/clip/000052-000290",
@@ -7277,8 +7277,8 @@
       "key": "tea/file-032/main/video",
       "kind": "video",
       "frames": 2389,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-033/main/clip/000071-000234",
@@ -7326,8 +7326,8 @@
       "key": "tea/file-033/main/video",
       "kind": "video",
       "frames": 2560,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-034/main/clip/000049-000227",
@@ -7375,8 +7375,8 @@
       "key": "tea/file-034/main/video",
       "kind": "video",
       "frames": 2606,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-035/main/clip/000014-000196",
@@ -7424,8 +7424,8 @@
       "key": "tea/file-035/main/video",
       "kind": "video",
       "frames": 2464,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-036/main/clip/000060-000218",
@@ -7473,8 +7473,8 @@
       "key": "tea/file-036/main/video",
       "kind": "video",
       "frames": 2402,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-037/main/clip/000056-000243",
@@ -7522,8 +7522,8 @@
       "key": "tea/file-037/main/video",
       "kind": "video",
       "frames": 2545,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "tea/file-038/main/clip/000059-000220",
@@ -7571,8 +7571,8 @@
       "key": "tea/file-038/main/video",
       "kind": "video",
       "frames": 2297,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 80,
+      "state": "已存在"
     },
     {
       "key": "wash/file-000/main/clip/000163-000264",
@@ -7669,8 +7669,8 @@
       "key": "wash/file-000/main/video",
       "kind": "video",
       "frames": 2484,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-001/main/clip/000082-000173",
@@ -7767,8 +7767,8 @@
       "key": "wash/file-001/main/video",
       "kind": "video",
       "frames": 2276,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-002/main/clip/000072-000200",
@@ -7858,8 +7858,8 @@
       "key": "wash/file-002/main/video",
       "kind": "video",
       "frames": 1986,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-003/main/clip/000092-000213",
@@ -7956,8 +7956,8 @@
       "key": "wash/file-003/main/video",
       "kind": "video",
       "frames": 2169,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-004/main/clip/000070-000214",
@@ -8054,8 +8054,8 @@
       "key": "wash/file-004/main/video",
       "kind": "video",
       "frames": 2164,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-005/main/clip/000099-000247",
@@ -8152,8 +8152,8 @@
       "key": "wash/file-005/main/video",
       "kind": "video",
       "frames": 2239,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-006/main/clip/000093-000224",
@@ -8250,8 +8250,8 @@
       "key": "wash/file-006/main/video",
       "kind": "video",
       "frames": 2284,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-007/main/clip/000069-000214",
@@ -8348,8 +8348,8 @@
       "key": "wash/file-007/main/video",
       "kind": "video",
       "frames": 2093,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-008/main/clip/000097-000265",
@@ -8446,8 +8446,8 @@
       "key": "wash/file-008/main/video",
       "kind": "video",
       "frames": 2100,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-009/main/clip/000076-000192",
@@ -8544,8 +8544,8 @@
       "key": "wash/file-009/main/video",
       "kind": "video",
       "frames": 2134,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-010/main/clip/000105-000235",
@@ -8642,8 +8642,8 @@
       "key": "wash/file-010/main/video",
       "kind": "video",
       "frames": 2020,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-011/main/clip/000081-000221",
@@ -8740,8 +8740,8 @@
       "key": "wash/file-011/main/video",
       "kind": "video",
       "frames": 2098,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-012/main/clip/000067-000270",
@@ -8838,8 +8838,8 @@
       "key": "wash/file-012/main/video",
       "kind": "video",
       "frames": 2069,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-013/main/clip/000098-000249",
@@ -8936,8 +8936,8 @@
       "key": "wash/file-013/main/video",
       "kind": "video",
       "frames": 1976,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-014/main/clip/000092-000250",
@@ -9034,8 +9034,8 @@
       "key": "wash/file-014/main/video",
       "kind": "video",
       "frames": 2031,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-015/main/clip/000083-000242",
@@ -9132,8 +9132,8 @@
       "key": "wash/file-015/main/video",
       "kind": "video",
       "frames": 2124,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-016/main/clip/000090-000245",
@@ -9230,8 +9230,8 @@
       "key": "wash/file-016/main/video",
       "kind": "video",
       "frames": 1934,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-017/main/clip/000067-000201",
@@ -9328,8 +9328,8 @@
       "key": "wash/file-017/main/video",
       "kind": "video",
       "frames": 1931,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-018/main/clip/000094-000237",
@@ -9426,8 +9426,8 @@
       "key": "wash/file-018/main/video",
       "kind": "video",
       "frames": 1883,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-019/main/clip/000080-000233",
@@ -9524,8 +9524,8 @@
       "key": "wash/file-019/main/video",
       "kind": "video",
       "frames": 1863,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-020/main/clip/000070-000197",
@@ -9622,8 +9622,8 @@
       "key": "wash/file-020/main/video",
       "kind": "video",
       "frames": 1923,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-021/main/clip/000092-000228",
@@ -9720,8 +9720,8 @@
       "key": "wash/file-021/main/video",
       "kind": "video",
       "frames": 1794,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-022/main/clip/000097-000195",
@@ -9818,8 +9818,8 @@
       "key": "wash/file-022/main/video",
       "kind": "video",
       "frames": 1728,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-023/main/clip/000083-000190",
@@ -9916,8 +9916,8 @@
       "key": "wash/file-023/main/video",
       "kind": "video",
       "frames": 1704,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-024/main/clip/000084-000182",
@@ -10014,8 +10014,8 @@
       "key": "wash/file-024/main/video",
       "kind": "video",
       "frames": 1770,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-025/main/clip/000092-000187",
@@ -10112,8 +10112,8 @@
       "key": "wash/file-025/main/video",
       "kind": "video",
       "frames": 1789,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-026/main/clip/000083-000193",
@@ -10210,8 +10210,8 @@
       "key": "wash/file-026/main/video",
       "kind": "video",
       "frames": 1730,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-027/main/clip/000114-000221",
@@ -10308,8 +10308,8 @@
       "key": "wash/file-027/main/video",
       "kind": "video",
       "frames": 1760,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-028/main/clip/000103-000207",
@@ -10406,8 +10406,8 @@
       "key": "wash/file-028/main/video",
       "kind": "video",
       "frames": 1630,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-029/main/clip/000080-000162",
@@ -10504,8 +10504,8 @@
       "key": "wash/file-029/main/video",
       "kind": "video",
       "frames": 1871,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-030/main/clip/000093-000206",
@@ -10595,8 +10595,8 @@
       "key": "wash/file-030/main/video",
       "kind": "video",
       "frames": 1834,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-031/main/clip/000093-000193",
@@ -10693,8 +10693,8 @@
       "key": "wash/file-031/main/video",
       "kind": "video",
       "frames": 1850,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-032/main/clip/000095-000213",
@@ -10791,8 +10791,8 @@
       "key": "wash/file-032/main/video",
       "kind": "video",
       "frames": 1689,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-033/main/clip/000081-000201",
@@ -10889,8 +10889,8 @@
       "key": "wash/file-033/main/video",
       "kind": "video",
       "frames": 1917,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-034/main/clip/000068-000203",
@@ -10980,8 +10980,8 @@
       "key": "wash/file-034/main/video",
       "kind": "video",
       "frames": 1815,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-035/main/clip/000092-000208",
@@ -11078,8 +11078,8 @@
       "key": "wash/file-035/main/video",
       "kind": "video",
       "frames": 1803,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-036/main/clip/000073-000188",
@@ -11176,8 +11176,8 @@
       "key": "wash/file-036/main/video",
       "kind": "video",
       "frames": 1708,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-037/main/clip/000067-000178",
@@ -11274,8 +11274,8 @@
       "key": "wash/file-037/main/video",
       "kind": "video",
       "frames": 1791,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-038/main/clip/000081-000220",
@@ -11372,8 +11372,8 @@
       "key": "wash/file-038/main/video",
       "kind": "video",
       "frames": 1679,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     },
     {
       "key": "wash/file-039/main/clip/000059-000156",
@@ -11470,8 +11470,8 @@
       "key": "wash/file-039/main/video",
       "kind": "video",
       "frames": 1678,
-      "bytes": 0,
-      "state": "新建"
+      "bytes": 81,
+      "state": "已存在"
     }
   ]
 }

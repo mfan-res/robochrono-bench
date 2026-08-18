@@ -1,0 +1,47 @@
+{
+  "source": {
+    "video": "pen_inbox/file-037/main.mp4",
+    "fps": 20,
+    "total_frames": 495,
+    "tool_version": "upstream-video_labeler_timestamp/unknown",
+    "subtasks_sha256": "31ea37df45445770",
+    "episode_bounds": [
+      [
+        0.0,
+        24.75
+      ]
+    ]
+  },
+  "segments": [
+    {
+      "id": "file-037@f000027",
+      "start": 1.35,
+      "end": 7.3,
+      "start_time": "00:00:01.350",
+      "end_time": "00:00:07.300",
+      "start_frame": 27,
+      "end_frame": 145,
+      "subtask": "pick_pen"
+    },
+    {
+      "id": "file-037@f000272",
+      "start": 13.6,
+      "end": 13.65,
+      "start_time": "00:00:13.600",
+      "end_time": "00:00:13.650",
+      "start_frame": 272,
+      "end_frame": 272,
+      "subtask": "pick_box"
+    },
+    {
+      "id": "file-037@f000272-2",
+      "start": 13.6,
+      "end": 21.85,
+      "start_time": "00:00:13.600",
+      "end_time": "00:00:21.850",
+      "start_frame": 272,
+      "end_frame": 436,
+      "subtask": "place_pen"
+    }
+  ]
+}
