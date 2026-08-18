@@ -200,7 +200,15 @@ def media_image_list(item: dict[str, Any], prompt: str) -> list[dict[str, Any]]:
         if collected:
             return [image_part(p) for p in collected] + [text_part(prompt)]
 
-    return [image_part(data["image_path"]), text_part(prompt)]
+    if data.get("image_path"):
+        return [image_part(data["image_path"]), text_part(prompt)]
+
+    # 没有任何图片就回落到视频。
+    # v1 的 planning_2 发的是【静止帧】（时间戳处抽的一帧），v2 改成与 planning
+    # 共用同一个片段 —— 这样两者只差题干里那句「整体任务是 X」，
+    # **对照才是干净的**；v1 同时变了题干和媒体，那个差值里混着两个变量。
+    # v1 的题都带 image_paths，走不到这里，所以回归行为一字不变。
+    return media_video_list(item, prompt)
 
 
 def media_head_and_options(item: dict[str, Any], prompt: str) -> list[dict[str, Any]]:
