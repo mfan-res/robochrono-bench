@@ -25,6 +25,14 @@ from .mediaindex import ResolveStats, index_for_qa, resolve_items
 from .tasks.base import load_items
 from .vlm_api import runtime_config
 
+
+def _providers_cfg() -> dict:
+    """读 providers.json。按题型覆盖抽帧数要用（见该文件的 _frames_by_run_note）。"""
+    import json as _json
+    from pathlib import Path as _Path
+    return _json.loads((_Path(__file__).resolve().parents[1] / "configs" / "providers.json")
+                       .read_text(encoding="utf-8"))
+
 DEFAULT_CONFIG = Path(__file__).resolve().parents[1] / "configs/providers.json"
 DEFAULT_PLAN = Path(__file__).resolve().parents[1] / "configs/plan.json"
 DEFAULT_ENVIRONMENTS = Path(__file__).resolve().parents[1] / "configs/environments.json"
@@ -88,8 +96,14 @@ def cmd_run(args: argparse.Namespace) -> int:
                 cli_timeout=args.timeout,
                 cli_max_retries=args.max_retries,
             )
+            # 按题型覆盖抽帧数（见 providers.json 的 _frames_by_run_note）。
+            # time 用全长视频，8 帧会让 31% 的题看不到被问的动作。
+            by_run = _providers_cfg().get("frames_by_run", {}).get(run)
+            if by_run:
+                runtime["frames"] = dict(by_run)
             print(f"  provider={runtime['provider']} model={runtime['model']} "
-                  f"frames={runtime['frames']['mode']}:{runtime['frames']['value']}")
+                  f"frames={runtime['frames']['mode']}:{runtime['frames']['value']}"
+                  + ("  ← 按题型覆盖" if by_run else ""))
 
             task = tasks.build(run,
                                strip_reasoning=args.strip_reasoning,

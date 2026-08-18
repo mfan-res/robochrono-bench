@@ -77,26 +77,26 @@ def project(item: dict[str, Any], out_dir: Path) -> dict[str, Any]:
     rel = [os.path.relpath(ROOT / m["path"], out_dir) for m in media]
     key = "video_path" if item["task"] == "time" else "clip_path"
 
+    # **只发评测端真读的字段。** 逐个核对过源码：
+    #   读   id / video_id / type / question / answer / options[id,text] / input
+    #   不读 answer_text / correct_option / source_id / provenance
+    #   冗余 Q 与 A —— 读法是 `Q or question` / `answer or A`，留一个就够
+    #
+    # 不读的一个都不发。它们全都能由 `id` 回查 `items.jsonl` 得到
+    # （id 形如 `<族>/<集>/<段id>@<题型>`），发一份等于把同一个事实存两处 ——
+    # 这个项目已经因为「同一个东西存 11 份」付出过代价（D-25）。
     row: dict[str, Any] = {
         "id": item["id"],
-        "source_id": prov.get("segment_id"),
         "video_id": f"{item['family']}/{prov['episode']}",   # time 按它分组，须全局唯一
         "type": item["task"],
         "question": render(item["prompt"]["stem"], item["prompt"]["options"]),
         "answer": item["truth"]["answer"],
-        "answer_text": item["truth"].get("answer_text"),
         # ⚠ input 里【只放媒体路径】。v1 在这里还放了 start/end，而那等于答案
         "input": {key: rel[0], **({f"{key}s": rel} if len(rel) > 1 else {})},
-        "provenance": prov,
     }
-    row["Q"] = row["question"]          # v1 的别名，冻结脚本读的是这个
-    row["A"] = row["answer"]
-
     if item["prompt"]["options"]:
-        row["options"] = [{"id": o["id"], "text": o["text"], "is_none_option": False}
+        row["options"] = [{"id": o["id"], "text": o["text"]}
                           for o in item["prompt"]["options"]]
-        row["correct_option"] = next(o for o in row["options"]
-                                     if o["id"] == item["truth"]["answer"])
     if item["task"] == "time":
         row["answer_seconds"] = item["truth"]["extra"]["seconds"]
     return row
