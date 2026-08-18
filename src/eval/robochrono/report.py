@@ -197,7 +197,8 @@ def to_markdown(rows: list[dict[str, Any]]) -> str:
             out.append(label + " | ".join(cells) + " |")
         out.append("")
 
-    out.append("主指标：选择题类 accuracy，trajectory 为 mean_score，time 为 mean_tIoU。")
+    out.append("主指标：选择题类 accuracy，trajectory 为 mean_score，time 为 tIoU@0.5。")
+    out.append("　　time 不用 mean_tIoU —— 「整段视频都报」就能拿 0.13，不是 0（见 tasks/__init__.py）。")
     out.append("`*` 表示样本量少于 100，置信区间较宽（step_order 每族仅 50 题）。")
     if any(r["variant"] != "default" for r in rows):
         out.append("frames 列是抽帧档位；静态图任务不分档，两行取值相同。")
