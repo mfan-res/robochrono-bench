@@ -137,19 +137,19 @@ schema 因此**显式拒绝**出题产物字段出现在标注里。
 ```bash
 pip install numpy pyarrow jsonschema        # 另需 ffmpeg / ffprobe
 
-python3 src/label/validate.py               # 标注六项核验（应报 44 条，见下）
+python3 src/label/validate.py               # 标注六项核验（应报 40 条，见下）
 python3 src/label/tests/test_core_replay.py # 语义回归（不需要视频）
 python3 src/label/serve.py --port 8000      # 网页标注器
 ```
 
-`validate.py` 报 **44 条**：
+`validate.py` 报 **40 条**，全部是 ⚠（待人判断），一集一条：
 
 ```
 ⚠ 歧义 40 条   wash 每集重复动作 —— 洗两个盘子，同一动作做两遍（P-05，处理中）
-✗ 序列  4 条   wash/file-009 两段标错物体、wash/file-030 漏标一段（待修）
 ```
 
-**⚠ 是待人判断，✗ 是必须修。**
+> 曾经的 4 条 ✗「序列」已修：file-009 两段标错物体、file-030 漏标一段。
+> **✗ 是必须修，⚠ 是待人判断** —— 现在没有 ✗ 了。
 
 > 此前是 64 条，多出的 22 条属于 tea2（20）与 express（2）。
 > 这两族已从 `data/` 移出（D-42 / 原片缺失），基线随之下降。

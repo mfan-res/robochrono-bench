@@ -86,7 +86,7 @@
       "end_time": "00:00:52.160",
       "start_frame": 1134,
       "end_frame": 1303,
-      "subtask": "wipe_bowl_with_brush"
+      "subtask": "wipe_plate_with_rag"
     },
     {
       "id": "file-009@f001303",
@@ -96,7 +96,7 @@
       "end_time": "00:00:58.400",
       "start_frame": 1303,
       "end_frame": 1459,
-      "subtask": "put_bowl"
+      "subtask": "put_plate"
     },
     {
       "id": "file-009@f001459",

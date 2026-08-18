@@ -20091,10 +20091,8 @@
               "start": 13.68,
               "end": 22.6,
               "duration": 8.92,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-009@f000564",
@@ -20117,10 +20115,8 @@
               "start": 28.44,
               "end": 35.48,
               "duration": 7.04,
-              "usable": false,
-              "reasons": [
-                "ambiguous_repeat"
-              ]
+              "usable": true,
+              "reasons": []
             },
             {
               "id": "file-009@f000901",
@@ -20150,7 +20146,7 @@
             },
             {
               "id": "file-009@f001134",
-              "subtask": "wipe_bowl_with_brush",
+              "subtask": "wipe_plate_with_rag",
               "episode_index": 0,
               "start_frame": 1134,
               "end_frame": 1303,
@@ -20164,7 +20160,7 @@
             },
             {
               "id": "file-009@f001303",
-              "subtask": "put_bowl",
+              "subtask": "put_plate",
               "episode_index": 0,
               "start_frame": 1303,
               "end_frame": 1459,
@@ -20199,8 +20195,10 @@
               "start": 64.16,
               "end": 70.88,
               "duration": 6.72,
-              "usable": true,
-              "reasons": []
+              "usable": false,
+              "reasons": [
+                "ambiguous_repeat"
+              ]
             },
             {
               "id": "file-009@f001771",
@@ -20211,8 +20209,10 @@
               "start": 70.84,
               "end": 75.6,
               "duration": 4.76,
-              "usable": true,
-              "reasons": []
+              "usable": false,
+              "reasons": [
+                "ambiguous_repeat"
+              ]
             },
             {
               "id": "file-009@f001889",
@@ -24404,16 +24404,12 @@
               904
             ],
             [
-              1097,
-              1232
-            ],
-            [
               1634,
               1833
             ]
           ],
           "span_coverage": 0.84,
-          "labeled_fraction": 0.739,
+          "labeled_fraction": 0.814,
           "full_video_usable": true,
           "full_video_reason": null,
           "segments": [
@@ -24518,6 +24514,20 @@
               ]
             },
             {
+              "id": "file-030@f001097",
+              "subtask": "put_plate",
+              "episode_index": 0,
+              "start_frame": 1097,
+              "end_frame": 1232,
+              "start": 43.88,
+              "end": 49.32,
+              "duration": 5.44,
+              "usable": false,
+              "reasons": [
+                "ambiguous_repeat"
+              ]
+            },
+            {
               "id": "file-030@f001233",
               "subtask": "pick_plate",
               "episode_index": 0,
@@ -24566,8 +24576,10 @@
               "start": 61.92,
               "end": 65.36,
               "duration": 3.44,
-              "usable": true,
-              "reasons": []
+              "usable": false,
+              "reasons": [
+                "ambiguous_repeat"
+              ]
             }
           ]
         },
