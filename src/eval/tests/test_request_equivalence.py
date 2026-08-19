@@ -40,6 +40,20 @@ from robochrono.tasks.base import load_items  # noqa: E402
 # 掩盖了差别。那次改写已还原（原始数据只读），所以差别显出来了。
 
 
+# ── 已声明的差异 ────────────────────────────────────────────────────
+# 判据是「**每处差异都被声明过**」，不是「输出相同」。未声明的差异 =
+# 我们改坏了。声明写在这里而不是注释里，是因为它要被代码用上 ——
+# **只豁免声明的那一项**，同一个任务的其它项照样逐字节比。
+DECLARED: dict[str, dict[str, str]] = {
+    "step_order": {
+        "prompt": "BC-17　v2 不拼宫格，改为逐张发带标号的图（D-59）。"
+                  "v1 把结果图拼成一张宫格、标号渲染进像素，正是 BC-16 那个坑；"
+                  "v2 的标号是文本，与题干里的写法一致。提示词因此重写："
+                  "「两张图：初始态 + 宫格」→「若干张图，各自标 Image N」。"
+                  "**媒体不在声明之列** —— v1 的题仍走原路径，逐字节一致。",
+    },
+}
+
 QA = _P.qa_root(need_media=True)
 if QA is None:                      # 见 paths.qa_root
     print("跳过：本测试要组装含媒体的真实请求，而完整 v1 数据不在。")
@@ -155,13 +169,26 @@ def main() -> int:
                 if not first:
                     first = f"{unit.key}: 媒体 {old_media[:2]} vs {new_media[:2]}"
 
-        ok = bad_prompt == 0 and bad_media == 0
-        failures += 0 if ok else 1
-        print(f"{run:<16} {len(units):>6} {bad_prompt:>13} {bad_media:>11}  "
-              f"{'OK' if ok else first[:40]}")
+        declared = DECLARED.get(run, {})
+        undeclared = ((bad_prompt and "prompt" not in declared)
+                      or (bad_media and "media" not in declared))
+        failures += 1 if undeclared else 0
+        if undeclared:
+            status = first[:40]
+        elif bad_prompt or bad_media:
+            status = "已声明 " + next(iter(declared.values())).split("　")[0]
+        else:
+            status = "OK"
+        print(f"{run:<16} {len(units):>6} {bad_prompt:>13} {bad_media:>11}  {status}")
 
     print("-" * 68)
-    print("请求内容完全一致" if failures == 0 else f"{failures} 个任务存在差异")
+    if DECLARED:
+        print("已声明的差异：")
+        for run, axes in sorted(DECLARED.items()):
+            for axis, why in sorted(axes.items()):
+                print(f"  {run}/{axis}　{why}")
+        print("-" * 68)
+    print("除已声明外完全一致" if failures == 0 else f"{failures} 个任务存在【未声明】差异")
     return 1 if failures else 0
 
 

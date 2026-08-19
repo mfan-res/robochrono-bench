@@ -70,6 +70,7 @@ A7 ·「都不对」这个选项在旧题里从来不是答案
 from __future__ import annotations
 
 import hashlib
+import itertools
 import json
 import sys
 from collections import Counter, defaultdict
@@ -91,13 +92,16 @@ RECIPE_VERSION = "v2.0"
 VIEW = "main"
 
 TASKS = ("understanding", "planning", "planning_2", "time",
-         "left_right", "image_in_video")
+         "left_right", "image_in_video", "step_order")
 
 STEMS = {
     "left_right": "Given the image captured by the head camera, which option shows the "
                   "{side} gripper camera's view at this moment?",
     "image_in_video": "Given this video clip of an action segment, "
                       "which option image appeared in the clip?",
+    "step_order": "The images above show three moments from the same episode, "
+                  "presented in random order. Which option lists them in the "
+                  "correct chronological order?",
     "understanding": "Based on the egocentric video up to now, choose the ONE option "
                      "that best matches what is happening RIGHT NOW?",
     "planning": "Based on the current visual state, what should happen next?",
@@ -124,6 +128,12 @@ TASK_NAMES = {
 #   六选一  借 1–3    借的族 +6.3σ
 # 选项数每多一个，小族就得多借一条别族动作，而借来的动作看过视频就能排除。
 DISTRACTORS_PER_QUESTION = 3
+
+# step_order 用几张图。**三张不是任选的**：
+#   三张 → 6 种排列，取 4 个当选项，随机基线 25%，与其余六道口径一致
+#   四张 → 24 种排列，选项数与基线都对不齐；且 gift_inhand / pen_inbox
+#          每集只有 3 个动作块，取四张这两族直接出不了题
+STEP_ORDER_FRAMES = 3
 
 # 图选项题型也用三条干扰项 = 四选一，与文字题型一致 ——
 # 于是【全部选择题】的随机基线都是 25%，报告里不用按题型换算。
@@ -252,6 +262,12 @@ class Looks:
 
 def frame_key(family: str, episode: str, view: str, frame: int) -> str:
     return f"{family}/{episode}/{view}/frame/{frame:06d}-{frame:06d}"
+
+
+def order_text(labels: list[int]) -> str:
+    """把标号序列写成选项文字。**只此一处** —— 正确答案与干扰项若各写各的，
+    一个空格的差异就会让「答案在选项内」的出厂检查漏判。"""
+    return " -> ".join(f"Image {n}" for n in labels)
 
 
 def phase_frame(segment: dict[str, Any], phase: float) -> int:
@@ -634,6 +650,107 @@ def build(index: dict[str, Any], vocab: dict[str, Any],
                                    "blocks": [b["subtask"] for b, _p, _f in picked],
                                    "phases": [p for _b, p, _f in picked],
                                    "distinct_blocks": len(used_blocks),
+                                   "synthetic": False}},
+                })
+
+            # ---- step_order：同集三个动作块各一帧，打乱后问时间顺序 ----
+            # **不拼宫格。** v1 把若干结果图拼成一张再发 —— 那正是 BC-16 那个坑
+            # （当年要用 jpegtran 无损拆回去）。这里发三张独立的图各自带标号，
+            # 评测端本来就支持多图，拼图只会引入编码损失和标号渲染问题。
+            #
+            # 三帧的选取照搬 image_in_video：同集、动作各不同、两两够远
+            # （最大化最小距离）。**按帧集合去重** —— 只有 3 个动作块的族，
+            # 每集所有段会挑出同一组三帧，不去重就是同一道题出三遍。
+            seen_sets: set[frozenset[str]] = set()
+            for i, segment in enumerate(segments):
+                tid = f"{family}/{episode['episode']}/{segment['id']}@step_order"
+                anchor_frame = phase_frame(segment, ANCHOR)
+                a_key = frame_key(family, episode["episode"], "main", anchor_frame)
+                if not looks.has(a_key):
+                    skipped["step_order:缺锚点帧"] += 1
+                    continue
+                floor = looks.floor(family, ["main"]) * MUTUAL_RATIO
+
+                cands: list[tuple[str, int, str]] = []
+                for block_seg in segments:
+                    if block_seg["subtask"] == segment["subtask"]:
+                        continue
+                    for phase in (ANCHOR, PHASES[0], PHASES[-1]):
+                        fr = phase_frame(block_seg, phase)
+                        k = frame_key(family, episode["episode"], "main", fr)
+                        if looks.has(k):
+                            cands.append((block_seg["subtask"], fr, k))
+
+                chosen = [(segment["subtask"], anchor_frame, a_key)]
+                for _slot in range(STEP_ORDER_FRAMES - 1):
+                    best = None
+                    subs = {c[0] for c in chosen}
+                    keys_so_far = {c[2] for c in chosen}
+                    for sub, fr, k in cands:
+                        if sub in subs or k in keys_so_far:
+                            continue
+                        gap = min(looks.distance(k, c[2]) for c in chosen)
+                        if gap < floor:
+                            continue
+                        if best is None or (gap, k) > (best[0], best[1][2]):
+                            best = (gap, (sub, fr, k))
+                    if best is None:
+                        break
+                    chosen.append(best[1])
+                if len(chosen) < STEP_ORDER_FRAMES:
+                    skipped["step_order:同集凑不齐够远的三个动作块"] += 1
+                    continue
+
+                sig = frozenset(c[2] for c in chosen)
+                if sig in seen_sets:
+                    skipped["step_order:同一组三帧已出过题"] += 1
+                    continue
+                seen_sets.add(sig)
+
+                # 呈现顺序按哈希取 6 种排列之一 —— **不能按时间顺序摆**，
+                # 否则「Image 1 → Image 2 → Image 3」永远是答案。
+                by_time = sorted(chosen, key=lambda c: c[1])
+                perms = list(itertools.permutations(range(STEP_ORDER_FRAMES)))
+                k = int(hashlib.md5(tid.encode()).hexdigest(), 16)
+                shown = [by_time[j] for j in perms[k % len(perms)]]
+
+                # 正确选项 = 把呈现标号排成时间顺序的那个序列
+                label_of = {c[2]: n + 1 for n, c in enumerate(shown)}
+                answer_text = order_text([label_of[c[2]] for c in by_time])
+                wrong = [order_text(list(seq)) for seq in
+                         itertools.permutations(range(1, STEP_ORDER_FRAMES + 1))
+                         if order_text(list(seq)) != answer_text]
+                picks = [wrong[(k + n * 7919) % len(wrong)] for n in range(len(wrong))]
+                distractors: list[str] = []
+                for text in picks:
+                    if text not in distractors:
+                        distractors.append(text)
+                    if len(distractors) >= DISTRACTORS_PER_QUESTION:
+                        break
+
+                items.append({
+                    "id": tid, "family": family, "task": "step_order", "group": tid,
+                    "stem": STEMS["step_order"],
+                    "answer_subtask": segment["subtask"],
+                    "answer_text": answer_text,
+                    "distractors": distractors,
+                    "media": [need("frame", family, episode["episode"], c[1], c[1],
+                                   view="main") for c in shown],
+                    "provenance": {
+                        "episode": episode["episode"], "segment_id": segment["id"],
+                        "subtask": segment["subtask"], "next_subtask": None,
+                        "recipe": {"version": RECIPE_VERSION,
+                                   "clip": {"mode": "frame", "view": VIEW,
+                                            "start_frame": shown[0][1],
+                                            "end_frame": shown[-1][1],
+                                            "seconds": 0.0},
+                                   "distractors": {"permutations":
+                                                   len(distractors)},
+                                   "layout": "labeled_frames",
+                                   "same_episode": True,
+                                   "frames": STEP_ORDER_FRAMES,
+                                   "blocks": [c[0] for c in shown],
+                                   "shown_order": [c[1] for c in shown],
                                    "synthetic": False}},
                 })
 

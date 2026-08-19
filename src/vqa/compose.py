@@ -81,9 +81,13 @@ def compose(plan_item: dict[str, Any], media: dict[str, dict[str, Any]]) -> dict
     prov = plan_item["provenance"]
 
     blocks: list[dict[str, Any]] = []
-    for key in plan_item["media"]:
+    for i, key in enumerate(plan_item["media"]):
         m = media[key]
-        blocks.append({"role": ROLE[m["kind"]], "view": m["view"],
+        # step_order 的三张题面图**必须带序号** —— 题干问的就是
+        # 「Image 1 / 2 / 3 的先后」，角色里丢了序号，下游就只能靠数组下标，
+        # 那是隐式契约，改一次顺序就静默错位。
+        role = f"step:{i + 1}" if task == "step_order" else ROLE[m["kind"]]
+        blocks.append({"role": role, "view": m["view"],
                        "kind": "image" if m["kind"] == "frame" else "video",
                        "path": path_of(m)})
 

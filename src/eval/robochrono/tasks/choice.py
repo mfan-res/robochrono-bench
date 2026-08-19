@@ -140,11 +140,10 @@ def prompt_step_order(item: dict[str, Any]) -> str:
         question = f"{question}\nOptions:\n{option_lines}"
     return f"""You are solving a robot manipulation step-order VQA task.
 
-You will receive two images in this order:
-1. The initial state image.
-2. A montage of shuffled result-state images labeled Image 1, Image 2, etc.
+You will receive several still images from the same episode, each labeled
+"Image 1", "Image 2", ... They are presented in random order, not in time order.
 
-Choose the option whose sequence puts the numbered result-state images in the correct chronological operation order after the initial state.
+Choose the option that lists the images in the correct chronological order.
 Choose exactly one option letter from the provided options. Do not invent a new option.
 
 Question:
@@ -255,22 +254,40 @@ def _option_image_parts(item: dict[str, Any]) -> list[dict[str, Any]]:
 
 
 def media_step_order(item: dict[str, Any], prompt: str) -> list[dict[str, Any]]:
-    """step_order：initial 图 + montage 图，共两张。"""
-    paths: list[str] = []
-    for key in ("initial_image", "image"):
-        if item.get(key):
-            paths.append(str(item[key]))
-    data = item.get("input", {})
-    if isinstance(data, dict):
+    """step_order：逐张发【带标号】的图。
+
+    v2 不拼宫格 —— 拼好的宫格是 v1 的做法，标号靠渲染进像素，
+    既引入编码损失又没法核对（BC-16 当年要用 jpegtran 无损拆回去）。
+    这里每张图前面放一句 `Image N:`，标号就是文本，与题干里的写法一致。
+
+    v1 的题（`initial_image` + 一张宫格）仍按原样处理，A4 新旧对照要用。
+    """
+    data = item.get("input", {}) if isinstance(item.get("input"), dict) else {}
+    if item.get("initial_image") or data.get("initial_image"):
+        paths: list[str] = []
+        for key in ("initial_image", "image"):
+            if item.get(key):
+                paths.append(str(item[key]))
         for key in ("initial_image", "image", "image_path"):
             if data.get(key) and str(data[key]) not in paths:
                 paths.append(str(data[key]))
         for path in data.get("image_paths") or []:
             if str(path) not in paths:
                 paths.append(str(path))
-    if len(paths) < 2:
-        raise ValueError(f"cannot find initial image and montage image for item {item.get('id')}")
-    return [image_part(p) for p in paths[:2]] + [text_part(prompt)]
+        if len(paths) < 2:
+            raise ValueError(f"cannot find initial image and montage image for item {item.get('id')}")
+        return [image_part(p) for p in paths[:2]] + [text_part(prompt)]
+
+    paths = [str(p) for p in (data.get("image_paths") or [])]
+    # 没有图就【不放】图，而不是抛异常 —— ⑤ 的盲基线靠这条走完全相同的
+    # 代码路径（与 media_head_and_options / media_clip_and_options 一致）。
+    # step_order 盲测问的是「模型会不会凭格式偏爱 1 -> 2 -> 3」。
+    parts: list[dict[str, Any]] = []
+    for i, path in enumerate(paths):
+        parts.append(text_part(f"Image {i + 1}:"))
+        parts.append(image_part(path))
+    parts.append(text_part(prompt))
+    return parts
 
 
 # --------------------------------------------------------------------------
