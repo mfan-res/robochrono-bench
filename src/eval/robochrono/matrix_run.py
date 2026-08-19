@@ -147,8 +147,10 @@ def _prepare(spec: RunSpec, datasets_root: Path, config_path: Path, model: Model
     if overwrite and store.path.exists():
         store.path.unlink()
     store.open()
-    # 优先读规范化产物；不存在时回退原始 QA 并在内存里解析媒体路径
-    items = tasks.load_run_items(datasets_root, spec.family, spec.run)
+    # **与 cli.run / preflight / estimate 同一条加载路径**（D-60）。
+    # 此前这里走 `load_run_items`（默认读规范化产物），而那个「缺了回退原始 QA」
+    # 的行为早就被移除了 —— 注释与行为分叉，结果是每个 spec 都抛异常、被吞掉。
+    items = tasks.load_for_run(datasets_root, spec.family, spec.run)
     # 所有 flag 发给所有任务，各 build() 自己挑认识的
     return qa_path, runtime, store, items, tasks.build(spec.run, **flags)
 
@@ -187,12 +189,15 @@ def _run_local_pool(model, model_specs, *, config_path, datasets_root, results_r
     stores: dict[str, ResultStore] = {}
     contexts: dict[str, tuple[RunSpec, Any]] = {}
 
+    broken: list[str] = []
     for spec in model_specs:
         try:
             _, _, store, items, task = _prepare(
                 spec, datasets_root, config_path, model, flags, results_root, overwrite)
         except Exception as exc:  # noqa: BLE001
+            # **记下来**，不能只打印一行就算了 —— 见下面 `broken` 的处理。
             print(f"  [skip] {spec.family}/{spec.run}: {type(exc).__name__}: {exc}")
+            broken.append(f"{spec.family}/{spec.run}: {type(exc).__name__}")
             continue
 
         stores[spec.key] = store
@@ -204,6 +209,17 @@ def _run_local_pool(model, model_specs, *, config_path, datasets_root, results_r
                 continue
             work.append(pool.WorkItem(spec.key, spec.run, unit.key, unit.items,
                                       frames_fps=spec.frames_fps))
+
+    if broken:
+        # **准备失败 ≠ 已经跑完。** 这两件事此前共用一个出口：
+        # 全部 spec 抛异常 → work 为空 → 打印「全部已完成，无需执行」→ 正常退出。
+        # 于是一份空结果配一句「一切正常」。现在显式失败。
+        print(f"\n❌ {len(broken)} 个 run 准备失败，没有跑：")
+        for line in broken[:8]:
+            print(f"   {line}")
+        if len(broken) > 8:
+            print(f"   …… 另有 {len(broken) - 8} 个")
+        return len(broken)
 
     if not work:
         print("  全部已完成，无需执行")
