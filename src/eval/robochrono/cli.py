@@ -110,14 +110,12 @@ def cmd_run(args: argparse.Namespace) -> int:
                                null_text_fix=args.null_text_fix,
                                zero_unscored=not getattr(args, "no_zero_unscored", False))
 
-            items = load_items(qa_path)
             # 解析媒体路径。**此前这里没有这一步** —— 因为 v1 的 QA 文件里
             # 写的是绝对路径（BC-08 就地改写留下的），拿来就能用。
             # 新数据把媒体路径写成相对 QA 文件的形式（可移植），必须解析。
             # 缺失会显式打印，不静默把原样路径传给下游。
             stats = ResolveStats()
-            resolve_items(items, index_for_qa(qa_path, args.datasets_root),
-                          stats, base=qa_path.parent)
+            items = tasks.load_for_run(args.datasets_root, family, run, stats)
             if stats.unresolved or stats.ambiguous:
                 print(f"  [media] 解析 {stats.resolved}/{stats.total}"
                       f"　未解析 {len(stats.unresolved)}　同名歧义 {len(stats.ambiguous)}")
