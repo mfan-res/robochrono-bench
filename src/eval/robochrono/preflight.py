@@ -107,6 +107,27 @@ def check_normalized(datasets_root: Path) -> list[Check]:
     """
     from .normalize import check_freshness
 
+    # ── v2 不需要规范化层 ────────────────────────────────────────────
+    # 规范化解决的是 v1 的问题：QA 里的路径有三种风格，每次运行要重扫
+    # 十几万个文件建索引，所以预先解析成绝对路径存一份。
+    # **v2 的路径由 ④ `pack.py` 写成相对 QA 文件，O(1) 可解析** ——
+    # 再建一层就是把同一个事实存两处（D-25）。
+    #
+    # 判据不是「有没有 normalized/」，是「这批数据要不要」。
+    # v2 由 pack 写的根 manifest.json（带 fingerprint）正面标识；
+    # 不靠「没有 QA/ 目录」这种否定判据 —— 那会把「数据没到位」也误判成 v2。
+    manifest = Path(datasets_root) / "manifest.json"
+    if manifest.exists():
+        try:
+            import json as _json
+            head = _json.loads(manifest.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            head = {}
+        if head.get("fingerprint"):
+            return [Check(OK, "规范化产物",
+                          f"不适用 —— v2 布局，路径在 ④ pack 时已解析"
+                          f"（指纹 {head['fingerprint']}，{head.get('items', '?')} 题）")]
+
     state = check_freshness(datasets_root)
     if state.ok:
         return [Check(OK, "规范化产物", "最新")]
@@ -134,7 +155,8 @@ def check_data(specs: list[RunSpec], datasets_root: Path, sample: int = 3) -> li
             continue
 
         try:
-            items = tasks.load_run_items(datasets_root, spec.family, spec.run)
+            # **与 run 同一条路** —— 见 tasks.load_for_run 的说明
+            items = tasks.load_for_run(datasets_root, spec.family, spec.run)
         except Exception as exc:  # noqa: BLE001
             out.append(Check(FAIL, f"数据 {spec.family}/{spec.run}", f"QA 无法解析：{exc}"))
             continue

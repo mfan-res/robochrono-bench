@@ -40,8 +40,11 @@ def estimate_run(spec: RunSpec, datasets_root: Path) -> Estimate:
     溯源路径（原始 LeRobot 视频、未发布的 time_joined_videos 等），
     它们从不会被发给模型，算进去既会高估体积，也会误报「文件缺失」。
     """
-    qa_path = spec.qa_path(datasets_root)
-    items = load_items(qa_path)
+    # **与 run 同一条加载路径**（`tasks.load_for_run`）。
+    # 此前这里用 `load_items` 不解析媒体路径 —— v2 的路径是相对 QA 文件的，
+    # 于是每一条都 stat 不到：**97,415 个假「文件缺失」，媒体体积报成 0.00 GB**。
+    # 后者更要紧 —— 那是用来决定「要不要在 API 模型上花钱」的数字。
+    items = tasks.load_for_run(datasets_root, spec.family, spec.run)
     task = tasks.build(spec.run)
     units = task.units(items)
 

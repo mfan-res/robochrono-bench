@@ -116,6 +116,30 @@ def _require_fresh(root: Any) -> None:
     _FRESHNESS_CHECKED.add(root)
 
 
+def load_for_run(datasets_root: Any, family: str, run: str,
+                 stats: Any = None) -> list[dict[str, Any]]:
+    """**评测真正走的加载路径。preflight 与 run 共用这一个函数。**
+
+    此前两边各写各的：`cli.run` 走这里的逻辑，`preflight.check_data` 走
+    `load_run_items(source="normalized")`。于是自检验的不是运行走的那条路 ——
+    v2 数据上自检 25 项全红，而 `run` 一路跑通（冒烟、四轮盲基线都过）。
+    **自检与运行分叉，比没有自检更糟**：它在能跑的数据上报警，
+    也可能在真出问题时沉默。
+
+    媒体路径相对 QA 文件所在目录解析（`base=`）—— 这是 v2 的约定，
+    换机器不用重新生成 QA。
+    """
+    from pathlib import Path as _Path
+
+    from ..mediaindex import index_for_qa, resolve_items
+    from .base import load_items
+
+    path = qa_path(_Path(datasets_root), family, run)
+    items = load_items(path)
+    resolve_items(items, index_for_qa(path, datasets_root), stats, base=path.parent)
+    return items
+
+
 def load_run_items(datasets_root: Any, family: str, run: str,
                    *, source: str = "normalized") -> list[dict[str, Any]]:
     """取某个 (族, 任务) 的题目列表。**走哪条路必须显式声明。**
