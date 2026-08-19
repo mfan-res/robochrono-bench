@@ -32,8 +32,17 @@ ROOT = Path(__file__).resolve().parents[2]
 SRC = ROOT / "data" / "vqa" / "eval"
 DST = ROOT / "build" / "blind_v2"
 
-# 只有选项本身就是媒体的题型才需要这种盲测：文字选项题走 `blind.py`
-# （纯文本模型 + `--by-text`），两者问的是同一个问题、手段不同。
+# 需要「挖掉题面媒体」这种盲测的题型 —— 选项本身就是图的那两个。
+#
+# **step_order 不在这里，而且不该在。** 它的选项是排列文字，
+# 挖掉图之后整道题一张图都没有，本地 InternVL 直接报
+# 「requires at least one image or video part」，360 次连续失败触发熔断。
+# 更重要的是**它的盲基线算得出来，比实测更硬**：选项文字不含场景信息，
+# 盲着只能靠固定偏好，而两种偏好的最优策略都可以穷举 ——
+#   按排列文字（720 种排序全试）  上界 28.8%
+#   按字母位置                    上界 26.9%
+# 这是「知道整个数据集的对手能拿到的最好成绩」，不是一次抽样。
+# 见 `src/vqa/tests/test_step_order_bound.py`。
 TASKS = ("left_right", "image_in_video")
 
 

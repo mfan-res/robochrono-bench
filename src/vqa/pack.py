@@ -97,6 +97,23 @@ def project(item: dict[str, Any], out_dir: Path) -> dict[str, Any]:
         }
         return row
 
+    # step_order：题面是 N 张带标号的图，选项是文字（排列）。
+    # 发 `image_paths` 而不是拼好的宫格 —— 拼图是 v1 的做法，见 BC-16。
+    if item["task"] == "step_order":
+        steps = sorted((m for m in media if m["role"].startswith("step:")),
+                       key=lambda m: int(m["role"].split(":")[1]))
+        return {
+            "id": item["id"],
+            "video_id": f"{item['family']}/{prov['episode']}",
+            "type": item["task"],
+            "question": item["prompt"]["stem"],
+            "answer": item["truth"]["answer"],
+            "options": [{"id": o["id"], "text": o["text"]}
+                        for o in item["prompt"]["options"]],
+            "input": {"image_paths": [os.path.relpath(ROOT / m["path"], out_dir)
+                                      for m in steps]},
+        }
+
     key = "video_path" if item["task"] == "time" else "clip_path"
 
     # **只发评测端真读的字段。** 逐个核对过源码：

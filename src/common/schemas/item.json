@@ -53,8 +53,8 @@
             "properties": {
               "role": {
                 "type": "string",
-                "pattern": "^(clip|frame|context|initial|montage|option:[A-F])$",
-                "description": "option:A…E 是显式绑定 —— 不再依赖列表迭代序决定哪张图对应哪个选项。"
+                "pattern": "^(clip|frame|context|initial|montage|option:[A-F]|step:[1-9])$",
+                "description": "option:A…E 与 step:1…N 都是显式绑定 —— 不再依赖列表迭代序\n决定哪张图对应哪个选项 / 哪个标号。step_order 的题干直接问\n「Image 1/2/3 的先后」，标号丢进数组下标就是隐式契约。"
               },
               "view": {"type": ["string", "null"]},
               "kind": {"enum": ["video", "image"]},
