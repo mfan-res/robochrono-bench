@@ -29,6 +29,16 @@ def _store_for(spec: RunSpec, results_root: Path, runtime_meta: dict[str, Any]) 
     return ResultStore(out_dir / f"{spec.run}.jsonl", meta=runtime_meta)
 
 
+def _providers_cfg(config_path: Path) -> dict[str, Any]:
+    """读 providers.json。**与 cli.py 的 `_providers_cfg` 读同一份文件** ——
+    按题型覆盖抽帧数要用（见该文件的 `_frames_by_run_note`）。"""
+    import json as _json
+    try:
+        return _json.loads(Path(config_path).read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
 def _apply_frames(runtime: dict[str, Any], spec: RunSpec) -> dict[str, Any]:
     """把该 run 的抽帧档位写进 runtime。
 
@@ -142,6 +152,14 @@ def _prepare(spec: RunSpec, datasets_root: Path, config_path: Path, model: Model
     qa_path = spec.qa_path(datasets_root)
     runtime = runtime_config(config_path=config_path, provider_name=model.provider,
                              default_model="", cli_model=model.model)
+    # 按题型覆盖抽帧数。**此前只有 cli.run 有这一段，matrix 没有** ——
+    # 于是全量跑用了 provider 默认的 8 帧，而不是 time 该用的 32 帧。
+    # 8 帧对全长视频等于每 8.5–15 秒一帧，而动作段中位 5.9 秒（D-52）。
+    # 又是「两条路只有一条打了补丁」（D-60）。
+    by_run = (_providers_cfg(config_path).get("frames_by_run", {}) or {}).get(spec.run)
+    if by_run:
+        runtime = dict(runtime)
+        runtime["frames"] = dict(by_run)
     runtime = _apply_frames(runtime, spec)
     store = _store_for(spec, results_root, _meta(spec, runtime, qa_path, flags))
     if overwrite and store.path.exists():

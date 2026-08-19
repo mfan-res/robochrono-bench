@@ -107,6 +107,22 @@ def rows_from_multi_json(data: Any) -> list[Any] | dict[str, Any]:
     raise ValueError(f"Cannot parse multi-answer JSON: {data!r}")
 
 
+def _video_seconds(items: list[dict[str, Any]]) -> float | None:
+    """这一组题所用视频的时长（秒）。由 ④ `pack.py` 写进 `input.video_seconds`。
+
+    只取第一题 —— time 是**一个视频一组**，同组各题共用同一段视频。
+    取不到就返回 None，提示词里那一句随之消失（不编一个数字出来）。
+    """
+    for item in items:
+        data = item.get("input")
+        if isinstance(data, dict) and data.get("video_seconds"):
+            try:
+                return float(data["video_seconds"])
+            except (TypeError, ValueError):
+                return None
+    return None
+
+
 def parse_multi_interval_text(text: str, question_ids: list[str]) -> dict[str, dict[str, Any]]:
     """把一次调用返回的多题答案拆回每题。三级回落：整体 JSON → 按 id 的正则行匹配 → 报错。"""
     cleaned = text.strip()
@@ -127,8 +143,19 @@ def parse_multi_interval_text(text: str, question_ids: list[str]) -> dict[str, d
             return predictions
         for index, row in enumerate(rows):
             item_id = row_id(row)
-            if item_id is None and index < len(question_ids):
-                item_id = question_ids[index]
+            # **模型常按序号作答，而不是回抄完整 id。** 提示词里每题同时给了
+            # `index` 与 `id` 两个字段，实测该模型返回 `"id": "1"` ——
+            # 按 id 匹配就全部落空（gift_inhand 90/90 全废）。
+            # 这里按「序号」再兜一次，越界则退回位置对应。
+            if item_id not in question_ids:
+                hint = row.get("index") if isinstance(row, dict) else None
+                if hint is None and isinstance(item_id, str) and item_id.isdigit():
+                    hint = item_id
+                try:
+                    pos = int(hint) - 1                 # 提示词里的 index 从 1 起
+                except (TypeError, ValueError):
+                    pos = index
+                item_id = question_ids[pos] if 0 <= pos < len(question_ids) else None
             if item_id not in question_ids:
                 continue
             start, end = parse_interval_row(row)
@@ -217,12 +244,20 @@ def build_prompt(items: list[dict[str, Any]]) -> str:
             )
         )
     questions = "\n".join(question_lines)
+    # **必须告诉模型视频有多长。** 否则「用秒作答」是无法执行的要求 ——
+    # 模型只看到若干抽帧，无从知道整段是 89.6 秒还是 8.9 秒。
+    # 实测不给时长时，模型输出的是 [0, 1] 的归一化比例（0.01–0.23），
+    # 于是 tIoU 全 0 —— 那不是「定位不准」，是**单位不对**（BC-18）。
+    seconds = _video_seconds(items)
+    duration_line = (f"\nThe video is {seconds:.1f} seconds long; "
+                     f"answers must fall inside [0, {seconds:.1f}]."
+                     if seconds else "")
     return f"""You are answering temporal grounding questions about synchronized robot manipulation videos.
 
 The inputs may contain multiple synchronized camera views of the same episode. Use all views together.
 For each question below, find the full time interval where the robot performs the queried action.
 Return the full action segment, not only the instant of contact, grasp, or release.
-Use seconds from the start of the video.
+Use seconds from the start of the video.{duration_line}
 
 Questions, one JSON object per line:
 {questions}

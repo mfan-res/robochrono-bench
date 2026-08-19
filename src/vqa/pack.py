@@ -115,6 +115,14 @@ def project(item: dict[str, Any], out_dir: Path) -> dict[str, Any]:
         }
 
     key = "video_path" if item["task"] == "time" else "clip_path"
+    # time 要多发一个视频时长。**它不是真值** —— 是这段视频的客观属性，
+    # 与「动作在第几秒」无关。不给的话「用秒作答」根本无法执行：
+    # 模型只看到若干抽帧，会退回输出 [0,1] 的比例（BC-18）。
+    extra_input: dict[str, Any] = {}
+    if item["task"] == "time":
+        seconds = item["provenance"]["recipe"]["clip"].get("seconds")
+        if seconds:
+            extra_input["video_seconds"] = round(float(seconds), 3)
 
     # **只发评测端真读的字段。** 逐个核对过源码：
     #   读   id / video_id / type / question / answer / options[id,text] / input
@@ -131,7 +139,8 @@ def project(item: dict[str, Any], out_dir: Path) -> dict[str, Any]:
         "question": render(item["prompt"]["stem"], item["prompt"]["options"]),
         "answer": item["truth"]["answer"],
         # ⚠ input 里【只放媒体路径】。v1 在这里还放了 start/end，而那等于答案
-        "input": {key: rel[0], **({f"{key}s": rel} if len(rel) > 1 else {})},
+        "input": {key: rel[0], **({f"{key}s": rel} if len(rel) > 1 else {}),
+                  **extra_input},
     }
     if item["prompt"]["options"]:
         row["options"] = [{"id": o["id"], "text": o["text"]}
