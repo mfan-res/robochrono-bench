@@ -18,14 +18,21 @@
   .bar{display:flex;gap:14px;align-items:center;padding:7px 0;color:var(--dim)}
   .bar b{color:var(--fg);font-variant-numeric:tabular-nums;font-weight:600}
   #track{position:relative;height:46px;background:#0f1115;border:1px solid var(--line);
-         border-radius:5px;overflow:hidden;cursor:pointer;margin-top:4px}
+         border-radius:5px;overflow:hidden;cursor:ew-resize;margin-top:4px;
+         touch-action:none;user-select:none}
+  #track:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
   .seg{position:absolute;top:4px;height:24px;background:#2f6db5;border-radius:3px;
        font-size:10px;line-height:24px;padding:0 4px;overflow:hidden;white-space:nowrap;
        color:#dbe6f5;border:1px solid #4581cc}
   .seg.dup{background:#7a5a1e;border-color:var(--warn)}
   .ep{position:absolute;bottom:0;height:15px;border-left:2px solid var(--accent);
       font-size:9px;color:var(--accent);padding-left:3px}
-  #cursor{position:absolute;top:0;bottom:0;width:2px;background:#fff;pointer-events:none}
+  #cursor{position:absolute;top:0;bottom:0;width:2px;background:#fff;pointer-events:none;
+          z-index:3}
+  #cursor::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:28px;
+                 border-radius:6px;transform:translate(-50%,-50%);background:#fff;
+                 box-shadow:0 0 0 2px rgba(0,0,0,.45)}
+  #track.scrubbing #cursor,#track.scrubbing #cursor::after{background:var(--accent)}
   #pending{position:absolute;top:4px;height:24px;background:rgba(224,163,62,.35);
            border:1px dashed var(--warn);border-radius:3px}
   aside{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px}
@@ -66,9 +73,12 @@
       帧 <b id="frame">0</b> / <b id="total">0</b>
       <b id="time">00:00.000</b>
       <button id="playpause">播放 (空格)</button>
-      <span style="color:var(--dim)">← → 单帧　⇧← ⇧→ 十帧　K 打点　Z 撤销</span>
+      <span style="color:var(--dim)">拖动时间轴定位　← → 单帧　⇧← ⇧→ 十帧　K 打点　Z 撤销</span>
     </div>
-    <div id="track"><div id="cursor"></div></div>
+    <div id="track" role="slider" tabindex="0" aria-label="视频帧位置"
+         aria-valuemin="0" aria-valuemax="0" aria-valuenow="0" aria-valuetext="帧 0">
+      <div id="cursor"></div>
+    </div>
   </div>
 
   <aside>
@@ -99,13 +109,28 @@
 const $ = s => document.querySelector(s);
 const KEYS = "1234567890qwertyuiop";
 let S = { fps: 25, total: 0, subtasks: [], segments: [], bounds: null, pending: null,
-          usage: {}, dirty: false, version: null };
+          usage: {}, dirty: false, version: null, scrub: null };
 const mark_dirty = v => { S.dirty = v; $("#dirty").textContent = v ? "● 未保存" : ""; };
 
-const frameOf = t => Math.min(S.total - 1, Math.max(0, Math.round(t * S.fps)));
-const seek = f => { $("#v").currentTime = Math.min(S.total - 1, Math.max(0, f)) / S.fps; };
+const clampFrame = f => Math.min(Math.max(0, S.total - 1), Math.max(0, Math.round(f)));
+const frameOf = t => clampFrame(t * S.fps);
 const fmt = f => { const t = f / S.fps, m = Math.floor(t / 60);
   return `${String(m).padStart(2,"0")}:${(t-m*60).toFixed(3).padStart(6,"0")}`; };
+function showFrame(f) {
+  f = clampFrame(f);
+  $("#frame").textContent = f; $("#time").textContent = fmt(f);
+  const track = $("#track"), max = Math.max(0, S.total - 1);
+  $("#cursor").style.left = `${(f / Math.max(1, max)) * (track.clientWidth || 1)}px`;
+  track.setAttribute("aria-valuemax", max);
+  track.setAttribute("aria-valuenow", f);
+  track.setAttribute("aria-valuetext", `帧 ${f}，${fmt(f)}`);
+}
+function seek(f) {
+  const frame = clampFrame(f);
+  $("#v").currentTime = frame / S.fps;
+  // timeupdate 频率低于拖动事件；先更新读数，seek 完成后再由视频事件校正。
+  showFrame(frame);
+}
 
 async function loadFamilies() {
   const { families } = await (await fetch("/api/families")).json();
@@ -170,6 +195,7 @@ function render() {
     dups.length ? `<span class="pill warn">重复动作 ${dups.map(([k,n])=>`${k}×${n}`).join(" ")}</span>` : "",
   ];
   $("#status").innerHTML = pills.join("");
+  showFrame(frameOf($("#v").currentTime));
 }
 
 function mark() {
@@ -243,15 +269,40 @@ addEventListener("keydown", e => {
   const i = KEYS.indexOf(e.key.toLowerCase());
   if (i >= 0) { e.preventDefault(); choose(i); }
 });
-$("#v").addEventListener("timeupdate", () => {
-  const f = frameOf($("#v").currentTime);
-  $("#frame").textContent = f; $("#time").textContent = fmt(f);
-  $("#cursor").style.left = `${(f / Math.max(1, S.total)) * ($("#track").clientWidth || 1)}px`;
+$("#v").addEventListener("timeupdate", () => showFrame(frameOf($("#v").currentTime)));
+$("#v").addEventListener("seeked", () => showFrame(frameOf($("#v").currentTime)));
+
+const trackFrame = clientX => {
+  const r = $("#track").getBoundingClientRect();
+  const ratio = Math.min(1, Math.max(0, (clientX - r.left) / Math.max(1, r.width)));
+  return clampFrame(ratio * Math.max(0, S.total - 1));
+};
+const scrubTo = clientX => seek(trackFrame(clientX));
+$("#track").addEventListener("pointerdown", e => {
+  if (e.button !== 0 || S.total < 1) return;
+  e.preventDefault();
+  const track = $("#track"), v = $("#v");
+  track.focus({ preventScroll: true });
+  track.setPointerCapture(e.pointerId);
+  S.scrub = { pointerId: e.pointerId, resume: !v.paused };
+  v.pause();
+  track.classList.add("scrubbing");
+  scrubTo(e.clientX);
 });
-$("#track").addEventListener("click", e => {
-  if (e.target.dataset.i !== undefined) return;
-  seek(Math.round((e.offsetX / $("#track").clientWidth) * S.total));
+$("#track").addEventListener("pointermove", e => {
+  if (S.scrub?.pointerId === e.pointerId) scrubTo(e.clientX);
 });
+function finishScrub(e) {
+  if (S.scrub?.pointerId !== e.pointerId) return;
+  const track = $("#track"), resume = S.scrub.resume;
+  if (e.type === "pointerup") scrubTo(e.clientX);
+  S.scrub = null;
+  track.classList.remove("scrubbing");
+  if (track.hasPointerCapture(e.pointerId)) track.releasePointerCapture(e.pointerId);
+  if (resume) $("#v").play().catch(() => {});
+}
+$("#track").addEventListener("pointerup", finishScrub);
+$("#track").addEventListener("pointercancel", finishScrub);
 $("#list").addEventListener("click", e => {
   const i = e.target.dataset.del;
   if (i !== undefined) { S.segments.splice(+i, 1); mark_dirty(true); render(); }
