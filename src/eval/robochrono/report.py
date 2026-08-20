@@ -155,6 +155,8 @@ def collect(results_dir: Path) -> list[dict[str, Any]]:
                 "errors": summary.get("errors"),
                 "parse_failure_rate": summary.get("parse_failure_rate"),
                 "aborted": summary.get("aborted"),
+                # 低于「不看视频也能拿到」的水平时是一句话，否则 None。见 tasks.floor_breach。
+                "floor": tasks.floor_breach(run, summary),
                 "frames": (meta.get("frames") or {}).get("value"),
             }
         )
@@ -195,6 +197,9 @@ def to_markdown(rows: list[dict[str, Any]]) -> str:
                     cells.append("n/a")
                 else:
                     mark = "*" if (row.get("total") or 0) < 100 else ""
+                    # ⚠ 是**结论性的记号，不是装饰** —— 它说的是「这个数低到
+                    # 不看视频也能拿到」，读表的人应当先查它再比大小。
+                    mark += "⚠" if row.get("floor") else ""
                     cells.append(f"{row['value']:.4g}{mark}")
             label = f"| {model} | " + (f"{variant} | " if multi_variant else "")
             out.append(label + " | ".join(cells) + " |")
@@ -203,6 +208,21 @@ def to_markdown(rows: list[dict[str, Any]]) -> str:
     out.append("主指标：选择题类 accuracy，trajectory 为 mean_score，time 为 tIoU@0.5。")
     out.append("　　time 不用 mean_tIoU —— 「整段视频都报」就能拿 0.13，不是 0（见 tasks/__init__.py）。")
     out.append("`*` 表示样本量少于 100，置信区间较宽（step_order 每族仅 50 题）。")
+
+    # 逐条列出来，不能只留一个符号 —— 「为什么低」和「低了」一样重要。
+    breaches = [r for r in rows if r.get("floor")]
+    if breaches:
+        out.append("")
+        out.append(f"⚠ **{len(breaches)} 个格子低于退化基线**"
+                   "（判据见 `tasks/__init__.py` 的 `DEGENERATE_FLOOR`）：")
+        out.append("")
+        out.append("| model | family | run | 情况 |")
+        out.append("| --- | --- | --- | --- |")
+        for r in sorted(breaches, key=lambda x: (x["model"], x["family"], x["run"])):
+            out.append(f"| {r['model']} | {r['family']} | {r['run']} | {r['floor']} |")
+        out.append("")
+        out.append("低于退化基线**不一定是模型差** —— 也可能是单位不对、"
+                   "解析没对上、或者题目本身在问别的东西。先查这几条再读别的数。")
     if any(r["variant"] != "default" for r in rows):
         out.append("frames 列是抽帧档位；静态图任务不分档，两行取值相同。")
     return "\n".join(out)

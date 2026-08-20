@@ -1,28 +1,30 @@
 # 重构残留物清理清单
 
-> **第二版**，2026-08-19 复核。基线 `HEAD = d6198a8`（上一版基线是 `8e184f5`，之间有 8 个提交）。
-> 每条都对着当前代码重新验过一遍，状态见下表。
+> **第三版**，2026-08-21 复核。基线 `HEAD = 8611e28`（上一版 `d6198a8`）。
+> 本版把**首轮全量评测（SenseNova-2B，42 run / 9,037 unit）暴露的问题**
+> 与静态审计的发现合并了 —— 有几条互相印证，见 §A。
 >
-> 行号已按当前代码更新。仍建议按每条给的**搜索锚点**定位 —— `src/vqa/plan.py`
-> 这轮长了 483 行，行号还会继续漂。
+> 行号按当前代码更新。仍建议用每条给的**搜索锚点**定位。
 
 ## 本次复核发生了什么
 
-**这 8 个提交（`0a76169` … `d6198a8`）做了很多正确的事** —— 建成 step_order（七题型齐了，
-10,178 道）、preflight 抓出五处「自检与运行走不同路径」、修了 matrix「跳过全部 run 却报
-全部已完成」。`docs/disclosures.md` 也跟着更新到位了（§6 重写，新增 1b / D-57 / D-58）。
-
-对本清单的影响：
+上一版之后有一个提交（`8611e28`），修了三处 time 相关缺陷并跑完首轮全量。
 
 | 变化 | 条目 |
 | --- | --- |
-| 🔴 **恶化** | **1.1** —— `frame_variants` 清空后，local 模型的 time 从 fps=1/2 掉到 **8 帧**（31% 的题看不到被问动作），比上一版更严重 |
-| 🟡 部分修复 | **4.1** —— `_prepare` 失败已显式返回失败数，但 `stats["errors"]` 仍被丢弃；且新引入「一个 spec 失败则全部不跑」 |
-| 🟡 条目变大 | **1.2** 未使用 import 13 → **18** 条；**1.8** README 更陈旧了 |
-| 🟢 无变化 | 1.3 1.4 1.5 1.6 1.7 1.9–1.16、2.x、3.x、4.2–4.5、5.x 全部仍然成立 |
-| 🆕 新增 | **1.17 1.18 4.6 4.7 5.7** 五条 |
+| 🟡 **修了一半** | **1.1** —— `matrix_run._prepare` 现在读 `frames_by_run` 了 ✅，但**多卡 pool 路径拿不到它** ❌。而且 meta 现在会记 32 帧、实际跑 8 帧 —— **从「没接线」变成「元数据与事实不符」，更难发现** |
+| ✅ 已修 | time 提示词补视频时长（`time_eqa.py:_video_seconds` + `pack.py` 写 `input.video_seconds`，实测 200/200 已带上）；多题答案按序号回落匹配（gift_inhand 90/90 全废已解） |
+| 🔺 **实证升级** | **5.2**（`extract.py` 未接线）、**4.2**（pool 重建 runtime）—— 全量跑的两处失败正好命中这两条，见 §A |
+| 🆕 新增 | **A-1 … A-5** 五条，全部来自这次全量跑 |
+| 🟢 无变化 | 1.2–1.18、2.x、3.x、4.1 4.3–4.7、5.1 5.3–5.7 仍然成立 |
 
-**没有一条被本轮改动修掉。** 4.1 是唯一动过的，且只修了一半。
+## 一句话回答「模型矩阵要起吗」
+
+**可以起了。** A-1（time 多卡路径现在也走 32 帧）与 A-2（`--runs` + 备份而非删除）
+都已于 2026-08-21 修完，见 §A。
+
+A-3（退化基线闸门）也已修完 —— 这一轮的报表会自己标出
+「低于随机 / 低于最蠢的策略」的格子，不必再靠人工诊断。
 
 ## 怎么用这份清单
 
@@ -35,8 +37,9 @@
 
 | 严重度 | 条目 |
 | --- | --- |
-| **P0** | **1.1**（time 实际跑 8 帧，直接影响分数 —— 本轮恶化） |
-| 中 | 4.1 4.2 4.3 4.4 4.5 **4.6 4.7**、2.1 2.4、3.1、5.2 5.3、**1.17** |
+| **P0 · 起下一轮之前必须做** | ~~A-1~~ ✅ 已修、~~A-2~~ ✅ 已修 —— **P0 清空，可以起模型矩阵** |
+| **P1 · 下一轮之前值得做** | ~~A-3~~ ✅ 已修、**5.2**（`extract.py` 接入，实证已支持）、**4.2**（pool 重建 runtime，A-1 已绕过但重复仍在） |
+| 中 | 4.1 4.3 4.4 4.5 4.6 4.7、2.1 2.4、3.1、5.3、1.17、**A-4 A-5 A-6** |
 | 低 | 批次 1 其余、3.2 3.3、5.1 5.4 5.5 5.6 5.7 |
 
 ---
@@ -45,10 +48,9 @@
 
 - [x] ~~**D-1 · 并发会话**~~ —— 已落地为 8 个提交，工作区现在是干净的。本条关闭。
 
-- [ ] **D-2 · `frames_by_run` 与 `frame_variants` 谁优先？**（决定 1.1 怎么改）
-      **本轮变得更要紧**：`frame_variants` 已清空为 `[]`，而 `plan.json` 的
-      `_why_frame_variants` 声称「用 providers.json 里 frames_by_run 定的抽帧档位（time 用 32 帧）」
-      —— **这句话与代码不符**，matrix 从来不读 `frames_by_run`。见 1.1。
+- [x] ~~**D-2 · `frames_by_run` 与 `frame_variants` 谁优先？**~~ —— `8611e28` 已定：
+      `_prepare` 先套 `frames_by_run`，再让 `_apply_frames`（`frame_variants`）覆盖它。
+      **判断是对的，但只落到了串行路径 → 见 A-1。**
 
 - [ ] **D-3 · 32 帧到底实测过没有？** 三方冲突：
       `providers.json` `_note` 说「实测 32 帧 12.55G→6.31G，160 帧可跑」，
@@ -62,6 +64,9 @@
 - [ ] **D-5 · `python -m robochrono export` 对外承诺过没有？**（决定 5.3）
 
 - [ ] **D-6 · `extract.py` 是已放弃的方案，还是排期中的下一步？**（决定 5.2）
+      🔺 **首轮全量给了答案的一半**：它 docstring 里点名的失败模式（模型输出归一化坐标）
+      这次真的发生了，且花了两小时人工诊断。问题已从「要不要」变成
+      「**整套接入，还是先只接量级校验那一小块**」。
 
 - [ ] **D-7 · 完整 v1 数据（61 GB）能不能进 CI？**（决定 2.4）
 
@@ -72,6 +77,15 @@
       `src/eval/configs/config_smoke.json:8`。
 
 - [ ] **D-10 · `src/vqa/recipes/` 是已废弃的设计，还是还没建？**（决定 1.7）
+
+- [ ] 🆕 **D-13 · A-4 的三个选项选哪个？**（现在必须定，因为①会改数据）
+      给 planning 题记 `current_action_in_options` 需要重跑 ④，
+      **只能在两轮评测之间做** —— 起 RynnBrain / Qwen 之前定，否则三个模型的题不一样。
+
+- [ ] 🆕 **D-14 · Cosmos3-Edge-2B 怎么办？** 缺推理库。
+      装（groupB 环境已有位置，`configs/environments.json` 里映射好了），
+      还是先从 `plan.json` 的 models 里移出、在 `_why_models` 里记一句？
+      **移出比留着 FAIL 好** —— 现在它是 preflight 里唯一的红色，会掩盖真的新问题。
 
 - [ ] 🆕 **D-11 · `data/vqa/` 层的可再生中间件，哪些该进 git？**（决定 1.17）
       本轮 `.gitignore` 把 `build/frames.json`（5.6 MB）排除了，理由是「可再生」；
@@ -84,53 +98,201 @@
 
 ---
 
+## §A · 首轮全量评测暴露的问题（2026-08-21 新增）
+
+首轮全量：SenseNova-SI-1.1-InternVL3-2B，42 run / 9,037 unit，8 卡，errors=0。
+七个题型只有 image_in_video（44.7%，+16.2σ）与 understanding（40.9%，+13.7σ）测出信号，
+time 归零。**这几条是从那次跑里落回代码的，不是模型结论。**
+
+### A-1 ✅ **已修**（2026-08-21）· 多卡 pool 路径拿不到 `frames_by_run`
+
+- [x] `pool.py:47` —— `frames_fps: float | None` 换成 `frames: dict | None` + `align_fps: bool`
+- [x] `pool.py:113-123` —— 改为整份档位一起设，顺手消掉「改了不还原、漏给下一个 unit」
+- [x] `matrix_run.py:213` —— `_, _, store, ...` 改为 `_, runtime, store, ...`，接住 runtime
+- [x] `matrix_run.py:232-238` —— `WorkItem` 带上 `frames=runtime["frames"]` 与 `align_fps`
+
+**验证**（不起 GPU，复刻 `vlm_api.py:1141-1153` 的取值逻辑逐 run 核对）：
+
+```
+run             WorkItem.frames                    worker 实际会用的帧数
+image_in_video  uniform:8  (+派生键)               8 → 8
+left_right      uniform:8                          8 → 8
+planning        uniform:8                          8 → 8
+planning_2      uniform:8                          8 → 8
+step_order      uniform:8                          8 → 8
+time            {'mode':'uniform','value':32}      8 → 32   ← 修好了
+understanding   uniform:8                          8 → 8
+```
+
+片段类题维持 8 帧（本就够，D-52），只有 time 提到 32 —— 与 `_frames_by_run_note` 的意图一致。
+
+**遗留**：`_meta` 记录的 `frames` 与 worker 实际用的现在一致了，
+但两者的**字典形状**仍不统一 —— 见 A-6。
+
+### A-2 ✅ **已修**（2026-08-21）· `matrix` 缺 `--runs`，`--overwrite` 无差别删除
+
+- [x] **`--runs` 过滤** —— `matrix.expand()` 加 `only_runs` 参数；`cli._expand` 透传；
+      `matrix` 与 `plan` / `estimate` / `preflight` 四个子命令都加上
+      （后三个共用同一个注册循环，一处改四处受益）。
+      拼错报错而不是筛出空集 —— `--runs tiem` 若静默跑空，表现是「矩阵为空」，
+      看起来像数据没到位而不是打字错了。
+- [x] **`--overwrite` 改为挪走而不是删掉** —— 新增 `ResultStore.displace()`，
+      把 `<run>.jsonl` 改名为 `<run>.jsonl.bak` 并返回挪走的行数，只保留一代。
+      `matrix_run._prepare` 与 `engine.run` **两处 unlink 都换掉了**（口径统一）。
+      后缀选 `.jsonl.bak` 而不是 `.bak.jsonl`：`report.pack` 按 `*.jsonl` 收集文件，
+      备份不该被打包回传。
+
+**验证**：
+
+```
+不加 --runs                 : 210 个 spec
+--runs time                 :  30 个 spec（6 族 x 5 模型）
+--runs time understanding   :  60 个 spec
+--runs time --models Sense  :   6 个 spec        <- 与 --models 正交
+--runs tiem                 : ValueError，并列出可选题型
+
+displace(): 7 行 -> time.jsonl.bak，原文件消失、备份 7 行俱在
+再来一次    : 1 行 -> 覆盖同一个 .bak（只保留一代）
+空 store    : 返回 0，不报错
+rglob("*.jsonl") 不命中 .bak   <- pack 不会带上备份
+```
+
+**以后只重跑一个题型**：
+```bash
+python -m robochrono --datasets-root ../../data/vqa/eval --results-dir <dir> \
+    matrix --only local --models <模型> --runs time --gpus 8 --overwrite
+```
+`--overwrite` 现在只影响 `--runs` 选中的那些 run，而且是挪走不是删。
+
+**遗留**：`plan` / `estimate` / `preflight` 仍然没有 `--models`（只有 `matrix` 有）——
+**这是本次之前就有的不对称**，没有一并改。要的话是同一处注册循环加一行。
+
+### A-3 ✅ **已修**（2026-08-21）· 退化基线闸门
+
+- [x] `tasks/__init__.py` —— 新增 `RANDOM_BASELINE` / `DEGENERATE_FLOOR` / `floor_breach()`。
+      判据直接取自同文件里 `PRIMARY_METRIC` 的那张退化基线表
+      （**数字上一轮就量过了，只是从没进过代码**）：
+      | run | 指标 | 下限 | 下限是谁拿到的 |
+      | --- | --- | --- | --- |
+      | 六个选择题 | `accuracy` | 0.25 | 随机猜（④ 固定四选一） |
+      | `time` | `mean_tIoU` | 0.13 | 「整段视频都报」 |
+      | 任意 run | 主指标 | `== 0` | 与三个退化策略无区分度 |
+      选择题的下限从 `choice.SPECS` 自动生成 —— 以后加题型不用改这里。
+      用**名义**基线 25% 而非等效值（gift_inhand / pen_inbox 的 understanding 等效 33%）：
+      等效值只会让门槛更高，名义值不会误报。
+      trajectory 不设下限（退化基线没量过，且已搁置）。
+- [x] `report.collect` 带上 `floor` 字段；`to_markdown` 给格子加 `⚠`，并在表下**逐条列出**
+      —— 只留一个符号不够，「为什么低」和「低了」一样重要。
+- [x] `matrix_run._write_summary` 与 `cli.cmd_run` **跑的时候就打印**，
+      不等到出报表：一轮矩阵几小时，早两小时知道就能早两小时去查。
+
+**验证**（拿首轮全量的真实分数造一份结果跑 `report`）：
+
+```
+| model                         | time | understanding | left_right | image_in_video | planning | planning_2 | step_order |
+| SenseNova-SI-1.1-InternVL3-2B |  0⚠  |     0.409     |   0.262    |     0.447      | 0.241⚠   |    0.28    |   0.262*   |
+
+⚠ 2 个格子低于退化基线：
+| … | wash | planning | 低于随机猜（accuracy 0.241 < 0.25） |
+| … | wash | time     | 低于「整段视频都报」（mean_tIoU 0 < 0.13） |
+```
+
+**这一轮人工挖了两小时才发现的两件事，现在是报表上的两行。**
+另确认 `answered == 0` 时不报（全没答上是另一类问题，由 `answered` /
+`parse_failure_rate` 各自反映，混进来会让这个记号失去意义）。
+
+**回归**：`run_all.py` 通过 5 跳过 1 未通过 0，与改动前一致。
+
+### A-4 🟡 · `planning` 的干扰项里必然包含「当前动作」，而这一事实没有被记录
+
+- [ ] **位置**：`src/vqa/plan.py` 的 `build_options`（搜索锚点：`选出 3 条干扰项，凑成统一的四选一`）、
+      `docs/disclosures.md` 第 1 条
+- **实测（这次全量）**：
+  ```
+  族           答对(下一步)  答成当前动作   当前动作在选项里
+  pen_inbox        8.1%       70.7%       100.0%
+  stack_cubes      3.3%       44.0%       100.0%
+  wash            31.0%       11.9%        21.2%
+  ```
+  「答成当前动作」几乎完全跟着「当前动作在不在选项里」走；它出现时被选中的条件概率 48%（随机 25%）。
+- **成因不是 bug，是算术**：`build_options` 从**本族全部真实动作**里取干扰项，
+      而 pen_inbox / gift_inhand 只有 3 个动作 —— 四选一 = 答案 + 全部其余动作，
+      **当前动作必然在选项里，100% 不是巧合**。wash 动作多，所以只有 21.2%。
+- **所以这条不是「改代码修掉」，是「必须被记录下来」**。三选一：
+  - [ ] ① **（最小、推荐）** `plan.py` 在每道 planning 题的 `provenance` 里写一个
+        `current_action_in_options: true/false`，报表按它分层 —— 这是**可再生的事实**，
+        现在只能靠事后重算
+  - [ ] ② 干扰项显式排除当前动作 —— ⚠ 三动作族会填不满，且「当前动作缺席」本身变成新捷径
+  - [ ] ③ 不动数据，只在 `docs/disclosures.md` 第 1 条下补一小节
+- **与披露第 1 条的关系**：那条担心的是「planning 可以靠查固定流程表解出来」。
+      这次的数据**反过来回答了它** —— 这个模型连「现在」和「接下来」都没区分开，
+      根本没用到那条捷径。**两件事都该写进披露**：捷径存在（对强模型），
+      而弱模型栽在更前面的一步。
+- **依赖**：①会改 `build/plan.json` 与 `data/vqa/`，**必须在两轮评测之间做**，不能中途改。
+
+### A-5 🟢 · 进 git 的运行日志有 94.5% 是同一行 transformers 噪声
+
+- [ ] **位置**：`results/run1_sensenova_2b.log`（9,562 行 / 667 KB）、
+      本地 InternVL adapter 的 `generate` 调用（`src/eval/robochrono/vlm_api.py`）
+- **现状**：
+  ```
+  总行 9562   其中 "Setting `pad_token_id` to `eos_token_id`:151645" 9037 行 = 94.5%
+  ```
+  正好一行一个 unit。真正有信息的只有 525 行。
+  而 `.gitignore` **对 `results/` 没有任何规则** —— 下一轮三个模型进来会再加几倍。
+- **改成**（二选一）：
+  - [ ] ① 在本地 adapter 里显式传 `pad_token_id=tokenizer.eos_token_id`（或设 `generation_config.pad_token_id`），
+        警告消失，日志回到几百行 —— **推荐**，这是警告本来就在提示的做法
+  - [ ] ② 定 `results/` 的进 git 策略：日志过滤后再进，或只进 `*.summary.json` + 逐题 tar.gz
+- **顺带**：`results/README.md` 已经写了这批结果是什么，很好 —— 补一句「日志是过滤过的/未过滤的」即可。
+
+### A-6 🆕 · `frames_by_run` 覆盖出来的 frames 字典缺两个派生键，与 runtime 顶层说法不一致
+
+- [ ] **位置**：`src/eval/robochrono/matrix_run.py:160-163`、`src/eval/robochrono/cli.py:101-103`
+      （两处**同样的写法**）；对照 `src/eval/robochrono/vlm_api.py:150-157` 的 `resolve_frames`
+- **搜索锚点**：`runtime["frames"] = dict(by_run)`
+- **现状**：`resolve_frames` 产出的 frames 有四个键 ——
+      `mode` / `value` / `video_sample_fps` / `num_segments`，后两个是**派生的**，
+      注释写着「下游 adapter 仍读这两个字段」。
+      而 `frames_by_run` 的覆盖是 `runtime["frames"] = dict(by_run)`，
+      `by_run` 是配置里的原始片段，**只有 `mode` 和 `value`**：
+      ```
+      其它 run   {'mode':'uniform','value':8,'video_sample_fps':0.0,'num_segments':8}
+      time       {'mode':'uniform','value':32}                    ← 少两个键
+      ```
+      同时 `runtime` 顶层的 `num_segments` / `video_sample_fps`（`vlm_api.py:265-266`
+      在 `runtime_config` 时写入）**没有跟着更新，仍是 8**。
+      于是一份 runtime 里有两个说法：`frames["value"]=32` 与 `runtime["num_segments"]=8`。
+- **今天不影响帧数**：`vlm_api.py:1151` 的 uniform 分支是
+      `int(frames.get("value") or runtime["num_segments"])` —— **先读 `frames["value"]`**，
+      所以拿到的是 32。已在 A-1 的验证里逐 run 确认过。
+- **但它是个上了膛的坑**：
+      1. 谁把那行改成读 `runtime["num_segments"]`（看起来更"正规"），time 就**静默回到 8 帧**
+      2. 写进结果 meta 的 frames 字典，time 与其它六个 run 形状不同，事后比对会绊一下
+      3. `cli.py` 与 `matrix_run.py` 各写了一遍同样的覆盖 —— 又是「两处各写各的」
+- **改成**：把覆盖收进 `vlm_api.py`，紧挨着 `resolve_frames` 放一个
+      `apply_frames_override(runtime, spec) -> dict`，它负责补齐派生键**并同步顶层的
+      `num_segments` / `video_sample_fps`**；`cli.cmd_run` 与 `matrix_run._prepare` 都调它。
+      约 12 行，净减少一处重复。
+- **怎么验**：
+  ```bash
+  git grep -n 'runtime\["frames"\] = dict(by_run)' -- src/    # 改后应为 0
+  ```
+  再跑 A-1 那段核对脚本，七个 run 的 frames 字典应当形状一致。
+- **风险**：低。**置信度**：高（已实测两处字典形状不同）。**预估**：1 小时。
+
+---
+
 ## §1 · 批次 1：零风险机械清理
 
 **依赖**：无。除 1.1 外都可立即做。
 
-### 1.1 🔴 **P0（本轮恶化）** · `matrix` 从不读 `frames_by_run`，time 实际跑 8 帧
+### 1.1 ✅🟡 **已被 A-1 取代** · `matrix` 读 `frames_by_run`
 
-- [ ] **位置**：`src/eval/robochrono/cli.py:99-101`（**全仓库唯一读取点**）
-      `src/eval/robochrono/matrix_run.py:32-49`（`_apply_frames`）
-      `src/eval/configs/plan.json:90`（`_why_frame_variants`，声称已生效）
-- **搜索锚点**：`by_run = _providers_cfg().get("frames_by_run"`
-- **上一版的问题**：`frames_by_run`（time = uniform 32）只有 `cli.py` 读，`matrix` 不读。
-- **本轮为什么更严重**：`d6198a8` 把 `plan.json` 的 `frame_variants` 从 `[1.0, 2.0]` 清空为 `[]`，
-  理由写在 `_why_frame_variants`：「空的 = 每个任务只跑一遍，**用 providers.json 里
-  frames_by_run 定的抽帧档位**」。
-  **这句话不成立。** `frame_variants = []` → `matrix.py:176-177` 给出 `frames_fps = None`
-  → `_apply_frames` 原样返回 → 落到 provider 自己的 `frames`。实测（只读解析当前配置）：
-
-  ```
-  local_sensenova_si_1_1_internvl3_2b   uniform 8      ← time 有 31% 的题看不到被问动作
-  local_rynnbrain_2b                    uniform 16     ← 10%
-  local_cosmos3_edge_2b                 uniform 16
-  local_qwen                            uniform 16
-  qwen (API)                            uniform 16
-  frames_by_run                         {'time': uniform 32}   ← 从不生效（1%）
-  ```
-
-  也就是说：**改之前 local 模型的 time 至少走 fps=1/2（68 秒视频约 68/136 帧），
-  改之后掉到 8 或 16 帧** —— 正好回到 `d88505a` 判定为「一处致命」的那个状态。
-- **改成**：把 `frames_by_run` 的解析下沉到 `vlm_api.runtime_config` 或 `matrix_run._prepare`，
-  让 `run` / `matrix` / `preflight` / `estimate` 共用同一处覆盖逻辑
-  （本轮已经为**数据加载**做过这件事 —— `tasks.load_for_run` —— 抽帧档位是同一类问题，还没做）。
-  然后按 **D-2** 的答复更新 `_why_frame_variants` 的措辞。
-- **怎么验**（只读，直接可跑）：
-  ```bash
-  git grep -n frames_by_run -- src/          # 应只有 cli.py 一处读
-  python3 - <<'PY'
-  import json, sys
-  sys.path.insert(0, 'src/eval')
-  from robochrono.vlm_api import resolve_frames
-  cfg = json.load(open('src/eval/configs/providers.json'))
-  for name, p in cfg['providers'].items():
-      print(f'{name:<40}', resolve_frames(p, cfg['defaults']))
-  print('frames_by_run =', cfg.get('frames_by_run'))
-  PY
-  ```
-- **影响面**：所有经 `run.sh` / `matrix` 产出的 time 分数。
-  **`d6198a8` 里「matrix --gpus 8 --limit-items 1 全部跑通」的那次验证也是在 8/16 帧下跑的。**
+- [x] ~~串行 / API 路径~~ —— `8611e28` 已修：`matrix_run.py:159-163` 读 `frames_by_run`，
+      `_run_serial:182` 用的就是这份 runtime。
+- [ ] **多卡 pool 路径仍未修，且元数据开始说谎 → 见 §A 的 A-1。**
+      本条不再单独跟踪，A-1 是它的当前形态。
 
 ### 1.2 · 删 18 条未使用 import（上一版是 13 条）
 
@@ -372,6 +534,11 @@ glob 是 `test_*.py`，匹配不到；`git grep smoke_v2` 全仓库仍零命中�
   3. 所有 worker 提前退出 → 不死锁，返回
   4. 🆕 部分 spec 准备失败 → `_run_local_pool` 的返回值符合 **D-12** 定下的语义
 - **这条是 4.1 4.2 的前置。**
+- 🆕 **首轮全量补的两个用例**（这两个 bug 都是靠人读结果才发现的，测试全程沉默）：
+  5. **meta 与实际一致**：给一个 run 设 `frames_by_run`，断言 worker 实际用的
+     `frames_used` 与 store meta 里的 `frames` 对得上（A-1 若不修，这条会红）
+  6. **多题答案按序号回落**：喂一段 `{"id": "1", ...}` 形式的模型输出，
+     断言能匹配回 `question_ids[0]`（`8611e28` 修的就是这个，gift_inhand 90/90 全废）
 
 ### 2.3 · 补出题核心函数的单元测试
 
@@ -477,9 +644,15 @@ glob 是 `test_*.py`，匹配不到；`git grep smoke_v2` 全仓库仍零命中�
   grep -n 'return 0\|return len(broken)\|stats\[' src/eval/robochrono/matrix_run.py
   ```
 
-### 4.2 · `pool._worker` 重复了 `engine._run_unit`，且已丢掉 `replay_key`
+### 4.2 🔺 **实证升级** · `pool._worker` 重复了 `engine._run_unit`，且自建 runtime
 
-**本轮复核：两处均未动，三处分叉仍在。**
+**这条不再是「潜伏缺陷」了 —— A-1 就是它造成的。**
+`pool._worker` 不只复制了执行循环，还**从 config 重新构造了一份 runtime**
+（`pool.py:78-83`），于是主进程在 `_prepare` 里对 runtime 做的任何事（BC-09 的
+`frames_by_run`、未来任何 per-run 覆盖）都到不了 worker。
+`8611e28` 修 `frames_by_run` 时正是在这里漏掉的。**修 4.2 等于顺手修掉 A-1，反之不然。**
+
+**本轮复核：两处均未动，三处分叉仍在，另加 runtime 重建这第四处。**
 
 - [ ] `src/eval/robochrono/pool.py:115-139` vs `src/eval/robochrono/engine.py:54-95`
 - **已分叉的三处**：
@@ -489,8 +662,12 @@ glob 是 `test_*.py`，匹配不到；`git grep smoke_v2` 全仓库仍零命中�
   3. `pool.py:138` 在 `timing` 里多一个 `worker` 字段
 - **分叉 1 目前不可达**（`use_pool` 要求 `model.is_local`，replay 的 `kind` 不是 local），
   是潜伏缺陷 —— 但它正说明「复制一份就会漂」。
-- **改成**：`pool._worker` 改调 `engine._run_unit(task, unit, runtime)`，再补 `worker` 字段。
-  不改任何可观察行为。
+  4. 🆕 **runtime 来源不同**：主进程 `_prepare` 算出的 runtime 被 `_run_local_pool:213` 丢弃，
+     worker 用 `pool.py:78-83` 自建的那份 —— 两份的 `frames` 已经不一样（A-1）
+- **改成**：`_run_local_pool` 把 `_prepare` 的 runtime 随 `WorkItem` 下发，
+  worker 不再自建（只保留 `device_map` 覆盖）；`pool._worker` 改调
+  `engine._run_unit(task, unit, runtime)`，再补 `worker` 字段。
+  前半解掉 A-1，后半消掉执行循环的重复。
 
 ### 4.3 · `serve.py:review()` 是第二份判据，只覆盖 8 类检查里的 3 类
 
@@ -611,10 +788,24 @@ glob 是 `test_*.py`，匹配不到；`git grep smoke_v2` 全仓库仍零命中�
   「依赖清单只有 `envs/*.txt` 一处」。
 - **怎么验**：`git ls-files -s src/eval/requirements.txt`
 
-### 5.2 ⚠决策 · `extract.py` / `extract_llm.py` 686 行完全未接线（依赖 D-4 D-6）
+### 5.2 🔺 **实证升级（原 ⚠决策）** · `extract.py` / `extract_llm.py` 686 行完全未接线
+
+**这次全量跑独立撞上了 `extract.py` docstring 里写着的那个失败模式。**
+它的开头就列着「SenseNova 轨迹 2D **95% 用归一化坐标而非像素**」，
+而这次 time 归零的根因诊断是：**1,004 条预测无一超过 1.0，模型输出的是 [0,1] 归一化值**。
+同一个病，换了个题型。
+
+`extract.py` 的设计要点正是「**每一层的候选都必须过合理性校验，不通过就降级**」
+（量级、画布范围可验）—— 一个「所有预测都 < 1.0 而视频长 89.6 秒」的量级校验
+本可以把这件事变成结果里的一条 `format/unit` 标记，
+而不是**两小时的人工诊断 + 一次白跑的全量**。
 
 - [ ] `src/eval/robochrono/extract.py`（416 行）、`extract_llm.py`（270 行）
 - **本轮复核**：仍零 import。生产解析仍在 `time_eqa.py` / `trajectory.py` / `parsing.py` 各自实现。
+- 🆕 **建议**：不必整套接入。**先只接 L1 的「量级/范围合理性校验」这一小块**，
+  用在 `time_eqa.parse_interval_row` 与 `trajectory.coerce_point_list` 上，
+  产出一个 `unit_suspect` 标记进结果行。这是 A-3 的天然搭档：
+  A-3 报「分数低于退化基线」，这条报「为什么低」。
 - **Git 历史**：两者随 `b1ec6f8`「从旧仓库迁入 ⑥」一起进来，与任务实现同批
   —— 不是「本仓库写了一半」，而是**旧仓库里就已经是未接线状态**。
 - **改成（三选一）**：① 接入 engine；② 移到 `experiments/`；

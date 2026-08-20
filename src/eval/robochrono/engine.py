@@ -116,8 +116,11 @@ def run(
     """
     units = limit_units(task.units(items), limit_items, limit_groups)
 
-    if overwrite and store.path.exists():
-        store.path.unlink()
+    if overwrite:
+        # 与 matrix_run._prepare 同一口径：挪走，不删（D-62）。
+        moved = store.displace()
+        if moved:
+            print(f"  [overwrite] {moved} 行挪到 {store.path.name}.bak", flush=True)
     store.open()
 
     done = set() if overwrite else store.completed_ids()

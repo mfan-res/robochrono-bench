@@ -43,8 +43,16 @@ class WorkItem:
     run: str
     unit_key: str
     items: list[dict[str, Any]]
-    # 抽帧档位。frames 只影响预处理，所以同一次模型加载可以服务多个档位。
-    frames_fps: float | None = None
+    # 该 run 的抽帧档位，**由主进程 `matrix_run._prepare` 算好后原样下发**。
+    # frames 只影响预处理，所以同一次模型加载可以服务多个档位。
+    #
+    # 这里不重算档位 —— 优先级（providers.json 的 `frames_by_run` 打底、
+    # plan.json 的 `frame_variants` 覆盖）只在 `_prepare` 一处定义。
+    # 此前这个字段是 `frames_fps: float`，只能表达 fps 一种档位，
+    # 于是 `frames_by_run` 的 `uniform: 32` 到不了 worker：**time 说好 32 帧、
+    # 实跑 provider 默认的 8 帧，而结果 meta 记的是 32**（D-61）。
+    frames: dict[str, Any] | None = None
+    align_fps: bool = False
 
 
 @dataclass
@@ -105,12 +113,14 @@ def _worker(
         from .tasks.base import Unit
 
         unit = Unit(key=item.unit_key, items=item.items)
-        if item.frames_fps is not None:
-            runtime["frames"] = {
-                "mode": "fps", "value": item.frames_fps,
-                "video_sample_fps": item.frames_fps, "num_segments": 1,
-            }
-            runtime["align_fps_to_segments"] = True
+        # **两个字段一起设，不做「有才覆盖那一个」。** runtime 在 worker 里是
+        # 跨 unit 复用的长期对象；只改 frames 不改 align_fps，会让上一个 unit
+        # 的对齐口径漏给下一个。matrix_run 每个 WorkItem 都带着完整档位，
+        # 所以这里总是走到；None 只出现在直接调 run_pool 的场景，
+        # 那时保留 worker 自己解析出的 provider 默认档位。
+        if item.frames is not None:
+            runtime["frames"] = dict(item.frames)
+            runtime["align_fps_to_segments"] = item.align_fps
         meta: dict[str, Any] = {}
         try:
             _, text = call_vlm(runtime, task.parts(unit), meta)

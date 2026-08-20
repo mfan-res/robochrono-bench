@@ -80,6 +80,56 @@ PRIMARY_METRIC: dict[str, str] = {
 
 ALL_RUNS: tuple[str, ...] = tuple(QA_FILENAME)
 
+# run 名 -> (指标, 下限, 这个下限是哪种策略拿到的)
+#
+# **「低于随机」与「低于最蠢的策略」都不是噪声，是信号。**
+#
+# 首轮全量里 time 拿了 `tIoU@0.5 = 0.0`，而上面那张表里「整段视频都报」
+# 能拿 `mean_tIoU 0.13` —— 模型比最蠢的策略还差。
+# 发现这件事靠的是人工诊断两小时，而 `errors=0`、熔断没触发、
+# `matrix` 退出 0、报表照常出数，**没有任何一处会说出这句话**（D-63）。
+# 那几个退化基线上一轮就量过了（就是上面 PRIMARY_METRIC 的注释），
+# 只是从没进过代码。这里把它变成一个记号。
+#
+# 选择题的 0.25：④ 出题固定四选一（`src/vqa/plan.py` 的
+# `DISTRACTORS_PER_QUESTION = 3`），名义随机基线 1/4。
+# **用名义值而不是等效值** —— gift_inhand / pen_inbox 的 understanding
+# 实际是三选一、等效基线 33%（docs/disclosures.md 第 2 条），
+# 等效值只会让门槛更高，用名义值不会误报。
+#
+# trajectory 不设下限：它的退化基线没量过，而且已搁置（指标判定无效）。
+RANDOM_BASELINE = 0.25
+
+DEGENERATE_FLOOR: dict[str, tuple[str, float, str]] = {
+    run: ("accuracy", RANDOM_BASELINE, "随机猜") for run in choice.SPECS
+}
+DEGENERATE_FLOOR["time"] = ("mean_tIoU", 0.13, "「整段视频都报」")
+
+
+def floor_breach(run: str, summary: dict[str, Any]) -> str | None:
+    """这个成绩是不是低到「不看视频也能拿到」。返回一句话，或 None 表示没问题。
+
+    两条判据，都只在**确实答了题**的时候才生效 —— 全都没答上是另一类问题
+    （解析失败 / 媒体缺失），由 `answered` 与 `parse_failure_rate` 各自反映，
+    混进来会让这个记号失去意义。
+    """
+    if not summary.get("answered"):
+        return None
+
+    floor = DEGENERATE_FLOOR.get(run)
+    if floor:
+        metric, threshold, label = floor
+        value = summary.get(metric)
+        if isinstance(value, (int, float)) and value < threshold:
+            return f"低于{label}（{metric} {value:.3g} < {threshold:g}）"
+
+    # 主指标恰好为 0：三个退化策略在 tIoU@0.5 上也全是 0，
+    # 所以「0 分」不代表比它们差，而是**与它们没有区分度**。同样要标出来。
+    primary = PRIMARY_METRIC.get(run)
+    if primary and summary.get(primary) == 0:
+        return f"{primary} 为 0，与退化策略无区分度（答了 {summary['answered']} 题）"
+    return None
+
 
 def build(name: str, **flags: Any):
     """按 run 名构造任务实例。"""

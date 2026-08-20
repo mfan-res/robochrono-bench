@@ -29,6 +29,30 @@ class ResultStore:
 
     # -- 写 ----------------------------------------------------------------
 
+    def displace(self) -> int:
+        """把已有结果挪到 ``<name>.jsonl.bak``，返回挪走了多少行。
+
+        ``--overwrite`` 的语义是「重跑」，不是「销毁」——
+        这些行是 GPU 一题一题跑出来的，**不可再生**。
+
+        实际发生过（D-62）：想只重跑 time，而 ``matrix`` 没有 ``--runs``，
+        于是用 ``--overwrite`` 起了全矩阵；跑到第 4 个 run 停手时，
+        上一遍 42 个 run 的逐题数据已经全没了，约两小时机时。
+        改名的代价是几百 KB 磁盘，删掉的代价是重跑。
+
+        **只保留一代备份** —— 再多就成了没人清理的垃圾。
+        后缀是 ``.jsonl.bak`` 而不是 ``.bak.jsonl``：``report.pack`` 按
+        ``*.jsonl`` 收集文件，备份不该被打包回传。
+        """
+        if not self.path.exists():
+            return 0
+        rows = sum(1 for line in self.path.read_text(encoding="utf-8").splitlines()
+                   if line.strip())
+        backup = self.path.with_name(self.path.name + ".bak")
+        backup.unlink(missing_ok=True)
+        self.path.rename(backup)
+        return rows
+
     def open(self) -> None:
         self.path.parent.mkdir(parents=True, exist_ok=True)
         if self.meta:

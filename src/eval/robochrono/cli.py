@@ -163,6 +163,9 @@ def cmd_run(args: argparse.Namespace) -> int:
             print(f"  {metric} = {summary.get(metric)}  "
                   f"(answered {summary.get('answered')}/{summary.get('total')}, "
                   f"errors {summary.get('errors')})")
+            breach = tasks.floor_breach(run, summary)      # 与 matrix 同口径
+            if breach:
+                print(f"    ⚠ {breach}")
     return 1 if failures else 0
 
 
@@ -186,6 +189,7 @@ def _expand(args: argparse.Namespace):
         shard=_parse_shard(getattr(args, "shard", None)),
         only_kind=getattr(args, "only", None),
         only_models=getattr(args, "models", None),
+        only_runs=getattr(args, "runs", None),
     )
 
 
@@ -346,6 +350,8 @@ def main(argv: list[str] | None = None) -> int:
         sub_parser.add_argument("--plan", default=str(DEFAULT_PLAN))
         sub_parser.add_argument("--shard", default=None, help="形如 1/4，多机分工用")
         sub_parser.add_argument("--only", choices=["local", "api"], default=None)
+        sub_parser.add_argument("--runs", nargs="+", default=None,
+                                help=f"只看这些题型，默认全部：{' '.join(tasks.ALL_RUNS)}")
         sub_parser.set_defaults(func=func)
 
     matrix_parser = sub.add_parser("matrix", help="按 plan.json 跑整个矩阵（本地模型多卡并行）")
@@ -355,6 +361,10 @@ def main(argv: list[str] | None = None) -> int:
     matrix_parser.add_argument("--gpus", type=int, default=None, help="使用前 N 张卡，默认全部")
     matrix_parser.add_argument("--models", nargs="+", default=None,
                                help="只跑这些模型（名字取自 plan.json），按环境分派时用")
+    # **只重跑一个题型要靠它。** 没有它的时候，唯一看起来可行的写法是
+    # `--overwrite` 起全矩阵再中途停手 —— 而那会先清掉全部 42 个 run（D-62）。
+    matrix_parser.add_argument("--runs", nargs="+", default=None,
+                               help=f"只跑这些题型，默认全部：{' '.join(tasks.ALL_RUNS)}")
     matrix_parser.add_argument("--api-concurrency", type=int, default=None,
                                help="API 模型的并发请求数，覆盖 providers.json；本地模型不受影响")
     matrix_parser.add_argument("--api-rate-limit", type=float, default=None,

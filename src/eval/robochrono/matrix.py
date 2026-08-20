@@ -150,11 +150,20 @@ def expand(
     shard: tuple[int, int] | None = None,
     only_kind: str | None = None,
     only_models: list[str] | None = None,
+    only_runs: list[str] | None = None,
 ) -> tuple[list[RunSpec], list[tuple[str, str]]]:
     """展开矩阵。返回 (要跑的 run 列表, [(key, 跳过原因)])。
 
     ``shard`` 形如 (1, 4) 表示「四台机器里的第一台」。
     ``only_models`` 限定模型名 —— 按模型分派不同 python 环境时用到。
+    ``only_runs``   限定题型 —— **只重跑某个题型时用**（D-62）。
+
+    为什么 ``only_runs`` 是必要的而不是锦上添花
+    ------------------------------------------
+    没有它的时候，「只重跑 time」在 ``matrix`` 上无法表达。
+    唯一看起来可行的写法是 ``--overwrite`` 起全矩阵再中途停手，
+    而 ``--overwrite`` 会在**任何 unit 开跑之前**就清掉全部 42 个 run 的结果。
+    实际后果见 ``ResultStore.displace`` 的说明。
     """
     selected: list[RunSpec] = []
     skipped: list[tuple[str, str]] = []
@@ -164,6 +173,15 @@ def expand(
         unknown = wanted - {m.name for m in plan.models}
         if unknown:
             raise ValueError(f"plan 里没有这些模型：{sorted(unknown)}")
+    wanted_runs = set(only_runs) if only_runs else None
+    if wanted_runs:
+        # **拼错要报错，不能静默跑空。** `--runs tiem` 若只是筛不出东西，
+        # 表现是「矩阵为空」，看起来像数据没到位而不是打字错了。
+        unknown_runs = wanted_runs - set(plan.runs)
+        if unknown_runs:
+            raise ValueError(
+                f"plan 的 runs 里没有这些题型：{sorted(unknown_runs)}；"
+                f"可选：{sorted(plan.runs)}")
 
     for model in plan.models:
         if only_kind and model.kind != only_kind:
@@ -179,6 +197,8 @@ def expand(
 
         for family in plan.families:
             for run in plan.runs:
+                if wanted_runs and run not in wanted_runs:
+                    continue
                 run_variants = variants if run in VIDEO_RUNS else [None]
                 for fps in run_variants:
                     spec = RunSpec(model=model, family=family, run=run, frames_fps=fps)

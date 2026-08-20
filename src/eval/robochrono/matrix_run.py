@@ -162,8 +162,14 @@ def _prepare(spec: RunSpec, datasets_root: Path, config_path: Path, model: Model
         runtime["frames"] = dict(by_run)
     runtime = _apply_frames(runtime, spec)
     store = _store_for(spec, results_root, _meta(spec, runtime, qa_path, flags))
-    if overwrite and store.path.exists():
-        store.path.unlink()
+    if overwrite:
+        # **挪走而不是删掉**（D-62）。这一步发生在任何 unit 开跑之前，
+        # 而且是对每个 spec 都做一遍 —— 起全矩阵时它先清空 42 个 run。
+        # 结果行不可再生，代价是重跑；备份的代价是几百 KB。
+        moved = store.displace()
+        if moved:
+            print(f"  [overwrite] {spec.family}/{spec.run}：{moved} 行挪到 "
+                  f"{store.path.name}.bak")
     store.open()
     # **与 cli.run / preflight / estimate 同一条加载路径**（D-60）。
     # 此前这里走 `load_run_items`（默认读规范化产物），而那个「缺了回退原始 QA」
@@ -210,7 +216,11 @@ def _run_local_pool(model, model_specs, *, config_path, datasets_root, results_r
     broken: list[str] = []
     for spec in model_specs:
         try:
-            _, _, store, items, task = _prepare(
+            # **runtime 必须接住。** 它带着 `_prepare` 算好的抽帧档位，
+            # 而 worker 会自己重建一份 runtime（见 pool.py），那份不读
+            # `frames_by_run`。此前这里写的是 `_, _, store, ...`，
+            # 档位就此丢失 —— 见下面 WorkItem 的注释（D-61）。
+            _, runtime, store, items, task = _prepare(
                 spec, datasets_root, config_path, model, flags, results_root, overwrite)
         except Exception as exc:  # noqa: BLE001
             # **记下来**，不能只打印一行就算了 —— 见下面 `broken` 的处理。
@@ -225,8 +235,13 @@ def _run_local_pool(model, model_specs, *, config_path, datasets_root, results_r
         for unit in units:
             if all(str(i.get("id")) in done for i in unit.items):
                 continue
-            work.append(pool.WorkItem(spec.key, spec.run, unit.key, unit.items,
-                                      frames_fps=spec.frames_fps))
+            work.append(pool.WorkItem(
+                spec.key, spec.run, unit.key, unit.items,
+                # 主进程算好的档位原样带过去。不带的话 time 会用 provider
+                # 默认的 8 帧（31% 的题看不到被问的动作，D-52），
+                # 而 `_meta` 已经把 32 帧写进结果 meta —— 说的和做的对不上。
+                frames=runtime.get("frames"),
+                align_fps=bool(runtime.get("align_fps_to_segments", False))))
 
     if broken:
         # **准备失败 ≠ 已经跑完。** 这两件事此前共用一个出口：
@@ -269,3 +284,8 @@ def _write_summary(store: ResultStore, summary: dict[str, Any], spec: RunSpec) -
     print(f"  {spec.family}/{spec.run}: {metric} = {summary.get(metric)}  "
           f"(answered {summary.get('answered')}/{summary.get('total')}, "
           f"errors {summary.get('errors')})")
+    # **跑的时候就说，不要等到出报表。** 一轮矩阵要几小时，
+    # 早两小时知道「这个题型低于随机」就能早两小时去查（D-63）。
+    breach = tasks.floor_breach(spec.run, summary)
+    if breach:
+        print(f"    ⚠ {breach}")
