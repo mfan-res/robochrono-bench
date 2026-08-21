@@ -271,6 +271,8 @@ def runtime_config(
         "device_map": provider.get("device_map", defaults.get("device_map")),
         # BC-11：请求体预算。默认 0 = 不做任何媒体处理，超限就让它 413 并如实记录。
         "max_request_bytes": int(provider.get("max_request_bytes", defaults.get("max_request_bytes", 0))),
+        # 见 call_vlm：只给对照实验用，生产 provider 不要设。
+        "force_media_prep": bool(provider.get("force_media_prep", False)),
         "media_cache_dir": str(provider.get("media_cache_dir", defaults.get("media_cache_dir", ""))),
         # BC-13：服务端要求的视频最短时长，0 表示不处理
         "min_video_seconds": float(provider.get("min_video_seconds", defaults.get("min_video_seconds", 0.0))),
@@ -1413,7 +1415,13 @@ def call_vlm(
     media_transforms: list[dict[str, Any]] = []
     budget = int(runtime.get("max_request_bytes") or 0)
     min_seconds = float(runtime.get("min_video_seconds") or 0.0)
-    if (budget > 0 or min_seconds > 0) and provider_type in {"openai_compatible", "gemini", "glm", "qwen"}:
+    # `force_media_prep` 是**实验开关**，不是生产路径：本地 provider 没有请求体上限，
+    # 正常情况下不该走这里。打开它是为了在本地模型上复现 API 那条路的降分辨率
+    # （E1「分辨率值多少分」），用的是**完全相同的重编码代码**而不是另写一份 ——
+    # 否则量出来的差值里会掺进「两套 ffmpeg 参数不同」这个变量。
+    forced = bool(runtime.get("force_media_prep"))
+    if (budget > 0 or min_seconds > 0) and (
+            forced or provider_type in {"openai_compatible", "gemini", "glm", "qwen"}):
         from .media_prep import prepare_parts
 
         cache_dir = Path(runtime.get("media_cache_dir") or ".media_cache")
