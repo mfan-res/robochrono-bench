@@ -131,6 +131,50 @@ def floor_breach(run: str, summary: dict[str, Any]) -> str | None:
     return None
 
 
+# 执行故障的判据。**与 floor_breach 是两回事，不要合并**（D-64）：
+#   floor_breach   分数低到不看视频也能拿到  →  去查【模型或题目】
+#   execution_fault 这个 run 根本没正常跑完  →  去查【框架】
+#
+# 为什么必须分开报：run2 里 RynnBrain-2B 有四个族的 time 是 100% 报错，
+# 报表上显示 `0`，而 `floor_breach` 特意在 `answered == 0` 时返回 None
+# （理由没错 —— 「全没答上」确实是另一类问题）。
+# 于是这一类**没有任何人报**：一个全错的 run 和一个真考了 0 分的 run，
+# 在表上长得一模一样。而它俩的处置方式正好相反。
+#
+# 那次的真正成因是「time 一次问完整组，该模型扛不住这个批量」——
+# 一个框架层面的问题，却完整地伪装成了一个模型分数。
+#
+# 阈值不是拍脑袋：两次全量各 9,037 次调用，Qwen3-VL 与 SenseNova 的
+# errors 都是 **0**；RynnBrain 的 234 个错误全部集中在 time。
+# 也就是说**正常的 run 一个错都没有**，10% 已经远在噪声之外。
+ERROR_RATE_FAULT = 0.10
+PARSE_FAILURE_FAULT = 0.50
+
+
+def execution_fault(summary: dict[str, Any]) -> str | None:
+    """这个 run 是不是根本没跑成。返回一句话，或 None 表示执行正常。
+
+    不看 run 名 —— 判据只跟「答上了多少」有关，与题型无关。
+    """
+    total = summary.get("total") or 0
+    if not total:
+        return None
+    answered = summary.get("answered") or 0
+    errors = summary.get("errors") or 0
+
+    if answered == 0:
+        return f"一题都没答上（{errors} 个 error / {total} 题）"
+    if errors / total >= ERROR_RATE_FAULT:
+        return f"{errors / total:.0%} 的调用失败（{errors}/{total}）"
+
+    # 调用成功但解析不出来：模型答了，格式不对。**这和调用失败是两回事** ——
+    # 前者查提示词与解析器，后者查请求与环境。
+    rate = summary.get("parse_failure_rate")
+    if isinstance(rate, (int, float)) and rate >= PARSE_FAILURE_FAULT:
+        return f"{rate:.0%} 的回答解析不出来（调用本身成功）"
+    return None
+
+
 def build(name: str, **flags: Any):
     """按 run 名构造任务实例。"""
     if name == "time":

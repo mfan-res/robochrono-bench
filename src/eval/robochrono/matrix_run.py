@@ -286,6 +286,9 @@ def _write_summary(store: ResultStore, summary: dict[str, Any], spec: RunSpec) -
           f"errors {summary.get('errors')})")
     # **跑的时候就说，不要等到出报表。** 一轮矩阵要几小时，
     # 早两小时知道「这个题型低于随机」就能早两小时去查（D-63）。
+    fault = tasks.execution_fault(summary)   # ✗ 查框架，⚠ 查模型
+    if fault:
+        print(f"    ✗ {fault}")
     breach = tasks.floor_breach(spec.run, summary)
     if breach:
         print(f"    ⚠ {breach}")

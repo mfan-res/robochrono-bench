@@ -38,7 +38,7 @@ A-3（退化基线闸门）也已修完 —— 这一轮的报表会自己标出
 | 严重度 | 条目 |
 | --- | --- |
 | **P0 · 起下一轮之前必须做** | ~~A-1 A-2~~ ✅ 已修，run2 已跑完（三个模型齐了） |
-| **P1 · 下一轮之前值得做** | **A-3b**（100% 报错不报警，run2 暴露）、**A-7**（time 分批提问，RynnBrain 因此完全没被测到）、**5.2**（`extract.py` 接入，实证已支持） |
+| **P1 · 下一轮之前值得做** | ~~A-3b~~ ✅ 已修、**A-7**（time 分批提问，RynnBrain 因此完全没被测到 —— 需先定 D-15）、**5.2**（`extract.py` 接入，实证已支持） |
 | 中 | 4.1 4.2 4.3 4.4 4.5 4.6 4.7、2.1 2.4、3.1、5.3、1.17、~~A-3 A-4~~ ✅、**A-5 A-6 A-8** |
 | 低 | 批次 1 其余、3.2 3.3、5.1 5.4 5.5 5.6 5.7 |
 
@@ -210,27 +210,40 @@ python -m robochrono --datasets-root ../../data/vqa/eval --results-dir <dir> \
 **回归**：`run_all.py` 通过 5 跳过 1 未通过 0，与改动前一致。
 
 
-### A-3b 🆕 **A-3 的缺口** · 100% 报错的 run 在报表上没有任何记号
+### A-3b ✅ **已修**（2026-08-21）· 100% 报错的 run 在报表上没有任何记号
 
-- [ ] **位置**：`src/eval/robochrono/tasks/__init__.py` 的 `floor_breach()`
-      开头那句 `if not summary.get("answered"): return None`；
-      `src/eval/robochrono/report.py` 的 `to_markdown`
-- **搜索锚点**：`全都没答上是另一类问题`
-- **怎么暴露的**：run2 里 RynnBrain 的 airpods / gift_inhand / pen_inbox / tea
-      四个 time **100% 报错、answered 0**，报表显示 `0` 却**不打 ⚠** ——
-      因为我写 `floor_breach` 时特意让 `answered == 0` 返回 None。
-      理由本身没错（「全没答上」确实是另一类问题），
-      但结果是**这一类现在没有任何人报**：
-      一个全错的 run 和一个真考了 0 分的 run，在表上长得一模一样。
-      `to_markdown` 也不显示 `answered` / `errors`，所以看不出区别。
-- **改成**：不要复用 `floor_breach`（语义不同），另加一条：
-  ```
-  answered == 0 且 total > 0        →  「一题都没答上（N 个 error）」
-  errors / total > 0.2              →  「M% 的调用失败」
-  ```
-  在表格里用不同的记号（比如 `✗`）与「低于基线」的 ⚠ 区分开 ——
-  **两者的处置方式完全不同**：一个查模型，一个查框架。
-- **风险**：低。**预估**：20 分钟。**这是我的疏漏，不是原设计的问题。**
+- [x] `tasks/__init__.py` 新增 `execution_fault(summary)` —— **与 `floor_breach` 分开，不合并**：
+      | 函数 | 说的是 | 该去查 |
+      | --- | --- | --- |
+      | `execution_fault` | 这个 run 根本没跑成 | **框架**（提示词 / 批量 / 解析器 / 媒体） |
+      | `floor_breach` | 分数低到不看视频也能拿到 | **模型或题目** |
+      三条判据：`answered == 0` / `errors ≥ 10%` / `parse_failure ≥ 50%`。
+      **阈值不是拍脑袋**：两次全量各 9,037 次调用，Qwen3-VL 与 SenseNova 的
+      errors 都是 **0**，RynnBrain 的 234 个错误全部集中在 time ——
+      正常的 run 一个错都没有，10% 远在噪声之外。
+      第三条（调用成功但解析不出来）单独一条，因为它指向的是提示词与解析器，
+      不是请求与环境。
+- [x] `report.to_markdown` 用 **`✗`** 标（与「低于基线」的 `⚠` 区分），
+      并把执行故障表**排在退化基线表之前** —— 它的意思是「下面那个数不是分数」，
+      读表的人得先知道哪些格子根本不该拿来比。
+- [x] `matrix_run` 与 `cli.cmd_run` 跑的时候就打印 `✗`。
+
+**验证**（拿 run2 的真实结果重新出报表）：
+
+```
+| RynnBrain-2B | 0✗ | 0.35 | ...        ← 与 Qwen 的 0.005⚠ 一眼分得开
+
+✗ 6 个 run 没有正常执行完：
+| RynnBrain-2B | airpods     | time | 0/200   | 200 | 一题都没答上          |
+| RynnBrain-2B | gift_inhand | time | 0/90    |  90 | 一题都没答上          |
+| RynnBrain-2B | pen_inbox   | time | 0/149   | 149 | 一题都没答上          |
+| RynnBrain-2B | stack_cubes | time | 41/200  | 159 | 80% 的调用失败        |
+| RynnBrain-2B | tea         | time | 0/234   | 234 | 一题都没答上          |
+| RynnBrain-2B | wash        | time | 9/517   | 508 | 98% 的调用失败        |
+```
+
+**RynnBrain 那 1,340/1,390 的失败，现在是报表上的 6 行**；
+另外 78 个 run 一个都没被误报。**回归 5 通过 1 跳过**，与改动前一致。
 
 ### A-4 ✅ **已修**（2026-08-21）· `planning` 的选项里必然包含「当前动作」
 

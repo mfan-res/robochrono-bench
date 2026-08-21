@@ -163,6 +163,9 @@ def cmd_run(args: argparse.Namespace) -> int:
             print(f"  {metric} = {summary.get(metric)}  "
                   f"(answered {summary.get('answered')}/{summary.get('total')}, "
                   f"errors {summary.get('errors')})")
+            fault = tasks.execution_fault(summary)   # ✗ 查框架，⚠ 查模型
+            if fault:
+                print(f"    ✗ {fault}")
             breach = tasks.floor_breach(run, summary)      # 与 matrix 同口径
             if breach:
                 print(f"    ⚠ {breach}")

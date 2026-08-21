@@ -157,6 +157,8 @@ def collect(results_dir: Path) -> list[dict[str, Any]]:
                 "aborted": summary.get("aborted"),
                 # 低于「不看视频也能拿到」的水平时是一句话，否则 None。见 tasks.floor_breach。
                 "floor": tasks.floor_breach(run, summary),
+                # 这个 run 根本没跑成时是一句话。**与 floor 是两回事**，见 tasks.execution_fault。
+                "fault": tasks.execution_fault(summary),
                 "frames": (meta.get("frames") or {}).get("value"),
             }
         )
@@ -197,8 +199,12 @@ def to_markdown(rows: list[dict[str, Any]]) -> str:
                     cells.append("n/a")
                 else:
                     mark = "*" if (row.get("total") or 0) < 100 else ""
-                    # ⚠ 是**结论性的记号，不是装饰** —— 它说的是「这个数低到
-                    # 不看视频也能拿到」，读表的人应当先查它再比大小。
+                    # 两个记号，**指向两个不同的去处**：
+                    #   ✗  这个 run 没跑成，这个数不是分数  → 查框架
+                    #   ⚠  分数低到不看视频也能拿到          → 查模型或题目
+                    # 合并成一个符号就会重演 run2 那次：RynnBrain 四个族的 time
+                    # 100% 报错，表上却和「真考了 0 分」长得一模一样（D-64）。
+                    mark += "✗" if row.get("fault") else ""
                     mark += "⚠" if row.get("floor") else ""
                     cells.append(f"{row['value']:.4g}{mark}")
             label = f"| {model} | " + (f"{variant} | " if multi_variant else "")
@@ -208,6 +214,23 @@ def to_markdown(rows: list[dict[str, Any]]) -> str:
     out.append("主指标：选择题类 accuracy，trajectory 为 mean_score，time 为 tIoU@0.5。")
     out.append("　　time 不用 mean_tIoU —— 「整段视频都报」就能拿 0.13，不是 0（见 tasks/__init__.py）。")
     out.append("`*` 表示样本量少于 100，置信区间较宽（step_order 每族仅 50 题）。")
+
+    # 执行故障排在最前面 —— 它的意思是「下面那个数不是分数」，
+    # 读表的人得先知道哪些格子根本不该拿来比。
+    faults = [r for r in rows if r.get("fault")]
+    if faults:
+        out.append("")
+        out.append(f"✗ **{len(faults)} 个 run 没有正常执行完**"
+                   "（判据见 `tasks/__init__.py` 的 `execution_fault`）：")
+        out.append("")
+        out.append("| model | family | run | answered | errors | 情况 |")
+        out.append("| --- | --- | --- | ---: | ---: | --- |")
+        for r in sorted(faults, key=lambda x: (x["model"], x["family"], x["run"])):
+            out.append(f"| {r['model']} | {r['family']} | {r['run']} | "
+                       f"{r.get('answered')}/{r.get('total')} | {r.get('errors')} | {r['fault']} |")
+        out.append("")
+        out.append("**这些格子里的数不是分数，是「没测到」。** 先查框架（提示词、批量、"
+                   "解析器、媒体），修好之前不要拿它们跨模型比较。")
 
     # 逐条列出来，不能只留一个符号 —— 「为什么低」和「低了」一样重要。
     breaches = [r for r in rows if r.get("floor")]
