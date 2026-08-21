@@ -10,7 +10,7 @@
 ```bash
 cd <repo-root>
 python3 src/label/tests/test_core_replay.py   # 必须全绿
-python3 src/label/validate.py                 # 必须**零条**发现（六条检查全部通过）
+python3 src/label/validate.py                 # 必须**零条**发现（八类检查全部通过）
 ```
 
 **零是基线。** 出现任何一条都说明改坏了 —— 除非你确实修好了什么，
@@ -85,7 +85,7 @@ PY
 | 文件 | 是什么 | 改动风险 |
 | --- | --- | --- |
 | `core.py` | 语义层：Segment、id 派生、subtask 定义、文档组装 | **高** —— 改了必跑回归 |
-| `validate.py` | 六条检查。标注器与离线共用 | **高** —— 判据分叉过一次，代价很大 |
+| `validate.py` | 八类检查。标注器与离线共用 | **高** —— 判据分叉过一次，代价很大 |
 | `serve.py` | 后端：静态 + `/api/{families,episodes,episode,usage,save,subtasks}` + Range | 中 |
 | `ui/index.html` | 单页前端，原生 JS 无构建 | 低 |
 | `tests/test_core_replay.py` | 回归：拿 ID 化之前的 1,859 段当语料 | 改判据前先想清楚 |

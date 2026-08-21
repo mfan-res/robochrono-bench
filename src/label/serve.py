@@ -19,9 +19,12 @@
 
 设计要点
 --------
-**保存前强制跑 `validate.py`。** 标注工具与离线校验**共用同一份判据** ——
+**保存前跑在线检查。** 本意是标注工具与离线校验共用同一份判据 ——
 此前 `check_labels.py` 与上游工具各写各的，导致 tea2 显示「21/21 齐全」
 而实际只有 20 集可用。
+
+⚠ **但这件事目前只做到了一半**：`review()` 只覆盖 `validate.py` 八类里的三类，
+而且是另写的一份，不是 import 过来的。见 `review()` 的说明与 cleanup_checklist 4.3。
 
 **帧号是权威**，秒与时间串由后端按 fps 统一派生（`core.Segment`），
 前端只报帧号。这样前端浮点误差进不了数据。
@@ -257,7 +260,17 @@ def edit_subtasks(payload: dict[str, Any]) -> dict[str, Any]:
 
 
 def review(document: dict[str, Any], family: str) -> list[dict[str, str]]:
-    """六条检查的在线版。判据与 ``validate.py`` 一致 —— 尤其**重叠走帧号不走秒**。"""
+    """在线版检查。**只覆盖 `validate.py` 八类里的三类**：重叠 / 覆盖 / 歧义。
+
+    ⚠ **这不是 `validate.py` 的同一份代码**，尽管本文件开头与
+    `validate.py` / README / AGENTS.md 四处都那么写过。实际没有 import 它。
+    在线保存时**拦不下**这五类：污染（出题产物回写，即 P-03 本身）、
+    引用（未定义的 subtask id）、派生（start/end 与帧号不自洽）、
+    序列（动作讲不通，抓出过 wash 两处真错误）、可疑（零长度段）。
+    收敛计划见 `docs/cleanup_checklist.md` 的 4.3。
+
+    已实现的三类判据与 `validate.py` 逐条对齐 —— 尤其**重叠走帧号不走秒**。
+    """
     segs = document["segments"]
     bounds = document["source"].get("episode_bounds")
     out: list[dict[str, str]] = []

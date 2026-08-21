@@ -1,7 +1,7 @@
 # 数据格式 v2 设计草案
 
 > 日期：2026-08-16 ｜ 状态：**待讨论**
-> 前置：[数据结构现状](dataset_structure.md) ｜ [重构方案](dataset_refactor_plan.md)
+> 前置：[数据结构现状](../../src/eval/docs/dataset_structure.md) ｜ [重构方案](../../src/eval/docs/dataset_refactor_plan.md)
 >
 > 与 v1（`normalized/`）的区别：v1 的目标是「不改变任何字节地吸收布局差异」，
 > 所以它保留了原始 item 的全部结构。v2 放弃这个约束，**重排结构**。
@@ -125,7 +125,7 @@ understanding    answer=E  answer_text="pick the brush"                   correc
 `scene` / `temporal` / `symmetric` / `same_video_other_category`），
 `step_order` 的选项是排列，也是规则生成。
 
-**这两条要问数据方**，见 [清单](questions_for_data_team.md) Q11。
+**这两条要问数据方**，见 [清单](../questions_for_data_team.md) Q11。
 
 ### 0.6 选项与答案的分布是干净的
 
@@ -341,7 +341,7 @@ v2 写到 `datasets/v2/`，构建器共用同一套 QA 定位与媒体解析代�
 
 ## 5. 仍然未知的部分（都是内容问题，不阻塞本设计）
 
-结构已无未知。以下六条在 [给数据方的清单](questions_for_data_team.md) 里等回复：
+结构已无未知。以下六条在 [给数据方的清单](../questions_for_data_team.md) 里等回复：
 
 | # | 问题 | 对 v2 的影响 |
 | --- | --- | --- |

@@ -18,7 +18,7 @@
 cd /path/to/bench
 
 python3 src/label/serve.py --port 8000      # 标注器，浏览器开 localhost:8000
-python3 src/label/validate.py               # 对现有 320 份跑六条检查
+python3 src/label/validate.py               # 对现有标注跑八类检查
 python3 src/label/tests/test_core_replay.py # 重写回归（不需要视频）
 ```
 
@@ -99,12 +99,12 @@ data/
 | 项 | 状态 |
 | --- | --- |
 | `core.py` 语义层 | ✅ 重写完成，回归三条链路全绿 |
-| `validate.py` 六条检查 | ✅ 对 320 份跑通 |
+| `validate.py` 八类检查 | ✅ 对现有 249 份跑通，零条发现 |
 | `serve.py` + `ui/` 网页标注器 | ✅ 可用（播放/逐帧/打点/选动作/管理 subtask/保存） |
 | `schemas/segments.json` | ✅ 320/320 通过 |
 | 上游 OpenCV 工具 | 📦 原样存在 `upstream/`，**已不使用**，仅供比对 |
 
-`validate.py` **七条检查全部通过，零条发现。**
+`validate.py` **八类检查全部通过，零条发现**（六条硬错 + 两条待人判断）。
 P-05（wash 洗两个盘子）已解决：两个盘子加了相对位置，
 38 集用 left/right、file-000 与 file-001 机位不同用 far/near，全部经人看图确认。
 

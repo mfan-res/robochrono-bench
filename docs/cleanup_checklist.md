@@ -471,7 +471,7 @@ gift_inhand     0/90               5/8
   - 可借池不同：`plan.py` 是去重排序后的集合；`blind.py:135` 是含重复、未排序的列表
 - **改成**：先只改注释。真正收敛见 4.5。
 
-### 1.6 · 修 6 条 Markdown 坏链接
+### 1.6 ✅ **已修**（2026-08-21）· Markdown 坏链接 6 → 1
 
 **本轮复核：这 6 条一条没修。** 另见 1.18 —— 本清单自己制造了 4 条假阳性。
 
@@ -481,10 +481,12 @@ gift_inhand     0/90               5/8
 - [ ] `docs/vqa/item_schema_design.md:128` — `[清单] (questions_for_data_team.md)` → `../questions_for_data_team.md`
 - [ ] `docs/vqa/item_schema_design.md:344` — 同上 → `../questions_for_data_team.md`
 - [ ] `src/eval/docs/dataset_structure.md:312` — `[...BC-16] (../../REFACTOR_PLAN.md)` → 见 **D-9**
-- **怎么验**：跑 §8 的链接检查。做完 1.6 + 1.18 后应为 0 条（或只剩 D-9 待定那条）。
+- **结果**：6 条 → **1 条**。只剩 `src/eval/docs/dataset_structure.md:312` 的
+  `REFACTOR_PLAN.md`，因为**目标文件全仓库不存在**，需先答 **D-9**。
+  `docs/vqa/` 那四条统一指向 `src/eval/docs/`（canonical，其内部链接完整）。
 - **建议顺带**：把 §8 的检查加进 `src/eval/tests/run_all.py`。
 
-### 1.7 · 修 4 处非链接式失效引用
+### 1.7 ✅ **已修**（2026-08-21）· 非链接式失效引用
 
 **本轮复核：`src/vqa/README.md` 加了 14 行讲新步骤，但 `recipes/` 那两句原样留着。**
 
@@ -497,7 +499,7 @@ gift_inhand     0/90               5/8
       **本轮该 `_v2_note` 已过期两处**：还写着「未建的任务：left_right / image_in_video / step_order」，
       而三者都已建成并进了 `runs`（同一个文件里 `_why_runs` 写的是对的）
 
-### 1.8 · 修根 README 的过期状态与数字
+### 1.8 ✅ **已修**（2026-08-21）· 根 README 的过期状态与数字
 
 **本轮复核：`README.md` 一行未动，而代码走得更远了 —— 它比上一版更陈旧。**
 
@@ -527,7 +529,7 @@ gift_inhand     0/90               5/8
 - [ ] `src/vqa/blind.py:32-33` — 「time …… 容差目前没有定义」→ `disclosures.md` §10 已定 `tIoU@0.5`
 - [ ] ⚠决策 `src/eval/configs/providers.json` — 同一文件内两句关于 32 帧的话冲突，见 **D-3**
 
-### 1.10 · 修 `data/label/README.md` 展示的旧 schema
+### 1.10 ✅ **已修**（2026-08-21）· `data/label/README.md` 的旧 schema
 
 - [ ] `data/label/README.md:5-15` 仍是迁移前的结构：
   | 文档写的 | 实际 |
@@ -537,7 +539,7 @@ gift_inhand     0/90               5/8
   | `objects` / `main_verbs` / `narration` | `subtask`（ID 引用） |
 - **权威来源**：`src/common/schemas/segments.json`
 
-### 1.11 · 修 `data/llm_cache/README.md` 的自相矛盾
+### 1.11 ✅ **已修**（2026-08-21）· `data/llm_cache/README.md` 的自相矛盾
 
 - [ ] 目录块写「`v2/<族>.json`  本轮生成，**出题实际使用**」，与顶部横幅
       「三代全部退场，出题已不读这里」冲突；**且没有列 `v3/`**
@@ -559,12 +561,16 @@ gift_inhand     0/90               5/8
       只有 `options_pool`（已否决）用得上。新增族或清理 `v3/` 就会让 `--policy as_built` 直接崩。
 - **改成**：只在 `"pool" in policies` 时读。
 
-### 1.14 · 统一「检查有几条」的说法
+### 1.14 ✅ **已修**（2026-08-21）· 统一「检查有几条」的说法
 
 - [ ] 四处各说各的：`validate.py` docstring「六条」/ `SEVERITY` 实际 **8 个键** /
       `README.md:140`「六项核验」/ `README.md:145`「七条检查」/
       `src/label/README.md:21`「六条」与 `:107`「七条」/ `AGENTS.md:13`「六条」
-- **改成**：统一为「八类检查（六条硬错 ✗ + 两条待人判断 ⚠）」。
+- **已改成**「八类检查（六条硬错 ✗ + 两条待人判断 ⚠）」，改了五处。
+- ⚠ **`serve.py:260` 特殊处理，没跟着改口径**：它写的是「六条检查的在线版」，
+  而它实际只实现了三类（4.3）。跟着改成「八类」等于把假声明写得更死。
+  改成了如实说明「只覆盖三类、拦不下哪五类、收敛计划见 4.3」——
+  **这条文档修改反而把 4.3 那个代码缺口摆到了台面上。**
 
 ### 1.15 · 给已知失效的脚本加运行守卫
 
@@ -572,7 +578,7 @@ gift_inhand     0/90               5/8
       但仍可直接跑起来并写数据。
 - **改成**：`main()` 开头加 `raise SystemExit(...)`，或移入 `src/migrate/archive/`。**不要删**。
 
-### 1.16 · 标记已失效的 TODO
+### 1.16 ✅ **已修**（2026-08-21）· 标记已失效的 TODO
 
 - [ ] `src/migrate/README.md:9-27` — 「反建缓存的键格式未验证（2026-08-17 暂缓）」，
       前提已随 llm_cache 三代退场消失。

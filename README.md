@@ -33,11 +33,11 @@
 | --- | --- | --- | --- |
 | ① 能力定义 | 沿用 | — | 七个题型沿用现有设计，trajectory 暂时搁置。**理由尚未成文** |
 | ② 采集 | ✅ 完成 | `data/raw` `data/source` | 不可重来。分辨率/叠加/命名已对齐，遗留项已披露 |
-| ③ 标注 | ✅ 完成 | `src/label` `data/label` | 全量六项核验；标注器改为本地网页版 |
-| ④ 出题 | ⬜ **下一步** | `src/vqa` | 从 raw + label 重新生成 |
-| ⑤ 验题 | ⬜ 新建 | — | 盲基线、答案唯一性、难度分布 |
-| ⑥ 评测 | 🔶 已有实现 | `src/eval` | 在旧仓库，含冻结参考实现与六套回归，待迁入 |
-| ⑦ 解读 | ⬜ 新建 | — | 混淆变量披露、跨族可比性说明 |
+| ③ 标注 | ✅ 完成 | `src/label` `data/label` | 八类核验；标注器改为本地网页版 |
+| ④ 出题 | ✅ 完成 | `src/vqa` | 七个题型 10,178 道，从 raw + label 确定性重建 |
+| ⑤ 验题 | ✅ 完成 | `src/vqa/blind*.py` | 盲基线跑过四轮；结论进 `docs/disclosures.md` |
+| ⑥ 评测 | ✅ 已迁入 | `src/eval` | 冻结参考实现 + 六套回归；三个模型已跑完 |
+| ⑦ 解读 | 🔶 进行中 | `docs/disclosures.md` `results/` | 披露清单 12 条；三轮结果见 `results/README.md` |
 
 **越往上返工越贵。** ②③ 已固化，真正能掌控的是 ④ 往后。
 
@@ -64,9 +64,10 @@ data/
 ### 现有规模
 
 ```
-7 个活跃族   airpods · gift_inhand · pen_inbox · stack_cubes · tea · tea2 · wash
-277 集 · 1,759 个标注段 · 43 个 subtask
-express 因上游原片缺失退出（标注保留，数据补齐后改一行状态即可启用）
+6 个活跃族   airpods · gift_inhand · pen_inbox · stack_cubes · tea · wash
+249 份分段标注 · 1,390 个标注段 · 40 个 subtask · 出题 10,178 道
+express 因上游原片缺失退出、tea2 因三视角错位退出（标注都保留在 git 里，
+数据补齐后改 data/families.json 一行状态即可启用）
 ```
 
 ### 拿到数据
@@ -83,8 +84,8 @@ python3 src/migrate/normalize_source.py   # raw → source，约 4 分钟
 ```
 src/
 ├── label/    ③ 标注：网页标注器 + 校验器 + 语义层    ← 有 README 与 AGENTS.md
-├── vqa/      ④ 出题（待建）
-├── eval/     ⑥ 评测（待从旧仓库迁入）
+├── vqa/      ④ 出题 + ⑤ 验题：七步流水线 + 盲基线
+├── eval/     ⑥ 评测：生产实现 + 冻结参考 + 六套回归
 ├── common/   跨段共用：schema、契约
 └── migrate/  一次性脚本（抓 raw、规范化、核验）
 ```
@@ -137,12 +138,12 @@ schema 因此**显式拒绝**出题产物字段出现在标注里。
 ```bash
 pip install numpy pyarrow jsonschema        # 另需 ffmpeg / ffprobe
 
-python3 src/label/validate.py               # 标注六项核验（应为零条，见下）
+python3 src/label/validate.py               # 标注核验，八类检查（应为零条，见下）
 python3 src/label/tests/test_core_replay.py # 语义回归（不需要视频）
 python3 src/label/serve.py --port 8000      # 网页标注器
 ```
 
-`validate.py` **七条检查全部通过，零条发现。**
+`validate.py` **八类检查全部通过，零条发现**（六条硬错 ✗ + 两条待人判断 ⚠）。
 
 一路降下来的过程：
 
@@ -203,8 +204,9 @@ python3 src/label/serve.py --port 8000      # 网页标注器
 | 模块 | 状态 | 入口文档 |
 | --- | --- | --- |
 | `src/label` | ✅ 可用，可交接优化 | `src/label/README.md`（给人）· `src/label/AGENTS.md`（给 coding agent） |
-| `src/vqa` | ⬜ 待建，先定 A1 / A3 / A5 | — |
-| `src/eval` | 🔶 在旧仓库，待迁入 | — |
+| `src/vqa` | ✅ 可用，七个题型已建成 | `src/vqa/README.md` |
+| `src/eval` | ✅ 已迁入，三个模型已跑完 | `src/eval/README.md`（结构）· `src/eval/RUNBOOK.md`（照着跑） |
+| `results/` | 🔶 三轮结果 + 成因分析 | `results/README.md` |
 
 接手任何一块之前，**先读 `DEVLOG.md` 的「问题记录」与「被推翻的判断」** ——
 那里写着哪些坑已经踩过。
