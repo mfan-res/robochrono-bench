@@ -47,6 +47,12 @@
       "note": "抽帧由服务端决定，不参与 fps 档位"
     },
     {
+      "name": "qwen3.8-max-thinking",
+      "provider": "qwen_thinking",
+      "kind": "api",
+      "note": "与 qwen3.8-max 同端点同模型，只开思考。差值即「思考值多少分」"
+    },
+    {
       "name": "Cosmos3-Edge-2B",
       "provider": "local_cosmos3_edge_2b",
       "kind": "local",
@@ -87,5 +93,6 @@
   "_why_runs": "七个题型全跑。此前只有前四个 —— 三个图选项题型（5,116 道）不在名单里就【静默不跑】，不报错、结果里也没有。trajectory 不在名单：指标判定无效，已搁置。",
   "_why_skip_rules": "空的。此前有一条 `left_right unless two_handed`，而 family_attrs 里只有 stack_cubes 带该标记 —— 2,640 道 left_right 会被丢掉 2,242 道。该规则的前提在 v2 上是假的：六族都有 wrist_left/wrist_right，同一时刻两个腕视角的画面差在每族都高于该族「不同动作」的基线（airpods 54.9 对 40.8 … wash 59.3 对 52.6）。更根本的是题型语义变了：v2 问「哪张是指定那侧相机的画面」，不要求两只手都在动。原文：视角识别依赖左右手视角差异，单手任务不适用（见 test/testproject.md）。",
   "_why_family_attrs": "two_handed 只剩历史记录，已无规则读它。留着是因为它记录了一个关于数据的事实，删掉就查不到当初为什么只跑 stack_cubes。",
-  "_why_frame_variants": "空的 = 每个任务只跑一遍，用 providers.json 里 frames_by_run 定的抽帧档位。此前是 [1.0, 2.0]，把视频题跑两遍做抽帧档位扫描 —— 本地模型 42 run 变 66 run、时间翻倍。抽帧档位已在 BC-09 / frames_by_run 定过（time 用 32 帧），扫描留到确实要研究抽帧影响时再开。"
+  "_why_frame_variants": "空的 = 每个任务只跑一遍，用 providers.json 里 frames_by_run 定的抽帧档位。此前是 [1.0, 2.0]，把视频题跑两遍做抽帧档位扫描 —— 本地模型 42 run 变 66 run、时间翻倍。抽帧档位已在 BC-09 / frames_by_run 定过（time 用 32 帧），扫描留到确实要研究抽帧影响时再开。",
+  "_why_thinking_pair": "qwen3.8-max 与 qwen3.8-max-thinking 是同一个模型的两种条件，不是两个模型。并排跑是因为 A/B 实测显示思考对七个题型的加成从 +0.0 到 +61.1 不等 —— left_right 关掉思考后甚至低于随机基线。任何单一口径都会丢掉这个信息。"
 }

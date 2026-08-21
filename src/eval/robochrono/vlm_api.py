@@ -259,6 +259,9 @@ def runtime_config(
         "rate_limit": float(provider.get("rate_limit", defaults.get("rate_limit", 0.0))),
         "media_url_format": str(provider.get("media_url_format") or defaults.get("media_url_format") or ("base64" if provider_label == "glm" else "data_url")),
         "send_thinking": bool(provider.get("send_thinking", False)),
+        # 该端点用哪个参数名开关思考。留空 = 不发（服务端按自己的默认走，
+        # 那意味着结果 meta 里的 thinking 只是我们的意图、不是事实）。
+        "thinking_param": provider.get("thinking_param") or defaults.get("thinking_param"),
         "extra_payload": provider.get("extra_payload", {}),
         "extra_headers": provider.get("extra_headers", {}),
         "max_new_tokens": max_new_tokens,
@@ -1322,10 +1325,36 @@ def request_json(runtime: dict[str, Any], parts: list[dict[str, Any]]) -> dict[s
             "model": runtime["model"],
             "messages": [{"role": "user", "content": openai_content(parts, runtime["media_url_format"])}],
             "temperature": runtime["temperature"],
+            # **必须发出去。** 此前这里没有 max_tokens，于是 `unified_max_new_tokens`
+            # 只进了结果 meta、没进请求 —— 本地 provider 是 2048 上限，
+            # 而 API provider 实测单题输出到过 6,047 token（D-66）。
+            # `unify_generation` 存在的理由就是「不统一则跨模型不可比」，
+            # 而三个统一参数里恰好是它没送到服务端。
+            "max_tokens": runtime["max_new_tokens"],
+            # extra_payload 放最后 —— provider 想覆盖上面任何一项都可以，
+            # 这是端点方言（如各家关闭思考的参数名不同）的逃生口。
             **(runtime.get("extra_payload") or {}),
         }
+        # ── 关思考：两种方言，都由 provider 显式声明 ─────────────────
+        # 这个参数必须真的发出去。此前它只被算出来、记进结果 meta，
+        # 却卡在 `send_thinking` 默认 False 上没进请求 —— 于是配置写着
+        # `thinking: disabled`，服务端却在做长思考（实测 reasoning 占
+        # completion 的 99%，单题到过 8,148 token，D-66）。
+        #
+        # ⚠ **`max_tokens` 拦不住它**：实测 `max_tokens=512` 时 completion
+        # 仍到 8,191 —— 推理 token 不计入该上限。省成本只能靠关思考本身。
+        #
+        # 方言一：`thinking: {"type": "disabled"}` —— 智谱 GLM。
+        #   v1 的 upstream/*_glm_test.py 就是这么发的，保留以兼容。
+        # 方言二：`<name>: <bool>` —— DashScope 一系是顶层 `enable_thinking`，
+        #   vLLM / SGLang 是 `chat_template_kwargs.enable_thinking`。
+        #   （官方文档说在 OpenAI SDK 里走 `extra_body`，那是 SDK 概念，
+        #     落到线上就是顶层字段；实测发一个字面的 `extra_body` 对象无效。）
         if runtime.get("send_thinking") and runtime.get("thinking") is not None:
             payload.setdefault("thinking", {"type": runtime["thinking"]})
+        param = runtime.get("thinking_param")
+        if param:
+            payload.setdefault(str(param), runtime["thinking"] == "enabled")
         headers = {
             "Authorization": f"Bearer {runtime['api_key']}",
             "Content-Type": "application/json",

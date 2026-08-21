@@ -39,7 +39,7 @@ A-3（退化基线闸门）也已修完 —— 这一轮的报表会自己标出
 | --- | --- |
 | **P0 · 起下一轮之前必须做** | ~~A-1 A-2~~ ✅ 已修，run2 已跑完（三个模型齐了） |
 | **P1 · 下一轮之前值得做** | ~~A-3b A-7~~ ✅ 已修 —— **time 的三份旧结果作废，需重跑**、**5.2**（`extract.py` 接入，实证已支持） |
-| 中 | 4.1 4.2 4.3 4.4 4.5 4.6 4.7、2.1 2.4、3.1、5.3、1.17、~~A-3 A-4~~ ✅、**A-5 A-6 A-8** |
+| 中 | 4.1 4.2 4.3 4.4 4.5 4.6 4.7、2.1 2.4、3.1、5.3、1.17、**A-5 A-6 A-8 A-10** |
 | 低 | 批次 1 其余、3.2 3.3、5.1 5.4 5.5 5.6 5.7 |
 
 ---
@@ -268,6 +268,48 @@ python -m robochrono --datasets-root ../../data/vqa/eval --results-dir <dir> \
 
 **留给 ⑦ 解读**：跨族比较 planning 时按这一列分层，比直接比总分有意义。
 真要做成脚本的话是纯读 `build/plan.json` + 结果 jsonl，不动数据 —— 但不是必需。
+
+### A-9 ✅ **已修**（2026-08-22）· 生成参数只进元数据、不进请求
+
+- [x] `vlm_api.py` 的 `openai_compatible` payload 补上 **`max_tokens`** ——
+      此前只发 `model` / `messages` / `temperature`，`unified_max_new_tokens`
+      只进了结果 meta。`max_new_tokens` 原本只出现在四个**本地** adapter 里。
+- [x] 新增 **`thinking_param`**，由 provider 声明关思考的参数名。
+      此前 `thinking: disabled` 卡在 `send_thinking` 默认 `False` 上从没发出去 ——
+      meta 记「disabled」，服务端却在做长思考（reasoning 占 completion 的 **99%**）。
+      两种方言并存：GLM 的 `thinking:{type}`（v1 upstream 就这么发的，保留兼容）、
+      布尔型 `<name>: <bool>`（DashScope 顶层 `enable_thinking`，vLLM 走 `chat_template_kwargs`）。
+- [x] `providers.json` 给 `qwen` 声明 `enable_thinking`，并加 `qwen_thinking` 变体；
+      `plan.json` 加对应模型条目 —— **两个都跑**，差值即「思考值多少分」。
+
+**这是第三次撞上同一个模式**：算出来 → 记进元数据 → 没送到执行方
+（A-1 抽帧档位、A-6 frames 派生键、本条生成参数）。
+建议加一条通用检查：**凡是写进结果 meta 的执行参数，必须能在请求里找到对应项**。
+目前没有任何测试守着这件事，三次都是靠人读代码或看 token 用量才发现的。
+
+**一处更正**：我先前说「completion 到 5,729 是因为 max_tokens 没发出去」——
+**因果错了**。实测 `max_tokens=512` 时 completion 仍到 8,191：
+**推理 token 不计入该上限**。`max_tokens` 该补（它约束可见输出），
+但省成本只能靠关思考本身。
+
+**验证**（走完整框架路径发真请求）：
+```
+runtime：thinking='disabled'  thinking_param='enable_thinking'  max_new_tokens=2048
+实际：  reasoning=0  completion=592  思考占比 0%      说的与做的一致 ✓
+对照：  不发该参数时 reasoning 4,863 / 8,148，占 99%
+```
+
+### A-10 🆕 · 缺一条「元数据必须与请求一致」的守卫
+
+- [ ] **位置**：`src/eval/robochrono/vlm_api.py` 的各 provider 分支、
+      `matrix_run._meta`；`src/eval/tests/` 没有对应测试
+- **现状**：三次同类缺陷（A-1 / A-6 / A-9）都是「参数算出来了、写进了
+      `<run>.meta.json`、但没进实际请求」。**这一类没有任何自动检查**，
+      三次分别靠：读代码、跑核对脚本、看 token 用量才发现。
+- **改成**：加一条测试 —— 用 replay provider 或一个假的 HTTP 层截下 payload，
+      断言 `meta["generation"]` 与 `meta["frames"]` 里的每一项都能在请求里找到对应项。
+      **这比逐个修单点更值** —— 前三次都是同一个模式的实例。
+- **风险**：低。**预估**：半天。
 
 ### A-5 🟢 · 进 git 的运行日志有 94.5% 是同一行 transformers 噪声
 
@@ -611,7 +653,7 @@ gift_inhand     0/90               5/8
   grep -n 'frames' .gitignore
   ```
 
-### 1.18 🆕 · 本清单自己让链接检查产生 4 条假阳性（我造成的）
+### 1.18 ✅ **已修**（2026-08-21）· 本清单自己让链接检查产生 4 条假阳性
 
 - [ ] **位置**：本文件 §1.6 里那几条引用坏链接原文的行
 - **现状**：上一版把 `[v2 设计草案] (schema_v2_proposal.md)` 这类**裸写**在清单里，

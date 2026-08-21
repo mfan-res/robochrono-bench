@@ -57,6 +57,7 @@
       "api_url": "https://ws-fukhj6yqastdqupw.cn-beijing.maas.aliyuncs.com/compatible-mode/v1/chat/completions",
       "api_key_env": "DASHSCOPE_API_KEY",
       "model": "qwen3.8-max",
+      "thinking_param": "enable_thinking",
       "media_url_format": "data_url",
       "api_url_env": "DASHSCOPE_API_URL",
       "max_request_bytes": 10000000,
@@ -103,6 +104,22 @@
         "": 0
       },
       "system_prompt": "You are a strict JSON API. Return only one JSON object. Do not include markdown or analysis outside JSON."
+    },
+    "qwen_thinking": {
+      "type": "openai_compatible",
+      "api_url": "https://ws-fukhj6yqastdqupw.cn-beijing.maas.aliyuncs.com/compatible-mode/v1/chat/completions",
+      "api_key_env": "DASHSCOPE_API_KEY",
+      "model": "qwen3.8-max",
+      "thinking_param": "enable_thinking",
+      "media_url_format": "data_url",
+      "api_url_env": "DASHSCOPE_API_URL",
+      "max_request_bytes": 10000000,
+      "media_cache_dir": "results/.media_cache",
+      "concurrency": 8,
+      "rate_limit": 0.0,
+      "min_video_seconds": 2.0,
+      "thinking": "enabled",
+      "_why": "与 qwen 同一个端点、同一个模型，只差 thinking。两个都跑，「思考值多少分」就成了报告里的一列，而不是一个口径选择。"
     }
   },
   "_frames_by_run_note": [
@@ -151,5 +168,34 @@
     "",
     "unified_max_new_tokens 取 2048 而不是 1024：实测最大组 1,081 token，",
     "1024 正好越线。2048 留一倍余量，对选择题无额外开销（遇 EOS 即停）。"
+  ],
+  "_thinking_note": [
+    "BC-20  关思考的参数名各家不同，由 provider 的 `thinking_param` 声明。",
+    "       此前 defaults 里写着 thinking: disabled，但它卡在 send_thinking=False 上",
+    "       从没发出去 —— 结果 meta 记「disabled」，服务端却在做长思考。",
+    "",
+    "  实测（qwen3.8-max，同一道需要推理的题）：",
+    "    不发任何参数            reasoning 4,863 / 8,148   占 completion 99%",
+    "    enable_thinking=false   reasoning 0               completion 464",
+    "",
+    "  ⚠ max_tokens 拦不住思考：设 512 时 completion 仍到 8,191。",
+    "     推理 token 不计入该上限，省成本只能靠关思考本身。",
+    "",
+    "  四个候选（enable_thinking / thinking / chat_template_kwargs / reasoning_effort）",
+    "  在这个端点上实测都能关掉，取官方文档写明的 enable_thinking。",
+    "  DashScope 文档说在 OpenAI SDK 里走 extra_body —— 那是 SDK 概念，",
+    "  落到线上就是顶层字段；实测发一个字面的 extra_body 对象无效。",
+    "",
+    "  A/B 实测（126 题，每题型 18 道）：思考不是均匀加成，三类性质完全不同 ——",
+    "    understanding  94.4% -> 94.4%   +0.0   纯视觉，想再久也不多得分",
+    "    planning       38.9% -> 38.9%   +0.0   同上（此前担心强模型靠推理绕过去，不成立）",
+    "    time           72.2% -> 55.6%  +16.7",
+    "    planning_2     44.4% -> 27.8%  +16.7",
+    "    image_in_video 100.0% -> 72.2% +27.8",
+    "    step_order     77.8% -> 38.9%  +38.9   约四成靠思考，六成靠视觉",
+    "    left_right     77.8% -> 16.7%  +61.1   关掉后【低于随机基线 25%】",
+    "",
+    "  所以不选边：qwen（关）与 qwen_thinking（开）都进 plan.json。",
+    "  输出 token 2,404/题 -> 259/题，关思考那轮只占 10.8%，成本可控。"
   ]
 }

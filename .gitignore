@@ -51,3 +51,8 @@ build/frames.json
 build/blind_v2/
 # 指向 data/vqa/assets 的软链（那边已 ignore）
 build/assets
+
+# API provider 为满足请求体上限而降分辨率重编码的视频。**可再生**：
+# 删了下次跑会重做（`media_cache_dir`，见 configs/providers.json 的 BC-11）。
+# report.pack 也把它排除在打包之外 —— 回传没有意义。
+src/eval/results/
