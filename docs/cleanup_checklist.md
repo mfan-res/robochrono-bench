@@ -92,10 +92,15 @@ A-3（退化基线闸门）也已修完 —— 这一轮的报表会自己标出
 - [x] ~~**D-13 · A-4 的三个选项选哪个？**~~ —— 已选①（只写进披露，不改数据），
       2026-08-21 落地为 `docs/disclosures.md` 第 1c 条。本条关闭。
 
-- [ ] 🆕 **D-14 · Cosmos3-Edge-2B 怎么办？** 缺推理库。
-      装（groupB 环境已有位置，`configs/environments.json` 里映射好了），
-      还是先从 `plan.json` 的 models 里移出、在 `_why_models` 里记一句？
-      **移出比留着 FAIL 好** —— 现在它是 preflight 里唯一的红色，会掩盖真的新问题。
+- [x] ~~**D-14 · Cosmos3-Edge-2B 怎么办？**~~ —— **它没坏，也不缺库**（2026-08-22 实测）。
+      2.44B 参数在 groupB（transformers 5.15.0）里正常加载，端到端跑通、errors 0。
+      「缺推理库」这个说法是错的：**preflight 是在 groupA 里跑的**，而
+      `environments.json` 早就把它映射到 groupB 了，`dispatch` 子命令就是干这个的。
+      唯一要注意的是它输出思考文本而非 JSON（33% 解析失败），
+      **加 `--strip-reasoning` 后全部解析成功**（BC-02 现成的开关）。
+      → 不要移出 plan.json；跑它时走 `dispatch` 并带 `--strip-reasoning`。
+      顺带：这解释了 preflight 那个「唯一的红色」—— 它是环境问题不是模型问题，
+      值得在 preflight 里区分开（记为 A-13）。
 
 - [ ] 🆕 **D-11 · `data/vqa/` 层的可再生中间件，哪些该进 git？**（决定 1.17）
       本轮 `.gitignore` 把 `build/frames.json`（5.6 MB）排除了，理由是「可再生」；
@@ -326,6 +331,19 @@ time              180   18.3%   16.7%   +1.7%   +0.3   100%
 方向一致偏正（原图略好），符合「有微小真实效应但远小于噪声」。
 两个纯图题型被缩放 0% —— 自洽性检查通过。
 披露里写一句即可：「API 路径对 21% 的媒体做 0.75 倍缩放，实测影响 +1.3pp，不显著」。
+
+### A-13 🆕 · preflight 在 groupA 里检查所有模型，包括那些该在 groupB 跑的
+
+- [ ] **位置**：`src/eval/robochrono/preflight.py` 的 `check_models`；
+      `src/eval/configs/environments.json` 已有模型→环境的映射
+- **现状**：`Cosmos3-Edge-2B` 是自检里唯一的 FAIL，长期被当成「缺推理库」。
+      实测它在 groupB 里 2.44B 参数正常加载、端到端跑通、errors 0 ——
+      **它只是不该在 groupA 里被检查**。`dispatch` 子命令本来就负责按
+      `environments.json` 把模型分派到对应解释器，preflight 却没读那份映射。
+- **后果**：一个长期红色会让人对整个自检脱敏 —— 这正是 A-3 那条闸门想避免的事。
+- **改成**：`check_models` 读 `environments.json`，对不属于当前解释器的模型
+      报「⊘ 归 groupB，本环境不检查」而不是 FAIL；或让 preflight 也能被 dispatch。
+- **风险**：低。**预估**：2 小时。
 
 ### A-12 🆕 **P1** · `time` 的 32 帧是按覆盖率选的，而分数远未饱和（E2）
 
