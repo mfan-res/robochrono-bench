@@ -15,7 +15,7 @@ import json
 import re
 from typing import Any
 
-from .base import CallContext, Unit, base_row, text_part, video_part
+from .base import CallContext, Unit, one_item_per_unit, base_row, text_part, video_part
 
 
 # --------------------------------------------------------------------------
@@ -297,19 +297,42 @@ def video_paths_for_item(item: dict[str, Any]) -> list[str]:
 
 
 class TimeEqaTask:
-    """按视频分组：一次调用回答一个 episode 的全部问题。"""
+    """一题一次调用（v2）。v1 是按视频整组问完的，见 ``units()``。"""
 
     name = "time"
 
-    def __init__(self, **_flags: Any) -> None:
+    def __init__(self, group_by_video: bool = False, **_flags: Any) -> None:
         # BC-02 对本任务不适用：它不解析选项字母，走的是区间正则回落。
-        pass
+        # group_by_video 见 units() 的说明 —— 默认关，只有回放 v1 录音时才开。
+        self.group_by_video = bool(group_by_video)
 
     def units(self, items: list[dict[str, Any]]) -> list[Unit]:
-        groups: dict[str, list[dict[str, Any]]] = {}
-        for item in items:
-            groups.setdefault(str(item["video_id"]), []).append(item)
-        return [Unit(key=video_id, items=group) for video_id, group in groups.items()]
+        """一题一次调用。**v1 是按视频整组问完的，v2 改了**（BC-19 / D-65）。
+
+        改的理由不是性能，是**它把一个我们没打算测的门槛设成了参加考试的条件**：
+
+        - 分组只为省媒体开销（同一视频只传一次），能力定义里从来没有
+          「一次回答 N 道题」这一条 —— `docs/disclosures.md` 第 5 条自己写着
+          「它改变了任务本身，不是实现细节」
+        - 而 RynnBrain-2B 被要求一次产出 ≥2 个答案就直接吐空。实测断点在
+          **题数**而非长度（1 题填充到长 60% 照样正常，2 题在原长就空），
+          于是 249 个 unit 全是多题、它的 time **1340/1390 全废**
+        - 它并不是不会做：在它答上来的那 50 题上 mean_tIoU 0.226，
+          高于「整段视频都报」的 0.13 地板，50 题给出 43 种不同区间
+
+        代价实测只有 **+13%**（拟合：每次调用 = 4.1s 固定 + 4.17s × 题数，
+        固定开销只有 4.1 秒，生成才是大头），换来所有模型做同一道题 ——
+        按模型降批量会让强模型独享「知道这段恰好有 N 个动作」的排除法便利。
+
+        ``group_by_video=True`` 保留 v1 的分组，**只给回放用**：
+        `fixtures/baseline/time.json` 是按视频录的，replay 表的键得对得上。
+        """
+        if self.group_by_video:
+            groups: dict[str, list[dict[str, Any]]] = {}
+            for item in items:
+                groups.setdefault(str(item["video_id"]), []).append(item)
+            return [Unit(key=video_id, items=group) for video_id, group in groups.items()]
+        return one_item_per_unit(items)
 
     def parts(self, unit: Unit) -> list[dict[str, Any]]:
         paths = video_paths_for_item(unit.items[0])
