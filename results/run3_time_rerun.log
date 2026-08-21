@@ -1,0 +1,338 @@
+矩阵 18 个 run，跳过 0 个，可用 GPU [0, 1, 2, 3, 4, 5, 6, 7]
+
+======================================================================
+模型 Qwen3-VL-8B-Instruct（local，6 个 run）
+======================================================================
+  1390 个 unit 摊给 8 张卡
+Loading local Qwen model: /mnt/public/users/wbcd/workspace/michael/bench/models/Qwen3-VL-8B-Instruct
+Loading local Qwen model: /mnt/public/users/wbcd/workspace/michael/bench/models/Qwen3-VL-8B-Instruct
+Loading local Qwen model: /mnt/public/users/wbcd/workspace/michael/bench/models/Qwen3-VL-8B-Instruct
+Loading local Qwen model: /mnt/public/users/wbcd/workspace/michael/bench/models/Qwen3-VL-8B-Instruct
+Loading local Qwen model: /mnt/public/users/wbcd/workspace/michael/bench/models/Qwen3-VL-8B-Instruct
+Loading local Qwen model: /mnt/public/users/wbcd/workspace/michael/bench/models/Qwen3-VL-8B-Instruct
+Loading local Qwen model: /mnt/public/users/wbcd/workspace/michael/bench/models/Qwen3-VL-8B-Instruct
+Loading local Qwen model: /mnt/public/users/wbcd/workspace/michael/bench/models/Qwen3-VL-8B-Instruct
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:04<00:14,  4.98s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:08<00:26,  8.74s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:09<00:09,  4.93s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:09<00:29,  9.76s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:09<00:29,  9.71s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:09<00:28,  9.54s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:09<00:29,  9.82s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:09<00:28,  9.56s/it]Loading checkpoint shards:  25%|██▌       | 1/4 [00:09<00:29,  9.76s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:14<00:04,  4.91s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:14<00:13,  6.93s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:15<00:14,  7.29s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:15<00:14,  7.23s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:15<00:14,  7.26s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:17<00:00,  4.12s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:17<00:00,  4.42s/it]
+qwen-vl-utils using decord to read video.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading checkpoint shards:  50%|█████     | 2/4 [00:19<00:19,  9.70s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:19<00:19,  9.89s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:21<00:06,  6.89s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:21<00:06,  6.96s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:21<00:06,  6.93s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:21<00:06,  6.94s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:23<00:24, 12.27s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:25<00:00,  5.70s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:25<00:00,  6.33s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:25<00:00,  5.71s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:25<00:00,  6.41s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:25<00:00,  5.72s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:25<00:00,  6.35s/it]
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:26<00:08,  8.70s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:27<00:08,  8.74s/it]The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading checkpoint shards: 100%|██████████| 4/4 [00:27<00:00,  6.59s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:27<00:00,  6.98s/it]
+qwen-vl-utils using decord to read video.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:30<00:09,  9.80s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:31<00:00,  7.00s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:31<00:00,  7.83s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:31<00:00,  6.97s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:31<00:00,  7.84s/it]
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Loading checkpoint shards: 100%|██████████| 4/4 [00:33<00:00,  7.27s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:33<00:00,  8.50s/it]
+qwen-vl-utils using decord to read video.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+    [20/1390] 17.4 unit/min  errors=0
+    [40/1390] 27.2 unit/min  errors=0
+    [60/1390] 34.6 unit/min  errors=0
+    [80/1390] 38.9 unit/min  errors=0
+    [100/1390] 42.8 unit/min  errors=0
+    [120/1390] 45.1 unit/min  errors=0
+    [140/1390] 47.8 unit/min  errors=0
+    [160/1390] 49.2 unit/min  errors=0
+    [180/1390] 50.8 unit/min  errors=0
+    [200/1390] 51.9 unit/min  errors=0
+    [220/1390] 53.3 unit/min  errors=0
+    [240/1390] 53.9 unit/min  errors=0
+    [260/1390] 55.1 unit/min  errors=0
+    [280/1390] 55.4 unit/min  errors=0
+    [300/1390] 56.3 unit/min  errors=0
+    [320/1390] 56.7 unit/min  errors=0
+    [340/1390] 57.5 unit/min  errors=0
+    [360/1390] 57.8 unit/min  errors=0
+    [380/1390] 58.4 unit/min  errors=0
+    [400/1390] 58.8 unit/min  errors=0
+    [420/1390] 59.2 unit/min  errors=0
+    [440/1390] 59.5 unit/min  errors=0
+    [460/1390] 60.0 unit/min  errors=0
+    [480/1390] 60.2 unit/min  errors=0
+    [500/1390] 60.5 unit/min  errors=0
+    [520/1390] 60.7 unit/min  errors=0
+    [540/1390] 61.0 unit/min  errors=0
+    [560/1390] 61.2 unit/min  errors=0
+    [580/1390] 61.4 unit/min  errors=0
+    [600/1390] 61.5 unit/min  errors=0
+    [620/1390] 61.8 unit/min  errors=0
+    [640/1390] 61.9 unit/min  errors=0
+    [660/1390] 62.2 unit/min  errors=0
+    [680/1390] 62.2 unit/min  errors=0
+    [700/1390] 62.5 unit/min  errors=0
+    [720/1390] 62.6 unit/min  errors=0
+    [740/1390] 62.9 unit/min  errors=0
+    [760/1390] 63.0 unit/min  errors=0
+    [780/1390] 63.2 unit/min  errors=0
+    [800/1390] 63.2 unit/min  errors=0
+    [820/1390] 63.5 unit/min  errors=0
+    [840/1390] 63.5 unit/min  errors=0
+    [860/1390] 63.8 unit/min  errors=0
+    [880/1390] 63.9 unit/min  errors=0
+    [900/1390] 64.0 unit/min  errors=0
+    [920/1390] 64.2 unit/min  errors=0
+    [940/1390] 64.2 unit/min  errors=0
+    [960/1390] 64.3 unit/min  errors=0
+    [980/1390] 64.4 unit/min  errors=0
+    [1000/1390] 64.5 unit/min  errors=0
+    [1020/1390] 64.6 unit/min  errors=0
+    [1040/1390] 64.7 unit/min  errors=0
+    [1060/1390] 64.8 unit/min  errors=0
+    [1080/1390] 64.8 unit/min  errors=0
+    [1100/1390] 65.0 unit/min  errors=0
+    [1120/1390] 65.0 unit/min  errors=0
+    [1140/1390] 65.1 unit/min  errors=0
+    [1160/1390] 65.2 unit/min  errors=0
+    [1180/1390] 65.3 unit/min  errors=0
+    [1200/1390] 65.4 unit/min  errors=0
+    [1220/1390] 65.4 unit/min  errors=0
+    [1240/1390] 65.5 unit/min  errors=0
+    [1260/1390] 65.6 unit/min  errors=0
+    [1280/1390] 65.6 unit/min  errors=0
+    [1300/1390] 65.6 unit/min  errors=0
+    [1320/1390] 65.8 unit/min  errors=0
+    [1340/1390] 65.8 unit/min  errors=0
+    [1360/1390] 65.8 unit/min  errors=0
+    [1380/1390] 65.9 unit/min  errors=0
+    [1390/1390] 65.9 unit/min  errors=0
+  完成 1390，错误 0
+  airpods/time: tIoU@0.5 = 0.0  (answered 200/200, errors 0)
+    ⚠ 低于「整段视频都报」（mean_tIoU 0.0752 < 0.13）
+  gift_inhand/time: tIoU@0.5 = 0.12222222222222222  (answered 90/90, errors 0)
+  pen_inbox/time: tIoU@0.5 = 0.7516778523489933  (answered 149/149, errors 0)
+  stack_cubes/time: tIoU@0.5 = 0.225  (answered 200/200, errors 0)
+  tea/time: tIoU@0.5 = 0.49572649572649574  (answered 234/234, errors 0)
+  wash/time: tIoU@0.5 = 0.2553191489361702  (answered 517/517, errors 0)
+
+======================================================================
+模型 RynnBrain-2B（local，6 个 run）
+======================================================================
+  1390 个 unit 摊给 8 张卡
+Loading local transformers VLM: /mnt/public/users/wbcd/workspace/michael/bench/models/RynnBrain-2B
+Loading local transformers VLM: /mnt/public/users/wbcd/workspace/michael/bench/models/RynnBrain-2B
+Loading local transformers VLM: /mnt/public/users/wbcd/workspace/michael/bench/models/RynnBrain-2B
+Loading local transformers VLM: /mnt/public/users/wbcd/workspace/michael/bench/models/RynnBrain-2B
+Loading local transformers VLM: /mnt/public/users/wbcd/workspace/michael/bench/models/RynnBrain-2B
+Loading local transformers VLM: /mnt/public/users/wbcd/workspace/michael/bench/models/RynnBrain-2B
+Loading local transformers VLM: /mnt/public/users/wbcd/workspace/michael/bench/models/RynnBrain-2B
+Loading local transformers VLM: /mnt/public/users/wbcd/workspace/michael/bench/models/RynnBrain-2B
+qwen-vl-utils using decord to read video.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+qwen-vl-utils using decord to read video.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+    [20/1390] 25.2 unit/min  errors=0
+    [40/1390] 38.9 unit/min  errors=0
+    [60/1390] 48.9 unit/min  errors=0
+    [80/1390] 55.4 unit/min  errors=0
+    [100/1390] 60.9 unit/min  errors=0
+    [120/1390] 64.9 unit/min  errors=0
+    [140/1390] 67.9 unit/min  errors=0
+    [160/1390] 70.9 unit/min  errors=0
+    [180/1390] 72.8 unit/min  errors=0
+    [200/1390] 75.7 unit/min  errors=3
+    [220/1390] 77.1 unit/min  errors=3
+    [240/1390] 78.6 unit/min  errors=3
+    [260/1390] 80.3 unit/min  errors=3
+    [280/1390] 81.1 unit/min  errors=3
+    [300/1390] 82.5 unit/min  errors=6
+    [320/1390] 83.6 unit/min  errors=6
+    [340/1390] 84.7 unit/min  errors=8
+    [360/1390] 85.3 unit/min  errors=10
+    [380/1390] 86.1 unit/min  errors=10
+    [400/1390] 87.2 unit/min  errors=15
+    [420/1390] 88.3 unit/min  errors=18
+    [440/1390] 88.8 unit/min  errors=22
+    [460/1390] 89.3 unit/min  errors=22
+    [480/1390] 89.5 unit/min  errors=22
+    [500/1390] 90.0 unit/min  errors=22
+    [520/1390] 90.1 unit/min  errors=22
+    [540/1390] 90.5 unit/min  errors=22
+    [560/1390] 90.6 unit/min  errors=22
+    [580/1390] 90.9 unit/min  errors=22
+    [600/1390] 91.1 unit/min  errors=22
+    [620/1390] 91.3 unit/min  errors=22
+    [640/1390] 91.4 unit/min  errors=22
+    [660/1390] 91.8 unit/min  errors=22
+    [680/1390] 91.8 unit/min  errors=22
+    [700/1390] 92.1 unit/min  errors=22
+    [720/1390] 92.2 unit/min  errors=22
+    [740/1390] 92.4 unit/min  errors=22
+    [760/1390] 92.6 unit/min  errors=22
+    [780/1390] 92.7 unit/min  errors=22
+    [800/1390] 92.8 unit/min  errors=22
+    [820/1390] 92.9 unit/min  errors=22
+    [840/1390] 93.0 unit/min  errors=22
+    [860/1390] 93.1 unit/min  errors=22
+    [880/1390] 93.1 unit/min  errors=22
+    [900/1390] 93.4 unit/min  errors=22
+    [920/1390] 93.3 unit/min  errors=22
+    [940/1390] 93.6 unit/min  errors=22
+    [960/1390] 93.7 unit/min  errors=22
+    [980/1390] 93.8 unit/min  errors=22
+    [1000/1390] 93.8 unit/min  errors=22
+    [1020/1390] 93.9 unit/min  errors=22
+    [1040/1390] 94.0 unit/min  errors=22
+    [1060/1390] 93.9 unit/min  errors=22
+    [1080/1390] 94.1 unit/min  errors=22
+    [1100/1390] 94.1 unit/min  errors=22
+    [1120/1390] 94.1 unit/min  errors=22
+    [1140/1390] 94.2 unit/min  errors=22
+    [1160/1390] 94.3 unit/min  errors=22
+    [1180/1390] 94.3 unit/min  errors=22
+    [1200/1390] 94.4 unit/min  errors=22
+    [1220/1390] 94.5 unit/min  errors=22
+    [1240/1390] 94.5 unit/min  errors=22
+    [1260/1390] 94.7 unit/min  errors=22
+    [1280/1390] 94.5 unit/min  errors=22
+    [1300/1390] 94.7 unit/min  errors=22
+    [1320/1390] 94.6 unit/min  errors=22
+    [1340/1390] 94.7 unit/min  errors=22
+    [1360/1390] 94.7 unit/min  errors=22
+    [1380/1390] 94.8 unit/min  errors=22
+    [1390/1390] 94.8 unit/min  errors=22
+  完成 1390，错误 22
+  airpods/time: tIoU@0.5 = 0.005  (answered 200/200, errors 0)
+    ⚠ 低于「整段视频都报」（mean_tIoU 0.0712 < 0.13）
+  gift_inhand/time: tIoU@0.5 = 0.08888888888888889  (answered 87/90, errors 3)
+  pen_inbox/time: tIoU@0.5 = 0.2953020134228188  (answered 130/149, errors 19)
+    ✗ 13% 的调用失败（19/149）
+  stack_cubes/time: tIoU@0.5 = 0.28  (answered 200/200, errors 0)
+  tea/time: tIoU@0.5 = 0.1111111111111111  (answered 234/234, errors 0)
+  wash/time: tIoU@0.5 = 0.12379110251450677  (answered 517/517, errors 0)
+
+======================================================================
+模型 SenseNova-SI-1.1-InternVL3-2B（local，6 个 run）
+======================================================================
+  1390 个 unit 摊给 8 张卡
+Loading local InternVL model: /mnt/public/users/wbcd/workspace/michael/bench/models/SenseNova-SI-1_1-InternVL3-2B
+Loading local InternVL model: /mnt/public/users/wbcd/workspace/michael/bench/models/SenseNova-SI-1_1-InternVL3-2B
+Loading local InternVL model: /mnt/public/users/wbcd/workspace/michael/bench/models/SenseNova-SI-1_1-InternVL3-2B
+Loading local InternVL model: /mnt/public/users/wbcd/workspace/michael/bench/models/SenseNova-SI-1_1-InternVL3-2B
+Loading local InternVL model: /mnt/public/users/wbcd/workspace/michael/bench/models/SenseNova-SI-1_1-InternVL3-2B
+Loading local InternVL model: /mnt/public/users/wbcd/workspace/michael/bench/models/SenseNova-SI-1_1-InternVL3-2B
+Loading local InternVL model: /mnt/public/users/wbcd/workspace/michael/bench/models/SenseNova-SI-1_1-InternVL3-2B
+Loading local InternVL model: /mnt/public/users/wbcd/workspace/michael/bench/models/SenseNova-SI-1_1-InternVL3-2B
+FlashAttention2 is not installed.
+  LLM attn_implementation -> sdpa
+FlashAttention2 is not installed.
+  LLM attn_implementation -> sdpa
+FlashAttention2 is not installed.
+  LLM attn_implementation -> sdpa
+FlashAttention2 is not installed.
+  LLM attn_implementation -> sdpa
+FlashAttention2 is not installed.
+  LLM attn_implementation -> sdpa
+FlashAttention2 is not installed.
+  LLM attn_implementation -> sdpa
+FlashAttention2 is not installed.
+  LLM attn_implementation -> sdpa
+FlashAttention2 is not installed.
+  LLM attn_implementation -> sdpa
+    [20/1390] 10.6 unit/min  errors=0
+    [40/1390] 13.7 unit/min  errors=3
+    [60/1390] 15.2 unit/min  errors=6
+    [80/1390] 16.0 unit/min  errors=8
+    [100/1390] 16.5 unit/min  errors=10
+    [120/1390] 16.6 unit/min  errors=11
+    [140/1390] 17.0 unit/min  errors=15
+    [160/1390] 16.9 unit/min  errors=18
+    [180/1390] 17.1 unit/min  errors=22
+    [200/1390] 17.3 unit/min  errors=25
+    [220/1390] 17.5 unit/min  errors=27
+    [240/1390] 17.5 unit/min  errors=27
+    [260/1390] 17.5 unit/min  errors=29
+    [280/1390] 17.7 unit/min  errors=29
+    [300/1390] 17.8 unit/min  errors=30
+    [320/1390] 17.8 unit/min  errors=33
+    [340/1390] 17.8 unit/min  errors=35
+    [360/1390] 17.8 unit/min  errors=36
+    [380/1390] 18.0 unit/min  errors=39
+    [400/1390] 18.0 unit/min  errors=40
+    [420/1390] 17.9 unit/min  errors=43
+    [440/1390] 18.0 unit/min  errors=46
+    [460/1390] 18.0 unit/min  errors=46
+    [480/1390] 18.0 unit/min  errors=48
+    [500/1390] 18.0 unit/min  errors=48
+    [520/1390] 18.0 unit/min  errors=48
+    [540/1390] 18.1 unit/min  errors=48
+    [560/1390] 18.1 unit/min  errors=48
+    [580/1390] 18.1 unit/min  errors=48
+    [600/1390] 18.2 unit/min  errors=48
+    [620/1390] 18.2 unit/min  errors=48
+    [640/1390] 18.2 unit/min  errors=48
+    [660/1390] 18.2 unit/min  errors=48
+    [680/1390] 18.2 unit/min  errors=48
+    [700/1390] 18.2 unit/min  errors=48
+    [720/1390] 18.2 unit/min  errors=48
+    [740/1390] 18.2 unit/min  errors=48
+    [760/1390] 18.2 unit/min  errors=48
+    [780/1390] 18.2 unit/min  errors=48
+    [800/1390] 18.2 unit/min  errors=48
+    [820/1390] 18.1 unit/min  errors=49
+    [840/1390] 18.1 unit/min  errors=49
+    [860/1390] 18.1 unit/min  errors=49
+    [880/1390] 18.1 unit/min  errors=49
+    [900/1390] 18.2 unit/min  errors=49
+    [920/1390] 18.1 unit/min  errors=49
+    [940/1390] 18.1 unit/min  errors=51
+    [960/1390] 18.2 unit/min  errors=51
+    [980/1390] 18.2 unit/min  errors=51
+    [1000/1390] 18.2 unit/min  errors=51
+    [1020/1390] 18.2 unit/min  errors=51
+    [1040/1390] 18.2 unit/min  errors=51
+    [1060/1390] 18.2 unit/min  errors=51
+    [1080/1390] 18.2 unit/min  errors=51
+    [1100/1390] 18.2 unit/min  errors=51
+    [1120/1390] 18.2 unit/min  errors=51
+    [1140/1390] 18.2 unit/min  errors=51
+    [1160/1390] 18.2 unit/min  errors=51
+    [1180/1390] 18.2 unit/min  errors=51
+    [1200/1390] 18.2 unit/min  errors=51
+    [1220/1390] 18.3 unit/min  errors=51
+    [1240/1390] 18.2 unit/min  errors=51
+    [1260/1390] 18.2 unit/min  errors=51
+    [1280/1390] 18.2 unit/min  errors=56
+    [1300/1390] 18.2 unit/min  errors=56
+    [1320/1390] 18.2 unit/min  errors=57
+    [1340/1390] 18.2 unit/min  errors=60
+    [1360/1390] 18.2 unit/min  errors=60
+    [1380/1390] 18.2 unit/min  errors=60
+    [1390/1390] 18.2 unit/min  errors=60
+  完成 1390，错误 60
+  airpods/time: tIoU@0.5 = 0.0  (answered 173/200, errors 27)
+    ✗ 14% 的调用失败（27/200）
+    ⚠ 低于「整段视频都报」（mean_tIoU 0 < 0.13）
+  gift_inhand/time: tIoU@0.5 = 0.0  (answered 88/90, errors 2)
+    ⚠ 低于「整段视频都报」（mean_tIoU 0.0387 < 0.13）
+  pen_inbox/time: tIoU@0.5 = 0.0  (answered 130/149, errors 19)
+    ✗ 13% 的调用失败（19/149）
+    ⚠ 低于「整段视频都报」（mean_tIoU 0 < 0.13）
+  stack_cubes/time: tIoU@0.5 = 0.0  (answered 200/200, errors 0)
+    ⚠ 低于「整段视频都报」（mean_tIoU 0.000802 < 0.13）
+  tea/time: tIoU@0.5 = 0.0  (answered 233/234, errors 1)
+    ⚠ 低于「整段视频都报」（mean_tIoU 0 < 0.13）
+  wash/time: tIoU@0.5 = 0.0  (answered 506/517, errors 11)
+    ⚠ 低于「整段视频都报」（mean_tIoU 0 < 0.13）
