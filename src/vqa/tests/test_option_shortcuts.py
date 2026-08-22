@@ -320,6 +320,66 @@ def check_image_outlier(rep: Report) -> None:
             0.0, ok=(abs(worst_gain) < 0.05))
 
 
+def note_answer_coverage(rep: Report) -> None:
+    """每个动作当答案的次数是否均匀 —— **只报不判**。
+
+    这一条抓的是「答案空间被结构性削掉了一块」，而**盲基线抓不到它**：
+    纯文本模型不知道「这个族的开场动作是哪个」，那是**数据集层面的先验**，
+    要看过整个数据集才有。题面内部的检查（位置/长度/重复/图像统计）同样抓不到。
+
+    实测（2026-08-23）：`planning` 在四个族里各有 1 个动作**从没当过答案** ——
+    每集最后一段没有「下一步」所以被跳过，于是每集的**开场动作**永远不是答案；
+    而这批数据每集按同一脚本执行，开场动作四个族里各只有一种。
+    三动作族的答案空间因此实际只剩 2 个，最常见的那个占 50%。
+    「划掉本族开场动作再猜」白送 **+4.9pp**（小族 +8.3）。
+
+    **为什么只报不判**：三个候选修法都比原问题差 ——
+      干扰项排除开场动作  三个族凑不满四选一，得多借别族动作（披露第 2 条，+8pp）
+      末段也出题、答「结束」 造一条更容易的新捷径（且披露第 7 条已否掉这个选项）
+      平衡答案分布        **数学上做不到** —— 开场动作结构上不可能当答案
+
+    它与披露第 1 条（`P(next|current)=100%`）、1c（当前动作在选项里）**同源**：
+    都是「每集按同一脚本执行」这个采集事实的后果，在出题层面无解。
+    设成会红的门禁只会让人以后忽略整个套件 —— **判据的严厉程度应当取决于
+    「能不能修」，而不只是「有多大」。**
+
+    `understanding` 是天然的对照组：同样的数据、同样的干扰项构造，
+    六族**全部覆盖且占比精确等于均匀值**。这证明偏差不来自构造，
+    纯粹来自「问下一步」与「每集同脚本」的组合。
+    """
+    plan_path, vocab_path = BUILD / "plan.json", BUILD / "vocab.json"
+    if not (plan_path.exists() and vocab_path.exists()):
+        rep.note("答案是否覆盖全部动作", "缺 build/plan.json 或 vocab.json，跳过")
+        return
+    plan = json.loads(plan_path.read_text(encoding="utf-8"))
+    vocab = json.loads(vocab_path.read_text(encoding="utf-8"))["families"]
+
+    lines: list[str] = []
+    for run in ("understanding", "planning", "planning_2"):
+        seen: dict[str, collections.Counter] = collections.defaultdict(collections.Counter)
+        for item in plan["items"]:
+            if item.get("task") == run:
+                seen[item["family"]][item.get("answer_subtask")] += 1
+        for family, counts in sorted(seen.items()):
+            defined = {s["id"] for s in vocab[family]["subtasks"]}
+            never = defined - set(counts)
+            if not never:
+                continue
+            total = sum(counts.values())
+            top = counts.most_common(1)[0][1] / total
+            lines.append(f"{run}／{family} {len(never)}/{len(defined)} 个动作从没当过答案，"
+                         f"最常见的占 {top:.0%}（均匀 {1 / len(defined):.0%}）")
+
+    if not lines:
+        rep.note("答案是否覆盖全部动作", "各题型的动作全部当过答案")
+        return
+    # 挑最偏的那条报出来 —— 三动作族最能说明问题（答案空间只剩 2 个）
+    worst = min(lines, key=lambda t: -float(t.split("最常见的占 ")[1].split("%")[0]))
+    rep.note("答案是否覆盖全部动作",
+             f"{len(lines)} 处，最偏的：{worst}"
+             f"　understanding 六族全覆盖可作对照 —— 结构性偏差，三个修法都更糟")
+
+
 def note_answer_frequency(rep: Report) -> None:
     """某个动作特别容易当答案 —— **只报不判**。
 
@@ -361,6 +421,7 @@ def main() -> int:
     check_borrowed_clash(rep)
     check_image_size(rep)
     check_image_outlier(rep)
+    note_answer_coverage(rep)
     note_answer_frequency(rep)
     return rep.render()
 
