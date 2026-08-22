@@ -251,6 +251,75 @@ def check_image_size(rep: Report) -> None:
     rep.add("正确图能否靠文件大小认出", detail or "未找到图选项素材", worst)
 
 
+def check_image_outlier(rep: Report) -> None:
+    """图选项题：答案是不是「离其它三个最远／最近」的那一个。
+
+    **这条抓过一次真捷径。** 曾把「干扰项彼此」的门槛放宽到一半，理由是
+    「那只为了不出现双胞胎，门槛该低些」。规则一旦不对称，答案就成了离群点 ——
+    「挑最不像的那个」白送 **28 个百分点**（答案最远占比 53%，应为 25%）。
+    改成六条边同一条门槛（`plan.MUTUAL_RATIO = 0.85`）之后降到 2 个百分点。
+
+    **判据按族算，不看总数** —— 正向偏与反向偏会互相抵消：
+    实测 gift_inhand 最远 50.0%（+4.4σ）而 wash 最近 35.8%（+5.7σ），
+    合计却是 27.2%，看起来干净。总数掩盖分族偏斜是这条最容易被漏掉的方式。
+
+    **报的是「白送多少分」，不是 σ。** 单族 n 小时 σ 容易吓人，
+    而真正要问的是「这个偏斜能不能被利用」——
+    永远选最远的那张，实测只多拿 2.2 个百分点，属噪声量级，不该为它调参。
+    """
+    desc_path = BUILD / "frames_desc.npy"
+    frames_path = BUILD / "frames.json"
+    plan_path = BUILD / "plan.json"
+    if not (desc_path.exists() and frames_path.exists() and plan_path.exists()):
+        rep.note("图选项的离群性", "缺 build/frames_desc.npy 或 plan.json，跳过")
+        return
+    try:
+        import numpy
+    except ImportError:
+        rep.note("图选项的离群性", "没装 numpy，跳过")
+        return
+
+    desc = numpy.load(desc_path).astype(numpy.float32)
+    order = json.loads(frames_path.read_text(encoding="utf-8"))["order"]
+    row = {k: i for i, k in enumerate(order)}
+    plan = json.loads(plan_path.read_text(encoding="utf-8"))
+
+    def dist(a: str, b: str) -> float:
+        return float(numpy.abs(desc[row[a]] - desc[row[b]]).mean())
+
+    worst_gain = 0.0
+    detail = ""
+    for run in IMAGE_RUNS:
+        n = far_hit = 0
+        per: dict[str, list[int]] = collections.defaultdict(lambda: [0, 0])
+        for item in plan["items"]:
+            if item.get("task") != run:
+                continue
+            keys = item.get("image_options") or []
+            answer = item.get("correct_option")
+            if len(keys) != 4 or answer not in keys or not all(k in row for k in keys):
+                continue
+            totals = [sum(dist(keys[i], keys[j]) for j in range(4) if j != i) for i in range(4)]
+            hit = keys[totals.index(max(totals))] == answer
+            n += 1
+            far_hit += hit
+            cell = per[item["family"]]
+            cell[0] += 1
+            cell[1] += hit
+        if not n:
+            continue
+        gain = far_hit / n - 0.25
+        if abs(gain) > abs(worst_gain):
+            skew = max(per.items(), key=lambda kv: abs(kv[1][1] / kv[1][0] - 0.25))
+            worst_gain = gain
+            detail = (f"{run}：永远选最远的那张多拿 {gain:+.1%}"
+                      f"（{far_hit}/{n}）；最偏的族 {skew[0]} "
+                      f"{skew[1][1] / skew[1][0]:.1%}")
+    # 判据：白送 ≥5 个百分点才算捷径。修复前是 +28pp，修复后 +2.2pp。
+    rep.add("图选项：答案是不是离群的那个", detail or "无图选项题",
+            0.0, ok=(abs(worst_gain) < 0.05))
+
+
 def note_answer_frequency(rep: Report) -> None:
     """某个动作特别容易当答案 —— **只报不判**。
 
@@ -291,6 +360,7 @@ def main() -> int:
     check_side_balance(rep)
     check_borrowed_clash(rep)
     check_image_size(rep)
+    check_image_outlier(rep)
     note_answer_frequency(rep)
     return rep.render()
 
