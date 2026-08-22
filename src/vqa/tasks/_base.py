@@ -253,8 +253,13 @@ def other_blocks(item_id: str, segments: list[dict[str, Any]], i: int,
 
 def build_options(item_id: str, answer: str, actions: list[str],
                   borrowable: list[str]) -> tuple[list[str], dict[str, int]]:
-    """选出 3 条干扰项，凑成统一的四选一。**这是选项构造的唯一实现** ——
-    `blind.py` 直接导入它，两边不可能分叉。
+    """选出 3 条干扰项，凑成统一的四选一。**出题时这是唯一的实现。**
+
+    ⚠ `blind.py` 并不 import 本函数 —— 它的 `options_as_built` 读的是
+    `plan.json` 里已经构造好的产物（那条确实不会分叉），而它的
+    `options_cross` / `options_four` / `options_pool` 是本地重写的
+    **候选方案模拟器**，与这里的轮转盐和可借池都不同。
+    别把「盲基线跑过了」当成「这个函数被覆盖了」。
 
     取用顺序：本族其它真实动作 → 别族的真实动作。两者都按 `md5(题目id)` 轮转，
     并优先取词数与答案接近的（防「最长的那个是对的」）。

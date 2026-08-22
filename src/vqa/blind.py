@@ -2,8 +2,9 @@
 # coding: utf-8
 """⑤ 验题第一步：盲基线 —— 不给视频，只给题干和选项，看模型能答对多少。
 
-    python3 src/vqa/blind.py --n 20                 # 每族每题型抽 20 道
-    python3 src/vqa/blind.py --n 20 --policy both   # 现状与策略③ 两套对照
+    python3 src/vqa/blind.py --n 20                       # 测题库现状（默认）
+    python3 src/vqa/blind.py --n 20 --policy cross,four   # 加测两个候选策略
+    python3 src/vqa/blind.py --n 20 --policy all          # 全部 6 个策略（6 倍请求）
 
 **这是判断「题目泄没泄」的唯一硬判据。** 超过 `1 / 选项数` 多少，题就泄了多少。
 
@@ -29,8 +30,10 @@
 
 不测 time
 ---------
-time 是开放作答，而「多少算答对」的容差目前没有定义（属 ⑥）。
-判据没定死之前测出来的数不可比，**所以这里显式不测，而不是随便设一个容差**。
+time 是开放作答。判据现在有了 —— `docs/disclosures.md` §10 定的 `tIoU@0.5`，
+但**盲基线对它没有意义**：不给视频就报一个时间区间，报什么都是瞎猜，
+而「整段视频都报」这个退化解已经能拿 mean_tIoU 0.13（见 `tasks/__init__.py`
+的 `DEGENERATE_FLOOR`）。要测的是那条退化下限，不是模型的先验。
 """
 
 from __future__ import annotations
@@ -63,8 +66,18 @@ def digest(text: str, n: int) -> int:
 def options_as_built(item: dict[str, Any], _actions: list[str]) -> list[str]:
     """题库里实际存的那一套 —— 测的就是真正会发给模型的题。
 
-    选项构造的实现在 `plan.py:build_options`，这里只读它的产物；
-    需要模拟别的策略时也从那里导入，**两边不可能分叉**。
+    选项构造的实现在 `tasks/_base.py:build_options`，这一条只读它的产物 ——
+    **只有这一条不会分叉。**
+
+    ⚠ 本文件其余策略（`options_cross` / `options_four` / `options_pool`）是
+    本地重写，**已经分叉**，别照着注释以为它们等价于出题时的逻辑：
+
+      · 轮转盐：`_base` 用 `md5(f"{item_id}|in")` / `|out`，这里用
+        `md5(id)` / `md5(id + "|x")`
+      · 可借池：`_base` 是去重排序后的集合，这里是含重复、未排序的列表
+
+    它们本来就是**候选方案**的模拟器，不是现状的复刻 —— 分叉是设计意图，
+    但当初的注释把它写成了「不可能分叉」。收敛计划见 cleanup_checklist §4.5。
     """
     return [item["answer_text"], *item["distractors"]]
 
@@ -197,17 +210,27 @@ def main() -> int:
         return sys.argv[sys.argv.index(name) + 1] if name in sys.argv else default
 
     per_cell = int(arg("--n", "20"))
-    which = arg("--policy", "both")
+    # **默认只测 as_built，也就是题库里真正会发给模型的那一套。**
+    # 曾经默认 `both`，而 `both` 走的是 `list(POLICIES)` —— 6 个策略全跑，
+    # 裸跑一次 `--n 20` 就是 6 倍 API 请求，且其中 5 套是没在用的候选方案。
+    which = arg("--policy", "as_built")
     # 限定题型：加测某一个题型时不必把别的也重跑一遍
     only = set(arg("--tasks", ",".join(TASKS)).split(","))
     by_text = "--by-text" in sys.argv
-    policies = list(POLICIES) if which == "both" else [which]
+    policies = list(POLICIES) if which == "all" else which.split(",")
+    unknown = [p for p in policies if p not in POLICIES]
+    if unknown:
+        print(f"❌ 未知策略 {unknown}，可选：{', '.join(POLICIES)} 或 all")
+        return 1
 
     plan = json.loads((BUILD / "plan.json").read_text(encoding="utf-8"))
     vocab = json.loads((BUILD / "vocab.json").read_text(encoding="utf-8"))["families"]
     actions = {f: [s["text"] for s in v["subtasks"]] for f, v in vocab.items()}
+    # v3 只有 `pool` 策略用得上，而 `pool` 已不是在用的方案。无条件加载的话，
+    # 哪天 `llm_cache/v3/` 归档掉，连测 as_built 都会启动即崩。
     pools = {f: json.loads((ROOT / "data" / "llm_cache" / "v3" / f"{f}.json")
-                           .read_text(encoding="utf-8"))["pool"] for f in vocab}
+                           .read_text(encoding="utf-8"))["pool"] for f in vocab} \
+        if "pool" in policies else {}
     objects = {f: {s["object"] for s in v["subtasks"] if s["object"]}
                for f, v in vocab.items()}
     every = [(s["object"], s["text"]) for v in vocab.values() for s in v["subtasks"]]
