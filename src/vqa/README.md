@@ -2,10 +2,10 @@
 
 出题工具。读 `data/{raw,label}`，产出 `build/` 的中间件与 `data/vqa/`。
 
-**配方跟着代码走 git**，不是外部配置：`plan.py` 的 `RECIPE_VERSION`
+**配方跟着代码走 git**，不是外部配置：`tasks/_base.py` 的 `RECIPE_VERSION`
 与那一批常量（`DISTRACTORS_PER_QUESTION`、`IV_MIN_SEGMENT_GAP` 等）
 就是配方本身，改它要和代码一起 review。
-（曾计划做成 `recipes/<family>.json`，没有实现，这里的说法一并更正。）
+（曾计划做成 `recipes/<family>.json`，**没有实现**，空目录已于 D-10 删除。）
 
 **出题是确定性的**：选项打乱用 `md5(item_id|text)` 排序，无 `random`，
 `step_order_seed` 固定。同样输入必得同样输出。

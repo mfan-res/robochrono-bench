@@ -70,13 +70,22 @@ A-3（退化基线闸门）也已修完 —— 这一轮的报表会自己标出
 
 - [ ] **D-7 · 完整 v1 数据（61 GB）能不能进 CI？**（决定 2.4）
 
-- [ ] **D-8 · `build/blind_*.json` 的 10 份变体，哪几份是论文/报告要引用的证据？**（决定 3.3）
+- [x] ~~**D-8 · `build/blind_*.json` 的 10 份变体，哪几份是论文/报告要引用的证据？**~~
+      —— 2026-08-23 定：**选项 A**。判据不是文件名（`final` / `ship` 这两个名字骗过人），
+      是**选项集还和现题库对不对得上**。只有 `blind_final2` 是 100%，
+      改名 `build/blind_baseline.json` 留在 git 并由 `disclosures.md` 开头点名引用；
+      其余 9 份移入 `results/archive/blind/`（附 README 记录各自对应哪条决策）。
+      **`blind_ship` + `blind_after_plates` 是一对，别单删** —— D-47
+      「出题每次都不一样」就是靠这两轮的 understanding 24.6% → 30.7% 发现的。
 
 - [ ] **D-9 · `REFACTOR_PLAN.md` 在哪？** 三处引用它，全仓库不存在：
       `src/eval/docs/dataset_structure.md:312`、`src/eval/robochrono/parsing.py:17`、
       `src/eval/configs/config_smoke.json:8`。
 
-- [ ] **D-10 · `src/vqa/recipes/` 是已废弃的设计，还是还没建？**（决定 1.7）
+- [x] ~~**D-10 · `src/vqa/recipes/` 是已废弃的设计，还是还没建？**~~
+      —— 2026-08-23 定：**已废弃**。`git log --all -- src/vqa/recipes/` 为空，
+      从未提交过任何文件；空目录未被跟踪。**选项 A**：删目录，
+      配方继续以 `tasks/_base.py` 的 `RECIPE_VERSION` + 常量的形式跟代码走 review。
 
 - [x] ~~**D-15 · `time` 的分批策略选哪个？**~~ —— 已选**方案②（全局一题一问）**，
       2026-08-21 落地。依据：口径统一优先于省 13% 机时；
@@ -670,12 +679,13 @@ gift_inhand     0/90               5/8
   `docs/vqa/` 那四条统一指向 `src/eval/docs/`（canonical，其内部链接完整）。
 - **建议顺带**：把 §8 的检查加进 `src/eval/tests/run_all.py`。
 
-### 1.7 ✅ **已修**（2026-08-21）· 非链接式失效引用
+### 1.7 ✅ **已修**（2026-08-21 / 补完 08-23）· 非链接式失效引用
 
-**本轮复核：`src/vqa/README.md` 加了 14 行讲新步骤，但 `recipes/` 那两句原样留着。**
-
-- [ ] `src/vqa/README.md:3` — `读 data/{raw,label,llm_cache} + recipes/` → 目录不存在
-- [ ] `src/vqa/README.md:5` — `recipes/<family>.json 跟代码走 git` → 同上（见 **D-10**）
+- [x] ~~`src/vqa/README.md:3` — `读 data/{raw,label,llm_cache} + recipes/`~~
+- [x] ~~`src/vqa/README.md:5` — `recipes/<family>.json 跟代码走 git`~~
+      —— 复核发现这两条**在写下时就已经是陈旧的**：README 早已改成
+      「曾计划做成 `recipes/<family>.json`，没有实现」。08-23 随 D-10 收尾，
+      并把 `RECIPE_VERSION` 的位置从 `plan.py` 更正为 `tasks/_base.py`（已随重构移动）。
 - [ ] `src/vqa/README.md:10` — 「唯一的非确定性是 LLM 干扰项，已冻结在 `data/llm_cache/`」
       → 干扰项自 D-38 起只用真实标签（`plan.py` 的 `main()` 里有注释说明），已失效
 - [ ] `data/README.md:10` — `由上面三样 + src/vqa/recipes 确定性地产出` → 同上
@@ -916,7 +926,10 @@ fps 自洽      元表写 fps=30，视频实际 25.00（2484 帧 / 99.36s）
   blind_after_plates  blind_cross  blind_final  blind_final2  blind_four
   blind_four_text  blind_n57  blind_ship  blind_three  blind_v4
   ```
-- **改成**：移入 `build/archive/blind/` 并加 `INDEX.md` 说明每份对应 DEVLOG 哪条决策。
+- [x] ~~**改成**：移入 `build/archive/blind/` 并加 `INDEX.md`~~ —— 2026-08-23 落地，
+      但**位置改到 `results/archive/blind/`**：`build/` 名义上是可再生产物目录，
+      这批恰恰不可再生，放 `build/` 本身就是错位。索引写成了 `README.md`
+      （与 `results/` 现有惯例一致），含一段可执行的「哪份还是活的」判据脚本。
 - **⚠ 不要只靠 Git 历史** —— 没有索引等于找不回。它们是不可再生的 LLM 输出。
 - 🆕 **本轮相关**：`build/blind_v2/` 已被 `.gitignore` 排除，并由
   `src/vqa/blind_image.py` 机械导出（脚本才是可复现的那一份）—— **这是正确的做法**。
