@@ -73,7 +73,8 @@ ALLOWED_SEGMENT_KEYS = {"id", "subtask", "start_frame", "end_frame",
 # ✗ = 必须修；⚠ = 待人判断。「序列」是 ✗ —— 动作讲不通只有两种可能：
 # 标错了物体，或者漏标了一段，两种都要改数据。
 SEVERITY = {"污染": "✗", "覆盖": "⚠", "歧义": "⚠", "重叠": "✗",
-            "派生": "✗", "引用": "✗", "序列": "✗", "可疑": "⚠", "结构": "✗"}
+            "派生": "✗", "引用": "✗", "序列": "✗", "可疑": "⚠", "结构": "✗",
+            "视频": "⚠"}
 
 BLOCKING = {k for k, v in SEVERITY.items() if v == "✗"}
 
@@ -83,6 +84,16 @@ DROP = {"put", "place", "put down"}
 PREPS = {"with", "in", "on", "into", "onto", "to", "from", "at"}
 
 SCHEMA_PATH = Path(__file__).resolve().parents[1] / "common" / "schemas" / "segments.json"
+
+# 「视频」这条要探真实文件，默认不跑 —— 六族 249 集要 498 次 ffprobe。
+# 判据来自 v1 的 `migrate/check_labels.py`：那个脚本读的 `narration` 字段
+# 早已不存在（输出是假发现），但它**探真实视频**的三条检查此前没有替代者，
+# 而「元表声称的 fps 与视频实际 fps 是否一致」正是当年发现 tea2 问题的那类检查。
+# 删它之前先把这三条搬过来 —— 顺序不能反。
+FPS_TOLERANCE = 0.5          # 帧率误差超过这个值就报。整数帧率相差 1 都是硬错
+FRAME_SLACK = 2              # 帧号越界允许 2 帧：末帧取整与解码器计数常差 1–2
+COVERAGE_FLOOR = 0.10        # 标注跨度占视频比例的下限。airpods 实测 19% 是真实的
+                             # 「动作稀疏」，不是漏标；低于 10% 才值得看一眼
 
 
 @dataclass
@@ -120,6 +131,67 @@ def check_schema(document: dict[str, Any]) -> list[Finding]:
     for error in sorted(validator.iter_errors(document), key=lambda e: list(e.path))[:8]:
         where = "/".join(str(x) for x in error.path) or "(根)"
         out.append(Finding("结构", f"{where}: {error.message[:120]}"))
+    return out
+
+
+def probe_video(path: Path) -> tuple[float, int]:
+    """用 ffprobe 量真实时长与帧数。取不到返回 (0, 0)，由调用方决定怎么办。"""
+    import subprocess
+
+    def ask(args: list[str]) -> str:
+        try:
+            return subprocess.run(args, capture_output=True, text=True, timeout=120).stdout.strip()
+        except (OSError, subprocess.SubprocessError):
+            return ""
+
+    duration = ask(["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                    "-of", "csv=p=0", str(path)])
+    frames = ask(["ffprobe", "-v", "error", "-select_streams", "v:0", "-count_frames",
+                  "-show_entries", "stream=nb_read_frames", "-of", "csv=p=0", str(path)])
+    try:
+        return float(duration), int(frames)
+    except ValueError:
+        return 0.0, 0
+
+
+def check_against_video(document: dict[str, Any], video: Path) -> list[Finding]:
+    """把标注与**真实视频文件**对一遍。三条，全部来自 v1 的 check_labels.py。
+
+    这三条 `check_document` 做不了 —— 它只看文档，而这里问的是
+    「文档里写的 fps / 帧号 / 跨度，跟盘上那个视频对不对得上」。
+
+    ⚠ 它与「派生」不同：「派生」核的是 `start` 与 `start_frame` **内部自洽**，
+    这里核的是**元表声称的 fps 与视频实际 fps 一致** —— 元表整个错了的话，
+    内部再自洽也没用。tea2 当年就是这么漏过去的。
+    """
+    out: list[Finding] = []
+    if not video.exists():
+        return [Finding("视频", f"找不到 {video}")]
+    duration, frames = probe_video(video)
+    if not duration or not frames:
+        return [Finding("视频", f"ffprobe 读不出 {video.name}（没装 ffprobe？）")]
+
+    segments = document.get("segments") or []
+    if not segments:
+        return out
+
+    real_fps = frames / duration
+    declared = (document.get("source") or {}).get("fps")
+    if declared and abs(float(declared) - real_fps) > FPS_TOLERANCE:
+        out.append(Finding("视频", f"元表写 fps={declared}，视频实际 "
+                                   f"{real_fps:.2f}（{frames} 帧 / {duration:.2f}s）"))
+
+    over = [s for s in segments if (s.get("end_frame") or 0) > frames + FRAME_SLACK]
+    if over:
+        out.append(Finding("视频", f"{len(over)} 段的 end_frame 超出视频总帧数 {frames}"
+                                   f"（最大 {max(s['end_frame'] for s in over)}）"))
+
+    starts = [float(s.get("start", 0)) for s in segments]
+    ends = [float(s.get("end", 0)) for s in segments]
+    coverage = (max(ends) - min(starts)) / duration if duration else 0
+    if coverage < COVERAGE_FLOOR:
+        out.append(Finding("视频", f"标注跨度只占视频 {coverage:.0%}"
+                                   f"（{max(ends) - min(starts):.1f}s / {duration:.1f}s）"))
     return out
 
 

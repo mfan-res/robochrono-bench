@@ -4,6 +4,7 @@
 
     python3 src/label/validate.py            # 全部族
     python3 src/label/validate.py wash tea   # 只看某几族
+    python3 src/label/validate.py --probe-video   # 额外与真实视频对一遍（慢）
 
 一套判据，两处使用
 ------------------
@@ -34,8 +35,9 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[2]
 LABEL = ROOT / "data" / "label"
 RAW = ROOT / "data" / "raw"
+SOURCE = ROOT / "data" / "source"
 
-from checks import SEVERITY, check_document  # noqa: E402
+from checks import SEVERITY, check_against_video, check_document  # noqa: E402
 
 # `episode_bounds` 只有一份实现，在 `src/vqa/index.py`。
 # **这里曾经自己抄了一份**，于是那份里的两个 bug（只读第一个 parquet、
@@ -62,8 +64,11 @@ class Report:
         self.findings.append(Finding(kind, family, episode, detail))
 
 
-def check_family(family: str, report: Report) -> None:
-    """遍历一个族的所有标注文件。**判据不在这里** —— 见 checks.check_document。"""
+def check_family(family: str, report: Report, probe: bool = False) -> None:
+    """遍历一个族的所有标注文件。**判据不在这里** —— 见 checks.check_document。
+
+    ``probe=True`` 时额外把标注与**真实视频**对一遍（要 ffprobe，六族约 498 次调用）。
+    """
     base = LABEL / family
     # 缺 subtasks.json 说明这个目录不是一个成形的族（例如刚删了一半）。
     # **报告，不崩溃** —— 崩溃会让其余六族的检查结果一起拿不到。
@@ -85,18 +90,23 @@ def check_family(family: str, report: Report) -> None:
         found, sub = check_document(document, subtasks=subtasks, texts=texts,
                                     fps=fps, bounds=bounds.get(episode))
         counts.update(sub)
+        if probe:
+            video = SOURCE / family / episode / "main.mp4"
+            found += check_against_video(document, video)
         for f in found:
             report.add(f.kind, family, episode, f.detail)
     report.stats[family] = dict(counts)
 
 
 def main() -> int:
-    only = sys.argv[1:]
+    argv = [a for a in sys.argv[1:] if a != "--probe-video"]
+    probe = "--probe-video" in sys.argv
+    only = argv
     families = sorted(p.name for p in LABEL.iterdir()
                       if p.is_dir() and (not only or p.name in only))
     report = Report()
     for family in families:
-        check_family(family, report)
+        check_family(family, report, probe=probe)
 
     print(f"{'族':<13}{'段数':>6}{'污染文件':>9}{'帧重叠':>8}{'派生不符':>9}"
           f"{'打包视频':>9}{'漏标集':>8}{'歧义':>6}{'可疑':>6}")
@@ -115,7 +125,7 @@ def main() -> int:
         print("八类检查全部通过")
         return 0
     print(f"\n共 {len(report.findings)} 条发现：{dict(by_kind)}\n")
-    for kind in ("污染", "引用", "派生", "重叠", "覆盖", "序列", "歧义", "可疑"):
+    for kind in ("污染", "引用", "派生", "重叠", "覆盖", "序列", "歧义", "可疑", "结构", "视频"):
         items = [f for f in report.findings if f.kind == kind]
         if not items:
             continue

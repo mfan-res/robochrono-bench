@@ -27,3 +27,24 @@ answer_text      pick the airpods case
 不保证能直接用于重新生成。** 要用之前必须先确认这一点。
 
 原始的 8 份（gift_inhand / pen_inbox / tea / wash）不受影响。
+
+## 已删：`check_labels.py`（2026-08-23）
+
+v1 的标注核验脚本。它读的 `narration` 字段在 D-04（段里改存 subtask id）之后
+就不存在了 —— 后果不是归零而是**假发现**：`dup` 恒为最大值，
+「重复动作」一栏对每一集报满。
+
+删之前先把它**独有的三条**移植进了 `src/label/checks.py::check_against_video`
+（走 `validate.py --probe-video`）：
+
+```
+fps 自洽      元表声称的 fps 与 ffprobe 量出的实际值是否一致
+帧号越界      end_frame 是否超出视频总帧数
+跨度覆盖率    标注跨度占视频的比例
+```
+
+**顺序不能反。** 这三条与 `validate.py` 的「派生」不同：那条核的是
+`start` 与 `start_frame` **内部自洽**，而这三条核的是**元表与盘上的文件
+对不对得上** —— 元表整个错了的话，内部再自洽也没用。tea2 当年就是这么漏过去的。
+
+回归：`src/label/tests/test_checks.py` 第四节。

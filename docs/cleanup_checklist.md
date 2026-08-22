@@ -880,24 +880,26 @@ glob 是 `test_*.py`，匹配不到；`git grep smoke_v2` 全仓库仍零命中�
 
 **依赖**：3.1 需要移植验证；其余依赖批次 1。
 
-### 3.1 · `check_labels.py`：先移植，再删
+### 3.1 ✅ **已修**（2026-08-23）· `check_labels.py` 先移植，再删
 
-**本轮复核：未动，全部仍成立。**
+- [x] **先移植**：三条探真实视频的检查搬进 `checks.check_against_video`，
+      走 `validate.py --probe-video`（默认关 —— 六族 249 集要 498 次 ffprobe）：
+```
+fps 自洽      元表写 fps=30，视频实际 25.00（2484 帧 / 99.36s）
+帧号越界      1 段的 end_frame 超出视频总帧数 2484
+跨度覆盖率    标注跨度只占视频 4%（4.1s / 99.4s）
+```
+      逐条造违规验证过会报，当前数据真的通过（不是跳过）。
+- [x] **再删** `src/migrate/check_labels.py`。它读的 `narration` 早已不存在，
+      后果不是归零而是**假发现**（`dup` 恒为最大值，对每一集报满）。
+- [x] 回归进 `test_checks.py` 第四节；`src/migrate/README.md` 记了来龙去脉。
 
-- [ ] **位置**：`src/migrate/check_labels.py:130`
-- **现状**：读 `narration`，而当前数据只有 `subtask`。后果不是归零而是
-  **`dup` 恒为 `len(segments) - 1`** —— 「重复动作」一栏对每一集报满，产生假发现。
-- **⚠ 但它不是被完全取代**。它有 `validate.py` 没有的能力（`:45 duration()` / `:54 frame_count()`
-  用 **ffprobe 探真实视频**）：
-  1. 隐含 fps 与实际 fps 一致性　2. 帧号越界　3. 覆盖率 = 跨度 / 真实时长　4. gap / shortest / inverted
+**与「派生」的区别**（这是它值得移植的理由）：「派生」核的是 `start` 与
+`start_frame` **内部自洽**；这三条核的是**元表与盘上的文件对不对得上**。
+元表整个错了的话，内部再自洽也没用 —— **tea2 当年就是这么漏过去的**。
 
-  `src/label/validate.py` **完全不探视频**，fps 来自 `data/raw/<族>/meta.json`。
-  「元数据声称的 fps 与视频实际 fps 是否一致」**目前没有替代者**。
-- **改成（按顺序）**：
-  - [ ] ① ffprobe 类检查移植进 `validate.py --probe-video`（默认关，要跑 249 次 ffprobe）
-  - [ ] ② 跑通后再删 `check_labels.py`
-  - [ ] ③ 若暂不移植：文件头加 `⚠ 读 narration，当前数据已改为 subtask，输出不可信，勿用`
-- **怎么验**：`python3 src/label/validate.py` 应仍为**零条**。
+**阈值有依据，不是拍的**：`COVERAGE_FLOOR = 0.10` —— airpods 实测 19% 是真实的
+「动作稀疏」（段长占视频 19%、段间空隙 6.2 秒），不是漏标，所以下限取 10%。
 
 ### 3.2 · 归档已退场的干扰项生成器
 

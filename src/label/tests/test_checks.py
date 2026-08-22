@@ -173,6 +173,43 @@ def check_schema_enforced() -> list[str]:
     return bad
 
 
+def check_video_probe() -> list[str]:
+    """与真实视频对一遍的那三条（`--probe-video`）。
+
+    **这三条是从 v1 的 `migrate/check_labels.py` 移植过来的**，
+    移植完那个脚本才被删掉 —— 它读的 `narration` 字段早已不存在（输出是假发现），
+    但它探真实视频的能力此前没有替代者，而
+    「元表声称的 fps 与视频实际 fps 是否一致」正是当年发现 tea2 问题的那类检查。
+
+    与「派生」的区别：那条核的是 `start` 与 `start_frame` **内部自洽**；
+    这里核的是**元表与盘上的文件对不对得上**。元表整个错了的话，内部再自洽也没用。
+    """
+    from checks import check_against_video, probe_video
+    video = ROOT / "data" / "source" / "wash" / "file-000" / "main.mp4"
+    if not video.exists():
+        return []          # 没有 data/source 就跳过，不算失败
+    if probe_video(video) == (0.0, 0):
+        return []          # 没装 ffprobe，同上
+
+    bad: list[str] = []
+    src = REAL / "wash" / "segments" / "file-000_segments.json"
+    doc = json.loads(src.read_text(encoding="utf-8"))
+    if check_against_video(doc, video):
+        bad.append(f"当前数据本该通过：{[f.detail for f in check_against_video(doc, video)]}")
+
+    cases = [
+        ("fps 与实际不符", lambda d: d["source"].__setitem__("fps", 30)),
+        ("帧号越界", lambda d: d["segments"][-1].__setitem__("end_frame", 999999)),
+        ("标注跨度过低", lambda d: d.__setitem__("segments", d["segments"][:1])),
+    ]
+    for label, mutate in cases:
+        broken = json.loads(json.dumps(doc))
+        mutate(broken)
+        if not check_against_video(broken, video):
+            bad.append(f"没抓到「{label}」")
+    return bad
+
+
 def check_online_parity() -> list[str]:
     """在线版（serve.review）与离线版必须给出同一批发现。
 
@@ -247,7 +284,16 @@ def main() -> int:
     failures += bool(bad)
 
     print()
-    print("四 · 在线版（serve.review）与离线版共用同一份判据")
+    print("四 · 与真实视频对一遍（--probe-video，从 v1 的 check_labels.py 移植）")
+    print("-" * 74)
+    bad = check_video_probe()
+    print(f"{'✓ fps 自洽 / 帧号越界 / 跨度覆盖率' if not bad else '✗ 视频核对失效'}")
+    for line in bad:
+        print(f"    {line}")
+    failures += bool(bad)
+
+    print()
+    print("五 · 在线版（serve.review）与离线版共用同一份判据")
     print("-" * 74)
     bad = check_online_parity()
     print(f"{'✓ 在线版拦得下污染与引用' if not bad else '✗ 在线版与离线版不一致'}")
