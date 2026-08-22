@@ -46,6 +46,97 @@ LABEL = ROOT / "data" / "label"
 DECLARED_B01 = {"tea2"}
 DECLARED_B02 = {"express"}
 
+# P-05：wash 的两个盘子加相对位置。**这是链路 A 上唯一一处声明过的差异。**
+#
+# 起因：同一集里 `pick_plate` 出现两次，「什么时候拿的盘子」真值不唯一 ——
+# 时间类题目直接不可用。解法是按相对位置拆开，`subtasks.json` 自己写着规则：
+#
+#   pick/wipe/put_plate 各拆成 left/right/far/near 四个。38 集机位一致、
+#   盘子左右并排，用 left/right；file-000 与 file-001 机位不同、盘子前后排，
+#   用 far/near。哪个先拿由抽帧确认，见 corrections.json。
+#
+# 于是 ID 还原不回原文：`wipe_far_plate_with_rag` → "Wipe the far plate with rag."，
+# 而迁移前的 narration 是 " Wipe the plate with rag."。
+# **这不是重写改坏了语义，是我们主动改了语义**，依据在 corrections.json。
+#
+# **声明的是规则不是清单** —— 枚举 id 的话，将来再拆一个动作就又红了，
+# 而那时人多半会去放宽判据而不是补声明。
+#
+# ⚠ **不要因为这里红了就放宽判据。** 这个测试的设计意图是
+# 「重写不得改变语义，除非声明」—— 声明才是正解，放宽等于把它变成摆设。
+PLATE_SIDES = ("left", "right", "far", "near")
+
+
+def corrected_ids(family: str) -> dict[str, str]:
+    """从 ``corrections.json`` 读出「这一段的标签被人工改过」。
+
+    **声明绑到依据文件，不硬编码。** 这样以后再修一处标注，
+    只要按流程写进 corrections.json，这个测试自动认它 ——
+    而随手改数据不写依据的，仍然会红。这正是我们想要的那条线。
+
+    wash 现有两处（由 `validate.py` 第七条「序列」检查发现）：
+        file-009@f001134  wipe_bowl_with_brush → wipe_plate_with_rag
+        file-009@f001303  put_bowl             → put_plate
+    依据：抽帧确认机械臂拿着蓝盘子用粉抹布擦、并把盘子放进沥水架，
+    两段标错了物体。**时间边界一字未动。**
+    """
+    path = LABEL / family / "corrections.json"
+    if not path.exists():
+        return {}
+    out: dict[str, str] = {}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    for entry in data.get("corrections", []):
+        for item in entry.get("items", []):
+            for change in item.get("changes", []):
+                if change.get("id") and change.get("to"):
+                    out[change["id"]] = change["to"]
+    return out
+
+
+def declared_a(family: str, subtask: str, narration: str, table: dict[str, str],
+               corrected_to: str | None = None) -> bool:
+    """这处链路 A 的差异是不是**声明过的**改动造成的。
+
+    两次改动会**叠加**，所以要串起来判。wash 的实际链路是：
+
+        wipe_bowl_with_brush  ──序列修正──▶ wipe_plate_with_rag
+                              ──P-05────▶ wipe_left_plate_with_rag
+
+    于是先用 corrections.json 把「期望的原文」换成修正后的那条，
+    再套 P-05 的相对位置规则。任何一环没声明过，仍然会红。
+
+    P-05 的判据是**去掉相对位置词之后逐字还原** —— 这样既承认那次拆分，
+    又不放过「顺手改了别的措辞」：把 "Wipe the far plate with rag." 写成
+    "Wipe far plate with the rag." 照样红。
+    """
+    text = table.get(subtask)
+    if not text:
+        return False
+
+    # ① 人工修正过的标签（依据在 corrections.json）
+    if corrected_to:
+        # ⚠ 修正目标可能是**中间态**：wash 的 `wipe_plate_with_rag` 先由「序列」
+        # 检查修出来，随后又被 P-05 拆成 left/right/far/near，于是它已不在词表里
+        # （`table.get` 返回 None）。所以按 **id 结构**串联，不查中间态的文字。
+        if subtask == corrected_to:
+            return True
+        for side in PLATE_SIDES:
+            # put_plate → put_left_plate；wipe_plate_with_rag → wipe_left_plate_with_rag
+            if subtask == corrected_to.replace("_plate", f"_{side}_plate", 1):
+                return True
+        return False
+
+    # ② P-05 的相对位置拆分（只有 wash 有）。
+    # 判据是**去掉位置词后逐字还原** —— 既承认那次拆分，又不放过顺手改的措辞：
+    # 把 "Wipe the far plate with rag." 写成 "Wipe far plate with the rag." 照样红。
+    if family != "wash":
+        return False
+    expected = narration.strip()
+    for side in PLATE_SIDES:
+        if f"{side} " in text and text.replace(f"{side} ", "", 1) == expected:
+            return True
+    return False
+
 
 def load(path: Path) -> list[dict]:
     return json.loads(path.read_text(encoding="utf-8"))["segments"]
@@ -65,6 +156,8 @@ def check_family(family: str) -> dict[str, object]:
     derived = {c: describe(c, verbs) for c in categories}
     # narration（去空格）→ 词表条目，用于把旧段反查回它来自哪条类别
     by_narration = {nar.strip(): cat for cat, (_, _, nar) in derived.items()}
+
+    corrected = corrected_ids(family)
 
     counts: Counter[str] = Counter()
     samples: dict[str, str] = {}
@@ -86,6 +179,9 @@ def check_family(family: str) -> dict[str, object]:
             # 链路 A：ID 能否还原原始 narration
             if table.get(new["subtask"]) == old["narration"].strip():
                 counts["A_ok"] += 1
+            elif declared_a(family, new["subtask"], old["narration"], table,
+                            corrected.get(new["id"])):
+                counts["A_declared"] += 1
             else:
                 counts["A_bad"] += 1
                 samples.setdefault("A", f"{new['subtask']} → {table.get(new['subtask'])!r}"
@@ -118,7 +214,7 @@ def check_family(family: str) -> dict[str, object]:
 
 def main() -> int:
     families = sorted(p.name for p in LABEL.iterdir() if p.is_dir())
-    print(f"{'族':<13}{'段数':>6}{'A 还原':>8}{'C 时间轴':>9}{'B 派生':>8}"
+    print(f"{'族':<13}{'段数':>6}{'A 还原':>8}{'A 声明':>8}{'C 时间轴':>9}{'B 派生':>8}"
           f"{'B 声明差异':>11}{'B 无对应':>9}  status")
     print("-" * 78)
     failures = 0
@@ -133,7 +229,7 @@ def main() -> int:
         note = "OK" if bad == 0 else f"**{bad} 处未声明差异**"
         if c["restored_skipped"]:
             note += f"（{c['restored_skipped']} 集因还原跳过）"
-        print(f"{family:<13}{c['total']:>6}{c['A_ok']:>8}{c['C_ok']:>9}{c['B_ok']:>8}"
+        print(f"{family:<13}{c['total']:>6}{c['A_ok']:>8}{c['A_declared']:>8}{c['C_ok']:>9}{c['B_ok']:>8}"
               f"{c['B_declared']:>11}{c['B_unmatched']:>9}  {note}")
         for kind, text in report["samples"].items():             # type: ignore[union-attr]
             print(f"      [{kind}] {text}")
