@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # coding: utf-8
-"""④ 出题第七步：把 `items.jsonl` 投影成评测端能吃的形状。
+"""④ 出题第 7 步：把 `items.jsonl` 投影成评测端能吃的形状。
 
     python3 src/vqa/pack.py            # 投影并校验，不写盘
     python3 src/vqa/pack.py --write    # 写 data/vqa/eval/

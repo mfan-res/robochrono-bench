@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 # coding: utf-8
-"""④ 出题第四步：抽出候选帧池，并量出「什么叫画面上分得开」。
+"""④ 出题第 3 步：抽出候选帧池，并量出「什么叫画面上分得开」。
+
+> **编号说明**：这一步是后加的（图选项题型需要帧池），插进来时沿用了
+> `plan.py` 的「第四步」，于是一段时间里**两个文件都自称第四步**。
+> 现已重编号为 1–7。原本的「第三步」是 `distract.py` / `pool.py`
+> 两代 LLM 干扰项生成器，自 D-38 起干扰项改为一律取自真实标签，它们已退场
+> （留档见 `data/llm_cache/README.md`），编号由本步接替。
 
     python3 src/vqa/frames.py             # 只统计，不抽
     python3 src/vqa/frames.py --write     # 抽帧 + 写 build/frames.{json,npy}

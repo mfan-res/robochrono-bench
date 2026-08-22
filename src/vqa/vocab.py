@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # coding: utf-8
-"""④ 出题第二步：把 subtask 展开成出题需要的各种形态。
+"""④ 出题第 2 步：把 subtask 展开成出题需要的各种形态。
 
     python3 src/vqa/vocab.py            # 打印词表并核对
     python3 src/vqa/vocab.py --write    # 同时写 build/vocab.json

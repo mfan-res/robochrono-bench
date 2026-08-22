@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # coding: utf-8
-"""④ 出题第四步：决定出哪些题，以及每道题要什么素材。
+"""④ 出题第 4 步：决定出哪些题，以及每道题要什么素材。
 
     python3 src/vqa/plan.py                  # 打印题量与素材统计
     python3 src/vqa/plan.py --write          # 写 build/plan.json
@@ -356,10 +356,58 @@ def build_options(item_id: str, answer: str, actions: list[str],
     outside = sorted(rotate([a for a in borrowable if a != answer], "out"),
                      key=lambda t: abs(len(normalize(t).split()) - n))
 
-    chosen = (inside + outside)[:DISTRACTORS_PER_QUESTION]
+    # **自己去重，不指望调用方。** 生产上 `borrowable` 是 `set(别族) - set(本族)`
+    # 算出来的，天然不与 inside 重叠，所以这一步当前是恒等的（指纹不变）。
+    # 但它是个上了膛的坑：谁把 borrowable 的构造改成不减本族，
+    # 四选一就会**静默变成三选一**，而随机基线仍按 25% 报、盲测结论跟着失效。
+    # 选项数是这套题的地基，不该依赖上游某处的减法还在。
+    pool: list[str] = []
+    for text in inside + outside:
+        if text not in pool:
+            pool.append(text)
+    chosen = pool[:DISTRACTORS_PER_QUESTION]
     within = set(actions)
     return chosen, {"in_family": sum(c in within for c in chosen),
                     "borrowed": sum(c not in within for c in chosen)}
+
+
+def fingerprint(items: list[dict[str, Any]]) -> str:
+    """一批题的内容指纹。**必须覆盖每个题型真正的「答案与选项」。**
+
+    此前它只算 ``[id, answer_text, *distractors]`` —— 那是文字选项题的形状。
+    图选项题的 `answer_text` 是个常量、`distractors` 是空的，`time` 也一样，
+    于是**三个题型共 3,904 道（占 38%）完全不在覆盖范围内**。实测：
+
+        把 1,264 道 image_in_video 的选项顺序全反转  → 指纹不变
+        把 2,640 道 left_right 的正确答案全换掉      → 指纹不变
+
+    确定性自检对它们形同虚设。这三个都是**后加的题型** ——
+    加题型时没人回来看这个函数，而它不报错，只是悄悄少管一块。
+
+    现在按题型取真正的内容：文字题取 answer_text + distractors，
+    图选项题取 correct_option + image_options，time 取媒体。
+    **新增题型时若两个字段都取不到，这里会显式报错**，不再静默漏过。
+    """
+    rows: list[list[str]] = []
+    for item in items:
+        parts = [item["id"], item["task"]]
+        text = [item.get("answer_text") or "", *(item.get("distractors") or [])]
+        images = [item.get("correct_option") or "", *(item.get("image_options") or [])]
+        media = list(item.get("media") or [])
+        if len(text) > 1:                 # 文字选项题
+            parts += text
+        elif len(images) > 1:             # 图选项题
+            parts += images
+        elif media:                       # time：内容就是那段视频
+            parts += media
+        else:
+            raise AssertionError(
+                f"{item['id']}（{item['task']}）没有可指纹的内容 —— "
+                "新题型请在 fingerprint() 里声明它的『答案与选项』长什么样。"
+                "**不要让它静默漏过**，那正是图选项题曾经的处境。")
+        rows.append(parts)
+    return hashlib.md5(json.dumps(rows, ensure_ascii=False,
+                                  sort_keys=True).encode()).hexdigest()[:12]
 
 
 def build(index: dict[str, Any], vocab: dict[str, Any],
@@ -879,10 +927,7 @@ def main() -> int:
     # **构建两遍比对**，因为这类 bug（遍历 set、用 dict 顺序、掺进时间戳）
     # 不会报错，只会让每次出的题悄悄不同 —— 而下游的盲测结论就此失效。
     again = build(index, vocab, window, time_repeats, cap, none_option, looks)
-    fp = [hashlib.md5(json.dumps([[i["id"], i["answer_text"], *i["distractors"]]
-                                  for i in p["items"]], ensure_ascii=False,
-                                 sort_keys=True).encode()).hexdigest()[:12]
-          for p in (plan, again)]
+    fp = [fingerprint(p["items"]) for p in (plan, again)]
     if fp[0] != fp[1]:
         print(f"❌ 构建不确定：两次指纹 {fp[0]} ≠ {fp[1]}")
         print("   同样输入得到了不同的题。常见原因：遍历 set / dict、掺进时间或随机数。")

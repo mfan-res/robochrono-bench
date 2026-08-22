@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # coding: utf-8
-"""④ 出题第五步：按 `build/plan.json` 的素材清单，把片段切出来。
+"""④ 出题第 5 步：按 `build/plan.json` 的素材清单，把片段切出来。
 
     python3 src/vqa/assets.py --dry-run     # 只看要做什么
     python3 src/vqa/assets.py --limit 5     # 先做 5 个

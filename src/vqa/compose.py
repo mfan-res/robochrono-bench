@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # coding: utf-8
-"""④ 出题第六步：把计划与素材组装成题目，按 `schemas/item.json` 的契约输出。
+"""④ 出题第 6 步：把计划与素材组装成题目，按 `schemas/item.json` 的契约输出。
 
     python3 src/vqa/compose.py            # 组装并校验，不写盘
     python3 src/vqa/compose.py --write    # 写 data/vqa/items.jsonl

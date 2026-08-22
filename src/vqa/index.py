@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # coding: utf-8
-"""④ 出题第一步：把「有什么可用来出题」扫成一张表。
+"""④ 出题第 1 步：把「有什么可用来出题」扫成一张表。
 
     python3 src/vqa/index.py            # 打印概览
     python3 src/vqa/index.py --write    # 同时写 build/index.json
