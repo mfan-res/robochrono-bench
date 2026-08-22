@@ -119,6 +119,12 @@ def check_family(family: str, report: Report) -> None:
             report.add("污染", family, episode, f"多出字段 {sorted(extra)}")
 
         # ② 引用 —— subtask 必须存在于定义里
+        #
+        # **缺这个键也走这条**，不要崩。本文件开头对「缺 subtasks.json」写过
+        # 「报告，不崩溃 —— 崩溃会让其余六族的检查结果一起拿不到」，
+        # 那条原则同样适用于段里缺 subtask：v1 形状的数据（存 narration 而非
+        # subtask id）喂进来时，此前会 KeyError 掉整个族。
+        # 而「拿 v1 数据当回归夹具」正是我们想做的事（tests/test_checks.py）。
         for seg in segments:
             if seg.get("subtask") not in subtasks:
                 report.add("引用", family, episode, f"未定义的 subtask {seg.get('subtask')!r}")
@@ -149,7 +155,7 @@ def check_family(family: str, report: Report) -> None:
                 counts["zero_length"] += 1
                 report.add("可疑", family, episode,
                            f"{seg['id']} 长度为 {seg['end_frame'] - seg['start_frame'] + 1} 帧"
-                           f"（{seg['subtask']}）—— 疑似误按")
+                           f"（{seg.get('subtask')}）—— 疑似误按")
         starts = Counter(s["start_frame"] for s in segments)
         for frame, n in starts.items():
             if n > 1:
@@ -185,7 +191,7 @@ def check_family(family: str, report: Report) -> None:
                     if parse(texts[i])["verb"] in TAKE}
         held: set[str] = set()
         for seg in sorted(segments, key=lambda s: s["start_frame"]):
-            got = parse(texts.get(seg["subtask"], ""))
+            got = parse(texts.get(seg.get("subtask"), ""))
             verb, obj = got["verb"], got["object"]
             if verb in TAKE:
                 if obj in held:
@@ -211,7 +217,7 @@ def check_family(family: str, report: Report) -> None:
             if eps:
                 idx = next((i for i, (lo, hi) in enumerate(eps)
                             if lo - 0.5 <= seg["start"] <= hi + 0.5), 0)
-            per_episode[idx][seg["subtask"]] += 1
+            per_episode[idx][seg.get("subtask")] += 1
         for idx, tally in per_episode.items():
             dup = {k: v for k, v in tally.items() if v > 1}
             if dup:
