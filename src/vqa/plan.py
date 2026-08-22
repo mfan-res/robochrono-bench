@@ -74,6 +74,7 @@ import itertools
 import json
 import sys
 from collections import Counter, defaultdict
+from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
@@ -85,7 +86,6 @@ DATA = ROOT / "data"
 BUILD = ROOT / "build"
 
 PLAN_VERSION = "1"
-RECIPE_VERSION = "v2.0"
 
 # 出题用的视角。三视角都有，但 main 是唯一被标注参照的那个 ——
 # 其余视角靠时间对齐，段边界在它们上面未经核验。
@@ -93,12 +93,13 @@ RECIPE_VERSION = "v2.0"
 # 本文件只做**编排**：读产物 → 遍历段 → 调题型规则 → 去重素材 → 自检 → 报表。
 # 常量与判据（含它们的实测依据）、选项构造、帧候选，全部在 _base。
 from tasks._base import (  # noqa: E402
-    ANCHOR, Looks, DISTRACTORS_PER_QUESTION, IMAGE_DISTRACTORS, IV_MIN_SEGMENT_GAP,
-    MIN_CLIP_SECONDS, MUTUAL_RATIO, NONE_TEXT, PHASES, STEMS, STEP_ORDER_FRAMES,
-    TASK_NAMES, TASKS, VIEW,
-    assert_no_leak, build_options, clip_for, cooccurrence, frame_key, order_text,
-    other_blocks, phase_frame,
+    Ctx, DISTRACTORS_PER_QUESTION, MUTUAL_RATIO, RECIPE_VERSION, TASKS, VIEW,
+    Looks, cooccurrence,
 )
+from tasks.image import emit_image_in_video, emit_left_right  # noqa: E402
+from tasks.order import emit_step_order  # noqa: E402
+from tasks.text import emit_text  # noqa: E402
+from tasks.timing import emit_time  # noqa: E402
 
 
 def fingerprint(items: list[dict[str, Any]]) -> str:
@@ -138,6 +139,11 @@ def fingerprint(items: list[dict[str, Any]]) -> str:
         rows.append(parts)
     return hashlib.md5(json.dumps(rows, ensure_ascii=False,
                                   sort_keys=True).encode()).hexdigest()[:12]
+
+
+# **顺序即 items 的顺序**，改动会让 build/plan.json 的行序变化（内容不变）。
+EMITTERS = (emit_text, emit_left_right, emit_image_in_video,
+            emit_step_order, emit_time)
 
 
 def build(index: dict[str, Any], vocab: dict[str, Any],
@@ -191,380 +197,12 @@ def build(index: dict[str, Any], vocab: dict[str, Any],
 
         for episode in entry["episodes"]:
             segments = episode["segments"]
-            per_episode = 0
-            # 近邻候选按「同集内出现过」优先 —— 同集的动作在画面上更接近，
-            # 比族里另一个八竿子打不着的动作更难排除
-
-            for i, segment in enumerate(segments):
-                if cap is not None and per_episode >= cap:
-                    skipped["cap"] += 1
-                    continue
-                nxt = segments[i + 1] if i + 1 < len(segments) else None
-                # 下一段必须在同一 episode 内 —— 跨 episode 的「接下来」不成立
-                if nxt is not None and nxt["episode_index"] != segment["episode_index"]:
-                    nxt = None
-
-                base = f"{family}/{episode['episode']}/{segment['id']}"
-                clip = clip_for(segment, window, fps)
-
-                if (clip[1] - clip[0] + 1) / fps < MIN_CLIP_SECONDS:
-                    skipped[f"片段题:段短于 {MIN_CLIP_SECONDS}s（疑似标注误按）"] += 3
-                    continue
-
-                for task in ("understanding", "planning", "planning_2"):
-                    if task != "understanding" and nxt is None:
-                        skipped[f"{task}:段尾无下一段"] += 1
-                        continue
-                    answer_id = segment["subtask"] if task == "understanding" else nxt["subtask"]
-                    answer_text = texts[answer_id]
-
-                    # 只从「与答案共现过」的动作里挑 —— 见 cooccurrence()
-                    # ⚠ **必须 sorted**：这是一个 set，而 Python 的字符串哈希
-                    # 每个进程都不同，直接遍历会让选项**每次运行都不一样**。
-                    # 实测三次构建三个不同的指纹 —— 而「同样输入必得同样一批题」
-                    # 是这条流水线写在文档里的承诺。已加构建自检（见 main）。
-                    usable = [texts[i] for i in sorted(compat.get(answer_id, set()))]
-                    options, source = build_options(
-                        f"{base}@{task}", answer_text, usable, borrowable)
-                    if len(options) < DISTRACTORS_PER_QUESTION:
-                        skipped[f"{task}:干扰项不足"] += 1
-                        continue
-
-                    assert_no_leak(clip, segment, task)
-                    items.append({
-                        "id": f"{base}@{task}",
-                        "family": family, "task": task, "group": f"{base}@{task}",
-                        "stem": STEMS[task].format(task_name=TASK_NAMES[family]),
-                        "answer_subtask": answer_id, "answer_text": answer_text,
-                        "distractors": options,
-                        # [6] 照此组装选项。放在 plan 而非 compose，是因为它
-                        # 决定题量与基线，属于「出哪些题」而不是「怎么排版」
-                        "none_option": NONE_TEXT if none_option != "off" else None,
-                        "media": [need("clip", family, episode["episode"], *clip)],
-                        "provenance": {
-                            "episode": episode["episode"],
-                            "segment_id": segment["id"],
-                            "subtask": segment["subtask"],
-                            "next_subtask": nxt["subtask"] if nxt else None,
-                            "recipe": {
-                                "version": RECIPE_VERSION,
-                                "clip": {"mode": window, "view": VIEW,
-                                         "start_frame": clip[0], "end_frame": clip[1],
-                                         "seconds": round((clip[1] - clip[0] + 1) / fps, 3)},
-                                "distractors": source,
-                                "synthetic": False,
-                            },
-                        },
-                    })
-                    per_episode += 1
-
-            # ---- left_right：2×2，四个选项全部同集 ----
-            # 选项 = {本时刻, 别的动作块} × {左腕, 右腕}
-            # 每个视角各出现两次、每个时刻各出现两次 —— **任何单一线索都不指向答案**，
-            # 必须同时定「哪个相机」和「哪个时刻」。认出侧别只能到 50%（已披露）。
-            for i, segment in enumerate(segments):
-                mid = phase_frame(segment, ANCHOR)
-                tid_base = f"{family}/{episode['episode']}/{segment['id']}"
-                views = ["wrist_left", "wrist_right"]
-                anchors = {v: frame_key(family, episode["episode"], v, mid)
-                           for v in views}
-                if not all(looks.has(k) for k in anchors.values()):
-                    skipped["left_right:缺手腕视角"] += 2
-                    continue
-
-                # 别的动作块：一个块同时供左右两张干扰图，
-                # 两张都要与【两个正确项】都够远（左右两道题共用这个块）。
-                chosen = None
-                for block, phase, frame in other_blocks(f"{tid_base}@left_right",
-                                                        segments, i):
-                    keys = {v: frame_key(family, episode["episode"], v, frame)
-                            for v in views}
-                    if not all(looks.has(k) for k in keys.values()):
-                        continue
-                    if all(looks.far_enough(a, b, family, views)
-                           for a in anchors.values() for b in keys.values()):
-                        chosen = (block, phase, frame, keys)
-                        break
-                if chosen is None:
-                    skipped["left_right:同集找不到够远的别的动作块"] += 2
-                    continue
-                block, phase, frame, other_keys = chosen
-
-                for side in views:
-                    flip = "wrist_right" if side == "wrist_left" else "wrist_left"
-                    tid = f"{tid_base}@left_right_{side.split('_')[1]}"
-                    # 对侧手腕同一时刻。实测它比典型的不同动作对更可分
-                    # （比值 1.13–1.78），所以【不再】因为它被丢题 ——
-                    # 第一版按脏基准算的下限错丢了 98 道 wash。
-                    if not looks.far_enough(anchors[side], anchors[flip], family, views):
-                        skipped["left_right:对侧同刻与正确项画面差不足"] += 1
-                        continue
-                    correct = need("frame", family, episode["episode"], mid, mid,
-                                   view=side)
-                    opts = [correct,
-                            need("frame", family, episode["episode"], mid, mid,
-                                 view=flip),
-                            need("frame", family, episode["episode"], frame, frame,
-                                 view="wrist_left"),
-                            need("frame", family, episode["episode"], frame, frame,
-                                 view="wrist_right")]
-                    items.append({
-                        "id": tid, "family": family, "task": "left_right", "group": tid,
-                        "stem": STEMS["left_right"].format(side=side.split("_")[1]),
-                        "answer_subtask": segment["subtask"],
-                        "answer_text": f"{side.split('_')[1]} gripper camera view",
-                        "distractors": [], "image_options": opts,
-                        "correct_option": correct,
-                        "media": [need("frame", family, episode["episode"], mid, mid,
-                                       view="main")],
-                        "provenance": {
-                            "episode": episode["episode"], "segment_id": segment["id"],
-                            "subtask": segment["subtask"], "next_subtask": None,
-                            "recipe": {"version": RECIPE_VERSION,
-                                       "clip": {"mode": "frame", "view": "main",
-                                                "start_frame": mid, "end_frame": mid,
-                                                "seconds": 0.0},
-                                       "side": side.split("_")[1],
-                                       # `distractors` 按契约只放【来源计数】——
-                                       # 元数据放同级键，别挤进计数表（schema 会拦）
-                                       "distractors": {"opposite_wrist_same_moment": 1,
-                                                       "other_block_frames": 2},
-                                       "layout": "2x2",
-                                       "same_episode": True,
-                                       "other_block": block["id"],
-                                       "other_subtask": block["subtask"],
-                                       "other_phase": phase,
-                                       "synthetic": False}},
-                    })
-
-            # ---- image_in_video：片段 + 四个【同相机、不同动作块】的帧 ----
-            # 四个选项同为 main 视角，分别来自四个不同的动作块（全部同集）。
-            # 没有视角线索、没有时刻线索 —— **盲测天花板就是 25%**，
-            # 唯一解法是认出片段里发生的是哪个动作块。
-            for i, segment in enumerate(segments):
-                clip = clip_for(segment, window, fps)
-                if (clip[1] - clip[0] + 1) / fps < MIN_CLIP_SECONDS:
-                    skipped["image_in_video:段过短"] += 1
-                    continue
-                mid = phase_frame(segment, ANCHOR)
-                if not clip[0] <= mid <= clip[1]:
-                    # 正确项必须真的在片段里，否则这道题没有正确答案
-                    skipped["image_in_video:锚点不在片段内"] += 1
-                    continue
-                tid = f"{family}/{episode['episode']}/{segment['id']}@image_in_video"
-                a_key = frame_key(family, episode["episode"], "main", mid)
-                if not looks.has(a_key):
-                    skipped["image_in_video:缺锚点帧"] += 1
-                    continue
-
-                # **挑最接近等边的那一组四点**，不是「按顺序取第一个够远的」。
-                # 顺序贪心会挑出扁的集合：干扰项都离答案远、彼此却挤在一起，
-                # 于是**答案成了离群点**（实测排第一占 53%，白送 28 个百分点）。
-                # 这里每次加入到已选各点最小距离最大的那个候选 ——
-                # 四个点互相撑开，答案在构造上不再特殊。
-                cands: list[tuple[dict[str, Any], float, int, str]] = []
-                seen_keys: set[str] = set()
-                for block, phase, frame in other_blocks(tid, segments, i):
-                    key = frame_key(family, episode["episode"], "main", frame)
-                    if key in seen_keys or not looks.has(key):
-                        continue
-                    seen_keys.add(key)
-                    cands.append((block, phase, frame, key))
-
-                floor = looks.floor(family, ["main"]) * MUTUAL_RATIO
-                picked: list[tuple[dict[str, Any], float, int]] = []
-                picked_keys: list[str] = [a_key]
-                used_blocks: set[str] = set()
-                for _slot in range(IMAGE_DISTRACTORS):
-                    best = None
-                    for block, phase, frame, key in cands:
-                        if key in picked_keys:
-                            continue
-                        gap = min(looks.distance(key, k) for k in picked_keys)
-                        if gap < floor:
-                            continue
-                        # 平手时按 key 定序 —— 出题必须确定
-                        if best is None or (gap, key) > (best[0], best[3][3]):
-                            best = (gap, block, phase, (block, phase, frame, key))
-                    if best is None:
-                        break
-                    _gap, block, phase, entry = best
-                    picked.append((entry[0], entry[1], entry[2]))
-                    picked_keys.append(entry[3])
-                    used_blocks.add(block["id"])
-
-                if len(picked) < IMAGE_DISTRACTORS:
-                    skipped["image_in_video:同集凑不齐够远的别的动作块"] += 1
-                    continue
-                # **三条干扰项不能全来自同一个动作块。** 那样它们会聚成一簇，
-                # 正确项就是唯一的异类 —— 不看视频也能挑出来。
-                # 两个块不存在这个问题：簇是 {X,X}、{Y}、{Z}，答案与 Y 一样是单点。
-                if len(used_blocks) < 2:
-                    skipped["image_in_video:三条干扰项同属一个动作块（答案会成异类）"] += 1
-                    continue
-
-                correct = need("frame", family, episode["episode"], mid, mid, view="main")
-                opts = [correct] + [need("frame", family, episode["episode"],
-                                         f, f, view="main") for _b, _p, f in picked]
-                items.append({
-                    "id": tid, "family": family, "task": "image_in_video", "group": tid,
-                    "stem": STEMS["image_in_video"],
-                    "answer_subtask": segment["subtask"],
-                    "answer_text": "the option image that appeared in the clip",
-                    "distractors": [], "image_options": opts, "correct_option": correct,
-                    "media": [need("clip", family, episode["episode"], *clip)],
-                    "provenance": {
-                        "episode": episode["episode"], "segment_id": segment["id"],
-                        "subtask": segment["subtask"], "next_subtask": None,
-                        "recipe": {"version": RECIPE_VERSION,
-                                   "clip": {"mode": window, "view": VIEW,
-                                            "start_frame": clip[0], "end_frame": clip[1],
-                                            "seconds": round((clip[1] - clip[0] + 1) / fps, 3)},
-                                   "min_segment_gap": IV_MIN_SEGMENT_GAP,
-                                   "distractors": {
-                                       "other_block_frames": len(picked)},
-                                   "layout": "same_camera_other_blocks",
-                                   "same_episode": True,
-                                   "blocks": [b["subtask"] for b, _p, _f in picked],
-                                   "phases": [p for _b, p, _f in picked],
-                                   "distinct_blocks": len(used_blocks),
-                                   "synthetic": False}},
-                })
-
-            # ---- step_order：同集三个动作块各一帧，打乱后问时间顺序 ----
-            # **不拼宫格。** v1 把若干结果图拼成一张再发 —— 那正是 BC-16 那个坑
-            # （当年要用 jpegtran 无损拆回去）。这里发三张独立的图各自带标号，
-            # 评测端本来就支持多图，拼图只会引入编码损失和标号渲染问题。
-            #
-            # 三帧的选取照搬 image_in_video：同集、动作各不同、两两够远
-            # （最大化最小距离）。**按帧集合去重** —— 只有 3 个动作块的族，
-            # 每集所有段会挑出同一组三帧，不去重就是同一道题出三遍。
-            seen_sets: set[frozenset[str]] = set()
-            for i, segment in enumerate(segments):
-                tid = f"{family}/{episode['episode']}/{segment['id']}@step_order"
-                anchor_frame = phase_frame(segment, ANCHOR)
-                a_key = frame_key(family, episode["episode"], "main", anchor_frame)
-                if not looks.has(a_key):
-                    skipped["step_order:缺锚点帧"] += 1
-                    continue
-                floor = looks.floor(family, ["main"]) * MUTUAL_RATIO
-
-                cands: list[tuple[str, int, str]] = []
-                for block_seg in segments:
-                    if block_seg["subtask"] == segment["subtask"]:
-                        continue
-                    for phase in (ANCHOR, PHASES[0], PHASES[-1]):
-                        fr = phase_frame(block_seg, phase)
-                        k = frame_key(family, episode["episode"], "main", fr)
-                        if looks.has(k):
-                            cands.append((block_seg["subtask"], fr, k))
-
-                chosen = [(segment["subtask"], anchor_frame, a_key)]
-                for _slot in range(STEP_ORDER_FRAMES - 1):
-                    best = None
-                    subs = {c[0] for c in chosen}
-                    keys_so_far = {c[2] for c in chosen}
-                    for sub, fr, k in cands:
-                        if sub in subs or k in keys_so_far:
-                            continue
-                        gap = min(looks.distance(k, c[2]) for c in chosen)
-                        if gap < floor:
-                            continue
-                        if best is None or (gap, k) > (best[0], best[1][2]):
-                            best = (gap, (sub, fr, k))
-                    if best is None:
-                        break
-                    chosen.append(best[1])
-                if len(chosen) < STEP_ORDER_FRAMES:
-                    skipped["step_order:同集凑不齐够远的三个动作块"] += 1
-                    continue
-
-                sig = frozenset(c[2] for c in chosen)
-                if sig in seen_sets:
-                    skipped["step_order:同一组三帧已出过题"] += 1
-                    continue
-                seen_sets.add(sig)
-
-                # 呈现顺序按哈希取 6 种排列之一 —— **不能按时间顺序摆**，
-                # 否则「Image 1 → Image 2 → Image 3」永远是答案。
-                by_time = sorted(chosen, key=lambda c: c[1])
-                perms = list(itertools.permutations(range(STEP_ORDER_FRAMES)))
-                k = int(hashlib.md5(tid.encode()).hexdigest(), 16)
-                shown = [by_time[j] for j in perms[k % len(perms)]]
-
-                # 正确选项 = 把呈现标号排成时间顺序的那个序列
-                label_of = {c[2]: n + 1 for n, c in enumerate(shown)}
-                answer_text = order_text([label_of[c[2]] for c in by_time])
-                wrong = [order_text(list(seq)) for seq in
-                         itertools.permutations(range(1, STEP_ORDER_FRAMES + 1))
-                         if order_text(list(seq)) != answer_text]
-                picks = [wrong[(k + n * 7919) % len(wrong)] for n in range(len(wrong))]
-                distractors: list[str] = []
-                for text in picks:
-                    if text not in distractors:
-                        distractors.append(text)
-                    if len(distractors) >= DISTRACTORS_PER_QUESTION:
-                        break
-
-                items.append({
-                    "id": tid, "family": family, "task": "step_order", "group": tid,
-                    "stem": STEMS["step_order"],
-                    "answer_subtask": segment["subtask"],
-                    "answer_text": answer_text,
-                    "distractors": distractors,
-                    "media": [need("frame", family, episode["episode"], c[1], c[1],
-                                   view="main") for c in shown],
-                    "provenance": {
-                        "episode": episode["episode"], "segment_id": segment["id"],
-                        "subtask": segment["subtask"], "next_subtask": None,
-                        "recipe": {"version": RECIPE_VERSION,
-                                   "clip": {"mode": "frame", "view": VIEW,
-                                            "start_frame": shown[0][1],
-                                            "end_frame": shown[-1][1],
-                                            "seconds": 0.0},
-                                   "distractors": {"permutations":
-                                                   len(distractors)},
-                                   "layout": "labeled_frames",
-                                   "same_episode": True,
-                                   "frames": STEP_ORDER_FRAMES,
-                                   "blocks": [c[0] for c in shown],
-                                   "shown_order": [c[1] for c in shown],
-                                   "synthetic": False}},
-                })
-
-            # ---- time：一集一组，用全长视频 ----
-            if not episode["full_video_usable"]:
-                skipped["time:该集有未标注的 episode"] += 1
-                continue
-            group = f"{family}/{episode['episode']}@time"
-            asked = 0
-            for segment in segments:
-                if time_repeats == "skip" and "ambiguous_repeat" in segment["reasons"]:
-                    skipped["time:同集内动作重复（P-05）"] += 1
-                    continue
-                items.append({
-                    "id": f"{family}/{episode['episode']}/{segment['id']}@time",
-                    "family": family, "task": "time", "group": group,
-                    "stem": STEMS["time"].format(action=texts[segment["subtask"]].rstrip(".")),
-                    "answer_subtask": segment["subtask"], "answer_text": None,
-                    "answer_seconds": [segment["start"], segment["end"]],
-                    "distractors": [],                       # time 不是选择题
-                    "media": [need("video", family, episode["episode"])],
-                    "provenance": {
-                        "episode": episode["episode"], "segment_id": segment["id"],
-                        "subtask": segment["subtask"], "next_subtask": None,
-                        "recipe": {
-                            "version": RECIPE_VERSION,
-                            "clip": {"mode": "full_video", "view": VIEW,
-                                     "start_frame": 0, "end_frame": episode["frames"] - 1,
-                                     "seconds": episode["duration"]},
-                            "distractors": {}, "synthetic": False,
-                        },
-                    },
-                })
-                asked += 1
-            if asked == 0:
-                skipped["time:整组无可用动作"] += 1
+            ctx = Ctx(family=family, episode=episode, segments=segments, fps=fps,
+                      texts=texts, compat=compat, borrowable=borrowable, looks=looks,
+                      need=need, items=items, skipped=skipped, window=window,
+                      cap=cap, none_option=none_option, time_repeats=time_repeats)
+            for emit in EMITTERS:
+                emit(ctx)
 
     for item in items:
         # **`image_options` 也要计入引用。** 图选项题型把选项图放在

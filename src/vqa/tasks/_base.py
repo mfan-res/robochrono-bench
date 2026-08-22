@@ -24,12 +24,15 @@ from __future__ import annotations
 import hashlib
 import sys
 from pathlib import Path
+from dataclasses import dataclass
 from typing import Any
 
 # `normalize` 只有一份实现，在 vocab.py —— 「同一个动作有 11 种表示」那件事的
 # 直接后果就是这类归一化必须只存一处（D-25）。
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from vocab import normalize  # noqa: E402
+
+RECIPE_VERSION = "v2.0"
 
 VIEW = "main"
 
@@ -313,3 +316,27 @@ def build_options(item_id: str, answer: str, actions: list[str],
                     "borrowed": sum(c not in within for c in chosen)}
 
 
+@dataclass
+class Ctx:
+    """一个 (族, 集) 的出题上下文。五段题型规则**都只靠它**，互不读对方的状态。
+
+    此前这五段挤在 `build()` 的同一个 370 行循环里，靠闭包共享十几个局部变量 ——
+    想加一个题型，得先读懂全部五段。现在每段拿到什么是显式的，
+    `build()` 只负责把上下文装好，再逐个调。
+    """
+
+    family: str
+    episode: dict[str, Any]
+    segments: list[dict[str, Any]]
+    fps: float
+    texts: dict[str, str]
+    compat: dict[str, set[str]]
+    borrowable: list[str]
+    looks: Any
+    need: Any                    # need(kind, ...) -> media key，负责素材去重
+    items: list[dict[str, Any]]
+    skipped: Any                 # Counter
+    window: str
+    cap: int | None
+    none_option: str
+    time_repeats: str

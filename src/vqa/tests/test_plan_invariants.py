@@ -38,6 +38,8 @@ ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "src" / "vqa"))
 
 import plan as P  # noqa: E402
+# 判据与选项构造在 `tasks/_base.py`；`plan.py` 只做编排。
+from tasks import _base as B  # noqa: E402
 
 BUILD = ROOT / "build"
 
@@ -127,16 +129,16 @@ def check_clip_never_leaks() -> list[str]:
     segment = {"id": "file-000@f000100", "subtask": "pick_bowl",
                "start_frame": 100, "end_frame": 210}
     try:
-        P.assert_no_leak((100, 210), segment, "planning")
+        B.assert_no_leak((100, 210), segment, "planning")
     except AssertionError:
         bad.append("片段正好到段尾，不该报")
     try:
-        P.assert_no_leak((100, 211), segment, "planning")
+        B.assert_no_leak((100, 211), segment, "planning")
         bad.append("片段越过段尾 1 帧，**没有报** —— 答案会漏进画面")
     except AssertionError:
         pass
     try:
-        P.assert_no_leak((100, 999), segment, "understanding")
+        B.assert_no_leak((100, 999), segment, "understanding")
     except AssertionError:
         bad.append("understanding 不该受这条约束（它本来就看到当前动作）")
     return bad
@@ -145,11 +147,11 @@ def check_clip_never_leaks() -> list[str]:
 def check_min_clip() -> list[str]:
     """最短片段：`pen_inbox/file-037@f000272` 那个 1 帧的段不该出题。"""
     bad: list[str] = []
-    if P.MIN_CLIP_SECONDS <= 0:
+    if B.MIN_CLIP_SECONDS <= 0:
         bad.append("MIN_CLIP_SECONDS 被关掉了")
     # 0.4 秒这条线要卡在「1 帧的孤例」与「次短的 17 帧段」之间
-    if not (1 / 25 < P.MIN_CLIP_SECONDS < 17 / 30):
-        bad.append(f"MIN_CLIP_SECONDS={P.MIN_CLIP_SECONDS} 落在了 1 帧与次短段（0.57s）之外 —— "
+    if not (1 / 25 < B.MIN_CLIP_SECONDS < 17 / 30):
+        bad.append(f"MIN_CLIP_SECONDS={B.MIN_CLIP_SECONDS} 落在了 1 帧与次短段（0.57s）之外 —— "
                    "要么拦不住那个孤例，要么开始误伤真实的短段")
     return bad
 
@@ -159,24 +161,24 @@ def check_build_options() -> list[str]:
     bad: list[str] = []
     actions = ["Pick the brush.", "Pick the bowl.", "Put the bowl.", "Wipe the bowl."]
     borrow = ["Move the gift.", "Pick the pen."]
-    chosen, source = P.build_options("x@understanding", actions[0], actions, borrow)
+    chosen, source = B.build_options("x@understanding", actions[0], actions, borrow)
     if len(chosen) != P.DISTRACTORS_PER_QUESTION:
         bad.append(f"干扰项 {len(chosen)} 条，应为 {P.DISTRACTORS_PER_QUESTION}")
     if actions[0] in chosen:
         bad.append("答案出现在干扰项里")
     if len(set(chosen)) != len(chosen):
         bad.append("干扰项内部有重复")
-    again, _ = P.build_options("x@understanding", actions[0], actions, borrow)
+    again, _ = B.build_options("x@understanding", actions[0], actions, borrow)
     if chosen != again:
         bad.append("同样输入两次得到不同结果 —— 出题必须确定")
-    other, _ = P.build_options("y@understanding", actions[0], actions, borrow)
+    other, _ = B.build_options("y@understanding", actions[0], actions, borrow)
     if chosen == other and len(actions) > P.DISTRACTORS_PER_QUESTION + 1:
         bad.append("不同题目拿到完全相同的干扰项 —— 轮转没生效")
     # 小族：动作不够时必须借。**borrow 不能与本族动作重叠** ——
     # 生产里 `borrowable` 是 `set(别族) - set(本族)` 算出来的，天然不重叠。
     small = ["Pick the gift.", "Move the gift.", "Put the gift."]
     outside = ["Pick the pen.", "Wipe the bowl."]
-    picked, src = P.build_options("z@understanding", small[0], small, outside)
+    picked, src = B.build_options("z@understanding", small[0], small, outside)
     if src.get("borrowed", 0) < 1:
         bad.append("三动作族没有借用，凑不满四选一")
     if len(set(picked)) != len(picked):
@@ -185,7 +187,7 @@ def check_build_options() -> list[str]:
     # **重叠时会不会出重复** —— 生产上不会发生（borrowable 已减去本族），
     # 但它是个上了膛的坑：谁把 borrowable 的构造改成不减，
     # 四选一会静默变成三选一，而随机基线仍按 25% 报。
-    overlap = P.build_options("w@understanding", small[0], small, ["Move the gift."])[0]
+    overlap = B.build_options("w@understanding", small[0], small, ["Move the gift."])[0]
     if len(set(overlap)) != len(overlap):
         bad.append(f"borrowable 与本族动作重叠时产生了重复选项：{overlap} —— "
                    "四选一会静默变成三选一。生产上 borrowable 已减去本族所以不发生，"
