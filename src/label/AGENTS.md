@@ -85,7 +85,8 @@ PY
 | 文件 | 是什么 | 改动风险 |
 | --- | --- | --- |
 | `core.py` | 语义层：Segment、id 派生、subtask 定义、文档组装 | **高** —— 改了必跑回归 |
-| `validate.py` | 八类检查。标注器与离线共用 | **高** —— 判据分叉过一次，代价很大 |
+| `checks.py` | 八类判据的**唯一实现**。改它之前先跑 tests/test_checks.py |
+| `validate.py` | 遍历全族 + 出报表。判据不在这里 | **高** —— 判据分叉过一次，代价很大 |
 | `serve.py` | 后端：静态 + `/api/{families,episodes,episode,usage,save,subtasks}` + Range | 中 |
 | `ui/index.html` | 单页前端，原生 JS 无构建 | 低 |
 | `tests/test_core_replay.py` | 回归：拿 ID 化之前的 1,859 段当语料 | 改判据前先想清楚 |

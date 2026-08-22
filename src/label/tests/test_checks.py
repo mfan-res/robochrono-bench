@@ -57,6 +57,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(ROOT / "src" / "label"))
+sys.path.insert(0, str(ROOT / "src"))
 
 import validate as V  # noqa: E402
 
@@ -140,6 +141,68 @@ CASES: list[tuple[str, str, Any]] = [
 ]
 
 
+def check_schema_enforced() -> list[str]:
+    """`schemas/segments.json` 必须真的被执行（4.4）。
+
+    这个契约此前**没有任何代码加载** —— 它定义了 `id` / `subtask` 的 pattern
+    与 `source` 的必填字段，而校验器只手抄了「多余字段」那一条，
+    README 却写着「每个层间边界都有 schema + 校验器」。
+
+    这里逐条造违规，确认它真的报 —— **不能只验「当前数据通过」**，
+    那样的话把 schema 换成一个空对象也能全过。
+    """
+    from checks import check_schema
+    bad: list[str] = []
+    src = sorted((REAL / "wash" / "segments").glob("*_segments.json"))[0]
+    doc = json.loads(src.read_text(encoding="utf-8"))
+
+    if check_schema(doc):
+        bad.append(f"当前数据本该通过 schema，却报了：{[f.detail for f in check_schema(doc)][:2]}")
+
+    cases = [
+        ("id 的 pattern", lambda d: d["segments"][0].__setitem__("id", "不合规的id")),
+        ("subtask 的 pattern", lambda d: d["segments"][0].__setitem__("subtask", "Bad Subtask!")),
+        ("source 的必填字段", lambda d: d["source"].pop("fps", None)),
+        ("拒绝出题产物回写", lambda d: d["segments"][0].__setitem__("metadata", {"window_type": "x"})),
+    ]
+    for label, mutate in cases:
+        broken = json.loads(json.dumps(doc))
+        mutate(broken)
+        if not check_schema(broken):
+            bad.append(f"schema 没抓到「{label}」")
+    return bad
+
+
+def check_online_parity() -> list[str]:
+    """在线版（serve.review）与离线版必须给出同一批发现。
+
+    **这是 4.3 的回归。** 此前 `serve.review()` 是另写的一份，只覆盖三类；
+    「污染」「引用」「派生」「序列」「可疑」在保存时拦不下 ——
+    而「污染」抓的正是 P-03 那类出题产物回写。
+    四处文档同时写着「共用同一份判据」，而 serve.py 根本没 import validate。
+
+    这里拿真实的污染数据过一遍在线版，断言它**确实拦得下**。
+    """
+    import importlib
+    bad: list[str] = []
+    try:
+        serve = importlib.import_module("serve")
+    except Exception as exc:  # noqa: BLE001
+        return [f"serve.py 导入失败：{type(exc).__name__}: {exc}"]
+
+    doc = json.loads((REAL / "stack_cubes" / "segments.polluted"
+                      / sorted(p.name for p in (REAL / "stack_cubes" / "segments.polluted")
+                               .glob("*_segments.json"))[0]).read_text(encoding="utf-8"))
+    problems = serve.review(doc, "stack_cubes")
+    kinds = {p["text"].split("：")[0] for p in problems}
+    for want in ("污染", "引用"):
+        if want not in kinds:
+            bad.append(f"在线版没拦下「{want}」—— 它只报了 {sorted(kinds)}")
+    if not any(p["level"] == "block" for p in problems):
+        bad.append("在线版没有任何 block 级发现 —— 污染数据应当拦下不写盘")
+    return bad
+
+
 def main() -> int:
     if not REAL.exists():
         print(f"跳过：没有 {REAL}")
@@ -175,6 +238,24 @@ def main() -> int:
         failures += not ok
 
     print()
+    print("三 · schemas/segments.json 必须真的被执行")
+    print("-" * 74)
+    bad = check_schema_enforced()
+    print(f"{'✓ 契约生效：id / subtask 的 pattern、source 必填、拒绝回写' if not bad else '✗ 契约没生效'}")
+    for line in bad:
+        print(f"    {line}")
+    failures += bool(bad)
+
+    print()
+    print("四 · 在线版（serve.review）与离线版共用同一份判据")
+    print("-" * 74)
+    bad = check_online_parity()
+    print(f"{'✓ 在线版拦得下污染与引用' if not bad else '✗ 在线版与离线版不一致'}")
+    for line in bad:
+        print(f"    {line}")
+    failures += bool(bad)
+
+    print()
     if failures:
         print(f"❌ {failures} 处不符。**两个方向都要成立** —— "
               "只会报的校验器和只会沉默的校验器一样没用。")
@@ -182,8 +263,7 @@ def main() -> int:
     print("七类检查：在历史事故上都报，在当前数据上都不报。")
     print("⚠ 「覆盖」没测 —— 它只在多集打包的视频上触发，而唯一那样的族 tea2 已移出。"
           "\n   tea2 回来时要补。")
-    print("⚠ 这守的是 validate.py。**serve.py 的在线版只实现了其中三类**，"
-          "\n   两者尚未共用同一份判据（cleanup_checklist 4.3）。")
+    print("在线版与离线版 import 同一个 checks.check_document。")
     return 0
 
 

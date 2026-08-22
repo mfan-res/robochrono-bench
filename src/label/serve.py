@@ -19,12 +19,12 @@
 
 设计要点
 --------
-**保存前跑在线检查。** 本意是标注工具与离线校验共用同一份判据 ——
+**保存前跑校验，校验不过不写盘。** 标注工具与离线校验共用同一份判据 ——
 此前 `check_labels.py` 与上游工具各写各的，导致 tea2 显示「21/21 齐全」
 而实际只有 20 集可用。
 
-⚠ **但这件事目前只做到了一半**：`review()` 只覆盖 `validate.py` 八类里的三类，
-而且是另写的一份，不是 import 过来的。见 `review()` 的说明与 cleanup_checklist 4.3。
+判据在 `checks.py`，本文件与 `validate.py` **import 同一个函数** ——
+这不是约定，是结构。✗ 类拦下不写盘，⚠ 类只提示（见 `review()`）。
 
 **帧号是权威**，秒与时间串由后端按 fps 统一派生（`core.Segment`），
 前端只报帧号。这样前端浮点误差进不了数据。
@@ -49,6 +49,8 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
 
 from label.core import Segment, build_document  # noqa: E402
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from checks import check_document  # noqa: E402
 
 DATA = ROOT / "data"
 UI = Path(__file__).resolve().parent / "ui"
@@ -260,53 +262,31 @@ def edit_subtasks(payload: dict[str, Any]) -> dict[str, Any]:
 
 
 def review(document: dict[str, Any], family: str) -> list[dict[str, str]]:
-    """在线版检查。**只覆盖 `validate.py` 八类里的三类**：重叠 / 覆盖 / 歧义。
+    """保存前的校验。**判据在 ``checks.check_document``，与离线校验同一份代码。**
 
-    ⚠ **这不是 `validate.py` 的同一份代码**，尽管本文件开头与
-    `validate.py` / README / AGENTS.md 四处都那么写过。实际没有 import 它。
-    在线保存时**拦不下**这五类：污染（出题产物回写，即 P-03 本身）、
-    引用（未定义的 subtask id）、派生（start/end 与帧号不自洽）、
-    序列（动作讲不通，抓出过 wash 两处真错误）、可疑（零长度段）。
-    收敛计划见 `docs/cleanup_checklist.md` 的 4.3。
+    此前这里是另写的一份，只覆盖八类里的三类（重叠 / 覆盖 / 歧义），
+    于是「污染」「引用」「派生」「序列」「可疑」在**在线保存时拦不下**——
+    而「污染」抓的正是 P-03 那类出题产物回写，「可疑」抓的正是 pen_inbox
+    那个连按两次 K 造出来的零长度段。四处文档同时写着「共用同一份判据」。
 
-    已实现的三类判据与 `validate.py` 逐条对齐 —— 尤其**重叠走帧号不走秒**。
+    分级用 ``checks.SEVERITY``：✗ 拦下不写盘，⚠ 只提示。
+    **不要八类全 block** —— 「歧义」「可疑」「覆盖」要人看画面判断，
+    标注时拦下来只会逼人绕过校验。
     """
-    segs = document["segments"]
-    bounds = document["source"].get("episode_bounds")
-    out: list[dict[str, str]] = []
-
-    if not segs:
-        out.append({"level": "block", "text": "还没有任何标注段"})
-        return out
-
-    ordered = sorted(segs, key=lambda s: s["start_frame"])
-    for a, b in zip(ordered, ordered[1:]):
-        if b["start_frame"] < a["end_frame"]:
-            out.append({"level": "block",
-                        "text": f"帧重叠：{a['subtask']} 与 {b['subtask']}"})
-
-    # 多集打包的视频：整集没标是硬错（P-01 就是这么漏的）
-    if bounds and len(bounds) > 1:
-        spans = [(s["start"], s["end"]) for s in segs]
-        missed = [i for i, (lo, hi) in enumerate(bounds)
-                  if not any(lo - 0.5 <= a and b <= hi + 0.5 for a, b in spans)]
-        if missed:
-            out.append({"level": "block",
-                        "text": f"本视频含 {len(bounds)} 个 episode，第 {missed} 个完全没有标注"})
-
-    # 同一 episode 内重复 subtask：**不禁止**（wash 确实洗两个盘子），但要让人知道后果
-    per: dict[int, dict[str, int]] = defaultdict(lambda: defaultdict(int))
-    for s in segs:
-        idx = 0
-        if bounds:
-            idx = next((i for i, (lo, hi) in enumerate(bounds) if lo - 0.5 <= s["start"] <= hi + 0.5), 0)
-        per[idx][s["subtask"]] += 1
-    for idx, tally in per.items():
-        dup = {k: v for k, v in tally.items() if v > 1}
-        if dup:
-            out.append({"level": "warn",
-                        "text": f"episode {idx} 内重复：{dup} —— 按动作问时刻的题真值将不唯一（P-05）"})
-    return out
+    subs = subtasks(family)
+    findings, _ = check_document(
+        document,
+        subtasks={s["id"] for s in subs},
+        texts={s["id"]: s["text"] for s in subs},
+        fps=(family_meta(family) or {}).get("fps"),
+        # `.get` 而不是 `[...]`：v1 形状或半成品文档可能没有 source，
+        # 那时该报出来而不是崩 —— 与 checks 里「缺 subtask 键也走引用」同理。
+        bounds=(document.get("source") or {}).get("episode_bounds"),
+    )
+    if not (document.get("segments") or []):
+        return [{"level": "block", "text": "还没有任何标注段"}]
+    return [{"level": "block" if f.blocking else "warn",
+             "text": f"{f.kind}：{f.detail}"} for f in findings]
 
 
 class Handler(SimpleHTTPRequestHandler):
